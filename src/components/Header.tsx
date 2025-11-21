@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { Menu, X, } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
@@ -12,26 +12,28 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { Globe } from 'lucide-react';
+import Image from 'next/image';
 
 const languages = [
   { code: 'pl', name: 'Polski', flag: '🇵🇱' },
   { code: 'es', name: 'Español', flag: '🇪🇸' },
-  { code: 'ca', name: 'Català', flag: '🏴󐁟󐁢󐁥󐁮󐁧󐁿' },
+  { code: 'ca', name: 'Català', flag: '🇪🇸' },
   { code: 'en', name: 'English', flag: '🇬🇧' },
 ];
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const t = useTranslations('nav');
+  const locale = useLocale();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const navigation = [
-    { name: t('home'), href: '/' },
-    { name: t('about'), href: '/about' },
-    { name: t('events'), href: '/events' },
-    { name: t('blog'), href: '/blog' },
-    { name: t('contact'), href: '/contact' },
+    { name: t('home'), href: `/${locale}` },
+    { name: t('about'), href: `/${locale}/about` },
+    { name: t('events'), href: `/${locale}/events` },
+    { name: t('blog'), href: `/${locale}/blog` },
+    { name: t('contact'), href: `/${locale}/contact` },
   ];
 
   return (
@@ -39,7 +41,7 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
+          <Link href={`/${locale}`} className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center">
               <span className="text-white font-bold text-lg">W</span>
             </div>
@@ -63,17 +65,17 @@ export function Header() {
           <div className="hidden md:flex items-center space-x-4">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="sm" className="flex items-center space-x-1">
+                <Button variant="ghost" size="sm" className="flex items-center space-x-2 text-gray-900">
                   <Globe className="w-4 h-4" />
-                  <span>PL</span>
+                  <span className="font-semibold">{locale.toUpperCase()}</span>
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent>
+              <DropdownMenuContent className="bg-white border border-gray-200 text-gray-900">
                 {languages.map((lang) => (
-                  <DropdownMenuItem key={lang.code} asChild>
+                  <DropdownMenuItem key={lang.code} asChild className="flex items-center space-x-2 text-gray-900 focus:bg-gray-100">
                     <Link href={`/${lang.code}`} className="flex items-center space-x-2">
-                      <span>{lang.flag}</span>
-                      <span>{lang.name}</span>
+                      <Image src={`/flags/${lang.code}.svg`} alt={`${lang.name} flag`} width={18} height={12} />
+                      <span className="text-sm">{lang.name}</span>
                     </Link>
                   </DropdownMenuItem>
                 ))}
@@ -81,7 +83,7 @@ export function Header() {
             </DropdownMenu>
             
             <Button asChild className="bg-red-600 hover:bg-red-700">
-              <Link href="/donate">{t('donate')}</Link>
+              <Link href={`/${locale}/donate`}>{t('donate')}</Link>
             </Button>
           </div>
 
@@ -121,17 +123,17 @@ export function Header() {
                 <div className="flex items-center justify-between">
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                      <Button variant="ghost" size="sm" className="flex items-center space-x-1">
+                      <Button variant="ghost" size="sm" className="flex items-center space-x-2 text-gray-900">
                         <Globe className="w-4 h-4" />
-                        <span>PL</span>
+                        <span className="font-semibold">{locale.toUpperCase()}</span>
                       </Button>
                     </DropdownMenuTrigger>
-                    <DropdownMenuContent>
+                    <DropdownMenuContent className="bg-white border border-gray-200 text-gray-900">
                       {languages.map((lang) => (
-                        <DropdownMenuItem key={lang.code} asChild>
+                        <DropdownMenuItem key={lang.code} asChild className="flex items-center space-x-2 text-gray-900 focus:bg-gray-100">
                           <Link href={`/${lang.code}`} className="flex items-center space-x-2">
-                            <span>{lang.flag}</span>
-                            <span>{lang.name}</span>
+                            <Image src={`/flags/${lang.code}.svg`} alt={`${lang.name} flag`} width={18} height={12} />
+                            <span className="text-sm">{lang.name}</span>
                           </Link>
                         </DropdownMenuItem>
                       ))}
@@ -139,7 +141,7 @@ export function Header() {
                   </DropdownMenu>
                   
                   <Button asChild className="bg-red-600 hover:bg-red-700">
-                    <Link href="/donate">{t('donate')}</Link>
+                    <Link href={`/${locale}/donate`}>{t('donate')}</Link>
                   </Button>
                 </div>
               </div>

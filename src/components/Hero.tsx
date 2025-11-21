@@ -1,6 +1,6 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -8,6 +8,7 @@ import { Heart, Users, Calendar } from 'lucide-react';
 
 export function Hero() {
   const t = useTranslations('home');
+  const locale = useLocale();
 
   const stats = [
     { icon: Heart, label: 'Lat pomocy', value: '8+' },
@@ -42,10 +43,10 @@ export function Hero() {
             className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
           >
             <Button asChild size="lg" className="bg-red-600 hover:bg-red-700 text-white px-8 py-3">
-              <Link href="/contact">{t('cta')}</Link>
+              <Link href={`/${locale}/contact`}>{t('cta')}</Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="border-red-600 text-red-600 hover:bg-red-50 px-8 py-3">
-              <Link href="/about">{t('learnMore')}</Link>
+            <Button asChild size="lg" className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3">
+              <Link href={`/${locale}/about`}>{t('learnMore')}</Link>
             </Button>
           </motion.div>
 

@@ -1,6 +1,6 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 import { Facebook, Instagram, Youtube } from '@/components/icons/SocialIcons';
 import { Mail, Phone, MapPin } from 'lucide-react';
@@ -8,6 +8,7 @@ import { Mail, Phone, MapPin } from 'lucide-react';
 export function Footer() {
   const t = useTranslations('footer');
   const contactT = useTranslations('contact');
+  const locale = useLocale();
 
   const socialLinks = [
     { icon: Facebook, href: '#', label: 'Facebook' },
@@ -16,10 +17,10 @@ export function Footer() {
   ];
 
   const quickLinks = [
-    { name: 'O nas', href: '/about' },
-    { name: 'Kalendarz', href: '/events' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Kontakt', href: '/contact' },
+    { name: 'O nas', href: `/${locale}/about` },
+    { name: 'Kalendarz', href: `/${locale}/events` },
+    { name: 'Blog', href: `/${locale}/blog` },
+    { name: 'Kontakt', href: `/${locale}/contact` },
   ];
 
   return (
