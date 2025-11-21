@@ -2,8 +2,8 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { locales } from '@/i18n';
-import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import ClientHeader from '@/components/ClientHeader';
 
 type Locale = (typeof locales)[number];
 
@@ -31,7 +31,7 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider messages={messages}>
-      <Header />
+      <ClientHeader />
       {children}
       <Footer />
     </NextIntlClientProvider>
