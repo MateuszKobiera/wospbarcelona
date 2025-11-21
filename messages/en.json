@@ -1,0 +1,64 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About us",
+    "events": "Calendar",
+    "blog": "Blog",
+    "contact": "Contact",
+    "donate": "Donate online",
+    "sponsors": "Sponsors"
+  },
+  "home": {
+    "title": "WOŚP Barcelona",
+    "subtitle": "Great Orchestra of Christmas Charity in Barcelona",
+    "description": "We are a dynamic community of Poles in Barcelona who for 8 years has been organizing WOŚP Finals and charity events, combining passion with help.",
+    "cta": "Join us",
+    "learnMore": "Learn more"
+  },
+  "about": {
+    "title": "About us",
+    "description": "Meet our history and mission",
+    "mission": "Our mission is to help children and seniors through the organization of charity events in Barcelona.",
+    "history": "For 8 years we have been working for the Great Orchestra of Christmas Charity, raising funds for the most important goals."
+  },
+  "events": {
+    "title": "Events calendar",
+    "noEvents": "No upcoming events",
+    "upcoming": "Upcoming events",
+    "past": "Past events"
+  },
+  "blog": {
+    "title": "Blog",
+    "readMore": "Read more",
+    "noPosts": "No blog posts"
+  },
+  "contact": {
+    "title": "Contact",
+    "form": {
+      "name": "Full name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send message",
+      "success": "Message sent successfully!",
+      "error": "An error occurred. Please try again."
+    },
+    "info": {
+      "address": "Barcelona, Spain",
+      "email": "kontakt@wospbarcelona.org",
+      "phone": "+34 XXX XXX XXX"
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "socials": "Social media",
+    "newsletter": "Subscribe to newsletter"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "close": "Close",
+    "open": "Open",
+    "menu": "Menu"
+  }
+}

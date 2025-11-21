@@ -1,0 +1,64 @@
+{
+  "nav": {
+    "home": "Strona główna",
+    "about": "O nas",
+    "events": "Kalendarz",
+    "blog": "Blog",
+    "contact": "Kontakt",
+    "donate": "Wpłać online",
+    "sponsors": "Sponsorzy"
+  },
+  "home": {
+    "title": "WOŚP Barcelona",
+    "subtitle": "Wielka Orkiestra Świątecznej Pomocy w Barcelonie",
+    "description": "Jesteśmy dynamiczną społecznością Polaków w Barcelonie, która od 8 lat organizuje Finały WOŚP i wydarzenia charytatywne, łącząc pasję z pomocą.",
+    "cta": "Dołącz do nas",
+    "learnMore": "Dowiedz się więcej"
+  },
+  "about": {
+    "title": "O nas",
+    "description": "Poznaj naszą historię i misję",
+    "mission": "Naszą misją jest pomoc dzieciom i seniorom poprzez organizację wydarzeń charytatywnych w Barcelonie.",
+    "history": "Od 8 lat działamy na rzecz Wielkiej Orkiestry Świątecznej Pomocy, zbierając fundusze na najważniejsze cele."
+  },
+  "events": {
+    "title": "Kalendarz wydarzeń",
+    "noEvents": "Brak nadchodzących wydarzeń",
+    "upcoming": "Nadchodzące wydarzenia",
+    "past": "Minione wydarzenia"
+  },
+  "blog": {
+    "title": "Blog",
+    "readMore": "Czytaj dalej",
+    "noPosts": "Brak wpisów na blogu"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "form": {
+      "name": "Imię i nazwisko",
+      "email": "Email",
+      "subject": "Temat",
+      "message": "Wiadomość",
+      "submit": "Wyślij wiadomość",
+      "success": "Wiadomość wysłana pomyślnie!",
+      "error": "Wystąpił błąd. Spróbuj ponownie."
+    },
+    "info": {
+      "address": "Barcelona, Hiszpania",
+      "email": "kontakt@wospbarcelona.org",
+      "phone": "+34 XXX XXX XXX"
+    }
+  },
+  "footer": {
+    "rights": "Wszelkie prawa zastrzeżone",
+    "socials": "Social media",
+    "newsletter": "Zapisz się do newslettera"
+  },
+  "common": {
+    "loading": "Ładowanie...",
+    "error": "Wystąpił błąd",
+    "close": "Zamknij",
+    "open": "Otwórz",
+    "menu": "Menu"
+  }
+}

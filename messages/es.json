@@ -1,0 +1,64 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre nosotros",
+    "events": "Calendario",
+    "blog": "Blog",
+    "contact": "Contacto",
+    "donate": "Donar online",
+    "sponsors": "Patrocinadores"
+  },
+  "home": {
+    "title": "WOŚP Barcelona",
+    "subtitle": "Gran Orquesta de la Ayuda Navideña en Barcelona",
+    "description": "Somos una comunidad dinámica de polacos en Barcelona que desde hace 8 años organiza Finales de WOŚP y eventos benéficos, uniendo la pasión con la ayuda.",
+    "cta": "Únete a nosotros",
+    "learnMore": "Saber más"
+  },
+  "about": {
+    "title": "Sobre nosotros",
+    "description": "Conoce nuestra historia y misión",
+    "mission": "Nuestra misión es ayudar a niños y mayores a través de la organización de eventos benéficos en Barcelona.",
+    "history": "Desde hace 8 años trabajamos por la Gran Orquesta de la Ayuda Navideña, recaudando fondos para los objetivos más importantes."
+  },
+  "events": {
+    "title": "Calendario de eventos",
+    "noEvents": "No hay eventos próximos",
+    "upcoming": "Próximos eventos",
+    "past": "Eventos pasados"
+  },
+  "blog": {
+    "title": "Blog",
+    "readMore": "Leer más",
+    "noPosts": "No hay entradas en el blog"
+  },
+  "contact": {
+    "title": "Contacto",
+    "form": {
+      "name": "Nombre y apellidos",
+      "email": "Email",
+      "subject": "Asunto",
+      "message": "Mensaje",
+      "submit": "Enviar mensaje",
+      "success": "¡Mensaje enviado con éxito!",
+      "error": "Ocurrió un error. Inténtalo de nuevo."
+    },
+    "info": {
+      "address": "Barcelona, España",
+      "email": "kontakt@wospbarcelona.org",
+      "phone": "+34 XXX XXX XXX"
+    }
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados",
+    "socials": "Redes sociales",
+    "newsletter": "Suscríbete a la newsletter"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Ocurrió un error",
+    "close": "Cerrar",
+    "open": "Abrir",
+    "menu": "Menú"
+  }
+}

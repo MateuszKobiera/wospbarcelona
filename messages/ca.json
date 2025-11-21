@@ -1,0 +1,64 @@
+{
+  "nav": {
+    "home": "Inici",
+    "about": "Sobre nosaltres",
+    "events": "Calendari",
+    "blog": "Blog",
+    "contact": "Contacte",
+    "donate": "Donar online",
+    "sponsors": "Patrocinadors"
+  },
+  "home": {
+    "title": "WOŚP Barcelona",
+    "subtitle": "Gran Orquestra de l'Ajuda Nadalenca a Barcelona",
+    "description": "Som una comunitat dinàmica de polonesos a Barcelona que des de fa 8 anys organitza Finals de WOŚP i esdeveniments benèfics, unint la passió amb l'ajuda.",
+    "cta": "Uneix-te a nosaltres",
+    "learnMore": "Més informació"
+  },
+  "about": {
+    "title": "Sobre nosaltres",
+    "description": "Coneix la nostra història i missió",
+    "mission": "La nostra missió és ajudar nens i majors a través de l'organització d'esdeveniments benèfics a Barcelona.",
+    "history": "Des de fa 8 anys treballem per la Gran Orquestra de l'Ajuda Nadalenca, recaptant fons per als objectius més importants."
+  },
+  "events": {
+    "title": "Calendari d'esdeveniments",
+    "noEvents": "No hi ha esdeveniments propers",
+    "upcoming": "Pròxims esdeveniments",
+    "past": "Esdeveniments passats"
+  },
+  "blog": {
+    "title": "Blog",
+    "readMore": "Llegir més",
+    "noPosts": "No hi ha entrades al blog"
+  },
+  "contact": {
+    "title": "Contacte",
+    "form": {
+      "name": "Nom i cognoms",
+      "email": "Email",
+      "subject": "Assumpte",
+      "message": "Missatge",
+      "submit": "Enviar missatge",
+      "success": "Missatge enviat amb èxit!",
+      "error": "S'ha produït un error. Torna-ho a provar."
+    },
+    "info": {
+      "address": "Barcelona, Espanya",
+      "email": "kontakt@wospbarcelona.org",
+      "phone": "+34 XXX XXX XXX"
+    }
+  },
+  "footer": {
+    "rights": "Tots els drets reservats",
+    "socials": "Xarxes socials",
+    "newsletter": "Subscriu-te a la newsletter"
+  },
+  "common": {
+    "loading": "Carregant...",
+    "error": "S'ha produït un error",
+    "close": "Tancar",
+    "open": "Obrir",
+    "menu": "Menú"
+  }
+}
