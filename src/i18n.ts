@@ -5,11 +5,6 @@ import { getRequestConfig } from 'next-intl/server';
 export const locales = ['pl', 'en', 'es', 'ca'] as const;
 export const defaultLocale = 'pl' as const;
 
-type Locale = (typeof locales)[number];
-function isLocale(value: string): value is Locale {
-  return (locales as readonly string[]).includes(value);
-}
-
 export default getRequestConfig(async ({ requestLocale }) => {
   // Validate that the incoming `locale` parameter is valid
   const locale = await requestLocale;
