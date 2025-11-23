@@ -1,7 +1,7 @@
 import { SocialMedia } from '@/components/SocialMedia';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Calendar, Clock, MapPin, Users, ArrowRight } from 'lucide-react';
+import { Calendar, Clock, MapPin, Users } from 'lucide-react';
 
 // Mock events data
 const upcomingEvents = [
@@ -81,6 +81,82 @@ const pastEvents = [
 ];
 
 export default function EventsPage() {
+  // Helpers to build ICS payloads server-side (no client JS required)
+  const escapeICS = (s: string) =>
+    s
+      .replace(/\\/g, '\\\\')
+      .replace(/\n/g, '\\n')
+      .replace(/,/g, '\\,')
+      .replace(/;/g, '\\;');
+
+  const formatDate = (date: Date, withZ = false) => {
+    const pad = (n: number) => String(n).padStart(2, '0');
+    const y = date.getUTCFullYear();
+    const m = pad(date.getUTCMonth() + 1);
+    const d = pad(date.getUTCDate());
+    const hh = pad(date.getUTCHours());
+    const mm = pad(date.getUTCMinutes());
+    const ss = pad(date.getUTCSeconds());
+    return `${y}${m}${d}T${hh}${mm}${ss}${withZ ? 'Z' : ''}`;
+  };
+
+  const parseTimes = (dateStr: string, timeStr?: string) => {
+    // dateStr: YYYY-MM-DD
+    // timeStr examples: "10:00 - 22:00", "19:00"
+    const [y, m, d] = dateStr.split('-').map((x) => parseInt(x, 10));
+    let startH = 9, startM = 0, endH = 10, endM = 0;
+    if (timeStr) {
+      const mRange = timeStr.match(/(\d{1,2}):(\d{2})\s*-\s*(\d{1,2}):(\d{2})/);
+      const mSingle = timeStr.match(/(\d{1,2}):(\d{2})/);
+      if (mRange) {
+        startH = parseInt(mRange[1], 10); startM = parseInt(mRange[2], 10);
+        endH = parseInt(mRange[3], 10); endM = parseInt(mRange[4], 10);
+      } else if (mSingle) {
+        startH = parseInt(mSingle[1], 10); startM = parseInt(mSingle[2], 10);
+        endH = (startH + 2) % 24; endM = startM; // default 2h duration
+      }
+    }
+    // Treat times as local; we will export without Z (floating time)
+    const dtStart = new Date(Date.UTC(y, (m - 1), d, startH, startM, 0));
+    const dtEnd = new Date(Date.UTC(y, (m - 1), d, endH, endM, 0));
+    return { dtStart, dtEnd };
+  };
+
+  const buildEventICS = (ev: typeof upcomingEvents[number]) => {
+    const { dtStart, dtEnd } = parseTimes(ev.date, ev.time);
+    const dtStamp = formatDate(new Date(), true);
+    const DTSTART = formatDate(dtStart, false);
+    const DTEND = formatDate(dtEnd, false);
+    const UID = `${ev.id}@wospbarcelona`;
+    const lines = [
+      'BEGIN:VEVENT',
+      `UID:${UID}`,
+      `DTSTAMP:${dtStamp}`,
+      `DTSTART:${DTSTART}`,
+      `DTEND:${DTEND}`,
+      `SUMMARY:${escapeICS(ev.title)}`,
+      ev.location ? `LOCATION:${escapeICS(ev.location)}` : undefined,
+      ev.description ? `DESCRIPTION:${escapeICS(ev.description)}` : undefined,
+      'END:VEVENT',
+    ].filter(Boolean) as string[];
+    return lines.join('\r\n');
+  };
+
+  const buildICS = (events: typeof upcomingEvents) => {
+    const eventsICS = events.map((e) => buildEventICS(e)).join('\r\n');
+    return [
+      'BEGIN:VCALENDAR',
+      'VERSION:2.0',
+      'CALSCALE:GREGORIAN',
+      'PRODID:-//WOŚP Barcelona//Kalendarz//PL',
+      'METHOD:PUBLISH',
+      eventsICS,
+      'END:VCALENDAR',
+      '',
+    ].join('\r\n');
+  };
+
+  const allEventsIcsHref = `data:text/calendar;charset=utf-8,${encodeURIComponent(buildICS(upcomingEvents))}`;
   return (
     <>
       <main className="py-16 bg-gradient-to-br from-white via-red-50 to-pink-100">
@@ -99,10 +175,14 @@ export default function EventsPage() {
           <section className="mb-20">
             <div className="flex items-center justify-between mb-8">
               <h2 className="text-3xl font-bold text-gray-900">Nadchodzące wydarzenia</h2>
-              <Button variant="outline" className="border-red-600 text-red-600 hover:bg-red-600 hover:text-white">
-                <Calendar className="w-4 h-4 mr-2" />
+              <a
+                href={allEventsIcsHref}
+                download="wosp-barcelona-wydarzenia.ics"
+                className="inline-flex items-center rounded-full border border-orange-300 bg-white text-orange-700 hover:bg-orange-100 px-3 py-2 text-sm shadow-sm"
+              >
+                <Calendar className="w-4 h-4 mr-2 text-orange-700" />
                 Dodaj do kalendarza
-              </Button>
+              </a>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
@@ -152,11 +232,18 @@ export default function EventsPage() {
 
                         <div className="flex space-x-3 mt-4">
                           <Button className="bg-red-600 hover:bg-red-700 flex-1">
-                            {event.registrationRequired ? 'Zapisz się' : 'Dowiedz się więcej'}
+                            Dowiedz się więcej
                           </Button>
-                          <Button variant="outline" size="sm">
-                            <ArrowRight className="w-4 h-4" />
-                          </Button>
+                          {/* Per-event small add-to-calendar */}
+                          <a
+                            href={`data:text/calendar;charset=utf-8,${encodeURIComponent(buildICS([event]))}`}
+                            download={`wosp-${event.id}.ics`}
+                            aria-label="Dodaj do kalendarza"
+                            title="Dodaj do kalendarza"
+                            className="inline-flex items-center justify-center h-9 w-9 rounded-md border border-orange-300 bg-white text-orange-700 hover:bg-orange-100 shadow-sm"
+                          >
+                            <Calendar className="w-4 h-4 text-orange-700" />
+                          </a>
                         </div>
                       </div>
                     </div>
