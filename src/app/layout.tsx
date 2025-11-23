@@ -15,6 +15,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "WOŚP Barcelona",
   description: "Wielka Orkiestra Świątecznej Pomocy w Barcelonie",
+  icons: {
+    icon: "/images/favicon.ico",
+    apple: "/34FinalWOSP2026_serduszko.png",
+  },
 };
 
 export default function RootLayout({

@@ -4,6 +4,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 import { Facebook, Instagram, Youtube } from '@/components/icons/SocialIcons';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import Image from 'next/image';
 
 export function Footer() {
   const t = useTranslations('footer');
@@ -31,9 +32,13 @@ export function Footer() {
           {/* Logo i opis */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-lg">W</span>
-              </div>
+              <Image
+                src="/images/favicon.ico"
+                alt="WOŚP Barcelona"
+                width={40}
+                height={40}
+                priority
+              />
               <span className="font-bold text-xl">WOŚP Barcelona</span>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">

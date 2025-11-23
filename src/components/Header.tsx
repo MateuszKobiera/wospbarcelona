@@ -43,9 +43,13 @@ export function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href={`/${locale}`} className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-lg">W</span>
-            </div>
+            <Image
+              src="/images/favicon.ico"
+              alt="WOŚP Barcelona"
+              width={40}
+              height={40}
+              priority
+            />
             <span className="font-bold text-xl text-gray-900">WOŚP Barcelona</span>
           </Link>
 
