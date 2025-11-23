@@ -20,6 +20,7 @@ export function Footer() {
     { name: 'O nas', href: `/${locale}/about` },
     { name: 'Kalendarz', href: `/${locale}/events` },
     { name: 'Blog', href: `/${locale}/blog` },
+    { name: 'Sponsorzy', href: `/${locale}/sponsors` },
     { name: 'Kontakt', href: `/${locale}/contact` },
   ];
 

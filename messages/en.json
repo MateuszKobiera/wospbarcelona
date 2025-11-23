@@ -54,6 +54,30 @@
     "socials": "Social media",
     "newsletter": "Subscribe to newsletter"
   },
+  "sponsors": {
+    "title": "Sponsors",
+    "description": "Together we create good! This page presents the companies and institutions that support WOŚP Barcelona. Thank you for every form of help.",
+    "groups": {
+      "partnersTitle": "Sponsors and Partners",
+      "artistsTitle": "Artists and Supporters"
+    },
+    "cta": {
+      "title": "Want to become a sponsor or partner?",
+      "subtitle": "Get in touch – we will prepare a tailored collaboration proposal.",
+      "contact": "Contact us",
+      "email": "kontakt@wospbarcelona.org"
+    },
+    "linkLabels": {
+      "website": "Website",
+      "maps": "Maps",
+      "phone": "Phone",
+      "shop": "Shop",
+      "contact": "Contact",
+      "booking": "Booking",
+      "trial": "Free trial",
+      "careers": "Careers"
+    }
+  },
   "common": {
     "loading": "Loading...",
     "error": "An error occurred",

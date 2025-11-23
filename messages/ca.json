@@ -54,6 +54,30 @@
     "socials": "Xarxes socials",
     "newsletter": "Subscriu-te a la newsletter"
   },
+  "sponsors": {
+    "title": "Patrocinadors",
+    "description": "Junts creem el bé! Aquesta pàgina presenta les empreses i institucions que donen suport a WOŚP Barcelona. Gràcies per tota forma d'ajuda.",
+    "groups": {
+      "partnersTitle": "Patrocinadors i col·laboradors",
+      "artistsTitle": "Artistes i persones col·laboradores"
+    },
+    "cta": {
+      "title": "Vols ser patrocinador o col·laborador?",
+      "subtitle": "Posa't en contacte: prepararem una proposta de col·laboració a mida.",
+      "contact": "Contacta amb nosaltres",
+      "email": "kontakt@wospbarcelona.org"
+    },
+    "linkLabels": {
+      "website": "Lloc web",
+      "maps": "Maps",
+      "phone": "Telèfon",
+      "shop": "Botiga",
+      "contact": "Contacte",
+      "booking": "Reserves",
+      "trial": "Classe de prova",
+      "careers": "Feina"
+    }
+  },
   "common": {
     "loading": "Carregant...",
     "error": "S'ha produït un error",

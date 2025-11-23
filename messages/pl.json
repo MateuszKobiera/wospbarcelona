@@ -54,6 +54,30 @@
     "socials": "Social media",
     "newsletter": "Zapisz się do newslettera"
   },
+  "sponsors": {
+    "title": "Sponsorzy",
+    "description": "Razem tworzymy dobro! Ta strona prezentuje firmy i instytucje, które wspierają WOŚP Barcelona. Dziękujemy za każdą formę pomocy.",
+    "groups": {
+      "partnersTitle": "Sponsorzy i Partnerzy",
+      "artistsTitle": "Artyści i osoby wspierające"
+    },
+    "cta": {
+      "title": "Chcesz zostać sponsorem lub partnerem?",
+      "subtitle": "Skontaktuj się z nami – przygotujemy dedykowaną propozycję współpracy.",
+      "contact": "Napisz do nas",
+      "email": "kontakt@wospbarcelona.org"
+    },
+    "linkLabels": {
+      "website": "Strona",
+      "maps": "Mapy",
+      "phone": "Telefon",
+      "shop": "Sklep",
+      "contact": "Kontakt",
+      "booking": "Rezerwacje",
+      "trial": "Lekcja próbna",
+      "careers": "Kariera"
+    }
+  },
   "common": {
     "loading": "Ładowanie...",
     "error": "Wystąpił błąd",

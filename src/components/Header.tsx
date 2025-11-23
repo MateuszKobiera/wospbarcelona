@@ -33,6 +33,7 @@ export function Header() {
     { name: t('about'), href: `/${locale}/about` },
     { name: t('events'), href: `/${locale}/events` },
     { name: t('blog'), href: `/${locale}/blog` },
+    { name: t('sponsors'), href: `/${locale}/sponsors` },
     { name: t('contact'), href: `/${locale}/contact` },
   ];
 
