@@ -1,15 +1,20 @@
 import { Hero } from '@/components/Hero';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Facebook, Instagram, MessageSquare } from 'lucide-react';
+import { HeartHandshakeIcon, StoreIcon, UsersIcon, FlagIcon } from 'lucide-react';
+import { siFacebook, siInstagram, siMeetup } from 'simple-icons/icons';
+import { SponsorsMarquee } from '@/components/SponsorsMarquee';
+import { blogPosts } from '@/content/blog';
+import { ContactForm } from '@/components/ContactForm';
 
 export default function HomePage() {
   return (
     <main>
       <Hero />
 
-      {/* Socials: make the cards clickable and remove left buttons */}
+      {/* Socials */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-6">
@@ -23,7 +28,14 @@ export default function HomePage() {
                 <CardContent className="p-4">
                   <div className="flex items-center mb-3">
                     <div className="w-9 h-9 rounded-full bg-blue-100 flex items-center justify-center mr-2">
-                      <Facebook className="w-5 h-5 text-blue-600" />
+                      <svg
+                        role="img"
+                        viewBox="0 0 24 24"
+                        className="w-5 h-5 text-blue-600 fill-current"
+                        aria-hidden
+                      >
+                        <path d={siFacebook.path} />
+                      </svg>
                     </div>
                     <div className="text-sm font-semibold text-gray-900">Facebook</div>
                   </div>
@@ -39,7 +51,14 @@ export default function HomePage() {
                 <CardContent className="p-4">
                   <div className="flex items-center mb-3">
                     <div className="w-9 h-9 rounded-full bg-pink-100 flex items-center justify-center mr-2">
-                      <Instagram className="w-5 h-5 text-pink-600" />
+                      <svg
+                        role="img"
+                        viewBox="0 0 24 24"
+                        className="w-5 h-5 text-pink-600 fill-current"
+                        aria-hidden
+                      >
+                        <path d={siInstagram.path} />
+                      </svg>
                     </div>
                     <div className="text-sm font-semibold text-gray-900">Instagram</div>
                   </div>
@@ -55,7 +74,14 @@ export default function HomePage() {
                 <CardContent className="p-4">
                   <div className="flex items-center mb-3">
                     <div className="w-9 h-9 rounded-full bg-red-100 flex items-center justify-center mr-2">
-                      <MessageSquare className="w-5 h-5 text-red-600" />
+                      <svg
+                        role="img"
+                        viewBox="0 0 24 24"
+                        className="w-5 h-5 text-red-600 fill-current"
+                        aria-hidden
+                      >
+                        <path d={siMeetup.path} />
+                      </svg>
                     </div>
                     <div className="text-sm font-semibold text-gray-900">Meetup</div>
                   </div>
@@ -66,6 +92,42 @@ export default function HomePage() {
               </Card>
             </Link>
           </div>
+        </div>
+      </section>
+
+      <section
+        className="relative py-14 overflow-hidden"
+        style={{
+          backgroundImage:
+            "linear-gradient(115deg, rgba(255,255,255,0.98) 10%, rgba(255,165,190,0.60) 55%, rgba(255,165,120,0.50) 100%)",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div
+          className="pointer-events-none absolute inset-0 bg-center bg-cover opacity-[0.03] blur-[1px]"
+          style={{ backgroundImage: "url('/images/grafiki/41_34FinalWOSP2026_kropki_modul_zapetlony_podglad.jpg')" }}
+        />
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-[18%] bg-gradient-to-r from-white to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-[18%] bg-gradient-to-l from-white to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-2/3 bg-gradient-to-l from-white/70 to-transparent" />
+        <div
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              'radial-gradient(ellipse at 50% 18%, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.55) 30%, rgba(255,255,255,0) 60%)',
+          }}
+        />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-extrabold text-gray-950 mb-4 text-center">Sponsorzy i Partnerzy</h2>
+          <p className="text-center text-base md:text-lg text-gray-900 font-semibold mb-2">
+            Oni już z nami grają! Dołącz do grupy naszych Partnerów i Sponsorów!
+          </p>
+          <p className="text-center text-sm md:text-base text-gray-900 mb-8">
+            Poznaj naszych polskich partnerów i sponsorów, którzy grają razem z nami w Barcelonie i okolicach!
+          </p>
+          <SponsorsMarquee />
+          <p className="mt-3 text-center text-xs text-gray-600">Kliknij pasek, aby zobaczyć wszystkich sponsorów</p>
         </div>
       </section>
 
@@ -99,7 +161,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Additional sections can be added here */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -107,9 +168,64 @@ export default function HomePage() {
               Dołącz do naszej misji
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Każdego roku organizujemy finał Wielkiej Orkiestry Świątecznej Pomocy w Barcelonie, 
+              Każdego roku organizujemy finał Wielkiej Orkiestry Świątecznej Pomocy w Barcelonie,
               zbierając fundusze na zakup najnowocześniejszego sprzętu medycznego dla polskich szpitali.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">Nasza misja</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Card className="border-gray-200/80">
+              <CardContent className="p-6">
+                <div className="flex items-center mb-3">
+                  <div className="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-3">
+                    <HeartHandshakeIcon className="w-5 h-5 text-red-600" />
+                  </div>
+                  <h3 className="text-sm font-semibold text-gray-900">Wspieranie najbardziej potrzebujących</h3>
+                </div>
+                <p className="text-sm text-gray-700">Zbieramy środki i organizujemy działania, by realnie pomagać dzieciom i osobom w potrzebie.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-gray-200/80">
+              <CardContent className="p-6">
+                <div className="flex items-center mb-3">
+                  <div className="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center mr-3">
+                    <StoreIcon className="w-5 h-5 text-amber-600" />
+                  </div>
+                  <h3 className="text-sm font-semibold text-gray-900">Wspieranie lokalnych przedsiębiorstw</h3>
+                </div>
+                <p className="text-sm text-gray-700">Łączymy firmy i ludzi, tworzymy kontakty oraz przestrzeń do współpracy.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-gray-200/80">
+              <CardContent className="p-6">
+                <div className="flex items-center mb-3">
+                  <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                    <UsersIcon className="w-5 h-5 text-blue-700" />
+                  </div>
+                  <h3 className="text-sm font-semibold text-gray-900">Integracja polskiej społeczności</h3>
+                </div>
+                <p className="text-sm text-gray-700">Budujemy relacje, organizujemy wydarzenia i łączymy Polaków w Barcelonie i okolicach.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-gray-200/80">
+              <CardContent className="p-6">
+                <div className="flex items-center mb-3">
+                  <div className="w-10 h-10 rounded-full bg-pink-100 flex items-center justify-center mr-3">
+                    <FlagIcon className="w-5 h-5 text-pink-600" />
+                  </div>
+                  <h3 className="text-sm font-semibold text-gray-900">Promowanie polskiej kultury w Hiszpanii</h3>
+                </div>
+                <p className="text-sm text-gray-700">Pokazujemy polską kulturę i wartości, współtworząc kolorową mozaikę Barcelony.</p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -143,6 +259,65 @@ export default function HomePage() {
           </Card>
         </div>
       </section>
+
+
+      {/* Ostatnie wpisy na blogu */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">Najnowsze wpisy</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[...blogPosts]
+              .sort((a, b) => (a.date < b.date ? 1 : -1))
+              .slice(0, 3)
+              .map((post) => {
+                const href = post.sourceUrl ?? '#';
+                return (
+                  <Link key={post.slug} href={href} target={post.sourceUrl ? '_blank' : undefined} rel={post.sourceUrl ? 'noopener noreferrer' : undefined} className="block group">
+                    <Card className="overflow-hidden border-gray-200/80 transition hover:shadow-md hover:-translate-y-0.5">
+                      {post.coverImage ? (
+                        <div className="relative h-44">
+                          <Image src={post.coverImage} alt={post.title} fill className="object-cover" />
+                        </div>
+                      ) : null}
+                      <CardContent className="p-5">
+                        <div className="text-xs text-gray-500 mb-2">{post.date}</div>
+                        <h3 className="font-semibold text-gray-900 mb-2 line-clamp-2">
+                          {post.title}
+                        </h3>
+                        {post.excerpt ? (
+                          <p className="text-sm text-gray-700 line-clamp-3">{post.excerpt}</p>
+                        ) : null}
+                        <div className="mt-4 text-sm font-medium text-red-600 group-hover:underline">Czytaj więcej</div>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                );
+              })}
+          </div>
+        </div>
+      </section>
+
+      {/* Prosty formularz kontaktowy */}
+      <section
+        className="relative py-16 overflow-hidden"
+        style={{
+          backgroundImage:
+            "linear-gradient(115deg, rgba(255,255,255,0.96) 0%, rgba(255,245,245,0.85) 40%, rgba(255,245,235,0.80) 100%), url('/images/pictures/pexels-frederic-bartl-256900-786126.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-[12%] bg-gradient-to-r from-white to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-[12%] bg-gradient-to-l from-white to-transparent" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <h2 className="text-3xl font-bold text-gray-900 mb-3 text-center">Skontaktuj się z nami</h2>
+          <p className="text-center text-gray-700 mb-8">Masz pytania, chcesz zostać sponsorem lub wolontariuszem? Napisz do nas!</p>
+          <div className="rounded-xl bg-white/80 backdrop-blur p-6">
+            <ContactForm />
+          </div>
+        </div>
+      </section>
+
     </main>
   );
 }
