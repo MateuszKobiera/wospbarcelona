@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 const socialLinks = [
   {
     name: 'Facebook',
-    href: 'https://facebook.com/wospbarcelona',
+    href: 'https://facebook.com/sztabWOSPBarcelona',
     icon: Facebook,
     color: 'hover:bg-blue-600',
     description: 'Dołącz do naszej społeczności na Facebooku'

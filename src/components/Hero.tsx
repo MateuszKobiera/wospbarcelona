@@ -11,9 +11,9 @@ export function Hero() {
   const locale = useLocale();
 
   const stats = [
-    { icon: Heart, label: 'Lat pomocy', value: '8+' },
+    { icon: Heart, label: 'Lat pomocy', value: '9+' },
     { icon: Users, label: 'Wolontariuszy', value: '100+' },
-    { icon: Calendar, label: 'Wydarzeń', value: '50+' },
+    { icon: Calendar, label: 'Zebranej kwoty', value: '35 tys. €+' },
   ];
 
   return (
