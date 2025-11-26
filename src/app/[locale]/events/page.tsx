@@ -1,75 +1,85 @@
-import { SocialMedia } from '@/components/SocialMedia';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Calendar, Clock, MapPin, Users } from 'lucide-react';
+import Link from 'next/link';
+import { siFacebook, siInstagram, siMeetup } from 'simple-icons/icons';
 
-// Mock events data
+// Mock events data - sorted by date (closest first)
 const upcomingEvents = [
-  {
-    id: 1,
-    title: '33. Finał WOŚP w Barcelonie',
-    description: 'Największe wydarzenie charytatywne roku! Dołącz do nas i pomagajmy razem.',
-    date: '2024-01-28',
-    time: '10:00 - 22:00',
-    location: 'Plaça de Catalunya, Barcelona',
-    category: 'Finał WOŚP',
-    image: '/api/placeholder/400/250',
-    attendees: 500,
-    registrationRequired: true
-  },
-  {
-    id: 2,
-    title: 'Koncert Charytatywny "Serce dla dzieci"',
-    description: 'Wieczór muzyki i pomocy - koncerty polskich i katalońskich artystów.',
-    date: '2024-02-10',
-    time: '19:00',
-    location: 'Palau de la Música Catalana',
-    category: 'Koncert',
-    image: '/api/placeholder/400/250',
-    attendees: 200,
-    registrationRequired: true
-  },
   {
     id: 3,
     title: 'Spotkanie Wolontariuszy',
-    description: 'Organizacyjne spotkanie dla wszystkich chętnych do pomocy przy WOŚP 2024.',
-    date: '2024-01-15',
+    description: 'Organizacyjne spotkanie dla wszystkich chętnych do pomocy przy WOŚP 2025.',
+    date: '2025-01-15',
     time: '18:00',
     location: 'Centrum Polonijne, Barcelona',
     category: 'Spotkanie',
     image: '/api/placeholder/400/250',
     attendees: 50,
-    registrationRequired: false
+    registrationRequired: false,
+    meetupLink: 'https://www.meetup.com/wosp-barcelona/events/spotkanie-wolontariuszy',
+    facebookLink: 'https://facebook.com/events/spotkanie-wolontariuszy'
   },
   {
     id: 4,
     title: 'Aukcja Sztuki WOŚP',
     description: 'Wystawa i aukcja dzieł polskich artystów na rzecz WOŚP.',
-    date: '2024-01-20',
+    date: '2025-01-20',
     time: '12:00 - 18:00',
     location: 'Galeria Sztuki, Barcelona',
     category: 'Aukcja',
     image: '/api/placeholder/400/250',
     attendees: 100,
-    registrationRequired: false
+    registrationRequired: false,
+    meetupLink: 'https://www.meetup.com/wosp-barcelona/events/aukcja-sztuki',
+    facebookLink: 'https://facebook.com/events/aukcja-sztuki-wosp'
+  },
+  {
+    id: 1,
+    title: '34. Finał WOŚP w Barcelonie',
+    description: 'Największe wydarzenie charytatywne roku! Dołącz do nas i pomagajmy razem. Cel: Zdrowe brzuszki naszych dzieci - wsparcie diagnostyki i leczenia chorób przewodu pokarmowego u najmłodszych pacjentów.',
+    date: '2025-01-26',
+    time: '10:00 - 22:00',
+    location: 'Plaça de Catalunya, Barcelona',
+    category: 'Finał WOŚP',
+    image: '/api/placeholder/600/400',
+    attendees: 500,
+    registrationRequired: true,
+    isFinal: true,
+    meetupLink: 'https://www.meetup.com/wosp-barcelona/events/34-final-wosp',
+    facebookLink: 'https://facebook.com/events/34-final-wosp-barcelona'
+  },
+  {
+    id: 2,
+    title: 'Koncert Charytatywny "Serce dla dzieci"',
+    description: 'Wieczór muzyki i pomocy - koncerty polskich i katalońskich artystów.',
+    date: '2025-02-10',
+    time: '19:00',
+    location: 'Palau de la Música Catalana',
+    category: 'Koncert',
+    image: '/api/placeholder/400/250',
+    attendees: 200,
+    registrationRequired: true,
+    meetupLink: 'https://www.meetup.com/wosp-barcelona/events/koncert-charytatywny',
+    facebookLink: 'https://facebook.com/events/koncert-serce-dla-dzieci'
   }
 ];
 
 const pastEvents = [
   {
     id: 5,
-    title: '32. Finał WOŚP w Barcelonie',
-    description: 'Niesamowity finał zebraliśmy 125,000 euro!',
-    date: '2023-01-29',
+    title: '33. Finał WOŚP w Barcelonie',
+    description: 'Niesamowity finał! Zebraliśmy rekordową kwotę 13,881.91 euro!',
+    date: '2024-01-28',
     location: 'Plaça de Catalunya, Barcelona',
     category: 'Finał WOŚP',
     image: '/api/placeholder/400/250',
-    attendees: 450,
-    amountRaised: '125,000 €'
+    attendees: 520,
+    amountRaised: '13,881.91 €'
   },
   {
     id: 6,
-    title: 'Mikołajki dla Dzieci',
+    title: 'Mikołajki dla Dzieci 2023',
     description: 'Świąteczne spotkanie z prezentami dla polskich dzieci w Barcelonie.',
     date: '2023-12-06',
     location: 'Polski Kościół św. Jerzego',
@@ -77,6 +87,61 @@ const pastEvents = [
     image: '/api/placeholder/400/250',
     attendees: 80,
     amountRaised: '2,000 €'
+  },
+  {
+    id: 7,
+    title: 'Koncert Jesieni Polskiej',
+    description: 'Wieczór polskiej muzyki i poezji w sercu Barcelony.',
+    date: '2023-10-15',
+    location: 'Teatr Polònia, Barcelona',
+    category: 'Koncert',
+    image: '/api/placeholder/400/250',
+    attendees: 150,
+    amountRaised: '3,200 €'
+  },
+  {
+    id: 8,
+    title: '32. Finał WOŚP w Barcelonie',
+    description: 'Wspaniały finał z rekordową frekwencją!',
+    date: '2023-01-29',
+    location: 'Plaça de Catalunya, Barcelona',
+    category: 'Finał WOŚP',
+    image: '/api/placeholder/400/250',
+    attendees: 450,
+    amountRaised: '10,460.47 €'
+  },
+  {
+    id: 9,
+    title: 'Letni Piknik Polonijny',
+    description: 'Rodzinne spotkanie z grami, konkursami i polskim jedzeniem.',
+    date: '2022-07-16',
+    location: 'Park Ciutadella, Barcelona',
+    category: 'Piknik',
+    image: '/api/placeholder/400/250',
+    attendees: 200,
+    amountRaised: '1,500 €'
+  },
+  {
+    id: 10,
+    title: '31. Finał WOŚP w Barcelonie',
+    description: 'Pierwszy finał po pandemii - pełen emocji i radości!',
+    date: '2022-01-30',
+    location: 'Plaça de Catalunya, Barcelona',
+    category: 'Finał WOŚP',
+    image: '/api/placeholder/400/250',
+    attendees: 380,
+    amountRaised: '8,989.94 €'
+  },
+  {
+    id: 11,
+    title: 'Wigilia Polonijna 2021',
+    description: 'Tradycyjna wigilia dla polskiej społeczności w Barcelonie.',
+    date: '2021-12-18',
+    location: 'Centrum Polonijne, Barcelona',
+    category: 'Święta',
+    image: '/api/placeholder/400/250',
+    attendees: 120,
+    amountRaised: '800 €'
   }
 ];
 
@@ -185,71 +250,111 @@ export default function EventsPage() {
               </a>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-              {upcomingEvents.map((event) => (
-                <Card key={event.id} className="h-full overflow-hidden bg-white border border-red-100 shadow-sm hover:shadow-md transition-shadow">
-                  <div className="md:flex md:h-full">
-                    <div className="md:w-1/3">
-                      <div className="h-48 md:h-full bg-gradient-to-br from-red-400 to-pink-400 flex items-center justify-center rounded-l-md">
-                        <Calendar className="w-16 h-16 text-white" />
-                      </div>
-                    </div>
-                    <div className="md:w-2/3 p-6 md:flex md:flex-col md:h-full">
-                      <div className="mb-3">
-                        <span className="inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded">
-                          {event.category}
-                        </span>
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-xl font-bold text-gray-900 mb-2">
-                          {event.title}
-                        </h3>
-                        <p className="text-gray-600 line-clamp-2">
-                          {event.description}
-                        </p>
-                      </div>
-
-                      {/* Footer: icons + actions at the bottom */}
-                      <div className="mt-6 border-t pt-4">
-                        <div className="space-y-3 md:space-y-4">
-                          <div className="flex items-center text-sm text-gray-500">
-                            <Calendar className="w-4 h-4 mr-2 text-red-600" />
-                            {event.date}
-                          </div>
-                          <div className="flex items-center text-sm text-gray-500">
-                            <Clock className="w-4 h-4 mr-2 text-red-600" />
-                            {event.time}
-                          </div>
-                          <div className="flex items-center text-sm text-gray-500">
-                            <MapPin className="w-4 h-4 mr-2 text-red-600" />
-                            {event.location}
-                          </div>
-                          <div className="flex items-center text-sm text-gray-500">
-                            <Users className="w-4 h-4 mr-2 text-red-600" />
-                            {event.attendees} uczestników
-                          </div>
-                        </div>
-
-                        <div className="flex space-x-3 mt-4">
-                          <Button className="bg-red-600 hover:bg-red-700 flex-1">
-                            Dowiedz się więcej
-                          </Button>
-                          {/* Per-event small add-to-calendar */}
-                          <a
-                            href={`data:text/calendar;charset=utf-8,${encodeURIComponent(buildICS([event]))}`}
-                            download={`wosp-${event.id}.ics`}
-                            aria-label="Dodaj do kalendarza"
-                            title="Dodaj do kalendarza"
-                            className="inline-flex items-center justify-center h-9 w-9 rounded-md border border-orange-300 bg-white text-orange-700 hover:bg-orange-100 shadow-sm"
-                          >
-                            <Calendar className="w-4 h-4 text-orange-700" />
-                          </a>
+            <div className="space-y-8">
+              {upcomingEvents.map((event) => {
+                const isFinal = event.isFinal;
+                const cardClass = isFinal 
+                  ? "h-full overflow-hidden bg-gradient-to-br from-red-50 to-orange-50 border-2 border-red-300 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                  : "h-full overflow-hidden bg-white border border-red-100 shadow-sm hover:shadow-md transition-shadow";
+                
+                return (
+                  <Card key={event.id} className={cardClass}>
+                    <div className={`${isFinal ? 'lg:flex lg:h-full' : 'md:flex md:h-full'}`}>
+                      <div className={isFinal ? 'lg:w-1/2' : 'md:w-1/3'}>
+                        <div className={`${isFinal ? 'h-64 lg:h-full' : 'h-48 md:h-full'} bg-gradient-to-br ${isFinal ? 'from-red-500 to-orange-500' : 'from-red-400 to-pink-400'} flex items-center justify-center rounded-l-md`}>
+                          <Calendar className={`${isFinal ? 'w-24 h-24' : 'w-16 h-16'} text-white`} />
+                          {isFinal && (
+                            <div className="absolute top-4 right-4 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-bold">
+                              FINAŁ!
+                            </div>
+                          )}
                         </div>
                       </div>
+                      <div className={`${isFinal ? 'lg:w-1/2 p-8' : 'md:w-2/3 p-6'} md:flex md:flex-col md:h-full`}>
+                        <div className="mb-3">
+                          <span className={`inline-block ${isFinal ? 'bg-red-200 text-red-900' : 'bg-red-100 text-red-800'} text-xs px-2 py-1 rounded`}>
+                            {event.category}
+                          </span>
+                        </div>
+                        <div className="flex-1">
+                          <h3 className={`${isFinal ? 'text-2xl lg:text-3xl' : 'text-xl'} font-bold text-gray-900 mb-2`}>
+                            {event.title}
+                          </h3>
+                          <p className={`text-gray-600 ${isFinal ? 'text-base' : 'line-clamp-2'}`}>
+                            {event.description}
+                          </p>
+                        </div>
+
+                        {/* Footer: icons + actions at the bottom */}
+                        <div className="mt-6 border-t pt-4">
+                          <div className="space-y-3 md:space-y-4">
+                            <div className="flex items-center text-sm text-gray-500">
+                              <Calendar className="w-4 h-4 mr-2 text-red-600" />
+                              {event.date}
+                            </div>
+                            <div className="flex items-center text-sm text-gray-500">
+                              <Clock className="w-4 h-4 mr-2 text-red-600" />
+                              {event.time}
+                            </div>
+                            <div className="flex items-center text-sm text-gray-500">
+                              <MapPin className="w-4 h-4 mr-2 text-red-600" />
+                              {event.location}
+                            </div>
+                            <div className="flex items-center text-sm text-gray-500">
+                              <Users className="w-4 h-4 mr-2 text-red-600" />
+                              {event.attendees} uczestników
+                            </div>
+                          </div>
+
+                          {/* Social links */}
+                          <div className="flex space-x-2 mt-4">
+                            <a
+                              href={event.meetupLink}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center justify-center h-8 w-8 rounded-md bg-red-100 text-red-600 hover:bg-red-200 transition-colors"
+                              title="Zobacz na Meetup"
+                            >
+                              <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                <path d={siMeetup.path} />
+                              </svg>
+                            </a>
+                            <a
+                              href={event.facebookLink}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center justify-center h-8 w-8 rounded-md bg-blue-100 text-blue-600 hover:bg-blue-200 transition-colors"
+                              title="Zobacz na Facebook"
+                            >
+                              <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                <path d={siFacebook.path} />
+                              </svg>
+                            </a>
+                          </div>
+
+                          <div className="flex space-x-3 mt-4">
+                            <Link href={`/events/${event.id}`} className="flex-1">
+                              <Button className={`w-full ${isFinal ? 'bg-red-600 hover:bg-red-700 text-lg py-3' : 'bg-red-600 hover:bg-red-700'}`}>
+                                Zobacz więcej
+                              </Button>
+                            </Link>
+                            {/* Per-event small add-to-calendar */}
+                            <a
+                              href={`data:text/calendar;charset=utf-8,${encodeURIComponent(buildICS([event]))}`}
+                              download={`wosp-${event.id}.ics`}
+                              aria-label="Dodaj do kalendarza"
+                              title="Dodaj do kalendarza"
+                              className="inline-flex items-center justify-center h-9 w-9 rounded-md border border-orange-300 bg-white text-orange-700 hover:bg-orange-100 shadow-sm"
+                            >
+                              <Calendar className="w-4 h-4 text-orange-700" />
+                            </a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </Card>
-              ))}
+                  </Card>
+                );
+              })}
             </div>
           </section>
 
@@ -291,9 +396,11 @@ export default function EventsPage() {
                         </div>
                       )}
                     </div>
-                    <Button variant="ghost" className="text-red-600 hover:text-red-700 p-0">
-                      Zobacz relację →
-                    </Button>
+                    <Link href={`/events/${event.id}`}>
+                      <Button variant="ghost" className="text-red-600 hover:text-red-700 p-0">
+                        Zobacz relację →
+                      </Button>
+                    </Link>
                   </CardContent>
                 </Card>
               ))}
@@ -346,7 +453,86 @@ export default function EventsPage() {
         </div>
       </main>
       
-      <SocialMedia />
+      {/* Social Media - using same tiles as homepage */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Dołącz do nas</h2>
+            <p className="text-gray-600">Jesteśmy na Facebooku, Instagramie i Meetupie.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Link href="https://facebook.com/sztabWOSPBarcelona" target="_blank" rel="noopener noreferrer" className="block">
+              <Card className="border-gray-200/80 transition hover:shadow-md hover:-translate-y-0.5 cursor-pointer">
+                <CardContent className="p-4">
+                  <div className="flex items-center mb-3">
+                    <div className="w-9 h-9 rounded-full bg-blue-100 flex items-center justify-center mr-2">
+                      <svg
+                        role="img"
+                        viewBox="0 0 24 24"
+                        className="w-5 h-5 text-blue-600 fill-current"
+                        aria-hidden
+                      >
+                        <path d={siFacebook.path} />
+                      </svg>
+                    </div>
+                    <div className="text-sm font-semibold text-gray-900">Facebook</div>
+                  </div>
+                  <p className="text-sm text-gray-700">
+                    Zobacz, co u nas słychać. Aktualności, zdjęcia i relacje z wydarzeń.
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
+
+            <Link href="https://instagram.com/wospbarcelona" target="_blank" rel="noopener noreferrer" className="block">
+              <Card className="border-gray-200/80 transition hover:shadow-md hover:-translate-y-0.5 cursor-pointer">
+                <CardContent className="p-4">
+                  <div className="flex items-center mb-3">
+                    <div className="w-9 h-9 rounded-full bg-pink-100 flex items-center justify-center mr-2">
+                      <svg
+                        role="img"
+                        viewBox="0 0 24 24"
+                        className="w-5 h-5 text-pink-600 fill-current"
+                        aria-hidden
+                      >
+                        <path d={siInstagram.path} />
+                      </svg>
+                    </div>
+                    <div className="text-sm font-semibold text-gray-900">Instagram</div>
+                  </div>
+                  <p className="text-sm text-gray-700">
+                    Najnowsze zdjęcia i stories z naszych działań w Barcelonie.
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
+
+            <Link href="https://www.meetup.com/wośp-barcelona" target="_blank" rel="noopener noreferrer" className="block">
+              <Card className="border-gray-200/80 transition hover:shadow-md hover:-translate-y-0.5 cursor-pointer">
+                <CardContent className="p-4">
+                  <div className="flex items-center mb-3">
+                    <div className="w-9 h-9 rounded-full bg-red-100 flex items-center justify-center mr-2">
+                      <svg
+                        role="img"
+                        viewBox="0 0 24 24"
+                        className="w-5 h-5 text-red-600 fill-current"
+                        aria-hidden
+                      >
+                        <path d={siMeetup.path} />
+                      </svg>
+                    </div>
+                    <div className="text-sm font-semibold text-gray-900">Meetup</div>
+                  </div>
+                  <p className="text-sm text-gray-700">
+                    Dołącz do naszych wydarzeń i spotkań polskiej społeczności.
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
