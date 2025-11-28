@@ -306,6 +306,7 @@ const allEvents = [
   }
 ];
 
+
 interface EventPageProps {
   params: Promise<{
     id: string;

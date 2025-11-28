@@ -8,14 +8,6 @@ const nextConfig: NextConfig = {
     unoptimized: true,
     formats: ['image/webp', 'image/avif'],
   },
-  async rewrites() {
-    return [
-      {
-        source: '/images/:path*',
-        destination: '/images/:path*',
-      },
-    ];
-  },
-};
+  };
 
 export default withNextIntl(nextConfig);

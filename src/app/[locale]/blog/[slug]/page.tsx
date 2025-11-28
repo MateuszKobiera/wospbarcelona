@@ -1,20 +1,10 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { locales } from '@/i18n';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { blogPosts, findPostBySlug } from '@/content/blog';
+import { findPostBySlug } from '@/content/blog';
 import { Facebook, Instagram, MessageSquare } from 'lucide-react';
 
-export function generateStaticParams() {
-  const params: { locale: (typeof locales)[number]; slug: string }[] = [];
-  for (const locale of locales) {
-    for (const post of blogPosts) {
-      params.push({ locale, slug: post.slug });
-    }
-  }
-  return params;
-}
 
 export default async function BlogPostPage({
   params,
