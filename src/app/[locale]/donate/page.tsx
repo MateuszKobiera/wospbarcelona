@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import { SocialMedia } from '@/components/SocialMedia';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { siFacebook, siInstagram, siMeetup } from 'simple-icons/icons';
 
 export const metadata = {
   title: 'Wpłać Online',
@@ -84,7 +84,86 @@ export default function WplacOnlinePage() {
         </div>
       </main>
 
-      <SocialMedia />
+      {/* Socials */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Dołącz do nas</h2>
+            <p className="text-gray-600">Jesteśmy na Facebooku, Instagramie i Meetupie.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Link href="https://facebook.com/sztabWOSPBarcelona" target="_blank" rel="noopener noreferrer" className="block">
+              <Card className="border-gray-200/80 transition hover:shadow-md hover:-translate-y-0.5 cursor-pointer">
+                <CardContent className="p-4">
+                  <div className="flex items-center mb-3">
+                    <div className="w-9 h-9 rounded-full bg-blue-100 flex items-center justify-center mr-2">
+                      <svg
+                        role="img"
+                        viewBox="0 0 24 24"
+                        className="w-5 h-5 text-blue-600 fill-current"
+                        aria-hidden
+                      >
+                        <path d={siFacebook.path} />
+                      </svg>
+                    </div>
+                    <div className="text-sm font-semibold text-gray-900">Facebook</div>
+                  </div>
+                  <p className="text-sm text-gray-700">
+                    Zobacz, co u nas słychać. Aktualności, zdjęcia i relacje z wydarzeń.
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
+
+            <Link href="https://instagram.com/wospbarcelona" target="_blank" rel="noopener noreferrer" className="block">
+              <Card className="border-gray-200/80 transition hover:shadow-md hover:-translate-y-0.5 cursor-pointer">
+                <CardContent className="p-4">
+                  <div className="flex items-center mb-3">
+                    <div className="w-9 h-9 rounded-full bg-pink-100 flex items-center justify-center mr-2">
+                      <svg
+                        role="img"
+                        viewBox="0 0 24 24"
+                        className="w-5 h-5 text-pink-600 fill-current"
+                        aria-hidden
+                      >
+                        <path d={siInstagram.path} />
+                      </svg>
+                    </div>
+                    <div className="text-sm font-semibold text-gray-900">Instagram</div>
+                  </div>
+                  <p className="text-sm text-gray-700">
+                    Najnowsze zdjęcia i stories z naszych działań w Barcelonie.
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
+
+            <Link href="https://www.meetup.com/wośp-barcelona" target="_blank" rel="noopener noreferrer" className="block">
+              <Card className="border-gray-200/80 transition hover:shadow-md hover:-translate-y-0.5 cursor-pointer">
+                <CardContent className="p-4">
+                  <div className="flex items-center mb-3">
+                    <div className="w-9 h-9 rounded-full bg-red-100 flex items-center justify-center mr-2">
+                      <svg
+                        role="img"
+                        viewBox="0 0 24 24"
+                        className="w-5 h-5 text-red-600 fill-current"
+                        aria-hidden
+                      >
+                        <path d={siMeetup.path} />
+                      </svg>
+                    </div>
+                    <div className="text-sm font-semibold text-gray-900">Meetup</div>
+                  </div>
+                  <p className="text-sm text-gray-700">
+                    Dołącz do naszych wydarzeń i spotkań polskiej społeczności.
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

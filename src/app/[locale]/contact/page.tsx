@@ -1,48 +1,12 @@
 'use client';
 
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Mail, MapPin, Send } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { ContactForm } from '@/components/ContactForm';
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const t = useTranslations('contact');
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
-
-    try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    } catch (error) {
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   return (
     <main className="py-16 bg-gradient-to-br from-white via-red-50 to-pink-100">
@@ -57,92 +21,13 @@ export default function ContactPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
+            {/* Contact Form Card */}
             <Card className="bg-white border border-red-100 shadow-sm">
               <CardHeader>
                 <CardTitle className="text-2xl text-gray-900 font-bold">Wyślij wiadomość</CardTitle>
               </CardHeader>
               <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
-                    <Label htmlFor="name" className="text-gray-900 font-semibold">{t('form.name')}</Label>
-                    <Input
-                      id="name"
-                      name="name"
-                      type="text"
-                      required
-                      value={formData.name}
-                      onChange={handleChange}
-                      className="mt-1 bg-white"
-                    />
-                  </div>
-
-                  <div>
-                    <Label htmlFor="email" className="text-gray-900 font-semibold">{t('form.email')}</Label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      required
-                      value={formData.email}
-                      onChange={handleChange}
-                      className="mt-1 bg-white"
-                    />
-                  </div>
-
-                  <div>
-                    <Label htmlFor="subject" className="text-gray-900 font-semibold">{t('form.subject')}</Label>
-                    <Input
-                      id="subject"
-                      name="subject"
-                      type="text"
-                      required
-                      value={formData.subject}
-                      onChange={handleChange}
-                      className="mt-1 bg-white"
-                    />
-                  </div>
-
-                  <div>
-                    <Label htmlFor="message" className="text-gray-900 font-semibold">{t('form.message')}</Label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      required
-                      rows={5}
-                      value={formData.message}
-                      onChange={handleChange}
-                      className="mt-1 bg-white"
-                    />
-                  </div>
-
-                  {submitStatus === 'success' && (
-                    <div className="bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded">
-                      {t('form.success')}
-                    </div>
-                  )}
-
-                  {submitStatus === 'error' && (
-                    <div className="bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded">
-                      {t('form.error')}
-                    </div>
-                  )}
-
-                  <Button 
-                    type="submit" 
-                    disabled={isSubmitting}
-                    className="w-full bg-red-600 hover:bg-red-700"
-                  >
-                    {isSubmitting ? (
-                      'Wysyłanie...'
-                    ) : (
-                      <>
-                        <Send className="w-4 h-4 mr-2" />
-                        {t('form.submit')}
-                      </>
-                    )}
-                  </Button>
-                </form>
+                <ContactForm />
               </CardContent>
             </Card>
 
@@ -182,13 +67,10 @@ export default function ContactPage() {
                   <h3 className="font-bold text-amber-900 text-lg mb-3">
                     Zostań wolontariuszem
                   </h3>
-                  <p className="text-amber-800 mb-4">
+                  <p className="text-amber-800">
                     Szukamy osób chętnych do pomocy przy organizacji wydarzeń. 
                     Dołącz do naszego zespołu i pomagaj razem z nami!
                   </p>
-                  <Button className="bg-red-600 hover:bg-red-700 text-white">
-                    Dowiedz się więcej
-                  </Button>
                 </CardContent>
               </Card>
             </div>
