@@ -241,10 +241,10 @@ export default function HomePage() {
                   </h2>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <Button asChild className="bg-red-600 hover:bg-red-700 w-full sm:w-auto">
+                  <Button asChild className="bg-red-600 hover:bg-red-700 text-white w-full sm:w-auto cursor-pointer">
                     <Link href="/donate">Więcej o zbiórce</Link>
                   </Button>
-                  <Button asChild variant="outline" className="w-full sm:w-auto">
+                  <Button asChild variant="outline" className="w-full sm:w-auto cursor-pointer">
                     <Link href="https://www.wosp.org.pl/fundacja/jak-wspierac-wosp/wesprzyj-online" target="_blank" rel="noopener noreferrer">
                       Wesprzyj Fundację online
                     </Link>

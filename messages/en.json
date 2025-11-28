@@ -45,8 +45,7 @@
     },
     "info": {
       "address": "Barcelona, Spain",
-      "email": "kontakt@wospbarcelona.org",
-      "phone": "+34 XXX XXX XXX"
+      "email": "kontakt@wospbarcelona.org"
     }
   },
   "footer": {
@@ -70,8 +69,7 @@
     "linkLabels": {
       "website": "Website",
       "maps": "Maps",
-      "phone": "Phone",
-      "shop": "Shop",
+            "shop": "Shop",
       "contact": "Contact",
       "booking": "Booking",
       "trial": "Free trial",

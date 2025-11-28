@@ -73,7 +73,7 @@ export function ContactForm({ to = "kontakt@wospbarcelona.org" }: { to?: string 
       </div>
       <div className="mt-4 flex items-center justify-between gap-3">
         <p className="text-xs text-gray-500">Wysłanie otworzy domyślny program pocztowy.</p>
-        <Button type="submit" className="bg-red-600 hover:bg-red-700">Wyślij</Button>
+        <Button type="submit" className="bg-red-600 hover:bg-red-700 text-white cursor-pointer">Wyślij</Button>
       </div>
     </form>
   );

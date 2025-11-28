@@ -291,10 +291,10 @@ export default async function SponsorsPage({
               <p className="text-gray-700">{t('cta.subtitle')}</p>
             </div>
             <div className="flex gap-3 lg:justify-end">
-              <Button asChild className="bg-red-600 hover:bg-red-700">
+              <Button asChild className="bg-red-600 hover:bg-red-700 text-white cursor-pointer">
                 <Link href={`/${locale}/contact`}>{t('cta.contact')}</Link>
               </Button>
-              <Button asChild className="bg-orange-500 hover:bg-orange-600 text-white">
+              <Button asChild className="bg-orange-500 hover:bg-orange-600 text-white cursor-pointer">
                 <a href={`mailto:${t('cta.email')}`}>{t('cta.email')}</a>
               </Button>
             </div>

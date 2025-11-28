@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, MapPin, Send } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
 export default function ContactPage() {
@@ -174,14 +174,7 @@ export default function ContactPage() {
                     </div>
                   </div>
 
-                  <div className="flex items-start space-x-4">
-                    <Phone className="w-5 h-5 text-red-600 mt-1 flex-shrink-0" />
-                    <div>
-                      <h3 className="font-bold text-gray-900 mb-1">Telefon</h3>
-                      <p className="text-gray-600">{t('info.phone')}</p>
-                    </div>
-                  </div>
-                </CardContent>
+                                  </CardContent>
               </Card>
 
               <Card className="bg-amber-50 border border-amber-200 shadow-sm">

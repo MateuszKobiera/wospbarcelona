@@ -8,18 +8,30 @@ import { siFacebook, siInstagram, siMeetup } from 'simple-icons/icons';
 // Mock events data - sorted by date (closest first)
 const upcomingEvents = [
   {
-    id: 3,
-    title: 'Spotkanie Wolontariuszy',
-    description: 'Organizacyjne spotkanie dla wszystkich chętnych do pomocy przy WOŚP 2025.',
-    date: '2025-01-15',
-    time: '18:00',
-    location: 'Centrum Polonijne, Barcelona',
-    category: 'Spotkanie',
-    image: '/api/placeholder/400/250',
-    attendees: 50,
+    id: 7,
+    title: 'Spotkanie Wolontariuszy Online',
+    description: 'Spotkanie online dla wolontariuszy WOŚP Barcelona. Skontaktuj się z nami przez formularz kontaktowy, aby otrzymać link do spotkania.',
+    date: '2025-12-03',
+    time: '19:30',
+    location: 'Online (link zostanie wysłany)',
+    category: 'Spotkanie Wolontariuszy',
+    image: '/images/kalendarz/06_SLIDE_34_F_ZAGRA_25_01_2026 (1).jpg',
+    registrationRequired: true,
+    meetupLink: null,
+    facebookLink: null
+  },
+  {
+    id: 8,
+    title: 'Spotkanie Wolontariuszy - Wawel',
+    description: '🤝 Spotkanie wolontariuszy WOŚP Barcelona w Wawel Restobar — naszym głównym sponsorze! Poznaj zespół, skosztuj polskiego jedzenia i przygotuj się do 34. Finału.',
+    date: '2025-12-14',
+    time: '15:00',
+    location: 'Wawel, Barcelona',
+    category: 'Spotkanie Wolontariuszy',
+    image: '/images/kalendarz/06_SLIDE_34_F_ZAGRA_25_01_2026 (1).jpg',
     registrationRequired: false,
-    meetupLink: 'https://www.meetup.com/wosp-barcelona/events/spotkanie-wolontariuszy',
-    facebookLink: 'https://facebook.com/events/spotkanie-wolontariuszy'
+    meetupLink: null,
+    facebookLink: null
   },
   {
     id: 5,
@@ -30,7 +42,6 @@ const upcomingEvents = [
     location: 'Sagrada Familia',
     category: 'Bieg',
     image: '/images/kalendarz/workoplecak_20bieg_podglad.jpg',
-    attendees: 100,
     registrationRequired: true,
     meetupLink: 'https://www.meetup.com/wosp-barcelona/events/bieg-wosp-barcelona',
     facebookLink: 'https://facebook.com/events/bieg-wosp-policz-sie-z-cukrzyca',
@@ -38,47 +49,31 @@ const upcomingEvents = [
     isSpecialEvent: true
   },
   {
-    id: 4,
-    title: 'Aukcja Sztuki WOŚP',
-    description: 'Wystawa i aukcja dzieł polskich artystów na rzecz WOŚP.',
-    date: '2025-01-20',
-    time: '12:00 - 18:00',
-    location: 'Galeria Sztuki, Barcelona',
-    category: 'Aukcja',
-    image: '/api/placeholder/400/250',
-    attendees: 100,
-    registrationRequired: false,
-    meetupLink: 'https://www.meetup.com/wosp-barcelona/events/aukcja-sztuki',
-    facebookLink: 'https://facebook.com/events/aukcja-sztuki-wosp'
-  },
-  {
     id: 1,
     title: '34. Finał WOŚP w Barcelonie',
-    description: 'Największe wydarzenie charytatywne roku! Dołącz do nas i pomagajmy razem. Cel: Zdrowe brzuszki naszych dzieci - wsparcie diagnostyki i leczenia chorób przewodu pokarmowego u najmłodszych pacjentów.',
-    date: '2025-01-26',
+    description: '🎉 Największe wydarzenie charytatywne roku w Barcelonie! Dołącz do nas w Espacio 88 na dzień pełen warsztatów, występów, aukcji i integracji. Gramy dla zdrowych brzuszków polskich dzieci!',
+    date: '2026-01-25',
     time: '10:00 - 22:00',
-    location: 'Plaça de Catalunya, Barcelona',
+    location: 'Espacio 88, Sant Martí, Barcelona',
     category: 'Finał WOŚP',
-    image: '/api/placeholder/600/400',
-    attendees: 500,
+    image: '/images/kalendarz/fb_FINAL.jpg',
     registrationRequired: true,
     isFinal: true,
     meetupLink: 'https://www.meetup.com/wosp-barcelona/events/34-final-wosp',
     facebookLink: 'https://facebook.com/events/34-final-wosp-barcelona'
   },
   {
-    id: 2,
-    title: 'Koncert Charytatywny "Serce dla dzieci"',
-    description: 'Wieczór muzyki i pomocy - koncerty polskich i katalońskich artystów.',
-    date: '2025-02-10',
-    time: '19:00',
-    location: 'Palau de la Música Catalana',
-    category: 'Koncert',
+    id: 9,
+    title: 'Koniec Aukcji Charytatywnych na Allegro',
+    description: 'Ostatni dzień przyjmowania ofert charytatywnych w ramach Akcji WOŚP. Oferty mogą być prowadzone od 01.12.2025 – 16.02.2026r.',
+    date: '2026-02-16',
+    time: '23:59',
+    location: 'Online - Allegro.pl',
+    category: 'Aukcja Online',
     image: '/api/placeholder/400/250',
-    attendees: 200,
-    registrationRequired: true,
-    meetupLink: 'https://www.meetup.com/wosp-barcelona/events/koncert-charytatywny',
-    facebookLink: 'https://facebook.com/events/koncert-serce-dla-dzieci'
+    registrationRequired: false,
+    meetupLink: null,
+    facebookLink: null
   }
 ];
 
@@ -86,79 +81,87 @@ const pastEvents = [
   {
     id: 101,
     title: '33. Finał WOŚP w Barcelonie',
-    description: 'Niesamowity finał! Zebraliśmy rekordową kwotę 13,881.91 euro!',
-    date: '2024-01-28',
-    location: 'Plaça de Catalunya, Barcelona',
+    description: 'Niesamowity finał! Zebraliśmy 8,073.48 euro podczas wydarzenia, a łącznie z aukcjami 13,880.62 euro!',
+    date: '2025-01-26',
+    location: 'Nau Bostik, Sant Andreu, Barcelona',
     category: 'Finał WOŚP',
     image: '/api/placeholder/400/250',
-    attendees: 520,
-    amountRaised: '13,881.91 €'
+    amountRaised: '8,073.48 €',
+    totalAmount: '13,880.62 €'
   },
   {
-    id: 102,
-    title: 'Mikołajki dla Dzieci 2023',
-    description: 'Świąteczne spotkanie z prezentami dla polskich dzieci w Barcelonie.',
-    date: '2023-12-06',
-    location: 'Polski Kościół św. Jerzego',
-    category: 'Święta',
-    image: '/api/placeholder/400/250',
-    attendees: 80,
-    amountRaised: '2,000 €'
+    id: 201,
+    title: '19. Bieg WOŚP "Policz się z cukrzycą"',
+    description: 'Bieg charytatywny na 5 km z Sagrada Familia do Hotel W Barcelona. Wspólna zabawa i wsparcie WOŚP!',
+    date: '2025-01-19',
+    location: 'Start: Sagrada Familia, Meta: Hotel W Barcelona',
+    category: 'Bieg',
+    image: '/api/placeholder/400/250'
   },
   {
-    id: 103,
-    title: 'Koncert Jesieni Polskiej',
-    description: 'Wieczór polskiej muzyki i poezji w sercu Barcelony.',
-    date: '2023-10-15',
-    location: 'Teatr Polònia, Barcelona',
-    category: 'Koncert',
-    image: '/api/placeholder/400/250',
-    attendees: 150,
-    amountRaised: '3,200 €'
+    id: 202,
+    title: 'Wernisaż Artystyczny WOŚP',
+    description: 'Wyjątkowe wydarzenie artystyczne łączące sztukę z dobrem. Dzieła lokalnych artystów i gości z Polski na wsparcie WOŚP!',
+    date: '2025-01-18',
+    location: 'Templo Beauty, Ronda del Guinardó 64, Horta-Guinardó, Barcelona',
+    category: 'Wernisaż',
+    image: '/api/placeholder/400/250'
+  },
+  {
+    id: 203,
+    title: 'Bubbly Craft - Earth Edition',
+    description: 'Wyjątkowy wieczór kreatywności i relaksu! Warsztaty odnawiania doniczek i makramy przy aromatycznych napojach.',
+    date: '2025-01-11',
+    location: 'World Class Barcelona',
+    category: 'Warsztaty',
+    image: '/images/kalendarz/485066667_1070766505083825_7426193123650026575_n.jpg'
+  },
+  {
+    id: 204,
+    title: 'Gwiazdka Literacka z WOŚP',
+    description: 'Wyjątkowe świąteczne wydarzenie! Spotkanie z polskimi autorami, licytacja książek z autografami i winno-literacki wieczór.',
+    date: '2024-12-15',
+    location: 'World Class Bcn Spanish school - Carrer del Bisbe Laguarda, 4, Ciutat Vella, 08001 Barcelona',
+    category: 'Spotkanie Literackie',
+    image: '/images/kalendarz/485066667_1070766505083825_7426193123650026575_n.jpg'
+  },
+  {
+    id: 205,
+    title: 'Warsztaty Fotograficzne Plenerowe',
+    description: 'Sztab WOŚP w Barcelonie wraz z Anetą zaprasza na fotograficzne warsztaty plenerowe! Naucz się pracy z modelem i wykorzystania światła.',
+    date: '2024-11-30',
+    location: 'Jardins de Mossèn Costa i Llobera, Barcelona',
+    category: 'Warsztaty Fotograficzne',
+    image: '/images/kalendarz/485066667_1070766505083825_7426193123650026575_n.jpg'
+  },
+  {
+    id: 206,
+    title: 'Warsztaty Świąteczne: "Wine and Craft"',
+    description: 'Dołącz do wyjątkowego wieczoru kreatywności i relaksu z WOŚP Barcelona! Świąteczne rękodzieło przy grzańcu i winie!',
+    date: '2024-11-23',
+    location: 'World Class Barcelona Carrer del Bisbe Laguarda, 4, Ciutat Vella, 08001 Barcelona',
+    category: 'Warsztaty Świąteczne',
+    image: '/images/kalendarz/485066667_1070766505083825_7426193123650026575_n.jpg'
   },
   {
     id: 104,
     title: '32. Finał WOŚP w Barcelonie',
-    description: 'Wspaniały finał z rekordową frekwencją!',
+    description: 'Wspaniały finał z rekordową frekwencją! Zebrano łącznie 10.460,47 €! Koncerty, licytacje, polskie jedzenie i Światełko do nieba!',
     date: '2023-01-29',
-    location: 'Plaça de Catalunya, Barcelona',
+    location: 'Nau Bostik, Sant Andreu, Barcelona',
     category: 'Finał WOŚP',
-    image: '/api/placeholder/400/250',
-    attendees: 450,
+    image: '/images/33-final/final-2024-main.jpg',
     amountRaised: '10,460.47 €'
-  },
-  {
-    id: 105,
-    title: 'Letni Piknik Polonijny',
-    description: 'Rodzinne spotkanie z grami, konkursami i polskim jedzeniem.',
-    date: '2022-07-16',
-    location: 'Park Ciutadella, Barcelona',
-    category: 'Piknik',
-    image: '/api/placeholder/400/250',
-    attendees: 200,
-    amountRaised: '1,500 €'
   },
   {
     id: 106,
     title: '31. Finał WOŚP w Barcelonie',
-    description: 'Pierwszy finał po pandemii - pełen emocji i radości!',
+    description: 'Pierwszy finał po pandemii! Warsztaty dla dzieci, koncerty, licytacje i polskie przysmaki!',
     date: '2022-01-30',
-    location: 'Plaça de Catalunya, Barcelona',
+    location: 'Carrer de Sardenya, 29, 08005 Barcelona',
     category: 'Finał WOŚP',
-    image: '/api/placeholder/400/250',
-    attendees: 380,
+    image: '/images/33-final/final-2024-main.jpg',
     amountRaised: '8,989.94 €'
-  },
-  {
-    id: 107,
-    title: 'Wigilia Polonijna 2021',
-    description: 'Tradycyjna wigilia dla polskiej społeczności w Barcelonie.',
-    date: '2021-12-18',
-    location: 'Centrum Polonijne, Barcelona',
-    category: 'Święta',
-    image: '/api/placeholder/400/250',
-    attendees: 120,
-    amountRaised: '800 €'
   }
 ];
 
@@ -267,46 +270,56 @@ export default async function EventsPage({ params }: EventsPageProps) {
                             </div>
                             <div className="flex items-center text-sm text-gray-500">
                               <MapPin className="w-4 h-4 mr-2 text-red-600" />
-                              <a 
-                                href={event.id === 5 ? 'https://maps.app.goo.gl/FR1RXEmzdsYAX42a6' : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(event.location)}`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-red-600 hover:text-red-700 hover:underline"
-                              >
-                                {event.location}
-                              </a>
+                              {(event.location.includes('Online') || event.location.includes('Allegro')) ? (
+                                <span className="text-gray-600">{event.location}</span>
+                              ) : (
+                                <a 
+                                  href={event.id === 5 ? 'https://maps.app.goo.gl/FR1RXEmzdsYAX42a6' : event.id === 1 ? 'https://maps.app.goo.gl/dJVBoLze5fe5AhB38' : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(event.location)}`}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-red-600 hover:text-red-700 hover:underline"
+                                >
+                                  {event.location}
+                                </a>
+                              )}
                             </div>
                           </div>
 
                           {/* Social links */}
-                          <div className="flex space-x-2 mt-4">
-                            <a
-                              href={event.meetupLink}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-flex items-center justify-center h-8 w-8 rounded-md bg-red-100 text-red-600 hover:bg-red-200 transition-colors"
-                              title="Zobacz na Meetup"
-                            >
-                              <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                                <path d={siMeetup.path} />
-                              </svg>
-                            </a>
-                            <a
-                              href={event.facebookLink}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-flex items-center justify-center h-8 w-8 rounded-md bg-blue-100 text-blue-600 hover:bg-blue-200 transition-colors"
-                              title="Zobacz na Facebook"
-                            >
-                              <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                                <path d={siFacebook.path} />
-                              </svg>
-                            </a>
-                          </div>
+                          {(event.meetupLink || event.facebookLink) && (
+                            <div className="flex space-x-2 mt-4">
+                              {event.meetupLink && (
+                                <a
+                                  href={event.meetupLink}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inline-flex items-center justify-center h-8 w-8 rounded-md bg-red-100 text-red-600 hover:bg-red-200 transition-colors"
+                                  title="Zobacz na Meetup"
+                                >
+                                  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                    <path d={siMeetup.path} />
+                                  </svg>
+                                </a>
+                              )}
+                              {event.facebookLink && (
+                                <a
+                                  href={event.facebookLink}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inline-flex items-center justify-center h-8 w-8 rounded-md bg-blue-100 text-blue-600 hover:bg-blue-200 transition-colors"
+                                  title="Zobacz na Facebook"
+                                >
+                                  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                    <path d={siFacebook.path} />
+                                  </svg>
+                                </a>
+                              )}
+                            </div>
+                          )}
 
                           <div className="flex space-x-3 mt-4">
                             <Link href={`/${locale}/events/${event.id}`} className="flex-1">
-                              <Button className={`w-full ${isFinal ? 'bg-red-600 hover:bg-red-700 text-lg py-3' : 'bg-red-600 hover:bg-red-700'}`}>
+                              <Button className={`w-full text-white cursor-pointer ${isFinal ? 'bg-red-600 hover:bg-red-700 text-lg py-3' : 'bg-red-600 hover:bg-red-700'}`}>
                                 Zobacz więcej
                               </Button>
                             </Link>
@@ -332,7 +345,7 @@ export default async function EventsPage({ params }: EventsPageProps) {
                                 rel="noopener noreferrer"
                                 className="block w-full"
                               >
-                                <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
+                                <Button className="w-full bg-green-600 hover:bg-green-700 text-white cursor-pointer">
                                   Zarejestruj się na bieg
                                 </Button>
                               </a>
@@ -376,25 +389,39 @@ export default async function EventsPage({ params }: EventsPageProps) {
                       </div>
                       <div className="flex items-center text-sm text-gray-500">
                         <MapPin className="w-3 h-3 mr-2" />
-                        <a 
-                          href={event.id === 5 ? 'https://maps.app.goo.gl/FR1RXEmzdsYAX42a6' : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(event.location)}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-red-600 hover:text-red-700 hover:underline"
-                        >
-                          {event.location}
-                        </a>
+                        {(event.location.includes('Online') || event.location.includes('Allegro')) ? (
+                          <span className="text-gray-600">{event.location}</span>
+                        ) : (
+                          <a 
+                            href={event.id === 5 ? 'https://maps.app.goo.gl/FR1RXEmzdsYAX42a6' : event.id === 1 ? 'https://maps.app.goo.gl/dJVBoLze5fe5AhB38' : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(event.location)}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-red-600 hover:text-red-700 hover:underline"
+                          >
+                            {event.location}
+                          </a>
+                        )}
                       </div>
-                      {event.amountRaised && (
-                        <div className="flex items-center text-sm font-semibold text-green-600">
-                          <span className="mr-2">💰</span>
-                          Zebrano: {event.amountRaised}
+                      {(event.amountRaised || event.totalAmount) && (
+                        <div className="space-y-1">
+                          {event.amountRaised && (
+                            <div className="flex items-center text-sm font-semibold text-green-600">
+                              <span className="mr-2">💰</span>
+                              Podczas wydarzenia: {event.amountRaised}
+                            </div>
+                          )}
+                          {event.totalAmount && (
+                            <div className="flex items-center text-xs text-gray-600 ml-6">
+                              Łącznie: {event.totalAmount}
+                            </div>
+                          )}
                         </div>
                       )}
                     </div>
                     <Link href={`/${locale}/events/${event.id}`}>
-                      <Button variant="ghost" className="text-red-600 hover:text-red-700 p-0">
-                        Zobacz relację →
+                      <Button variant="ghost" className="text-red-600 hover:text-red-700 hover:bg-red-50 p-2 px-4 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-md group cursor-pointer">
+                        <span className="group-hover:translate-x-1 transition-transform duration-300">Zobacz relację</span>
+                        <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
                       </Button>
                     </Link>
                   </CardContent>
@@ -403,30 +430,6 @@ export default async function EventsPage({ params }: EventsPageProps) {
             </div>
           </section>
 
-          {/* Statistics */}
-          <section className="bg-orange-50 rounded-lg p-8 mb-20 border border-orange-200">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-              Nasze osiągnięcia
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
-              <div>
-                <div className="text-3xl font-bold text-orange-600 mb-2">50+</div>
-                <div className="text-gray-600">Wydarzeń rocznie</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-orange-600 mb-2">1000+</div>
-                <div className="text-gray-600">Wolontariuszy</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-orange-600 mb-2">500K€</div>
-                <div className="text-gray-600">Zebranych funduszy</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-orange-600 mb-2">8 lat</div>
-                <div className="text-gray-600">Działalności</div>
-              </div>
-            </div>
-          </section>
 
           {/* Call to Action */}
           <section className="text-center">
@@ -438,10 +441,10 @@ export default async function EventsPage({ params }: EventsPageProps) {
               Skontaktuj się z nami i razem zorganizujmy coś wyjątkowego!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-red-600 hover:bg-red-700">
+              <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white cursor-pointer">
                 Skontaktuj się z nami
               </Button>
-              <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
+              <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white cursor-pointer">
                 Zostań partnerem
               </Button>
             </div>

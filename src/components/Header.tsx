@@ -70,7 +70,7 @@ export function Header() {
           <div className="hidden md:flex items-center space-x-4">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="sm" className="flex items-center space-x-2 text-gray-900">
+                <Button variant="ghost" size="sm" className="flex items-center space-x-2 text-gray-900 cursor-pointer">
                   <Globe className="w-4 h-4" />
                   <span className="font-semibold">{locale.toUpperCase()}</span>
                 </Button>
@@ -87,7 +87,7 @@ export function Header() {
               </DropdownMenuContent>
             </DropdownMenu>
             
-            <Button asChild className="bg-red-600 hover:bg-red-700">
+            <Button asChild className="bg-red-600 hover:bg-red-700 text-white cursor-pointer">
               <Link href={`/${locale}/donate`}>{t('donate')}</Link>
             </Button>
           </div>
@@ -128,7 +128,7 @@ export function Header() {
                 <div className="flex items-center justify-between">
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                      <Button variant="ghost" size="sm" className="flex items-center space-x-2 text-gray-900">
+                      <Button variant="ghost" size="sm" className="flex items-center space-x-2 text-gray-900 cursor-pointer">
                         <Globe className="w-4 h-4" />
                         <span className="font-semibold">{locale.toUpperCase()}</span>
                       </Button>
@@ -145,7 +145,7 @@ export function Header() {
                     </DropdownMenuContent>
                   </DropdownMenu>
                   
-                  <Button asChild className="bg-red-600 hover:bg-red-700">
+                  <Button asChild className="bg-red-600 hover:bg-red-700 text-white cursor-pointer">
                     <Link href={`/${locale}/donate`}>{t('donate')}</Link>
                   </Button>
                 </div>

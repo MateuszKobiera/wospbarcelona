@@ -1,107 +1,74 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Calendar, MapPin, ArrowLeft, ExternalLink } from 'lucide-react';
+import { Calendar, MapPin, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { siFacebook, siMeetup } from 'simple-icons/icons';
 import { notFound } from 'next/navigation';
 
 // Mock events data (same as in events page)
 const allEvents = [
   {
+    id: 7,
+    title: 'Spotkanie Wolontariuszy Online',
+    description: 'Spotkanie online dla wolontariuszy WOŚP Barcelona. Skontaktuj się z nami przez formularz kontaktowy, aby otrzymać link do spotkania.',
+    fullDescription: 'Zapraszamy na spotkanie online dla wolontariuszy WOŚP Barcelona! To doskonała okazja dla tych, którzy nie mogą dotrzeć na spotkanie stacjonarne.\n\nPodczas spotkania online:\n• Poznasz zespół organizacyjny WOŚP Barcelona\n• Dowiesz się o aktualnych planach na 34. Finał\n• Będziesz mógł zadać pytania i wyrazić swoje pomysły\n• Otrzymasz dostęp do materiałów informacyjnych\n• Poznasz innych wolontariuszy z całej Katalonii\n\n📝 JAK DOŁĄCZYĆ:\nAby otrzymać link do spotkania, skontaktuj się z nami przez formularz kontaktowy na stronie. Wyślemy Ci szczegóły spotkania oraz link do platformy.\n\nTo idealna opcja dla osób, które:\n• Mieszkają daleko od centrum Barcelony\n• Mają ograniczony czas\n• Preferują uczestnictwo online\n• Chcą dołączyć do zespołu wolontariuszy\n\nSpotkanie odbędzie się na platformie online - szczegóły otrzymasz po kontakcie z nami.',
+    date: '2025-12-03',
+    time: '19:30',
+    location: 'Online',
+    category: 'Spotkanie Wolontariuszy',
+    image: '/images/kalendarz/06_SLIDE_34_F_ZAGRA_25_01_2026 (1).jpg',
+    gallery: [
+      '/images/blog/online-1.jpg',
+      '/images/blog/online-2.jpg'
+    ],
+    registrationRequired: true,
+    meetupLink: 'https://www.meetup.com/wośp-barcelona/events/312210626/',
+    facebookLink: 'https://www.facebook.com/events/959414393911595',
+    organizer: 'WOŚP Barcelona',
+    contact: 'wolontariat@wospbarcelona.org'
+  },
+  {
+    id: 8,
+    title: 'Spotkanie Wolontariuszy - Wawel',
+    description: '🤝 Spotkanie wolontariuszy WOŚP Barcelona w Wawel Restobar — naszym głównym sponsorze! Poznaj zespół, skosztuj polskiego jedzenia i przygotuj się do 34. Finału.',
+    fullDescription: '🤝 Spotkanie wolontariuszy WOŚP Barcelona w Wawel Restobar\nZapraszamy na spotkanie wolontariuszy WOŚP Barcelona w Wawel Restobar — naszym głównym sponsorze! To idealne miejsce, aby poznać się, porozmawiać i zjeść pyszne polskie jedzenie oraz skosztować napojów prosto z Polski.\n\nPodczas spotkania:\n• poznasz zespół WOŚP Barcelona\n• dowiesz się o planach na 34. Finał\n• zadasz pytania i podzielisz się swoimi pomysłami\n• otrzymasz materiały informacyjne\n• poznasz innych wolontariuszy z Barcelony, Katalonii i Polski\n\nDlaczego warto przyjść:\n• Wawel Restobar to miejsce stworzone przez Polaków dla Polaków\n• zjesz tradycyjne dania i wypijesz polskie napoje\n• poczujesz klimat domowej, polskiej gościnności\n• wesprzesz lokalnego sponsora WOŚP\n\n📝 Jak dołączyć:\nPrzyjdź w wyznaczonym terminie lub skontaktuj się z nami, jeśli masz pytania.\n\nSpotkanie odbędzie się w Wawel Restobar — do zobaczenia!',
+    date: '2025-12-14',
+    time: '15:00',
+    location: 'Wawel, Barcelona',
+    category: 'Spotkanie Wolontariuszy',
+    image: '/images/kalendarz/06_SLIDE_34_F_ZAGRA_25_01_2026 (1).jpg',
+    gallery: [
+      '/images/blog/wolontariusze-grudzien-1.jpg',
+      '/images/blog/wolontariusze-grudzien-2.jpg'
+    ],
+    registrationRequired: false,
+    meetupLink: 'https://www.meetup.com/wośp-barcelona/events/312212223/',
+    facebookLink: 'https://www.facebook.com/events/2638201476539435',
+    organizer: 'WOŚP Barcelona',
+    contact: 'wolontariat@wospbarcelona.org'
+  },
+  {
     id: 1,
     title: '34. Finał WOŚP w Barcelonie',
-    description: 'Największe wydarzenie charytatywne roku! Dołącz do nas i pomagajmy razem. Cel: Zdrowe brzuszki naszych dzieci - wsparcie diagnostyki i leczenia chorób przewodu pokarmowego u najmłodszych pacjentów.',
-    fullDescription: 'Serdecznie zapraszamy na 34. Finał Wielkiej Orkiestry Świątecznej Pomocy w Barcelonie! To największe wydarzenie charytatywne roku, podczas którego zbieramy fundusze na wsparcie diagnostyki i leczenia chorób przewodu pokarmowego u najmłodszych pacjentów.\n\nW tym roku gramy dla "Zdrowych brzuszków naszych dzieci". Cel tegorocznej zbiórki to wsparcie około 1,2–1,5 mln dzieci, które potrzebują specjalistycznej opieki medycznej.\n\nPodczas finału czekają na Was:\n• Koncerty polskich i katalońskich artystów\n• Aukcje charytatywne z wyjątkowymi przedmiotami\n• Stoiska z polskim jedzeniem\n• Gry i zabawy dla dzieci\n• Licytacje "Złotych Serc"\n• Możliwość zakupu pamiątkowych gadżetów WOŚP\n\nKażda złotówka, każde euro ma znaczenie! Razem możemy zrobić coś naprawdę wielkiego dla polskich dzieci.',
-    date: '2025-01-26',
+    description: '🎉 Największe wydarzenie charytatywne roku w Barcelonie! Dołącz do nas w Espacio 88 na dzień pełen warsztatów, występów, aukcji i integracji. Gramy dla zdrowych brzuszków polskich dzieci!',
+    fullDescription: '🎉 34. Finał WOŚP w Barcelonie\n\n📍 Miejsce: Espacio 88 — Carrer de Pamplona 88, Sant Martí, Barcelona\n📅 Data: 25 stycznia 2026\n🎯 Cel: zakup nowoczesnego sprzętu do diagnozowania, monitorowania i leczenia chorób przewodu pokarmowego u dzieci (endoskopy pediatryczne, systemy obrazowania, sprzęt do badań czynnościowych itp.)\n\n✨ Co będzie się działo?\nProgram jeszcze powstaje, ale cały dzień w Espacio 88 będzie pełen aktywności:\n\n🫧 Strefy warsztatowe dla dzieci i rodzin\n• zabawy i aktywności KosmoHisPlano\n• bańki mydlane, ruch, kreatywność\n• dodatkowe stacje warsztatowe\n\n🎤 Występy, panele i spotkania\n• panele literackie i artystyczne\n• spotkanie z artystami i ich pracami\n• aktywności rodzinne\n• tort od Delicious By Bea dla wszystkich uczestników\n\n🎲 Gry i integracja\n• gra PL-ES łącząca Polaków, Hiszpanów i lokalną społeczność\n\n🔨 Aukcje charytatywne\n• licytacje wyjątkowych przedmiotów wspierające cel finału\n\n🎆 Światełko do Nieba\n• tradycyjny, pozytywny gest jedności i solidarności\n\n🇵🇱❤️ Polska kultura w Barcelonie\nPodczas finału promujemy polską kulturę, język, twórców i tradycje — tworząc przestrzeń, gdzie Polonia, Hiszpanie i międzynarodowa społeczność mogą spotkać się, współtworzyć i poznawać się nawzajem.\n\n❤️ Dlaczego gramy?\nZbieramy środki na wsparcie diagnostyki i leczenia chorób przewodu pokarmowego u dzieci — aby najmłodsi pacjenci w Polsce mogli korzystać z najnowocześniejszego sprzętu i lepszej opieki.',
+    date: '2026-01-25',
     time: '10:00 - 22:00',
-    location: 'Plaça de Catalunya, Barcelona',
+    location: 'Espacio 88, Sant Martí, Barcelona',
     category: 'Finał WOŚP',
-    image: '/images/33-final/final-2024-main.jpg',
+    image: '/images/kalendarz/36_34FinalWOSP2026_grafika_podglad.jpg',
     gallery: [
       '/images/33-final/final-2024-1.jpg',
       '/images/33-final/final-2024-2.jpg',
       '/images/33-final/final-2024-3.jpg',
       '/images/33-final/final-2024-4.jpg'
     ],
-    attendees: 500,
     registrationRequired: true,
     isFinal: true,
-    meetupLink: 'https://www.meetup.com/wosp-barcelona/events/34-final-wosp',
-    facebookLink: 'https://facebook.com/events/34-final-wosp-barcelona',
-    targetAmount: '15,000 €',
-    currentAmount: '0 €',
+    meetupLink: 'https://www.meetup.com/wośp-barcelona/events/312210334/',
+    facebookLink: 'https://www.facebook.com/events/722563890373111',
     organizer: 'WOŚP Barcelona',
     contact: 'kontakt@wospbarcelona.org'
-  },
-  {
-    id: 2,
-    title: 'Koncert Charytatywny "Serce dla dzieci"',
-    description: 'Wieczór muzyki i pomocy - koncerty polskich i katalońskich artystów.',
-    fullDescription: 'Zapraszamy na wyjątkowy wieczór muzyki i pomocy! Koncert "Serce dla dzieci" to wydarzenie, podczas którego polscy i katalońscy artyści łączą siły, aby wspierać działalność charytatywną WOŚP Barcelona.\n\nW programie:\n• Występy polskich artystów mieszkających w Barcelonie\n• Koncerty katalońskich muzyków wspierających naszą misję\n• Prezentacje multimedialne o działalności WOŚP\n• Możliwość zakupu pamiątek i gadżetów\n• Networking z polską społecznością\n\nCały dochód z wydarzenia zostanie przekazany na cele charytatywne związane ze wsparciem polskich dzieci.',
-    date: '2025-02-10',
-    time: '19:00',
-    location: 'Palau de la Música Catalana',
-    category: 'Koncert',
-    image: '/images/blog/koncert-serce.jpg',
-    gallery: [
-      '/images/blog/koncert-1.jpg',
-      '/images/blog/koncert-2.jpg',
-      '/images/blog/koncert-3.jpg'
-    ],
-    attendees: 200,
-    registrationRequired: true,
-    meetupLink: 'https://www.meetup.com/wosp-barcelona/events/koncert-charytatywny',
-    facebookLink: 'https://facebook.com/events/koncert-serce-dla-dzieci',
-    targetAmount: '3,000 €',
-    currentAmount: '0 €',
-    organizer: 'WOŚP Barcelona',
-    contact: 'kontakt@wospbarcelona.org'
-  },
-  {
-    id: 3,
-    title: 'Spotkanie Wolontariuszy',
-    description: 'Organizacyjne spotkanie dla wszystkich chętnych do pomocy przy WOŚP 2025.',
-    fullDescription: 'Serdecznie zapraszamy wszystkich chętnych do pomocy przy organizacji 34. Finału WOŚP w Barcelonie!\n\nPodczas spotkania:\n• Poznasz zespół organizacyjny WOŚP Barcelona\n• Dowiesz się o planach na 34. Finał\n• Wybierzesz obszar, w którym chcesz pomóc\n• Otrzymasz materiały informacyjne\n• Poznasz innych wolontariuszy\n\nSzukamy pomocy w następujących obszarach:\n• Obsługa stoisk i punktów informacyjnych\n• Pomoc przy organizacji koncertów\n• Wsparcie w mediach społecznościowych\n• Tłumaczenia (polski-hiszpański-kataloński)\n• Pomoc techniczna i logistyczna\n\nKażda pomoc jest cenna! Dołącz do naszego zespołu i pomóż nam zorganizować niezapomniany finał.',
-    date: '2025-01-15',
-    time: '18:00',
-    location: 'Centrum Polonijne, Barcelona',
-    category: 'Spotkanie',
-    image: '/images/blog/spotkanie-wolontariuszy.jpg',
-    gallery: [
-      '/images/blog/wolontariusze-1.jpg',
-      '/images/blog/wolontariusze-2.jpg'
-    ],
-    attendees: 50,
-    registrationRequired: false,
-    meetupLink: 'https://www.meetup.com/wosp-barcelona/events/spotkanie-wolontariuszy',
-    facebookLink: 'https://facebook.com/events/spotkanie-wolontariuszy',
-    organizer: 'WOŚP Barcelona',
-    contact: 'wolontariat@wospbarcelona.org'
-  },
-  {
-    id: 4,
-    title: 'Aukcja Sztuki WOŚP',
-    description: 'Wystawa i aukcja dzieł polskich artystów na rzecz WOŚP.',
-    fullDescription: 'Zapraszamy na wyjątkową wystawę i aukcję dzieł polskich artystów mieszkających w Barcelonie i okolicach!\n\nW programie:\n• Wystawa prac polskich artystów\n• Aukcja charytatywna dzieł sztuki\n• Spotkania z artystami\n• Prezentacje o polskiej sztuce współczesnej\n• Degustacja polskich specjałów\n\nWszystkie zebrane środki zostaną przekazane na cele charytatywne WOŚP. To doskonała okazja, aby wesprzeć polską sztukę i jednocześnie pomóc potrzebującym dzieciom.\n\nWśród wystawianych prac znajdziecie:\n• Obrazy olejne i akrylowe\n• Grafiki i rysunki\n• Rzeźby i instalacje\n• Fotografie artystyczne\n• Rękodzieło artystyczne',
-    date: '2025-01-20',
-    time: '12:00 - 18:00',
-    location: 'Galeria Sztuki, Barcelona',
-    category: 'Aukcja',
-    image: '/images/blog/aukcja-sztuki.jpg',
-    gallery: [
-      '/images/blog/sztuka-1.jpg',
-      '/images/blog/sztuka-2.jpg',
-      '/images/blog/sztuka-3.jpg'
-    ],
-    attendees: 100,
-    registrationRequired: false,
-    meetupLink: 'https://www.meetup.com/wosp-barcelona/events/aukcja-sztuki',
-    facebookLink: 'https://facebook.com/events/aukcja-sztuki-wosp',
-    targetAmount: '2,500 €',
-    currentAmount: '0 €',
-    organizer: 'WOŚP Barcelona',
-    contact: 'sztuka@wospbarcelona.org'
   },
   {
     id: 5,
@@ -116,24 +83,43 @@ const allEvents = [
     gallery: [
       '/images/kalendarz/workoplecak_20bieg_podglad.jpg'
     ],
-    attendees: 100,
     registrationRequired: true,
-    meetupLink: 'https://www.meetup.com/wosp-barcelona/events/bieg-wosp-barcelona',
-    facebookLink: 'https://facebook.com/events/bieg-wosp-policz-sie-z-cukrzyca',
+    meetupLink: 'https://www.meetup.com/wośp-barcelona/events/312210485/',
+    facebookLink: 'https://www.facebook.com/events/1931855297364179/',
     registrationLink: 'https://slotmarket.pl/event/details/741/20-bieg-wosp-policz-sie-z-cukrzyca-wirtualny',
     organizer: 'WOŚP Barcelona',
     contact: 'biegwospbarcelona@gmail.com',
     isSpecialEvent: true,
     registrationDeadline: '31.12.2025'
   },
+  {
+    id: 9,
+    title: 'Koniec Aukcji Charytatywnych na Allegro',
+    description: 'Ostatni dzień przyjmowania ofert charytatywnych w ramach Akcji WOŚP. Oferty mogą być prowadzone od 01.12.2025 – 16.02.2026r.',
+    fullDescription: 'To ostatni dzień przyjmowania ofert charytatywnych na platformie Allegro w ramach 34. Finału WOŚP!\n\n📅 OKRES AUKCJI CHARYTATYWNYCH:\nOferty charytatywne w ramach Akcji WOŚP mogą być prowadzone w okresie od 01.12.2025 – 16.02.2026r.\n\n💻 JAK WZIĄĆ UDZIAŁ:\n• Wejdź na stronę allegro.pl\n• Wyszukaj WOŚP Barcelona\n• Wybierz interesującą Cię aukcję\n• Licytuj i wspieraj WOŚP Barcelona\n• Wszystkie zebrane środki idą na cele charytatywne\n\n🎯 CEL ZBIÓRKI:\nWszystkie środki zebrane podczas aukcji charytatywnych zostaną przekazane na wsparcie diagnostyki i leczenia chorób przewodu pokarmowego u najmłodszych pacjentów - cel 34. Finału WOŚP "Zdrowe brzuszki naszych dzieci".\n\n⏰ OSTATNIA SZANSA:\nTo ostatni dzień, aby wziąć udział w aukcjach charytatywnych WOŚP na Allegro. Nie przegap okazji, aby pomóc potrzebującym dzieciom!\n\nDziękujemy wszystkim, którzy wzięli udział w aukcjach charytatywnych przez te ponad 2 miesiące. Każda złotówka ma znaczenie!',
+    date: '2026-02-16',
+    time: '23:59',
+    location: 'Online - Allegro.pl',
+    category: 'Aukcja Online',
+    image: '/images/blog/allegro-aukcje.jpg',
+    gallery: [
+      '/images/blog/allegro-1.jpg',
+      '/images/blog/allegro-2.jpg'
+    ],
+    registrationRequired: false,
+    meetupLink: null,
+    facebookLink: null,
+    organizer: 'WOŚP Barcelona',
+    contact: 'aukcje@wospbarcelona.org'
+  },
   // Past events
   {
     id: 101,
     title: '33. Finał WOŚP w Barcelonie',
-    description: 'Niesamowity finał! Zebraliśmy rekordową kwotę 13,881.91 euro!',
-    fullDescription: 'Dziękujemy wszystkim, którzy wzięli udział w 33. Finale WOŚP w Barcelonie! Był to niezwykły dzień pełen muzyki, radości i pomocy.\n\nOsiągnięcia 33. Finału:\n• Zebraliśmy rekordową kwotę 13,881.91 euro!\n• Uczestniczyło ponad 520 osób\n• Odbyły się 4 koncerty\n• Zorganizowano 15 aukcji charytatywnych\n• Sprzedano ponad 200 gadżetów WOŚP\n\nŚrodki zostały przekazane na zakup sprzętu medycznego dla polskich szpitali dziecięcych. Dzięki Waszemu wsparciu mogliśmy realnie pomóc potrzebującym dzieciom.\n\nRelacja z wydarzenia:\nFinał rozpoczął się o godzinie 10:00 na Plaça de Catalunya. Przez cały dzień trwały koncerty, aukcje i różnorodne atrakcje. Pogoda dopisała, a atmosfera była niesamowita!\n\nDziękujemy wszystkim wolontariuszom, artystom, sponsorom i uczestnikom za wspaniały dzień!',
-    date: '2024-01-28',
-    location: 'Plaça de Catalunya, Barcelona',
+    description: 'Niesamowity finał! Zebraliśmy 8,073.48 euro podczas wydarzenia, a łącznie z wydarzeniami towarzyszącymi i aukcjami 13,880.62 euro!',
+    fullDescription: '33. Finał WOŚP w Barcelonie\n\nSerdecznie zapraszamy na wyjątkowe wydarzenie, które połączy nas w jednym celu – pomocy potrzebującym! 33. Finał Wielkiej Orkiestry Świątecznej Pomocy w Barcelonie to dzień pełen muzyki, radości i wspólnego działania.\n\n📍 Miejsce: Nau Bostik — Carrer Ferran Turné, 1-11, Sant Andreu, 08027 Barcelona, Hiszpania\n📅 Data: 26 stycznia 2025\n🕘 Godzina: Start o 10:30\n\n🎵 Harmonogram koncertów:\n11:00 - ANULKA & DIRTY SPOONS\n12:30 - MARCIN BURY\n14:00 - GUIMERA BLUES & THE SUGAR BOYS\n16:30 - JUSTYNA & JAIME\n18:15 - EYE OF THE STORM\n19:30 - Światełko do nieba\n20:00 - Zakończenie\n\n🎪 Atrakcje podczas wydarzenia:\n• Niesamowite koncerty lokalnych artystów\n• Emocjonujące licytacje\n• Loteria z fantastycznymi nagrodami\n• Kiermasz książek\n• Animacje i zabawy dla dzieci\n• Pyszne pierogi, polskie ciasta i słodycze\n• Napoje z polskich browarów\n\nTo wydarzenie, które musisz przeżyć! Przyjdź i wesprzyj największą orkiestrę serc! Wszystkie zebrane środki zostaną przekazane na wsparcie dzieci i seniorów.\n\nRazem możemy więcej! Do zobaczenia!\n\n#WOŚPBarcelona #RazemDlaWOŚP #PomaganieJestDziecinnieProste #33FinałWOŚP',
+    date: '2025-01-26',
+    location: 'Nau Bostik, Sant Andreu, Barcelona',
     category: 'Finał WOŚP',
     image: '/images/33-final/final-2024-main.jpg',
     gallery: [
@@ -144,8 +130,8 @@ const allEvents = [
       '/images/33-final/final-2024-5.jpg',
       '/images/33-final/final-2024-6.jpg'
     ],
-    attendees: 520,
-    amountRaised: '13,881.91 €',
+    amountRaised: '8,073.48 €',
+    totalAmount: '13,880.62 €',
     organizer: 'WOŚP Barcelona',
     highlights: [
       'Rekordowa kwota zebrana w historii WOŚP Barcelona',
@@ -155,27 +141,167 @@ const allEvents = [
     ]
   },
   {
-    id: 102,
-    title: 'Mikołajki dla Dzieci 2023',
-    description: 'Świąteczne spotkanie z prezentami dla polskich dzieci w Barcelonie.',
-    fullDescription: 'Magiczne Mikołajki dla polskich dzieci w Barcelonie! Było to wyjątkowe wydarzenie, które przyniosło radość najmłodszym członkom naszej społeczności.\n\nProgram wydarzenia:\n• Spotkanie ze Świętym Mikołajem\n• Rozdanie prezentów dla dzieci\n• Polskie kolędy i piosenki\n• Tradycyjne polskie słodycze\n• Warsztaty plastyczne\n• Opowiadanie polskich bajek\n\nW wydarzeniu wzięło udział 80 dzieci wraz z rodzicami. Każde dziecko otrzymało prezent, a rodzice mogli cieszyć się wspólnym czasem z polską społecznością.\n\nZebraliśmy również 2,000 euro na cele charytatywne, które zostały przekazane na wsparcie polskich rodzin w trudnej sytuacji w Barcelonie.',
-    date: '2023-12-06',
-    location: 'Polski Kościół św. Jerzego',
-    category: 'Święta',
-    image: '/images/blog/mikolajki-2023.jpg',
+    id: 201,
+    title: '19. Bieg WOŚP "Policz się z cukrzycą"',
+    description: 'Bieg charytatywny na 5 km z Sagrada Familia do Hotel W Barcelona. Wspólna zabawa i wsparcie WOŚP!',
+    fullDescription: '19. Bieg WOŚP "Policz się z cukrzycą" w Barcelonie!\n\nZapraszamy na 19. edycję biegu „Policz się z cukrzycą" z WOŚP – także w Barcelonie!\n\n📅 Data: Niedziela, 19 stycznia 2025\n🕘 Start: 10:30\n📍 Miejsce zbiórki: Sagrada Familia (https://maps.app.goo.gl/R5mMRR6FwW8v18Pd9)\n🏁 Meta: Hotel W Barcelona\n📏 Dystans: 5 km\n🗺️ Trasa biegu: https://maps.app.goo.gl/mFDnte8xnbmnag1x5\n\nTo wyjątkowe wydarzenie to nie tylko bieg – możesz dołączyć, jak chcesz! Spacerem, na rolkach, rowerze czy w spokojnym truchcie – najważniejsze to wspólna zabawa i wsparcie WOŚP!\n\n✨ Dlaczego warto się zapisać?\n\n📝 Rejestracja do 5 stycznia 2025 gwarantuje:\n• Koszulkę z 19. Biegu „Policz się z cukrzycą"\n• Darmową przesyłkę do Polski\n• Po 5 stycznia zapisy będą nadal możliwe aż do 19 stycznia oraz w trakcie zbiórki, jednak bez gwarancji koszulki\n• Na mecie każdy uczestnik otrzyma pamiątkowy medal!\n\n💰 Koszt: 85 zł\n\n📋 Jak się zapisać?\n1. Zarejestruj się na Slotmarket na bieg WIRTUALNY: slotmarket.pl/event/details/645/preview\n2. Wprowadź adres wysyłki na Polskę do Fundacji WOŚP: Dominikańska 19C, 02-738 Warszawa\n3. Przy wyborze rozmiaru koszulki, w polu „Klub" wpisz: Barcelona\n4. Wybierz opcję przesyłki krajowej (do Polski)\n5. Potwierdzenie rejestracji z imieniem, nazwiskiem i rozmiarem koszulki wyślij na: biegwospbarcelona@gmail.com\n\n🏆 Dla najlepszych uczestników przewidziane są atrakcyjne nagrody!\n\nDołącz do nas, baw się świetnie i pokażmy, że Barcelona wspiera WOŚP!',
+    date: '2025-01-19',
+    time: 'Start: 10:30',
+    location: 'Start: Sagrada Familia, Meta: Hotel W Barcelona',
+    category: 'Bieg',
+    image: '/images/blog/bieg-2025.jpg',
+    gallery: [],
+    registrationRequired: true,
+    registrationLink: 'https://slotmarket.pl/event/details/645/preview',
+    registrationDeadline: '5 stycznia 2025 (z koszulką), 19 stycznia 2025 (bez koszulki)',
+    organizer: 'WOŚP Barcelona',
+    contact: 'biegwospbarcelona@gmail.com',
+    meetupLink: null,
+    facebookLink: null
+  },
+  {
+    id: 202,
+    title: 'Wernisaż Artystyczny WOŚP',
+    description: 'Wyjątkowe wydarzenie artystyczne łączące sztukę z dobrem. Dzieła lokalnych artystów i gości z Polski na wsparcie WOŚP!',
+    fullDescription: 'Wernisaż Artystyczny WOŚP w Barcelonie\n\nZapraszamy na wyjątkowe wydarzenie artystyczne, podczas którego sztuka łączy się z dobrem! Wernisaż w Barcelonie to okazja do podziwiania różnorodnych dzieł artystów, zarówno lokalnych twórców, jak i gości z Polski, a także do wsparcia Wielkiej Orkiestry Świątecznej Pomocy.\n\n✨ Dlaczego warto przyjść?\n\n🎨 Wyjątkowi artyści – Spotkaj twórców mieszkających w Barcelonie i podziwiaj ich prace: od malarstwa po różnorodne techniki artystyczne.\n\n🔨 Licytacja dzieł – Wylicytuj unikalne prace podczas wielkiego finału WOŚP 26 stycznia 2025. Całkowity dochód zasili konto Fundacji WOŚP!\n\n🖼️ Sprzedaż dzieł – Wybrane prace będą dostępne na sprzedaż podczas wernisażu. To doskonała okazja, by wesprzeć artystów i sprawić sobie lub bliskim niepowtarzalny prezent.\n\n🍷 Kameralna atmosfera – Delektuj się sztuką przy lampce wina i małych przekąskach przygotowanych przez naszych wolontariuszy.\n\n🌍 Dla każdego – Wydarzenie dostępne w językach: polskim, hiszpańskim i angielskim.\n\n👨‍🎨 Artyści:\n• Daria Stróżyk – Instagram @DariaStrozykArt\n• Natalia Sarzyńska – Instagram @zoryas.realm\n• Marta Cybulska – Instagram @la_vidamarta\n• Magdalena Gladysz – Instagram @magda_y_arte\n• Jordina González Zygmuntowicz\n• Roxane Durtheil – Instagram @tarragonarte\n• Katarzyna Rzędzian – Instagram @rudakata\n• Helena Staniszewska – Instagram @helastaniszewska\n• Aneta Grabowska – Instagram @agphotographybcn\n\n📅 Szczegóły wydarzenia:\nData: Sobota, 18 stycznia 2025\nGodzina: 11:00 – 22:00\nMiejsce: Templo Beauty peluquería & holística, Ronda del Guinardó 64, Horta-Guinardó, 08025 Barcelona\nJęzyk: polski, angielski, hiszpański\n\n⏰ Program:\n11:00 – Otwarcie drzwi: czas na podziwianie dzieł i rozmowy z artystami\n12:00 – Oficjalne powitanie i prezentacja artystów\nCały dzień – Możliwość zakupu wybranych dzieł, rozmów z twórcami oraz delektowania się przekąskami i winem\n21:00 – Zamknięcie wernisażu\n\n🎯 Licytacja finałowa odbędzie się 26 stycznia 2025 – całkowity dochód wspiera cel 33. Finału: onkologia i hematologia dziecięca!\n\n🎟️ Wstęp wolny!\n\nPrzyjdź, odkryj piękno sztuki i wspólnie z nami graj dla Wielkiej Orkiestry Świątecznej Pomocy. Sztuka może zmieniać świat – dołącz do nas!',
+    date: '2025-01-18',
+    time: '11:00 - 22:00',
+    location: 'Templo Beauty, Ronda del Guinardó 64, Horta-Guinardó, Barcelona',
+    category: 'Wernisaż',
+    image: '/images/blog/wernisaz-2025.jpg',
+    gallery: [],
+    registrationRequired: false,
+    organizer: 'WOŚP Barcelona',
+    contact: 'kontakt@wospbarcelona.org',
+    meetupLink: null,
+    facebookLink: null
+  },
+  {
+    id: 206,
+    title: 'Warsztaty Świąteczne: "Wine and Craft"',
+    description: 'Dołącz do wyjątkowego wieczoru kreatywności i relaksu z WOŚP Barcelona! Świąteczne rękodzieło przy grzańcu i winie!',
+    fullDescription: 'PL (ENG and ES below)\n\nDołącz do wyjątkowego wieczoru kreatywności i relaksu z WOŚP Barcelona!\n\nZapraszamy na warsztaty, które łączą świąteczne rękodzieło z wieczorem pełnym dobrej zabawy przy grzańcu i winie!\n\n🎄 Co na Ciebie czeka?\n\n🎅 Świąteczne dekoracje: Tworzenie wyjątkowych ozdób, w tym bombek i dekoracji z filcu.\n\n🍷 Grzaniec/wino: Delektuj się pysznym trunkiem, tworząc w świątecznej atmosferze.\n\n✨ Nie potrzebujesz doświadczenia – wystarczy Twój entuzjazm! Wszystkie materiały będą zapewnione na miejscu.\n\n💰 Koszt: 20 EUR lub 90 PLN, przeznaczone na działania 33. Finału WOŚP w Barcelonie.\n\n📅 Kiedy: Sobota, 23 listopada 2024, godz. 17:30\n\n📍 Gdzie: World Class Barcelona Carrer del Bisbe Laguarda, 4, Ciutat Vella, 08001 Barcelona\n\n***\n\nENG:\n\nJoin an unforgettable evening of creativity and relaxation with WOŚP Barcelona!\n\nWe invite you to a workshop that combines festive crafts with an evening of fun, enjoying mulled wine and great company!\n\n🎄 What\'s in store?\n\n🎅 Holiday Decorations: Create unique ornaments, including baubles and felt decorations.\n\n🍷 Mulled Wine/Wine: Savor a delicious drink while crafting in a cozy, festive atmosphere.\n\n✨ No experience needed – just bring your enthusiasm! All materials will be provided.\n\n💰 Cost: 20 EUR or 90 PLN, fully supporting the 33rd WOŚP Finale in Barcelona.\n\n📅 When: Saturday, November 23, 2024, at 5:30 PM\n\n📍 Where: World Class Barcelona Carrer del Bisbe Laguarda, 4, Ciutat Vella, 08001 Barcelona',
+    date: '2024-11-23',
+    time: '17:30',
+    location: 'World Class Barcelona Carrer del Bisbe Laguarda, 4, Ciutat Vella, 08001 Barcelona',
+    category: 'Warsztaty Świąteczne',
+    image: '/images/kalendarz/485066667_1070766505083825_7426193123650026575_n.jpg',
+    gallery: [],
+    registrationRequired: true,
+    registrationLink: 'https://wospbarcelona.org/wine-craft-christmas/',
+    organizer: 'WOŚP Barcelona',
+    contact: 'kontakt@wospbarcelona.org',
+    meetupLink: null,
+    facebookLink: null
+  },
+  {
+    id: 205,
+    title: 'Warsztaty Fotograficzne Plenerowe',
+    description: 'Sztab WOŚP w Barcelonie wraz z Anetą zaprasza na fotograficzne warsztaty plenerowe! Naucz się pracy z modelem i wykorzystania światła.',
+    fullDescription: 'Sztab WOŚP w Barcelonie wraz z naszą wolontariuszką Anetą zaprasza na: fotograficzne Warsztaty Plenerowe w Barcelonie!\n\nMarzysz o doskonaleniu swoich umiejętności fotograficznych? Zapraszamy na wyjątkowe warsztaty w malowniczym plenerze Barcelony! To niepowtarzalna okazja, by nauczyć się pracy z modelem i odkryć kreatywne techniki wykorzystania światła oraz funkcji aparatu.\n\n📸 Co na Ciebie czeka?\n\n👤 Fotografia z modelem/modelką – Praktyczne ćwiczenia z prowadzenia sesji zdjęciowej i pracy z modelem. Każdy uczestnik będzie miał okazję przeprowadzić krótką sesję i przesłać zdjęcia modelowi.\n\n📷 Ustawienia aparatu – Nauka kluczowych funkcji, takich jak ekspozycja, czas naświetlania i inne ustawienia idealne do pracy w plenerze.\n\n💡 Wykorzystanie światła – Dowiedz się, jak najlepiej używać naturalnego światła o różnych porach dnia, by oddać nastrój miejsca i osoby.\n\n🎨 Obróbka zdjęć – Poznaj podstawy edycji zdjęć i techniki, które pozwolą wyciągnąć z Twoich fotografii to, co najlepsze.\n\nℹ️ Dodatkowe informacje:\nWarsztaty są skierowane do początkujących – możesz przyjść zarówno z aparatem fotograficznym, jak i z aparatem w telefonie.\n\n📝 Zapisy na warsztaty pod linkiem:\nhttps://wospbarcelona.org/warsztaty-fotograficzne/\n\n📅 Szczegóły wydarzenia:\n• Data: 30 listopada 2024\n• Godzina: 14:30 – 17:30 (3 godziny)\n• Koszt: 15 EUR lub 70 PLN - całość dochodu przeznaczona na wynajem sali i organizację 33. Finału WOŚP w Barcelonie\n• Miejsce: Jardins de Mossèn Costa i Llobera, Barcelona\n• Język: polski, hiszpański\n\nTo idealna szansa, by rozwinąć swoje umiejętności, nauczyć się czegoś nowego i spotkać innych miłośników fotografii. Gwarantujemy, że po tych warsztatach Twoje zdjęcia zyskają nową jakość!',
+    date: '2024-11-30',
+    time: '14:30 - 17:30',
+    location: 'Jardins de Mossèn Costa i Llobera, Barcelona',
+    category: 'Warsztaty Fotograficzne',
+    image: '/images/kalendarz/485066667_1070766505083825_7426193123650026575_n.jpg',
+    gallery: [],
+    registrationRequired: true,
+    registrationLink: 'https://wospbarcelona.org/warsztaty-fotograficzne/',
+    organizer: 'WOŚP Barcelona',
+    contact: 'kontakt@wospbarcelona.org',
+    meetupLink: null,
+    facebookLink: null
+  },
+  {
+    id: 204,
+    title: 'Gwiazdka Literacka z WOŚP',
+    description: 'Wyjątkowe świąteczne wydarzenie! Spotkanie z polskimi autorami, licytacja książek z autografami i winno-literacki wieczór.',
+    fullDescription: 'Zapraszamy na wyjątkowe świąteczne wydarzenie!\n\nPoznaj polskich autorów mieszkających w Barcelonie, posłuchaj fragmentów ich książek i daj się porwać literackiej atmosferze.\n\n🎄 Dlaczego warto przyjść?\n\n📚 Spotkanie z autorami: Zapytaj o inspiracje, proces twórczy i życie w Barcelonie.\n\n🏆 Licytacja książek: Wylicytuj wyjątkowe egzemplarze z autografami autorów książek, a cały przychód zasili cel 33. Finału WOŚP.\n\n❤️ Dobroczynność: Wesprzyj Wielką Orkiestrę Świątecznej Pomocy.\n\n🍷 Winno-literacki wieczór: Delektuj się winem i zakąskami w miłym towarzystwie.\n\n📖 Sprzedaż książek: Kup polską książkę na prezent z biblioteczki naszych wolontariuszy!\n\n✍️ Autorzy:\n• Krzysztof Monastyrski "Monarek"\n• Joanna Jurek\n• Agnieszka Łukomska\n• Agnieszka Wolińska-Skuza\n• Marta Cybulska\n\n🎤 Spotkanie poprowadzi dziennikarka Wirtualnej Polski: Agnieszka Woźniak!\n\n📅 Kiedy i gdzie?\n• Data: 15 grudnia 2024\n• Godzina: 15:00 - 19:00 (czas trwania: 3,5 godziny)\n• Koszt: Wstęp Wolny!\n• Miejsce: World Class Bcn Spanish school - Carrer del Bisbe Laguarda, 4, Ciutat Vella, 08001 Barcelona\n• Język: Polski\n\n📋 Program:\n15:00-15:30: Rozgrzewka\n15:30-17:30: Panel dyskusyjny z autorami: Krzysztof Monastyrski, Joanna Jurek, Agnieszka Łukomska, Agnieszka Wolińska-Skuza, Marta Cybulska.\n17:30-18:00: Przerwa na rozmowy z autorami.\n18:00-19:00: Licytacja książek.\n\n🎟️ Wstęp wolny!\n\nDołącz do nas i spędź wyjątkową gwiazdkę w gronie miłośników literatury!\n\n💰 Zbieramy środki na wsparcie celu 33. Finału WOŚP, czyli onkologii i hematologii dziecięcej! Swoje darowizny możecie już wpłacać poprzez platformę 4fund https://4fund.com/wospbarcelona/s/gwiazdka lub do puszek podczas spotkania.',
+    date: '2024-12-15',
+    time: '15:00 - 19:00',
+    location: 'World Class Bcn Spanish school - Carrer del Bisbe Laguarda, 4, Ciutat Vella, 08001 Barcelona',
+    category: 'Spotkanie Literackie',
+    image: '/images/kalendarz/485066667_1070766505083825_7426193123650026575_n.jpg',
+    gallery: [],
+    registrationRequired: false,
+    organizer: 'WOŚP Barcelona',
+    contact: 'kontakt@wospbarcelona.org',
+    meetupLink: null,
+    facebookLink: null
+  },
+  {
+    id: 203,
+    title: 'Bubbly Craft - Earth Edition',
+    description: 'Wyjątkowy wieczór kreatywności i relaksu! Warsztaty odnawiania doniczek i makramy przy aromatycznych napojach.',
+    fullDescription: 'Bubbly Craft - Earth Edition z WOŚP Barcelona!\n\nDołącz do wyjątkowego wieczoru kreatywności i relaksu z WOŚP Barcelona! Zapraszamy na drugą edycję warsztatów „Bubbly Craft", tym razem pod nazwą Earth Edition. To doskonała okazja, aby spędzić wieczór w twórczej atmosferze przy aromatycznych napojach!\n\n🎨 Co na Ciebie czeka?\n\n🪴 Odnawianie doniczek: Przynieś swoją nudną doniczkę, a my pomożemy jej nadać nowe życie! Dekorujemy doniczki w duchu Earth Edition – z naciskiem na recykling i zero waste.\n\n🧵 Makrama na doniczkę: Naucz się tworzyć piękne, ozdobne makramy do kwiatów. Bez doświadczenia? Żaden problem!\n\n🍷 Aromatyczne napoje: W tej edycji czekają na Ciebie napoje, które dopełnią twórczą atmosferę.\n\n👶 Strefa dla dzieci: Zabierz swoje pociechy ze sobą! Dla dzieci przygotowaliśmy specjalne animacje i zabawy, abyś Ty mógł/mogła spokojnie pić winko i twórczo spędzić czas. (Sugerowana dopłata: 5 EUR)\n\n📅 Szczegóły wydarzenia:\nKiedy: Sobota, 11 stycznia 2025, godz. 17:30\nGdzie: World Class Barcelona\nJęzyk: Polski, Angielski\nSugerowana wpłata: 15 EUR\n\nTo wydarzenie łączy kreatywność, ekologię i wsparcie dla WOŚP w jednym! Przyjdź i spędź wieczór w miłej atmosferze, tworząc coś pięknego dla swojego domu.',
+    date: '2025-01-11',
+    time: '17:30',
+    location: 'World Class Barcelona',
+    category: 'Warsztaty',
+    image: '/images/kalendarz/485066667_1070766505083825_7426193123650026575_n.jpg',
+    gallery: [],
+    registrationRequired: true,
+    registrationLink: 'https://wospbarcelona.org/wine-craft-ii-earth-edition/',
+    organizer: 'WOŚP Barcelona',
+    contact: 'kontakt@wospbarcelona.org',
+    meetupLink: null,
+    facebookLink: null
+  },
+  {
+    id: 104,
+    title: '32. Finał WOŚP w Barcelonie',
+    description: 'Wspaniały finał z rekordową frekwencją! Zebrano łącznie 10.460,47 €!',
+    fullDescription: '32. Finał WOŚP w Barcelonie\n\nNiesamowity dzień pełen emocji, muzyki i wsparcia dla Wielkiej Orkiestry Świątecznej Pomocy! Dziękujemy wszystkim, którzy byliście z nami tego dnia.\n\n🎪 PROGRAM IMPREZY\n\n11:00 Rozpoczęcie imprezy\n12:00 Oficjalne przywitanie\n12:15 Kalambury\n13:00 Matt Zerek /koncert/\n13.45 Licytacje\n14:15 Guimera Blues & The Sugar Boys /koncert/\n15.30 Licytacja Złotego Serduszka\n16:00 Tort\n16.30 Karaoke\n17:00 Headbug /koncert/\n18.00 Licytacje\n19:00 Eveli Ray /koncert/\n19.40 Światełko do nieba\n\n🎨 Ponad to:\n\n👶 Atrakcje dla dzieci\n/warsztaty dla najmłodszych, maski karnawałowe, brokatowe tatuaże, bańki mydlane/\n\n🍽️ Polskie jedzenie\n/pierogi, kiełbasa, sałatki, ciasta, kołacze/\n\n🍺 Polskie piwo i grzane wino\n\n📚 Kiermasz książek\n\n🎰 Loteria fantowa\n\n🏆 Konkursy z nagrodami\n\n🎉 ZAPRASZAMY!!!\n\nGramy razem do końca świata i o jeden dzień dłużej!!!',
+    date: '2023-01-29',
+    time: '11:00 - 20:00',
+    location: 'Nau Bostik, Sant Andreu, Barcelona',
+    category: 'Finał WOŚP',
+    image: '/images/33-final/final-2024-main.jpg',
     gallery: [
-      '/images/blog/mikolajki-1.jpg',
-      '/images/blog/mikolajki-2.jpg',
-      '/images/blog/mikolajki-3.jpg'
+      '/images/33-final/final-2024-1.jpg',
+      '/images/33-final/final-2024-2.jpg',
+      '/images/33-final/final-2024-3.jpg',
+      '/images/33-final/final-2024-4.jpg',
+      '/images/33-final/final-2024-5.jpg',
+      '/images/33-final/final-2024-6.jpg'
     ],
-    attendees: 80,
-    amountRaised: '2,000 €',
+    amountRaised: '10,460.47 €',
     organizer: 'WOŚP Barcelona',
     highlights: [
-      '80 szczęśliwych dzieci',
-      'Tradycyjne polskie Mikołajki',
-      'Wsparcie dla polskich rodzin',
-      'Integracja społeczności'
+      'Rekordowa frekwencja',
+      'Wspaniała atmosfera',
+      'Wiele atrakcji dla całej rodziny',
+      'Koncerty: Matt Zerek, Guimera Blues & The Sugar Boys, Headbug, Eveli Ray',
+      'Tradycyjne Światełko do nieba'
+    ]
+  },
+  {
+    id: 106,
+    title: '31. Finał WOŚP w Barcelonie',
+    description: 'Pierwszy finał po pandemii! Warsztaty dla dzieci, koncerty, licytacje i polskie przysmaki!',
+    fullDescription: 'Sztab WOŚP Barcelona zaprasza na 31 Finał WOŚP w Barcelonie\n\n🎪 PROGRAM IMPREZY\n\n10:00 Wstęp\n11:00 – 12.00 Warsztaty dla dzieci 8m – 2 lata / KOSMOHISPLANO\n12.00 Licytacje\n12.15 Pokaz baniek /BUBBLES.MASTERS\n12.30 – 14.00 Warsztaty dla dzieci 5 – 7 lat / KOSMOHISPLANO\n14.00 Pokaz baniek /BUBBLES.LOCOS\n14.30 MARCIN BURY & JULIA KWIEK\n15.00 – 16.30 Warsztaty dla dzieci 2,5 – 4 lata / KOSMOHISPLANO\n15.30 Licytacje\n16.00 Podziękowania dla sponsorów\n16.15 TORT\n16.30 Koncert HEADBUGBAND\n17.30 Licytacje\n18.15 Podzięękowania dla sponsorów\n18.30 Koncert SWINGITBABY\n19.30 Zakończenie\n20.00 Światełko do nieba\n\n🎨 Ponadto:\n\n📸 Sesje zdjęciowe od AGPHOTOGRAPHYBCN\n\n📚 Kiermasz książek\n\n🎮 Gry i konkursy, malowanie twarzy\n\n🎨 Warsztaty z Tolą\n\n🎰 Loteria z koszem przysmaków polskich\n\n🎤 Karaoke\n\n🍽️ Przyjdź spróbować polskich przysmaków takich jak:\npierogi, kiełbasa z grilla, pajda chleba ze smalcem, barszcz czerwony z pasztecikami, ciasta, kołacze\n\n🍺 Piwo polskie, grzane wino\n\n📍 Miejsce: Carrer de Sardenya, 29, 08005 Barcelona\n\n🎉 Zapraszamy!',
+    date: '2022-01-30',
+    time: '10:00 - 20:00',
+    location: 'Carrer de Sardenya, 29, 08005 Barcelona',
+    category: 'Finał WOŚP',
+    image: '/images/33-final/final-2024-main.jpg',
+    gallery: [
+      '/images/33-final/final-2024-1.jpg',
+      '/images/33-final/final-2024-2.jpg',
+      '/images/33-final/final-2024-3.jpg',
+      '/images/33-final/final-2024-4.jpg',
+      '/images/33-final/final-2024-5.jpg',
+      '/images/33-final/final-2024-6.jpg'
+    ],
+    amountRaised: '8,989.94 €',
+    organizer: 'WOŚP Barcelona',
+    highlights: [
+      'Pierwszy finał po pandemii',
+      'Warsztaty KOSMOHISPLANO dla dzieci w różnym wieku',
+      'Pokazy baniek BUBBLES.MASTERS i BUBBLES.LOCOS',
+      'Koncerty: MARCIN BURY & JULIA KWIEK, HEADBUGBAND, SWINGITBABY',
+      'Sesje zdjęciowe AGPHOTOGRAPHYBCN',
+      'Tradycyjne Światełko do nieba'
     ]
   }
 ];
@@ -361,22 +487,6 @@ export default async function EventPage({ params }: EventPageProps) {
               </Card>
             )}
 
-            {/* Highlights for past events */}
-            {isPastEvent && event.highlights && (
-              <Card className="bg-white">
-                <CardContent className="p-6">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-4">Najważniejsze osiągnięcia</h2>
-                  <ul className="space-y-2">
-                    {event.highlights.map((highlight, index) => (
-                      <li key={index} className="flex items-center text-gray-700">
-                        <span className="w-2 h-2 bg-red-600 rounded-full mr-3 flex-shrink-0"></span>
-                        {highlight}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            )}
           </div>
 
           {/* Sidebar */}
@@ -397,14 +507,18 @@ export default async function EventPage({ params }: EventPageProps) {
                   <div className="flex items-center text-gray-700">
                     <MapPin className="w-5 h-5 mr-3 text-red-600 flex-shrink-0" />
                     <div>
-                      <a 
-                        href={event.id === 5 ? 'https://maps.app.goo.gl/FR1RXEmzdsYAX42a6' : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(event.location)}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-red-600 hover:text-red-700 hover:underline"
-                      >
-                        {event.location}
-                      </a>
+                      {(event.location.includes('Online') || event.location.includes('Allegro')) ? (
+                        <span className="text-gray-700">{event.location}</span>
+                      ) : (
+                        <a 
+                          href={event.id === 5 ? 'https://maps.app.goo.gl/FR1RXEmzdsYAX42a6' : event.id === 1 ? 'https://maps.app.goo.gl/dJVBoLze5fe5AhB38' : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(event.location)}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-red-600 hover:text-red-700 hover:underline"
+                        >
+                          {event.location}
+                        </a>
+                      )}
                     </div>
                   </div>
                   
@@ -442,82 +556,36 @@ export default async function EventPage({ params }: EventPageProps) {
               </CardContent>
             </Card>
 
-            {/* Fundraising progress for upcoming events */}
-            {!isPastEvent && event.targetAmount && (
-              <Card className="bg-white">
-                <CardContent className="p-6">
-                  <h3 className="text-lg font-bold text-gray-900 mb-4">Cel zbiórki</h3>
-                  <div className="space-y-3">
-                    <div className="flex justify-between text-sm">
-                      <span>Zebrano:</span>
-                      <span className="font-medium">{event.currentAmount}</span>
-                    </div>
-                    <div className="flex justify-between text-sm">
-                      <span>Cel:</span>
-                      <span className="font-medium">{event.targetAmount}</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div className="bg-red-600 h-2 rounded-full" style={{ width: '0%' }}></div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            )}
-
             {/* Amount raised for past events */}
-            {isPastEvent && event.amountRaised && (
+            {isPastEvent && (event.amountRaised || event.totalAmount) && (
               <Card className="bg-white">
                 <CardContent className="p-6">
-                  <h3 className="text-lg font-bold text-gray-900 mb-4">Zebrana kwota</h3>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-green-600 mb-2">
-                      {event.amountRaised}
-                    </div>
-                    <div className="text-sm text-gray-600">
-                      Dziękujemy za wsparcie!
+                  <h3 className="text-lg font-bold text-gray-900 mb-6">Zebrana kwota</h3>
+                  <div className="space-y-6">
+                    {event.amountRaised && (
+                      <div className="text-center bg-green-50 rounded-lg p-4 border-2 border-green-200">
+                        <div className="text-xs uppercase tracking-wide text-gray-600 mb-2 font-semibold">Podczas wydarzenia</div>
+                        <div className="text-4xl font-bold text-green-600">
+                          {event.amountRaised}
+                        </div>
+                      </div>
+                    )}
+                    {event.totalAmount && (
+                      <div className="text-center bg-gray-50 rounded-lg p-3 border border-gray-200">
+                        <div className="text-xs uppercase tracking-wide text-gray-500 mb-1 font-medium">Łącznie podczas finału</div>
+                        <div className="text-2xl font-bold text-gray-700">
+                          {event.totalAmount}
+                        </div>
+                      </div>
+                    )}
+                    <div className="text-center text-sm text-gray-600 pt-2 italic">
+                      Dziękujemy za wsparcie! ❤️
                     </div>
                   </div>
                 </CardContent>
               </Card>
             )}
 
-            {/* Social links */}
-            <Card className="bg-white">
-              <CardContent className="p-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-4">Śledź wydarzenie</h3>
-                <div className="space-y-3">
-                  {event.meetupLink && (
-                    <a
-                      href={event.meetupLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center p-3 bg-red-50 rounded-lg hover:bg-red-100 transition-colors"
-                    >
-                      <svg className="w-5 h-5 fill-current text-red-600 mr-3" viewBox="0 0 24 24">
-                        <path d={siMeetup.path} />
-                      </svg>
-                      <span className="text-red-700 font-medium">Zobacz na Meetup</span>
-                      <ExternalLink className="w-4 h-4 ml-auto text-red-600" />
-                    </a>
-                  )}
-                  
-                  {event.facebookLink && (
-                    <a
-                      href={event.facebookLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors"
-                    >
-                      <svg className="w-5 h-5 fill-current text-blue-600 mr-3" viewBox="0 0 24 24">
-                        <path d={siFacebook.path} />
-                      </svg>
-                      <span className="text-blue-700 font-medium">Zobacz na Facebook</span>
-                      <ExternalLink className="w-4 h-4 ml-auto text-blue-600" />
-                    </a>
-                  )}
-                </div>
-              </CardContent>
-            </Card>
 
             {/* Registration for special events */}
             {!isPastEvent && event.registrationLink && (
@@ -531,7 +599,7 @@ export default async function EventPage({ params }: EventPageProps) {
                       rel="noopener noreferrer"
                       className="block w-full"
                     >
-                      <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
+                      <Button className="w-full bg-green-600 hover:bg-green-700 text-white cursor-pointer">
                         Zarejestruj się na bieg
                       </Button>
                     </a>
@@ -555,7 +623,7 @@ export default async function EventPage({ params }: EventPageProps) {
               <CardContent className="p-6">
                 <h3 className="text-lg font-bold text-gray-900 mb-4">Kontakt</h3>
                 <div className="space-y-3">
-                  <Button asChild className="w-full bg-red-600 hover:bg-red-700">
+                  <Button asChild className="w-full bg-red-600 hover:bg-red-700 text-white cursor-pointer">
                     <Link href={`/${locale}/contact`}>Skontaktuj się z nami</Link>
                   </Button>
                 </div>

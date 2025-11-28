@@ -45,8 +45,7 @@
     },
     "info": {
       "address": "Barcelona, Espanya",
-      "email": "kontakt@wospbarcelona.org",
-      "phone": "+34 XXX XXX XXX"
+      "email": "kontakt@wospbarcelona.org"
     }
   },
   "footer": {
@@ -70,8 +69,7 @@
     "linkLabels": {
       "website": "Lloc web",
       "maps": "Maps",
-      "phone": "Telèfon",
-      "shop": "Botiga",
+            "shop": "Botiga",
       "contact": "Contacte",
       "booking": "Reserves",
       "trial": "Classe de prova",

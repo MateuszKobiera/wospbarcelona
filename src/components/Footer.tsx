@@ -3,7 +3,7 @@
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 import { Facebook, Instagram, Youtube } from '@/components/icons/SocialIcons';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
 import Image from 'next/image';
 
 export function Footer() {
@@ -97,17 +97,13 @@ export function Footer() {
                   {contactT('info.email')}
                 </a>
               </div>
-              <div className="flex items-center space-x-3">
-                <Phone className="w-4 h-4 text-red-600" />
-                <span className="text-gray-300">{contactT('info.phone')}</span>
-              </div>
-            </div>
+                          </div>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center">
           <p className="text-gray-400">
-            © 2024 WOŚP Barcelona. {t('rights')}.
+            © 2025 WOŚP Barcelona. {t('rights')}.
           </p>
         </div>
       </div>

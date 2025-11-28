@@ -58,7 +58,7 @@ export default function WplacOnlinePage() {
                     Rozpoczniemy przyjmowanie wpłat w grudniu.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3 sm:items-center">
-                    <Button asChild className="bg-red-600 hover:bg-red-700 w-full sm:w-auto">
+                    <Button asChild className="bg-red-600 hover:bg-red-700 text-white w-full sm:w-auto cursor-pointer">
                       <Link
                         href="https://www.wosp.org.pl/fundacja/jak-wspierac-wosp/wesprzyj-online"
                         target="_blank"
@@ -67,7 +67,7 @@ export default function WplacOnlinePage() {
                         Wesprzyj Fundację online
                       </Link>
                     </Button>
-                    <Button asChild variant="outline" className="w-full sm:w-auto">
+                    <Button asChild variant="outline" className="w-full sm:w-auto cursor-pointer">
                       <Link
                         href="https://www.wosp.org.pl/final"
                         target="_blank"
