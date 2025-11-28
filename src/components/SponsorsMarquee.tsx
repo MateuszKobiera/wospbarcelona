@@ -9,13 +9,10 @@ type Sponsor = {
 };
 
 const DEFAULT_SPONSORS: Sponsor[] = [
-  { name: 'Partner 1' },
-  { name: 'Sponsor 2' },
-  { name: 'Firma ABC' },
-  { name: 'Partner XYZ' },
-  { name: 'Sponsor Mega' },
-  { name: 'Studio Design' },
-  { name: 'Tech Corp' },
+  { name: 'Bona Barcelona', logo: '/images/sponsors/logo wektory-krzywe kolor DO DRUKU-1.png' },
+  { name: 'Wawel RestoBar', logo: '/images/sponsors/Wawel.png' },
+  { name: 'Sol de Gracia', logo: '/images/sponsors/311836535_638740301171743_4776177943725666713_n.png' },
+  { name: 'Stowarzyszenie Edukacyjne Kosmo HisPLano', logo: '/images/sponsors/kosmo-his-plano.png' },
 ];
 
 function InitialAvatar({ name }: { name: string }) {

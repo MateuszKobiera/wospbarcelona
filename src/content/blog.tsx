@@ -396,11 +396,45 @@ export const blogPosts: BlogPost[] = [
         ),
       },
       {
-        title: '33. Finał WOŚP w Barcelonie',
+        title: 'Dołącz do naszych działań!',
         body: (
-          <p>
-            Zapraszamy do udziału w 33. Finale w niedzielę, 26 stycznia 2025, w Nau Bostik. Śledź nasze social media.
-          </p>
+          <>
+            <p>
+              Zapraszamy do odkrycia smaków z różnych zakątków świata i spróbowania katalońskich przysmaków, które przygotował sztab WOŚP Barcelona!
+            </p>
+            <p>
+              Aby być na bieżąco z informacjami na temat naszych wydarzeń kulinarnych i książki kucharskiej, zachęcamy do śledzenia naszych mediów społecznościowych:
+            </p>
+            <div className="flex flex-wrap gap-3 mt-4">
+              <a
+                href="https://www.facebook.com/sztabWOSPBarcelona/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 border border-red-200 text-red-700 hover:bg-red-50 shadow-sm transition-transform hover:-translate-y-0.5"
+              >
+                Facebook
+              </a>
+              <a
+                href="https://www.instagram.com/wospbarcelona/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 border border-red-200 text-red-700 hover:bg-red-50 shadow-sm transition-transform hover:-translate-y-0.5"
+              >
+                Instagram
+              </a>
+              <a
+                href="https://www.tiktok.com/@wospbarcelona"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 border border-red-200 text-red-700 hover:bg-red-50 shadow-sm transition-transform hover:-translate-y-0.5"
+              >
+                TikTok
+              </a>
+            </div>
+            <p className="mt-4">
+              Do zobaczenia na naszych wydarzeniach kulinarnych!
+            </p>
+          </>
         ),
       },
     ],

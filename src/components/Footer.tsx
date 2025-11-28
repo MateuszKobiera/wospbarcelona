@@ -42,7 +42,7 @@ export function Footer() {
               <span className="font-bold text-xl">WOŚP Barcelona</span>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
-              Jesteśmy dynamiczną społecznością Polaków w Barcelonie, która od 8 lat organizuje Finały WOŚP i wydarzenia charytatywne.
+              Jesteśmy dynamiczną społecznością Polaków w Barcelonie, która od 9 lat organizuje Finały WOŚP i wydarzenia charytatywne.
             </p>
             
             {/* Social Media */}
