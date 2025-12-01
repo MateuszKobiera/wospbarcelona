@@ -13,7 +13,57 @@
     "subtitle": "Great Orchestra of Christmas Charity in Barcelona",
     "description": "We are a dynamic community of Poles in Barcelona who for 8 years has been organizing WOŚP Finals and charity events, combining passion with help.",
     "cta": "Join us",
-    "learnMore": "Learn more"
+    "learnMore": "Learn more",
+    "socials": {
+      "title": "Join us",
+      "description": "We are on Facebook, Instagram and Meetup.",
+      "facebookDesc": "See what's new. Updates, photos and event reports.",
+      "instagramDesc": "Latest photos and stories from our activities in Barcelona.",
+      "meetupDesc": "Join our events and meetings of the Polish community."
+    },
+    "stats": {
+      "yearsHelp": "Years of help",
+      "volunteers": "Volunteers",
+      "fundsRaised": "Funds raised"
+    },
+    "joinSection": {
+      "title": "Join our mission",
+      "description": "Every year we organize the WOŚP Finale in Barcelona, raising funds to buy the most modern medical equipment for Polish hospitals."
+    },
+    "blogSection": {
+      "latestTitle": "Latest posts",
+      "readMore": "Read more"
+    },
+    "sponsorsSection": {
+      "title": "Sponsors and Partners",
+      "subtitle": "They already play with us! Join our Partners and Sponsors group!",
+      "description": "Meet our Polish partners and sponsors who play with us in Barcelona and surroundings!",
+      "cta": "Click the bar to see all sponsors"
+    },
+    "missionSection": {
+      "title": "Our mission",
+      "cards": {
+        "helpTitle": "Support for those in need",
+        "helpDesc": "We raise funds and organise activities to truly help children and people in need.",
+        "businessTitle": "Supporting local businesses",
+        "businessDesc": "We connect companies and people, creating networking and cooperation space.",
+        "communityTitle": "Polish community integration",
+        "communityDesc": "We build relationships, organise events and connect Poles in Barcelona and surroundings.",
+        "cultureTitle": "Promoting Polish culture in Spain",
+        "cultureDesc": "We showcase Polish culture and values, co-creating Barcelona's colourful mosaic."
+    }
+    },
+    "finalSection": {
+      "title": "34th WOŚP Finale — Healthy tummies for our kids",
+      "moreButton": "More about the collection",
+      "supportOnline": "Support the Foundation online",
+      "description": "We play to support diagnostics and treatment of gastrointestinal diseases in the youngest patients. Let's take care of healthy tummies together!"
+    },
+    "amountsTitle": "Funds collected by WOŚP Barcelona",
+    "contactSection": {
+      "title": "Contact us",
+      "description": "Do you have questions, want to become a sponsor or volunteer? Write to us!"
+    }
   },
   "about": {
     "title": "About us",
@@ -39,19 +89,36 @@
       "email": "Email",
       "subject": "Subject",
       "message": "Message",
+      "placeholderName": "John Doe",
+      "placeholderEmail": "your@email.com",
+      "placeholderMessage": "Write a message...",
+      "note": "Sending will open your default mail client.",
       "submit": "Send message",
       "success": "Message sent successfully!",
       "error": "An error occurred. Please try again."
     },
+    "page": {
+      "intro": "Contact us – we will gladly answer all your questions",
+      "formTitle": "Send a message",
+      "infoTitle": "Contact information",
+      "labels": {
+        "address": "Address",
+        "email": "Email"
+      },
+      "volunteerTitle": "Become a volunteer",
+      "volunteerDesc": "We are looking for people willing to help organise events. Join our team and help with us!"
+    },
     "info": {
       "address": "Barcelona, Spain",
-      "email": "kontakt@wospbarcelona.org"
+      "email": "sztab@wospbarcelona.org"
     }
   },
   "footer": {
     "rights": "All rights reserved",
     "socials": "Social media",
-    "newsletter": "Subscribe to newsletter"
+    "newsletter": "Subscribe to newsletter",
+    "quickLinks": "Quick links",
+    "description": "We are a dynamic Polish community in Barcelona organising WOŚP finales and charity events for years."
   },
   "sponsors": {
     "title": "Sponsors",
@@ -64,7 +131,7 @@
       "title": "Want to become a sponsor or partner?",
       "subtitle": "Get in touch – we will prepare a tailored collaboration proposal.",
       "contact": "Contact us",
-      "email": "kontakt@wospbarcelona.org"
+      "email": "sztab@wospbarcelona.org"
     },
     "linkLabels": {
       "website": "Website",

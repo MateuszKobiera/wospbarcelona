@@ -16,7 +16,7 @@ export default function ContactPage() {
               {t('title')}
             </h1>
             <p className="text-xl text-gray-600">
-              Skontaktuj się z nami - chętnie odpowiemy na wszystkie pytania
+              {t('page.intro')}
             </p>
           </div>
 
@@ -24,7 +24,7 @@ export default function ContactPage() {
             {/* Contact Form Card */}
             <Card className="bg-white border border-red-100 shadow-sm">
               <CardHeader>
-                <CardTitle className="text-2xl text-gray-900 font-bold">Wyślij wiadomość</CardTitle>
+                <CardTitle className="text-2xl text-gray-900 font-bold">{t('page.formTitle')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <ContactForm />
@@ -35,13 +35,13 @@ export default function ContactPage() {
             <div className="space-y-8">
               <Card className="bg-white border border-red-100 shadow-sm">
                 <CardHeader>
-                  <CardTitle className="text-2xl text-gray-900 font-bold">Informacje kontaktowe</CardTitle>
+                  <CardTitle className="text-2xl text-gray-900 font-bold">{t('page.infoTitle')}</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="flex items-start space-x-4">
                     <MapPin className="w-5 h-5 text-red-600 mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="font-bold text-gray-900 mb-1">Adres</h3>
+                      <h3 className="font-bold text-gray-900 mb-1">{t('page.labels.address')}</h3>
                       <p className="text-gray-600">{t('info.address')}</p>
                     </div>
                   </div>
@@ -49,9 +49,9 @@ export default function ContactPage() {
                   <div className="flex items-start space-x-4">
                     <Mail className="w-5 h-5 text-red-600 mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="font-bold text-gray-900 mb-1">Email</h3>
+                      <h3 className="font-bold text-gray-900 mb-1">{t('page.labels.email')}</h3>
                       <a 
-                        href="mailto:kontakt@wospbarcelona.org" 
+                        href="mailto:sztab@wospbarcelona.org" 
                         className="text-red-600 hover:text-red-700"
                       >
                         {t('info.email')}
@@ -65,11 +65,10 @@ export default function ContactPage() {
               <Card className="bg-amber-50 border border-amber-200 shadow-sm">
                 <CardContent className="p-6">
                   <h3 className="font-bold text-amber-900 text-lg mb-3">
-                    Zostań wolontariuszem
+                    {t('page.volunteerTitle')}
                   </h3>
                   <p className="text-amber-800">
-                    Szukamy osób chętnych do pomocy przy organizacji wydarzeń. 
-                    Dołącz do naszego zespołu i pomagaj razem z nami!
+                    {t('page.volunteerDesc')}
                   </p>
                 </CardContent>
               </Card>

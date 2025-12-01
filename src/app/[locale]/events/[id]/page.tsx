@@ -68,13 +68,13 @@ const allEvents = [
     meetupLink: 'https://www.meetup.com/wośp-barcelona/events/312210334/',
     facebookLink: 'https://www.facebook.com/events/722563890373111',
     organizer: 'WOŚP Barcelona',
-    contact: 'kontakt@wospbarcelona.org'
+    contact: 'sztab@wospbarcelona.org'
   },
   {
     id: 5,
     title: '20. Bieg WOŚP "Policz się z cukrzycą"',
     description: 'Bieg charytatywny na 5 km. Start: Sagrada Familia, Meta: Hotel W - Barceloneta. Zbiórka: Carrer de Lepant, 281. Rejestracja przez Slotmarket do 31.12.2025.',
-    fullDescription: 'Dołącz do 20. Biegu WOŚP "Policz się z cukrzycą"! To bieg charytatywny na dystansie 5 km przez piękną Barcelonę.\n\n🏃‍♂️ SZCZEGÓŁY BIEGU:\n• Dystans: 5 km\n• Data: 18 stycznia 2026\n• Start/Zbiórka: Sagrada Familia (tam zostaną rozdane koszulki)\n• Meta: Hotel W - Barceloneta (dla każdego czeka medal)\n• Miejsce zbiórki: Carrer de Lepant, 281, L\'Eixample\n\n📝 REJESTRACJA (OBOWIĄZKOWA):\nKażdy uczestnik biegu organizowanego przez Sztab WOŚP w Barcelonie musi zarejestrować się osobiście w systemie Slotmarket w biegu WIRTUALNYM.\n\n⚠️ WAŻNE INSTRUKCJE REJESTRACJI:\n1. Zarejestruj się przez Slotmarket\n2. Wpisz adres wysyłki na Polskę: Dominikańska 19C, 02-738 Warszawa\n3. W polu "Klub" wpisz: 6516 Barcelona\n4. Wybierz opcję przesyłki krajowej (do Polski)\n5. Wyślij potwierdzenie rejestracji z imieniem, nazwiskiem i rozmiarem koszulki na: biegwospbarcelona@gmail.com\n6. Termin rejestracji: do 31.12.2025\n\n🎁 PAKIET STARTOWY:\nWarunkiem otrzymania pakietów w zbiorczej gratisowej paczce jest poprawne wypełnienie wszystkich pól w formularzu Slotmarket.\n\n⚠️ UWAGA: Niepoprawne wypełnienie formularza może skutkować koniecznością dopłaty 150 zł za przesyłkę lub brakiem otrzymania pakietu!',
+    fullDescription: 'Dołącz do 20. Biegu WOŚP "Policz się z cukrzycą"! To bieg charytatywny na dystansie 5 km przez piękną Barcelonę.\n\n🏃‍♂️ SZCZEGÓŁY BIEGU:\n• Dystans: 5 km\n• Data: 18 stycznia 2026\n• Start/Zbiórka: Sagrada Familia (tam zostaną rozdane koszulki)\n• Meta: Hotel W - Barceloneta (dla każdego czeka medal)\n• Miejsce zbiórki: Carrer de Lepant, 281, L\'Eixample\n\n📞 KONTAKT DO ORGANIZATORÓW:\nW razie pytań lub problemów prosimy o kontakt na czacie lub z koordynatorką biegu Anetą pod numerem +34 637 486 551.\n\n📝 REJESTRACJA (OBOWIĄZKOWA):\nKażdy uczestnik biegu organizowanego przez Sztab WOŚP w Barcelonie musi zarejestrować się osobiście w systemie Slotmarket w biegu WIRTUALNYM.\n\n⚠️ WAŻNE INSTRUKCJE REJESTRACJI:\n1. Zarejestruj się przez Slotmarket\n2. Wpisz adres wysyłki na Polskę: Dominikańska 19C, 02-738 Warszawa\n3. W polu "Klub" wpisz: 6516 Barcelona\n4. Wybierz opcję przesyłki krajowej (do Polski)\n5. Wyślij potwierdzenie rejestracji z imieniem, nazwiskiem i rozmiarem koszulki na: biegwospbarcelona@gmail.com\n6. Termin rejestracji: do 31.12.2025\n\n🎁 PAKIET STARTOWY:\nWarunkiem otrzymania pakietów w zbiorczej gratisowej paczce jest poprawne wypełnienie wszystkich pól w formularzu Slotmarket.\n\n⚠️ UWAGA: Niepoprawne wypełnienie formularza może skutkować koniecznością dopłaty 150 zł za przesyłkę lub brakiem otrzymania pakietu!',
     date: '2026-01-18',
     time: 'Start: 10:30',
     location: 'Sagrada Familia',
@@ -172,7 +172,7 @@ const allEvents = [
     gallery: [],
     registrationRequired: false,
     organizer: 'WOŚP Barcelona',
-    contact: 'kontakt@wospbarcelona.org',
+    contact: 'sztab@wospbarcelona.org',
     meetupLink: null,
     facebookLink: null
   },
@@ -190,7 +190,7 @@ const allEvents = [
     registrationRequired: true,
     registrationLink: 'https://wospbarcelona.org/wine-craft-christmas/',
     organizer: 'WOŚP Barcelona',
-    contact: 'kontakt@wospbarcelona.org',
+    contact: 'sztab@wospbarcelona.org',
     meetupLink: null,
     facebookLink: null
   },
@@ -208,7 +208,7 @@ const allEvents = [
     registrationRequired: true,
     registrationLink: 'https://wospbarcelona.org/warsztaty-fotograficzne/',
     organizer: 'WOŚP Barcelona',
-    contact: 'kontakt@wospbarcelona.org',
+    contact: 'sztab@wospbarcelona.org',
     meetupLink: null,
     facebookLink: null
   },
@@ -225,7 +225,7 @@ const allEvents = [
     gallery: [],
     registrationRequired: false,
     organizer: 'WOŚP Barcelona',
-    contact: 'kontakt@wospbarcelona.org',
+    contact: 'sztab@wospbarcelona.org',
     meetupLink: null,
     facebookLink: null
   },
@@ -243,7 +243,7 @@ const allEvents = [
     registrationRequired: true,
     registrationLink: 'https://wospbarcelona.org/wine-craft-ii-earth-edition/',
     organizer: 'WOŚP Barcelona',
-    contact: 'kontakt@wospbarcelona.org',
+    contact: 'sztab@wospbarcelona.org',
     meetupLink: null,
     facebookLink: null
   },

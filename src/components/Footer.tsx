@@ -8,6 +8,7 @@ import Image from 'next/image';
 
 export function Footer() {
   const t = useTranslations('footer');
+  const navT = useTranslations('nav');
   const contactT = useTranslations('contact');
   const locale = useLocale();
 
@@ -18,11 +19,12 @@ export function Footer() {
   ];
 
   const quickLinks = [
-    { name: 'O nas', href: `/${locale}/about` },
-    { name: 'Kalendarz', href: `/${locale}/events` },
-    { name: 'Blog', href: `/${locale}/blog` },
-    { name: 'Sponsorzy', href: `/${locale}/sponsors` },
-    { name: 'Kontakt', href: `/${locale}/contact` },
+    { name: t('quickLinks'), isHeader: true },
+    { name: 'about', href: `/${locale}/about` },
+    { name: 'events', href: `/${locale}/events` },
+    { name: 'blog', href: `/${locale}/blog` },
+    { name: 'sponsors', href: `/${locale}/sponsors` },
+    { name: 'contact', href: `/${locale}/contact` },
   ];
 
   return (
@@ -41,9 +43,7 @@ export function Footer() {
               />
               <span className="font-bold text-xl">WOŚP Barcelona</span>
             </div>
-            <p className="text-gray-300 mb-6 max-w-md">
-              Jesteśmy dynamiczną społecznością Polaków w Barcelonie, która od 9 lat organizuje Finały WOŚP i wydarzenia charytatywne.
-            </p>
+            <p className="text-gray-300 mb-6 max-w-md">{t('description')}</p>
             
             {/* Social Media */}
             <div>
@@ -65,15 +65,15 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Szybkie linki</h3>
+            <h3 className="text-lg font-semibold mb-4">{t('quickLinks')}</h3>
             <ul className="space-y-2">
-              {quickLinks.map((link) => (
+              {quickLinks.filter((l): l is {name:string; href:string} => Boolean(l.href)).map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
                     className="text-gray-300 hover:text-white transition-colors"
                   >
-                    {link.name}
+                    {navT(link.name)}
                   </Link>
                 </li>
               ))}
@@ -82,7 +82,7 @@ export function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Kontakt</h3>
+            <h3 className="text-lg font-semibold mb-4">{contactT('title')}</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <MapPin className="w-4 h-4 text-red-600" />
@@ -91,7 +91,7 @@ export function Footer() {
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-red-600" />
                 <a 
-                  href="mailto:kontakt@wospbarcelona.org" 
+                  href="mailto:sztab@wospbarcelona.org" 
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   {contactT('info.email')}

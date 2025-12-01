@@ -13,7 +13,57 @@
     "subtitle": "Wielka Orkiestra Świątecznej Pomocy w Barcelonie",
     "description": "Jesteśmy dynamiczną społecznością Polaków w Barcelonie, która od 9 lat organizuje Finały WOŚP i wydarzenia charytatywne, łącząc pasję z pomocą.",
     "cta": "Dołącz do nas",
-    "learnMore": "Dowiedz się więcej"
+    "learnMore": "Dowiedz się więcej",
+    "socials": {
+      "title": "Dołącz do nas",
+      "description": "Jesteśmy na Facebooku, Instagramie i Meetupie.",
+      "facebookDesc": "Zobacz, co u nas słychać. Aktualności, zdjęcia i relacje z wydarzeń.",
+      "instagramDesc": "Najnowsze zdjęcia i stories z naszych działań w Barcelonie.",
+      "meetupDesc": "Dołącz do naszych wydarzeń i spotkań polskiej społeczności."
+    },
+    "stats": {
+      "yearsHelp": "Lat pomocy",
+      "volunteers": "Wolontariuszy",
+      "fundsRaised": "Zebranej kwoty"
+    },
+    "joinSection": {
+      "title": "Dołącz do naszej misji",
+      "description": "Każdego roku organizujemy finał Wielkiej Orkiestry Świątecznej Pomocy w Barcelonie, zbierając fundusze na zakup najnowocześniejszego sprzętu medycznego dla polskich szpitali."
+    },
+    "blogSection": {
+      "latestTitle": "Najnowsze wpisy",
+      "readMore": "Czytaj więcej"
+    },
+    "missionSection": {
+      "title": "Nasza misja",
+      "cards": {
+        "helpTitle": "Wspieranie najbardziej potrzebujących",
+        "helpDesc": "Zbieramy środki i organizujemy działania, by realnie pomagać dzieciom i osobom w potrzebie.",
+        "businessTitle": "Wspieranie lokalnych przedsiębiorstw",
+        "businessDesc": "Łączymy firmy i ludzi, tworzymy kontakty oraz przestrzeń do współpracy.",
+        "communityTitle": "Integracja polskiej społeczności",
+        "communityDesc": "Budujemy relacje, organizujemy wydarzenia i łączymy Polaków w Barcelonie i okolicach.",
+        "cultureTitle": "Promowanie polskiej kultury w Hiszpanii",
+        "cultureDesc": "Pokazujemy polską kulturę i wartości, współtworząc kolorową mozaikę Barcelony."
+      }
+    },
+    "finalSection": {
+      "title": "34. Finał WOŚP — Zdrowe brzuszki naszych dzieci",
+      "moreButton": "Więcej o zbiórce",
+      "supportOnline": "Wesprzyj Fundację online",
+      "description": "Zagramy, by wesprzeć diagnostykę i leczenie chorób przewodu pokarmowego u najmłodszych pacjentów. To realne wsparcie dla około 1,2–1,5 mln dzieci. Razem zadbajmy o zdrowe brzuszki naszych dzieci."
+    },
+    "sponsorsSection": {
+      "title": "Sponsorzy i Partnerzy",
+      "subtitle": "Oni już z nami grają! Dołącz do grupy naszych Partnerów i Sponsorów!",
+      "description": "Poznaj naszych polskich partnerów i sponsorów, którzy grają razem z nami w Barcelonie i okolicach!",
+      "cta": "Kliknij pasek, aby zobaczyć wszystkich sponsorów"
+    },
+    "amountsTitle": "Zebrane kwoty przez WOŚP Barcelona",
+    "contactSection": {
+      "title": "Skontaktuj się z nami",
+      "description": "Masz pytania, chcesz zostać sponsorem lub wolontariuszem? Napisz do nas!"
+    }
   },
   "about": {
     "title": "O nas",
@@ -39,19 +89,36 @@
       "email": "Email",
       "subject": "Temat",
       "message": "Wiadomość",
+      "placeholderName": "Jan Kowalski",
+      "placeholderEmail": "twoj@email.com",
+      "placeholderMessage": "Napisz wiadomość...",
       "submit": "Wyślij wiadomość",
+      "note": "Wysłanie otworzy domyślny program pocztowy.",
       "success": "Wiadomość wysłana pomyślnie!",
       "error": "Wystąpił błąd. Spróbuj ponownie."
     },
+    "page": {
+      "intro": "Skontaktuj się z nami – chętnie odpowiemy na wszystkie pytania",
+      "formTitle": "Wyślij wiadomość",
+      "infoTitle": "Informacje kontaktowe",
+      "labels": {
+        "address": "Adres",
+        "email": "Email"
+      },
+      "volunteerTitle": "Zostań wolontariuszem",
+      "volunteerDesc": "Szukamy osób chętnych do pomocy przy organizacji wydarzeń. Dołącz do naszego zespołu i pomagaj razem z nami!"
+    },
     "info": {
       "address": "Barcelona, Hiszpania",
-      "email": "kontakt@wospbarcelona.org"
+      "email": "sztab@wospbarcelona.org"
     }
   },
   "footer": {
     "rights": "Wszelkie prawa zastrzeżone",
     "socials": "Social media",
-    "newsletter": "Zapisz się do newslettera"
+    "newsletter": "Zapisz się do newslettera",
+    "quickLinks": "Szybkie linki",
+    "description": "Jesteśmy dynamiczną społecznością Polaków w Barcelonie, która od 9 lat organizuje Finały WOŚP i wydarzenia charytatywne."
   },
   "sponsors": {
     "title": "Sponsorzy",
@@ -64,7 +131,7 @@
       "title": "Chcesz zostać sponsorem lub partnerem?",
       "subtitle": "Skontaktuj się z nami – przygotujemy dedykowaną propozycję współpracy.",
       "contact": "Napisz do nas",
-      "email": "kontakt@wospbarcelona.org"
+      "email": "sztab@wospbarcelona.org"
     },
     "linkLabels": {
       "website": "Strona",

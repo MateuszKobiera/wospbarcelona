@@ -13,7 +13,57 @@
     "subtitle": "Gran Orquesta de la Ayuda Navideña en Barcelona",
     "description": "Somos una comunidad dinámica de polacos en Barcelona que desde hace 8 años organiza Finales de WOŚP y eventos benéficos, uniendo la pasión con la ayuda.",
     "cta": "Únete a nosotros",
-    "learnMore": "Saber más"
+    "learnMore": "Saber más",
+    "socials": {
+      "title": "Únete a nosotros",
+      "description": "Estamos en Facebook, Instagram y Meetup.",
+      "facebookDesc": "Mira qué hay de nuevo. Actualizaciones, fotos y reportajes de eventos.",
+      "instagramDesc": "Últimas fotos y stories de nuestras actividades en Barcelona.",
+      "meetupDesc": "Únete a nuestros eventos y reuniones de la comunidad polaca."
+    },
+    "stats": {
+      "yearsHelp": "Años de ayuda",
+      "volunteers": "Voluntarios",
+      "fundsRaised": "Fondos recaudados"
+    },
+    "joinSection": {
+      "title": "Únete a nuestra misión",
+      "description": "Cada año organizamos la Final de WOŚP en Barcelona, recaudando fondos para comprar el equipo médico más moderno para los hospitales polacos."
+    },
+    "blogSection": {
+      "latestTitle": "Últimas entradas",
+      "readMore": "Leer más"
+    },
+    "sponsorsSection": {
+      "title": "Patrocinadores y socios",
+      "subtitle": "¡Ya juegan con nosotros! Únete a nuestro grupo de patrocinadores y socios",
+      "description": "Conoce a nuestros socios y patrocinadores polacos que juegan con nosotros en Barcelona y alrededores",
+      "cta": "Haz clic en la barra para ver todos los patrocinadores"
+    },
+    "amountsTitle": "Fondos recaudados por WOŚP Barcelona",
+    "missionSection": {
+      "title": "Nuestra misión",
+      "cards": {
+        "helpTitle": "Apoyo a los más necesitados",
+        "helpDesc": "Recaudamos fondos y organizamos actividades para ayudar realmente a niños y personas necesitadas.",
+        "businessTitle": "Apoyo a los negocios locales",
+        "businessDesc": "Conectamos empresas y personas, creando contactos y espacio para la cooperación.",
+        "communityTitle": "Integración de la comunidad polaca",
+        "communityDesc": "Construimos relaciones, organizamos eventos y conectamos a los polacos en Barcelona y alrededores.",
+        "cultureTitle": "Promoción de la cultura polaca en España",
+        "cultureDesc": "Mostramos la cultura y los valores polacos, co-creando un colorido mosaico de Barcelona."
+      }
+    },
+    "finalSection": {
+      "title": "34.º Final WOŚP — Barrigas sanas para nuestros niños",
+      "moreButton": "Más sobre la colecta",
+      "supportOnline": "Apoya a la Fundación en línea",
+      "description": "Jugaremos para apoyar la atención gastrointestinal de los niños más pequeños. ¡Cuidemos juntos las barrigas sanas de nuestros niños!"
+    },
+    "contactSection": {
+      "title": "Contáctanos",
+      "description": "¿Preguntas? ¿Quieres ser patrocinador o voluntario? ¡Escríbenos!"
+    }
   },
   "about": {
     "title": "Sobre nosotros",
@@ -39,19 +89,36 @@
       "email": "Email",
       "subject": "Asunto",
       "message": "Mensaje",
+      "placeholderName": "Juan Pérez",
+      "placeholderEmail": "tu@email.com",
+      "placeholderMessage": "Escribe un mensaje...",
       "submit": "Enviar mensaje",
+      "note": "El envío abrirá tu cliente de correo predeterminado.",
       "success": "¡Mensaje enviado con éxito!",
       "error": "Ocurrió un error. Inténtalo de nuevo."
     },
+    "page": {
+      "intro": "Contáctanos – con gusto responderemos todas tus preguntas",
+      "formTitle": "Enviar mensaje",
+      "infoTitle": "Información de contacto",
+      "labels": {
+        "address": "Dirección",
+        "email": "Email"
+      },
+      "volunteerTitle": "Hazte voluntario",
+      "volunteerDesc": "Buscamos personas dispuestas a ayudar en la organización de eventos. ¡Únete a nuestro equipo y ayuda con nosotros!"
+    },
     "info": {
       "address": "Barcelona, España",
-      "email": "kontakt@wospbarcelona.org"
+      "email": "sztab@wospbarcelona.org"
     }
   },
   "footer": {
     "rights": "Todos los derechos reservados",
     "socials": "Redes sociales",
-    "newsletter": "Suscríbete a la newsletter"
+    "newsletter": "Suscríbete a la newsletter",
+    "quickLinks": "Enlaces rápidos",
+    "description": "Somos una comunidad dinámica de polacos en Barcelona que organiza finales y eventos benéficos desde hace años."
   },
   "sponsors": {
     "title": "Patrocinadores",
@@ -64,7 +131,7 @@
       "title": "¿Quieres ser patrocinador o socio?",
       "subtitle": "Ponte en contacto: prepararemos una propuesta de colaboración a medida.",
       "contact": "Contáctanos",
-      "email": "kontakt@wospbarcelona.org"
+      "email": "sztab@wospbarcelona.org"
     },
     "linkLabels": {
       "website": "Sitio web",

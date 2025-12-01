@@ -1,4 +1,5 @@
 import { Hero } from '@/components/Hero';
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
@@ -10,6 +11,7 @@ import { blogPosts } from '@/content/blog';
 import { ContactForm } from '@/components/ContactForm';
 
 export default function HomePage() {
+  const t = useTranslations('home');
   return (
     <main>
       <Hero />
@@ -18,8 +20,8 @@ export default function HomePage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-6">
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">Dołącz do nas</h2>
-            <p className="text-gray-600">Jesteśmy na Facebooku, Instagramie i Meetupie.</p>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">{t('socials.title')}</h2>
+            <p className="text-gray-600">{t('socials.description')}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -40,7 +42,7 @@ export default function HomePage() {
                     <div className="text-sm font-semibold text-gray-900">Facebook</div>
                   </div>
                   <p className="text-sm text-gray-700">
-                    Zobacz, co u nas słychać. Aktualności, zdjęcia i relacje z wydarzeń.
+                    {t('socials.facebookDesc')}
                   </p>
                 </CardContent>
               </Card>
@@ -63,7 +65,7 @@ export default function HomePage() {
                     <div className="text-sm font-semibold text-gray-900">Instagram</div>
                   </div>
                   <p className="text-sm text-gray-700">
-                    Najnowsze zdjęcia i stories z naszych działań w Barcelonie.
+                    {t('socials.instagramDesc')}
                   </p>
                 </CardContent>
               </Card>
@@ -86,7 +88,7 @@ export default function HomePage() {
                     <div className="text-sm font-semibold text-gray-900">Meetup</div>
                   </div>
                   <p className="text-sm text-gray-700">
-                    Dołącz do naszych wydarzeń i spotkań polskiej społeczności.
+                    {t('socials.meetupDesc')}
                   </p>
                 </CardContent>
               </Card>
@@ -119,21 +121,21 @@ export default function HomePage() {
           }}
         />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-extrabold text-gray-950 mb-4 text-center">Sponsorzy i Partnerzy</h2>
+          <h2 className="text-3xl font-extrabold text-gray-950 mb-4 text-center">{t('sponsorsSection.title')}</h2>
           <p className="text-center text-base md:text-lg text-gray-900 font-semibold mb-2">
-            Oni już z nami grają! Dołącz do grupy naszych Partnerów i Sponsorów!
+            {t('sponsorsSection.subtitle')}
           </p>
           <p className="text-center text-sm md:text-base text-gray-900 mb-8">
-            Poznaj naszych polskich partnerów i sponsorów, którzy grają razem z nami w Barcelonie i okolicach!
+            {t('sponsorsSection.description')}
           </p>
           <SponsorsMarquee />
-          <p className="mt-3 text-center text-xs text-gray-600">Kliknij pasek, aby zobaczyć wszystkich sponsorów</p>
+          <p className="mt-3 text-center text-xs text-gray-600">{t('sponsorsSection.cta')}</p>
         </div>
       </section>
 
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">Zebrane kwoty przez WOŚP Barcelona</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">{t('amountsTitle')}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { final: '33 Finał', amount: '13 881.91 €' },
@@ -165,11 +167,10 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">
-              Dołącz do naszej misji
+              {t('joinSection.title')}
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Każdego roku organizujemy finał Wielkiej Orkiestry Świątecznej Pomocy w Barcelonie,
-              zbierając fundusze na zakup najnowocześniejszego sprzętu medycznego dla polskich szpitali.
+              {t('joinSection.description')}
             </p>
           </div>
         </div>
@@ -177,7 +178,7 @@ export default function HomePage() {
 
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">Nasza misja</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">{t('missionSection.title')}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <Card className="border-gray-200/80">
               <CardContent className="p-6">
@@ -185,9 +186,9 @@ export default function HomePage() {
                   <div className="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-3">
                     <HeartHandshakeIcon className="w-5 h-5 text-red-600" />
                   </div>
-                  <h3 className="text-sm font-semibold text-gray-900">Wspieranie najbardziej potrzebujących</h3>
+                  <h3 className="text-sm font-semibold text-gray-900">{t('missionSection.cards.helpTitle')}</h3>
                 </div>
-                <p className="text-sm text-gray-700">Zbieramy środki i organizujemy działania, by realnie pomagać dzieciom i osobom w potrzebie.</p>
+                <p className="text-sm text-gray-700">{t('missionSection.cards.helpDesc')}</p>
               </CardContent>
             </Card>
 
@@ -197,9 +198,9 @@ export default function HomePage() {
                   <div className="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center mr-3">
                     <StoreIcon className="w-5 h-5 text-amber-600" />
                   </div>
-                  <h3 className="text-sm font-semibold text-gray-900">Wspieranie lokalnych przedsiębiorstw</h3>
+                  <h3 className="text-sm font-semibold text-gray-900">{t('missionSection.cards.businessTitle')}</h3>
                 </div>
-                <p className="text-sm text-gray-700">Łączymy firmy i ludzi, tworzymy kontakty oraz przestrzeń do współpracy.</p>
+                <p className="text-sm text-gray-700">{t('missionSection.cards.businessDesc')}</p>
               </CardContent>
             </Card>
 
@@ -209,9 +210,9 @@ export default function HomePage() {
                   <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-3">
                     <UsersIcon className="w-5 h-5 text-blue-700" />
                   </div>
-                  <h3 className="text-sm font-semibold text-gray-900">Integracja polskiej społeczności</h3>
+                  <h3 className="text-sm font-semibold text-gray-900">{t('missionSection.cards.communityTitle')}</h3>
                 </div>
-                <p className="text-sm text-gray-700">Budujemy relacje, organizujemy wydarzenia i łączymy Polaków w Barcelonie i okolicach.</p>
+                <p className="text-sm text-gray-700">{t('missionSection.cards.communityDesc')}</p>
               </CardContent>
             </Card>
 
@@ -221,9 +222,9 @@ export default function HomePage() {
                   <div className="w-10 h-10 rounded-full bg-pink-100 flex items-center justify-center mr-3">
                     <FlagIcon className="w-5 h-5 text-pink-600" />
                   </div>
-                  <h3 className="text-sm font-semibold text-gray-900">Promowanie polskiej kultury w Hiszpanii</h3>
+                  <h3 className="text-sm font-semibold text-gray-900">{t('missionSection.cards.cultureTitle')}</h3>
                 </div>
-                <p className="text-sm text-gray-700">Pokazujemy polską kulturę i wartości, współtworząc kolorową mozaikę Barcelony.</p>
+                <p className="text-sm text-gray-700">{t('missionSection.cards.cultureDesc')}</p>
               </CardContent>
             </Card>
           </div>
@@ -236,25 +237,20 @@ export default function HomePage() {
             <CardContent className="p-6 md:p-8 space-y-4">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                 <div>
-                  <h2 className="text-2xl font-bold text-gray-900">
-                    34. Finał WOŚP — Zdrowe brzuszki naszych dzieci
-                  </h2>
+                  <h2 className="text-2xl font-bold text-gray-900">{t('finalSection.title')}</h2>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Button asChild className="bg-red-600 hover:bg-red-700 text-white w-full sm:w-auto cursor-pointer">
-                    <Link href="/donate">Więcej o zbiórce</Link>
+                    <Link href="/donate">{t('finalSection.moreButton')}</Link>
                   </Button>
                   <Button asChild variant="outline" className="w-full sm:w-auto cursor-pointer">
                     <Link href="https://www.wosp.org.pl/fundacja/jak-wspierac-wosp/wesprzyj-online" target="_blank" rel="noopener noreferrer">
-                      Wesprzyj Fundację online
+                      {t('finalSection.supportOnline')}
                     </Link>
                   </Button>
                 </div>
               </div>
-              <p className="text-gray-700">
-                Zagramy, by wesprzeć diagnostykę i leczenie chorób przewodu pokarmowego u najmłodszych pacjentów.
-                To realne wsparcie dla około 1,2–1,5 mln dzieci. Razem zadbajmy o zdrowe brzuszki naszych dzieci.
-              </p>
+              <p className="text-gray-700">{t('finalSection.description')}</p>
             </CardContent>
           </Card>
         </div>
@@ -264,7 +260,7 @@ export default function HomePage() {
       {/* Ostatnie wpisy na blogu */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">Najnowsze wpisy</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">{t('blogSection.latestTitle')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[...blogPosts]
               .sort((a, b) => (a.date < b.date ? 1 : -1))
@@ -287,7 +283,7 @@ export default function HomePage() {
                         {post.excerpt ? (
                           <p className="text-sm text-gray-700 line-clamp-3">{post.excerpt}</p>
                         ) : null}
-                        <div className="mt-4 text-sm font-medium text-red-600 group-hover:underline">Czytaj więcej</div>
+                        <div className="mt-4 text-sm font-medium text-red-600 group-hover:underline">{t('blogSection.readMore')}</div>
                       </CardContent>
                     </Card>
                   </Link>
@@ -310,8 +306,8 @@ export default function HomePage() {
         <div className="pointer-events-none absolute inset-y-0 left-0 w-[12%] bg-gradient-to-r from-white to-transparent" />
         <div className="pointer-events-none absolute inset-y-0 right-0 w-[12%] bg-gradient-to-l from-white to-transparent" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <h2 className="text-3xl font-bold text-gray-900 mb-3 text-center">Skontaktuj się z nami</h2>
-          <p className="text-center text-gray-700 mb-8">Masz pytania, chcesz zostać sponsorem lub wolontariuszem? Napisz do nas!</p>
+          <h2 className="text-3xl font-bold text-gray-900 mb-3 text-center">{t('contactSection.title')}</h2>
+          <p className="text-center text-gray-700 mb-8">{t('contactSection.description')}</p>
           <div className="rounded-xl bg-white/80 backdrop-blur p-6">
             <ContactForm />
           </div>
