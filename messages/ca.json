@@ -37,6 +37,7 @@
       "cta": "Fes clic a la barra per veure tots els patrocinadors"
     },
     "amountsTitle": "Fons recaptats per WOŚP Barcelona",
+    "finalLabel": "Final",
     "joinSection": {
       "title": "Uneix-te a la nostra missió",
       "description": "Cada any organitzem el Final de WOŚP a Barcelona, recaptant fons per adquirir l'equip mèdic més modern pels hospitals polonesos."
@@ -68,8 +69,96 @@
   "about": {
     "title": "Sobre nosaltres",
     "description": "Coneix la nostra història i missió",
-    "mission": "La nostra missió és ajudar nens i majors a través de l'organització d'esdeveniments benèfics a Barcelona.",
-    "history": "Des de fa 8 anys treballem per la Gran Orquestra de l'Ajuda Nadalenca, recaptant fons per als objectius més importants."
+    "mission": "La nostra missió és ajudar a nens i gent gran mitjançant l'organització d'esdeveniments benèfics a Barcelona.",
+    "history": "Fa 9 anys que donem suport a la Gran Orquestra del Nadal, recaptant fons per a les causes més importants.",
+    "missionCards": [
+      {
+        "title": "Donant suport als més necessitats",
+        "description": "Recaptem fons i organitzem accions per ajudar els nens i les persones grans més vulnerables. Cada zloty va directament als hospitals polonesos per a la compra d'equips mèdics moderns.",
+        "icon": "heart"
+      },
+      {
+        "title": "Suportant les empreses locals",
+        "description": "Connectem empreses i persones, creant espais de cooperació. Els nostres socis inclouen empreses poloneses a Catalunya i emprenedors locals que volen ajudar i arribar a nous públics.",
+        "icon": "store"
+      },
+      {
+        "title": "Integració de la comunitat polonesa",
+        "description": "Construïm relacions i organitzem esdeveniments que connecten els polonesos a Barcelona i els seus voltants. És un punt de trobada per a nouvinguts, estudiants i qualsevol persona que busqui connexions poloneses.",
+        "icon": "users"
+      },
+      {
+        "title": "Promoció de la cultura polonesa a Espanya",
+        "description": "Mostrem la bellesa de la cultura, l'art i les tradicions poloneses. Durant les nostres finals, rebem artistes de Polònia i els participants poden tastar la cuina i begudes poloneses. Cada any, més i més polonesos, catalans i persones de tot el món vénen a experimentar la 'Cultura Polaca' al nostre esdeveniment final.",
+        "icon": "flag"
+      }
+    ],
+    "wospHistory": {
+      "title": "Història de WOŚP",
+      "content": "La Gran Orquestra de l'Ajuda de Nadal (WOŚP) és l'organització benèfica més gran de Polònia, fundada l'any 1993 per Jerzy Owsiak. Durant més de 30 anys d'activitat, ha recaptat més de 2.000 milions de zlotys per a finalitats mèdiques.",
+      "events": "Cada gener se celebren les Finals de WOŚP a tota Polònia i arreu del món, els esdeveniments benèfics més grans que uneixen milions de persones amb un sol objectiu: salvar la vida i la salut dels nens i les persones grans.",
+      "medicalGoals": {
+        "title": "Objectius mèdics",
+        "content": "WOŚP finança la compra d'equips mèdics d'última generació per a hospitals polonesos. Cada any té el seu objectiu mèdic específic, des de cirurgia cardíaca pediàtrica, passant per oncologia, fins a geriatria.",
+        "impact": "Gràcies a WOŚP, els hospitals polonesos han rebut milers de dispositius: des de respiradors, tomògrafs, fins a quiròfans moderns. És una ajuda concreta que salva vides cada dia."
+      },
+      "jurek": {
+        "title": "Jerzy Owsiak i la Fundació",
+        "content": "Jerzy Owsiak, fundador i president de la Fundació WOŚP, és una de les figures més reconegudes de la vida social polonesa. Periodista, activista social i visionari que durant dècades ha construït un moviment social basat en la bondat i l'ajuda.",
+        "transparency": "La Fundació WOŚP opera amb transparència: cada zloty es rendeix comptes públicament. És una organització que ha canviat la cara de la medicina pediàtrica i geriàtrica polonesa, equipant hospitals amb equips per valor de milers de milions de zlotys."
+      }
+    },
+    "page": {
+      "wospSection": {
+        "title": "Gran Orquestra de l'Ajuda Nadalenca",
+        "historyTitle": "Història de la WOŚP",
+        "goalsTitle": "Objectius mèdics",
+        "foundationTitle": "Jerzy Owsiak i la Fundació",
+        "visitLink": "Visita el lloc oficial de la WOŚP"
+      },
+      "barcelonaSection": {
+        "title": "WOŚP Barcelona",
+        "subtitle": "Des de fa més de 9 anys creem a Barcelona un espai únic on l'energia polonesa i el temperament català s'uneixen per ajudar."
+      },
+      "workSection": {
+        "title": "Com treballem",
+        "seasonTitle": "Temporada WOŚP",
+        "volunteersTitle": "Els nostres voluntaris",
+        "partnersTitle": "Els nostres socis",
+        "paragraphs": {
+          "season1": "La temporada de WOŚP va des de principis de desembre fins a finals de gener – són els dos mesos més intensos de l'any. Durant aquest temps formem el nostre equip i ens trobem sempre amb el mateix grup de persones.",
+          "season2": "Després de la Final, generalment al febrer, el nostre equip es dissol i cada any se'n forma un de nou. Per això potser no sabeu gaire de nosaltres entre febrer i novembre – és quan tornem amb les nostres famílies i rutines diàries.",
+          "season3": "Sovint organitzem trobades internes de voluntaris per parlar del que ha funcionat bé aquell any i què podem millorar.",
+          "volunteers1": "Tenim voluntaris que porten anys amb nosaltres, però també acollim persones que acaben d'arribar i busquen connectar amb la comunitat polonesa.",
+          "volunteers2": "Convidem estudiants que sovint ens ajuden com a part de les seves pràctiques, cosa que és molt útil durant l'organització de la Final. Acceptem tota mena d'ajuda – fins i tot si és puntual!",
+          "volunteers3": "Animen a tothom que vulgui ajudar, fer nous amics o simplement ser part del voluntariat a unir-se a nosaltres.",
+          "partners1": "Col·laborem amb moltes empreses poloneses i catalanes. El nostre principal soci, World Class Barcelona, va començar amb WOŚP a Barcelona i ara se centra en la seva escola d'espanyol, però sempre ens dóna suport!",
+          "partners2": "Un altre soci clau és Kosmo Hispano, una escola de polonès per a nens que ens ajuda organitzativament i sempre prepara activitats infantils com ara festes de Nadal o de Sant Andreu.",
+          "partners3": "Sovint ens trobem al restaurant Krakoviak, un altre dels nostres principals patrocinadors que ens dóna suport des de la cuina!",
+          "partners4": "Tots els fons que recaptem provenen de patrocinadors, principalment locals. No tenim fons propis – tot el que tenim ve de patrocinadors. Els estem molt agraïts perquè sense ells les Finals no serien possibles!"
+        }
+      },
+      "socialsSection": {
+        "followTitle": "Uneix-te a nosaltres",
+        "description": "Som a Facebook, Instagram i Meetup. Segueix-nos per estar al dia!",
+        "facebookDesc": "Mira què hi ha de nou. Actualitzacions, fotos i reportatges d'esdeveniments.",
+        "instagramDesc": "Últimes fotos i stories de les nostres activitats a Barcelona.",
+        "meetupDesc": "Uneix-te als nostres esdeveniments i trobades de la comunitat polonesa."
+      },
+      "final33Section": {
+        "title": "33è Final de la WOŚP a Barcelona",
+        "intro": "Al gener de 2025 vam organitzar el 33è Final de la WOŚP a Barcelona. Va ser el nostre millor Final fins ara!",
+        "resultsTitle": "Resultats de la recaptació",
+        "collectedDesc": "recaptats durant el 33è Final",
+        "medicalTitle": "Objectiu mèdic",
+        "medicalDesc": "El 33è Final es va dedicar a la medicina pal·liativa i d'hospici. Els fons recaptats es van destinar a la compra d'equips mèdics que ajuden a garantir una vida i mort dignes als pacients en els moments més difícils.",
+        "galleryTitle": "Galeria de fotos del 33è Final",
+        "loadMore": "Carrega més fotos",
+        "remaining": "restants",
+        "photoCredit": "Fotos de",
+        "photoCreditThanks": "Gràcies per capturar els meravellosos moments del nostre 33è Final!"
+      }
+    }
   },
   "events": {
     "title": "Calendari d'esdeveniments",
@@ -140,7 +229,7 @@
     "linkLabels": {
       "website": "Lloc web",
       "maps": "Maps",
-            "shop": "Botiga",
+      "shop": "Botiga",
       "contact": "Contacte",
       "booking": "Reserves",
       "trial": "Classe de prova",

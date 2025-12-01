@@ -60,6 +60,7 @@
       "cta": "Kliknij pasek, aby zobaczyć wszystkich sponsorów"
     },
     "amountsTitle": "Zebrane kwoty przez WOŚP Barcelona",
+    "finalLabel": "Finał",
     "contactSection": {
       "title": "Skontaktuj się z nami",
       "description": "Masz pytania, chcesz zostać sponsorem lub wolontariuszem? Napisz do nas!"
@@ -69,7 +70,95 @@
     "title": "O nas",
     "description": "Poznaj naszą historię i misję",
     "mission": "Naszą misją jest pomoc dzieciom i seniorom poprzez organizację wydarzeń charytatywnych w Barcelonie.",
-    "history": "Od 9 lat działamy na rzecz Wielkiej Orkiestry Świątecznej Pomocy, zbierając fundusze na najważniejsze cele."
+    "history": "Od 9 lat działamy na rzecz Wielkiej Orkiestry Świątecznej Pomocy, zbierając fundusze na najważniejsze cele.",
+    "missionCards": [
+      {
+        "title": "Wspieranie najbardziej potrzebujących",
+        "description": "Zbieramy fundusze i organizujemy akcje, aby pomóc najbardziej potrzebującym dzieciom i osobom starszym. Każda złotówka trafia bezpośrednio do polskich szpitali na zakup nowoczesnego sprzętu medycznego.",
+        "icon": "heart"
+      },
+      {
+        "title": "Wspieranie lokalnych przedsiębiorstw",
+        "description": "Łączymy firmy i ludzi, tworząc przestrzeń do współpracy. Nasi partnerzy to polskie firmy w Katalonii oraz lokalni przedsiębiorcy, którzy chcą pomagać i dotrzeć do nowych odbiorców.",
+        "icon": "store"
+      },
+      {
+        "title": "Integracja polskiej społeczności",
+        "description": "Budujemy relacje i organizujemy wydarzenia, które łączą Polaków w Barcelonie i okolicach. To miejsce spotkań dla nowo przybyłych, studentów i wszystkich, którzy szukają polskiego kontaktu.",
+        "icon": "users"
+      },
+      {
+        "title": "Promowanie polskiej kultury w Hiszpanii",
+        "description": "Pokazujemy piękno polskiej kultury, sztuki i tradycji. Podczas naszych finałów goszczą u nas artyści z Polski, a uczestnicy mogą poznać smak polskiej kuchni i napojów. Co roku na nasz finał przybywa coraz więcej Polaków, Katalończyków i osób z całego świata, by doświadczyć 'Cultura Polaca'.",
+        "icon": "flag"
+      }
+    ],
+    "wospHistory": {
+      "title": "Historia WOŚP",
+      "content": "Wielka Orkiestra Świątecznej Pomocy to największa organizacja charytatywna w Polsce, założona w 1993 roku przez Jerzego Owsiaka. Przez ponad 30 lat działalności zebrała już ponad 2 miliardy złotych na cele medyczne.",
+      "events": "Każdego stycznia w całej Polsce i na świecie odbywają się Finały WOŚP – największe wydarzenia charytatywne, które łączą miliony ludzi w jednym celu: ratowania życia i zdrowia dzieci oraz seniorów.",
+      "medicalGoals": {
+        "title": "Cele medyczne",
+        "content": "WOŚP finansuje zakup najnowocześniejszego sprzętu medycznego dla polskich szpitali. Każdy rok ma swój konkretny cel medyczny – od kardiochirurgii dziecięcej, przez onkologię, po geriatrię.",
+        "impact": "Dzięki WOŚP polskie szpitale otrzymały tysiące urządzeń: od respiratorów, przez tomografy, po nowoczesne sale operacyjne. To konkretna pomoc, która ratuje życie każdego dnia."
+      },
+      "jurek": {
+        "title": "Jerzy Owsiak i Fundacja",
+        "content": "Jerzy Owsiak, założyciel i prezes Fundacji WOŚP, to jedna z najbardziej rozpoznawalnych postaci polskiego życia społecznego. Dziennikarz, społecznik i wizjoner, który przez dekady budował ruch społeczny oparty na życzliwości i pomocy.",
+        "transparency": "Fundacja WOŚP działa transparentnie – każda złotówka jest rozliczana publicznie. To organizacja, która zmieniła oblicze polskiej medycyny dziecięcej i geriatrycznej, wyposażając szpitale w sprzęt wartości miliardów złotych."
+      }
+    },
+    "page": {
+      "wośpSection": {
+        "title": "Wielka Orkiestra Świątecznej Pomocy",
+        "historyTitle": "Historia WOŚP",
+        "goalsTitle": "Cele medyczne",
+        "foundationTitle": "Jerzy Owsiak i Fundacja",
+        "visitLink": "Odwiedź oficjalną stronę WOŚP"
+      },
+      "barcelonaSection": {
+        "title": "WOŚP Barcelona",
+        "subtitle": "Od ponad 9 lat budujemy w Barcelonie wyjątkowe miejsce, w którym polska energia i hiszpański temperament łączą się w jednym celu – by pomagać."
+      },
+      "workSection": {
+        "title": "Jak pracujemy",
+        "seasonTitle": "Sezon WOŚPowy",
+        "volunteersTitle": "Nasi wolontariusze",
+        "partnersTitle": "Nasi partnerzy",
+        "paragraphs": {
+          "season1": "Sezon WOŚPowy zaczyna się od początku grudnia aż do końca stycznia – to są dwa najintensywniejsze miesiące w roku. Podczas tego czasu zakładamy sztab, spotykamy się zawsze tą samą lub bardzo podobną grupą.",
+          "season2": "Po Finale, zazwyczaj w lutym, nasz sztab zostaje rozwiązywany i co roku powstaje nowy. Dlatego pewnie nie słychać tak od nas pomiędzy lutym a listopadem – wtedy wracamy do naszych rodzin i codziennych zwyczajów.",
+          "season3": "Często organizujemy wtedy nasze wewnętrzne spotkania wolontariuszy, gdzie rozmawiamy co nam wyszło w tym roku i co możemy poprawić.",
+          "volunteers1": "Są z nami wolontariusze, którzy grają z nami od lat, ale też co roku zbieramy różnych osób, które dopiero co się przeprowadziły i szukają kontaktu z Polakami.",
+          "volunteers2": "Zapraszamy studentów, którzy często pomagają nam w formie praktyk, co jest bardzo pomocne podczas organizacji Finału. Przyjmujemy każdą pomoc – nawet jednorazową!",
+          "volunteers3": "Zachęcamy wszystkich, którzy chcą pomagać, szukają nowych znajomości lub po prostu chcą być częścią wolontariatu.",
+          "partners1": "Współpracujemy z wieloma polskimi, ale też lokalnymi firmami z Katalonii. Nasz główny partner World Class Barcelona zapoczątkował z WOŚP w Barcelonie, teraz skupiają się na rozwijaniu szkoły języka hiszpańskiego, ale zawsze służą nam pomocą!",
+          "partners2": "Kolejny główny partner to Kosmo Hispano – szkoła języka polskiego dla dzieci, która bardzo nam pomaga organizacyjnie i zawsze organizuje różne zabawy dla dzieci, jak zabawy mikołajkowe czy andrzejkowe.",
+          "partners3": "Najczęściej spotykamy się w restauracji Krakoviak, który jest kolejnym naszym głównym sponsorem i wspiera nas od kuchni!",
+          "partners4": "Wszystkie fundusze, jakie pozyskujemy, są od sponsorów – najczęściej tych najbardziej lokalnych. Nie mamy własnych pieniędzy – wszystkie rzeczy, które mamy, czy wszystkie fundusze są od sponsorów. Bardzo im za to dziękujemy, bo bez nich finały by się nie odbyły!"
+        }
+      },
+      "socialsSection": {
+        "followTitle": "Dołącz do nas",
+        "description": "Jesteśmy na Facebooku, Instagramie i Meetupie. Śledź nasze social media, aby być na bieżąco!",
+        "facebookDesc": "Zobacz, co u nas słychać. Aktualności, zdjęcia i relacje z wydarzeń.",
+        "instagramDesc": "Najnowsze zdjęcia i stories z naszych działań w Barcelonie.",
+        "meetupDesc": "Dołącz do naszych wydarzeń i spotkań polskiej społeczności."
+      },
+      "final33Section": {
+        "title": "33. Finał WOŚP w Barcelonie",
+        "intro": "W styczniu 2025 roku zorganizowaliśmy już 33. Finał Wielkiej Orkiestry Świątecznej Pomocy w Barcelonie. Był to nasz najlepszy Finał do tej pory!",
+        "resultsTitle": "Wyniki zbiórki",
+        "collectedDesc": "zebraliśmy podczas 33. Finału",
+        "medicalTitle": "Cel medyczny",
+        "medicalDesc": "33. Finał grał dla medycyny paliatywnej i hospicyjnej. Zebrane środki poszły na zakup sprzętu medycznego, który pomaga zapewnić godne życie i śmierć pacjentom w najtrudniejszych chwilach.",
+        "galleryTitle": "Galeria zdjęć z 33. Finału",
+        "loadMore": "Załaduj więcej zdjęć",
+        "remaining": "pozostało",
+        "photoCredit": "Zdjęcia wykonała",
+        "photoCreditThanks": "Dziękujemy za uwiecznienie wspaniałych chwil z naszego 33. Finału!"
+      }
+    }
   },
   "events": {
     "title": "Kalendarz wydarzeń",
@@ -136,7 +225,7 @@
     "linkLabels": {
       "website": "Strona",
       "maps": "Mapy",
-            "shop": "Sklep",
+      "shop": "Sklep",
       "contact": "Kontakt",
       "booking": "Rezerwacje",
       "trial": "Lekcja próbna",

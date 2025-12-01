@@ -138,19 +138,19 @@ export default function HomePage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">{t('amountsTitle')}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { final: '33 Finał', amount: '13 881.91 €' },
-              { final: '32 Finał', amount: '10 460.47 €' },
-              { final: '31 Finał', amount: '8 989.94 €' },
-              { final: '30 Finał', amount: '2 496.62 €' },
+              { finalNum: 33, amount: '13 881.91 €' },
+              { finalNum: 32, amount: '10 460.47 €' },
+              { finalNum: 31, amount: '8 989.94 €' },
+              { finalNum: 30, amount: '2 496.62 €' },
             ].map((item) => (
               <div
-                key={item.final}
+                key={item.finalNum}
                 className="group rounded-2xl p-[1px] bg-gradient-to-br from-red-500 via-pink-500 to-orange-400 shadow-[0_1px_0_rgba(0,0,0,0.03)]"
               >
                 <Card className="rounded-2xl bg-white/95 backdrop-blur border border-gray-200/60 shadow-sm transition-all duration-200 group-hover:shadow-md group-hover:-translate-y-0.5 cursor-default">
                   <CardContent className="p-6 md:p-7 text-center">
                     <div className="text-xs font-semibold text-gray-700/90 mb-3 cursor-default">
-                      {item.final}
+                      {item.finalNum} {t('finalLabel')}
                     </div>
                     <div className="text-3xl md:text-4xl font-extrabold tracking-tight text-gray-900 tabular-nums cursor-default">
                       {item.amount}
@@ -241,7 +241,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Button asChild className="bg-red-600 hover:bg-red-700 text-white w-full sm:w-auto cursor-pointer">
-                    <Link href="/donate">{t('finalSection.moreButton')}</Link>
+                    <Link href="https://www.wosp.org.pl/aktualnosci/choroby-przewodu-pokarmowego-celem-finalu" target="_blank" rel="noopener noreferrer">{t('finalSection.moreButton')}</Link>
                   </Button>
                   <Button asChild variant="outline" className="w-full sm:w-auto cursor-pointer">
                     <Link href="https://www.wosp.org.pl/fundacja/jak-wspierac-wosp/wesprzyj-online" target="_blank" rel="noopener noreferrer">

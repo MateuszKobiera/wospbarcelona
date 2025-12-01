@@ -68,7 +68,7 @@ export default function WplacOnlinePage() {
                     </Button>
                     <Button asChild variant="outline" className="w-full sm:w-auto cursor-pointer">
                       <Link
-                        href="https://www.wosp.org.pl/final"
+                        href="https://www.wosp.org.pl/aktualnosci/choroby-przewodu-pokarmowego-celem-finalu"
                         target="_blank"
                         rel="noopener noreferrer"
                       >

@@ -51,7 +51,7 @@
         "communityDesc": "We build relationships, organise events and connect Poles in Barcelona and surroundings.",
         "cultureTitle": "Promoting Polish culture in Spain",
         "cultureDesc": "We showcase Polish culture and values, co-creating Barcelona's colourful mosaic."
-    }
+      }
     },
     "finalSection": {
       "title": "34th WOŚP Finale — Healthy tummies for our kids",
@@ -60,6 +60,7 @@
       "description": "We play to support diagnostics and treatment of gastrointestinal diseases in the youngest patients. Let's take care of healthy tummies together!"
     },
     "amountsTitle": "Funds collected by WOŚP Barcelona",
+    "finalLabel": "Finale",
     "contactSection": {
       "title": "Contact us",
       "description": "Do you have questions, want to become a sponsor or volunteer? Write to us!"
@@ -69,7 +70,95 @@
     "title": "About us",
     "description": "Meet our history and mission",
     "mission": "Our mission is to help children and seniors through the organization of charity events in Barcelona.",
-    "history": "For 8 years we have been working for the Great Orchestra of Christmas Charity, raising funds for the most important goals."
+    "history": "We have been supporting the Great Orchestra of Christmas Charity for 9 years, raising funds for the most important goals.",
+    "missionCards": [
+      {
+        "title": "Supporting those most in need",
+        "description": "We raise funds and organize actions to help the most vulnerable children and elderly. Every zloty goes directly to Polish hospitals for the purchase of modern medical equipment.",
+        "icon": "heart"
+      },
+      {
+        "title": "Supporting local businesses",
+        "description": "We connect companies and people, creating space for cooperation. Our partners include Polish companies in Catalonia and local entrepreneurs who want to help and reach new audiences.",
+        "icon": "store"
+      },
+      {
+        "title": "Integration of the Polish community",
+        "description": "We build relationships and organize events that connect Poles in and around Barcelona. It's a meeting place for newcomers, students, and anyone looking for Polish connections.",
+        "icon": "users"
+      },
+      {
+        "title": "Promoting Polish culture in Spain",
+        "description": "We showcase the beauty of Polish culture, art, and traditions. During our finals, we host artists from Poland, and participants can taste Polish cuisine and drinks. Every year, more and more Poles, Catalans, and people from around the world come to experience 'Cultura Polaca' at our final event.",
+        "icon": "flag"
+      }
+    ],
+    "wospHistory": {
+      "title": "History of WOŚP",
+      "content": "The Great Orchestra of Christmas Charity (WOŚP) is the largest charity organization in Poland, founded in 1993 by Jerzy Owsiak. Over 30 years of activity, it has raised over 2 billion zloty for medical purposes.",
+      "events": "Every January, WOŚP Finals take place across Poland and around the world – the largest charity events that unite millions of people for one goal: saving the lives and health of children and the elderly.",
+      "medicalGoals": {
+        "title": "Medical Goals",
+        "content": "WOŚP finances the purchase of the most modern medical equipment for Polish hospitals. Each year has its specific medical goal – from pediatric cardiac surgery, through oncology, to geriatrics.",
+        "impact": "Thanks to WOŚP, Polish hospitals have received thousands of devices: from ventilators, through CT scanners, to modern operating rooms. This is tangible help that saves lives every day."
+      },
+      "jurek": {
+        "title": "Jerzy Owsiak and the Foundation",
+        "content": "Jerzy Owsiak, founder and president of the WOŚP Foundation, is one of the most recognizable figures in Polish social life. A journalist, social activist, and visionary who for decades has been building a social movement based on kindness and help.",
+        "transparency": "The WOŚP Foundation operates transparently – every zloty is accounted for publicly. It's an organization that has changed the face of Polish pediatric and geriatric medicine, equipping hospitals with billions of zloty worth of equipment."
+      }
+    },
+    "page": {
+      "wospSection": {
+        "title": "Great Orchestra of Christmas Charity",
+        "historyTitle": "WOŚP history",
+        "goalsTitle": "Medical goals",
+        "foundationTitle": "Jerzy Owsiak & Foundation",
+        "visitLink": "Visit official WOŚP site"
+      },
+      "barcelonaSection": {
+        "title": "WOŚP Barcelona",
+        "subtitle": "For over 9 years we have been building in Barcelona a unique place where Polish energy and Spanish temperament unite to help."
+      },
+      "workSection": {
+        "title": "How we work",
+        "seasonTitle": "WOŚP season",
+        "volunteersTitle": "Our volunteers",
+        "partnersTitle": "Our partners",
+        "paragraphs": {
+          "season1": "The WOŚP season runs from early December to the end of January – these are the two most intense months of the year. During this time, we set up our team and meet regularly with the same core group of people.",
+          "season2": "After the Finale, usually in February, our team disbands and a new one is formed each year. That's why you might not hear much from us between February and November – that's when we return to our families and daily routines.",
+          "season3": "We often organize internal volunteer meetings during this time to discuss what worked well that year and what we can improve.",
+          "volunteers1": "We have volunteers who have been with us for years, but we also welcome new people who have just moved to the area and are looking to connect with the Polish community.",
+          "volunteers2": "We invite students who often help us as part of their internships, which is very helpful during the Finale organization. We welcome all help – even one-time assistance!",
+          "volunteers3": "We encourage everyone who wants to help, make new friends, or simply be part of the volunteer community to join us.",
+          "partners1": "We collaborate with many Polish and local Catalan companies. Our main partner, World Class Barcelona, started with WOŚP in Barcelona and now focuses on developing their Spanish language school, but they always support us!",
+          "partners2": "Another key partner is Kosmo Hispano – a Polish language school for children that helps us organizationally and always organizes various events for children, like Christmas and St. Andrew's Day parties.",
+          "partners3": "We often meet at the Krakoviak restaurant, which is another one of our main sponsors and supports us from the kitchen!",
+          "partners4": "All the funds we raise come from sponsors – mostly local ones. We don't have our own funds – everything we have comes from sponsors. We're very grateful to them because without them, the Finales wouldn't happen!"
+        }
+      },
+      "socialsSection": {
+        "followTitle": "Join us",
+        "description": "We are on Facebook, Instagram and Meetup. Follow our social media to stay up to date!",
+        "facebookDesc": "See what's new. Updates, photos and event reports.",
+        "instagramDesc": "Latest photos and stories from our activities in Barcelona.",
+        "meetupDesc": "Join our events and meetings of the Polish community."
+      },
+      "final33Section": {
+        "title": "33rd WOŚP Finale in Barcelona",
+        "intro": "In January 2025 we organised the 33rd WOŚP Finale in Barcelona. It was our best Finale so far!",
+        "resultsTitle": "Collection results",
+        "collectedDesc": "collected during the 33rd Finale",
+        "medicalTitle": "Medical goal",
+        "medicalDesc": "The 33rd Finale was dedicated to palliative and hospice medicine. The funds raised were used to purchase medical equipment that helps ensure a dignified life and death for patients in their most difficult moments.",
+        "galleryTitle": "Photo gallery from the 33rd Finale",
+        "loadMore": "Load more photos",
+        "remaining": "remaining",
+        "photoCredit": "Photos by",
+        "photoCreditThanks": "Thank you for capturing the wonderful moments from our 33rd Finale!"
+      }
+    }
   },
   "events": {
     "title": "Events calendar",
@@ -136,7 +225,7 @@
     "linkLabels": {
       "website": "Website",
       "maps": "Maps",
-            "shop": "Shop",
+      "shop": "Shop",
       "contact": "Contact",
       "booking": "Booking",
       "trial": "Free trial",

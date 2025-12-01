@@ -1,17 +1,20 @@
 'use client';
 
 import { Card, CardContent } from '@/components/ui/card';
+import { useTranslations } from 'next-intl';
 import { Calendar, Award, Stethoscope, ExternalLink, Users, Heart, HeartHandshakeIcon, StoreIcon, UsersIcon, FlagIcon, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { siFacebook, siInstagram, siMeetup } from 'simple-icons/icons';
 import { useState } from 'react';
 
 export default function AboutPage() {
+  const t = useTranslations('about');
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [visiblePhotos, setVisiblePhotos] = useState(8); // Start with 8 photos (2 rows)
-  
+
   const allPhotos = [
     'DSCF7186.jpg', 'DSCF7189.jpg', 'DSCF7194.jpg', 'DSCF7203.jpg',
     'DSCF7205.jpg', 'DSCF7221.jpg', 'DSCF7223.jpg', 'DSCF7238.jpg',
@@ -45,7 +48,7 @@ export default function AboutPage() {
 
   const nextImage = () => {
     const nextIndex = currentImageIndex + 1;
-    
+
     // Jeśli to ostatnie widoczne zdjęcie
     if (nextIndex >= photos.length) {
       // Sprawdź czy są jeszcze niewidoczne zdjęcia
@@ -72,13 +75,14 @@ export default function AboutPage() {
   };
 
   return (
-    <main className="py-16 bg-gradient-to-br from-white via-red-50 to-pink-100">
+    <div className="min-h-screen">
+      <main className="py-16 bg-gradient-to-br from-white via-red-50 to-pink-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* WOŚP History Section */}
           <div className="rounded-lg p-8 bg-white border border-red-100 shadow-sm mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Wielka Orkiestra Świątecznej Pomocy</h2>
-            
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">{t('page.wospSection.title')}</h2>
+
             {/* YouTube Video */}
             <div className="mb-8">
               <div className="aspect-video w-full max-w-4xl mx-auto">
@@ -97,26 +101,26 @@ export default function AboutPage() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
                     <Calendar className="w-6 h-6 text-red-600 mr-2" />
-                    Historia WOŚP
+                    {t('page.wospSection.historyTitle')}
                   </h3>
                   <p className="mb-4">
-                    Wielka Orkiestra Świątecznej Pomocy to największa organizacja charytatywna w Polsce, założona w 1993 roku przez Jerzego Owsiaka. Przez ponad 30 lat działalności zebrała już ponad 2 miliardy złotych na cele medyczne.
+                    {t('wospHistory.content')}
                   </p>
                   <p className="mb-4">
-                    Każdego stycznia w całej Polsce i na świecie odbywają się Finały WOŚP – największe wydarzenia charytatywne, które łączą miliony ludzi w jednym celu: ratowania życia i zdrowia dzieci oraz seniorów.
+                    {t('wospHistory.events')}
                   </p>
                 </div>
-                
+
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
                     <Stethoscope className="w-6 h-6 text-red-600 mr-2" />
-                    Cele medyczne
+                    {t('page.wospSection.goalsTitle')}
                   </h3>
                   <p className="mb-4">
-                    WOŚP finansuje zakup najnowocześniejszego sprzętu medycznego dla polskich szpitali. Każdy rok ma swój konkretny cel medyczny – od kardiochirurgii dziecięcej, przez onkologię, po geriatrię.
+                    {t('wospHistory.medicalGoals.content')}
                   </p>
                   <p className="mb-4">
-                    Dzięki WOŚP polskie szpitale otrzymały tysiące urządzeń: od respiratorów, przez tomografy, po nowoczesne sale operacyjne. To konkretna pomoc, która ratuje życie każdego dnia.
+                    {t('wospHistory.medicalGoals.impact')}
                   </p>
                 </div>
               </div>
@@ -124,13 +128,13 @@ export default function AboutPage() {
               <div className="bg-red-50 p-6 rounded-lg mb-8">
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
                   <Award className="w-6 h-6 text-red-600 mr-2" />
-                  Jerzy Owsiak i Fundacja
+                  {t('page.wospSection.foundationTitle')}
                 </h3>
                 <p className="mb-4">
-                  Jerzy Owsiak, założyciel i prezes Fundacji WOŚP, to jedna z najbardziej rozpoznawalnych postaci polskiego życia społecznego. Dziennikarz, społecznik i wizjoner, który przez dekady budował ruch społeczny oparty na życzliwości i pomocy.
+                  {t('wospHistory.jurek.content')}
                 </p>
                 <p>
-                  Fundacja WOŚP działa transparentnie – każda złotówka jest rozliczana publicznie. To organizacja, która zmieniła oblicze polskiej medycyny dziecięcej i geriatrycznej, wyposażając szpitale w sprzęt wartości miliardów złotych.
+                  {t('wospHistory.jurek.transparency')}
                 </p>
               </div>
 
@@ -142,7 +146,7 @@ export default function AboutPage() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center space-x-2 bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors shadow-md hover:shadow-lg"
                 >
-                  <span>Odwiedź oficjalną stronę WOŚP</span>
+                  <span>{t('page.wospSection.visitLink')}</span>
                   <ExternalLink className="w-4 h-4" />
                 </a>
               </div>
@@ -152,129 +156,88 @@ export default function AboutPage() {
           {/* WOŚP Barcelona Section */}
           <div className="mb-16">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">WOŚP Barcelona</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('page.barcelonaSection.title')}</h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Od ponad 8 lat budujemy w Barcelonie wyjątkowe miejsce, w którym polska energia i hiszpański temperament łączą się w jednym celu – by pomagać.
+                {t('page.barcelonaSection.subtitle')}
               </p>
             </div>
 
             {/* Mission Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-              <div className="group rounded-2xl p-[1px] bg-gradient-to-br from-red-500 via-pink-500 to-orange-400 shadow-[0_1px_0_rgba(0,0,0,0.03)]">
-                <Card className="rounded-2xl bg-white border border-gray-200/60 shadow-sm transition-all duration-200 group-hover:shadow-md group-hover:-translate-y-0.5 cursor-default">
-                  <CardContent className="p-6 md:p-7">
-                    <div className="flex items-center mb-3">
-                      <div className="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-3">
-                        <HeartHandshakeIcon className="w-5 h-5 text-red-600" />
-                      </div>
-                      <h3 className="text-sm font-semibold text-gray-900">Wspieranie najbardziej potrzebujących</h3>
-                    </div>
-                    <p className="text-sm text-gray-700">Zbieramy środki i organizujemy działania, by realnie pomagać dzieciom i osobom w potrzebie. Każda złotówka trafia bezpośrednio do polskich szpitali na zakup najnowocześniejszego sprzętu medycznego.</p>
-                  </CardContent>
-                </Card>
-              </div>
+              {t.raw('missionCards').map((card: { title: string; description: string; icon: string }, index: number) => {
+                type IconMapType = {
+                  [key: string]: React.ReactNode;
+                };
 
-              <div className="group rounded-2xl p-[1px] bg-gradient-to-br from-red-500 via-pink-500 to-orange-400 shadow-[0_1px_0_rgba(0,0,0,0.03)]">
-                <Card className="rounded-2xl bg-white border border-gray-200/60 shadow-sm transition-all duration-200 group-hover:shadow-md group-hover:-translate-y-0.5 cursor-default">
-                  <CardContent className="p-6 md:p-7">
-                    <div className="flex items-center mb-3">
-                      <div className="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center mr-3">
-                        <StoreIcon className="w-5 h-5 text-amber-600" />
-                      </div>
-                      <h3 className="text-sm font-semibold text-gray-900">Wspieranie lokalnych przedsiębiorstw</h3>
-                    </div>
-                    <p className="text-sm text-gray-700">Łączymy firmy i ludzi, tworzymy kontakty oraz przestrzeń do współpracy. Nasi partnerzy to zarówno polskie firmy w Katalonii, jak i lokalne przedsiębiorstwa, które chcą pomagać i dotrzeć do nowej społeczności.</p>
-                  </CardContent>
-                </Card>
-              </div>
+                const iconMap: IconMapType = {
+                  'heart': <HeartHandshakeIcon className="w-5 h-5 text-red-600" />,
+                  'store': <StoreIcon className="w-5 h-5 text-amber-600" />,
+                  'users': <UsersIcon className="w-5 h-5 text-blue-700" />,
+                  'flag': <FlagIcon className="w-5 h-5 text-green-600" />
+                };
 
-              <div className="group rounded-2xl p-[1px] bg-gradient-to-br from-red-500 via-pink-500 to-orange-400 shadow-[0_1px_0_rgba(0,0,0,0.03)]">
-                <Card className="rounded-2xl bg-white border border-gray-200/60 shadow-sm transition-all duration-200 group-hover:shadow-md group-hover:-translate-y-0.5 cursor-default">
-                  <CardContent className="p-6 md:p-7">
-                    <div className="flex items-center mb-3">
-                      <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-3">
-                        <UsersIcon className="w-5 h-5 text-blue-700" />
-                      </div>
-                      <h3 className="text-sm font-semibold text-gray-900">Integracja polskiej społeczności</h3>
-                    </div>
-                    <p className="text-sm text-gray-700">Budujemy relacje, organizujemy wydarzenia i łączymy Polaków w Barcelonie i okolicach. Jesteśmy miejscem spotkania dla nowych mieszkańców, studentów i wszystkich szukających polskiego kontaktu.</p>
-                  </CardContent>
-                </Card>
-              </div>
+                const bgColorMap: { [key: string]: string } = {
+                  'heart': 'bg-red-100',
+                  'store': 'bg-amber-100',
+                  'users': 'bg-blue-100',
+                  'flag': 'bg-green-100'
+                };
 
-              <div className="group rounded-2xl p-[1px] bg-gradient-to-br from-red-500 via-pink-500 to-orange-400 shadow-[0_1px_0_rgba(0,0,0,0.03)]">
-                <Card className="rounded-2xl bg-white border border-gray-200/60 shadow-sm transition-all duration-200 group-hover:shadow-md group-hover:-translate-y-0.5 cursor-default">
-                  <CardContent className="p-6 md:p-7">
-                    <div className="flex items-center mb-3">
-                      <div className="w-10 h-10 rounded-full bg-pink-100 flex items-center justify-center mr-3">
-                        <FlagIcon className="w-5 h-5 text-pink-600" />
-                      </div>
-                      <h3 className="text-sm font-semibold text-gray-900">Promowanie polskiej kultury w Hiszpanii</h3>
-                    </div>
-                    <p className="text-sm text-gray-700">Pokazujemy polską kulturę, artystów, wartości, polskie jedzenie i napoje. Każdego roku na naszych finałach pojawia się coraz więcej Polaków, ale też Katalończyków i ludzi z całego świata, żeby poznać &ldquo;Cultura Polaca&rdquo;.</p>
-                  </CardContent>
-                </Card>
-              </div>
+                return (
+                  <div key={index} className="group rounded-2xl p-[1px] bg-gradient-to-br from-red-500 via-pink-500 to-orange-400 shadow-[0_1px_0_rgba(0,0,0,0.03)]">
+                    <Card className="rounded-2xl bg-white border border-gray-200/60 shadow-sm transition-all duration-200 group-hover:shadow-md group-hover:-translate-y-0.5 cursor-default h-full">
+                      <CardContent className="p-6 md:p-7 h-full flex flex-col">
+                        <div className="flex items-center mb-3">
+                          <div className={`w-10 h-10 rounded-full ${bgColorMap[card.icon] || 'bg-gray-100'} flex items-center justify-center mr-3`}>
+                            {iconMap[card.icon] || <Heart className="w-5 h-5 text-gray-600" />}
+                          </div>
+                          <h3 className="text-sm font-semibold text-gray-900">{card.title}</h3>
+                        </div>
+                        <p className="text-sm text-gray-700 flex-grow">{card.description}</p>
+                      </CardContent>
+                    </Card>
+                  </div>
+                );
+              })}
             </div>
           </div>
 
           {/* How We Work Section */}
           <div className="rounded-lg p-8 bg-white border border-red-100 shadow-sm mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Jak pracujemy</h2>
-            
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">{t('page.workSection.title')}</h2>
+
             <div className="prose prose-lg text-gray-700 max-w-none">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
                     <Calendar className="w-6 h-6 text-red-600 mr-2" />
-                    Sezon WOŚPowy
+                    {t('page.workSection.seasonTitle')}
                   </h3>
-                  <p className="mb-4">
-                    Sezon WOŚPowy zaczyna się od początku grudnia aż do końca stycznia – to są dwa najintensywniejsze miesiące w roku. Podczas tego czasu zakładamy sztab, spotykamy się zawsze tą samą lub bardzo podobną grupą.
-                  </p>
-                  <p className="mb-4">
-                    Po Finale, zazwyczaj w lutym, nasz sztab zostaje rozwiązywany i co roku powstaje nowy. Dlatego pewnie nie słychać tak od nas pomiędzy lutym a listopadem – wtedy wracamy do naszych rodzin i codziennych zwyczajów.
-                  </p>
-                  <p className="mb-4">
-                    Często organizujemy wtedy nasze wewnętrzne spotkania wolontariuszy, gdzie rozmawiamy co nam wyszło w tym roku i co możemy poprawić.
-                  </p>
+                  <p className="mb-4">{t('page.workSection.paragraphs.season1')}</p>
+                  <p className="mb-4">{t('page.workSection.paragraphs.season2')}</p>
+                  <p className="mb-4">{t('page.workSection.paragraphs.season3')}</p>
                 </div>
-                
+
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
                     <Users className="w-6 h-6 text-red-600 mr-2" />
-                    Nasi wolontariusze
+                    {t('page.workSection.volunteersTitle')}
                   </h3>
-                  <p className="mb-4">
-                    Są z nami wolontariusze, którzy grają z nami od lat, ale też co roku zbieramy różnych osób, które dopiero co się przeprowadziły i szukają kontaktu z Polakami.
-                  </p>
-                  <p className="mb-4">
-                    Zapraszamy studentów, którzy często pomagają nam w formie praktyk, co jest bardzo pomocne podczas organizacji Finału. Przyjmujemy każdą pomoc – nawet jednorazową!
-                  </p>
-                  <p className="mb-4">
-                    Zachęcamy wszystkich, którzy chcą pomagać, szukają nowych znajomości lub po prostu chcą być częścią wolontariatu.
-                  </p>
+                  <p className="mb-4">{t('page.workSection.paragraphs.volunteers1')}</p>
+                  <p className="mb-4">{t('page.workSection.paragraphs.volunteers2')}</p>
+                  <p className="mb-4">{t('page.workSection.paragraphs.volunteers3')}</p>
                 </div>
               </div>
 
               <div className="bg-red-50 p-6 rounded-lg mb-8">
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
                   <Heart className="w-6 h-6 text-red-600 mr-2" />
-                  Nasi partnerzy
+                  {t('page.workSection.partnersTitle')}
                 </h3>
-                <p className="mb-4">
-                  Współpracujemy z wieloma polskimi, ale też lokalnymi firmami z Katalonii. Nasz główny partner <strong>World Class Barcelona</strong> zapoczątkował z WOŚP w Barcelonie, teraz skupiają się na rozwijaniu szkoły języka hiszpańskiego, ale zawsze służą nam pomocą!
-                </p>
-                <p className="mb-4">
-                  Kolejny główny partner to <strong>Kosmo Hispano</strong> – szkoła języka polskiego dla dzieci, która bardzo nam pomaga organizacyjnie i zawsze organizuje różne zabawy dla dzieci, jak zabawy mikołajkowe czy andrzejkowe.
-                </p>
-                <p className="mb-4">
-                  Najczęściej spotykamy się w restauracji <strong>Krakoviak</strong>, który jest kolejnym naszym głównym sponsorem i wspiera nas od kuchni!
-                </p>
-                <p>
-                  Wszystkie fundusze, jakie pozyskujemy, są od sponsorów – najczęściej tych najbardziej lokalnych.
-                  Nie mamy własnych pieniędzy – wszystkie rzeczy, które mamy, czy wszystkie fundusze są od sponsorów. Bardzo im za to dziękujemy, bo bez nich finały by się nie odbyły!
-                </p>
+                <p className="mb-4">{t('page.workSection.paragraphs.partners1')}</p>
+                <p className="mb-4">{t('page.workSection.paragraphs.partners2')}</p>
+                <p className="mb-4">{t('page.workSection.paragraphs.partners3')}</p>
+                <p>{t('page.workSection.paragraphs.partners4')}</p>
               </div>
             </div>
           </div>
@@ -282,8 +245,8 @@ export default function AboutPage() {
           {/* Social Media Section */}
           <div className="mb-16">
             <div className="mb-6">
-              <h2 className="text-2xl font-bold text-gray-900 mb-2">Dołącz do nas</h2>
-              <p className="text-gray-600">Jesteśmy na Facebooku, Instagramie i Meetupie. Śledź nasze social media, aby być na bieżąco!</p>
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">{t('page.socialsSection.followTitle')}</h2>
+              <p className="text-gray-600">{t('page.socialsSection.description')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -304,7 +267,7 @@ export default function AboutPage() {
                       <div className="text-sm font-semibold text-gray-900">Facebook</div>
                     </div>
                     <p className="text-sm text-gray-700">
-                      Zobacz, co u nas słychać. Aktualności, zdjęcia i relacje z wydarzeń.
+                      {t('page.socialsSection.facebookDesc')}
                     </p>
                   </CardContent>
                 </Card>
@@ -327,7 +290,7 @@ export default function AboutPage() {
                       <div className="text-sm font-semibold text-gray-900">Instagram</div>
                     </div>
                     <p className="text-sm text-gray-700">
-                      Najnowsze zdjęcia i stories z naszych działań w Barcelonie.
+                      {t('page.socialsSection.instagramDesc')}
                     </p>
                   </CardContent>
                 </Card>
@@ -350,7 +313,7 @@ export default function AboutPage() {
                       <div className="text-sm font-semibold text-gray-900">Meetup</div>
                     </div>
                     <p className="text-sm text-gray-700">
-                      Dołącz do naszych wydarzeń i spotkań polskiej społeczności.
+                      {t('page.socialsSection.meetupDesc')}
                     </p>
                   </CardContent>
                 </Card>
@@ -360,28 +323,28 @@ export default function AboutPage() {
 
           {/* 33rd Final Section */}
           <div className="rounded-lg p-8 bg-white border border-red-100 shadow-sm">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">33. Finał WOŚP w Barcelonie</h2>
-            
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">{t('page.final33Section.title')}</h2>
+
             <div className="prose prose-lg text-gray-700 max-w-none mb-8">
               <p className="text-center text-xl mb-6">
-                W styczniu 2025 roku zorganizowaliśmy już 33. Finał Wielkiej Orkiestry Świątecznej Pomocy w Barcelonie. Był to nasz najlepszy Finał do tej pory!
+                {t('page.final33Section.intro')}
               </p>
-              
+
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Wyniki zbiórki</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">{t('page.final33Section.resultsTitle')}</h3>
                   <div className="bg-red-50 p-6 rounded-lg">
                     <div className="text-center">
                       <div className="text-4xl font-bold text-red-600 mb-2">13 881,91 €</div>
-                      <div className="text-lg text-gray-700">zebraliśmy podczas 33. Finału</div>
+                      <div className="text-lg text-gray-700">{t('page.final33Section.collectedDesc')}</div>
                     </div>
                   </div>
                 </div>
-                
+
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Cel medyczny</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">{t('page.final33Section.medicalTitle')}</h3>
                   <p>
-                    33. Finał grał dla medycyny paliatywnej i hospicyjnej. Zebrane środki poszły na zakup sprzętu medycznego, który pomaga zapewnić godne życie i śmierć pacjentom w najtrudniejszych chwilach.
+                    {t('page.final33Section.medicalDesc')}
                   </p>
                 </div>
               </div>
@@ -389,13 +352,13 @@ export default function AboutPage() {
 
             {/* Photo Gallery */}
             <div className="text-center">
-              <h3 className="text-xl font-bold text-gray-900 mb-6">Galeria zdjęć z 33. Finału</h3>
-              
+              <h3 className="text-xl font-bold text-gray-900 mb-6">{t('page.final33Section.galleryTitle')}</h3>
+
               {/* Photo Grid */}
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-6">
                 {photos.map((photo, index) => (
-                  <div 
-                    key={photo} 
+                  <div
+                    key={photo}
                     className="group relative aspect-square overflow-hidden rounded-lg bg-gray-200 hover:shadow-lg transition-all duration-300 cursor-pointer"
                     onClick={() => openLightbox(index)}
                   >
@@ -403,7 +366,7 @@ export default function AboutPage() {
                     <div className="absolute inset-0 flex items-center justify-center text-gray-500 text-sm">
                       📸 Ładowanie...
                     </div>
-                    
+
                     <Image
                       src={`/images/33-final/${photo}`}
                       alt={`Zdjęcie z 33. Finału WOŚP Barcelona ${index + 1}`}
@@ -436,11 +399,11 @@ export default function AboutPage() {
               {/* Show More Button */}
               {visiblePhotos < allPhotos.length && (
                 <div className="mb-6">
-                  <button 
+                  <button
                     onClick={loadMorePhotos}
                     className="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors shadow-md hover:shadow-lg"
                   >
-                    Załaduj więcej zdjęć ({allPhotos.length - visiblePhotos} pozostało)
+                    {t('page.final33Section.loadMore')} ({allPhotos.length - visiblePhotos} {t('page.final33Section.remaining')})
                   </button>
                 </div>
               )}
@@ -448,10 +411,10 @@ export default function AboutPage() {
               {/* Photo Credit */}
               <div className="text-center bg-gray-50 rounded-lg p-4">
                 <p className="text-sm text-gray-600">
-                  📸 Zdjęcia wykonała: <strong>Hela Staniszewska</strong>
+                  📸 {t('page.final33Section.photoCredit')}: <strong>Hela Staniszewska</strong>
                 </p>
                 <p className="text-xs text-gray-500 mt-1">
-                  Dziękujemy za uwiecznienie wspaniałych chwil z naszego 33. Finału!
+                  {t('page.final33Section.photoCreditThanks')}
                 </p>
               </div>
             </div>
@@ -515,7 +478,7 @@ export default function AboutPage() {
             </div>
           )}
         </div>
-    </main>
+      </main>
+    </div>
   );
 }
-
