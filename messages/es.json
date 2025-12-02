@@ -357,7 +357,63 @@
       "contact": "Contacto",
       "booking": "Reservas",
       "trial": "Clase de prueba",
-      "careers": "Empleo"
+      "careers": "Empleo",
+      "links": "Enlaces"
+    },
+    "categories": {
+      "sponsors": {
+        "title": "Patrocinadores",
+        "description": "Empresas que apoyan financieramente nuestras actividades y permiten la organización de eventos WOŚP en Barcelona."
+      },
+      "partners": {
+        "title": "Socios",
+        "description": "Empresas e instituciones locales que apoyan nuestras actividades logística, sustancial y organizativamente."
+      },
+      "coorganizers": {
+        "title": "Coorganizadores",
+        "description": "Organizaciones y personas que co-crean y llevan a cabo la misión de WOŚP en Barcelona junto con nosotros."
+      }
+    },
+    "items": {
+      "bonaBarcelona": {
+        "name": "Bona Barcelona",
+        "description": "Patrocinador de subastas benéficas. Proporciona vales para excursiones: Montserrat para 6 personas (480€) y Andorra para 6 personas (1020€). Vales válidos por un año."
+      },
+      "wawelRestobar": {
+        "name": "Wawel RestoBar",
+        "description": "Restaurante polaco en Barcelona. Un pequeño pedazo de Polonia en el corazón de Barcelona. Aquí puedes pedir pierogi perfectamente preparados, sopa y salchichas. Los chefs preparan deliciosos crepes, tarta de manzana y otras especialidades polacas. Según los clientes, la cerveza sabe excelente aquí."
+      },
+      "solDeGracia": {
+        "name": "Sol de Gracia",
+        "description": "La mejor tienda de cervezas artesanales de Barcelona. Sol de Gracia es una tienda de cervezas craft con la mayor selección de toda Barcelona. Ven a elegir tu cerveza favorita, te garantizamos que si no la tenemos, probablemente no existe."
+      },
+      "kosmoHisplano": {
+        "name": "Asociación Educativa Kosmo HisPLano",
+        "description": "Invita a los residentes más jóvenes de Barcelona, especialmente niños y jóvenes de familias polacas, a participar en emocionantes actividades extraescolares. La organización se centra en enriquecer las habilidades lingüísticas y ampliar el conocimiento sobre Polonia."
+      }
+    }
+  },
+  "donate": {
+    "title": "Donar Online",
+    "subtitle": "Pronto lanzaremos una recaudación online para el 34º Final de WOŚP.",
+    "goalTitle": "Objetivo del 34º Final de WOŚP",
+    "finalBadge": "34º Final WOŚP",
+    "finalDate": "25 de enero de 2026",
+    "goalSlogan": "Barrigas sanas para nuestros niños",
+    "goalDescription": "Jugaremos para apoyar el diagnóstico y tratamiento de enfermedades gastrointestinales en los pacientes más jóvenes. Es un apoyo real para aproximadamente 1,2–1,5 millones de niños que sufren enfermedades gastroenterológicas.",
+    "whyImportantTitle": "¿Por qué es importante?",
+    "whyImportantText1": "La gastroenterología pediátrica en Polonia enfrenta un número creciente de pacientes y la necesidad de equipos modernos que mejoren los resultados de diagnóstico y tratamiento, incluyendo la cirugía.",
+    "whyImportantText2": "Las enfermedades gastrointestinales en niños (p. ej., celiaquía, enfermedad de Crohn, colitis ulcerosa, ERGE, alergias alimentarias graves, enfermedades del páncreas y del hígado) y los trastornos nutricionales (desnutrición y obesidad) son cada vez más comunes y afectan el desarrollo, la inmunidad y el funcionamiento diario de los más pequeños.",
+    "collectionTitle": "La recaudación aún no ha comenzado",
+    "collectionText": "Todavía no estamos recaudando donaciones para el 34º Final de WOŚP. Comenzaremos a aceptar donaciones en diciembre.",
+    "supportOnline": "Apoya a la Fundación online",
+    "aboutGoal": "Sobre el objetivo del Final",
+    "socials": {
+      "title": "Únete a nosotros",
+      "description": "Estamos en Facebook, Instagram y Meetup.",
+      "facebookDesc": "Mira qué hay de nuevo. Actualizaciones, fotos y reportajes de eventos.",
+      "instagramDesc": "Últimas fotos y stories de nuestras actividades en Barcelona.",
+      "meetupDesc": "Únete a nuestros eventos y reuniones de la comunidad polaca."
     }
   },
   "common": {

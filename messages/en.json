@@ -357,7 +357,63 @@
       "contact": "Contact",
       "booking": "Booking",
       "trial": "Free trial",
-      "careers": "Careers"
+      "careers": "Careers",
+      "links": "Links"
+    },
+    "categories": {
+      "sponsors": {
+        "title": "Sponsors",
+        "description": "Companies that financially support our activities and enable the organization of WOŚP events in Barcelona."
+      },
+      "partners": {
+        "title": "Partners",
+        "description": "Local companies and institutions that support our activities logistically, substantively and organizationally."
+      },
+      "coorganizers": {
+        "title": "Co-organizers",
+        "description": "Organizations and individuals who co-create and carry out the WOŚP mission in Barcelona together with us."
+      }
+    },
+    "items": {
+      "bonaBarcelona": {
+        "name": "Bona Barcelona",
+        "description": "Charity auction sponsor. Provides vouchers for trips: Montserrat for 6 people (€480) and Andorra for 6 people (€1020). Vouchers valid for one year."
+      },
+      "wawelRestobar": {
+        "name": "Wawel RestoBar",
+        "description": "Polish restaurant in Barcelona. A little piece of Poland in the heart of Barcelona. Here you can order perfectly prepared pierogi, soup and sausages. The chefs prepare delicious pancakes, apple pie and other Polish specialties. According to guests, the beer tastes excellent here."
+      },
+      "solDeGracia": {
+        "name": "Sol de Gracia",
+        "description": "The best craft beer shop in Barcelona. Sol de Gracia is a craft beer shop with the largest selection in all of Barcelona. Come choose your favorite beer, we guarantee that if we don't have it, it probably doesn't exist."
+      },
+      "kosmoHisplano": {
+        "name": "Kosmo HisPLano Educational Association",
+        "description": "Invites the youngest residents of Barcelona, especially children and youth from Polish families, to participate in exciting extracurricular activities. The organization focuses on enriching language skills and expanding knowledge about Poland."
+      }
+    }
+  },
+  "donate": {
+    "title": "Donate Online",
+    "subtitle": "We will soon launch an online fundraiser for the 34th WOŚP Finale.",
+    "goalTitle": "Goal of the 34th WOŚP Finale",
+    "finalBadge": "34th WOŚP Finale",
+    "finalDate": "January 25, 2026",
+    "goalSlogan": "Healthy tummies for our children",
+    "goalDescription": "We play to support the diagnosis and treatment of gastrointestinal diseases in the youngest patients. This is real support for approximately 1.2–1.5 million children suffering from gastroenterological conditions.",
+    "whyImportantTitle": "Why is this important?",
+    "whyImportantText1": "Pediatric gastroenterology in Poland faces a growing number of patients and the need for modern equipment that improves diagnostic and treatment outcomes, including in surgery.",
+    "whyImportantText2": "Gastrointestinal diseases in children (e.g., celiac disease, Crohn's disease, ulcerative colitis, GERD, severe food allergies, pancreatic and liver diseases) and nutritional disorders (malnutrition and obesity) are increasingly common and affect the development, immunity, and daily functioning of the youngest.",
+    "collectionTitle": "The fundraiser has not started yet",
+    "collectionText": "We are not yet collecting donations for the 34th WOŚP Finale. We will start accepting donations in December.",
+    "supportOnline": "Support the Foundation online",
+    "aboutGoal": "About the Finale goal",
+    "socials": {
+      "title": "Join us",
+      "description": "We are on Facebook, Instagram and Meetup.",
+      "facebookDesc": "See what's new. Updates, photos and event reports.",
+      "instagramDesc": "Latest photos and stories from our activities in Barcelona.",
+      "meetupDesc": "Join our events and meetings of the Polish community."
     }
   },
   "common": {

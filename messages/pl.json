@@ -357,7 +357,63 @@
       "contact": "Kontakt",
       "booking": "Rezerwacje",
       "trial": "Lekcja próbna",
-      "careers": "Kariera"
+      "careers": "Kariera",
+      "links": "Linki"
+    },
+    "categories": {
+      "sponsors": {
+        "title": "Sponsorzy",
+        "description": "Firmy, które finansowo wspierają nasze działania i umożliwiają organizację wydarzeń WOŚP w Barcelonie."
+      },
+      "partners": {
+        "title": "Partnerzy",
+        "description": "Lokalne firmy i instytucje, które wspierają nasze działania logistycznie, merytorycznie i organizacyjnie."
+      },
+      "coorganizers": {
+        "title": "Współorganizatorzy",
+        "description": "Organizacje i osoby, które współtworzą i realizują razem z nami misję WOŚP w Barcelonie."
+      }
+    },
+    "items": {
+      "bonaBarcelona": {
+        "name": "Bona Barcelona",
+        "description": "Sponsor licytacji charytatywnej. Przekazuje vouchery na wycieczki: Montserrat dla 6 osób (480€) oraz Andora dla 6 osób (1020€). Vouchery ważne przez rok."
+      },
+      "wawelRestobar": {
+        "name": "Wawel RestoBar",
+        "description": "Polska restauracja w Barcelonie. Mały kawałek Polski w sercu Barcelony. W tym miejscu zamówisz doskonale przyrządzone pierogi, zupę i kiełbaski. Kucharze przygotowują tutaj dobre naleśniki, szarlotkę i inne polskie specjały. Zgodnie z opiniami gości, piwo smakuje w tym miejscu wyśmienicie."
+      },
+      "solDeGracia": {
+        "name": "Sol de Gracia",
+        "description": "Najlepszy sklep z piwami rzemieślniczymi w Barcelonie. Sol de Gracia to sklep z piwami craftowymi z największym wyborem w całej Barcelonie. Przyjdź wybrać swoje ulubione piwo, gwarantujemy, że jeśli go nie mamy, to bardzo prawdopodobne, że nie istnieje."
+      },
+      "kosmoHisplano": {
+        "name": "Stowarzyszenie Edukacyjne Kosmo HisPLano",
+        "description": "Zaprasza najmłodszych mieszkańców Barcelony, zwłaszcza dzieci i młodzież z polonijnych rodzin do udziału w pasjonujących zajęciach dodatkowych. Organizacja koncentruje się na wzbogacaniu umiejętności językowych oraz poszerzaniu wiedzy o Polsce."
+      }
+    }
+  },
+  "donate": {
+    "title": "Wpłać Online",
+    "subtitle": "Tutaj wkrótce uruchomimy zbiórkę online na cel 34. Finału WOŚP.",
+    "goalTitle": "Cel 34. Finału WOŚP",
+    "finalBadge": "34. Finał WOŚP",
+    "finalDate": "25 stycznia 2026 roku",
+    "goalSlogan": "Zdrowe brzuszki naszych dzieci",
+    "goalDescription": "Zagramy, by wesprzeć diagnostykę i leczenie chorób przewodu pokarmowego u najmłodszych pacjentów. To realne wsparcie dla około 1,2–1,5 miliona dzieci, cierpiących na schorzenia gastroenterologiczne.",
+    "whyImportantTitle": "Dlaczego to ważne?",
+    "whyImportantText1": "Gastroenterologia dziecięca w Polsce mierzy się z rosnącą liczbą pacjentów i potrzebą nowoczesnego sprzętu, który poprawia wyniki diagnostyki i leczenia, w tym także w chirurgii.",
+    "whyImportantText2": "Choroby przewodu pokarmowego u dzieci (np. celiakia, choroba Leśniowskiego-Crohna, WZJG, GERD, ciężkie alergie pokarmowe, choroby trzustki i wątroby) oraz zaburzenia żywienia (niedożywienie i otyłość) są coraz częstsze i wpływają na rozwój, odporność i codzienne funkcjonowanie najmłodszych.",
+    "collectionTitle": "Zbiórka jeszcze nie wystartowała",
+    "collectionText": "Aktualnie nie prowadzimy jeszcze zbiórki na cel 34. Finału WOŚP. Rozpoczniemy przyjmowanie wpłat w grudniu.",
+    "supportOnline": "Wesprzyj Fundację online",
+    "aboutGoal": "O celu Finału",
+    "socials": {
+      "title": "Dołącz do nas",
+      "description": "Jesteśmy na Facebooku, Instagramie i Meetupie.",
+      "facebookDesc": "Zobacz, co u nas słychać. Aktualności, zdjęcia i relacje z wydarzeń.",
+      "instagramDesc": "Najnowsze zdjęcia i stories z naszych działań w Barcelonie.",
+      "meetupDesc": "Dołącz do naszych wydarzeń i spotkań polskiej społeczności."
     }
   },
   "common": {
