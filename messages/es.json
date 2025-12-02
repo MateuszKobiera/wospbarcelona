@@ -1,4 +1,34 @@
 {
+  "metadata": {
+    "home": {
+      "title": "Inicio",
+      "description": "Gran Orquesta de la Caridad Navideña en Barcelona. Somos un equipo apasionado que lleva 9 años organizando Finales de WOŚP y eventos benéficos."
+    },
+    "about": {
+      "title": "Sobre Nosotros",
+      "description": "Conoce al equipo de WOŚP Barcelona. Somos un grupo de voluntarios que lleva 9 años organizando Finales de WOŚP en Barcelona."
+    },
+    "events": {
+      "title": "Calendario de Eventos",
+      "description": "Mira los próximos y pasados eventos de WOŚP Barcelona. Conciertos, subastas, carreras benéficas y más."
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "Noticias, reportajes de eventos e historias de WOŚP Barcelona. Mantente al día con nuestras actividades benéficas."
+    },
+    "sponsors": {
+      "title": "Patrocinadores y Socios",
+      "description": "Conoce a los patrocinadores y socios de WOŚP Barcelona. Empresas y organizaciones que apoyan nuestra labor benéfica."
+    },
+    "donate": {
+      "title": "Donar Online",
+      "description": "Apoya a WOŚP Barcelona. Dona online para la Gran Orquesta de la Caridad Navideña."
+    },
+    "contact": {
+      "title": "Contacto",
+      "description": "Contacta con WOŚP Barcelona. Escríbenos o únete a nuestro equipo de voluntarios."
+    }
+  },
   "nav": {
     "home": "Inicio",
     "about": "Sobre nosotros",

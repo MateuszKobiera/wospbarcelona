@@ -2,6 +2,20 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { ContactForm } from '@/components/ContactForm';
+import type { Metadata } from 'next';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'metadata' });
+  return {
+    title: t('sponsors.title'),
+    description: t('sponsors.description'),
+    openGraph: {
+      title: t('sponsors.title'),
+      description: t('sponsors.description'),
+    },
+  };
+}
 
 type LinkRef = { label: string; url: string };
 type SponsorItem = {

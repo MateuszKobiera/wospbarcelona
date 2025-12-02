@@ -6,9 +6,14 @@ import { getTranslations } from 'next-intl/server';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'donate' });
+  const t = await getTranslations({ locale, namespace: 'metadata' });
   return {
-    title: t('title'),
+    title: t('donate.title'),
+    description: t('donate.description'),
+    openGraph: {
+      title: t('donate.title'),
+      description: t('donate.description'),
+    },
   };
 }
 

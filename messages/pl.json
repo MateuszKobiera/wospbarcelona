@@ -1,4 +1,34 @@
 {
+  "metadata": {
+    "home": {
+      "title": "Strona Główna",
+      "description": "Wielka Orkiestra Świątecznej Pomocy w Barcelonie. Jesteśmy zespołem pełnym pasji i zaangażowania, który od 9 lat organizuje Finały WOŚP i wydarzenia charytatywne."
+    },
+    "about": {
+      "title": "O Nas",
+      "description": "Poznaj nasz zespół WOŚP Barcelona. Jesteśmy grupą wolontariuszy, którzy od 9 lat organizują Finały WOŚP w Barcelonie."
+    },
+    "events": {
+      "title": "Kalendarz Wydarzeń",
+      "description": "Zobacz nadchodzące i minione wydarzenia WOŚP Barcelona. Koncerty, licytacje, biegi charytatywne i więcej."
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "Aktualności, relacje z wydarzeń i historie WOŚP Barcelona. Bądź na bieżąco z naszą działalnością charytatywną."
+    },
+    "sponsors": {
+      "title": "Sponsorzy i Partnerzy",
+      "description": "Poznaj sponsorów i partnerów WOŚP Barcelona. Firmy i organizacje wspierające naszą działalność charytatywną."
+    },
+    "donate": {
+      "title": "Wpłać Online",
+      "description": "Wesprzyj WOŚP Barcelona. Wpłać online na cele charytatywne Wielkiej Orkiestry Świątecznej Pomocy."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "description": "Skontaktuj się z WOŚP Barcelona. Napisz do nas lub dołącz do naszego zespołu wolontariuszy."
+    }
+  },
   "nav": {
     "home": "Strona główna",
     "about": "O nas",

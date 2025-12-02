@@ -5,7 +5,28 @@ import { Button } from '@/components/ui/button';
 import { getPostBySlugAndLocale } from '@/content/blog-i18n';
 import { Facebook, Instagram, MessageSquare } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
+import type { Metadata } from 'next';
 
+export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
+  const { locale, slug } = await params;
+  const post = getPostBySlugAndLocale(slug, locale);
+
+  if (!post) {
+    return { title: 'Post not found' };
+  }
+
+  return {
+    title: post.title,
+    description: post.excerpt || post.title,
+    openGraph: {
+      title: post.title,
+      description: post.excerpt || post.title,
+      type: 'article',
+      publishedTime: post.date,
+      images: post.coverImage ? [{ url: post.coverImage }] : undefined,
+    },
+  };
+}
 
 export default async function BlogPostPage({
   params,

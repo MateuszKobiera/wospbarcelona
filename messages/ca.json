@@ -1,4 +1,34 @@
 {
+  "metadata": {
+    "home": {
+      "title": "Inici",
+      "description": "Gran Orquestra de la Caritat Nadalenca a Barcelona. Som un equip apassionat que porta 9 anys organitzant Finals de WOŚP i esdeveniments benèfics."
+    },
+    "about": {
+      "title": "Sobre Nosaltres",
+      "description": "Coneix l'equip de WOŚP Barcelona. Som un grup de voluntaris que porta 9 anys organitzant Finals de WOŚP a Barcelona."
+    },
+    "events": {
+      "title": "Calendari d'Esdeveniments",
+      "description": "Mira els propers i passats esdeveniments de WOŚP Barcelona. Concerts, subhastes, curses benèfiques i més."
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "Notícies, reportatges d'esdeveniments i històries de WOŚP Barcelona. Mantén-te al dia amb les nostres activitats benèfiques."
+    },
+    "sponsors": {
+      "title": "Patrocinadors i Socis",
+      "description": "Coneix els patrocinadors i socis de WOŚP Barcelona. Empreses i organitzacions que donen suport a la nostra tasca benèfica."
+    },
+    "donate": {
+      "title": "Donar Online",
+      "description": "Dona suport a WOŚP Barcelona. Dona online per a la Gran Orquestra de la Caritat Nadalenca."
+    },
+    "contact": {
+      "title": "Contacte",
+      "description": "Contacta amb WOŚP Barcelona. Escriu-nos o uneix-te al nostre equip de voluntaris."
+    }
+  },
   "nav": {
     "home": "Inici",
     "about": "Sobre nosaltres",

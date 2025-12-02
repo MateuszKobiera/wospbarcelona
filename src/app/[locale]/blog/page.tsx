@@ -4,6 +4,20 @@ import { Calendar } from 'lucide-react';
 import { HeartBackground } from '@/components/HeartBackground';
 import { getAllPostsForLocale } from '@/content/blog-i18n';
 import { getTranslations } from 'next-intl/server';
+import type { Metadata } from 'next';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'metadata' });
+  return {
+    title: t('blog.title'),
+    description: t('blog.description'),
+    openGraph: {
+      title: t('blog.title'),
+      description: t('blog.description'),
+    },
+  };
+}
 
 export default async function BlogPage({
   params,

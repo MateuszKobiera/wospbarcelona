@@ -1,4 +1,34 @@
 {
+  "metadata": {
+    "home": {
+      "title": "Home",
+      "description": "Great Orchestra of Christmas Charity in Barcelona. We are a passionate team that has been organizing WOŚP Finales and charity events for 9 years."
+    },
+    "about": {
+      "title": "About Us",
+      "description": "Meet the WOŚP Barcelona team. We are a group of volunteers who have been organizing WOŚP Finales in Barcelona for 9 years."
+    },
+    "events": {
+      "title": "Events Calendar",
+      "description": "See upcoming and past WOŚP Barcelona events. Concerts, auctions, charity runs and more."
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "News, event reports and stories from WOŚP Barcelona. Stay up to date with our charity activities."
+    },
+    "sponsors": {
+      "title": "Sponsors and Partners",
+      "description": "Meet the sponsors and partners of WOŚP Barcelona. Companies and organizations supporting our charity work."
+    },
+    "donate": {
+      "title": "Donate Online",
+      "description": "Support WOŚP Barcelona. Donate online for the Great Orchestra of Christmas Charity."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Contact WOŚP Barcelona. Write to us or join our volunteer team."
+    }
+  },
   "nav": {
     "home": "Home",
     "about": "About us",
