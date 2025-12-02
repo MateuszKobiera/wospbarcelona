@@ -2,8 +2,9 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { findPostBySlug } from '@/content/blog';
+import { getPostBySlugAndLocale } from '@/content/blog-i18n';
 import { Facebook, Instagram, MessageSquare } from 'lucide-react';
+import { getTranslations } from 'next-intl/server';
 
 
 export default async function BlogPostPage({
@@ -12,7 +13,8 @@ export default async function BlogPostPage({
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { locale, slug } = await params;
-  const post = findPostBySlug(slug);
+  const t = await getTranslations('blog');
+  const post = getPostBySlugAndLocale(slug, locale);
   if (!post) return notFound();
 
   return (
@@ -20,7 +22,7 @@ export default async function BlogPostPage({
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
           <Link href={`/${locale}/blog`} className="text-red-600 hover:underline">
-            ← Wróć do bloga
+            {t('backToBlog')}
           </Link>
         </div>
         {/* Hero cover */}
@@ -56,11 +58,11 @@ export default async function BlogPostPage({
             {/* Tags */}
             {post.tags && post.tags.length > 0 && (
               <div className="pt-4 border-t">
-                <div className="text-sm font-semibold text-gray-900 mb-2">Tagi</div>
+                <div className="text-sm font-semibold text-gray-900 mb-2">{t('tags')}</div>
                 <div className="flex flex-wrap gap-2">
-                  {post.tags.map((t) => (
-                    <span key={t} className="inline-flex items-center rounded-full bg-gray-100 text-gray-700 px-3 py-1 text-xs font-medium">
-                      {t}
+                  {post.tags.map((tag) => (
+                    <span key={tag} className="inline-flex items-center rounded-full bg-gray-100 text-gray-700 px-3 py-1 text-xs font-medium">
+                      {tag}
                     </span>
                   ))}
                 </div>
@@ -70,7 +72,7 @@ export default async function BlogPostPage({
             {/* Social links */}
             {(post.social?.facebook || post.social?.instagram || post.social?.meetup) && (
               <div className="pt-4 border-t">
-                <div className="text-sm font-semibold text-gray-900 mb-2">Śledź nas</div>
+                <div className="text-sm font-semibold text-gray-900 mb-2">{t('followUs')}</div>
                 <div className="flex gap-3">
                   {post.social?.facebook && (
                     <Button asChild variant="outline">

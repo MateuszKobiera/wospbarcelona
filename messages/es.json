@@ -295,8 +295,13 @@
     }
   },
   "blog": {
-    "title": "Blog",
+    "title": "Blog WOŚP Barcelona",
+    "description": "Descubre nuestras historias, eventos e iniciativas. Conoce más sobre nuestras actividades benéficas.",
+    "article": "Artículo",
     "readMore": "Leer más",
+    "backToBlog": "← Volver al blog",
+    "tags": "Etiquetas",
+    "followUs": "Síguenos",
     "noPosts": "No hay entradas en el blog"
   },
   "contact": {
