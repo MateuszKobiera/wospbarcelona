@@ -164,7 +164,135 @@
     "title": "Calendari d'esdeveniments",
     "noEvents": "No hi ha esdeveniments propers",
     "upcoming": "Pròxims esdeveniments",
-    "past": "Esdeveniments passats"
+    "past": "Esdeveniments passats",
+    "page": {
+      "subtitle": "Uneix-te als nostres esdeveniments benèfics i ajuda amb nosaltres. Cada esdeveniment és una oportunitat d'ajudar i passar-ho genial!",
+      "seeMore": "Veure més",
+      "seeReport": "Veure reportatge",
+      "addToCalendar": "Afegir a Google Calendar",
+      "viewOnMeetup": "Veure a Meetup",
+      "viewOnFacebook": "Veure a Facebook",
+      "registerForRun": "Inscriu-te a la cursa",
+      "final": "FINAL!",
+      "duringEvent": "Durant l'esdeveniment",
+      "total": "Total",
+      "cta": {
+        "title": "Vols organitzar un esdeveniment amb nosaltres?",
+        "description": "Tens una idea per a un esdeveniment benèfic? Vols ser soci? Contacta'ns i organitzem alguna cosa especial junts!",
+        "contact": "Contacta'ns",
+        "partner": "Fes-te soci"
+      },
+      "socials": {
+        "title": "Uneix-te a nosaltres",
+        "description": "Som a Facebook, Instagram i Meetup.",
+        "facebookDesc": "Mira què hi ha de nou. Actualitzacions, fotos i reportatges d'esdeveniments.",
+        "instagramDesc": "Últimes fotos i stories de les nostres activitats a Barcelona.",
+        "meetupDesc": "Uneix-te als nostres esdeveniments i trobades de la comunitat polonesa."
+      }
+    },
+    "categories": {
+      "volunteerMeeting": "Reunió de Voluntaris",
+      "run": "Cursa",
+      "final": "Final WOŚP",
+      "onlineAuction": "Subhasta Online",
+      "vernissage": "Vernissatge",
+      "workshop": "Taller",
+      "literaryMeeting": "Trobada Literària",
+      "photoWorkshop": "Taller de Fotografia",
+      "christmasWorkshop": "Taller Nadalenc"
+    },
+    "items": {
+      "7": {
+        "title": "Reunió de Voluntaris Online",
+        "description": "Reunió online per a voluntaris de WOŚP Barcelona. Contacta'ns a través del formulari de contacte per rebre l'enllaç de la reunió.",
+        "location": "Online (s'enviarà l'enllaç)",
+        "fullDescription": "Et convidem a una reunió online per a voluntaris de WOŚP Barcelona! És una excel·lent oportunitat per a aquells que no poden assistir a la reunió presencial.\n\nDurant la reunió online:\n• Coneixeràs l'equip organitzador de WOŚP Barcelona\n• T'informaràs sobre els plans actuals per al 34è Final\n• Podràs fer preguntes i expressar les teves idees\n• Rebràs accés a materials informatius\n• Coneixeràs altres voluntaris de tota Catalunya\n\n📝 COM UNIR-SE:\nPer rebre l'enllaç de la reunió, contacta'ns a través del formulari de contacte a la pàgina. T'enviarem els detalls de la reunió i l'enllaç a la plataforma.\n\nÉs l'opció ideal per a persones que:\n• Viuen lluny del centre de Barcelona\n• Tenen temps limitat\n• Prefereixen participar online\n• Volen unir-se a l'equip de voluntaris\n\nLa reunió es farà en una plataforma online - rebràs els detalls després de contactar-nos."
+      },
+      "8": {
+        "title": "Reunió de Voluntaris - Wawel",
+        "description": "🤝 Reunió de voluntaris de WOŚP Barcelona a Wawel Restobar — el nostre patrocinador principal! Coneix l'equip, tasta menjar polonès i prepara't per al 34è Final.",
+        "fullDescription": "🤝 Reunió de voluntaris de WOŚP Barcelona a Wawel Restobar\nEt convidem a una reunió de voluntaris de WOŚP Barcelona a Wawel Restobar — el nostre patrocinador principal! És el lloc ideal per conèixer-se, xerrar i gaudir de deliciosa cuina polonesa i begudes directament de Polònia.\n\nDurant la reunió:\n• coneixeràs l'equip de WOŚP Barcelona\n• t'informaràs sobre els plans per al 34è Final\n• podràs fer preguntes i compartir les teves idees\n• rebràs materials informatius\n• coneixeràs altres voluntaris de Barcelona, Catalunya i Polònia\n\nPer què val la pena venir:\n• Wawel Restobar és un lloc creat per polonesos per a polonesos\n• menjaràs plats tradicionals i beuràs begudes poloneses\n• sentiràs l'ambient de l'hospitalitat polonesa\n• donaràs suport a un patrocinador local de WOŚP\n\n📝 Com unir-se:\nVine a la data indicada o contacta'ns si tens preguntes.\n\nLa reunió se celebrarà a Wawel Restobar — ens veiem!"
+      },
+      "5": {
+        "title": "20a Cursa WOŚP \"Compta amb la diabetis\"",
+        "description": "Cursa benèfica de 5 km. Sortida: Sagrada Familia, Meta: Hotel W - Barceloneta. Punt de trobada: Carrer de Lepant, 281. Inscripció a Slotmarket fins al 31.12.2025.",
+        "fullDescription": "Uneix-te a la 20a Cursa WOŚP \"Compta amb la diabetis\"! És una cursa benèfica de 5 km per la bonica Barcelona.\n\n🏃‍♂️ DETALLS DE LA CURSA:\n• Distància: 5 km\n• Data: 18 de gener de 2026\n• Sortida/Punt de trobada: Sagrada Familia (allà es repartiran les samarretes)\n• Meta: Hotel W - Barceloneta (hi haurà medalla per a tothom)\n• Punt de trobada: Carrer de Lepant, 281, L'Eixample\n\n📞 CONTACTE AMB ELS ORGANITZADORS:\nSi tens preguntes o problemes, contacta'ns per xat o amb la coordinadora de la cursa Aneta al +34 637 486 551.\n\n📝 INSCRIPCIÓ (OBLIGATÒRIA):\nCada participant de la cursa organitzada per l'Equip WOŚP a Barcelona ha de registrar-se personalment al sistema Slotmarket a la cursa VIRTUAL.\n\n⚠️ INSTRUCCIONS IMPORTANTS DE REGISTRE:\n1. Registra't a través de Slotmarket\n2. Introdueix l'adreça d'enviament a Polònia: Dominikańska 19C, 02-738 Varsòvia\n3. Al camp \"Club\" escriu: 6516 Barcelona\n4. Selecciona l'opció d'enviament nacional (a Polònia)\n5. Envia la confirmació de registre amb nom, cognom i talla de samarreta a: biegwospbarcelona@gmail.com\n6. Termini d'inscripció: fins al 31.12.2025\n\n🎁 PAQUET DE SORTIDA:\nPer rebre els paquets a l'enviament gratuït conjunt, cal completar correctament tots els camps del formulari Slotmarket.\n\n⚠️ ATENCIÓ: Omplir el formulari incorrectament pot resultar en un càrrec addicional de 150 PLN per enviament o no rebre el paquet!"
+      },
+      "1": {
+        "title": "34è Final WOŚP a Barcelona",
+        "description": "🎉 El major esdeveniment benèfic de l'any a Barcelona! Uneix-te a nosaltres a Espacio 88 per a un dia ple de tallers, actuacions, subhastes i integració. Juguem per les panxes sanes dels nens polonesos!",
+        "fullDescription": "🎉 34è Final WOŚP a Barcelona\n\n📍 Lloc: Espacio 88 — Carrer de Pamplona 88, Sant Martí, Barcelona\n📅 Data: 25 de gener de 2026\n🎯 Objectiu: compra d'equips moderns per diagnosticar, monitorar i tractar malalties del tracte digestiu en nens (endoscopis pediàtrics, sistemes d'imatge, equips per a proves funcionals, etc.)\n\n✨ Què passarà?\nEl programa encara s'està creant, però tot el dia a Espacio 88 estarà ple d'activitats:\n\n🫧 Zones de tallers per a nens i famílies\n• jocs i activitats KosmoHisPlano\n• bombolles de sabó, moviment, creativitat\n• estacions de tallers addicionals\n\n🎙️ Actuacions, panells i trobades\n• panells literaris i artístics\n• trobada amb artistes i les seves obres\n• activitats familiars\n• pastís de Delicious By Bea per a tots els participants\n\n🎲 Jocs i integració\n• joc PL-ES que uneix polonesos, espanyols i la comunitat local\n\n🔨 Subhastes benèfiques\n• subhastes d'objectes únics que donen suport a l'objectiu del final\n\n🎆 Llum al Cel\n• gest tradicional i positiu d'unitat i solidaritat\n\n🇵🇱❤️ Cultura polonesa a Barcelona\nDurant el final promovem la cultura, l'idioma, els creadors i les tradicions poloneses — creant un espai on la comunitat polonesa, els espanyols i la comunitat internacional poden trobar-se, co-crear i conèixer-se mútuament.\n\n❤️ Per què juguem?\nRecaptem fons per donar suport al diagnòstic i tractament de malalties del tracte digestiu en nens — perquè els pacients més joves a Polònia puguin beneficiar-se dels equips més moderns i una millor atenció."
+      },
+      "9": {
+        "title": "Fi de les Subhastes Benèfiques a Allegro",
+        "description": "Últim dia per acceptar ofertes benèfiques a l'Acció WOŚP. Les ofertes es poden fer del 01.12.2025 al 16.02.2026.",
+        "fullDescription": "És l'últim dia per acceptar ofertes benèfiques a la plataforma Allegro en el marc del 34è Final WOŚP!\n\n📅 PERÍODE DE SUBHASTES BENÈFIQUES:\nLes ofertes benèfiques en el marc de l'Acció WOŚP es poden fer del 01.12.2025 al 16.02.2026.\n\n💻 COM PARTICIPAR:\n• Entra a allegro.pl\n• Cerca WOŚP Barcelona\n• Tria la subhasta que t'interessi\n• Puja i dóna suport a WOŚP Barcelona\n• Tots els fons recaptats van a fins benèfics\n\n🎯 OBJECTIU DE LA RECAPTACIÓ:\nTots els fons recaptats durant les subhastes benèfiques es destinaran a donar suport al diagnòstic i tractament de malalties del tracte digestiu en els pacients més joves - objectiu del 34è Final WOŚP \"Panxes sanes dels nostres nens\".\n\n⏰ ÚLTIMA OPORTUNITAT:\nÉs l'últim dia per participar a les subhastes benèfiques de WOŚP a Allegro. No perdis l'oportunitat d'ajudar als nens que ho necessiten!\n\nGràcies a tots els que van participar a les subhastes benèfiques durant aquests més de 2 mesos. Cada zloty compta!"
+      },
+      "101": {
+        "title": "33è Final WOŚP a Barcelona",
+        "description": "Un final increïble! Vam recaptar 8.073,48 euros durant l'esdeveniment, i un total de 13.880,62 euros amb les subhastes!",
+        "fullDescription": "33è Final WOŚP a Barcelona\n\nEt convidem a un esdeveniment únic que ens unirà en un sol objectiu: ajudar els necessitats! El 33è Final de la Gran Orquestra de la Caritat Nadalenca a Barcelona és un dia ple de música, alegria i acció conjunta.\n\n📍 Lloc: Nau Bostik — Carrer Ferran Turné, 1-11, Sant Andreu, 08027 Barcelona\n📅 Data: 26 de gener de 2025\n🕘 Hora: Inici a les 10:30\n\n🎵 Programa de concerts:\n11:00 - ANULKA & DIRTY SPOONS\n12:30 - MARCIN BURY\n14:00 - GUIMERA BLUES & THE SUGAR BOYS\n16:30 - JUSTYNA & JAIME\n18:15 - EYE OF THE STORM\n19:30 - Llum al Cel\n20:00 - Tancament\n\n🎪 Atraccions durant l'esdeveniment:\n• Increïbles concerts d'artistes locals\n• Emocionants subhastes\n• Loteria amb premis fantàstics\n• Fira de llibres\n• Animacions i jocs per a nens\n• Deliciosos pierogi, pastissos polonesos i dolcos\n• Begudes de cerveseries poloneses\n\nUn esdeveniment que has de viure! Vine i dóna suport a la més gran orquestra de cors!"
+      },
+      "201": {
+        "title": "19a Cursa WOŚP \"Compta amb la diabetis\"",
+        "description": "Cursa benèfica de 5 km des de Sagrada Familia fins a Hotel W Barcelona. Diversió i suport a WOŚP!",
+        "fullDescription": "19a Cursa WOŚP \"Compta amb la diabetis\" a Barcelona!\n\nEt convidem a la 19a edició de la cursa \"Compta amb la diabetis\" amb WOŚP – també a Barcelona!\n\n📅 Data: Diumenge, 19 de gener de 2025\n🕘 Sortida: 10:30\n📍 Punt de trobada: Sagrada Familia\n🏁 Meta: Hotel W Barcelona\n📏 Distància: 5 km\n\nAquest esdeveniment únic no és només una cursa – pots unir-te com vulguis! Caminant, amb patins, en bicicleta o trotant tranquil·lament – el més important és divertir-se junts i donar suport a WOŚP!\n\n✨ Per què val la pena inscriure's?\n• Samarreta de la 19a Cursa \"Compta amb la diabetis\"\n• Medalla commemorativa a la meta\n• Diversió conjunta i suport a WOŚP\n\nUneix-te a nosaltres i demostrem que Barcelona dóna suport a WOŚP!"
+      },
+      "202": {
+        "title": "Vernissatge Artístic WOŚP",
+        "description": "Un esdeveniment artístic únic que uneix l'art amb el bé. Obres d'artistes locals i convidats de Polònia en suport a WOŚP!",
+        "fullDescription": "Vernissatge Artístic WOŚP a Barcelona\n\nEt convidem a un esdeveniment artístic únic on l'art s'uneix amb el bé! El vernissatge a Barcelona és una oportunitat per admirar diverses obres d'artistes, tant creadors locals com convidats de Polònia.\n\n✨ Per què val la pena venir?\n• Artistes únics – Coneix creadors que viuen a Barcelona\n• Subhasta d'obres – Puja per obres úniques durant el gran final de WOŚP\n• Venda d'obres – Obres seleccionades disponibles per a la venda\n• Ambient íntim – Gaudeix de l'art amb una copa de vi\n\n📅 Data: Dissabte, 18 de gener de 2025\n🕘 Hora: 11:00 – 22:00\n📍 Lloc: Templo Beauty, Ronda del Guinardó 64, Barcelona"
+      },
+      "203": {
+        "title": "Bubbly Craft - Earth Edition",
+        "description": "Una vetllada única de creativitat i relaxació! Tallers de renovació de tests i macramé amb begudes aromàtiques.",
+        "fullDescription": "Bubbly Craft - Earth Edition amb WOŚP Barcelona!\n\nUneix-te a una vetllada única de creativitat i relaxació amb WOŚP Barcelona! Et convidem a la segona edició dels tallers \"Bubbly Craft\", aquesta vegada sota el nom Earth Edition.\n\n🎨 Què t'espera?\n• 🪴 Renovació de tests: Porta el teu test avorrit i t'ajudarem a donar-li nova vida!\n• 🧵 Macramé per a tests: Aprèn a crear bonics macramés decoratius\n• 🍷 Begudes aromàtiques: Begudes que complementaran l'atmosfera creativa\n• 👶 Zona infantil: Animacions i jocs especials\n\n📅 Quan: Dissabte, 11 de gener de 2025, 17:30\n📍 On: World Class Barcelona"
+      },
+      "204": {
+        "title": "Nadal Literari amb WOŚP",
+        "description": "Un esdeveniment nadalenc únic! Trobada amb autors polonesos, subhasta de llibres amb autògrafs i vetllada literària amb vi.",
+        "fullDescription": "Et convidem a un esdeveniment nadalenc únic!\n\nConeix autors polonesos que viuen a Barcelona, escolta fragments dels seus llibres i deixa't portar per l'atmosfera literària.\n\n🎄 Per què val la pena venir?\n• 📚 Trobada amb autors: Pregunta sobre inspiracions i el procés creatiu\n• 🏆 Subhasta de llibres: Puja per exemplars únics amb autògrafs\n• ❤️ Caritat: Dóna suport a la Gran Orquestra de la Caritat Nadalenca\n• 🍷 Vetllada literària amb vi: Gaudeix de vi i aperitius\n\n✍️ Autors: Krzysztof Monastyrski, Joanna Jurek, Agnieszka Łukomska, Agnieszka Wolińska-Skuza, Marta Cybulska\n\n📅 Data: 15 de desembre de 2024\n🕘 Hora: 15:00 - 19:00\n📍 Lloc: World Class Bcn Spanish school\n🎫 Entrada gratuïta!"
+      },
+      "205": {
+        "title": "Taller de Fotografia a l'Aire Lliure",
+        "description": "L'equip de WOŚP Barcelona juntament amb Aneta et convida a un taller de fotografia a l'aire lliure! Aprèn a treballar amb models i a utilitzar la llum.",
+        "fullDescription": "L'equip de WOŚP Barcelona juntament amb la nostra voluntària Aneta et convida a: Tallers de Fotografia a l'Aire Lliure a Barcelona!\n\nSomies amb perfeccionar les teves habilitats fotogràfiques? Et convidem a uns tallers únics en el pintoresc entorn de Barcelona!\n\n📸 Què t'espera?\n• 👤 Fotografia amb model – Exercicis pràctics de direcció de sessions fotogràfiques\n• 📷 Configuració de càmera – Aprenentatge de funcions clau\n• 💡 Ús de la llum – Com utilitzar millor la llum natural\n• 🎨 Edició de fotos – Fonaments d'edició d'imatges\n\n📅 Data: 30 de novembre de 2024\n🕘 Hora: 14:30 – 17:30\n📍 Lloc: Jardins de Mossèn Costa i Llobera, Barcelona"
+      },
+      "206": {
+        "title": "Taller Nadalenc: \"Wine and Craft\"",
+        "description": "Uneix-te a una vetllada única de creativitat i relaxació amb WOŚP Barcelona! Manualitats nadalenques amb vi calent!",
+        "fullDescription": "Uneix-te a una vetllada única de creativitat i relaxació amb WOŚP Barcelona!\n\nEt convidem a un taller que combina manualitats nadalenques amb una vetllada plena de diversió amb vi calent!\n\n🎄 Què t'espera?\n• 🎅 Decoracions nadalenques: Creació d'ornaments únics, incloent boles i decoracions de feltre\n• 🍷 Vi calent: Gaudeix d'una deliciosa beguda mentre crees en ambient nadalenc\n• ✨ No necessites experiència – només el teu entusiasme!\n\n💰 Cost: 20 EUR o 90 PLN\n📅 Quan: Dissabte, 23 de novembre de 2024, 17:30\n📍 On: World Class Barcelona"
+      },
+      "104": {
+        "title": "32è Final WOŚP a Barcelona",
+        "description": "Un final fantàstic amb assistència rècord! Es van recaptar 10.460,47 €! Concerts, subhastes, menjar polonès i Llum al Cel!",
+        "fullDescription": "32è Final WOŚP a Barcelona\n\nUn dia increïble ple d'emocions, música i suport a la Gran Orquestra de la Caritat Nadalenca!\n\n🎪 PROGRAMA DE L'ESDEVENIMENT\n11:00 Inici de l'esdeveniment\n12:00 Benvinguda oficial\n13:00 Matt Zerek /concert/\n14:15 Guimera Blues & The Sugar Boys /concert/\n16:00 Pastís\n17:00 Headbug /concert/\n19:00 Eveli Ray /concert/\n19:40 Llum al Cel\n\n🎨 A més:\n• 👶 Atraccions per a nens\n• 🍽️ Menjar polonès (pierogi, salsitxa, pastissos)\n• 🍺 Cervesa polonesa i vi calent\n• 📚 Fira de llibres\n• 🎰 Loteria\n\nJuguem junts fins al final del món i un dia més!!!"
+      },
+      "106": {
+        "title": "31è Final WOŚP a Barcelona",
+        "description": "El primer final després de la pandèmia! Tallers per a nens, concerts, subhastes i delícies poloneses!",
+        "fullDescription": "L'equip WOŚP Barcelona et convida al 31è Final WOŚP a Barcelona\n\nEl primer final després de la pandèmia!\n\n🎪 PROGRAMA DE L'ESDEVENIMENT\n10:00 Entrada\n11:00 – 12.00 Tallers per a nens / KOSMOHISPLANO\n12.15 Espectacle de bombolles / BUBBLES.MASTERS\n14.30 MARCIN BURY & JULIA KWIEK\n16.30 Concert HEADBUGBAND\n18.30 Concert SWINGITBABY\n20.00 Llum al Cel\n\n🎨 A més:\n• 📸 Sessions de fotos d'AGPHOTOGRAPHYBCN\n• 📚 Fira de llibres\n• 🎮 Jocs i concursos, pintura facial\n• 🍽️ Delícies poloneses (pierogi, salsitxa, borscht)\n• 🍺 Cervesa polonesa, vi calent\n\n📍 Lloc: Carrer de Sardenya, 29, 08005 Barcelona"
+      }
+    },
+    "detail": {
+      "backToEvents": "Tornar a esdeveniments",
+      "aboutEvent": "Sobre l'esdeveniment",
+      "gallery": "Galeria",
+      "photoAlt": "foto",
+      "eventDetails": "Detalls de l'esdeveniment",
+      "amountRaised": "Quantitat recaptada",
+      "duringEvent": "Durant l'esdeveniment",
+      "totalDuringFinale": "Total durant el final",
+      "thankYou": "Gràcies pel teu suport!",
+      "registration": "Inscripció",
+      "registerForRun": "Inscriu-te a la cursa",
+      "registrationDeadline": "Data límit d'inscripció",
+      "registrationWarning": "Omplir el formulari incorrectament pot resultar en un càrrec addicional de 150 PLN o no rebre el paquet!",
+      "warning": "Atenció",
+      "contact": "Contacte",
+      "contactUs": "Contacta'ns",
+      "addToCalendar": "Afegir a Google Calendar"
+    }
   },
   "blog": {
     "blogSection": {

@@ -1,9 +1,13 @@
+'use client';
+
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Calendar, MapPin, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
+import { useTranslations } from 'next-intl';
+import { useParams } from 'next/navigation';
 
 // Mock events data (same as in events page)
 const allEvents = [
@@ -307,36 +311,53 @@ const allEvents = [
 ];
 
 
-interface EventPageProps {
-  params: Promise<{
-    id: string;
-    locale: string;
-  }>;
-}
-
-export default async function EventPage({ params }: EventPageProps) {
-  const { id, locale } = await params;
+export default function EventPage() {
+  const t = useTranslations('events');
+  const params = useParams();
+  const locale = params.locale as string;
+  const id = params.id as string;
   const event = allEvents.find(e => e.id === parseInt(id));
 
   if (!event) {
     notFound();
   }
 
+  // Get translated content
+  const eventTitle = t(`items.${event.id}.title`);
+  const eventDescription = t(`items.${event.id}.description`);
+  const eventFullDescription = t.has(`items.${event.id}.fullDescription`)
+    ? t(`items.${event.id}.fullDescription`)
+    : event.fullDescription;
+  // Map Polish category names to translation keys
+  const categoryKeyMap: Record<string, string> = {
+    'Spotkanie Wolontariuszy': 'volunteerMeeting',
+    'Bieg': 'run',
+    'Finał WOŚP': 'final',
+    'Aukcja Online': 'onlineAuction',
+    'Wernisaż': 'vernissage',
+    'Warsztaty': 'workshop',
+    'Spotkanie Literackie': 'literaryMeeting',
+    'Warsztaty Fotograficzne': 'photoWorkshop',
+    'Warsztaty Świąteczne': 'christmasWorkshop'
+  };
+  const categoryKey = categoryKeyMap[event.category] || null;
+  const eventCategory = categoryKey ? t(`categories.${categoryKey}`) : event.category;
+
   // Simple helper for Google Calendar dates
   const parseTimes = (dateStr: string, timeStr?: string) => {
     const [y, m, d] = dateStr.split('-').map((x) => parseInt(x, 10));
     const isAllDay = !timeStr || timeStr.toLowerCase().includes('cały dzień') || timeStr.toLowerCase().includes('całodniowy');
-    
+
     if (isAllDay) {
       const dtStart = new Date(y, m - 1, d);
       const dtEnd = new Date(y, m - 1, d + 1);
       return { dtStart, dtEnd, isAllDay: true };
     }
-    
+
     let startH = 9, startM = 0, endH = 10, endM = 0;
     const mRange = timeStr.match(/(\d{1,2}):(\d{2})\s*-\s*(\d{1,2}):(\d{2})/);
     const mSingle = timeStr.match(/(\d{1,2}):(\d{2})/);
-    
+
     if (mRange) {
       startH = parseInt(mRange[1], 10); startM = parseInt(mRange[2], 10);
       endH = parseInt(mRange[3], 10); endM = parseInt(mRange[4], 10);
@@ -344,7 +365,7 @@ export default async function EventPage({ params }: EventPageProps) {
       startH = parseInt(mSingle[1], 10); startM = parseInt(mSingle[2], 10);
       endH = (startH + 2) % 24; endM = startM;
     }
-    
+
     const dtStart = new Date(y, m - 1, d, startH, startM, 0);
     const dtEnd = new Date(y, m - 1, d, endH, endM, 0);
     return { dtStart, dtEnd, isAllDay: false };
@@ -354,7 +375,7 @@ export default async function EventPage({ params }: EventPageProps) {
   const getCalendarDates = () => {
     const timeInfo = parseTimes(event.date, event.time);
     const { dtStart, dtEnd, isAllDay } = timeInfo;
-    
+
     if (isAllDay) {
       const startDate = event.date.replace(/-/g, '');
       const endDate = event.date.replace(/-/g, '');
@@ -370,7 +391,7 @@ export default async function EventPage({ params }: EventPageProps) {
         const min = pad(date.getMinutes());
         return `${y}${m}${d}T${h}${min}00`;
       };
-      
+
       const startDate = formatForGoogle(dtStart);
       const endDate = formatForGoogle(dtEnd);
       return { startDate, endDate, isAllDay };
@@ -386,7 +407,7 @@ export default async function EventPage({ params }: EventPageProps) {
         <div className="mb-8">
           <Link href={`/${locale}/events`} className="inline-flex items-center text-red-600 hover:text-red-700 transition-colors">
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Powrót do wydarzeń
+            {t('detail.backToEvents')}
           </Link>
         </div>
 
@@ -395,17 +416,17 @@ export default async function EventPage({ params }: EventPageProps) {
           <div className="relative h-64 md:h-80">
             <Image
               src={event.image}
-              alt={event.title}
+              alt={eventTitle}
               fill
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
             <div className="absolute bottom-4 left-4 right-4">
               <span className="inline-block bg-red-600 text-white text-sm px-3 py-1 rounded-full mb-2">
-                {event.category}
+                {eventCategory}
               </span>
               <h1 className="text-2xl md:text-4xl font-bold text-white">
-                {event.title}
+                {eventTitle}
               </h1>
             </div>
           </div>
@@ -417,21 +438,21 @@ export default async function EventPage({ params }: EventPageProps) {
             {/* Description */}
             <Card className="bg-white">
               <CardContent className="p-6">
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">O wydarzeniu</h2>
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">{t('detail.aboutEvent')}</h2>
                 <div className="prose prose-gray max-w-none">
-                  {event.fullDescription?.split('\n').map((paragraph, index) => {
+                  {eventFullDescription?.split('\n').map((paragraph, index) => {
                     // Check if paragraph is a subtitle (contains common subtitle patterns)
                     const trimmed = paragraph.trim();
                     const isSubtitle = (
-                      trimmed.includes('🏃‍♂️') || 
-                      trimmed.includes('📝') || 
-                      trimmed.includes('⚠️') || 
+                      trimmed.includes('🏃‍♂️') ||
+                      trimmed.includes('📝') ||
+                      trimmed.includes('⚠️') ||
                       trimmed.includes('🎁') ||
                       trimmed.includes('👥') ||
                       trimmed.includes('📧') ||
                       /^[A-ZĄĆĘŁŃÓŚŹŻ\s]+:$/.test(trimmed)
                     ) && trimmed.endsWith(':');
-                    
+
                     if (isSubtitle) {
                       return (
                         <h3 key={index} className="text-lg font-bold text-gray-800 mt-6 mb-3 flex items-center">
@@ -439,15 +460,15 @@ export default async function EventPage({ params }: EventPageProps) {
                         </h3>
                       );
                     }
-                    
+
                     // Check if paragraph is empty (just spacing)
                     if (paragraph.trim() === '') {
                       return <div key={index} className="mb-2"></div>;
                     }
-                    
+
                     // Check if paragraph starts with bullet point or number
                     const isBulletPoint = /^[•\d]\s/.test(paragraph.trim());
-                    
+
                     if (isBulletPoint) {
                       return (
                         <p key={index} className="mb-2 text-gray-700 leading-relaxed ml-4">
@@ -455,7 +476,7 @@ export default async function EventPage({ params }: EventPageProps) {
                         </p>
                       );
                     }
-                    
+
                     // Regular paragraph
                     return (
                       <p key={index} className="mb-4 text-gray-700 leading-relaxed">
@@ -471,13 +492,13 @@ export default async function EventPage({ params }: EventPageProps) {
             {event.gallery && event.gallery.length > 0 && (
               <Card className="bg-white">
                 <CardContent className="p-6">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-4">Galeria</h2>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4">{t('detail.gallery')}</h2>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                     {event.gallery.map((image, index) => (
                       <div key={index} className="relative aspect-square rounded-lg overflow-hidden">
                         <Image
                           src={image}
-                          alt={`${event.title} - zdjęcie ${index + 1}`}
+                          alt={`${event.title} - ${t('detail.photoAlt')} ${index + 1}`}
                           fill
                           className="object-cover hover:scale-105 transition-transform duration-300"
                         />
@@ -495,7 +516,7 @@ export default async function EventPage({ params }: EventPageProps) {
             {/* Event details */}
             <Card className="bg-white">
               <CardContent className="p-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-4">Szczegóły wydarzenia</h3>
+                <h3 className="text-lg font-bold text-gray-900 mb-4">{t('detail.eventDetails')}</h3>
                 <div className="space-y-4">
                   <div className="flex items-center text-gray-700">
                     <Calendar className="w-5 h-5 mr-3 text-red-600 flex-shrink-0" />
@@ -504,14 +525,14 @@ export default async function EventPage({ params }: EventPageProps) {
                       {event.time && <div className="text-sm text-gray-500">{event.time}</div>}
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center text-gray-700">
                     <MapPin className="w-5 h-5 mr-3 text-red-600 flex-shrink-0" />
                     <div>
                       {(event.location.includes('Online') || event.location.includes('Allegro')) ? (
                         <span className="text-gray-700">{event.location}</span>
                       ) : (
-                        <a 
+                        <a
                           href={event.id === 5 ? 'https://maps.app.goo.gl/FR1RXEmzdsYAX42a6' : event.id === 1 ? 'https://maps.app.goo.gl/dJVBoLze5fe5AhB38' : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(event.location)}`}
                           target="_blank"
                           rel="noopener noreferrer"
@@ -522,7 +543,7 @@ export default async function EventPage({ params }: EventPageProps) {
                       )}
                     </div>
                   </div>
-                  
+
 
 
                   {event.contact && (
@@ -536,7 +557,7 @@ export default async function EventPage({ params }: EventPageProps) {
                     </div>
                   )}
                 </div>
-                
+
                 {/* Add to calendar button */}
                 {!isPastEvent && (
                   <div className="mt-6 pt-4 border-t border-gray-200">
@@ -550,7 +571,7 @@ export default async function EventPage({ params }: EventPageProps) {
                       className="inline-flex items-center w-full justify-center rounded-md border border-blue-300 bg-white text-blue-700 hover:bg-blue-50 px-4 py-2 text-sm font-medium shadow-sm transition-colors"
                     >
                       <Calendar className="w-4 h-4 mr-2 text-blue-700" />
-                      Dodaj do Google Calendar
+                      {t('detail.addToCalendar')}
                     </a>
                   </div>
                 )}
@@ -561,11 +582,11 @@ export default async function EventPage({ params }: EventPageProps) {
             {isPastEvent && (event.amountRaised || event.totalAmount) && (
               <Card className="bg-white">
                 <CardContent className="p-6">
-                  <h3 className="text-lg font-bold text-gray-900 mb-6">Zebrana kwota</h3>
+                  <h3 className="text-lg font-bold text-gray-900 mb-6">{t('detail.amountRaised')}</h3>
                   <div className="space-y-6">
                     {event.amountRaised && (
                       <div className="text-center bg-green-50 rounded-lg p-4 border-2 border-green-200">
-                        <div className="text-xs uppercase tracking-wide text-gray-600 mb-2 font-semibold">Podczas wydarzenia</div>
+                        <div className="text-xs uppercase tracking-wide text-gray-600 mb-2 font-semibold">{t('detail.duringEvent')}</div>
                         <div className="text-4xl font-bold text-green-600">
                           {event.amountRaised}
                         </div>
@@ -573,14 +594,14 @@ export default async function EventPage({ params }: EventPageProps) {
                     )}
                     {event.totalAmount && (
                       <div className="text-center bg-gray-50 rounded-lg p-3 border border-gray-200">
-                        <div className="text-xs uppercase tracking-wide text-gray-500 mb-1 font-medium">Łącznie podczas finału</div>
+                        <div className="text-xs uppercase tracking-wide text-gray-500 mb-1 font-medium">{t('detail.totalDuringFinale')}</div>
                         <div className="text-2xl font-bold text-gray-700">
                           {event.totalAmount}
                         </div>
                       </div>
                     )}
                     <div className="text-center text-sm text-gray-600 pt-2 italic">
-                      Dziękujemy za wsparcie! ❤️
+                      {t('detail.thankYou')} ❤️
                     </div>
                   </div>
                 </CardContent>
@@ -592,7 +613,7 @@ export default async function EventPage({ params }: EventPageProps) {
             {!isPastEvent && event.registrationLink && (
               <Card className="bg-white">
                 <CardContent className="p-6">
-                  <h3 className="text-lg font-bold text-gray-900 mb-4">Rejestracja</h3>
+                  <h3 className="text-lg font-bold text-gray-900 mb-4">{t('detail.registration')}</h3>
                   <div className="space-y-3">
                     <a
                       href={event.registrationLink}
@@ -601,17 +622,17 @@ export default async function EventPage({ params }: EventPageProps) {
                       className="block w-full"
                     >
                       <Button className="w-full bg-green-600 hover:bg-green-700 text-white cursor-pointer">
-                        Zarejestruj się na bieg
+                        {t('detail.registerForRun')}
                       </Button>
                     </a>
                     {event.registrationDeadline && (
                       <p className="text-sm text-gray-600 text-center">
-                        Termin rejestracji: {event.registrationDeadline}
+                        {t('detail.registrationDeadline')}: {event.registrationDeadline}
                       </p>
                     )}
                     <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-3">
                       <p className="text-xs text-yellow-800">
-                        <strong>Uwaga:</strong> Niepoprawne wypełnienie formularza może skutkować dopłatą 150 zł lub brakiem pakietu!
+                        <strong>{t('detail.warning')}:</strong> {t('detail.registrationWarning')}
                       </p>
                     </div>
                   </div>
@@ -622,10 +643,10 @@ export default async function EventPage({ params }: EventPageProps) {
             {/* Contact */}
             <Card className="bg-white">
               <CardContent className="p-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-4">Kontakt</h3>
+                <h3 className="text-lg font-bold text-gray-900 mb-4">{t('detail.contact')}</h3>
                 <div className="space-y-3">
                   <Button asChild className="w-full bg-red-600 hover:bg-red-700 text-white cursor-pointer">
-                    <Link href={`/${locale}/contact`}>Skontaktuj się z nami</Link>
+                    <Link href={`/${locale}/contact`}>{t('detail.contactUs')}</Link>
                   </Button>
                 </div>
               </CardContent>
