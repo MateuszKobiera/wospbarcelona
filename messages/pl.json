@@ -46,10 +46,11 @@
     "learnMore": "Dowiedz się więcej",
     "socials": {
       "title": "Dołącz do nas",
-      "description": "Jesteśmy na Facebooku, Instagramie i Meetupie.",
+      "description": "Jesteśmy na Facebooku, Instagramie, Meetupie i YouTube.",
       "facebookDesc": "Zobacz, co u nas słychać. Aktualności, zdjęcia i relacje z wydarzeń.",
       "instagramDesc": "Najnowsze zdjęcia i stories z naszych działań w Barcelonie.",
-      "meetupDesc": "Dołącz do naszych wydarzeń i spotkań polskiej społeczności."
+      "meetupDesc": "Dołącz do naszych wydarzeń i spotkań polskiej społeczności.",
+      "youtubeDesc": "Oglądaj nasze filmy i relacje z wydarzeń WOŚP Barcelona."
     },
     "stats": {
       "yearsHelp": "Lat pomocy",
@@ -170,10 +171,11 @@
       },
       "socialsSection": {
         "followTitle": "Dołącz do nas",
-        "description": "Jesteśmy na Facebooku, Instagramie i Meetupie. Śledź nasze social media, aby być na bieżąco!",
+        "description": "Jesteśmy na Facebooku, Instagramie, Meetupie i YouTube. Śledź nasze social media, aby być na bieżąco!",
         "facebookDesc": "Zobacz, co u nas słychać. Aktualności, zdjęcia i relacje z wydarzeń.",
         "instagramDesc": "Najnowsze zdjęcia i stories z naszych działań w Barcelonie.",
-        "meetupDesc": "Dołącz do naszych wydarzeń i spotkań polskiej społeczności."
+        "meetupDesc": "Dołącz do naszych wydarzeń i spotkań polskiej społeczności.",
+        "youtubeDesc": "Oglądaj nasze filmy i relacje z wydarzeń WOŚP Barcelona."
       },
       "final33Section": {
         "title": "33. Finał WOŚP w Barcelonie",
@@ -214,10 +216,11 @@
       },
       "socials": {
         "title": "Dołącz do nas",
-        "description": "Jesteśmy na Facebooku, Instagramie i Meetupie.",
+        "description": "Jesteśmy na Facebooku, Instagramie, Meetupie i YouTube.",
         "facebookDesc": "Zobacz, co u nas słychać. Aktualności, zdjęcia i relacje z wydarzeń.",
         "instagramDesc": "Najnowsze zdjęcia i stories z naszych działań w Barcelonie.",
-        "meetupDesc": "Dołącz do naszych wydarzeń i spotkań polskiej społeczności."
+        "meetupDesc": "Dołącz do naszych wydarzeń i spotkań polskiej społeczności.",
+        "youtubeDesc": "Oglądaj nasze filmy i relacje z wydarzeń WOŚP Barcelona."
       }
     },
     "categories": {
@@ -393,7 +396,9 @@
       "booking": "Rezerwacje",
       "trial": "Lekcja próbna",
       "careers": "Kariera",
-      "links": "Linki"
+      "links": "Linki",
+      "menu": "Menu",
+      "phone": "Telefon"
     },
     "categories": {
       "sponsors": {
@@ -412,7 +417,7 @@
     "items": {
       "bonaBarcelona": {
         "name": "Bona Barcelona",
-        "description": "Sponsor licytacji charytatywnej. Przekazuje vouchery na wycieczki: Montserrat dla 6 osób (480€) oraz Andora dla 6 osób (1020€). Vouchery ważne przez rok."
+        "description": "Polskie biuro podróży w Katalonii, które z pasją tworzy niezapomniane, spersonalizowane wyjazdy. Oferuje komfortowe noclegi, transfery, wyjątkowe doświadczenia i indywidualne plany zwiedzania. Główne kierunki to Barcelona, Montserrat, Costa Brava, Tarragona i Andora. Spełniaj marzenia o podróży z nami – komfortowo i z pasją!"
       },
       "wawelRestobar": {
         "name": "Wawel RestoBar",
@@ -421,6 +426,10 @@
       "solDeGracia": {
         "name": "Sol de Gracia",
         "description": "Najlepszy sklep z piwami rzemieślniczymi w Barcelonie. Sol de Gracia to sklep z piwami craftowymi z największym wyborem w całej Barcelonie. Przyjdź wybrać swoje ulubione piwo, gwarantujemy, że jeśli go nie mamy, to bardzo prawdopodobne, że nie istnieje."
+      },
+      "laMagiaSabores": {
+        "name": "La Magia de los Sabores",
+        "description": "Polski Food Truck na słodko i na słono. Food Truck Magia Smaków oferuje: polską kiełbasę z grillowaną karmelizowaną cebulą, polskie panini z grzybami i serem, domowe nuggetsy Kentucky, burgery Kentucky, burgery z grillowaną wołowiną, ciasta rzymskie. Kołacze o różnych smakach: cynamonowym, kokosowym, orzechowym i kolorowych cukierkach. Do Kołacza można dodać Nutellę lub śmietankę, w zależności od upodobań klienta. Również chipsy, napoje bezalkoholowe, piwo, rum i kawy."
       },
       "kosmoHisplano": {
         "name": "Stowarzyszenie Edukacyjne Kosmo HisPLano",
@@ -445,10 +454,11 @@
     "aboutGoal": "O celu Finału",
     "socials": {
       "title": "Dołącz do nas",
-      "description": "Jesteśmy na Facebooku, Instagramie i Meetupie.",
+      "description": "Jesteśmy na Facebooku, Instagramie, Meetupie i YouTube.",
       "facebookDesc": "Zobacz, co u nas słychać. Aktualności, zdjęcia i relacje z wydarzeń.",
       "instagramDesc": "Najnowsze zdjęcia i stories z naszych działań w Barcelonie.",
-      "meetupDesc": "Dołącz do naszych wydarzeń i spotkań polskiej społeczności."
+      "meetupDesc": "Dołącz do naszych wydarzeń i spotkań polskiej społeczności.",
+      "youtubeDesc": "Oglądaj nasze filmy i relacje z wydarzeń WOŚP Barcelona."
     }
   },
   "common": {

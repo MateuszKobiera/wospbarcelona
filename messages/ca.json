@@ -46,10 +46,11 @@
     "learnMore": "Més informació",
     "socials": {
       "title": "Uneix-te a nosaltres",
-      "description": "Som a Facebook, Instagram i Meetup.",
+      "description": "Som a Facebook, Instagram, Meetup i YouTube.",
       "facebookDesc": "Mira què hi ha de nou. Actualitzacions, fotos i relats d'esdeveniments.",
       "instagramDesc": "Últimes fotos i stories de les nostres activitats a Barcelona.",
-      "meetupDesc": "Uneix-te als nostres esdeveniments i trobades de la comunitat polonesa."
+      "meetupDesc": "Uneix-te als nostres esdeveniments i trobades de la comunitat polonesa.",
+      "youtubeDesc": "Mira els nostres vídeos i reportatges d'esdeveniments de WOŚP Barcelona."
     },
     "stats": {
       "yearsHelp": "Anys d'ajuda",
@@ -170,10 +171,11 @@
       },
       "socialsSection": {
         "followTitle": "Uneix-te a nosaltres",
-        "description": "Som a Facebook, Instagram i Meetup. Segueix-nos per estar al dia!",
+        "description": "Som a Facebook, Instagram, Meetup i YouTube. Segueix-nos per estar al dia!",
         "facebookDesc": "Mira què hi ha de nou. Actualitzacions, fotos i reportatges d'esdeveniments.",
         "instagramDesc": "Últimes fotos i stories de les nostres activitats a Barcelona.",
-        "meetupDesc": "Uneix-te als nostres esdeveniments i trobades de la comunitat polonesa."
+        "meetupDesc": "Uneix-te als nostres esdeveniments i trobades de la comunitat polonesa.",
+        "youtubeDesc": "Mira els nostres vídeos i reportatges d'esdeveniments de WOŚP Barcelona."
       },
       "final33Section": {
         "title": "33è Final de la WOŚP a Barcelona",
@@ -214,10 +216,11 @@
       },
       "socials": {
         "title": "Uneix-te a nosaltres",
-        "description": "Som a Facebook, Instagram i Meetup.",
+        "description": "Som a Facebook, Instagram, Meetup i YouTube.",
         "facebookDesc": "Mira què hi ha de nou. Actualitzacions, fotos i reportatges d'esdeveniments.",
         "instagramDesc": "Últimes fotos i stories de les nostres activitats a Barcelona.",
-        "meetupDesc": "Uneix-te als nostres esdeveniments i trobades de la comunitat polonesa."
+        "meetupDesc": "Uneix-te als nostres esdeveniments i trobades de la comunitat polonesa.",
+        "youtubeDesc": "Mira els nostres vídeos i reportatges d'esdeveniments de WOŚP Barcelona."
       }
     },
     "categories": {
@@ -397,7 +400,9 @@
       "booking": "Reserves",
       "trial": "Classe de prova",
       "careers": "Feina",
-      "links": "Enllaços"
+      "links": "Enllaços",
+      "menu": "Menú",
+      "phone": "Telèfon"
     },
     "categories": {
       "sponsors": {
@@ -416,7 +421,7 @@
     "items": {
       "bonaBarcelona": {
         "name": "Bona Barcelona",
-        "description": "Patrocinador de subhastes benèfiques. Proporciona vals per a excursions: Montserrat per a 6 persones (480€) i Andorra per a 6 persones (1020€). Vals vàlids durant un any."
+        "description": "Agència de viatges polonesa a Catalunya que crea viatges inoblidables i personalitzats amb passió. Ofereix allotjament confortable, trasllats, experiències úniques i plans de visita individuals. Les principals destinacions són Barcelona, Montserrat, Costa Brava, Tarragona i Andorra. Compleix els teus somnis de viatge amb nosaltres, amb comoditat i passió!"
       },
       "wawelRestobar": {
         "name": "Wawel RestoBar",
@@ -425,6 +430,10 @@
       "solDeGracia": {
         "name": "Sol de Gracia",
         "description": "La millor botiga de cerveses artesanals de Barcelona. Sol de Gracia és una botiga de cerveses craft amb la selecció més gran de tota Barcelona. Vine a triar la teva cervesa preferida, et garantim que si no la tenim, probablement no existeix."
+      },
+      "laMagiaSabores": {
+        "name": "La Magia de los Sabores",
+        "description": "Food Truck polonès dolç i salat. Food Truck Magia dels Sabors ofereix: salsitxa polonesa amb ceba caramel·litzada a la graella, panini polonès amb xampinyons i formatge, nuggets Kentucky casolans, hamburgueses Kentucky, hamburgueses de vedella a la graella, pastissos romans. Kołacze (pastissos de xemeneia) en diversos sabors: canyella, coco, nous i caramels de colors. Pots afegir Nutella o nata al Kołacz, segons la preferència del client. També patates fregides, refrescos, cervesa, rom i cafè."
       },
       "kosmoHisplano": {
         "name": "Associació Educativa Kosmo HisPLano",
@@ -449,10 +458,11 @@
     "aboutGoal": "Sobre l'objectiu del Final",
     "socials": {
       "title": "Uneix-te a nosaltres",
-      "description": "Som a Facebook, Instagram i Meetup.",
+      "description": "Som a Facebook, Instagram, Meetup i YouTube.",
       "facebookDesc": "Mira què hi ha de nou. Actualitzacions, fotos i reportatges d'esdeveniments.",
       "instagramDesc": "Últimes fotos i stories de les nostres activitats a Barcelona.",
-      "meetupDesc": "Uneix-te als nostres esdeveniments i trobades de la comunitat polonesa."
+      "meetupDesc": "Uneix-te als nostres esdeveniments i trobades de la comunitat polonesa.",
+      "youtubeDesc": "Mira els nostres vídeos i reportatges d'esdeveniments de WOŚP Barcelona."
     }
   },
   "common": {

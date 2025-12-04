@@ -12,6 +12,7 @@ const DEFAULT_SPONSORS: Sponsor[] = [
   { name: 'Bona Barcelona', logo: '/images/sponsors/logo wektory-krzywe kolor DO DRUKU-1.png' },
   { name: 'Wawel RestoBar', logo: '/images/sponsors/Wawel.png' },
   { name: 'Sol de Gracia', logo: '/images/sponsors/311836535_638740301171743_4776177943725666713_n.png' },
+  { name: 'La Magia de los Sabores', logo: '/images/sponsors/la-magia-de-los-sabores.jpg' },
   { name: 'Stowarzyszenie Edukacyjne Kosmo HisPLano', logo: '/images/sponsors/kosmo-his-plano.png' },
 ];
 

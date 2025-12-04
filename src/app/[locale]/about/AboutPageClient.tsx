@@ -6,7 +6,7 @@ import { Calendar, Award, Stethoscope, ExternalLink, Users, Heart, HeartHandshak
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { siFacebook, siInstagram, siMeetup } from 'simple-icons/icons';
+import { siFacebook, siInstagram, siMeetup, siYoutube } from 'simple-icons/icons';
 import { useState } from 'react';
 
 export default function AboutPageClient() {
@@ -226,7 +226,7 @@ export default function AboutPageClient() {
                             <p className="text-gray-600">{t('page.socialsSection.description')}</p>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
                             <Link href="https://facebook.com/sztabWOSPBarcelona" target="_blank" rel="noopener noreferrer" className="block">
                                 <Card className="border-gray-200/80 transition hover:shadow-md hover:-translate-y-0.5 cursor-pointer">
                                     <CardContent className="p-4">
@@ -271,6 +271,22 @@ export default function AboutPageClient() {
                                             <div className="text-sm font-semibold text-gray-900">Meetup</div>
                                         </div>
                                         <p className="text-sm text-gray-700">{t('page.socialsSection.meetupDesc')}</p>
+                                    </CardContent>
+                                </Card>
+                            </Link>
+
+                            <Link href="https://www.youtube.com/@sztabwospbarcelona3771" target="_blank" rel="noopener noreferrer" className="block">
+                                <Card className="border-gray-200/80 transition hover:shadow-md hover:-translate-y-0.5 cursor-pointer">
+                                    <CardContent className="p-4">
+                                        <div className="flex items-center mb-3">
+                                            <div className="w-9 h-9 rounded-full bg-red-100 flex items-center justify-center mr-2">
+                                                <svg role="img" viewBox="0 0 24 24" className="w-5 h-5 text-red-600 fill-current" aria-hidden>
+                                                    <path d={siYoutube.path} />
+                                                </svg>
+                                            </div>
+                                            <div className="text-sm font-semibold text-gray-900">YouTube</div>
+                                        </div>
+                                        <p className="text-sm text-gray-700">{t('page.socialsSection.youtubeDesc')}</p>
                                     </CardContent>
                                 </Card>
                             </Link>

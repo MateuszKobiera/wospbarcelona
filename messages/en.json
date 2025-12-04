@@ -46,10 +46,11 @@
     "learnMore": "Learn more",
     "socials": {
       "title": "Join us",
-      "description": "We are on Facebook, Instagram and Meetup.",
+      "description": "We are on Facebook, Instagram, Meetup and YouTube.",
       "facebookDesc": "See what's new. Updates, photos and event reports.",
       "instagramDesc": "Latest photos and stories from our activities in Barcelona.",
-      "meetupDesc": "Join our events and meetings of the Polish community."
+      "meetupDesc": "Join our events and meetings of the Polish community.",
+      "youtubeDesc": "Watch our videos and event reports from WOŚP Barcelona."
     },
     "stats": {
       "yearsHelp": "Years of help",
@@ -170,10 +171,11 @@
       },
       "socialsSection": {
         "followTitle": "Join us",
-        "description": "We are on Facebook, Instagram and Meetup. Follow our social media to stay up to date!",
+        "description": "We are on Facebook, Instagram, Meetup and YouTube. Follow our social media to stay up to date!",
         "facebookDesc": "See what's new. Updates, photos and event reports.",
         "instagramDesc": "Latest photos and stories from our activities in Barcelona.",
-        "meetupDesc": "Join our events and meetings of the Polish community."
+        "meetupDesc": "Join our events and meetings of the Polish community.",
+        "youtubeDesc": "Watch our videos and event reports from WOŚP Barcelona."
       },
       "final33Section": {
         "title": "33rd WOŚP Finale in Barcelona",
@@ -214,10 +216,11 @@
       },
       "socials": {
         "title": "Join us",
-        "description": "We are on Facebook, Instagram and Meetup.",
+        "description": "We are on Facebook, Instagram, Meetup and YouTube.",
         "facebookDesc": "See what's new. Updates, photos and event reports.",
         "instagramDesc": "Latest photos and stories from our activities in Barcelona.",
-        "meetupDesc": "Join our events and meetings of the Polish community."
+        "meetupDesc": "Join our events and meetings of the Polish community.",
+        "youtubeDesc": "Watch our videos and event reports from WOŚP Barcelona."
       }
     },
     "categories": {
@@ -393,7 +396,9 @@
       "booking": "Booking",
       "trial": "Free trial",
       "careers": "Careers",
-      "links": "Links"
+      "links": "Links",
+      "menu": "Menu",
+      "phone": "Phone"
     },
     "categories": {
       "sponsors": {
@@ -412,7 +417,7 @@
     "items": {
       "bonaBarcelona": {
         "name": "Bona Barcelona",
-        "description": "Charity auction sponsor. Provides vouchers for trips: Montserrat for 6 people (€480) and Andorra for 6 people (€1020). Vouchers valid for one year."
+        "description": "Polish travel agency in Catalonia creating unforgettable, personalized trips with passion. Offering comfortable accommodation, transfers, unique experiences, and individual sightseeing plans. Main destinations include Barcelona, Montserrat, Costa Brava, Tarragona, and Andorra. Fulfill your travel dreams with us – comfortably and passionately!"
       },
       "wawelRestobar": {
         "name": "Wawel RestoBar",
@@ -421,6 +426,10 @@
       "solDeGracia": {
         "name": "Sol de Gracia",
         "description": "The best craft beer shop in Barcelona. Sol de Gracia is a craft beer shop with the largest selection in all of Barcelona. Come choose your favorite beer, we guarantee that if we don't have it, it probably doesn't exist."
+      },
+      "laMagiaSabores": {
+        "name": "La Magia de los Sabores",
+        "description": "Polish Food Truck for sweet and savory. Food Truck Magia Smaków offers: Polish sausage with grilled caramelized onion, Polish panini with mushrooms and cheese, homemade Kentucky nuggets, Kentucky burgers, grilled beef burgers, Roman cakes. Kołacze (chimney cakes) in various flavors: cinnamon, coconut, nut and colorful candies. You can add Nutella or cream to the Kołacz, depending on the customer's preference. Also chips, soft drinks, beer, rum and coffee."
       },
       "kosmoHisplano": {
         "name": "Kosmo HisPLano Educational Association",
@@ -445,10 +454,11 @@
     "aboutGoal": "About the Finale goal",
     "socials": {
       "title": "Join us",
-      "description": "We are on Facebook, Instagram and Meetup.",
+      "description": "We are on Facebook, Instagram, Meetup and YouTube.",
       "facebookDesc": "See what's new. Updates, photos and event reports.",
       "instagramDesc": "Latest photos and stories from our activities in Barcelona.",
-      "meetupDesc": "Join our events and meetings of the Polish community."
+      "meetupDesc": "Join our events and meetings of the Polish community.",
+      "youtubeDesc": "Watch our videos and event reports from WOŚP Barcelona."
     }
   },
   "common": {

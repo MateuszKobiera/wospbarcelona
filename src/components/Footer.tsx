@@ -2,7 +2,7 @@
 
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
-import { Facebook, Instagram, Youtube } from '@/components/icons/SocialIcons';
+import { Facebook, Instagram, Youtube, Meetup } from '@/components/icons/SocialIcons';
 import { Mail, MapPin } from 'lucide-react';
 import Image from 'next/image';
 
@@ -13,9 +13,10 @@ export function Footer() {
   const locale = useLocale();
 
   const socialLinks = [
-    { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Instagram, href: '#', label: 'Instagram' },
-    { icon: Youtube, href: '#', label: 'YouTube' },
+    { icon: Facebook, href: 'https://facebook.com/sztabWOSPBarcelona', label: 'Facebook' },
+    { icon: Instagram, href: 'https://instagram.com/wospbarcelona', label: 'Instagram' },
+    { icon: Youtube, href: 'https://www.youtube.com/@sztabwospbarcelona3771', label: 'YouTube' },
+    { icon: Meetup, href: 'https://www.meetup.com/wośp-barcelona', label: 'Meetup' },
   ];
 
   const quickLinks = [
@@ -44,7 +45,7 @@ export function Footer() {
               <span className="font-bold text-xl">WOŚP Barcelona</span>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">{t('description')}</p>
-            
+
             {/* Social Media */}
             <div>
               <h3 className="text-lg font-semibold mb-4">{t('socials')}</h3>
@@ -67,7 +68,7 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">{t('quickLinks')}</h3>
             <ul className="space-y-2">
-              {quickLinks.filter((l): l is {name:string; href:string} => Boolean(l.href)).map((link) => (
+              {quickLinks.filter((l): l is { name: string; href: string } => Boolean(l.href)).map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
@@ -90,14 +91,14 @@ export function Footer() {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-red-600" />
-                <a 
-                  href="mailto:sztab@wospbarcelona.org" 
+                <a
+                  href="mailto:sztab@wospbarcelona.org"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   {contactT('info.email')}
                 </a>
               </div>
-                          </div>
+            </div>
           </div>
         </div>
 

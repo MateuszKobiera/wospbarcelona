@@ -20,7 +20,7 @@ const socialLinks = [
   },
   {
     name: 'YouTube',
-    href: 'https://youtube.com/@wospbarcelona',
+    href: 'https://www.youtube.com/@sztabwospbarcelona3771',
     icon: Youtube,
     color: 'hover:bg-red-600',
     description: 'Oglądaj nasze filmy na YouTube'
@@ -50,7 +50,7 @@ export function SocialMedia() {
             Dołącz do nas w mediach społecznościowych
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Bądź na bieżąco z naszymi wydarzeniami, inicjatywami i historiami pomocy. 
+            Bądź na bieżąco z naszymi wydarzeniami, inicjatywami i historiami pomocy.
             Śledź nas w mediach społecznościowych i bierz udział w naszej misji!
           </p>
         </div>
@@ -112,7 +112,7 @@ export function SocialMedia() {
                 </div>
               </div>
               <p className="text-gray-700 mb-3">
-                Dziękujemy wszystkim za udział w wczorajszym koncercie charytatywnym! 🎵❤️ 
+                Dziękujemy wszystkim za udział w wczorajszym koncercie charytatywnym! 🎵❤️
                 Zebraliśmy 5,000 euro na sprzęt medyczny.
               </p>
               <div className="flex items-center text-sm text-gray-500">
@@ -135,7 +135,7 @@ export function SocialMedia() {
                 </div>
               </div>
               <p className="text-gray-700 mb-3">
-                Spotkanie organizacyjne przed 33. Finałem WOŚP! 📋✨ 
+                Spotkanie organizacyjne przed 33. Finałem WOŚP! 📋✨
                 Mamy już 100 wolontariuszy!
               </p>
               <div className="flex items-center text-sm text-gray-500">
@@ -156,7 +156,7 @@ export function SocialMedia() {
                 </div>
               </div>
               <p className="text-gray-700 mb-3">
-                Nowy film z podsumowaniem 32. Finału WOŚP w Barcelonie! 
+                Nowy film z podsumowaniem 32. Finału WOŚP w Barcelonie!
                 Zobaczcie, jak razem zmieniamy świat 🌍
               </p>
               <div className="flex items-center text-sm text-gray-500">

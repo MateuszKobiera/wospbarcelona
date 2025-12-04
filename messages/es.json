@@ -46,10 +46,11 @@
     "learnMore": "Saber más",
     "socials": {
       "title": "Únete a nosotros",
-      "description": "Estamos en Facebook, Instagram y Meetup.",
+      "description": "Estamos en Facebook, Instagram, Meetup y YouTube.",
       "facebookDesc": "Mira qué hay de nuevo. Actualizaciones, fotos y reportajes de eventos.",
       "instagramDesc": "Últimas fotos y stories de nuestras actividades en Barcelona.",
-      "meetupDesc": "Únete a nuestros eventos y reuniones de la comunidad polaca."
+      "meetupDesc": "Únete a nuestros eventos y reuniones de la comunidad polaca.",
+      "youtubeDesc": "Mira nuestros vídeos y reportajes de eventos de WOŚP Barcelona."
     },
     "stats": {
       "yearsHelp": "Años de ayuda",
@@ -170,10 +171,11 @@
       },
       "socialsSection": {
         "followTitle": "Únete a nosotros",
-        "description": "Estamos en Facebook, Instagram y Meetup. ¡Síguenos para estar al día!",
+        "description": "Estamos en Facebook, Instagram, Meetup y YouTube. ¡Síguenos para estar al día!",
         "facebookDesc": "Mira qué hay de nuevo. Actualizaciones, fotos y reportajes de eventos.",
         "instagramDesc": "Últimas fotos y stories de nuestras actividades en Barcelona.",
-        "meetupDesc": "Únete a nuestros eventos y reuniones de la comunidad polaca."
+        "meetupDesc": "Únete a nuestros eventos y reuniones de la comunidad polaca.",
+        "youtubeDesc": "Mira nuestros vídeos y reportajes de eventos de WOŚP Barcelona."
       },
       "final33Section": {
         "title": "33.º Final de WOŚP en Barcelona",
@@ -214,10 +216,11 @@
       },
       "socials": {
         "title": "Únete a nosotros",
-        "description": "Estamos en Facebook, Instagram y Meetup.",
+        "description": "Estamos en Facebook, Instagram, Meetup y YouTube.",
         "facebookDesc": "Mira qué hay de nuevo. Actualizaciones, fotos y reportajes de eventos.",
         "instagramDesc": "Últimas fotos y stories de nuestras actividades en Barcelona.",
-        "meetupDesc": "Únete a nuestros eventos y reuniones de la comunidad polaca."
+        "meetupDesc": "Únete a nuestros eventos y reuniones de la comunidad polaca.",
+        "youtubeDesc": "Mira nuestros vídeos y reportajes de eventos de WOŚP Barcelona."
       }
     },
     "categories": {
@@ -393,7 +396,9 @@
       "booking": "Reservas",
       "trial": "Clase de prueba",
       "careers": "Empleo",
-      "links": "Enlaces"
+      "links": "Enlaces",
+      "menu": "Menú",
+      "phone": "Teléfono"
     },
     "categories": {
       "sponsors": {
@@ -412,7 +417,7 @@
     "items": {
       "bonaBarcelona": {
         "name": "Bona Barcelona",
-        "description": "Patrocinador de subastas benéficas. Proporciona vales para excursiones: Montserrat para 6 personas (480€) y Andorra para 6 personas (1020€). Vales válidos por un año."
+        "description": "Agencia de viajes polaca en Cataluña que crea viajes inolvidables y personalizados con pasión. Ofrece alojamiento confortable, traslados, experiencias únicas y planes de visita individuales. Los principales destinos son Barcelona, Montserrat, Costa Brava, Tarragona y Andorra. ¡Cumple tus sueños de viaje con nosotros, con comodidad y pasión!"
       },
       "wawelRestobar": {
         "name": "Wawel RestoBar",
@@ -421,6 +426,10 @@
       "solDeGracia": {
         "name": "Sol de Gracia",
         "description": "La mejor tienda de cervezas artesanales de Barcelona. Sol de Gracia es una tienda de cervezas craft con la mayor selección de toda Barcelona. Ven a elegir tu cerveza favorita, te garantizamos que si no la tenemos, probablemente no existe."
+      },
+      "laMagiaSabores": {
+        "name": "La Magia de los Sabores",
+        "description": "Food Truck polaco dulce y salado. Food Truck Magia de los Sabores ofrece: salchicha polaca con cebolla caramelizada a la parrilla, panini polaco con champiñones y queso, nuggets Kentucky caseros, hamburguesas Kentucky, hamburguesas de ternera a la parrilla, pasteles romanos. Kołacze (pasteles de chimenea) en varios sabores: canela, coco, nuez y caramelos de colores. Puedes añadir Nutella o nata al Kołacz, según la preferencia del cliente. También patatas fritas, refrescos, cerveza, ron y café."
       },
       "kosmoHisplano": {
         "name": "Asociación Educativa Kosmo HisPLano",
@@ -445,10 +454,11 @@
     "aboutGoal": "Sobre el objetivo del Final",
     "socials": {
       "title": "Únete a nosotros",
-      "description": "Estamos en Facebook, Instagram y Meetup.",
+      "description": "Estamos en Facebook, Instagram, Meetup y YouTube.",
       "facebookDesc": "Mira qué hay de nuevo. Actualizaciones, fotos y reportajes de eventos.",
       "instagramDesc": "Últimas fotos y stories de nuestras actividades en Barcelona.",
-      "meetupDesc": "Únete a nuestros eventos y reuniones de la comunidad polaca."
+      "meetupDesc": "Únete a nuestros eventos y reuniones de la comunidad polaca.",
+      "youtubeDesc": "Mira nuestros vídeos y reportajes de eventos de WOŚP Barcelona."
     }
   },
   "common": {
