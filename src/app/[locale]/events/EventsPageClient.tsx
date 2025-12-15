@@ -13,17 +13,6 @@ import { ContactForm } from '@/components/ContactForm';
 // Event data - only non-translatable fields
 const upcomingEventsData = [
   {
-    id: 8,
-    date: '2025-12-14',
-    time: '15:00',
-    location: 'Wawel, Barcelona',
-    categoryKey: 'volunteerMeeting',
-    image: '/images/kalendarz/06_SLIDE_34_F_ZAGRA_25_01_2026 (1).jpg',
-    registrationRequired: false,
-    meetupLink: null,
-    facebookLink: null
-  },
-  {
     id: 5,
     date: '2026-01-18',
     time: '10:30',
@@ -62,6 +51,14 @@ const upcomingEventsData = [
 ];
 
 const pastEventsData = [
+  {
+    id: 8,
+    date: '2025-12-14',
+    time: '15:00',
+    location: 'Wawel, Barcelona',
+    categoryKey: 'volunteerMeeting',
+    image: '/images/kalendarz/06_SLIDE_34_F_ZAGRA_25_01_2026 (1).jpg'
+  },
   {
     id: 7,
     date: '2025-12-03',
@@ -163,7 +160,7 @@ export default function EventsPageClient() {
 
   return (
     <>
-      <main className="py-16 bg-gradient-to-br from-white via-red-50 to-pink-100">
+      <main className="py-16 bg-linear-to-br from-white via-red-50 to-pink-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -206,7 +203,7 @@ export default function EventsPageClient() {
                               className="object-cover"
                             />
                           ) : (
-                            <div className={`w-full h-full bg-gradient-to-br ${isFinal ? 'from-red-500 to-orange-500' : 'from-red-400 to-pink-400'} flex items-center justify-center`}>
+                            <div className={`w-full h-full bg-linear-to-br ${isFinal ? 'from-red-500 to-orange-500' : 'from-red-400 to-pink-400'} flex items-center justify-center`}>
                               <Calendar className={`${isFinal ? 'w-24 h-24' : 'w-16 h-16'} text-white`} />
                             </div>
                           )}
@@ -349,7 +346,7 @@ export default function EventsPageClient() {
                   : event.location;
                 return (
                   <Card key={event.id} className="h-full bg-white border border-red-100 shadow-sm hover:shadow-md transition-shadow">
-                    <div className="h-32 bg-gradient-to-br from-gray-400 to-gray-500 flex items-center justify-center">
+                    <div className="h-32 bg-linear-to-br from-gray-400 to-gray-500 flex items-center justify-center">
                       <Calendar className="w-12 h-12 text-white" />
                     </div>
                     <CardContent className="p-6">
