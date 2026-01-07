@@ -42,6 +42,22 @@
     "title": "WOŚP Barcelona",
     "subtitle": "Wielka Orkiestra Świątecznej Pomocy w Barcelonie",
     "description": "Jesteśmy dynamiczną społecznością Polaków w Barcelonie, która od 9 lat organizuje Finały WOŚP i wydarzenia charytatywne, łącząc pasję z pomocą.",
+    "final34Banner": {
+      "title": "Do finału zostało",
+      "dateLabel": "Data",
+      "dateValue": "25 stycznia 2026, 12:00",
+      "locationLabel": "Miejsce",
+      "locationValue": "Espacio 88 — Carrer de Pamplona 88, Barcelona",
+      "goalLabel": "Cel",
+      "goalValue": "Choroby przewodu pokarmowego u dzieci",
+      "cta": "Zobacz wydarzenie",
+      "time": {
+        "days": "dni",
+        "hours": "godz.",
+        "minutes": "min",
+        "seconds": "sek"
+      }
+    },
     "cta": "Dołącz do nas",
     "learnMore": "Dowiedz się więcej",
     "socials": {

@@ -42,6 +42,22 @@
     "title": "WOŚP Barcelona",
     "subtitle": "Great Orchestra of Christmas Charity in Barcelona",
     "description": "We are a dynamic community of Poles in Barcelona who for 8 years has been organizing WOŚP Finals and charity events, combining passion with help.",
+    "final34Banner": {
+      "title": "Countdown to the 34th WOŚP Finale",
+      "dateLabel": "Date",
+      "dateValue": "January 25, 2026, 12:00",
+      "locationLabel": "Location",
+      "locationValue": "Espacio 88 — Carrer de Pamplona 88, Barcelona",
+      "goalLabel": "Goal",
+      "goalValue": "Gastrointestinal diseases in children",
+      "cta": "View event",
+      "time": {
+        "days": "days",
+        "hours": "hrs",
+        "minutes": "min",
+        "seconds": "sec"
+      }
+    },
     "cta": "Join us",
     "learnMore": "Learn more",
     "socials": {

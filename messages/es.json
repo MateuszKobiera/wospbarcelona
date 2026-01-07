@@ -42,6 +42,22 @@
     "title": "WOŚP Barcelona",
     "subtitle": "Gran Orquesta de la Ayuda Navideña en Barcelona",
     "description": "Somos una comunidad dinámica de polacos en Barcelona que desde hace 8 años organiza Finales de WOŚP y eventos benéficos, uniendo la pasión con la ayuda.",
+    "final34Banner": {
+      "title": "Cuenta atrás para el 34º Final de WOŚP",
+      "dateLabel": "Fecha",
+      "dateValue": "25 de enero de 2026, 12:00",
+      "locationLabel": "Lugar",
+      "locationValue": "Espacio 88 — Carrer de Pamplona 88, Barcelona",
+      "goalLabel": "Objetivo",
+      "goalValue": "Enfermedades del tracto digestivo en niños",
+      "cta": "Ver evento",
+      "time": {
+        "days": "días",
+        "hours": "h",
+        "minutes": "min",
+        "seconds": "s"
+      }
+    },
     "cta": "Únete a nosotros",
     "learnMore": "Saber más",
     "socials": {
