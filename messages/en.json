@@ -398,7 +398,10 @@
       "careers": "Careers",
       "links": "Links",
       "menu": "Menu",
-      "phone": "Phone"
+      "phone": "Phone",
+      "copyPhone": "Copy",
+      "close": "Close",
+      "phoneNumber": "Phone number:"
     },
     "categories": {
       "sponsors": {
@@ -419,9 +422,33 @@
         "name": "Bona Barcelona",
         "description": "Polish travel agency in Catalonia creating unforgettable, personalized trips with passion. Offering comfortable accommodation, transfers, unique experiences, and individual sightseeing plans. Main destinations include Barcelona, Montserrat, Costa Brava, Tarragona, and Andorra. Fulfill your travel dreams with us – comfortably and passionately!"
       },
+      "krakoviak": {
+        "name": "Krakoviak",
+        "description": "Polish Shop in Barcelona. This is a place you must visit when you miss traditional Polish products. Pierogi, cheeses, pickled cucumbers, cold cuts, cottage cheese, sour cream, homogenized cheeses, sausages, sticks and many other Polish specialties can be found right here! The shop is located right next to Sagrada Familia, on Sicilia Street. Additionally, Krakoviak is even open on Sunday, when other shops are closed – a perfect place for shopping at any time!"
+      },
+      "artTur": {
+        "name": "ART-TUR",
+        "description": "Transport Poland Spain. ART-TUR is a transport company operating since 1993, offering safe and comfortable 9-person bus transport. Thanks to a reliable fleet and experienced drivers, we enjoy the trust of numerous regular clients. Our priority is the satisfaction and comfort of passengers. We invite you to use our services and join the group of satisfied customers."
+      },
+      "deliciasByBea": {
+        "name": "Delicias by Bea",
+        "description": "Polish confectionery in Barcelona. Bea Michalak is an experienced confectioner who combines traditional flavors of Polish cuisine with modern confectionery techniques. She developed her passion for baking since childhood and perfected it in Berlin and Barcelona. Today, in the heart of the Gothic district of Barcelona, she creates exceptional pastries inspired by both family traditions and multicultural surroundings."
+      },
+      "polcat": {
+        "name": "PolCat",
+        "description": "Polish Travel Agency in Barcelona. We are a travel agency, friends with passion organizing trips, excursions and transfers for almost 20 years! Thanks to our experience and commitment, we provide unforgettable journeys, tailored to the needs of each client."
+      },
+      "tomexCarBus": {
+        "name": "Tomex Car-Bus",
+        "description": "Specialist in mechanics, electrics, air conditioning and suspensions in Catalonia. Comprehensive automatic transmission oil changes, fast and professional engine repair or replacement. Vehicle mechanics workshop in Santa Eugènia de Berga offering a wide range of services: general mechanics, electrics, air conditioning service, oil, filter and fluid changes, as well as suspension, brake and shock absorber repairs. Specializes in servicing passenger cars, vans, trucks up to 3.5 tons, and also deals with the purchase and sale of buses and cars."
+      },
       "wawelRestobar": {
         "name": "Wawel RestoBar",
         "description": "Polish restaurant in Barcelona. A little piece of Poland in the heart of Barcelona. Here you can order perfectly prepared pierogi, soup and sausages. The chefs prepare delicious pancakes, apple pie and other Polish specialties. According to guests, the beer tastes excellent here."
+      },
+      "domiWKatalonii": {
+        "name": "Domi w Katalonii",
+        "description": "Travel blogger Dominika Barska, who writes about Barcelona and Catalonia, offering guides and tips for tourists."
       },
       "solDeGracia": {
         "name": "Sol de Gracia",

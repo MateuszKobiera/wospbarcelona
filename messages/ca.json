@@ -402,7 +402,10 @@
       "careers": "Feina",
       "links": "Enllaços",
       "menu": "Menú",
-      "phone": "Telèfon"
+      "phone": "Telèfon",
+      "copyPhone": "Copiar",
+      "close": "Tancar",
+      "phoneNumber": "Número de telèfon:"
     },
     "categories": {
       "sponsors": {
@@ -423,9 +426,33 @@
         "name": "Bona Barcelona",
         "description": "Agència de viatges polonesa a Catalunya que crea viatges inoblidables i personalitzats amb passió. Ofereix allotjament confortable, trasllats, experiències úniques i plans de visita individuals. Les principals destinacions són Barcelona, Montserrat, Costa Brava, Tarragona i Andorra. Compleix els teus somnis de viatge amb nosaltres, amb comoditat i passió!"
       },
+      "krakoviak": {
+        "name": "Krakoviak",
+        "description": "Botiga polonesa a Barcelona. Aquest és un lloc que heu de visitar quan us manquen els productes tradicionals polonesos. Pierogi, formatges, cogombres en vinagre, embotits, mató, nata àcida, formatges homogeneïtzats, salsitxes, palitos i moltes altres especialitats poloneses es poden trobar just aquí. La botiga es troba just al costat de la Sagrada Familia, al carrer Sicilia. A més, Krakoviak està obert fins i tots els diumenges, quan altres botigues estan tancades – un lloc perfecte per compres en qualsevol moment."
+      },
+      "artTur": {
+        "name": "ART-TUR",
+        "description": "Transport Polònia Espanya. ART-TUR és una empresa de transport que opera des de 1993, oferint transport segur i còmode en autobusos de 9 persones. Gràcies a una flota confiable i conductors experimentats, gaudim de la confiança de nombrosos clients regulars. La nostra prioritat és la satisfacció i comoditat dels passatgers. Us convidem a utilitzar els nostres serveis i unir-se al grup de clients satisfets."
+      },
+      "deliciasByBea": {
+        "name": "Delicias by Bea",
+        "description": "Pastisseria polonesa a Barcelona. Bea Michalak és una pastissera experimentada que combina els sabors tradicionals de la cuina polonesa amb tècniques de pastisseria modernes. Va desenvolupant la seva passió per la pastisseria des de la infància i la va perfeccionar a Berlín i Barcelona. Avui, al cor del barri gòtic de Barcelona, crea pastissos excepcionals inspirats tant en les tradicions familiars com en l'entorn multicultural."
+      },
+      "polcat": {
+        "name": "PolCat",
+        "description": "Agència de viatges polonesa a Barcelona. Som una agència de viatges, amics amb passió organitzant viatges, excursions i transferències des de fa quasi 20 anys. Gràcies a la nostra experiència i compromís, proporcionem viatges inoblidables, adaptats a les necessitats de cada client."
+      },
+      "tomexCarBus": {
+        "name": "Tomex Car-Bus",
+        "description": "Especialista en mecànica, electricitat, aire condicionat i suspensions a Catalunya. Canvi integral d'olis en caixa automàtica, reparació o canvi ràpid i professional de motors. Taller de mecànica de vehicles a Santa Eugènia de Berga que ofereix una amplia gamma de serveis: mecànica general, electricitat, servei d'aire condicionat, canvi d'olis, filtres, fluids, així com reparacions de suspensió, frens i amortidors. S'especialitza en el servei de cotxes particulars, furgonetes, camions fins a 3,5 tones, i també es dedica a la compra i venda d'autobusos i cotxes."
+      },
       "wawelRestobar": {
         "name": "Wawel RestoBar",
         "description": "Restaurant polonès a Barcelona. Un petit tros de Polònia al cor de Barcelona. Aquí pots demanar pierogi perfectament preparats, sopa i salsitxes. Els xefs preparen deliciosos creps, pastís de poma i altres especialitats poloneses. Segons els clients, la cervesa té un gust excel·lent aquí."
+      },
+      "domiWKatalonii": {
+        "name": "Domi w Katalonii",
+        "description": "Bloguera de viatges Dominika Barska, que escriu sobre Barcelona i Catalunya, oferint guies i consells per a turistes."
       },
       "solDeGracia": {
         "name": "Sol de Gracia",

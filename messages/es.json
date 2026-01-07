@@ -398,7 +398,10 @@
       "careers": "Empleo",
       "links": "Enlaces",
       "menu": "Menú",
-      "phone": "Teléfono"
+      "phone": "Teléfono",
+      "copyPhone": "Copiar",
+      "close": "Cerrar",
+      "phoneNumber": "Número de teléfono:"
     },
     "categories": {
       "sponsors": {
@@ -419,9 +422,33 @@
         "name": "Bona Barcelona",
         "description": "Agencia de viajes polaca en Cataluña que crea viajes inolvidables y personalizados con pasión. Ofrece alojamiento confortable, traslados, experiencias únicas y planes de visita individuales. Los principales destinos son Barcelona, Montserrat, Costa Brava, Tarragona y Andorra. ¡Cumple tus sueños de viaje con nosotros, con comodidad y pasión!"
       },
+      "krakoviak": {
+        "name": "Krakoviak",
+        "description": "Tienda polaca en Barcelona. Este es un lugar que deben visitar cuando extrañan los productos tradicionales polacos. Pierogi, quesos, pepinos encurtidos, embutidos, requesón, nata agria, quesos homogeneizados, salchichas, palitos y muchas otras especialidades polacas pueden encontrarse justo aquí. La tienda se encuentra justo al lado de la Sagrada Familia, en la calle Sicilia. Además, Krakoviak está abierto incluso los domingos, cuando otras tiendas están cerradas – un lugar perfecto para compras en cualquier momento."
+      },
+      "artTur": {
+        "name": "ART-TUR",
+        "description": "Transporte Polonia España. ART-TUR es una empresa de transporte que opera desde 1993, ofreciendo transporte seguro y cómodo en autobuses de 9 personas. Gracias a una flota confiable y conductores experimentados, disfrutamos de la confianza de numerosos clientes regulares. Nuestra prioridad es la satisfacción y comodidad de los pasajeros. Le invitamos a utilizar nuestros servicios y unirse al grupo de clientes satisfechos."
+      },
+      "deliciasByBea": {
+        "name": "Delicias by Bea",
+        "description": "Pastelería polaca en Barcelona. Bea Michalak es una pastelera experimentada que combina los sabores tradicionales de la cocina polaca con técnicas de repostería modernas. Desarrolló su pasión por la repostería desde la infancia y la perfeccionó en Berlín y Barcelona. Hoy, en el corazón del barrio gótico de Barcelona, crea pasteles excepcionales inspirados tanto en las tradiciones familiares como en el entorno multicultural."
+      },
+      "polcat": {
+        "name": "PolCat",
+        "description": "Agencia de viajes polaca en Barcelona. Somos una agencia de viajes, amigos con pasión organizando viajes, excursiones y transferencias desde hace casi 20 años. Gracias a nuestra experiencia y compromiso, proporcionamos viajes inolvidables, adaptados a las necesidades de cada cliente."
+      },
+      "tomexCarBus": {
+        "name": "Tomex Car-Bus",
+        "description": "Especialista en mecánica, electricidad, aire acondicionado y suspensiones en Cataluña. Cambio integral de aceites en caja automática, reparación o cambio rápido y profesional de motores. Taller de mecánica de vehículos en Santa Eugènia de Berga que ofrece una amplia gama de servicios: mecánica general, electricidad, servicio de aire acondicionado, cambio de aceites, filtros, fluidos, así como reparaciones de suspensión, frenos y amortiguadores. Se especializa en el servicio de coches particulares, furgonetas, camiones hasta 3,5 toneladas, y también se dedica a la compra y venta de autobuses y coches."
+      },
       "wawelRestobar": {
         "name": "Wawel RestoBar",
-        "description": "Restaurante polaco en Barcelona. Un pequeño pedazo de Polonia en el corazón de Barcelona. Aquí puedes pedir pierogi perfectamente preparados, sopa y salchichas. Los chefs preparan deliciosos crepes, tarta de manzana y otras especialidades polacas. Según los clientes, la cerveza sabe excelente aquí."
+        "description": "Restaurante polaco en Barcelona. Un pequeño trozo de Polonia en el corazón de Barcelona. Aquí puedes pedir pierogi, sopa y salchichas perfectamente preparadas. Los chefs preparan deliciosos panqueques, pastel de manzana y otras especialidades polacas. Según los clientes, la cerveza sabe excelente aquí."
+      },
+      "domiWKatalonii": {
+        "name": "Domi w Katalonii",
+        "description": "Bloguera de viajes Dominika Barska, que escribe sobre Barcelona y Cataluña, ofreciendo guías y consejos para turistas."
       },
       "solDeGracia": {
         "name": "Sol de Gracia",

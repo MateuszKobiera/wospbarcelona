@@ -33,6 +33,55 @@ const categories: Category[] = [
                 ],
                 logoUrl: '/images/sponsors/logo wektory-krzywe kolor DO DRUKU-1.png'
             },
+            {
+                key: 'krakoviak',
+                links: [
+                    { label: 'Telefon', url: 'tel:+34935390616' },
+                    { label: 'maps', url: 'https://maps.app.goo.gl/kWQt3NZxNPzwSihj8' },
+                ],
+                logoUrl: '/images/sponsors/krakoviak.png'
+            },
+            {
+                key: 'artTur',
+                links: [
+                    { label: 'website', url: 'https://www.art-tur.pl' },
+                    { label: 'Facebook', url: 'https://www.facebook.com/artturkrasnik' },
+                    { label: 'WhatsApp', url: 'https://wa.me/+48725162189' },
+                    { label: 'Email', url: 'mailto:artur.samonek23@interia.pl' },
+                ],
+                logoUrl: '/images/sponsors/art-tur.jpg'
+            },
+            {
+                key: 'deliciasByBea',
+                links: [
+                    { label: 'website', url: 'https://www.deliciasbybea.com' },
+                    { label: 'Instagram', url: 'https://www.instagram.com/delicias_by_bea' },
+                    { label: 'Email', url: 'mailto:deliciasbybea@gmail.com' },
+                    { label: 'maps', url: 'https://maps.app.goo.gl/Kce5nYkcZJyC532x5' },
+                ],
+                logoUrl: '/images/sponsors/delicias_by_bea_2.avif'
+            },
+            {
+                key: 'polcat',
+                links: [
+                    { label: 'website', url: 'https://polcat.net' },
+                    { label: 'Instagram', url: 'https://www.instagram.com/_polcat_/' },
+                    { label: 'Facebook', url: 'https://www.facebook.com/polcatbcn' },
+                    { label: 'TikTok', url: 'https://www.tiktok.com/@polcat_' },
+                    { label: 'Email', url: 'mailto:kontakt@polcat.net' },
+                    { label: 'Telefon', url: 'tel:+34677359234' },
+                ],
+                logoUrl: '/images/sponsors/polcat.jpg'
+            },
+            {
+                key: 'tomexCarBus',
+                links: [
+                    { label: 'Telefon', url: 'tel:+34616322660' },
+                    { label: 'Facebook', url: 'https://www.facebook.com/tomexcarbus85' },
+                    { label: 'Email', url: 'mailto:tomexcarbus@gmail.com' },
+                ],
+                logoUrl: '/images/sponsors/tomex_2.png'
+            },
         ],
     },
     {
@@ -45,6 +94,13 @@ const categories: Category[] = [
                     { label: 'Telefon', url: 'tel:+34934579550' },
                 ],
                 logoUrl: '/images/sponsors/Wawel.png'
+            },
+            {
+                key: 'domiWKatalonii',
+                links: [
+                    { label: 'Instagram', url: 'https://www.instagram.com/domiwkatalonii/' },
+                ],
+                logoUrl: '/images/sponsors/Domi-w-Katalonii-partner.png'
             },
             {
                 key: 'solDeGracia',
@@ -91,6 +147,11 @@ export default function SponsorsPageClient() {
         url: '',
         name: ''
     });
+    const [phoneLightbox, setPhoneLightbox] = useState<{ open: boolean; phone: string; name: string }>({
+        open: false,
+        phone: '',
+        name: ''
+    });
 
     const labelKey = (label: string): string | null => {
         const l = label.toLowerCase();
@@ -111,6 +172,30 @@ export default function SponsorsPageClient() {
 
     const closeMenuLightbox = () => {
         setMenuLightbox({ open: false, url: '', name: '' });
+    };
+
+    const openPhoneLightbox = (phone: string, name: string) => {
+        setPhoneLightbox({ open: true, phone, name });
+    };
+
+    const closePhoneLightbox = () => {
+        setPhoneLightbox({ open: false, phone: '', name: '' });
+        setCopyButtonText(t('linkLabels.copyPhone'));
+        setCopyButtonColorClass('bg-red-600 hover:bg-red-700');
+    };
+
+    const [copyButtonText, setCopyButtonText] = useState(t('linkLabels.copyPhone'));
+    const [copyButtonColorClass, setCopyButtonColorClass] = useState('bg-red-600 hover:bg-red-700');
+
+    const copyToClipboard = (text: string) => {
+        navigator.clipboard.writeText(text).then(() => {
+            setCopyButtonText('Skopiowano');
+            setCopyButtonColorClass('bg-green-600 hover:bg-green-700');
+            setTimeout(() => {
+                setCopyButtonText(t('linkLabels.copyPhone'));
+                setCopyButtonColorClass('bg-red-600 hover:bg-red-700');
+            }, 2000);
+        });
     };
 
     return (
@@ -177,17 +262,28 @@ export default function SponsorsPageClient() {
                                                                 {t('linkLabels.links')}
                                                             </div>
                                                             <div className="flex flex-wrap gap-2 justify-center">
-                                                                {s.links?.map((lr) => (
-                                                                    <a
-                                                                        key={`${s.key}-${lr.label}-${lr.url}`}
-                                                                        href={lr.url}
-                                                                        target="_blank"
-                                                                        rel="noopener noreferrer"
-                                                                        className="px-3 py-1.5 rounded-full border border-red-200 text-red-700 hover:bg-red-50 hover:border-red-300 text-sm font-medium transition-colors cursor-pointer"
-                                                                    >
-                                                                        {labelKey(lr.label) ? t(`linkLabels.${labelKey(lr.label)}` as keyof typeof t) : lr.label}
-                                                                    </a>
-                                                                ))}
+                                                                {s.links?.map((lr) => {
+                                                                    const isPhone = labelKey(lr.label) === 'phone';
+                                                                    return isPhone ? (
+                                                                        <button
+                                                                            key={`${s.key}-${lr.label}-${lr.url}`}
+                                                                            onClick={() => openPhoneLightbox(lr.url.replace('tel:', ''), itemName)}
+                                                                            className="px-3 py-1.5 rounded-full border border-red-200 text-red-700 hover:bg-red-50 hover:border-red-300 text-sm font-medium transition-colors cursor-pointer"
+                                                                        >
+                                                                            {labelKey(lr.label) ? t(`linkLabels.${labelKey(lr.label)}` as keyof typeof t) : lr.label}
+                                                                        </button>
+                                                                    ) : (
+                                                                        <a
+                                                                            key={`${s.key}-${lr.label}-${lr.url}`}
+                                                                            href={lr.url}
+                                                                            target="_blank"
+                                                                            rel="noopener noreferrer"
+                                                                            className="px-3 py-1.5 rounded-full border border-red-200 text-red-700 hover:bg-red-50 hover:border-red-300 text-sm font-medium transition-colors cursor-pointer"
+                                                                        >
+                                                                            {labelKey(lr.label) ? t(`linkLabels.${labelKey(lr.label)}` as keyof typeof t) : lr.label}
+                                                                        </a>
+                                                                    );
+                                                                })}
                                                                 {s.menuUrl && (
                                                                     <button
                                                                         onClick={() => openMenuLightbox(s.menuUrl!, itemName)}
@@ -242,6 +338,47 @@ export default function SponsorsPageClient() {
 
                     <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white bg-black bg-opacity-50 px-4 py-2 rounded-lg">
                         <span className="text-sm">{menuLightbox.name} - Menu</span>
+                    </div>
+                </div>
+            )}
+
+            {/* Phone Lightbox Modal */}
+            {phoneLightbox.open && (
+                <div className="fixed inset-0 backdrop-blur-sm bg-white/10 z-50 flex items-center justify-center p-4">
+                    <button
+                        onClick={closePhoneLightbox}
+                        className="absolute top-4 right-4 bg-black bg-opacity-50 hover:bg-opacity-70 text-white hover:text-red-400 p-3 rounded-full transition-all duration-200 hover:scale-110 shadow-xl z-10"
+                        aria-label="Zamknij telefon"
+                    >
+                        <X className="w-6 h-6" />
+                    </button>
+
+                    <div className="bg-white rounded-xl p-8 max-w-md w-full mx-4 shadow-2xl">
+                        <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
+                            {phoneLightbox.name}
+                        </h3>
+                        <p className="text-gray-600 mb-6 text-center">
+                            {t('linkLabels.phoneNumber')}
+                        </p>
+                        <div className="bg-gray-100 rounded-lg p-4 mb-6">
+                            <p className="text-xl font-semibold text-gray-900 text-center">
+                                {phoneLightbox.phone}
+                            </p>
+                        </div>
+                        <div className="flex gap-3">
+                            <button
+                                onClick={() => copyToClipboard(phoneLightbox.phone)}
+                                className={`flex-1 ${copyButtonColorClass} text-white font-medium py-3 px-4 rounded-lg transition-colors`}
+                            >
+                                {copyButtonText}
+                            </button>
+                            <button
+                                onClick={closePhoneLightbox}
+                                className="flex-1 bg-gray-600 hover:bg-gray-700 text-white font-medium py-3 px-4 rounded-lg transition-colors"
+                            >
+                                {t('linkLabels.close')}
+                            </button>
+                        </div>
                     </div>
                 </div>
             )}

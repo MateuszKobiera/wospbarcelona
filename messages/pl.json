@@ -398,7 +398,10 @@
       "careers": "Kariera",
       "links": "Linki",
       "menu": "Menu",
-      "phone": "Telefon"
+      "phone": "Telefon",
+      "copyPhone": "Kopiuj",
+      "close": "Zamknij",
+      "phoneNumber": "Numer telefonu:"
     },
     "categories": {
       "sponsors": {
@@ -419,9 +422,33 @@
         "name": "Bona Barcelona",
         "description": "Polskie biuro podróży w Katalonii, które z pasją tworzy niezapomniane, spersonalizowane wyjazdy. Oferuje komfortowe noclegi, transfery, wyjątkowe doświadczenia i indywidualne plany zwiedzania. Główne kierunki to Barcelona, Montserrat, Costa Brava, Tarragona i Andora. Spełniaj marzenia o podróży z nami – komfortowo i z pasją!"
       },
+      "krakoviak": {
+        "name": "Krakoviak",
+        "description": "Polski Sklep w Barcelonie. Jest to miejsce, które koniecznie musicie odwiedzić gdy tęskno Wam za tradycyjnymi polskimi produktami. Pierogi, sery, ogórki kiszone, wędliny, twaróg, kwaśna śmietana, serki homogenizowane, kiełbasy, paluszki i wiele innych polskich specjałów znajdziecie właśnie tutaj! Sklep znajduje się tuż obok Sagrady Familii, na ulicy Sicilia. Dodatkowo, Krakoviak jest nawet otwarty w niedzielę, kiedy inne sklepy są zamknięte – idealne miejsce na zakupy w każdej chwili!"
+      },
+      "artTur": {
+        "name": "ART-TUR",
+        "description": "Transport Polska Hiszpania. Art-Tur to firma transportowa działająca od 1993 roku, oferująca bezpieczne i komfortowe przewozy 9-osobowymi busami. Dzięki niezawodnej flocie i doświadczonym kierowcom cieszy się zaufaniem licznych stałych klientów. Naszym priorytetem jest zadowolenie i wygoda pasażerów. Zapraszamy do skorzystania z naszych usług i dołączenia do grona zadowolonych klientów."
+      },
+      "deliciasByBea": {
+        "name": "Delicias by Bea",
+        "description": "Polska cukierniczka w Barcelonie. Bea Michalak to doświadczona cukierniczka, która łączy tradycyjne smaki polskiej kuchni z nowoczesnymi technikami cukierniczymi. Swoją pasję do pieczenia rozwijała od dzieciństwa, a doskonaliła ją w Berlinie i Barcelonie. Dziś, w sercu gotyckiej dzielnicy Barcelony, tworzy wyjątkowe wypieki inspirowane zarówno rodzinnymi tradycjami, jak i wielokulturowym otoczeniem."
+      },
+      "polcat": {
+        "name": "PolCat",
+        "description": "Polskie Biuro Podróży w Barcelonie. Jesteśmy biurem podróży, przyjaciółmi z pasją organizującymi wyjazdy, wycieczki oraz transfery już od prawie 20 lat! Dzięki naszemu doświadczeniu i zaangażowaniu zapewniamy niezapomniane podróże, dopasowane do potrzeb każdego klienta."
+      },
+      "tomexCarBus": {
+        "name": "Tomex Car-Bus",
+        "description": "Specjalista od mechaniki, elektryki, klimatyzacji i zawieszeń w Katalonii. Kompleksowa wymiana olejów w automatycznej skrzyni biegów, szybka i fachowa naprawa lub wymiana silników. Warsztat mechaniki pojazdowej w Santa Eugènia de Berga oferuje szeroki zakres usług: mechanikę ogólną, elektrykę, serwis klimatyzacji, wymianę olejów, filtrów, płynów, a także naprawy zawieszeń, hamulców i amortyzatorów. Specjalizuje się w obsłudze samochodów osobowych, dostawczych, furgonetek i ciężarówek do 3,5 tony, a także zajmuje się kupnem i sprzedażą autobusów oraz samochodów."
+      },
       "wawelRestobar": {
         "name": "Wawel RestoBar",
         "description": "Polska restauracja w Barcelonie. Mały kawałek Polski w sercu Barcelony. W tym miejscu zamówisz doskonale przyrządzone pierogi, zupę i kiełbaski. Kucharze przygotowują tutaj dobre naleśniki, szarlotkę i inne polskie specjały. Zgodnie z opiniami gości, piwo smakuje w tym miejscu wyśmienicie."
+      },
+      "domiWKatalonii": {
+        "name": "Domi w Katalonii",
+        "description": "Blogerka podróżnicza Dominika Barska, która pisze o Barcelonie i Katalonii, oferując przewodniki i porady dla turystów."
       },
       "solDeGracia": {
         "name": "Sol de Gracia",

@@ -10,6 +10,11 @@ type Sponsor = {
 
 const DEFAULT_SPONSORS: Sponsor[] = [
   { name: 'Bona Barcelona', logo: '/images/sponsors/logo wektory-krzywe kolor DO DRUKU-1.png' },
+  { name: 'Krakoviak', logo: '/images/sponsors/krakoviak.png' },
+  { name: 'ART-TUR', logo: '/images/sponsors/art-tur.jpg' },
+  { name: 'Delicias by Bea', logo: '/images/sponsors/delicias_by_bea_2.avif' },
+  { name: 'PolCat', logo: '/images/sponsors/polcat.jpg' },
+  { name: 'Tomex Car-Bus', logo: '/images/sponsors/tomex_2.png' },
   { name: 'Wawel RestoBar', logo: '/images/sponsors/Wawel.png' },
   { name: 'Sol de Gracia', logo: '/images/sponsors/311836535_638740301171743_4776177943725666713_n.png' },
   { name: 'La Magia de los Sabores', logo: '/images/sponsors/la-magia-de-los-sabores.jpg' },
