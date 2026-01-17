@@ -453,7 +453,11 @@
       },
       "polcat": {
         "name": "PolCat",
-        "description": "Polish Travel Agency in Barcelona. We are a travel agency, friends with passion organizing trips, excursions and transfers for almost 20 years! Thanks to our experience and commitment, we provide unforgettable journeys, tailored to the needs of each client."
+        "description": "PolCat is a travel agency with almost 20 years of experience, specializing in organizing trips, transfers and comprehensive tourist services for individual clients and groups. The company has gained recognition for its flexibility, professionalism and individual approach, which guarantee satisfaction with every journey. PolCat provides unforgettable experiences in the most attractive places."
+      },
+      "spaParaMascota": {
+        "name": "Spa para mascota Peluqueria canina y felina",
+        "description": "We have something special for you (and your four-legged friends)! The newly opened grooming salon @spa_para_mascota from Badalona joins the group of partners of the 34th WOŚP Barcelona Finale! TWO VOUCHERS are up for auction at the Finale: a grooming session FOR A SMALL DOG and a grooming session FOR A MEDIUM DOG. This is a perfect opportunity to test the services of this modern salon and give your friend a moment of relaxation. Location: Sant Isidre Street 60, Badalona. Service: after prior appointment on the agreed date and time."
       },
       "tomexCarBus": {
         "name": "Tomex Car-Bus",

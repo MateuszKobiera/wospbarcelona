@@ -457,7 +457,11 @@
       },
       "polcat": {
         "name": "PolCat",
-        "description": "Agència de viatges polonesa a Barcelona. Som una agència de viatges, amics amb passió organitzant viatges, excursions i transferències des de fa quasi 20 anys. Gràcies a la nostra experiència i compromís, proporcionem viatges inoblidables, adaptats a les necessitats de cada client."
+        "description": "PolCat és una agència de viatges amb gairebé 20 anys d'experiència, especialitzant-se en l'organització d'excursions, transferències i serveis turístics integrals per a clients individuals i grups. L'empresa ha guanyat reconeixement per la seva flexibilitat, professionalisme i enfoc individual, que garanteixen la satisfacció amb cada viatge. PolCat proporciona experiències inoblidables als llocs més atractius."
+      },
+      "spaParaMascota": {
+        "name": "Spa para mascota Peluqueria canina y felina",
+        "description": "Tenim alguna cosa especial per a vos (i als vostres amics de quatre potes)! El saló de groomers recent obert @spa_para_mascota de Badalona s'une al grupa de socis del 34è Final de WOŚP Barcelona! DOS VOUCHERS estan a la subhasta del Final: sessió de groomers PER A GOS PETIT i sessió de groomers PER A GOS MITJÀ. Aquesta és una oportunitat perfecta per provar els serveis d'aquest saló modern i donar al vostre amic un moment de relaxació. Ubicació: carrer Sant Isidre 60, Badalona. Realització: prèvia cita el dia i hora acordats."
       },
       "tomexCarBus": {
         "name": "Tomex Car-Bus",

@@ -66,12 +66,22 @@ const categories: Category[] = [
                 links: [
                     { label: 'website', url: 'https://polcat.net' },
                     { label: 'Instagram', url: 'https://www.instagram.com/_polcat_/' },
-                    { label: 'Facebook', url: 'https://www.facebook.com/polcatbcn' },
+                    { label: 'Facebook', url: 'https://www.facebook.com/Catalunya4youpl/?locale=pl_PL' },
                     { label: 'TikTok', url: 'https://www.tiktok.com/@polcat_' },
                     { label: 'Email', url: 'mailto:kontakt@polcat.net' },
                     { label: 'Telefon', url: 'tel:+34677359234' },
+                    { label: 'Google Maps', url: 'https://g.co/kgs/mcBJTqS' },
                 ],
                 logoUrl: '/images/sponsors/polcat.jpg'
+            },
+            {
+                key: 'spaParaMascota',
+                links: [
+                    { label: 'WhatsApp', url: 'https://wa.me/34646424462' },
+                    { label: 'Instagram', url: 'https://www.instagram.com/spa_para_mascota/' },
+                    { label: 'Maps', url: 'https://maps.app.goo.gl/?q=ul.+Sant+Isidre+60,+Badalona' },
+                ],
+                logoUrl: '/images/sponsors/Logo Spa para mascota.webp'
             },
             {
                 key: 'tomexCarBus',

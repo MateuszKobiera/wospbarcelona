@@ -453,7 +453,11 @@
       },
       "polcat": {
         "name": "PolCat",
-        "description": "Polskie Biuro Podróży w Barcelonie. Jesteśmy biurem podróży, przyjaciółmi z pasją organizującymi wyjazdy, wycieczki oraz transfery już od prawie 20 lat! Dzięki naszemu doświadczeniu i zaangażowaniu zapewniamy niezapomniane podróże, dopasowane do potrzeb każdego klienta."
+        "description": "PolCat to biuro podróży z niemal 20-letnim doświadczeniem, specjalizujące się w organizacji wycieczek, transferów oraz kompleksowych usług turystycznych dla klientów indywidualnych i grup. Firma zyskała uznanie za elastyczność, profesjonalizm oraz indywidualne podejście, które gwarantują satysfakcję z każdej podróży. PolCat zapewnia niezapomniane doświadczenia w najbardziej atrakcyjnych miejscach."
+      },
+      "spaParaMascota": {
+        "name": "Spa para mascota Peluqueria canina y felina",
+        "description": "Mamy dla Was (i Waszych czworonogów) coś wyjątkowego! Do grona partnerów 34. Finału WOŚP Barcelona dołącza nowo otwarty salon groomerski @spa_para_mascota z Badalony! Na licytację na Finał trafiają DWA VOUCHERY: kąpiel DLA MAŁEGO PIESKA i kąpiel DLA ŚREDNIEGO PIESKA. To doskonała okazja, by przetestować usługi tego nowoczesnego salonu i sprawić swojemu przyjacielowi chwilę relaksu. Lokalizacja: ul. Sant Isidre 60, Badalona. Realizacja: po wcześniejszym umówieniu dnia i godziny."
       },
       "tomexCarBus": {
         "name": "Tomex Car-Bus",
