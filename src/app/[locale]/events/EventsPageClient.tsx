@@ -14,7 +14,7 @@ import { ContactForm } from '@/components/ContactForm';
 const upcomingEventsData = [
   {
     id: 5,
-    date: '2026-01-18',
+    date: '2026-01-24',
     time: '10:30',
     location: 'Hotel W Barcelona',
     categoryKey: 'run',
@@ -22,7 +22,6 @@ const upcomingEventsData = [
     registrationRequired: true,
     meetupLink: 'https://www.meetup.com/wosp-barcelona/events/bieg-wosp-barcelona',
     facebookLink: 'https://facebook.com/events/bieg-wosp-policz-sie-z-cukrzyca',
-    registrationLink: 'https://slotmarket.pl/event/details/741/20-bieg-wosp-policz-sie-z-cukrzyca-wirtualny',
     isSpecialEvent: true
   },
   {
@@ -224,8 +223,13 @@ export default function EventsPageClient() {
                           <h3 className={`${isFinal ? 'text-2xl lg:text-3xl' : 'text-xl'} font-bold text-gray-900 mb-2`}>
                             {eventTitle}
                           </h3>
-                          <p className={`text-gray-600 ${isFinal ? 'text-base' : 'line-clamp-2'}`}>
-                            {eventDescription}
+                          <p className={`text-gray-600 ${isFinal ? 'text-base' : 'line-clamp-3'}`}>
+                            {eventDescription.split(/(\*\*.*?\*\*)/g).map((part, i) => {
+                              if (part.startsWith('**') && part.endsWith('**')) {
+                                return <strong key={i} className="font-bold text-gray-900">{part.slice(2, -2)}</strong>;
+                              }
+                              return part;
+                            })}
                           </p>
                         </div>
 
@@ -307,22 +311,6 @@ export default function EventsPageClient() {
                               <Calendar className="w-4 h-4 text-blue-700" />
                             </a>
                           </div>
-
-                          {/* Special registration button for running event */}
-                          {event.registrationLink && (
-                            <div className="mt-3">
-                              <a
-                                href={event.registrationLink}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="block w-full"
-                              >
-                                <Button className="w-full bg-green-600 hover:bg-green-700 text-white cursor-pointer">
-                                  {t('page.registerForRun')}
-                                </Button>
-                              </a>
-                            </div>
-                          )}
                         </div>
                       </div>
                     </div>

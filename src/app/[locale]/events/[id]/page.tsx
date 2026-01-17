@@ -2,12 +2,45 @@
 
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Calendar, MapPin, ArrowLeft } from 'lucide-react';
+import { Calendar, MapPin, ArrowLeft, AlertTriangle, Info } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
+
+// Helper component to render text with bold and underline
+const FormattedText = ({ text }: { text: string }) => {
+  if (!text) return null;
+
+  // Simple recursive parser for bold and underline
+  const parseBold = (str: string): React.ReactNode[] => {
+    const parts = str.split(/(\*\*.*?\*\*)/g);
+    return parts.map((part, i) => {
+      if (part.startsWith('**') && part.endsWith('**')) {
+        return <strong key={i} className="font-extrabold text-gray-950">{part.slice(2, -2)}</strong>;
+      }
+      return part;
+    });
+  };
+
+  const parts = text.split(/(__.*?__)/g);
+
+  return (
+    <>
+      {parts.map((part, i) => {
+        if (part.startsWith('__') && part.endsWith('__')) {
+          return (
+            <span key={i} className="inline-block border-b-2 border-red-500 leading-none pb-0.5">
+              {parseBold(part.slice(2, -2))}
+            </span>
+          );
+        }
+        return parseBold(part);
+      })}
+    </>
+  );
+};
 
 // Mock events data (same as in events page)
 const allEvents = [
@@ -77,9 +110,9 @@ const allEvents = [
   {
     id: 5,
     title: '20. Bieg WOŚP "Policz się z cukrzycą"',
-    description: 'Bieg charytatywny na 5 km. Start i meta: Hotel W Barcelona (Barceloneta). Trasa wzdłuż plaży, nawrót i powrót pod Hotel W. Rejestracja przez Slotmarket do 31.12.2025.',
-    fullDescription: 'Dołącz do 20. Biegu WOŚP "Policz się z cukrzycą"! To bieg charytatywny na dystansie 5 km w Barcelonie.\n\n🏃‍♂️ SZCZEGÓŁY BIEGU:\n• Dystans: 5 km\n• Data: 18 stycznia 2026\n• Start/Zbiórka: Hotel W Barcelona (Barceloneta)\n• Trasa: wzdłuż plaży, nawrót i powrót\n• Meta: Hotel W Barcelona (dla każdego czeka medal)\n\n📞 KONTAKT DO ORGANIZATORÓW:\nW razie pytań lub problemów prosimy o kontakt na czacie lub z koordynatorką biegu Anetą pod numerem +34 637 486 551.\n\n📝 REJESTRACJA (OBOWIĄZKOWA):\nKażdy uczestnik biegu organizowanego przez Sztab WOŚP w Barcelonie musi zarejestrować się osobiście w systemie Slotmarket w biegu WIRTUALNYM.\n\n⚠️ WAŻNE INSTRUKCJE REJESTRACJI:\n1. Zarejestruj się przez Slotmarket\n2. Wpisz adres wysyłki na Polskę: Dominikańska 19C, 02-738 Warszawa\n3. W polu "Klub" wpisz: 6516 Barcelona\n4. Wybierz opcję przesyłki krajowej (do Polski)\n5. Wyślij potwierdzenie rejestracji z imieniem, nazwiskiem i rozmiarem koszulki na: biegwospbarcelona@gmail.com\n6. Termin rejestracji: do 31.12.2025\n\n🎁 PAKIET STARTOWY:\nWarunkiem otrzymania pakietów w zbiorczej gratisowej paczce jest poprawne wypełnienie wszystkich pól w formularzu Slotmarket.\n\n⚠️ UWAGA: Niepoprawne wypełnienie formularza może skutkować koniecznością dopłaty 150 zł za przesyłkę lub brakiem otrzymania pakietu!',
-    date: '2026-01-18',
+    description: 'Bieg charytatywny na 5 km. Start i meta: Hotel W Barcelona (Barceloneta). Trasa wzdłuż plaży, nawrót i powrót pod Hotel W. **UWAGA: ZMIANA TERMINU!** Z powodu zapowiadanych intensywnych opadów deszczu i ze względów na bezpieczeństwo uczestników, bieg odbędzie się w **SOBOTĘ 24.01.2026**. Start i meta biegu są teraz spod Hotelu W Barcelona. Trasa prowadzi wzdłuż plaży, następnie jest zawrócenie i powrót na metę pod hotelem W.',
+    fullDescription: 'Dołącz do 20. Biegu WOŚP "Policz się z cukrzycą"! To bieg charytatywny na dystansie 5 km w Barcelonie.\n\n🏃‍♂️ SZCZEGÓŁY BIEGU:\n• Dystans: 5 km\n• Data: **SOBOTA 24.01.2026** (zmieniona z powodu pogody)\n• Start/Zbiórka: Hotel W Barcelona (Barceloneta)\n• Trasa: wzdłuż plaży, nawrót i powrót pod Hotel W\n• Meta: Hotel W Barcelona (medal dla każdego uczestnika)\n\n📞 KONTAKT DO ORGANIZATORÓW:\nW razie pytaniań lub problemów prosimy o kontakt na czacie lub z koordynatorką biegu Anetą pod numerem +34 637 486 551.\n\n📝 REJESTRACJA (OBOWIĄZKOWA):\nKażdy uczestnik biegu organizowanego przez Sztab WOŚP w Barcelonie musi zarejestrować się osobiście w systemie Slotmarket w biegu WIRTUALNYM.\n1. Zarejestruj się przez Slotmarket\n2. Wpisz adres wysyłki na Polskę: Dominikańska 19C, 02-738 Warszawa\n3. W polu "Klub" wpisz: 6516 Barcelona\n4. Wybierz opcję przesyłki krajowej (do Polski)\n5. Wyślij potwierdzenie rejestracji z imieniem, nazwiskiem i rozmiarem koszulki na: biegwospbarcelona@gmail.com\n6. Termin rejestracji: do 31.12.2025\n\n⚠️ UWAGA: Niepoprawne wypełnienie formularza może skutkować koniecznością dopłaty 150 zł lub brakiem otrzymania pakietu!\n\n🏆 DLA NAJLEPSZYCH UCZESTNIKÓW:\nWarunkiem otrzymania pakietu startowego jest zapisanie do 5 stycznia 2025. Po 5 stycznia 2025 zapisy będą nadal możliwe, ale bez gwarancji otrzymania pakietu startowego.\n\n💰 Koszt: 85 zł\n\n📋 Jak się zapisać:\n1. Zarejestruj się na Slotmarket na bieg WIRTUALNY: slotmarket.pl/event/details/741/20-bieg-wosp-policz-sie-z-cukrzyca-wirtualny\n2. Wpisz adres wysyłki na Polskę: Dominikańska 19C, 02-738 Warszawa\n3. W polu "Klub" wpisz: 6516 Barcelona\n4. Wybierz opcję przesyłki krajowej (do Polski)\n5. Wyślij potwierdzenie rejestracji z imieniem, nazwiskiem i rozmiarem koszulki na: biegwospbarcelona@gmail.com\n\n🏆 Dla najlepszych uczestników przewidziane są atrakcyjne nagrody!\n\nDołącz do nas, bądź świetnie i pokażmy, że Barcelona wspiera WOŚP!\n\n🗺️ SZCZEGÓŁY TRASY I INFORMACJE:\n• **Trasa**: Bieg rozpoczyna się przy Hotelu W Barcelona (Barceloneta) i prowadzi wzdłuż plaży Barcelonety w kierunku północnym. Po około 2,5 km następuje zawrót i powrót na metę pod hotelem. Trasa jest malowna i bezpieczna, idealna dla biegaczy na każdym poziomie zaawansowania.\n• **Punkty kontrolne**: Na trasie zorganizowane będą punkty kontrolne z wodą i przekąskami dla uczestników.\n• **Zabezpieczenie**: Trasa będzie zabezpieczona przez organizatorów, a na trasie obecni będą patrole medyczne.\n• **Transport**: Po biegu zapewniamy transport powrotny do Hotelu W Barcelona dla uczestników, którzy wyrażą taką chęć.\n• **Pogoda**: W przypadku złych warunków pogodowych, organizator zastrzega sobie prawo do zmiany daty lub przełożenia biegu na inny termin. O wszelkich zmianach uczestnicy będą informowani z wyprzedzeniem.\n• **Co ze sobą**: Po zakończeniu biegu zapraszamy na wspólną integrację i podziękowania uczestnikom w Hotelu W Barcelona.',
+    date: '2026-01-24',
     time: 'Start: 10:30',
     location: 'Hotel W Barcelona',
     category: 'Bieg',
@@ -90,7 +123,6 @@ const allEvents = [
     registrationRequired: true,
     meetupLink: 'https://www.meetup.com/wośp-barcelona/events/312210485/',
     facebookLink: 'https://www.facebook.com/events/1931855297364179/',
-    registrationLink: 'https://slotmarket.pl/event/details/741/20-bieg-wosp-policz-sie-z-cukrzyca-wirtualny',
     organizer: 'WOŚP Barcelona',
     contact: 'biegwospbarcelona@gmail.com',
     isSpecialEvent: true,
@@ -442,48 +474,77 @@ export default function EventPage() {
             <Card className="bg-white">
               <CardContent className="p-6">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">{t('detail.aboutEvent')}</h2>
-                <div className="prose prose-gray max-w-none">
+                <div className="space-y-6">
                   {eventFullDescription?.split('\n').map((paragraph, index) => {
-                    // Check if paragraph is a subtitle (contains common subtitle patterns)
                     const trimmed = paragraph.trim();
+                    if (trimmed === '') return <div key={index} className="h-1"></div>;
+
+                    // Specialized Warning Box for ⚠️ paragraphs
+                    if (trimmed.includes('⚠️')) {
+                      return (
+                        <div key={index} className="my-8 p-5 rounded-2xl bg-orange-50 border-2 border-orange-100 shadow-sm flex items-start gap-4 transition-all hover:shadow-md">
+                          <div className="bg-orange-100 p-2 rounded-lg">
+                            <AlertTriangle className="w-6 h-6 text-orange-600 flex-shrink-0" />
+                          </div>
+                          <div className="text-orange-950 leading-relaxed font-semibold text-lg flex-1">
+                            <FormattedText text={trimmed} />
+                          </div>
+                        </div>
+                      );
+                    }
+
+                    // Specialized Info Box for ℹ️ or 📞 paragraphs
+                    if (trimmed.includes('📞') || (trimmed.includes('📍') && !trimmed.includes('•'))) {
+                      return (
+                        <div key={index} className="my-6 p-5 rounded-2xl bg-blue-50 border-2 border-blue-100 shadow-sm flex items-start gap-4 transition-all hover:shadow-md">
+                          <div className="bg-blue-100 p-2 rounded-lg">
+                            <Info className="w-6 h-6 text-blue-600 flex-shrink-0" />
+                          </div>
+                          <div className="text-blue-950 leading-relaxed text-lg flex-1">
+                            <FormattedText text={trimmed} />
+                          </div>
+                        </div>
+                      );
+                    }
+
+                    // Check if paragraph is a subtitle
                     const isSubtitle = (
                       trimmed.includes('🏃‍♂️') ||
                       trimmed.includes('📝') ||
-                      trimmed.includes('⚠️') ||
                       trimmed.includes('🎁') ||
                       trimmed.includes('👥') ||
                       trimmed.includes('📧') ||
+                      trimmed.includes('🗺️') ||
+                      trimmed.includes('✨') ||
                       /^[A-ZĄĆĘŁŃÓŚŹŻ\s]+:$/.test(trimmed)
-                    ) && trimmed.endsWith(':');
+                    ) && (trimmed.endsWith(':') || (trimmed.length < 40 && trimmed.toUpperCase() === trimmed));
 
                     if (isSubtitle) {
                       return (
-                        <h3 key={index} className="text-lg font-bold text-gray-800 mt-6 mb-3 flex items-center">
-                          {paragraph}
+                        <h3 key={index} className="text-2xl font-black text-gray-900 mt-10 mb-6 flex items-center gap-3 group">
+                          <span className="w-1.5 h-8 bg-red-600 rounded-full group-hover:h-10 transition-all duration-300"></span>
+                          <FormattedText text={trimmed} />
                         </h3>
                       );
                     }
 
-                    // Check if paragraph is empty (just spacing)
-                    if (paragraph.trim() === '') {
-                      return <div key={index} className="mb-2"></div>;
-                    }
-
-                    // Check if paragraph starts with bullet point or number
-                    const isBulletPoint = /^[•\d]\s/.test(paragraph.trim());
-
+                    // Bullet points
+                    const isBulletPoint = trimmed.startsWith('•') || /^\d+\./.test(trimmed);
                     if (isBulletPoint) {
                       return (
-                        <p key={index} className="mb-2 text-gray-700 leading-relaxed ml-4">
-                          {paragraph}
-                        </p>
+                        <div key={index} className="flex items-start gap-4 mb-3 ml-4 text-gray-800 group">
+                          <span className="w-2 h-2 rounded-full bg-red-500 mt-2.5 flex-shrink-0 group-hover:scale-125 transition-transform"></span>
+                          <p className="leading-relaxed flex-1 text-lg">
+                            <FormattedText text={trimmed.replace(/^[•\d\.]+\s*/, '')} />
+                          </p>
+                        </div>
                       );
                     }
 
                     // Regular paragraph
                     return (
-                      <p key={index} className="mb-4 text-gray-700 leading-relaxed">
-                        {paragraph}
+                      <p key={index} className="text-gray-700 leading-relaxed text-lg mb-4 ml-1">
+                        <FormattedText text={trimmed} />
                       </p>
                     );
                   })}
