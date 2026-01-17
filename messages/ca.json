@@ -515,8 +515,8 @@
   },
   "runRoutePopup": {
     "badge": "IMPORTANT – CANVI",
-    "title": "La sortida és des de l'Hotel W",
-    "message": "Atenció: canvi respecte a la informació anterior. La sortida i la meta ara són a l'Hotel W Barcelona. El recorregut va per la platja, després hi ha un gir i retorn per acabar a l'Hotel W.",
+    "title": "La data de la cursa ha estat canviada",
+    "message": "Atenció: canvi de data de la cursa degut a pluges intenses previstes i per seguretat dels participants. La cursa es realitzarà en DISSABTE 24.01.2026. La sortida i la meta són ara a l'Hotel W Barcelona. La ruta va per la platja, després hi ha un gir i retorn per acabar a l'Hotel W.",
     "cta": "Veure detalls de la cursa",
     "close": "Tancar",
     "routeVideo": "Vídeo del recorregut"

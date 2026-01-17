@@ -511,17 +511,10 @@
   },
   "runRoutePopup": {
     "badge": "IMPORTANTE – CAMBIO",
-    "title": "La salida es desde el Hotel W",
-    "message": "Atención: cambio respecto a la información anterior. La salida y la meta ahora son en el Hotel W Barcelona. El recorrido va por la playa, luego hay un giro y regreso para terminar en el Hotel W.",
+    "title": "La fecha de la carrera ha sido cambiada",
+    "message": "Atención: cambio de fecha de la carrera debido a lluvias intensas previstas y por seguridad de los participantes. La carrera se realizará en SÁBADO 24.01.2026. La salida y la meta son ahora en el Hotel W Barcelona. La ruta va por la playa, luego hay un giro y regreso para terminar en el Hotel W.",
     "cta": "Ver detalles de la carrera",
     "close": "Cerrar",
     "routeVideo": "Vídeo del recorrido"
-  },
-  "common": {
-    "loading": "Cargando...",
-    "error": "Ocurrió un error",
-    "close": "Cerrar",
-    "open": "Abrir",
-    "menu": "Menú"
   }
 }

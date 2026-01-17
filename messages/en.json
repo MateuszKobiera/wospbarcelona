@@ -511,17 +511,10 @@
   },
   "runRoutePopup": {
     "badge": "IMPORTANT – CHANGE",
-    "title": "The start is from Hotel W",
-    "message": "Attention: change compared to previous information. The start and finish are now at Hotel W Barcelona. The route goes along the beach, then turns around and returns to finish at Hotel W.",
+    "title": "Run date has been changed",
+    "message": "Attention: run date change due to forecasted heavy rainfall and for participant safety. The run will take place on SATURDAY 24.01.2026. The start and finish are now at Hotel W Barcelona. The route goes along the beach, then turns around and returns to the finish at Hotel W.",
     "cta": "See run details",
     "close": "Close",
     "routeVideo": "Route video"
-  },
-  "common": {
-    "loading": "Loading...",
-    "error": "An error occurred",
-    "close": "Close",
-    "open": "Open",
-    "menu": "Menu"
   }
 }

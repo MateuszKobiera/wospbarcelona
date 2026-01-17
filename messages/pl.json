@@ -511,17 +511,10 @@
   },
   "runRoutePopup": {
     "badge": "WAŻNE – ZMIANA",
-    "title": "Start biegu jest spod Hotelu W",
-    "message": "Uwaga: zmiana względem wcześniejszych informacji. Start i meta biegu są teraz spod Hotelu W Barcelona. Trasa prowadzi wzdłuż plaży, następnie jest zawrócenie i powrót na metę pod hotelem W.",
+    "title": "Termin biegu został zmieniony",
+    "message": "Uwaga: zmiana terminu biegu z powodu zapowiadanych intensywnych opadów deszczu i ze względu na bezpieczeństwo uczestników. Bieg odbędzie się w SOBOTĘ 24.01.2026. Start i meta biegu są teraz spod Hotelu W Barcelona. Trasa prowadzi wzdłuż plaży, następnie jest zawrócenie i powrót na metę pod hotelem W.",
     "cta": "Zobacz szczegóły biegu",
     "close": "Zamknij",
     "routeVideo": "Opis trasy (filmik)"
-  },
-  "common": {
-    "loading": "Ładowanie...",
-    "error": "Wystąpił błąd",
-    "close": "Zamknij",
-    "open": "Otwórz",
-    "menu": "Menu"
   }
 }
