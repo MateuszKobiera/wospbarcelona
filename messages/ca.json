@@ -264,8 +264,8 @@
       },
       "5": {
         "title": "20a Cursa WOŚP \"Compta amb la diabetis\"",
-        "description": "Cursa benèfica de 5 km. Sortida: Sagrada Familia, Meta: Hotel W - Barceloneta. Punt de trobada: Carrer de Lepant, 281. Inscripció a Slotmarket fins al 31.12.2025.",
-        "fullDescription": "Uneix-te a la 20a Cursa WOŚP \"Compta amb la diabetis\"! És una cursa benèfica de 5 km per la bonica Barcelona.\n\n🏃‍♂️ DETALLS DE LA CURSA:\n• Distància: 5 km\n• Data: 18 de gener de 2026\n• Sortida/Punt de trobada: Sagrada Familia (allà es repartiran les samarretes)\n• Meta: Hotel W - Barceloneta (hi haurà medalla per a tothom)\n• Punt de trobada: Carrer de Lepant, 281, L'Eixample\n\n📞 CONTACTE AMB ELS ORGANITZADORS:\nSi tens preguntes o problemes, contacta'ns per xat o amb la coordinadora de la cursa Aneta al +34 637 486 551.\n\n📝 INSCRIPCIÓ (OBLIGATÒRIA):\nCada participant de la cursa organitzada per l'Equip WOŚP a Barcelona ha de registrar-se personalment al sistema Slotmarket a la cursa VIRTUAL.\n\n⚠️ INSTRUCCIONS IMPORTANTS DE REGISTRE:\n1. Registra't a través de Slotmarket\n2. Introdueix l'adreça d'enviament a Polònia: Dominikańska 19C, 02-738 Varsòvia\n3. Al camp \"Club\" escriu: 6516 Barcelona\n4. Selecciona l'opció d'enviament nacional (a Polònia)\n5. Envia la confirmació de registre amb nom, cognom i talla de samarreta a: biegwospbarcelona@gmail.com\n6. Termini d'inscripció: fins al 31.12.2025\n\n🎁 PAQUET DE SORTIDA:\nPer rebre els paquets a l'enviament gratuït conjunt, cal completar correctament tots els camps del formulari Slotmarket.\n\n⚠️ ATENCIÓ: Omplir el formulari incorrectament pot resultar en un càrrec addicional de 150 PLN per enviament o no rebre el paquet!"
+        "description": "Cursa benèfica de 5 km. Sortida i meta: Hotel W Barcelona (Barceloneta). Ruta per la platja, retorn i tornada al Hotel W. Inscripció a Slotmarket fins al 31.12.2025.",
+        "fullDescription": "Uneix-te a la 20a Cursa WOŚP \"Compta amb la diabetis\"! És una cursa benèfica de 5 km per la bonica Barcelona.\n\n🏃‍♂️ DETALLS DE LA CURSA:\n• Distància: 5 km\n• Data: 18 de gener de 2026\n• Sortida/Punt de trobada: Hotel W Barcelona (Barceloneta)\n• Ruta: per la platja, retorn i tornada\n• Meta: Hotel W Barcelona (hi haurà medalla per a tothom)\n\n📞 CONTACTE AMB ELS ORGANITZADORS:\nSi tens preguntes o problemes, contacta'ns per xat o amb la coordinadora de la cursa Aneta al +34 637 486 551.\n\nConvidem tothom a la sortida, fins i tot sense inscripció prèvia — poden córrer amb nosaltres i gaudir de l'ambient (només els corredors registrats rebran la samarreta oficial)."
       },
       "1": {
         "title": "34è Final WOŚP a Barcelona",
@@ -328,6 +328,7 @@
       "aboutEvent": "Sobre l'esdeveniment",
       "gallery": "Galeria",
       "photoAlt": "foto",
+      "routeVideo": "Vídeo del recorregut",
       "eventDetails": "Detalls de l'esdeveniment",
       "amountRaised": "Quantitat recaptada",
       "duringEvent": "Durant l'esdeveniment",
@@ -507,6 +508,14 @@
       "meetupDesc": "Uneix-te als nostres esdeveniments i trobades de la comunitat polonesa.",
       "youtubeDesc": "Mira els nostres vídeos i reportatges d'esdeveniments de WOŚP Barcelona."
     }
+  },
+  "runRoutePopup": {
+    "badge": "IMPORTANT – CANVI",
+    "title": "La sortida és des de l'Hotel W",
+    "message": "Atenció: canvi respecte a la informació anterior. La sortida i la meta ara són a l'Hotel W Barcelona. El recorregut va per la platja, després hi ha un gir i retorn per acabar a l'Hotel W.",
+    "cta": "Veure detalls de la cursa",
+    "close": "Tancar",
+    "routeVideo": "Vídeo del recorregut"
   },
   "common": {
     "loading": "Carregant...",

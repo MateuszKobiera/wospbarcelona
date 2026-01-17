@@ -16,7 +16,7 @@ const upcomingEventsData = [
     id: 5,
     date: '2026-01-18',
     time: '10:30',
-    location: 'Sagrada Familia',
+    location: 'Hotel W Barcelona',
     categoryKey: 'run',
     image: '/images/kalendarz/workoplecak_20bieg_podglad.jpg',
     registrationRequired: true,
@@ -246,7 +246,7 @@ export default function EventsPageClient() {
                                 <span className="text-gray-600">{eventLocation}</span>
                               ) : (
                                 <a
-                                  href={event.id === 5 ? 'https://maps.app.goo.gl/FR1RXEmzdsYAX42a6' : event.id === 1 ? 'https://maps.app.goo.gl/dJVBoLze5fe5AhB38' : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(eventLocation)}`}
+                                  href={event.id === 5 ? 'https://www.google.com/maps/search/?api=1&query=Hotel%20W%20Barcelona' : event.id === 1 ? 'https://maps.app.goo.gl/dJVBoLze5fe5AhB38' : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(eventLocation)}`}
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   className="text-red-600 hover:text-red-700 hover:underline"
@@ -372,7 +372,7 @@ export default function EventsPageClient() {
                             <span className="text-gray-600">{eventLocation}</span>
                           ) : (
                             <a
-                              href={event.id === 5 ? 'https://maps.app.goo.gl/FR1RXEmzdsYAX42a6' : event.id === 1 ? 'https://maps.app.goo.gl/dJVBoLze5fe5AhB38' : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(eventLocation)}`}
+                              href={event.id === 5 ? 'https://www.google.com/maps/search/?api=1&query=Hotel%20W%20Barcelona' : event.id === 1 ? 'https://maps.app.goo.gl/dJVBoLze5fe5AhB38' : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(eventLocation)}`}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="text-red-600 hover:text-red-700 hover:underline"

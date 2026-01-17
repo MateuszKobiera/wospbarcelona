@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { locales } from '@/i18n';
 import { Footer } from '@/components/Footer';
 import ClientHeader from '@/components/ClientHeader';
+import RunRouteChangePopup from '@/components/RunRouteChangePopup';
 
 type Locale = (typeof locales)[number];
 
@@ -19,7 +20,7 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  
+
   // Validate that the incoming `locale` parameter is valid
   if (!locales.includes(locale as Locale)) {
     notFound();
@@ -32,6 +33,7 @@ export default async function LocaleLayout({
   return (
     <NextIntlClientProvider messages={messages}>
       <ClientHeader />
+      <RunRouteChangePopup />
       {children}
       <Footer />
     </NextIntlClientProvider>

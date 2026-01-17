@@ -264,8 +264,8 @@
       },
       "5": {
         "title": "20ª Carrera WOŚP \"Cuenta con la diabetes\"",
-        "description": "Carrera benéfica de 5 km. Salida: Sagrada Familia, Meta: Hotel W - Barceloneta. Punto de encuentro: Carrer de Lepant, 281. Inscripción en Slotmarket hasta el 31.12.2025.",
-        "fullDescription": "¡Únete a la 20ª Carrera WOŚP \"Cuenta con la diabetes\"! Es una carrera benéfica de 5 km por la hermosa Barcelona.\n\n🏃‍♂️ DETALLES DE LA CARRERA:\n• Distancia: 5 km\n• Fecha: 18 de enero de 2026\n• Salida/Punto de encuentro: Sagrada Familia (allí se repartirán las camisetas)\n• Meta: Hotel W - Barceloneta (habrá medalla para todos)\n• Punto de encuentro: Carrer de Lepant, 281, L'Eixample\n\n📞 CONTACTO CON LOS ORGANIZADORES:\nSi tienes preguntas o problemas, contáctanos por chat o con la coordinadora de la carrera Aneta al +34 637 486 551.\n\n📝 INSCRIPCIÓN (OBLIGATORIA):\nCada participante de la carrera organizada por el Equipo WOŚP en Barcelona debe registrarse personalmente en el sistema Slotmarket en la carrera VIRTUAL.\n\n⚠️ INSTRUCCIONES IMPORTANTES DE REGISTRO:\n1. Regístrate a través de Slotmarket\n2. Introduce la dirección de envío en Polonia: Dominikańska 19C, 02-738 Varsovia\n3. En el campo \"Club\" escribe: 6516 Barcelona\n4. Selecciona la opción de envío nacional (a Polonia)\n5. Envía la confirmación de registro con nombre, apellido y talla de camiseta a: biegwospbarcelona@gmail.com\n6. Plazo de inscripción: hasta el 31.12.2025\n\n🎁 PAQUETE DE SALIDA:\nPara recibir los paquetes en el envío gratuito conjunto, es necesario completar correctamente todos los campos del formulario Slotmarket.\n\n⚠️ ATENCIÓN: ¡Rellenar el formulario incorrectamente puede resultar en un cargo adicional de 150 PLN por envío o no recibir el paquete!"
+        "description": "Carrera benéfica de 5 km. Salida y meta: Hotel W Barcelona (Barceloneta). Ruta por la playa, retorno y vuelta al Hotel W. Inscripción en Slotmarket hasta el 31.12.2025.",
+        "fullDescription": "¡Únete a la 20ª Carrera WOŚP \"Cuenta con la diabetes\"! Es una carrera benéfica de 5 km por la hermosa Barcelona.\n\n🏃‍♂️ DETALLES DE LA CARRERA:\n• Distancia: 5 km\n• Fecha: 18 de enero de 2026\n• Salida/Punto de encuentro: Hotel W Barcelona (Barceloneta)\n• Ruta: por la playa, retorno y vuelta\n• Meta: Hotel W Barcelona (habrá medalla para todos)\n\n📞 CONTACTO CON LOS ORGANIZADORES:\nSi tienes preguntas o problemas, contáctanos por chat o con la coordinadora de la carrera Aneta al +34 637 486 551.\n\n¡Todos son bienvenidos en la línea de salida, incluso sin inscripción previa — pueden correr con nosotros y disfrutar del ambiente (solo los corredores registrados recibirán la camiseta oficial)."
       },
       "1": {
         "title": "34º Final WOŚP en Barcelona",
@@ -328,6 +328,7 @@
       "aboutEvent": "Sobre el evento",
       "gallery": "Galería",
       "photoAlt": "foto",
+      "routeVideo": "Vídeo del recorrido",
       "eventDetails": "Detalles del evento",
       "amountRaised": "Cantidad recaudada",
       "duringEvent": "Durante el evento",
@@ -503,6 +504,14 @@
       "meetupDesc": "Únete a nuestros eventos y reuniones de la comunidad polaca.",
       "youtubeDesc": "Mira nuestros vídeos y reportajes de eventos de WOŚP Barcelona."
     }
+  },
+  "runRoutePopup": {
+    "badge": "IMPORTANTE – CAMBIO",
+    "title": "La salida es desde el Hotel W",
+    "message": "Atención: cambio respecto a la información anterior. La salida y la meta ahora son en el Hotel W Barcelona. El recorrido va por la playa, luego hay un giro y regreso para terminar en el Hotel W.",
+    "cta": "Ver detalles de la carrera",
+    "close": "Cerrar",
+    "routeVideo": "Vídeo del recorrido"
   },
   "common": {
     "loading": "Cargando...",

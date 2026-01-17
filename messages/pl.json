@@ -264,8 +264,8 @@
       },
       "5": {
         "title": "20. Bieg WOŚP \"Policz się z cukrzycą\"",
-        "description": "Bieg charytatywny na 5 km. Start: Sagrada Familia, Meta: Hotel W - Barceloneta. Zbiórka: Carrer de Lepant, 281. Rejestracja przez Slotmarket do 31.12.2025.",
-        "fullDescription": "Dołącz do 20. Biegu WOŚP \"Policz się z cukrzycą\"! To bieg charytatywny na dystansie 5 km przez piękną Barcelonę.\n\n🏃‍♂️ SZCZEGÓŁY BIEGU:\n• Dystans: 5 km\n• Data: 18 stycznia 2026\n• Start/Zbiórka: Sagrada Familia (tam zostaną rozdane koszulki)\n• Meta: Hotel W - Barceloneta (dla każdego czeka medal)\n• Miejsce zbiórki: Carrer de Lepant, 281, L'Eixample\n\n📞 KONTAKT DO ORGANIZATORÓW:\nW razie pytań lub problemów prosimy o kontakt na czacie lub z koordynatorką biegu Anetą pod numerem +34 637 486 551.\n\n📝 REJESTRACJA (OBOWIĄZKOWA):\nKażdy uczestnik biegu organizowanego przez Sztab WOŚP w Barcelonie musi zarejestrować się osobiście w systemie Slotmarket w biegu WIRTUALNYM.\n\n⚠️ WAŻNE INSTRUKCJE REJESTRACJI:\n1. Zarejestruj się przez Slotmarket\n2. Wpisz adres wysyłki na Polskę: Dominikańska 19C, 02-738 Warszawa\n3. W polu \"Klub\" wpisz: 6516 Barcelona\n4. Wybierz opcję przesyłki krajowej (do Polski)\n5. Wyślij potwierdzenie rejestracji z imieniem, nazwiskiem i rozmiarem koszulki na: biegwospbarcelona@gmail.com\n6. Termin rejestracji: do 31.12.2025\n\n🎁 PAKIET STARTOWY:\nWarunkiem otrzymania pakietów w zbiorczej gratisowej paczce jest poprawne wypełnienie wszystkich pól w formularzu Slotmarket.\n\n⚠️ UWAGA: Niepoprawne wypełnienie formularza może skutkować koniecznością dopłaty 150 zł za przesyłkę lub brakiem otrzymania pakietu!"
+        "description": "Bieg charytatywny na 5 km. Start i meta: Hotel W Barcelona (Barceloneta). Trasa wzdłuż plaży, nawrót i powrót pod Hotel W. Zapraszamy wszystkich! (Tylko zarejestrowani dostaną koszulki)",
+        "fullDescription": "Dołącz do 20. Biegu WOŚP \"Policz się z cukrzycą\"! To bieg charytatywny na dystansie 5 km przez piękną Barcelonę.\n\n🏃‍♂️ SZCZEGÓŁY BIEGU:\n• Dystans: 5 km\n• Data: 18 stycznia 2026\n• Start/Zbiórka: Hotel W Barcelona (Barceloneta)\n• Trasa: wzdłuż plaży, nawrót i powrót\n• Meta: Hotel W Barcelona (dla każdego czeka medal)\n\n📞 KONTAKT DO ORGANIZATORÓW:\nW razie pytań lub problemów prosimy o kontakt na czacie lub z koordynatorką biegu Anetą pod numerem +34 637 486 551.\n\nZapraszamy wszystkich na start, nawet bez zapisu — można z nami pobiec, ale tylko zarejestrowani uczestnicy otrzymają oficjalne koszulki."
       },
       "1": {
         "title": "34. Finał WOŚP w Barcelonie",
@@ -330,6 +330,7 @@
       "photoAlt": "zdjęcie",
       "eventDetails": "Szczegóły wydarzenia",
       "amountRaised": "Zebrana kwota",
+      "routeVideo": "Opis trasy (filmik)",
       "duringEvent": "Podczas wydarzenia",
       "totalDuringFinale": "Łącznie podczas finału",
       "thankYou": "Dziękujemy za wsparcie!",
@@ -503,6 +504,14 @@
       "meetupDesc": "Dołącz do naszych wydarzeń i spotkań polskiej społeczności.",
       "youtubeDesc": "Oglądaj nasze filmy i relacje z wydarzeń WOŚP Barcelona."
     }
+  },
+  "runRoutePopup": {
+    "badge": "WAŻNE – ZMIANA",
+    "title": "Start biegu jest spod Hotelu W",
+    "message": "Uwaga: zmiana względem wcześniejszych informacji. Start i meta biegu są teraz spod Hotelu W Barcelona. Trasa prowadzi wzdłuż plaży, następnie jest zawrócenie i powrót na metę pod hotelem W.",
+    "cta": "Zobacz szczegóły biegu",
+    "close": "Zamknij",
+    "routeVideo": "Opis trasy (filmik)"
   },
   "common": {
     "loading": "Ładowanie...",

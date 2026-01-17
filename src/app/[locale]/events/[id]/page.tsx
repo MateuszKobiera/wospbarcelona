@@ -77,11 +77,11 @@ const allEvents = [
   {
     id: 5,
     title: '20. Bieg WOŚP "Policz się z cukrzycą"',
-    description: 'Bieg charytatywny na 5 km. Start: Sagrada Familia, Meta: Hotel W - Barceloneta. Zbiórka: Carrer de Lepant, 281. Rejestracja przez Slotmarket do 31.12.2025.',
-    fullDescription: 'Dołącz do 20. Biegu WOŚP "Policz się z cukrzycą"! To bieg charytatywny na dystansie 5 km przez piękną Barcelonę.\n\n🏃‍♂️ SZCZEGÓŁY BIEGU:\n• Dystans: 5 km\n• Data: 18 stycznia 2026\n• Start/Zbiórka: Sagrada Familia (tam zostaną rozdane koszulki)\n• Meta: Hotel W - Barceloneta (dla każdego czeka medal)\n• Miejsce zbiórki: Carrer de Lepant, 281, L\'Eixample\n\n📞 KONTAKT DO ORGANIZATORÓW:\nW razie pytań lub problemów prosimy o kontakt na czacie lub z koordynatorką biegu Anetą pod numerem +34 637 486 551.\n\n📝 REJESTRACJA (OBOWIĄZKOWA):\nKażdy uczestnik biegu organizowanego przez Sztab WOŚP w Barcelonie musi zarejestrować się osobiście w systemie Slotmarket w biegu WIRTUALNYM.\n\n⚠️ WAŻNE INSTRUKCJE REJESTRACJI:\n1. Zarejestruj się przez Slotmarket\n2. Wpisz adres wysyłki na Polskę: Dominikańska 19C, 02-738 Warszawa\n3. W polu "Klub" wpisz: 6516 Barcelona\n4. Wybierz opcję przesyłki krajowej (do Polski)\n5. Wyślij potwierdzenie rejestracji z imieniem, nazwiskiem i rozmiarem koszulki na: biegwospbarcelona@gmail.com\n6. Termin rejestracji: do 31.12.2025\n\n🎁 PAKIET STARTOWY:\nWarunkiem otrzymania pakietów w zbiorczej gratisowej paczce jest poprawne wypełnienie wszystkich pól w formularzu Slotmarket.\n\n⚠️ UWAGA: Niepoprawne wypełnienie formularza może skutkować koniecznością dopłaty 150 zł za przesyłkę lub brakiem otrzymania pakietu!',
+    description: 'Bieg charytatywny na 5 km. Start i meta: Hotel W Barcelona (Barceloneta). Trasa wzdłuż plaży, nawrót i powrót pod Hotel W. Rejestracja przez Slotmarket do 31.12.2025.',
+    fullDescription: 'Dołącz do 20. Biegu WOŚP "Policz się z cukrzycą"! To bieg charytatywny na dystansie 5 km w Barcelonie.\n\n🏃‍♂️ SZCZEGÓŁY BIEGU:\n• Dystans: 5 km\n• Data: 18 stycznia 2026\n• Start/Zbiórka: Hotel W Barcelona (Barceloneta)\n• Trasa: wzdłuż plaży, nawrót i powrót\n• Meta: Hotel W Barcelona (dla każdego czeka medal)\n\n📞 KONTAKT DO ORGANIZATORÓW:\nW razie pytań lub problemów prosimy o kontakt na czacie lub z koordynatorką biegu Anetą pod numerem +34 637 486 551.\n\n📝 REJESTRACJA (OBOWIĄZKOWA):\nKażdy uczestnik biegu organizowanego przez Sztab WOŚP w Barcelonie musi zarejestrować się osobiście w systemie Slotmarket w biegu WIRTUALNYM.\n\n⚠️ WAŻNE INSTRUKCJE REJESTRACJI:\n1. Zarejestruj się przez Slotmarket\n2. Wpisz adres wysyłki na Polskę: Dominikańska 19C, 02-738 Warszawa\n3. W polu "Klub" wpisz: 6516 Barcelona\n4. Wybierz opcję przesyłki krajowej (do Polski)\n5. Wyślij potwierdzenie rejestracji z imieniem, nazwiskiem i rozmiarem koszulki na: biegwospbarcelona@gmail.com\n6. Termin rejestracji: do 31.12.2025\n\n🎁 PAKIET STARTOWY:\nWarunkiem otrzymania pakietów w zbiorczej gratisowej paczce jest poprawne wypełnienie wszystkich pól w formularzu Slotmarket.\n\n⚠️ UWAGA: Niepoprawne wypełnienie formularza może skutkować koniecznością dopłaty 150 zł za przesyłkę lub brakiem otrzymania pakietu!',
     date: '2026-01-18',
     time: 'Start: 10:30',
-    location: 'Sagrada Familia',
+    location: 'Hotel W Barcelona',
     category: 'Bieg',
     image: '/images/kalendarz/workoplecak_20bieg_podglad.jpg',
     gallery: [
@@ -328,6 +328,9 @@ export default function EventPage() {
   const eventFullDescription = t.has(`items.${event.id}.fullDescription`)
     ? t(`items.${event.id}.fullDescription`)
     : event.fullDescription;
+  const eventLocation = t.has(`items.${event.id}.location`)
+    ? t(`items.${event.id}.location`)
+    : event.location;
   // Map Polish category names to translation keys
   const categoryKeyMap: Record<string, string> = {
     'Spotkanie Wolontariuszy': 'volunteerMeeting',
@@ -529,20 +532,35 @@ export default function EventPage() {
                   <div className="flex items-center text-gray-700">
                     <MapPin className="w-5 h-5 mr-3 text-red-600 flex-shrink-0" />
                     <div>
-                      {(event.location.includes('Online') || event.location.includes('Allegro')) ? (
-                        <span className="text-gray-700">{event.location}</span>
+                      {(eventLocation.includes('Online') || eventLocation.includes('Allegro')) ? (
+                        <span className="text-gray-700">{eventLocation}</span>
                       ) : (
                         <a
-                          href={event.id === 5 ? 'https://maps.app.goo.gl/FR1RXEmzdsYAX42a6' : event.id === 1 ? 'https://maps.app.goo.gl/dJVBoLze5fe5AhB38' : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(event.location)}`}
+                          href={event.id === 5 ? 'https://www.google.com/maps/search/?api=1&query=Hotel%20W%20Barcelona' : event.id === 1 ? 'https://maps.app.goo.gl/dJVBoLze5fe5AhB38' : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(eventLocation)}`}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-red-600 hover:text-red-700 hover:underline"
                         >
-                          {event.location}
+                          {eventLocation}
                         </a>
                       )}
                     </div>
                   </div>
+
+                  {event.id === 5 && (
+                    <div className="pt-2">
+                      <a
+                        href="https://www.facebook.com/share/r/1AgZ12M2Ha/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block w-full"
+                      >
+                        <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white cursor-pointer">
+                          {t('detail.routeVideo')}
+                        </Button>
+                      </a>
+                    </div>
+                  )}
 
 
 
@@ -610,7 +628,7 @@ export default function EventPage() {
 
 
             {/* Registration for special events */}
-            {!isPastEvent && event.registrationLink && (
+            {!isPastEvent && event.registrationLink && event.id !== 5 && (
               <Card className="bg-white">
                 <CardContent className="p-6">
                   <h3 className="text-lg font-bold text-gray-900 mb-4">{t('detail.registration')}</h3>
@@ -621,7 +639,7 @@ export default function EventPage() {
                       rel="noopener noreferrer"
                       className="block w-full"
                     >
-                      <Button className="w-full bg-green-600 hover:bg-green-700 text-white cursor-pointer">
+                      <Button className="w-full bg-red-600 hover:bg-red-700 text-white cursor-pointer">
                         {t('detail.registerForRun')}
                       </Button>
                     </a>

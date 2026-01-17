@@ -264,8 +264,8 @@
       },
       "5": {
         "title": "20th WOŚP Run \"Count on Diabetes\"",
-        "description": "5 km charity run. Start: Sagrada Familia, Finish: Hotel W - Barceloneta. Meeting point: Carrer de Lepant, 281. Registration via Slotmarket until 31.12.2025.",
-        "fullDescription": "Join the 20th WOŚP Run \"Count on Diabetes\"! It's a 5 km charity run through beautiful Barcelona.\n\n🏃‍♂️ RUN DETAILS:\n• Distance: 5 km\n• Date: January 18, 2026\n• Start/Meeting point: Sagrada Familia (t-shirts will be distributed there)\n• Finish: Hotel W - Barceloneta (medal for everyone)\n• Meeting point: Carrer de Lepant, 281, L'Eixample\n\n📞 CONTACT ORGANIZERS:\nIf you have questions or problems, contact us via chat or the run coordinator Aneta at +34 637 486 551.\n\n📝 REGISTRATION (MANDATORY):\nEach participant of the run organized by the WOŚP Team in Barcelona must register personally in the Slotmarket system for the VIRTUAL run.\n\n⚠️ IMPORTANT REGISTRATION INSTRUCTIONS:\n1. Register through Slotmarket\n2. Enter shipping address in Poland: Dominikańska 19C, 02-738 Warsaw\n3. In the \"Club\" field write: 6516 Barcelona\n4. Select the domestic shipping option (to Poland)\n5. Send registration confirmation with name, surname and t-shirt size to: biegwospbarcelona@gmail.com\n6. Registration deadline: until 31.12.2025\n\n🎁 STARTER PACK:\nTo receive packages in the free collective shipment, you must correctly fill in all fields in the Slotmarket form.\n\n⚠️ WARNING: Incorrectly filling out the form may result in an additional charge of 150 PLN for shipping or not receiving the package!"
+        "description": "5 km charity run. Start & finish: Hotel W Barcelona (Barceloneta). Route along the beach, turnaround and back to Hotel W. Registration via Slotmarket until 31.12.2025.",
+        "fullDescription": "Join the 20th WOŚP Run \"Count on Diabetes\"! It's a 5 km charity run through beautiful Barcelona.\n\n🏃‍♂️ RUN DETAILS:\n• Distance: 5 km\n• Date: January 18, 2026\n• Start/Meeting point: Hotel W Barcelona (Barceloneta)\n• Finish: Hotel W Barcelona (medal for everyone)\n• Route: Along the beach with a turnaround and return\n\n📞 CONTACT ORGANIZERS:\nIf you have questions or problems, contact us via chat or the run coordinator Aneta at +34 637 486 551.\n\nEveryone is welcome to join us at the start line, even without prior registration — you can still run with us and enjoy the atmosphere (only registered runners receive the official t-shirt)."
       },
       "1": {
         "title": "34th WOŚP Finale in Barcelona",
@@ -340,7 +340,8 @@
       "warning": "Warning",
       "contact": "Contact",
       "contactUs": "Contact us",
-      "addToCalendar": "Add to Google Calendar"
+      "addToCalendar": "Add to Google Calendar",
+      "routeVideo": "Route video"
     }
   },
   "blog": {
@@ -503,6 +504,14 @@
       "meetupDesc": "Join our events and meetings of the Polish community.",
       "youtubeDesc": "Watch our videos and event reports from WOŚP Barcelona."
     }
+  },
+  "runRoutePopup": {
+    "badge": "IMPORTANT – CHANGE",
+    "title": "The start is from Hotel W",
+    "message": "Attention: change compared to previous information. The start and finish are now at Hotel W Barcelona. The route goes along the beach, then turns around and returns to finish at Hotel W.",
+    "cta": "See run details",
+    "close": "Close",
+    "routeVideo": "Route video"
   },
   "common": {
     "loading": "Loading...",
