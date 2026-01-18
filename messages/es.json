@@ -482,6 +482,37 @@
       "kosmoHisplano": {
         "name": "Asociación Educativa Kosmo HisPLano",
         "description": "Invita a los residentes más jóvenes de Barcelona, especialmente niños y jóvenes de familias polacas, a participar en emocionantes actividades extraescolares. La organización se centra en enriquecer las habilidades lingüísticas y ampliar el conocimiento sobre Polonia."
+      },
+      "worldClassBarcelona": {
+        "name": "World Class Barcelona",
+        "description": "Escuela de español en Barcelona. Una escuela local, vibrante y entusiasta que ofrece clases atractivas y actividades emocionantes. Construyen una gran comunidad de estudiantes y profesores que se apoyan mutuamente, comparten sus pasiones y disfrutan de Barcelona. Ofrecen cursos intensivos de español en el centro de Barcelona."
+      },
+      "browarStuMostow": {
+        "name": "Browar Stu Mostów"
+      },
+      "nepoBrewing": {
+        "name": "Nepo Brewing"
+      },
+      "browarCzterySciny": {
+        "name": "Browar Cztery Ściany"
+      },
+      "funkyFluid": {
+        "name": "Funky Fluid"
+      },
+      "browarRockmill": {
+        "name": "Browar Rockmill"
+      },
+      "moje": {
+        "name": "Moje"
+      },
+      "vrSimWorld": {
+        "name": "VR Sim World"
+      },
+      "prezydentWarszawy": {
+        "name": "Presidente de Varsovia Rafał Trzaskowski"
+      },
+      "bubblesLocos": {
+        "name": "Bubbles Locos"
       }
     }
   },

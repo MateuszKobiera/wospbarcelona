@@ -18,6 +18,16 @@ const DEFAULT_SPONSORS: Sponsor[] = [
   { name: 'Wawel RestoBar', logo: '/images/sponsors/Wawel.png' },
   { name: 'Sol de Gracia', logo: '/images/sponsors/311836535_638740301171743_4776177943725666713_n.png' },
   { name: 'La Magia de los Sabores', logo: '/images/sponsors/la-magia-de-los-sabores.jpg' },
+  { name: 'World Class Barcelona', logo: '/images/sponsors/world class barcelona.png' },
+  { name: 'Browar Stu Mostów', logo: '/images/sponsors/browar-stu-mostow.webp' },
+  { name: 'Nepo Brewing', logo: '/images/sponsors/nepo-brewing.png' },
+  { name: 'Browar Cztery Ściany', logo: '/images/sponsors/cztery-sciany.png' },
+  { name: 'Funky Fluid', logo: '/images/sponsors/funky-fluid.jpg' },
+  { name: 'Browar Rockmill', logo: '/images/sponsors/rockmill.jpg' },
+  { name: 'Moje', logo: '/images/sponsors/moje-poduszki.jpg' },
+  { name: 'VR Sim World', logo: '/images/sponsors/vr-sim-world.jpg' },
+  { name: 'Prezydent Miasta Warszawy Rafał Trzaskowski', logo: '/images/sponsors/Warszawa-znak-400x265.png' },
+  { name: 'Bubbles Locos', logo: '/images/sponsors/bubbles-locos.png' },
   { name: 'Stowarzyszenie Edukacyjne Kosmo HisPLano', logo: '/images/sponsors/kosmo-his-plano.png' },
 ];
 

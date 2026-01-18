@@ -131,6 +131,66 @@ const categories: Category[] = [
                 logoUrl: '/images/sponsors/la-magia-de-los-sabores.jpg',
                 menuUrl: '/images/sponsors/la-magia-de-los-sabores-menu.jpeg'
             },
+            {
+                key: 'worldClassBarcelona',
+                links: [
+                    { label: 'website', url: 'https://worldclassbcn.com/en/' },
+                    { label: 'Instagram', url: 'https://www.instagram.com/worldclassbcn/' },
+                    { label: 'Facebook', url: 'https://www.facebook.com/worldclassbcn' },
+                    { label: 'TikTok', url: 'https://www.tiktok.com/@worldclassbcn?_t=8oEhYAJivZo&_r=1' },
+                    { label: 'WhatsApp', url: 'https://wa.me/+34656269695' },
+                    { label: 'Email', url: 'mailto:info@worldclassbcn.com' },
+                    { label: 'maps', url: 'https://maps.app.goo.gl/LHePTLVgoPcoKYkS6' },
+                    { label: 'Lekcja Próbna', url: 'https://worldclassbcn.com/en/free-trial-spanish-class/' },
+                    { label: 'Kurs Allegro', url: 'https://allegro.pl/oferta/intensywny-kurs-jezyka-hiszpanskiego-w-centrum-barcelony-18199533917' },
+                ],
+                logoUrl: '/images/sponsors/world class barcelona.png'
+            },
+            {
+                key: 'browarStuMostow',
+                links: [],
+                logoUrl: '/images/sponsors/browar-stu-mostow.webp'
+            },
+            {
+                key: 'nepoBrewing',
+                links: [],
+                logoUrl: '/images/sponsors/nepo-brewing.png'
+            },
+            {
+                key: 'browarCzterySciny',
+                links: [],
+                logoUrl: '/images/sponsors/cztery-sciany.png'
+            },
+            {
+                key: 'funkyFluid',
+                links: [],
+                logoUrl: '/images/sponsors/funky-fluid.jpg'
+            },
+            {
+                key: 'browarRockmill',
+                links: [],
+                logoUrl: '/images/sponsors/rockmill.jpg'
+            },
+            {
+                key: 'moje',
+                links: [],
+                logoUrl: '/images/sponsors/moje-poduszki.jpg'
+            },
+            {
+                key: 'vrSimWorld',
+                links: [],
+                logoUrl: '/images/sponsors/vr-sim-world.jpg'
+            },
+            {
+                key: 'prezydentWarszawy',
+                links: [],
+                logoUrl: '/images/sponsors/Warszawa-znak-400x265.png'
+            },
+            {
+                key: 'bubblesLocos',
+                links: [],
+                logoUrl: '/images/sponsors/bubbles-locos.png'
+            },
         ],
     },
     {
@@ -221,6 +281,10 @@ export default function SponsorsPageClient() {
                         const categoryTitle = t(`categories.${cat.categoryKey}.title`);
                         const categoryDescription = t(`categories.${cat.categoryKey}.description`);
 
+                        // Separate items into main partners (with links/description) and additional partners (logo only)
+                        const mainPartners = cat.items.filter(s => s.links && s.links.length > 0);
+                        const additionalPartners = cat.items.filter(s => !s.links || s.links.length === 0);
+
                         return (
                             <section key={cat.categoryKey}>
                                 <div className="text-center mb-8">
@@ -228,88 +292,137 @@ export default function SponsorsPageClient() {
                                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">{categoryDescription}</p>
                                 </div>
 
-                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                    {cat.items.map((s) => {
-                                        const itemName = t(`items.${s.key}.name`);
-                                        const itemDescription = t(`items.${s.key}.description`);
+                                {/* Main Partners - Full cards with descriptions and links */}
+                                {mainPartners.length > 0 && (
+                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                                        {mainPartners.map((s) => {
+                                            const itemName = t(`items.${s.key}.name`);
+                                            let itemDescription = '';
+                                            try {
+                                                itemDescription = t(`items.${s.key}.description`);
+                                            } catch (e) {
+                                                // Description doesn't exist, keep empty
+                                            }
 
-                                        return (
-                                            <Card
-                                                key={`${cat.categoryKey}-${s.key}`}
-                                                className="bg-white border border-red-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-                                            >
-                                                <CardHeader className="text-center pb-4">
-                                                    {s.logoUrl ? (
-                                                        <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center">
-                                                            <Image
-                                                                src={s.logoUrl}
-                                                                alt={`${itemName} logo`}
-                                                                width={80}
-                                                                height={80}
-                                                                className="max-w-full max-h-full object-contain"
-                                                                priority={false}
-                                                            />
-                                                        </div>
-                                                    ) : (
-                                                        <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-red-500 via-red-400 to-pink-400 flex items-center justify-center text-white font-bold text-xl">
-                                                            {itemName.charAt(0)}
-                                                        </div>
-                                                    )}
-                                                    <CardTitle className="text-xl font-bold text-gray-900">
-                                                        {itemName}
-                                                    </CardTitle>
-                                                </CardHeader>
-                                                <CardContent className="text-center">
-                                                    {itemDescription && (
-                                                        <p className="text-gray-600 mb-6 text-sm leading-relaxed">
-                                                            {itemDescription}
-                                                        </p>
-                                                    )}
-
-                                                    {((s.links && s.links.length > 0) || s.menuUrl) && (
-                                                        <div className="space-y-3">
-                                                            <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
-                                                                {t('linkLabels.links')}
+                                            return (
+                                                <Card
+                                                    key={`${cat.categoryKey}-${s.key}`}
+                                                    className="bg-white border border-red-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                                                >
+                                                    <CardHeader className="text-center pb-4">
+                                                        {s.logoUrl ? (
+                                                            <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center">
+                                                                <Image
+                                                                    src={s.logoUrl}
+                                                                    alt={`${itemName} logo`}
+                                                                    width={80}
+                                                                    height={80}
+                                                                    className="max-w-full max-h-full object-contain"
+                                                                    priority={false}
+                                                                />
                                                             </div>
-                                                            <div className="flex flex-wrap gap-2 justify-center">
-                                                                {s.links?.map((lr) => {
-                                                                    const isPhone = labelKey(lr.label) === 'phone';
-                                                                    return isPhone ? (
+                                                        ) : (
+                                                            <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-red-500 via-red-400 to-pink-400 flex items-center justify-center text-white font-bold text-xl">
+                                                                {itemName.charAt(0)}
+                                                            </div>
+                                                        )}
+                                                        <CardTitle className="text-xl font-bold text-gray-900">
+                                                            {itemName}
+                                                        </CardTitle>
+                                                    </CardHeader>
+                                                    <CardContent className="text-center">
+                                                        {itemDescription && (
+                                                            <p className="text-gray-600 mb-6 text-sm leading-relaxed">
+                                                                {itemDescription}
+                                                            </p>
+                                                        )}
+
+                                                        {((s.links && s.links.length > 0) || s.menuUrl) && (
+                                                            <div className="space-y-3">
+                                                                <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                                                                    {t('linkLabels.links')}
+                                                                </div>
+                                                                <div className="flex flex-wrap gap-2 justify-center">
+                                                                    {s.links?.map((lr) => {
+                                                                        const isPhone = labelKey(lr.label) === 'phone';
+                                                                        return isPhone ? (
+                                                                            <button
+                                                                                key={`${s.key}-${lr.label}-${lr.url}`}
+                                                                                onClick={() => openPhoneLightbox(lr.url.replace('tel:', ''), itemName)}
+                                                                                className="px-3 py-1.5 rounded-full border border-red-200 text-red-700 hover:bg-red-50 hover:border-red-300 text-sm font-medium transition-colors cursor-pointer"
+                                                                            >
+                                                                                {labelKey(lr.label) ? t(`linkLabels.${labelKey(lr.label)}` as keyof typeof t) : lr.label}
+                                                                            </button>
+                                                                        ) : (
+                                                                            <a
+                                                                                key={`${s.key}-${lr.label}-${lr.url}`}
+                                                                                href={lr.url}
+                                                                                target="_blank"
+                                                                                rel="noopener noreferrer"
+                                                                                className="px-3 py-1.5 rounded-full border border-red-200 text-red-700 hover:bg-red-50 hover:border-red-300 text-sm font-medium transition-colors cursor-pointer"
+                                                                            >
+                                                                                {labelKey(lr.label) ? t(`linkLabels.${labelKey(lr.label)}` as keyof typeof t) : lr.label}
+                                                                            </a>
+                                                                        );
+                                                                    })}
+                                                                    {s.menuUrl && (
                                                                         <button
-                                                                            key={`${s.key}-${lr.label}-${lr.url}`}
-                                                                            onClick={() => openPhoneLightbox(lr.url.replace('tel:', ''), itemName)}
+                                                                            onClick={() => openMenuLightbox(s.menuUrl!, itemName)}
                                                                             className="px-3 py-1.5 rounded-full border border-red-200 text-red-700 hover:bg-red-50 hover:border-red-300 text-sm font-medium transition-colors cursor-pointer"
                                                                         >
-                                                                            {labelKey(lr.label) ? t(`linkLabels.${labelKey(lr.label)}` as keyof typeof t) : lr.label}
+                                                                            {t('linkLabels.menu')}
                                                                         </button>
-                                                                    ) : (
-                                                                        <a
-                                                                            key={`${s.key}-${lr.label}-${lr.url}`}
-                                                                            href={lr.url}
-                                                                            target="_blank"
-                                                                            rel="noopener noreferrer"
-                                                                            className="px-3 py-1.5 rounded-full border border-red-200 text-red-700 hover:bg-red-50 hover:border-red-300 text-sm font-medium transition-colors cursor-pointer"
-                                                                        >
-                                                                            {labelKey(lr.label) ? t(`linkLabels.${labelKey(lr.label)}` as keyof typeof t) : lr.label}
-                                                                        </a>
-                                                                    );
-                                                                })}
-                                                                {s.menuUrl && (
-                                                                    <button
-                                                                        onClick={() => openMenuLightbox(s.menuUrl!, itemName)}
-                                                                        className="px-3 py-1.5 rounded-full border border-red-200 text-red-700 hover:bg-red-50 hover:border-red-300 text-sm font-medium transition-colors cursor-pointer"
-                                                                    >
-                                                                        {t('linkLabels.menu')}
-                                                                    </button>
-                                                                )}
+                                                                    )}
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                    )}
-                                                </CardContent>
-                                            </Card>
-                                        );
-                                    })}
-                                </div>
+                                                        )}
+                                                    </CardContent>
+                                                </Card>
+                                            );
+                                        })}
+                                    </div>
+                                )}
+
+                                {/* Additional Partners - Compact logo display */}
+                                {additionalPartners.length > 0 && (
+                                    <div>
+                                        <h3 className="text-xl font-semibold text-gray-700 mb-6 text-center">
+                                            {t('groups.partnersTitle')}
+                                        </h3>
+                                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                                            {additionalPartners.map((s) => {
+                                                const itemName = t(`items.${s.key}.name`);
+
+                                                return (
+                                                    <div
+                                                        key={`${cat.categoryKey}-${s.key}`}
+                                                        className="bg-white border border-gray-200 rounded-lg p-4 flex flex-col items-center justify-center hover:shadow-md transition-shadow"
+                                                    >
+                                                        {s.logoUrl ? (
+                                                            <div className="w-16 h-16 flex items-center justify-center mb-2">
+                                                                <Image
+                                                                    src={s.logoUrl}
+                                                                    alt={`${itemName} logo`}
+                                                                    width={64}
+                                                                    height={64}
+                                                                    className="max-w-full max-h-full object-contain"
+                                                                    priority={false}
+                                                                />
+                                                            </div>
+                                                        ) : (
+                                                            <div className="w-16 h-16 rounded-full bg-gradient-to-br from-red-400 to-pink-400 flex items-center justify-center text-white font-bold text-lg mb-2">
+                                                                {itemName.charAt(0)}
+                                                            </div>
+                                                        )}
+                                                        <p className="text-xs text-center text-gray-700 font-medium line-clamp-2">
+                                                            {itemName}
+                                                        </p>
+                                                    </div>
+                                                );
+                                            })}
+                                        </div>
+                                    </div>
+                                )}
                             </section>
                         );
                     })}

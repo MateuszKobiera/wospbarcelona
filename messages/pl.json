@@ -482,6 +482,37 @@
       "kosmoHisplano": {
         "name": "Stowarzyszenie Edukacyjne Kosmo HisPLano",
         "description": "Zaprasza najmłodszych mieszkańców Barcelony, zwłaszcza dzieci i młodzież z polonijnych rodzin do udziału w pasjonujących zajęciach dodatkowych. Organizacja koncentruje się na wzbogacaniu umiejętności językowych oraz poszerzaniu wiedzy o Polsce."
+      },
+      "worldClassBarcelona": {
+        "name": "World Class Barcelona",
+        "description": "Szkoła języka hiszpańskiego w Barcelonie. Lokalna, tętniąca życiem i pełna entuzjazmu szkoła oferująca wciągające zajęcia i ekscytujące aktywności. Budują świetną społeczność uczniów i nauczycieli, którzy wspierają się nawzajem, dzielą swoimi pasjami i cieszą się Barceloną. Oferują intensywny kurs języka hiszpańskiego w centrum Barcelony."
+      },
+      "browarStuMostow": {
+        "name": "Browar Stu Mostów"
+      },
+      "nepoBrewing": {
+        "name": "Nepo Brewing"
+      },
+      "browarCzterySciny": {
+        "name": "Browar Cztery Ściany"
+      },
+      "funkyFluid": {
+        "name": "Funky Fluid"
+      },
+      "browarRockmill": {
+        "name": "Browar Rockmill"
+      },
+      "moje": {
+        "name": "Moje"
+      },
+      "vrSimWorld": {
+        "name": "VR Sim World"
+      },
+      "prezydentWarszawy": {
+        "name": "Prezydent Miasta Warszawy Rafał Trzaskowski"
+      },
+      "bubblesLocos": {
+        "name": "Bubbles Locos"
       }
     }
   },
