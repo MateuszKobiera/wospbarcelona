@@ -45,7 +45,8 @@ const upcomingEventsData = [
     image: '/api/placeholder/400/250',
     registrationRequired: false,
     meetupLink: null,
-    facebookLink: null
+    facebookLink: null,
+    allegroLink: 'https://allegro.pl/uzytkownik/Client%3A140580262'
   }
 ];
 
@@ -262,7 +263,7 @@ export default function EventsPageClient() {
                           </div>
 
                           {/* Social links */}
-                          {(event.meetupLink || event.facebookLink) && (
+                          {(event.meetupLink || event.facebookLink || event.allegroLink) && (
                             <div className="flex space-x-2 mt-4">
                               {event.meetupLink && (
                                 <a
@@ -287,6 +288,19 @@ export default function EventsPageClient() {
                                 >
                                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
                                     <path d={siFacebook.path} />
+                                  </svg>
+                                </a>
+                              )}
+                              {event.allegroLink && (
+                                <a
+                                  href={event.allegroLink}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inline-flex items-center justify-center h-8 w-8 rounded-md bg-orange-100 text-orange-600 hover:bg-orange-200 transition-colors"
+                                  title={t('page.viewOnAllegro')}
+                                >
+                                  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 17.894a.6.6 0 0 1-.848 0l-5.046-5.046-5.046 5.046a.6.6 0 0 1-.848-.848l5.046-5.046-5.046-5.046a.6.6 0 0 1 .848-.848l5.046 5.046 5.046-5.046a.6.6 0 0 1 .848.848l-5.046 5.046 5.046 5.046a.6.6 0 0 1 0 .848z" />
                                   </svg>
                                 </a>
                               )}

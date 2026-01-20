@@ -68,6 +68,11 @@
       "meetupDesc": "Únete a nuestros eventos y reuniones de la comunidad polaca.",
       "youtubeDesc": "Mira nuestros vídeos y reportajes de eventos de WOŚP Barcelona."
     },
+    "allegro": {
+      "title": "Subastas Benéficas en Allegro",
+      "description": "Apoya a WOŚP Barcelona a través de subastas benéficas en la plataforma Allegro.",
+      "allegroDesc": "Puja por artículos benéficos y apoya a WOŚP Barcelona. Todos los fondos recaudados van a los objetivos benéficos del 34º Final WOŚP."
+    },
     "stats": {
       "yearsHelp": "Años de ayuda",
       "volunteers": "Voluntarios",
@@ -187,11 +192,12 @@
       },
       "socialsSection": {
         "followTitle": "Únete a nosotros",
-        "description": "Estamos en Facebook, Instagram, Meetup y YouTube. ¡Síguenos para estar al día!",
+        "description": "Estamos en Facebook, Instagram, Meetup, YouTube y Allegro. ¡Síguenos para estar al día!",
         "facebookDesc": "Mira qué hay de nuevo. Actualizaciones, fotos y reportajes de eventos.",
         "instagramDesc": "Últimas fotos y stories de nuestras actividades en Barcelona.",
         "meetupDesc": "Únete a nuestros eventos y reuniones de la comunidad polaca.",
-        "youtubeDesc": "Mira nuestros vídeos y reportajes de eventos de WOŚP Barcelona."
+        "youtubeDesc": "Mira nuestros vídeos y reportajes de eventos de WOŚP Barcelona.",
+        "allegroDesc": "Puja por artículos benéficos y apoya a WOŚP Barcelona."
       },
       "final33Section": {
         "title": "33.º Final de WOŚP en Barcelona",
@@ -220,6 +226,7 @@
       "addToCalendar": "Añadir a Google Calendar",
       "viewOnMeetup": "Ver en Meetup",
       "viewOnFacebook": "Ver en Facebook",
+      "viewOnAllegro": "Ver en Allegro",
       "registerForRun": "Inscríbete en la carrera",
       "final": "¡FINAL!",
       "duringEvent": "Durante el evento",

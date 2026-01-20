@@ -135,6 +135,52 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Allegro Section */}
+      <section className="py-14 bg-gradient-to-br from-orange-50 via-white to-orange-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-gray-900 mb-3">
+              {t('allegro.title')}
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              {t('allegro.description')}
+            </p>
+          </div>
+
+          <div className="max-w-2xl mx-auto">
+            <Link href="https://allegro.pl/uzytkownik/Client%3A140580262" target="_blank" rel="noopener noreferrer" className="block">
+              <Card className="border-orange-200/80 transition hover:shadow-lg hover:-translate-y-1 cursor-pointer bg-white">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-16 h-16 rounded-full bg-orange-100 flex items-center justify-center flex-shrink-0">
+                      <Image
+                        src="/images/allegro/a.png"
+                        alt="Allegro"
+                        width={32}
+                        height={32}
+                        className="w-8 h-8"
+                      />
+                    </div>
+                    <div className="flex-1">
+                      <div className="text-xl font-bold text-gray-900 mb-2">Allegro</div>
+                      <p className="text-gray-700 leading-relaxed">
+                        {t('allegro.allegroDesc')}
+                      </p>
+                      <div className="mt-4 inline-flex items-center text-orange-600 font-semibold hover:text-orange-700">
+                        <span>Zobacz aukcje</span>
+                        <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section
         className="relative py-14 overflow-hidden"
         style={{

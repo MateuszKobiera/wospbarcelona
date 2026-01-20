@@ -68,6 +68,11 @@
       "meetupDesc": "Uneix-te als nostres esdeveniments i trobades de la comunitat polonesa.",
       "youtubeDesc": "Mira els nostres vídeos i reportatges d'esdeveniments de WOŚP Barcelona."
     },
+    "allegro": {
+      "title": "Subhastes Benèfiques a Allegro",
+      "description": "Dona suport a WOŚP Barcelona a través de subhastes benèfiques a la plataforma Allegro.",
+      "allegroDesc": "Puja per articles benèfics i dona suport a WOŚP Barcelona. Tots els fons recaptats van als objectius benèfics del 34è Final WOŚP."
+    },
     "stats": {
       "yearsHelp": "Anys d'ajuda",
       "volunteers": "Voluntaris",
@@ -191,7 +196,8 @@
         "facebookDesc": "Mira què hi ha de nou. Actualitzacions, fotos i reportatges d'esdeveniments.",
         "instagramDesc": "Últimes fotos i stories de les nostres activitats a Barcelona.",
         "meetupDesc": "Uneix-te als nostres esdeveniments i trobades de la comunitat polonesa.",
-        "youtubeDesc": "Mira els nostres vídeos i reportatges d'esdeveniments de WOŚP Barcelona."
+        "youtubeDesc": "Mira els nostres vídeos i reportatges d'esdeveniments de WOŚP Barcelona.",
+        "allegroDesc": "Puja per articles benèfics i dona suport a WOŚP Barcelona."
       },
       "final33Section": {
         "title": "33è Final de la WOŚP a Barcelona",
@@ -220,6 +226,7 @@
       "addToCalendar": "Afegir a Google Calendar",
       "viewOnMeetup": "Veure a Meetup",
       "viewOnFacebook": "Veure a Facebook",
+      "viewOnAllegro": "Veure a Allegro",
       "registerForRun": "Inscriu-te a la cursa",
       "final": "FINAL!",
       "duringEvent": "Durant l'esdeveniment",

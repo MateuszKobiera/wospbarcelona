@@ -145,6 +145,7 @@ const allEvents = [
     registrationRequired: false,
     meetupLink: null,
     facebookLink: null,
+    allegroLink: 'https://allegro.pl/uzytkownik/Client%3A140580262',
     organizer: 'WOŚP Barcelona',
     contact: 'aukcje@wospbarcelona.org'
   },

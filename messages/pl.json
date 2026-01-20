@@ -68,6 +68,11 @@
       "meetupDesc": "Dołącz do naszych wydarzeń i spotkań polskiej społeczności.",
       "youtubeDesc": "Oglądaj nasze filmy i relacje z wydarzeń WOŚP Barcelona."
     },
+    "allegro": {
+      "title": "Aukcje charytatywne na Allegro",
+      "description": "Wesprzyj WOŚP Barcelona przez aukcje charytatywne na platformie Allegro.",
+      "allegroDesc": "Licytuj przedmioty charytatywne i wspieraj WOŚP Barcelona. Wszystkie zebrane środki idą na cele charytatywne 34. Finału WOŚP."
+    },
     "stats": {
       "yearsHelp": "Lat pomocy",
       "volunteers": "Wolontariuszy",
@@ -220,6 +225,7 @@
       "addToCalendar": "Dodaj do Google Calendar",
       "viewOnMeetup": "Zobacz na Meetup",
       "viewOnFacebook": "Zobacz na Facebook",
+      "viewOnAllegro": "Zobacz na Allegro",
       "registerForRun": "Zarejestruj się na bieg",
       "final": "FINAŁ!",
       "duringEvent": "Podczas wydarzenia",
@@ -251,12 +257,6 @@
       "christmasWorkshop": "Warsztaty Świąteczne"
     },
     "items": {
-      "7": {
-        "title": "Spotkanie Wolontariuszy Online",
-        "description": "Spotkanie online dla wolontariuszy WOŚP Barcelona. Skontaktuj się z nami przez formularz kontaktowy, aby otrzymać link do spotkania.",
-        "location": "Online (link zostanie wysłany)",
-        "fullDescription": "Zapraszamy na spotkanie online dla wolontariuszy WOŚP Barcelona! To doskonała okazja dla tych, którzy nie mogą dotrzeć na spotkanie stacjonarne.\n\nPodczas spotkania online:\n• Poznasz zespół organizacyjny WOŚP Barcelona\n• Dowiesz się o aktualnych planach na 34. Finał\n• Będziesz mógł zadać pytania i wyrazić swoje pomysły\n• Otrzymasz dostęp do materiałów informacyjnych\n• Poznasz innych wolontariuszy z całej Katalonii\n\n📝 JAK DOŁĄCZYĆ:\nAby otrzymać link do spotkania, skontaktuj się z nami przez formularz kontaktowy na stronie. Wyślemy Ci szczegóły spotkania oraz link do platformy.\n\nTo idealna opcja dla osób, które:\n• Mieszkają daleko od centrum Barcelony\n• Mają ograniczony czas\n• Preferują uczestnictwo online\n• Chcą dołączyć do zespołu wolontariuszy\n\nSpotkanie odbędzie się na platformie online - szczegóły otrzymasz po kontakcie z nami."
-      },
       "8": {
         "title": "Spotkanie Wolontariuszy - Wawel",
         "description": "🤝 Spotkanie wolontariuszy WOŚP Barcelona w Wawel Restobar — naszym głównym sponsorze! Poznaj zespół, skosztuj polskiego jedzenia i przygotuj się do 34. Finału.",
@@ -300,7 +300,7 @@
       "204": {
         "title": "Gwiazdka Literacka z WOŚP",
         "description": "Wyjątkowe świąteczne wydarzenie! Spotkanie z polskimi autorami, licytacja książek z autografami i winno-literacki wieczór.",
-        "fullDescription": "Zapraszamy na wyjątkowe świąteczne wydarzenie!\n\nPoznaj polskich autorów mieszkających w Barcelonie, posłuchaj fragmentów ich książek i daj się porwać literackiej atmosferze.\n\n🎄 Dlaczego warto przyjść?\n• 📚 Spotkanie z autorami: Zapytaj o inspiracje i proces twórczy\n• 🏆 Licytacja książek: Wylicytuj wyjątkowe egzemplarze z autografami\n• ❤️ Dobroczynść: Wesprzyj Wielką Orkiestrę Świątecznej Pomocy\n• 🍷 Winno-literacki wieczór: Delektuj się winem i zakąskami\n\n✍️ Autorzy: Krzysztof Monastyrski, Joanna Jurek, Agnieszka Łukomska, Agnieszka Wolińska-Skuza, Marta Cybulska\n\n📅 Data: 15 grudnia 2024\n🕘 Godzina: 15:00 - 19:00\n📍 Miejsce: World Class Bcn Spanish school\n🎫 Wstęp wolny!"
+        "fullDescription": "Zapraszamy na wyjątkowe świąteczne wydarzenie!\n\nPoznaj polskich autorów mieszkających w Barcelonie, posłuchaj fragmentów ich książek i daj się porwać literackiej atmosferze.\n\n🎄 Dlaczego warto przyjść?\n• 📚 Spotkanie z autorami: Zapytaj o inspiracje i proces twórczy\n• 🏆 Licytacja książek: Wylicytuj wyjątkowe egzemplarze z autografami\n• ❤️ Dobroczynność: Wesprzyj Wielką Orkiestrę Świątecznej Pomocy\n• 🍷 Winno-literacki wieczór: Delektuj się winem i zakąskami\n\n✍️ Autorzy: Krzysztof Monastyrski, Joanna Jurek, Agnieszka Łukomska, Agnieszka Wolińska-Skuza, Marta Cybulska\n\n📅 Data: 15 grudnia 2024\n🕘 Godzina: 15:00 - 19:00\n📍 Miejsce: World Class Bcn Spanish school\n🎫 Wstęp wolny!"
       },
       "205": {
         "title": "Warsztaty Fotograficzne Plenerowe",
@@ -322,27 +322,27 @@
         "description": "Pierwszy finał po pandemii! Warsztaty dla dzieci, koncerty, licytacje i polskie przysmaki!",
         "fullDescription": "Sztab WOŚP Barcelona zaprasza na 31 Finał WOŚP w Barcelonie\n\nPierwszy finał po pandemii!\n\n🎪 PROGRAM IMPREZY\n10:00 Wstęp\n11:00 – 12.00 Warsztaty dla dzieci / KOSMOHISPLANO\n12.15 Pokaz baniek / BUBBLES.MASTERS\n14.30 MARCIN BURY & JULIA KWIEK\n16.30 Koncert HEADBUGBAND\n18.30 Koncert SWINGITBABY\n20.00 Światełko do nieba\n\n🎨 Ponadto:\n• 📸 Sesje zdjęciowe od AGPHOTOGRAPHYBCN\n• 📚 Kiermasz książek\n• 🎮 Gry i konkursy, malowanie twarzy\n• 🍽️ Polskie przysmaki (pierogi, kiełbasa, barszcz)\n• 🍺 Piwo polskie, grzane wino\n\n📍 Miejsce: Carrer de Sardenya, 29, 08005 Barcelona"
       }
-    },
-    "detail": {
-      "backToEvents": "Powrót do wydarzeń",
-      "aboutEvent": "O wydarzeniu",
-      "gallery": "Galeria",
-      "photoAlt": "zdjęcie",
-      "eventDetails": "Szczegóły wydarzenia",
-      "amountRaised": "Zebrana kwota",
-      "routeVideo": "Opis trasy (filmik)",
-      "duringEvent": "Podczas wydarzenia",
-      "totalDuringFinale": "Łącznie podczas finału",
-      "thankYou": "Dziękujemy za wsparcie!",
-      "registration": "Rejestracja",
-      "registerForRun": "Zarejestruj się na bieg",
-      "registrationDeadline": "Termin rejestracji",
-      "registrationWarning": "Niepoprawne wypełnienie formularza może skutkować dopłatą 150 zł lub brakiem pakietu!",
-      "warning": "Uwaga",
-      "contact": "Kontakt",
-      "contactUs": "Skontaktuj się z nami",
-      "addToCalendar": "Dodaj do Google Calendar"
     }
+  },
+  "detail": {
+    "backToEvents": "Powrót do wydarzeń",
+    "aboutEvent": "O wydarzeniu",
+    "gallery": "Galeria",
+    "photoAlt": "zdjęcie",
+    "eventDetails": "Szczegóły wydarzenia",
+    "amountRaised": "Zebrana kwota",
+    "routeVideo": "Opis trasy (filmik)",
+    "duringEvent": "Podczas wydarzenia",
+    "totalDuringFinale": "Łącznie podczas finału",
+    "thankYou": "Dziękujemy za wsparcie!",
+    "registration": "Rejestracja",
+    "registerForRun": "Zarejestruj się na bieg",
+    "registrationDeadline": "Termin rejestracji",
+    "registrationWarning": "Niepoprawne wypełnienie formularza może skutkować dopłatą 150 zł lub brakiem pakietu!",
+    "warning": "Uwaga",
+    "contact": "Kontakt",
+    "contactUs": "Skontaktuj się z nami",
+    "addToCalendar": "Dodaj do Google Calendar"
   },
   "blog": {
     "title": "Blog WOŚP Barcelona",
