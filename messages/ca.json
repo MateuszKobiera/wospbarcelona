@@ -71,7 +71,8 @@
     "allegro": {
       "title": "Subhastes Benèfiques a Allegro",
       "description": "Dona suport a WOŚP Barcelona a través de subhastes benèfiques a la plataforma Allegro.",
-      "allegroDesc": "Puja per articles benèfics i dona suport a WOŚP Barcelona. Tots els fons recaptats van als objectius benèfics del 34è Final WOŚP."
+      "allegroDesc": "Puja per articles benèfics i dona suport a WOŚP Barcelona. Tots els fons recaptats van als objectius benèfics del 34è Final WOŚP.",
+      "viewAuctions": "Veure subhastes"
     },
     "stats": {
       "yearsHelp": "Anys d'ajuda",
@@ -282,7 +283,7 @@
       "9": {
         "title": "Fi de les Subhastes Benèfiques a Allegro",
         "description": "Últim dia per acceptar ofertes benèfiques a l'Acció WOŚP. Les ofertes es poden fer del 01.12.2025 al 16.02.2026.",
-        "fullDescription": "És l'últim dia per acceptar ofertes benèfiques a la plataforma Allegro en el marc del 34è Final WOŚP!\n\n📅 PERÍODE DE SUBHASTES BENÈFIQUES:\nLes ofertes benèfiques en el marc de l'Acció WOŚP es poden fer del 01.12.2025 al 16.02.2026.\n\n💻 COM PARTICIPAR:\n• Entra a allegro.pl\n• Cerca WOŚP Barcelona\n• Tria la subhasta que t'interessi\n• Puja i dóna suport a WOŚP Barcelona\n• Tots els fons recaptats van a fins benèfics\n\n🎯 OBJECTIU DE LA RECAPTACIÓ:\nTots els fons recaptats durant les subhastes benèfiques es destinaran a donar suport al diagnòstic i tractament de malalties del tracte digestiu en els pacients més joves - objectiu del 34è Final WOŚP \"Panxes sanes dels nostres nens\".\n\n⏰ ÚLTIMA OPORTUNITAT:\nÉs l'últim dia per participar a les subhastes benèfiques de WOŚP a Allegro. No perdis l'oportunitat d'ajudar als nens que ho necessiten!\n\nGràcies a tots els que van participar a les subhastes benèfiques durant aquests més de 2 mesos. Cada zloty compta!"
+        "fullDescription": "És l'últim dia per acceptar ofertes benèfiques a la plataforma Allegro en el marc del 34è Final WOŚP!\n\n📅 PERÍODE DE SUBHASTES BENÈFIQUES:\nLes ofertes benèfiques en el marc de l'Acció WOŚP es poden fer del 01.12.2025 al 16.02.2026.\n\n💻 COM PARTICIPAR:\nFes clic al botó \"Veure subhastes\" a la dreta, tria una de les nostres subhastes, fes la teva oferta i comença a pujar! Tots els fons recaptats van a fins benèfics. Bona sort!\n\n🎯 OBJECTIU DE LA RECAPTACIÓ:\nTots els fons recaptats durant les subhastes benèfiques es destinaran a donar suport al diagnòstic i tractament de malalties del tracte digestiu en els pacients més joves - objectiu del 34è Final WOŚP \"Panxes sanes dels nostres nens\".\n\n⏰ ÚLTIMA OPORTUNITAT:\nÉs l'últim dia per participar a les subhastes benèfiques de WOŚP a Allegro. No perdis l'oportunitat d'ajudar als nens que ho necessiten!\n\nGràcies a tots els que van participar a les subhastes benèfiques durant aquests més de 2 mesos. Cada zloty compta!"
       },
       "101": {
         "title": "33è Final WOŚP a Barcelona",

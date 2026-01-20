@@ -71,7 +71,8 @@
     "allegro": {
       "title": "Charity Auctions on Allegro",
       "description": "Support WOŚP Barcelona through charity auctions on the Allegro platform.",
-      "allegroDesc": "Bid on charity items and support WOŚP Barcelona. All funds raised go to the charitable goals of the 34th WOŚP Finale."
+      "allegroDesc": "Bid on charity items and support WOŚP Barcelona. All funds raised go to the charitable goals of the 34th WOŚP Finale.",
+      "viewAuctions": "View auctions"
     },
     "stats": {
       "yearsHelp": "Years of help",
@@ -282,7 +283,7 @@
       "9": {
         "title": "End of Charity Auctions on Allegro",
         "description": "Last day to accept charity offers in the WOŚP Action. Offers can be made from 01.12.2025 to 16.02.2026.",
-        "fullDescription": "This is the last day to accept charity offers on the Allegro platform as part of the 34th WOŚP Finale!\n\n📅 CHARITY AUCTION PERIOD:\nCharity offers as part of the WOŚP Action can be made from 01.12.2025 to 16.02.2026.\n\n💻 HOW TO PARTICIPATE:\n• Go to allegro.pl\n• Search for WOŚP Barcelona\n• Choose the auction that interests you\n• Bid and support WOŚP Barcelona\n• All funds raised go to charity\n\n🎯 FUNDRAISING GOAL:\nAll funds raised during charity auctions will be donated to support the diagnosis and treatment of digestive tract diseases in the youngest patients - the goal of the 34th WOŚP Finale \"Healthy tummies of our children\".\n\n⏰ LAST CHANCE:\nThis is the last day to participate in WOŚP charity auctions on Allegro. Don't miss the opportunity to help children in need!\n\nThank you to everyone who participated in charity auctions over these 2+ months. Every zloty counts!"
+        "fullDescription": "This is the last day to accept charity offers on the Allegro platform as part of the 34th WOŚP Finale!\n\n📅 CHARITY AUCTION PERIOD:\nCharity offers as part of the WOŚP Action can be made from 01.12.2025 to 16.02.2026.\n\n💻 HOW TO PARTICIPATE:\nClick the \"View auctions\" button on the right, choose one of our auctions, place your bid and start bidding! All funds raised go to charity. Good luck!\n\n🎯 FUNDRAISING GOAL:\nAll funds raised during charity auctions will be donated to support the diagnosis and treatment of digestive tract diseases in the youngest patients - the goal of the 34th WOŚP Finale \"Healthy tummies of our children\".\n\n⏰ LAST CHANCE:\nThis is the last day to participate in WOŚP charity auctions on Allegro. Don't miss the opportunity to help children in need!\n\nThank you to everyone who participated in charity auctions over these 2+ months. Every zloty counts!"
       },
       "101": {
         "title": "33rd WOŚP Finale in Barcelona",

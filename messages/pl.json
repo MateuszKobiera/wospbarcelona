@@ -71,7 +71,8 @@
     "allegro": {
       "title": "Aukcje charytatywne na Allegro",
       "description": "Wesprzyj WOŚP Barcelona przez aukcje charytatywne na platformie Allegro.",
-      "allegroDesc": "Licytuj przedmioty charytatywne i wspieraj WOŚP Barcelona. Wszystkie zebrane środki idą na cele charytatywne 34. Finału WOŚP."
+      "allegroDesc": "Licytuj przedmioty charytatywne i wspieraj WOŚP Barcelona. Wszystkie zebrane środki idą na cele charytatywne 34. Finału WOŚP.",
+      "viewAuctions": "Zobacz aukcje"
     },
     "stats": {
       "yearsHelp": "Lat pomocy",
@@ -257,6 +258,12 @@
       "christmasWorkshop": "Warsztaty Świąteczne"
     },
     "items": {
+      "7": {
+        "title": "Spotkanie Wolontariuszy Online",
+        "description": "Spotkanie online dla wolontariuszy WOŚP Barcelona. Skontaktuj się z nami przez formularz kontaktowy, aby otrzymać link do spotkania.",
+        "location": "Online (link zostanie wysłany)",
+        "fullDescription": "Zapraszamy na spotkanie online dla wolontariuszy WOŚP Barcelona! To doskonała okazja dla tych, którzy nie mogą dotrzeć na spotkanie stacjonarne.\n\nPodczas spotkania online:\n• Poznasz zespół organizacyjny WOŚP Barcelona\n• Dowiesz się o aktualnych planach na 34. Finał\n• Będziesz mógł zadać pytania i wyrazić swoje pomysły\n• Otrzymasz dostęp do materiałów informacyjnych\n• Poznasz innych wolontariuszy z całej Katalonii\n\n📝 JAK DOŁĄCZYĆ:\nAby otrzymać link do spotkania, skontaktuj się z nami przez formularz kontaktowy na stronie. Wyślemy Ci szczegóły spotkania oraz link do platformy.\n\nTo idealna opcja dla osób, które:\n• Mieszkają daleko od centrum Barcelony\n• Mają ograniczony czas\n• Preferują uczestnictwo online\n• Chcą dołączyć do zespołu wolontariuszy\n\nSpotkanie odbędzie się na platformie online - szczegóły otrzymasz po kontakcie z nami."
+      },
       "8": {
         "title": "Spotkanie Wolontariuszy - Wawel",
         "description": "🤝 Spotkanie wolontariuszy WOŚP Barcelona w Wawel Restobar — naszym głównym sponsorze! Poznaj zespół, skosztuj polskiego jedzenia i przygotuj się do 34. Finału.",
@@ -275,7 +282,7 @@
       "9": {
         "title": "Koniec Aukcji Charytatywnych na Allegro",
         "description": "Ostatni dzień przyjmowania ofert charytatywnych w ramach Akcji WOŚP. Oferty mogą być prowadzone od 01.12.2025 – 16.02.2026r.",
-        "fullDescription": "To ostatni dzień przyjmowania ofert charytatywnych na platformie Allegro w ramach 34. Finału WOŚP!\n\n📅 OKRES AUKCJI CHARYTATYWNYCH:\nOferty charytatywne w ramach Akcji WOŚP mogą być prowadzone w okresie od 01.12.2025 – 16.02.2026r.\n\n💻 JAK WZIĄĆ UDZIAŁ:\n• Wejdź na stronę allegro.pl\n• Wyszukaj WOŚP Barcelona\n• Wybierz interesującą Cię aukcję\n• Licytuj i wspieraj WOŚP Barcelona\n• Wszystkie zebrane środki idą na cele charytatywne\n\n🎯 CEL ZBIÓRKI:\nWszystkie środki zebrane podczas aukcji charytatywnych zostaną przekazane na wsparcie diagnostyki i leczenia chorób przewodu pokarmowego u najmłodszych pacjentów - cel 34. Finału WOŚP \"Zdrowe brzuszki naszych dzieci\".\n\n⏰ OSTATNIA SZANSA:\nTo ostatni dzień, aby wziąć udział w aukcjach charytatywnych WOŚP na Allegro. Nie przegap okazji, aby pomóc potrzebującym dzieciom!\n\nDziękujemy wszystkim, którzy wzięli udział w aukcjach charytatywnych przez te ponad 2 miesiące. Każda złotówka ma znaczenie!"
+        "fullDescription": "To ostatni dzień przyjmowania ofert charytatywnych na platformie Allegro w ramach 34. Finału WOŚP!\n\n📅 OKRES AUKCJI CHARYTATYWNYCH:\nOferty charytatywne w ramach Akcji WOŚP mogą być prowadzone w okresie od 01.12.2025 – 16.02.2026r.\n\n💻 JAK WZIĄĆ UDZIAŁ:\nKliknij przycisk \"Zobacz aukcje\" po prawej stronie, wybierz jedną z naszych licytacji, złóż swoją ofertę i licytuj!\n Powodzenia!\n\n🎯 CEL ZBIÓRKI:\nWszystkie środki zebrane podczas aukcji charytatywnych zostaną przekazane na wsparcie diagnostyki i leczenia chorób przewodu pokarmowego u najmłodszych pacjentów - cel 34. Finału WOŚP \"Zdrowe brzuszki naszych dzieci\".\n\n⏰ OSTATNIA SZANSA:\nTo ostatni dzień, aby wziąć udział w aukcjach charytatywnych WOŚP na Allegro. Nie przegap okazji, aby pomóc potrzebującym dzieciom!\n\nDziękujemy wszystkim, którzy wzięli udział w aukcjach charytatywnych przez te ponad 2 miesiące. Każda złotówka ma znaczenie!"
       },
       "101": {
         "title": "33. Finał WOŚP w Barcelonie",
@@ -315,34 +322,39 @@
       "104": {
         "title": "32. Finał WOŚP w Barcelonie",
         "description": "Wspaniały finał z rekordową frekwencją! Zebrano łącznie 10.460,47 €! Koncerty, licytacje, polskie jedzenie i Światełko do nieba!",
-        "fullDescription": "32. Finał WOŚP w Barcelonie\n\nNiesamowity dzień pełen emocji, muzyki i wsparcia dla Wielkiej Orkiestry Świątecznej Pomocy!\n\n🎪 PROGRAM IMPREZY\n11:00 Rozpoczęcie imprezy\n12:00 Oficjalne przywitanie\n13:00 Matt Zerek /koncert/\n14:15 Guimera Blues & The Sugar Boys /koncert/\n16:00 Tort\n17:00 Headbug /koncert/\n19:00 Eveli Ray /koncert/\n19:40 Światełko do nieba\n\n🎨 Ponadto:\n• 👶 Atrakcje dla dzieci\n• 🍽️ Polskie jedzenie (pierogi, kiełbasa, ciasta)\n• 🍺 Polskie piwo i grzane wino\n• 📚 Kiermasz książek\n• 🎰 Loteria fantowa\n\nGramy razem do końca świata i o jeden dzień dłużej!!!"
+        "fullDescription": "32. Finał WOŚP w Barcelonie\n\nNiesamowity dzień pełen emocji, muzyki i wsparcia dla Wielkiej Orkiestry Świątecznej Pomocy!\n\n🎪 PROGRAM IMPREZY\n11:00 Rozpoczęcie imprezy\n12:00 Oficjalne przywitanie\n13:00 Matt Zerek /koncert/\n14:15 Guimera Blues & The Sugar Boys /koncert/\n16:00 Tort\n17:00 Headbug /koncert/\n19:00 Eveli Ray /koncert/\n19:40 Światełko do nieba\n\n🎨 Ponadto:\n• 👶 Atrakcje dla dzieci\n• 🍽️ Polskie jedzenie (pierogi, kiełbasa, ciasta)\n• 🍺 Polskie piwo i grzane wino\n• 📚 Kiermasz książek\n• 🎰 Loteria fantowa\n\nGramy razem do końca świata i o jeden dzień dłużej!!!",
+        "photos": [
+          "zdjęcie1.jpg",
+          "zdjęcie2.jpg",
+          "zdjęcie3.jpg"
+        ]
       },
       "106": {
         "title": "31. Finał WOŚP w Barcelonie",
         "description": "Pierwszy finał po pandemii! Warsztaty dla dzieci, koncerty, licytacje i polskie przysmaki!",
-        "fullDescription": "Sztab WOŚP Barcelona zaprasza na 31 Finał WOŚP w Barcelonie\n\nPierwszy finał po pandemii!\n\n🎪 PROGRAM IMPREZY\n10:00 Wstęp\n11:00 – 12.00 Warsztaty dla dzieci / KOSMOHISPLANO\n12.15 Pokaz baniek / BUBBLES.MASTERS\n14.30 MARCIN BURY & JULIA KWIEK\n16.30 Koncert HEADBUGBAND\n18.30 Koncert SWINGITBABY\n20.00 Światełko do nieba\n\n🎨 Ponadto:\n• 📸 Sesje zdjęciowe od AGPHOTOGRAPHYBCN\n• 📚 Kiermasz książek\n• 🎮 Gry i konkursy, malowanie twarzy\n• 🍽️ Polskie przysmaki (pierogi, kiełbasa, barszcz)\n• 🍺 Piwo polskie, grzane wino\n\n📍 Miejsce: Carrer de Sardenya, 29, 08005 Barcelona"
+        "fullDescription": "Sztab WOŚP Barcelona zaprasza na 31 Finał WOŚP w Barcelonie\n\nPierwszy finał po pandemii!\n\n🎪 PROGRAM IMPREZY\n10:00 Wstęp\n11:00 – 12.00 Warsztaty dla dzieci / KOSMOHISPLANO\n12.15 Pokaz baniek / BUBBLES.MASTERS\n14.30 MARCIN BURY & JULIA KWIEK\n16.30 Koncert HEADBUGBAND\n18:30 Koncert SWINGITBABY\n20:00 Światełko do nieba\n\n🎨 Ponadto:\n• 📸 Sesje zdjęciowe od AGPHOTOGRAPHYBCN\n• 📚 Kiermasz książek\n• 🎮 Gry i konkursy, malowanie twarzy\n• 🍽️ Polskie przysmaki (pierogi, kiełbasa, barszcz)\n• 🍺 Piwo polskie, grzane wino\n\n📍 Miejsce: Carrer de Sardenya, 29, 08005 Barcelona"
       }
+    },
+    "detail": {
+      "backToEvents": "Powrót do wydarzeń",
+      "aboutEvent": "O wydarzeniu",
+      "gallery": "Galeria",
+      "photoAlt": "zdjęcie",
+      "eventDetails": "Szczegóły wydarzenia",
+      "amountRaised": "Zebrana kwota",
+      "routeVideo": "Opis trasy (filmik)",
+      "duringEvent": "Podczas wydarzenia",
+      "totalDuringFinale": "Łącznie podczas finału",
+      "thankYou": "Dziękujemy za wsparcie!",
+      "registration": "Rejestracja",
+      "registerForRun": "Zarejestruj się na bieg",
+      "registrationDeadline": "Termin rejestracji",
+      "registrationWarning": "Niepoprawne wypełnienie formularza może skutkować dopłatą 150 zł lub brakiem pakietu!",
+      "warning": "Uwaga",
+      "contact": "Kontakt",
+      "contactUs": "Skontaktuj się z nami",
+      "addToCalendar": "Dodaj do Google Calendar"
     }
-  },
-  "detail": {
-    "backToEvents": "Powrót do wydarzeń",
-    "aboutEvent": "O wydarzeniu",
-    "gallery": "Galeria",
-    "photoAlt": "zdjęcie",
-    "eventDetails": "Szczegóły wydarzenia",
-    "amountRaised": "Zebrana kwota",
-    "routeVideo": "Opis trasy (filmik)",
-    "duringEvent": "Podczas wydarzenia",
-    "totalDuringFinale": "Łącznie podczas finału",
-    "thankYou": "Dziękujemy za wsparcie!",
-    "registration": "Rejestracja",
-    "registerForRun": "Zarejestruj się na bieg",
-    "registrationDeadline": "Termin rejestracji",
-    "registrationWarning": "Niepoprawne wypełnienie formularza może skutkować dopłatą 150 zł lub brakiem pakietu!",
-    "warning": "Uwaga",
-    "contact": "Kontakt",
-    "contactUs": "Skontaktuj się z nami",
-    "addToCalendar": "Dodaj do Google Calendar"
   },
   "blog": {
     "title": "Blog WOŚP Barcelona",

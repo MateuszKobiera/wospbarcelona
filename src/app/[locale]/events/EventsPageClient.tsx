@@ -42,7 +42,7 @@ const upcomingEventsData = [
     time: '23:59',
     location: 'Online - Allegro.pl',
     categoryKey: 'onlineAuction',
-    image: '/api/placeholder/400/250',
+    image: '/images/allegro/11_34FinalWOSP2026_grafika_AUKCJE_podglad.png',
     registrationRequired: false,
     meetupLink: null,
     facebookLink: null,
@@ -138,6 +138,7 @@ const pastEventsData = [
 
 export default function EventsPageClient() {
   const t = useTranslations('events');
+  const tHome = useTranslations('home');
   const params = useParams();
   const locale = params.locale as string;
 
@@ -262,8 +263,21 @@ export default function EventsPageClient() {
                             </div>
                           </div>
 
-                          {/* Social links */}
-                          {(event.meetupLink || event.facebookLink || event.allegroLink) && (
+                          {/* Social links or Allegro button */}
+                          {event.id === 9 && event.allegroLink ? (
+                            <div className="mt-4">
+                              <a
+                                href={event.allegroLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block"
+                              >
+                                <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white">
+                                  {tHome('allegro.viewAuctions')}
+                                </Button>
+                              </a>
+                            </div>
+                          ) : (event.meetupLink || event.facebookLink || event.allegroLink) && (
                             <div className="flex space-x-2 mt-4">
                               {event.meetupLink && (
                                 <a

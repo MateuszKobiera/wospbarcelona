@@ -137,10 +137,15 @@ const allEvents = [
     time: '23:59',
     location: 'Online - Allegro.pl',
     category: 'Aukcja Online',
-    image: '/images/blog/allegro-aukcje.jpg',
+    image: '/images/allegro/11_34FinalWOSP2026_grafika_AUKCJE_podglad.png',
     gallery: [
-      '/images/blog/allegro-1.jpg',
-      '/images/blog/allegro-2.jpg'
+      '/images/allegro/apaszka-Warszawa-4.jpg',
+      '/images/allegro/Kalendarz1.jpg',
+      '/images/allegro/krawat-Warszawa-3.jpg',
+      '/images/allegro/plakat-Warszawa-podpis-Trzaskowski-2.jpg',
+      '/images/allegro/poduszka_moje_3.jpg',
+      '/images/allegro/Sie gotuje...4.jpg',
+      '/images/allegro/7E5E2F03-E9DD-4D2F-BC1E-B5467EE07583.png'
     ],
     registrationRequired: false,
     meetupLink: null,
@@ -346,6 +351,7 @@ const allEvents = [
 
 export default function EventPage() {
   const t = useTranslations('events');
+  const tHome = useTranslations('home');
   const params = useParams();
   const locale = params.locale as string;
   const id = params.id as string;
@@ -624,7 +630,20 @@ export default function EventPage() {
                     </div>
                   )}
 
-
+                  {event.id === 9 && event.allegroLink && (
+                    <div className="pt-2">
+                      <a
+                        href={event.allegroLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block w-full"
+                      >
+                        <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white cursor-pointer">
+                          {tHome('allegro.viewAuctions')}
+                        </Button>
+                      </a>
+                    </div>
+                  )}
 
                   {event.contact && (
                     <div className="flex items-center text-gray-700">

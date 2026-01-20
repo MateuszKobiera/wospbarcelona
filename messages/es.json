@@ -71,7 +71,8 @@
     "allegro": {
       "title": "Subastas Benéficas en Allegro",
       "description": "Apoya a WOŚP Barcelona a través de subastas benéficas en la plataforma Allegro.",
-      "allegroDesc": "Puja por artículos benéficos y apoya a WOŚP Barcelona. Todos los fondos recaudados van a los objetivos benéficos del 34º Final WOŚP."
+      "allegroDesc": "Puja por artículos benéficos y apoya a WOŚP Barcelona. Todos los fondos recaudados van a los objetivos benéficos del 34º Final WOŚP.",
+      "viewAuctions": "Ver subastas"
     },
     "stats": {
       "yearsHelp": "Años de ayuda",
@@ -282,7 +283,7 @@
       "9": {
         "title": "Fin de las Subastas Benéficas en Allegro",
         "description": "Último día para aceptar ofertas benéficas en la Acción WOŚP. Las ofertas pueden realizarse del 01.12.2025 al 16.02.2026.",
-        "fullDescription": "¡Es el último día para aceptar ofertas benéficas en la plataforma Allegro en el marco del 34º Final WOŚP!\n\n📅 PERÍODO DE SUBASTAS BENÉFICAS:\nLas ofertas benéficas en el marco de la Acción WOŚP pueden realizarse del 01.12.2025 al 16.02.2026.\n\n💻 CÓMO PARTICIPAR:\n• Entra en allegro.pl\n• Busca WOŚP Barcelona\n• Elige la subasta que te interese\n• Puja y apoya a WOŚP Barcelona\n• Todos los fondos recaudados van a fines benéficos\n\n🎯 OBJETIVO DE LA RECAUDACIÓN:\nTodos los fondos recaudados durante las subastas benéficas se destinarán a apoyar el diagnóstico y tratamiento de enfermedades del tracto digestivo en los pacientes más jóvenes - objetivo del 34º Final WOŚP \"Barrigas sanas de nuestros niños\".\n\n⏰ ÚLTIMA OPORTUNIDAD:\n¡Es el último día para participar en las subastas benéficas de WOŚP en Allegro. No pierdas la oportunidad de ayudar a los niños que lo necesitan!\n\n¡Gracias a todos los que participaron en las subastas benéficas durante estos más de 2 meses. Cada zloty cuenta!"
+        "fullDescription": "¡Es el último día para aceptar ofertas benéficas en la plataforma Allegro en el marco del 34º Final WOŚP!\n\n📅 PERÍODO DE SUBASTAS BENÉFICAS:\nLas ofertas benéficas en el marco de la Acción WOŚP pueden realizarse del 01.12.2025 al 16.02.2026.\n\n💻 CÓMO PARTICIPAR:\nHaz clic en el botón \"Ver subastas\" a la derecha, elige una de nuestras subastas, haz tu oferta y ¡empieza a pujar! Todos los fondos recaudados van a fines benéficos. ¡Buena suerte!\n\n🎯 OBJETIVO DE LA RECAUDACIÓN:\nTodos los fondos recaudados durante las subastas benéficas se destinarán a apoyar el diagnóstico y tratamiento de enfermedades del tracto digestivo en los pacientes más jóvenes - objetivo del 34º Final WOŚP \"Barrigas sanas de nuestros niños\".\n\n⏰ ÚLTIMA OPORTUNIDAD:\n¡Es el último día para participar en las subastas benéficas de WOŚP en Allegro. No pierdas la oportunidad de ayudar a los niños que lo necesitan!\n\n¡Gracias a todos los que participaron en las subastas benéficas durante estos más de 2 meses. Cada zloty cuenta!"
       },
       "101": {
         "title": "33º Final WOŚP en Barcelona",
