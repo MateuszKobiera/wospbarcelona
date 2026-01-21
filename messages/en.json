@@ -60,6 +60,59 @@
     },
     "cta": "Join us",
     "learnMore": "Learn more",
+    "heroFinale": {
+      "badge": "Join the 34th WOŚP Finale!",
+      "title": "Come to WOŚP Barcelona Finale!",
+      "date": "January 25, 2026, 12:00 PM • Espacio 88, Barcelona",
+      "description": "A day full of attractions awaits you: live concerts, charity auctions, workshops for kids, delicious Polish food, lottery and much more! Together we'll play for healthy tummies for our kids.",
+      "button": "See event details"
+    },
+    "supportSection": {
+      "title": "Support us remotely",
+      "subtitle": "Can't make it? You can help online!",
+      "donate": {
+        "title": "Donate to e-skarbonka",
+        "description": "Donate any amount directly to our e-skarbonka. Every euro is real help for children with gastrointestinal diseases.",
+        "button": "Donate now",
+        "secure": "Secure payment through WOŚP system"
+      },
+      "allegro": {
+        "title": "Bid on Allegro",
+        "description": "Bid on unique items and experiences. All auction proceeds go to the 34th WOŚP Finale goal.",
+        "button": "View auctions",
+        "info": "Unique items from our donors"
+      }
+    },
+    "featuredEvent": {
+      "title": "Upcoming Event",
+      "subtitle": "Don't miss the most important event of the year!",
+      "badge": "34th WOŚP Finale",
+      "eventTitle": "34th WOŚP Barcelona Finale 2026",
+      "description": "Join us on January 25, 2026 in Barcelona for the biggest charity event of the year. Together we'll play for healthy tummies for our kids!",
+      "button": "See event details"
+    },
+    "mainCta": {
+      "title": "How can you help?",
+      "subtitle": "Choose your way to support the 34th WOŚP Barcelona Finale",
+      "finale": {
+        "title": "Come to the Finale",
+        "description": "Join us on January 25, 2026 in Barcelona. Together we'll play for healthy tummies for our kids!",
+        "button": "See details",
+        "date": "January 25, 2026, 12:00 PM"
+      },
+      "donate": {
+        "title": "Donate Online",
+        "description": "Support us directly through e-skarbonka. Every euro is real help for children!",
+        "button": "Donate now",
+        "secure": "Secure payment through WOŚP"
+      },
+      "allegro": {
+        "title": "Bid on Allegro",
+        "description": "Bid on unique items and support WOŚP. All proceeds go to the Finale goal!",
+        "button": "View auctions",
+        "info": "Unique items and experiences"
+      }
+    },
     "socials": {
       "title": "Join us",
       "description": "We are on Facebook, Instagram, Meetup and YouTube.",

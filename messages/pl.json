@@ -60,6 +60,59 @@
     },
     "cta": "Dołącz do nas",
     "learnMore": "Dowiedz się więcej",
+    "heroFinale": {
+      "badge": "Zapraszamy na 34. Finał WOŚP!",
+      "title": "Przyjdź na Finał WOŚP Barcelona!",
+      "date": "25 stycznia 2026, godz. 12:00 • Espacio 88, Barcelona",
+      "description": "Czeka na Ciebie dzień pełen atrakcji: koncerty na żywo, licytacje charytatywne, warsztaty dla dzieci, pyszne polskie jedzenie, loteria i wiele więcej! Wspólnie zagramy dla zdrowych brzuszków naszych dzieci.",
+      "button": "Zobacz szczegóły wydarzenia"
+    },
+    "supportSection": {
+      "title": "Wesprzyj nas zdalnie",
+      "subtitle": "Nie możesz przyjść? Możesz pomóc online!",
+      "donate": {
+        "title": "Wpłać na e-skarbonkę",
+        "description": "Wpłać dowolną kwotę bezpośrednio na naszą e-skarbonkę. Każda złotówka to realna pomoc dla dzieci z chorobami przewodu pokarmowego.",
+        "button": "Wpłać teraz",
+        "secure": "Bezpieczna płatność przez system WOŚP"
+      },
+      "allegro": {
+        "title": "Licytuj na Allegro",
+        "description": "Wylicytuj unikalne przedmioty i doświadczenia. Wszystkie środki z aukcji trafiają na cel 34. Finału WOŚP.",
+        "button": "Zobacz aukcje",
+        "info": "Unikalne przedmioty od naszych darczyńców"
+      }
+    },
+    "featuredEvent": {
+      "title": "Nadchodzące wydarzenie",
+      "subtitle": "Nie przegap najważniejszego wydarzenia roku!",
+      "badge": "34. Finał WOŚP",
+      "eventTitle": "34. Finał WOŚP Barcelona 2026",
+      "description": "Dołącz do nas 25 stycznia 2026 w Barcelonie na największe wydarzenie charytatywne roku. Wspólnie zagramy dla zdrowych brzuszków naszych dzieci!",
+      "button": "Zobacz szczegóły wydarzenia"
+    },
+    "mainCta": {
+      "title": "Jak możesz pomóc?",
+      "subtitle": "Wybierz sposób wsparcia 34. Finału WOŚP Barcelona",
+      "finale": {
+        "title": "Przyjdź na Finał",
+        "description": "Dołącz do nas 25 stycznia 2026 w Barcelonie. Wspólnie zagramy dla zdrowych brzuszków naszych dzieci!",
+        "button": "Zobacz szczegóły",
+        "date": "25 stycznia 2026, 12:00"
+      },
+      "donate": {
+        "title": "Wpłać Online",
+        "description": "Wesprzyj nas bezpośrednio przez e-skarbonkę. Każda złotówka to realna pomoc dla dzieci!",
+        "button": "Wpłać teraz",
+        "secure": "Bezpieczna płatność przez WOŚP"
+      },
+      "allegro": {
+        "title": "Licytuj na Allegro",
+        "description": "Wylicytuj wyjątkowe przedmioty i wspieraj WOŚP. Wszystkie środki idą na cel Finału!",
+        "button": "Zobacz aukcje",
+        "info": "Unikalne przedmioty i doświadczenia"
+      }
+    },
     "socials": {
       "title": "Dołącz do nas",
       "description": "Jesteśmy na Facebooku, Instagramie, Meetupie i YouTube.",

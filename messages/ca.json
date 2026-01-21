@@ -60,6 +60,59 @@
     },
     "cta": "Uneix-te a nosaltres",
     "learnMore": "Més informació",
+    "heroFinale": {
+      "badge": "Vine al 34è Final WOŚP!",
+      "title": "Vine al Final WOŚP Barcelona!",
+      "date": "25 de gener de 2026, 12:00 • Espacio 88, Barcelona",
+      "description": "T'espera un dia ple d'atraccions: concerts en directe, subhastes benèfiques, tallers per a nens, deliciós menjar polonès, loteria i molt més. Junts jugarem per barrigues sanes pels nostres nens!",
+      "button": "Veure detalls de l'esdeveniment"
+    },
+    "supportSection": {
+      "title": "Dona'ns suport a distància",
+      "subtitle": "No pots venir? Pots ajudar online!",
+      "donate": {
+        "title": "Dona a e-skarbonka",
+        "description": "Dona qualsevol quantitat directament a la nostra e-skarbonka. Cada euro és ajuda real per a nens amb malalties gastrointestinals.",
+        "button": "Dona ara",
+        "secure": "Pagament segur a través del sistema WOŚP"
+      },
+      "allegro": {
+        "title": "Puja a Allegro",
+        "description": "Puja per articles i experiències úniques. Tots els fons de les subhastes van a l'objectiu del 34è Final WOŚP.",
+        "button": "Veure subhastes",
+        "info": "Articles únics dels nostres donants"
+      }
+    },
+    "featuredEvent": {
+      "title": "Proper Esdeveniment",
+      "subtitle": "No et perdis l'esdeveniment més important de l'any!",
+      "badge": "34è Final WOŚP",
+      "eventTitle": "34è Final WOŚP Barcelona 2026",
+      "description": "Uneix-te a nosaltres el 25 de gener de 2026 a Barcelona per al major esdeveniment benèfic de l'any. Junts jugarem per barrigues sanes pels nostres nens!",
+      "button": "Veure detalls de l'esdeveniment"
+    },
+    "mainCta": {
+      "title": "Com pots ajudar?",
+      "subtitle": "Tria la teva manera de donar suport al 34è Final WOŚP Barcelona",
+      "finale": {
+        "title": "Vine al Final",
+        "description": "Uneix-te a nosaltres el 25 de gener de 2026 a Barcelona. Junts jugarem per barrigues sanes pels nostres nens!",
+        "button": "Veure detalls",
+        "date": "25 de gener de 2026, 12:00"
+      },
+      "donate": {
+        "title": "Dona Online",
+        "description": "Dona'ns suport directament a través d'e-skarbonka. Cada euro és ajuda real per als nens!",
+        "button": "Dona ara",
+        "secure": "Pagament segur a través de WOŚP"
+      },
+      "allegro": {
+        "title": "Puja a Allegro",
+        "description": "Puja per articles únics i dona suport a WOŚP. Tots els fons van a l'objectiu del Final!",
+        "button": "Veure subhastes",
+        "info": "Articles i experiències úniques"
+      }
+    },
     "socials": {
       "title": "Uneix-te a nosaltres",
       "description": "Som a Facebook, Instagram, Meetup i YouTube.",

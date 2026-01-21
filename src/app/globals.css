@@ -35,7 +35,7 @@ body {
 
 .marquee .marquee-track {
   will-change: transform;
-  animation: marquee-x 30s linear infinite;
+  animation: marquee-x 80s linear infinite;
 }
 
 .marquee:hover .marquee-track {
