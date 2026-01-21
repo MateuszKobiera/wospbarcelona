@@ -84,6 +84,23 @@ const allEvents = [
     contact: 'wolontariat@wospbarcelona.org'
   },
   {
+    id: 10,
+    title: 'Lepienie Pierogów na Finał WOŚP',
+    description: '🥟 Zapraszamy na wspólne lepienie pierogów w Wawel Restobar! Przygotujemy razem pyszne pierogi na 34. Finał WOŚP. Im nas więcej, tym lepiej!',
+    fullDescription: '🥟 Lepienie Pierogów na Finał WOŚP w Wawel Restobar\n\nZapraszamy wszystkich chętnych na wspólne lepienie pierogów, które będą serwowane podczas 34. Finału WOŚP w Barcelonie!\n\n📍 Gdzie: Wawel Restobar — nasz główny sponsor\n📅 Kiedy: Sobota, 24 stycznia 2026\n🕐 Godziny: 13:00 - 19:00\n\n✨ Dlaczego warto przyjść?\n\n• Wspólna zabawa i integracja przed finałem\n• Nauczysz się lepić tradycyjne polskie pierogi\n• Pomożesz przygotować jedzenie na finał WOŚP\n• Poczujesz atmosferę polskiej gościnności\n• Poznasz innych wolontariuszy i sympatyków WOŚP\n• Wesprzesz naszego sponsora — Wawel Restobar\n\n👥 Dla kogo?\nDla każdego! Nie musisz mieć doświadczenia w lepieniu pierogów — nauczymy Cię wszystkiego. Możesz przyjść o dowolnej godzinie między 13:00 a 19:00.\n\n📝 Rejestracja:\nNie jest wymagana rejestracja — po prostu przyjdź! Im nas więcej, tym więcej pierogów ulepimy dla finału.\n\n🥟 Co będziemy robić?\n• Przygotowywanie ciasta na pierogi\n• Lepienie różnych rodzajów pierogów\n• Wspólna praca w przyjaznej atmosferze\n• Rozmowy o planach na finał WOŚP\n\n💪 Każda para rąk się przyda!\nNiezależnie od tego, czy jesteś ekspertem w kuchni, czy dopiero zaczynasz swoją przygodę z gotowaniem — każda pomoc jest cenna. Razem przygotujemy pyszne pierogi, które będą smakowały wszystkim uczestnikom finału!\n\nDo zobaczenia w Wawel Restobar!',
+    date: '2026-01-24',
+    time: '13:00 - 19:00',
+    location: 'Wawel Restobar, Barcelona',
+    category: 'Warsztaty',
+    image: '/images/kalendarz/06_SLIDE_34_F_ZAGRA_25_01_2026 (1).jpg',
+    gallery: [],
+    videoUrl: '/videos/WhatsApp Video 2026-01-21 at 01.38.11.mp4',
+    registrationRequired: false,
+    facebookLink: null,
+    organizer: 'WOŚP Barcelona',
+    contact: 'sztab@wospbarcelona.org'
+  },
+  {
     id: 1,
     title: '34. Finał WOŚP w Barcelonie',
     description: '🎉 Największe wydarzenie charytatywne roku w Barcelonie! Dołącz do nas w Espacio 88 na dzień pełen warsztatów, występów, aukcji i integracji. Gramy dla zdrowych brzuszków polskich dzieci!',
@@ -589,6 +606,25 @@ export default function EventPage() {
                 </div>
               </CardContent>
             </Card>
+
+            {/* Video */}
+            {event.videoUrl && (
+              <Card className="bg-white">
+                <CardContent className="p-6">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4">Zaproszenie video</h2>
+                  <div className="relative w-full aspect-video rounded-lg overflow-hidden bg-gray-900">
+                    <video
+                      controls
+                      className="w-full h-full"
+                      preload="metadata"
+                    >
+                      <source src={event.videoUrl} type="video/mp4" />
+                      Twoja przeglądarka nie obsługuje odtwarzania wideo.
+                    </video>
+                  </div>
+                </CardContent>
+              </Card>
+            )}
 
             {/* Gallery */}
             {event.gallery && event.gallery.length > 0 && (

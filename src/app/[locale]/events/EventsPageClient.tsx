@@ -13,6 +13,16 @@ import { ContactForm } from '@/components/ContactForm';
 // Event data - only non-translatable fields
 const upcomingEventsData = [
   {
+    id: 10,
+    date: '2026-01-24',
+    time: '13:00 - 19:00',
+    location: 'Wawel Restobar, Barcelona',
+    categoryKey: 'workshop',
+    image: '/images/kalendarz/06_SLIDE_34_F_ZAGRA_25_01_2026 (1).jpg',
+    registrationRequired: false,
+    facebookLink: null
+  },
+  {
     id: 5,
     date: '2026-01-24',
     time: '10:30',
