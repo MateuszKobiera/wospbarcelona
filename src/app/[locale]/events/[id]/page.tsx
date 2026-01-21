@@ -2,12 +2,13 @@
 
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Calendar, MapPin, ArrowLeft, AlertTriangle, Info } from 'lucide-react';
+import { Calendar, MapPin, ArrowLeft, AlertTriangle, Info, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
+import { useState } from 'react';
 
 // Helper component to render text with bold and underline
 const FormattedText = ({ text }: { text: string }) => {
@@ -93,13 +94,13 @@ const allEvents = [
     category: 'Finał WOŚP',
     image: '/images/kalendarz/36_34FinalWOSP2026_grafika_podglad.jpg',
     gallery: [
-      '/images/plakaty/PL-Ogólny-2026.png',
+      '/images/plakaty/PL-Ogolny-2026.png',
       '/images/plakaty/PL-Harmonogram-2026.png',
-      '/images/plakaty/EN-Ogólny-2026.png',
+      '/images/plakaty/EN-Ogolny-2026.png',
       '/images/plakaty/EN-Harmonogram-2026.png',
-      '/images/plakaty/ES-Ogólny-2026.png',
+      '/images/plakaty/ES-Ogolny-2026.png',
       '/images/plakaty/ES-Harmonogram-2026.png',
-      '/images/plakaty/CAT-Ogólny-2026.png',
+      '/images/plakaty/CAT-Ogolny-2026.png',
       '/images/plakaty/CAT-Harmonogram-2026.png',
       '/images/33-final/DSCF7186.jpg',
       '/images/33-final/DSCF7194.jpg',
@@ -362,6 +363,31 @@ export default function EventPage() {
   const id = params.id as string;
   const event = allEvents.find(e => e.id === parseInt(id));
 
+  // Lightbox state
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const openLightbox = (index: number) => {
+    setCurrentImageIndex(index);
+    setLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setLightboxOpen(false);
+  };
+
+  const nextImage = () => {
+    if (event?.gallery) {
+      setCurrentImageIndex((prev) => (prev + 1) % event.gallery.length);
+    }
+  };
+
+  const prevImage = () => {
+    if (event?.gallery) {
+      setCurrentImageIndex((prev) => (prev - 1 + event.gallery.length) % event.gallery.length);
+    }
+  };
+
   if (!event) {
     notFound();
   }
@@ -571,13 +597,36 @@ export default function EventPage() {
                   <h2 className="text-2xl font-bold text-gray-900 mb-4">{t('detail.gallery')}</h2>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                     {event.gallery.map((image, index) => (
-                      <div key={index} className="relative aspect-square rounded-lg overflow-hidden">
+                      <div
+                        key={index}
+                        className="group relative aspect-square overflow-hidden rounded-lg bg-gray-200 hover:shadow-lg transition-all duration-300 cursor-pointer"
+                        onClick={() => openLightbox(index)}
+                      >
+                        <div className="absolute inset-0 flex items-center justify-center text-gray-500 text-sm">
+                          📸 Ładowanie...
+                        </div>
                         <Image
                           src={image}
                           alt={`${event.title} - ${t('detail.photoAlt')} ${index + 1}`}
                           fill
-                          className="object-cover hover:scale-105 transition-transform duration-300"
+                          className="object-cover group-hover:scale-105 transition-transform duration-300 z-10"
+                          onLoad={(e) => {
+                            const target = e.currentTarget as HTMLImageElement;
+                            target.style.opacity = '1';
+                          }}
+                          onError={(e) => {
+                            const target = e.currentTarget as HTMLImageElement;
+                            target.style.display = 'none';
+                          }}
+                          style={{ opacity: 0, transition: 'opacity 0.3s' }}
                         />
+                        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                          <div className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                            </svg>
+                          </div>
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -757,6 +806,50 @@ export default function EventPage() {
             </Card>
           </div>
         </div>
+
+        {/* Lightbox Modal */}
+        {lightboxOpen && event.gallery && event.gallery.length > 0 && (
+          <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4">
+            <button
+              onClick={closeLightbox}
+              className="absolute top-4 right-4 bg-black bg-opacity-30 hover:bg-opacity-50 text-white hover:text-red-400 p-3 rounded-full transition-all duration-200 hover:scale-110 shadow-xl backdrop-blur-sm border border-white border-opacity-10 z-10"
+              aria-label="Zamknij galerię"
+            >
+              <X className="w-6 h-6" />
+            </button>
+
+            <button
+              onClick={prevImage}
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-30 hover:bg-opacity-50 text-white hover:text-blue-400 p-3 rounded-full transition-all duration-200 hover:scale-110 shadow-xl backdrop-blur-sm border border-white border-opacity-10 z-10"
+              aria-label="Poprzednie zdjęcie"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+
+            <button
+              onClick={nextImage}
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-30 hover:bg-opacity-50 text-white hover:text-blue-400 p-3 rounded-full transition-all duration-200 hover:scale-110 shadow-xl backdrop-blur-sm border border-white border-opacity-10 z-10"
+              aria-label="Następne zdjęcie"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+
+            <div className="relative max-w-6xl max-h-full w-full h-full flex items-center justify-center">
+              <Image
+                src={event.gallery[currentImageIndex]}
+                alt={`${event.title} - ${t('detail.photoAlt')} ${currentImageIndex + 1}`}
+                width={1600}
+                height={1200}
+                className="max-w-full max-h-full object-contain"
+                priority
+              />
+            </div>
+
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white bg-black bg-opacity-50 px-4 py-2 rounded-lg">
+              <span className="text-sm">{currentImageIndex + 1} / {event.gallery.length}</span>
+            </div>
+          </div>
+        )}
       </div>
     </main>
   );
