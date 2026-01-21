@@ -59,7 +59,6 @@ const allEvents = [
       '/images/blog/online-2.jpg'
     ],
     registrationRequired: true,
-    meetupLink: 'https://www.meetup.com/wośp-barcelona/events/312210626/',
     facebookLink: 'https://www.facebook.com/events/959414393911595',
     organizer: 'WOŚP Barcelona',
     contact: 'wolontariat@wospbarcelona.org'
@@ -79,7 +78,6 @@ const allEvents = [
       '/images/blog/wolontariusze-grudzien-2.jpg'
     ],
     registrationRequired: false,
-    meetupLink: 'https://www.meetup.com/wośp-barcelona/events/312212223/',
     facebookLink: 'https://www.facebook.com/events/2638201476539435',
     organizer: 'WOŚP Barcelona',
     contact: 'wolontariat@wospbarcelona.org'
@@ -118,7 +116,6 @@ const allEvents = [
     ],
     registrationRequired: true,
     isFinal: true,
-    meetupLink: 'https://www.meetup.com/wośp-barcelona/events/312210334/',
     facebookLink: 'https://www.facebook.com/events/722563890373111',
     organizer: 'WOŚP Barcelona',
     contact: 'sztab@wospbarcelona.org'
@@ -137,7 +134,6 @@ const allEvents = [
       '/images/kalendarz/workoplecak_20bieg_podglad.jpg'
     ],
     registrationRequired: true,
-    meetupLink: 'https://www.meetup.com/wośp-barcelona/events/312210485/',
     facebookLink: 'https://www.facebook.com/events/1931855297364179/',
     organizer: 'WOŚP Barcelona',
     contact: 'biegwospbarcelona@gmail.com',
@@ -164,7 +160,6 @@ const allEvents = [
       '/images/allegro/7E5E2F03-E9DD-4D2F-BC1E-B5467EE07583.png'
     ],
     registrationRequired: false,
-    meetupLink: null,
     facebookLink: null,
     allegroLink: 'https://allegro.pl/uzytkownik/Client%3A140580262',
     organizer: 'WOŚP Barcelona',
@@ -214,7 +209,6 @@ const allEvents = [
     registrationDeadline: '5 stycznia 2025 (z koszulką), 19 stycznia 2025 (bez koszulki)',
     organizer: 'WOŚP Barcelona',
     contact: 'biegwospbarcelona@gmail.com',
-    meetupLink: null,
     facebookLink: null
   },
   {
@@ -231,7 +225,6 @@ const allEvents = [
     registrationRequired: false,
     organizer: 'WOŚP Barcelona',
     contact: 'sztab@wospbarcelona.org',
-    meetupLink: null,
     facebookLink: null
   },
   {
@@ -249,7 +242,6 @@ const allEvents = [
     registrationLink: 'https://wospbarcelona.org/wine-craft-christmas/',
     organizer: 'WOŚP Barcelona',
     contact: 'sztab@wospbarcelona.org',
-    meetupLink: null,
     facebookLink: null
   },
   {
@@ -267,7 +259,6 @@ const allEvents = [
     registrationLink: 'https://wospbarcelona.org/warsztaty-fotograficzne/',
     organizer: 'WOŚP Barcelona',
     contact: 'sztab@wospbarcelona.org',
-    meetupLink: null,
     facebookLink: null
   },
   {
@@ -284,7 +275,6 @@ const allEvents = [
     registrationRequired: false,
     organizer: 'WOŚP Barcelona',
     contact: 'sztab@wospbarcelona.org',
-    meetupLink: null,
     facebookLink: null
   },
   {
@@ -302,7 +292,6 @@ const allEvents = [
     registrationLink: 'https://wospbarcelona.org/wine-craft-ii-earth-edition/',
     organizer: 'WOŚP Barcelona',
     contact: 'sztab@wospbarcelona.org',
-    meetupLink: null,
     facebookLink: null
   },
   {

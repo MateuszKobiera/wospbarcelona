@@ -115,11 +115,11 @@
     },
     "socials": {
       "title": "Join us",
-      "description": "We are on Facebook, Instagram, Meetup and YouTube.",
+      "description": "We are on Facebook, Instagram, YouTube and Allegro. Follow our social media to stay up to date!",
       "facebookDesc": "See what's new. Updates, photos and event reports.",
       "instagramDesc": "Latest photos and stories from our activities in Barcelona.",
-      "meetupDesc": "Join our events and meetings of the Polish community.",
-      "youtubeDesc": "Watch our videos and event reports from WOŚP Barcelona."
+      "youtubeDesc": "Watch our videos and event reports from WOŚP Barcelona.",
+      "allegroDesc": "Bid on charity items and support WOŚP Barcelona."
     },
     "allegro": {
       "title": "Charity Auctions on Allegro",
@@ -247,10 +247,9 @@
       },
       "socialsSection": {
         "followTitle": "Join us",
-        "description": "We are on Facebook, Instagram, Meetup, YouTube and Allegro. Follow our social media to stay up to date!",
+        "description": "We are on Facebook, Instagram, YouTube and Allegro. Follow our social media to stay up to date!",
         "facebookDesc": "See what's new. Updates, photos and event reports.",
         "instagramDesc": "Latest photos and stories from our activities in Barcelona.",
-        "meetupDesc": "Join our events and meetings of the Polish community.",
         "youtubeDesc": "Watch our videos and event reports from WOŚP Barcelona.",
         "allegroDesc": "Bid on charity items and support WOŚP Barcelona."
       },
@@ -279,7 +278,6 @@
       "seeMore": "See more",
       "seeReport": "See report",
       "addToCalendar": "Add to Google Calendar",
-      "viewOnMeetup": "View on Meetup",
       "viewOnFacebook": "View on Facebook",
       "viewOnAllegro": "View on Allegro",
       "registerForRun": "Register for the run",
@@ -294,11 +292,11 @@
       },
       "socials": {
         "title": "Join us",
-        "description": "We are on Facebook, Instagram, Meetup and YouTube.",
+        "description": "We are on Facebook, Instagram, YouTube and Allegro. Follow our social media to stay up to date!",
         "facebookDesc": "See what's new. Updates, photos and event reports.",
         "instagramDesc": "Latest photos and stories from our activities in Barcelona.",
-        "meetupDesc": "Join our events and meetings of the Polish community.",
-        "youtubeDesc": "Watch our videos and event reports from WOŚP Barcelona."
+        "youtubeDesc": "Watch our videos and event reports from WOŚP Barcelona.",
+        "allegroDesc": "Bid on charity items and support WOŚP Barcelona."
       }
     },
     "categories": {
@@ -595,11 +593,11 @@
     "aboutGoal": "About the Finale goal",
     "socials": {
       "title": "Join us",
-      "description": "We are on Facebook, Instagram, Meetup and YouTube.",
+      "description": "We are on Facebook, Instagram, YouTube and Allegro. Follow our social media to stay up to date!",
       "facebookDesc": "See what's new. Updates, photos and event reports.",
       "instagramDesc": "Latest photos and stories from our activities in Barcelona.",
-      "meetupDesc": "Join our events and meetings of the Polish community.",
-      "youtubeDesc": "Watch our videos and event reports from WOŚP Barcelona."
+      "youtubeDesc": "Watch our videos and event reports from WOŚP Barcelona.",
+      "allegroDesc": "Bid on charity items and support WOŚP Barcelona."
     }
   },
   "runRoutePopup": {

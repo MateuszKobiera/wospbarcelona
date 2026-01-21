@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { HeartHandshakeIcon, StoreIcon, UsersIcon, FlagIcon, Heart, Gavel, Wallet, ArrowRight, Sparkles } from 'lucide-react';
-import { siFacebook, siInstagram, siMeetup, siYoutube } from 'simple-icons/icons';
+import { siFacebook, siInstagram, siYoutube } from 'simple-icons/icons';
 import { SponsorsMarquee } from '@/components/SponsorsMarquee';
 import { blogPosts } from '@/content/blog';
 import { ContactForm } from '@/components/ContactForm';
@@ -145,7 +145,7 @@ export default function HomePage() {
             <p className="text-gray-600">{t('socials.description')}</p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-3 gap-4">
             <Link href="https://facebook.com/sztabWOSPBarcelona" target="_blank" rel="noopener noreferrer" className="block">
               <Card className="border-gray-200 transition hover:shadow-md hover:-translate-y-0.5 cursor-pointer h-full">
                 <CardContent className="p-4 text-center">
@@ -168,19 +168,6 @@ export default function HomePage() {
                     </svg>
                   </div>
                   <div className="text-sm font-semibold text-gray-900">Instagram</div>
-                </CardContent>
-              </Card>
-            </Link>
-
-            <Link href="https://www.meetup.com/wośp-barcelona" target="_blank" rel="noopener noreferrer" className="block">
-              <Card className="border-gray-200 transition hover:shadow-md hover:-translate-y-0.5 cursor-pointer h-full">
-                <CardContent className="p-4 text-center">
-                  <div className="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center mx-auto mb-3">
-                    <svg role="img" viewBox="0 0 24 24" className="w-6 h-6 text-red-600 fill-current" aria-hidden>
-                      <path d={siMeetup.path} />
-                    </svg>
-                  </div>
-                  <div className="text-sm font-semibold text-gray-900">Meetup</div>
                 </CardContent>
               </Card>
             </Link>

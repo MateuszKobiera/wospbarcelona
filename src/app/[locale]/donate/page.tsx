@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { siFacebook, siInstagram, siMeetup, siYoutube } from 'simple-icons/icons';
+import { siFacebook, siInstagram, siYoutube } from 'simple-icons/icons';
 import { getTranslations } from 'next-intl/server';
 import { Heart, ExternalLink, Info } from 'lucide-react';
 
@@ -146,7 +146,7 @@ export default async function DonatePage() {
             <p className="text-gray-600">{t('socials.description')}</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <Link href="https://facebook.com/sztabWOSPBarcelona" target="_blank" rel="noopener noreferrer" className="block">
               <Card className="border-gray-200/80 transition hover:shadow-md hover:-translate-y-0.5 cursor-pointer">
                 <CardContent className="p-4">
@@ -188,29 +188,6 @@ export default async function DonatePage() {
                   </div>
                   <p className="text-sm text-gray-700">
                     {t('socials.instagramDesc')}
-                  </p>
-                </CardContent>
-              </Card>
-            </Link>
-
-            <Link href="https://www.meetup.com/wośp-barcelona" target="_blank" rel="noopener noreferrer" className="block">
-              <Card className="border-gray-200/80 transition hover:shadow-md hover:-translate-y-0.5 cursor-pointer">
-                <CardContent className="p-4">
-                  <div className="flex items-center mb-3">
-                    <div className="w-9 h-9 rounded-full bg-red-100 flex items-center justify-center mr-2">
-                      <svg
-                        role="img"
-                        viewBox="0 0 24 24"
-                        className="w-5 h-5 text-red-600 fill-current"
-                        aria-hidden
-                      >
-                        <path d={siMeetup.path} />
-                      </svg>
-                    </div>
-                    <div className="text-sm font-semibold text-gray-900">Meetup</div>
-                  </div>
-                  <p className="text-sm text-gray-700">
-                    {t('socials.meetupDesc')}
                   </p>
                 </CardContent>
               </Card>

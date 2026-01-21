@@ -115,10 +115,9 @@
     },
     "socials": {
       "title": "Uneix-te a nosaltres",
-      "description": "Som a Facebook, Instagram, Meetup i YouTube.",
+      "description": "Som a Facebook, Instagram i YouTube.",
       "facebookDesc": "Mira què hi ha de nou. Actualitzacions, fotos i relats d'esdeveniments.",
       "instagramDesc": "Últimes fotos i stories de les nostres activitats a Barcelona.",
-      "meetupDesc": "Uneix-te als nostres esdeveniments i trobades de la comunitat polonesa.",
       "youtubeDesc": "Mira els nostres vídeos i reportatges d'esdeveniments de WOŚP Barcelona."
     },
     "allegro": {
@@ -247,10 +246,9 @@
       },
       "socialsSection": {
         "followTitle": "Uneix-te a nosaltres",
-        "description": "Som a Facebook, Instagram, Meetup i YouTube. Segueix-nos per estar al dia!",
+        "description": "Som a Facebook, Instagram i YouTube. Segueix-nos per estar al dia!",
         "facebookDesc": "Mira què hi ha de nou. Actualitzacions, fotos i reportatges d'esdeveniments.",
         "instagramDesc": "Últimes fotos i stories de les nostres activitats a Barcelona.",
-        "meetupDesc": "Uneix-te als nostres esdeveniments i trobades de la comunitat polonesa.",
         "youtubeDesc": "Mira els nostres vídeos i reportatges d'esdeveniments de WOŚP Barcelona.",
         "allegroDesc": "Puja per articles benèfics i dona suport a WOŚP Barcelona."
       },
@@ -279,7 +277,6 @@
       "seeMore": "Veure més",
       "seeReport": "Veure reportatge",
       "addToCalendar": "Afegir a Google Calendar",
-      "viewOnMeetup": "Veure a Meetup",
       "viewOnFacebook": "Veure a Facebook",
       "viewOnAllegro": "Veure a Allegro",
       "registerForRun": "Inscriu-te a la cursa",
@@ -294,10 +291,9 @@
       },
       "socials": {
         "title": "Uneix-te a nosaltres",
-        "description": "Som a Facebook, Instagram, Meetup i YouTube.",
+        "description": "Som a Facebook, Instagram i YouTube.",
         "facebookDesc": "Mira què hi ha de nou. Actualitzacions, fotos i reportatges d'esdeveniments.",
         "instagramDesc": "Últimes fotos i stories de les nostres activitats a Barcelona.",
-        "meetupDesc": "Uneix-te als nostres esdeveniments i trobades de la comunitat polonesa.",
         "youtubeDesc": "Mira els nostres vídeos i reportatges d'esdeveniments de WOŚP Barcelona."
       }
     },
@@ -357,7 +353,7 @@
       "203": {
         "title": "Bubbly Craft - Earth Edition",
         "description": "Una vetllada única de creativitat i relaxació! Tallers de renovació de tests i macramé amb begudes aromàtiques.",
-        "fullDescription": "Bubbly Craft - Earth Edition amb WOŚP Barcelona!\n\nUneix-te a una vetllada única de creativitat i relaxació amb WOŚP Barcelona! Et convidem a la segona edició dels tallers \"Bubbly Craft\", aquesta vegada sota el nom Earth Edition.\n\n🎨 Què t'espera?\n• 🪴 Renovació de tests: Porta el teu test avorrit i t'ajudarem a donar-li nova vida!\n• 🧵 Macramé per a tests: Aprèn a crear bonics macramés decoratius\n• 🍷 Begudes aromàtiques: Begudes que complementaran l'atmosfera creativa\n• 👶 Zona infantil: Animacions i jocs especials\n\n📅 Quan: Dissabte, 11 de gener de 2025, 17:30\n📍 On: World Class Barcelona"
+        "fullDescription": "Bubbly Craft - Earth Edition amb WOŚP Barcelona!\n\nUneix-te a una vetllada única de creativitat i relaxació amb WOŚP Barcelona! Et convidem a la segona edició dels tallers \"Bubbly Craft\", aquesta vegada sota el nom Earth Edition.\n\n🎨 Què t'espera?\n• 🪴 Renovació de tests: Porta el teu test avorrit i t'ajudarem a donar-li nova vida!\n• 🧵 Macramé per a tests: Aprèn a crear bonics macramés decoratius\n• 🍷 Begudes aromàtiques: Begudes que complementaran l'atmosfera creativa\n• 👶 Zona infantil: Animacions i jocs especials\n\n📅 Data: Dissabte, 11 de gener de 2025, 17:30\n📍 Lloc: World Class Barcelona"
       },
       "204": {
         "title": "Nadal Literari amb WOŚP",
@@ -515,7 +511,7 @@
       },
       "deliciasByBea": {
         "name": "Delicias by Bea",
-        "description": "Pastisseria polonesa a Barcelona. Bea Michalak és una pastissera experimentada que combina els sabors tradicionals de la cuina polonesa amb tècniques de pastisseria modernes. Va desenvolupant la seva passió per la pastisseria des de la infància i la va perfeccionar a Berlín i Barcelona. Avui, al cor del barri gòtic de Barcelona, crea pastissos excepcionals inspirats tant en les tradicions familiars com en l'entorn multicultural."
+        "description": "Pastisseria polonesa a Barcelona. Bea Michalak és una pastissera experimentada que combina els sabors tradicionals de la cuina polonesa amb tècniques de pastisseria modernes. Va desenvolupar la seva passió per la pastisseria des de la infància i la va perfeccionar a Berlín i Barcelona. Avui, al cor del barri gòtic de Barcelona, crea pastissos excepcionals inspirats tant en les tradicions familiars com en l'entorn multicultural."
       },
       "polcat": {
         "name": "PolCat",
@@ -599,10 +595,9 @@
     "aboutGoal": "Sobre l'objectiu del Final",
     "socials": {
       "title": "Uneix-te a nosaltres",
-      "description": "Som a Facebook, Instagram, Meetup i YouTube.",
+      "description": "Som a Facebook, Instagram i YouTube.",
       "facebookDesc": "Mira què hi ha de nou. Actualitzacions, fotos i reportatges d'esdeveniments.",
       "instagramDesc": "Últimes fotos i stories de les nostres activitats a Barcelona.",
-      "meetupDesc": "Uneix-te als nostres esdeveniments i trobades de la comunitat polonesa.",
       "youtubeDesc": "Mira els nostres vídeos i reportatges d'esdeveniments de WOŚP Barcelona."
     }
   },

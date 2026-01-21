@@ -2,7 +2,7 @@
 
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
-import { Facebook, Instagram, Youtube, Meetup } from '@/components/icons/SocialIcons';
+import { Facebook, Instagram, Youtube } from '@/components/icons/SocialIcons';
 import { Mail, MapPin } from 'lucide-react';
 import Image from 'next/image';
 
@@ -16,7 +16,6 @@ export function Footer() {
     { icon: Facebook, href: 'https://facebook.com/sztabWOSPBarcelona', label: 'Facebook' },
     { icon: Instagram, href: 'https://instagram.com/wospbarcelona', label: 'Instagram' },
     { icon: Youtube, href: 'https://www.youtube.com/@sztabwospbarcelona3771', label: 'YouTube' },
-    { icon: Meetup, href: 'https://www.meetup.com/wośp-barcelona', label: 'Meetup' },
   ];
 
   const quickLinks = [

@@ -23,10 +23,6 @@ export function Twitter({ className, size }: IconProps) {
   return <SimpleIcon path={SimpleIcons.siX.path} title="X (Twitter)" className={className} size={size} />;
 }
 
-export function Meetup({ className, size }: IconProps) {
-  return <SimpleIcon path={SimpleIcons.siMeetup.path} title="Meetup" className={className} size={size} />;
-}
-
 // LinkedIn icon using custom SVG path (LinkedIn was removed from simple-icons)
 // Using a generic professional network icon path
 export function Linkedin({ className, size = 24 }: IconProps) {

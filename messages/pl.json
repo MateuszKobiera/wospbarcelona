@@ -115,10 +115,9 @@
     },
     "socials": {
       "title": "Dołącz do nas",
-      "description": "Jesteśmy na Facebooku, Instagramie, Meetupie i YouTube.",
+      "description": "Jesteśmy na Facebooku, Instagramie i YouTube.",
       "facebookDesc": "Zobacz, co u nas słychać. Aktualności, zdjęcia i relacje z wydarzeń.",
       "instagramDesc": "Najnowsze zdjęcia i stories z naszych działań w Barcelonie.",
-      "meetupDesc": "Dołącz do naszych wydarzeń i spotkań polskiej społeczności.",
       "youtubeDesc": "Oglądaj nasze filmy i relacje z wydarzeń WOŚP Barcelona."
     },
     "allegro": {
@@ -144,7 +143,7 @@
       "title": "Nasza misja",
       "cards": {
         "helpTitle": "Wspieranie najbardziej potrzebujących",
-        "helpDesc": "Zbieramy środki i organizujemy działania, by realnie pomagać dzieciom i osobom w potrzebie.",
+        "helpDesc": "Zbieramy środki i organizujemy akcje, by realnie pomagać dzieciom i osobom w potrzebie.",
         "businessTitle": "Wspieranie lokalnych przedsiębiorstw",
         "businessDesc": "Łączymy firmy i ludzi, tworzymy kontakty oraz przestrzeń do współpracy.",
         "communityTitle": "Integracja polskiej społeczności",
@@ -247,10 +246,9 @@
       },
       "socialsSection": {
         "followTitle": "Dołącz do nas",
-        "description": "Jesteśmy na Facebooku, Instagramie, Meetupie i YouTube. Śledź nasze social media, aby być na bieżąco!",
+        "description": "Jesteśmy na Facebooku, Instagramie i YouTube.",
         "facebookDesc": "Zobacz, co u nas słychać. Aktualności, zdjęcia i relacje z wydarzeń.",
         "instagramDesc": "Najnowsze zdjęcia i stories z naszych działań w Barcelonie.",
-        "meetupDesc": "Dołącz do naszych wydarzeń i spotkań polskiej społeczności.",
         "youtubeDesc": "Oglądaj nasze filmy i relacje z wydarzeń WOŚP Barcelona."
       },
       "final33Section": {
@@ -278,7 +276,6 @@
       "seeMore": "Zobacz więcej",
       "seeReport": "Zobacz relację",
       "addToCalendar": "Dodaj do Google Calendar",
-      "viewOnMeetup": "Zobacz na Meetup",
       "viewOnFacebook": "Zobacz na Facebook",
       "viewOnAllegro": "Zobacz na Allegro",
       "registerForRun": "Zarejestruj się na bieg",
@@ -293,10 +290,9 @@
       },
       "socials": {
         "title": "Dołącz do nas",
-        "description": "Jesteśmy na Facebooku, Instagramie, Meetupie i YouTube.",
+        "description": "Jesteśmy na Facebooku, Instagramie i YouTube.",
         "facebookDesc": "Zobacz, co u nas słychać. Aktualności, zdjęcia i relacje z wydarzeń.",
         "instagramDesc": "Najnowsze zdjęcia i stories z naszych działań w Barcelonie.",
-        "meetupDesc": "Dołącz do naszych wydarzeń i spotkań polskiej społeczności.",
         "youtubeDesc": "Oglądaj nasze filmy i relacje z wydarzeń WOŚP Barcelona."
       }
     },
@@ -351,7 +347,7 @@
       "202": {
         "title": "Wernisaż Artystyczny WOŚP",
         "description": "Wyjątkowe wydarzenie artystyczne łączące sztukę z dobrem. Dzieła lokalnych artystów i gości z Polski na wsparcie WOŚP!",
-        "fullDescription": "Wernisaż Artystyczny WOŚP w Barcelonie\n\nZapraszamy na wyjątkowe wydarzenie artystyczne, podczas którego sztuka łączy się z dobrem! Wernisaż w Barcelonie to okazja do podziwiania różnorodnych dzieł artystów, zarówno lokalnych twórców, jak i gości z Polski.\n\n✨ Dlaczego warto przyjść?\n• Wyjątkowi artyści – Spotkaj twórców mieszkających w Barcelonie\n• Licytacja dzieł – Wylicytuj unikalne prace podczas wielkiego finału WOŚP\n• Sprzedaż dzieł – Wybrane prace dostępne na sprzedaż\n• Kameralna atmosfera – Delektuj się sztuką przy lampce wina\n\n📅 Data: Sobota, 18 stycznia 2025\n🕘 Godzina: 11:00 – 22:00\n📍 Miejsce: Templo Beauty, Ronda del Guinardó 64, Barcelona"
+        "fullDescription": "Wernisaż Artystyczny WOŚP w Barcelonie\n\nZapraszamy na wyjątkowe wydarzenie artystyczne, podczas którego sztuka łączy się z dobrem! Wernisaż w Barcelonie to okazja do podziwiania różnorodnych dzieł artystów, zarówno lokalnych twórców, jak i gości z Polski.\n\n✨ Dlaczego warto przyjść?\n• 📚 Spotkanie z autorami: Zapytaj o inspiracje i proces twórczy\n• 🏆 Licytacja dzieł: Wylicytuj wyjątkowe egzemplarze z autografami\n• ❤️ Dobroczynność: Wesprzyj Wielką Orkiestrę Świątecznej Pomocy\n• 🍷 Winno-literacki wieczór: Delektuj się winem i zakąskami\n\n✍️ Autorzy: Krzysztof Monastyrski, Joanna Jurek, Agnieszka Łukomska, Agnieszka Wolińska-Skuza, Marta Cybulska\n\n📅 Data: Sobota, 18 stycznia 2025\n🕘 Godzina: 11:00 – 22:00\n📍 Miejsce: Templo Beauty, Ronda del Guinardó 64, Barcelona"
       },
       "203": {
         "title": "Bubbly Craft - Earth Edition",
@@ -599,10 +595,9 @@
     "aboutGoal": "O celu Finału",
     "socials": {
       "title": "Dołącz do nas",
-      "description": "Jesteśmy na Facebooku, Instagramie, Meetupie i YouTube.",
+      "description": "Jesteśmy na Facebooku, Instagramie i YouTube.",
       "facebookDesc": "Zobacz, co u nas słychać. Aktualności, zdjęcia i relacje z wydarzeń.",
       "instagramDesc": "Najnowsze zdjęcia i stories z naszych działań w Barcelonie.",
-      "meetupDesc": "Dołącz do naszych wydarzeń i spotkań polskiej społeczności.",
       "youtubeDesc": "Oglądaj nasze filmy i relacje z wydarzeń WOŚP Barcelona."
     }
   },

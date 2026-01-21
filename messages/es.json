@@ -115,10 +115,9 @@
     },
     "socials": {
       "title": "Únete a nosotros",
-      "description": "Estamos en Facebook, Instagram, Meetup y YouTube.",
+      "description": "Estamos en Facebook, Instagram y YouTube.",
       "facebookDesc": "Mira qué hay de nuevo. Actualizaciones, fotos y reportajes de eventos.",
       "instagramDesc": "Últimas fotos y stories de nuestras actividades en Barcelona.",
-      "meetupDesc": "Únete a nuestros eventos y reuniones de la comunidad polaca.",
       "youtubeDesc": "Mira nuestros vídeos y reportajes de eventos de WOŚP Barcelona."
     },
     "allegro": {
@@ -247,10 +246,9 @@
       },
       "socialsSection": {
         "followTitle": "Únete a nosotros",
-        "description": "Estamos en Facebook, Instagram, Meetup, YouTube y Allegro. ¡Síguenos para estar al día!",
+        "description": "Estamos en Facebook, Instagram, YouTube y Allegro. ¡Síguenos para estar al día!",
         "facebookDesc": "Mira qué hay de nuevo. Actualizaciones, fotos y reportajes de eventos.",
         "instagramDesc": "Últimas fotos y stories de nuestras actividades en Barcelona.",
-        "meetupDesc": "Únete a nuestros eventos y reuniones de la comunidad polaca.",
         "youtubeDesc": "Mira nuestros vídeos y reportajes de eventos de WOŚP Barcelona.",
         "allegroDesc": "Puja por artículos benéficos y apoya a WOŚP Barcelona."
       },
@@ -279,27 +277,19 @@
       "seeMore": "Ver más",
       "seeReport": "Ver reportaje",
       "addToCalendar": "Añadir a Google Calendar",
-      "viewOnMeetup": "Ver en Meetup",
       "viewOnFacebook": "Ver en Facebook",
       "viewOnAllegro": "Ver en Allegro",
       "registerForRun": "Inscríbete en la carrera",
       "final": "¡FINAL!",
       "duringEvent": "Durante el evento",
-      "total": "Total",
-      "cta": {
-        "title": "¿Quieres organizar un evento con nosotros?",
-        "description": "¿Tienes una idea para un evento benéfico? ¿Quieres ser socio? ¡Contáctanos y organicemos algo especial juntos!",
-        "contact": "Contáctanos",
-        "partner": "Hazte socio"
-      },
-      "socials": {
-        "title": "Únete a nosotros",
-        "description": "Estamos en Facebook, Instagram, Meetup y YouTube.",
-        "facebookDesc": "Mira qué hay de nuevo. Actualizaciones, fotos y reportajes de eventos.",
-        "instagramDesc": "Últimas fotos y stories de nuestras actividades en Barcelona.",
-        "meetupDesc": "Únete a nuestros eventos y reuniones de la comunidad polaca.",
-        "youtubeDesc": "Mira nuestros vídeos y reportajes de eventos de WOŚP Barcelona."
-      }
+      "totalDuringFinale": "Total durante el final",
+      "thankYou": "¡Gracias por tu apoyo!",
+      "registration": "Inscripción",
+      "registrationDeadline": "Fecha límite de inscripción",
+      "registrationWarning": "¡Rellenar el formulario incorrectamente puede resultar en un cargo adicional de 150 PLN o no recibir el paquete!",
+      "warning": "Atención",
+      "contact": "Contacto",
+      "contactUs": "Contáctanos"
     },
     "categories": {
       "volunteerMeeting": "Reunión de Voluntarios",
@@ -595,10 +585,9 @@
     "aboutGoal": "Sobre el objetivo del Final",
     "socials": {
       "title": "Únete a nosotros",
-      "description": "Estamos en Facebook, Instagram, Meetup y YouTube.",
+      "description": "Estamos en Facebook, Instagram y YouTube.",
       "facebookDesc": "Mira qué hay de nuevo. Actualizaciones, fotos y reportajes de eventos.",
       "instagramDesc": "Últimas fotos y stories de nuestras actividades en Barcelona.",
-      "meetupDesc": "Únete a nuestros eventos y reuniones de la comunidad polaca.",
       "youtubeDesc": "Mira nuestros vídeos y reportajes de eventos de WOŚP Barcelona."
     }
   },

@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Calendar, Clock, MapPin } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { siFacebook, siInstagram, siMeetup, siYoutube } from 'simple-icons/icons';
+import { siFacebook, siInstagram, siYoutube } from 'simple-icons/icons';
 import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
 import { ContactForm } from '@/components/ContactForm';
@@ -20,7 +20,6 @@ const upcomingEventsData = [
     categoryKey: 'run',
     image: '/images/kalendarz/workoplecak_20bieg_podglad.jpg',
     registrationRequired: true,
-    meetupLink: 'https://www.meetup.com/wosp-barcelona/events/bieg-wosp-barcelona',
     facebookLink: 'https://facebook.com/events/bieg-wosp-policz-sie-z-cukrzyca',
     isSpecialEvent: true
   },
@@ -33,7 +32,6 @@ const upcomingEventsData = [
     image: '/images/kalendarz/fb_FINAL.jpg',
     registrationRequired: true,
     isFinal: true,
-    meetupLink: 'https://www.meetup.com/wosp-barcelona/events/34-final-wosp',
     facebookLink: 'https://facebook.com/events/34-final-wosp-barcelona'
   },
   {
@@ -44,7 +42,6 @@ const upcomingEventsData = [
     categoryKey: 'onlineAuction',
     image: '/images/allegro/11_34FinalWOSP2026_grafika_AUKCJE_podglad.png',
     registrationRequired: false,
-    meetupLink: null,
     facebookLink: null,
     allegroLink: 'https://allegro.pl/uzytkownik/Client%3A140580262'
   }
@@ -277,21 +274,8 @@ export default function EventsPageClient() {
                                 </Button>
                               </a>
                             </div>
-                          ) : (event.meetupLink || event.facebookLink || event.allegroLink) && (
+                          ) : (event.facebookLink || event.allegroLink) && (
                             <div className="flex space-x-2 mt-4">
-                              {event.meetupLink && (
-                                <a
-                                  href={event.meetupLink}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="inline-flex items-center justify-center h-8 w-8 rounded-md bg-red-100 text-red-600 hover:bg-red-200 transition-colors"
-                                  title={t('page.viewOnMeetup')}
-                                >
-                                  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                                    <path d={siMeetup.path} />
-                                  </svg>
-                                </a>
-                              )}
                               {event.facebookLink && (
                                 <a
                                   href={event.facebookLink}
@@ -492,29 +476,6 @@ export default function EventsPageClient() {
                   </div>
                   <p className="text-sm text-gray-700">
                     {t('page.socials.instagramDesc')}
-                  </p>
-                </CardContent>
-              </Card>
-            </Link>
-
-            <Link href="https://www.meetup.com/wośp-barcelona" target="_blank" rel="noopener noreferrer" className="block">
-              <Card className="bg-white border-gray-200/80 transition hover:shadow-md hover:-translate-y-0.5 cursor-pointer">
-                <CardContent className="p-4">
-                  <div className="flex items-center mb-3">
-                    <div className="w-9 h-9 rounded-full bg-red-100 flex items-center justify-center mr-2">
-                      <svg
-                        role="img"
-                        viewBox="0 0 24 24"
-                        className="w-5 h-5 text-red-600 fill-current"
-                        aria-hidden
-                      >
-                        <path d={siMeetup.path} />
-                      </svg>
-                    </div>
-                    <div className="text-sm font-semibold text-gray-900">Meetup</div>
-                  </div>
-                  <p className="text-sm text-gray-700">
-                    {t('page.socials.meetupDesc')}
                   </p>
                 </CardContent>
               </Card>

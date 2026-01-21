@@ -11,7 +11,6 @@ export type BlogPost = {
   social?: {
     facebook?: string;
     instagram?: string;
-    meetup?: string;
   };
   sourceUrl?: string;
   sections: Array<{
@@ -32,7 +31,6 @@ export const blogPosts: BlogPost[] = [
     tags: ['34FinałWOŚP', 'Barcelona', 'Espacio88', 'WOŚPBarcelona', 'Finał2026'],
     social: {
       facebook: 'https://www.facebook.com/events/722563890373111',
-      meetup: 'https://www.meetup.com/wośp-barcelona/events/312210334/',
     },
     sourceUrl: undefined,
     sections: [
@@ -258,15 +256,6 @@ export const blogPosts: BlogPost[] = [
                 Wydarzenie na Facebook
                 <span className="transition-transform group-hover:translate-x-0.5">→</span>
               </a>
-              <a
-                href="https://www.meetup.com/wośp-barcelona/events/312210334/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 rounded-full px-5 py-2.5 border border-red-200 text-red-700 hover:bg-red-50 shadow-sm transition-transform hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-200"
-              >
-                Wydarzenie na Meetup
-                <span className="transition-transform group-hover:translate-x-0.5">→</span>
-              </a>
             </div>
             <p className="text-sm text-gray-600 mt-4">
               Śledź nasze social media, aby być na bieżąco z aktualnościami dotyczącymi finału!
@@ -296,7 +285,6 @@ export const blogPosts: BlogPost[] = [
     social: {
       facebook: 'https://www.facebook.com/sztabWOSPBarcelona',
       instagram: 'https://www.instagram.com/wospbarcelona/',
-      meetup: 'https://www.meetup.com/wo%C5%9Bp-barcelona/',
     },
     sourceUrl: 'https://wospbarcelona.org/index.php/2025/02/04/tak-wygladal-33-final-wosp-w-barcelonie/',
     sections: [

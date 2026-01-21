@@ -18,7 +18,6 @@ export type BlogPostI18n = {
     social?: {
         facebook?: string;
         instagram?: string;
-        meetup?: string;
     };
     sourceUrl?: string;
     content: {
@@ -37,7 +36,6 @@ export const blogPostsI18n: BlogPostI18n[] = [
         tags: ['34FinałWOŚP', 'Barcelona', 'Espacio88', 'WOŚPBarcelona', 'Finał2026'],
         social: {
             facebook: 'https://www.facebook.com/events/722563890373111',
-            meetup: 'https://www.meetup.com/wośp-barcelona/events/312210334/',
         },
         content: {
             pl: {
@@ -398,7 +396,6 @@ export const blogPostsI18n: BlogPostI18n[] = [
         social: {
             facebook: 'https://www.facebook.com/sztabWOSPBarcelona',
             instagram: 'https://www.instagram.com/wospbarcelona/',
-            meetup: 'https://www.meetup.com/wo%C5%9Bp-barcelona/',
         },
         sourceUrl: 'https://wospbarcelona.org/index.php/2025/02/04/tak-wygladal-33-final-wosp-w-barcelonie/',
         content: {

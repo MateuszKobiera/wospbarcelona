@@ -91,7 +91,7 @@ export default async function BlogPostPage({
             )}
 
             {/* Social links */}
-            {(post.social?.facebook || post.social?.instagram || post.social?.meetup) && (
+            {(post.social?.facebook || post.social?.instagram) && (
               <div className="pt-4 border-t">
                 <div className="text-sm font-semibold text-gray-900 mb-2">{t('followUs')}</div>
                 <div className="flex gap-3">
@@ -106,13 +106,6 @@ export default async function BlogPostPage({
                     <Button asChild variant="outline">
                       <Link href={post.social.instagram} target="_blank" rel="noopener noreferrer">
                         <Instagram className="w-4 h-4 mr-2" /> Instagram
-                      </Link>
-                    </Button>
-                  )}
-                  {post.social?.meetup && (
-                    <Button asChild variant="outline">
-                      <Link href={post.social.meetup} target="_blank" rel="noopener noreferrer">
-                        <MessageSquare className="w-4 h-4 mr-2" /> Meetup
                       </Link>
                     </Button>
                   )}
