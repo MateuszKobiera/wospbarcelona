@@ -512,10 +512,10 @@ export default function EventPage() {
             <Card className="bg-white">
               <CardContent className="p-6">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">{t('detail.aboutEvent')}</h2>
-                <div className="space-y-6">
+                <div className="space-y-3">
                   {eventFullDescription?.split('\n').map((paragraph, index) => {
                     const trimmed = paragraph.trim();
-                    if (trimmed === '') return <div key={index} className="h-1"></div>;
+                    if (trimmed === '') return <div key={index} className="h-2"></div>;
 
                     // Specialized Warning Box for ⚠️ paragraphs
                     if (trimmed.includes('⚠️')) {
@@ -581,7 +581,7 @@ export default function EventPage() {
 
                     // Regular paragraph
                     return (
-                      <p key={index} className="text-gray-700 leading-relaxed text-lg mb-4 ml-1">
+                      <p key={index} className="text-gray-700 leading-relaxed text-lg mb-2 ml-1">
                         <FormattedText text={trimmed} />
                       </p>
                     );
