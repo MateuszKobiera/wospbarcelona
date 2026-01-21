@@ -170,6 +170,26 @@
     "contactSection": {
       "title": "Skontaktuj się z nami",
       "description": "Masz pytania, chcesz zostać sponsorem lub wolontariuszem? Napisz do nas!"
+    },
+    "upcomingEvents": {
+      "title": "Nadchodzące wydarzenia",
+      "subtitle": "Dołącz do nas na najbliższych wydarzeniach WOŚP Barcelona",
+      "workshop": "Warsztaty",
+      "run": "Bieg",
+      "final": "Finał WOŚP",
+      "seeAll": "Zobacz wszystkie wydarzenia",
+      "event1": {
+        "title": "Lepienie Pierogów na Finał WOŚP",
+        "description": "Wspólne lepienie pierogów w Wawel Restobar. Przygotujemy razem pyszne pierogi na finał!"
+      },
+      "event2": {
+        "title": "20. Bieg WOŚP \"Policz się z cukrzycą\"",
+        "description": "Bieg charytatywny na 5 km. Start i meta: Hotel W Barcelona."
+      },
+      "event3": {
+        "title": "34. Finał WOŚP w Barcelonie",
+        "description": "Największe wydarzenie charytatywne roku! Warsztaty, występy, aukcje i integracja."
+      }
     }
   },
   "about": {

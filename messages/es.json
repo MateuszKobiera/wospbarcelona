@@ -170,6 +170,26 @@
     "contactSection": {
       "title": "Contáctanos",
       "description": "¿Preguntas? ¿Quieres ser patrocinador o voluntario? ¡Escríbenos!"
+    },
+    "upcomingEvents": {
+      "title": "Próximos eventos",
+      "subtitle": "Únete a nosotros en los próximos eventos de WOŚP Barcelona",
+      "workshop": "Taller",
+      "run": "Carrera",
+      "final": "Final WOŚP",
+      "seeAll": "Ver todos los eventos",
+      "event1": {
+        "title": "Taller de Pierogis para el Final WOŚP",
+        "description": "Preparemos pierogis juntos en Wawel Restobar. ¡Prepararemos deliciosos pierogis para el final!"
+      },
+      "event2": {
+        "title": "20ª Carrera WOŚP \"Cuenta con la Diabetes\"",
+        "description": "Carrera solidaria de 5 km. Salida y meta: Hotel W Barcelona."
+      },
+      "event3": {
+        "title": "34º Final WOŚP en Barcelona",
+        "description": "¡El mayor evento benéfico del año! Talleres, actuaciones, subastas e integración."
+      }
     }
   },
   "about": {

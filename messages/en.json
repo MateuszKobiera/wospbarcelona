@@ -171,6 +171,26 @@
     "contactSection": {
       "title": "Contact us",
       "description": "Do you have questions, want to become a sponsor or volunteer? Write to us!"
+    },
+    "upcomingEvents": {
+      "title": "Upcoming Events",
+      "subtitle": "Join us at the upcoming WOŚP Barcelona events",
+      "workshop": "Workshop",
+      "run": "Run",
+      "final": "WOŚP Finale",
+      "seeAll": "See all events",
+      "event1": {
+        "title": "Pierogi Making for WOŚP Finale",
+        "description": "Join us making pierogis at Wawel Restobar. We'll prepare delicious pierogis for the finale together!"
+      },
+      "event2": {
+        "title": "20th WOŚP Run \"Count on Diabetes\"",
+        "description": "Charity run of 5 km. Start and finish: Hotel W Barcelona."
+      },
+      "event3": {
+        "title": "34th WOŚP Finale in Barcelona",
+        "description": "The biggest charity event of the year! Workshops, performances, auctions and integration."
+      }
     }
   },
   "about": {

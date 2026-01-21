@@ -137,6 +137,127 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* 2.5 UPCOMING EVENTS */}
+      <section className="py-16 bg-gradient-to-br from-gray-50 to-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-gray-900 mb-3">
+              {t('upcomingEvents.title')}
+            </h2>
+            <p className="text-gray-600">
+              {t('upcomingEvents.subtitle')}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Event 1: Pierogi Making */}
+            <Link href={`/${locale}/events/10`} className="block group">
+              <Card className="overflow-hidden border-gray-200 hover:border-red-300 transition-all hover:shadow-lg">
+                <div className="relative h-48">
+                  <Image
+                    src="/images/kalendarz/06_SLIDE_34_F_ZAGRA_25_01_2026 (1).jpg"
+                    alt="Lepienie Pierogów"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute top-3 right-3 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                    24.01
+                  </div>
+                </div>
+                <CardContent className="p-5">
+                  <div className="text-xs text-red-600 font-semibold mb-2">{t('upcomingEvents.workshop')}</div>
+                  <h3 className="font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-red-600 transition-colors">
+                    {t('upcomingEvents.event1.title')}
+                  </h3>
+                  <p className="text-sm text-gray-600 mb-3 line-clamp-2">
+                    {t('upcomingEvents.event1.description')}
+                  </p>
+                  <div className="flex items-center text-xs text-gray-500">
+                    <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    13:00 - 19:00
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+
+            {/* Event 2: Run */}
+            <Link href={`/${locale}/events/5`} className="block group">
+              <Card className="overflow-hidden border-gray-200 hover:border-red-300 transition-all hover:shadow-lg">
+                <div className="relative h-48">
+                  <Image
+                    src="/images/kalendarz/workoplecak_20bieg_podglad.jpg"
+                    alt="Bieg WOŚP"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute top-3 right-3 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                    24.01
+                  </div>
+                </div>
+                <CardContent className="p-5">
+                  <div className="text-xs text-blue-600 font-semibold mb-2">{t('upcomingEvents.run')}</div>
+                  <h3 className="font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-red-600 transition-colors">
+                    {t('upcomingEvents.event2.title')}
+                  </h3>
+                  <p className="text-sm text-gray-600 mb-3 line-clamp-2">
+                    {t('upcomingEvents.event2.description')}
+                  </p>
+                  <div className="flex items-center text-xs text-gray-500">
+                    <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    10:30
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+
+            {/* Event 3: Final */}
+            <Link href={`/${locale}/events/1`} className="block group">
+              <Card className="overflow-hidden border-gray-200 hover:border-red-300 transition-all hover:shadow-lg">
+                <div className="relative h-48">
+                  <Image
+                    src="/images/kalendarz/fb_FINAL.jpg"
+                    alt="34. Finał WOŚP"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute top-3 right-3 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                    25.01
+                  </div>
+                </div>
+                <CardContent className="p-5">
+                  <div className="text-xs text-red-600 font-semibold mb-2">{t('upcomingEvents.final')}</div>
+                  <h3 className="font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-red-600 transition-colors">
+                    {t('upcomingEvents.event3.title')}
+                  </h3>
+                  <p className="text-sm text-gray-600 mb-3 line-clamp-2">
+                    {t('upcomingEvents.event3.description')}
+                  </p>
+                  <div className="flex items-center text-xs text-gray-500">
+                    <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    11:00 - 20:00
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+          </div>
+
+          <div className="text-center mt-8">
+            <Button asChild className="bg-red-600 hover:bg-red-700 text-white">
+              <Link href={`/${locale}/events`}>
+                {t('upcomingEvents.seeAll')}
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* 3. SOCIAL MEDIA */}
       <section className="py-14 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
