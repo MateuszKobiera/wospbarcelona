@@ -1,5 +1,5 @@
 import { Hero } from '@/components/Hero';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
@@ -27,6 +27,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default function HomePage() {
   const t = useTranslations('home');
+  const locale = useLocale();
   return (
     <main>
       <Hero />
@@ -350,7 +351,7 @@ export default function HomePage() {
               .sort((a, b) => (a.date < b.date ? 1 : -1))
               .slice(0, 3)
               .map((post) => {
-                const href = post.sourceUrl ?? '#';
+                const href = post.sourceUrl ?? `/${locale}/blog/${post.slug}`;
                 return (
                   <Link key={post.slug} href={href} target={post.sourceUrl ? '_blank' : undefined} rel={post.sourceUrl ? 'noopener noreferrer' : undefined} className="block group">
                     <Card className="overflow-hidden border-gray-200/80 transition hover:shadow-md hover:-translate-y-0.5">

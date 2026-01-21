@@ -3,6 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { siFacebook, siInstagram, siMeetup, siYoutube } from 'simple-icons/icons';
 import { getTranslations } from 'next-intl/server';
+import { Heart, ExternalLink, Info } from 'lucide-react';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -22,72 +23,118 @@ export default async function DonatePage() {
 
   return (
     <>
-      <main className="py-16 bg-gradient-to-br from-white via-red-50 to-pink-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">{t('title')}</h1>
+      <main className="py-16 bg-gradient-to-br from-red-50 via-pink-50 to-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">{t('title')}</h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               {t('subtitle')}
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-8">
-            <Card className="bg-white border border-red-100 shadow-sm">
-              <CardContent className="p-6 space-y-6">
-                <section className="space-y-3">
-                  <h2 className="text-2xl font-semibold text-gray-900">{t('goalTitle')}</h2>
-                  <div className="flex flex-col items-center text-center gap-3 md:gap-4 mt-2">
-                    <span className="inline-flex items-center rounded-full bg-red-100 text-red-700 px-3 py-1 text-sm font-semibold">
-                      {t('finalBadge')}
-                    </span>
-                    <div className="text-3xl md:text-4xl font-extrabold text-red-600 tracking-tight">
-                      {t('finalDate')}
-                    </div>
-                    <div className="text-3xl md:text-5xl font-extrabold bg-gradient-to-r from-red-600 to-pink-600 bg-clip-text text-transparent">
-                      {t('goalSlogan')}
-                    </div>
-                  </div>
-                  <p className="text-gray-700 font-medium">
-                    {t('goalDescription')}
-                  </p>
-                  <h3 className="text-lg font-semibold text-gray-900 mt-4">{t('whyImportantTitle')}</h3>
-                  <p className="text-gray-700">
-                    {t('whyImportantText1')}
-                  </p>
-                  <p className="text-gray-700">
-                    {t('whyImportantText2')}
-                  </p>
-                </section>
+          {/* Main CTA Card */}
+          <Card className="bg-gradient-to-br from-red-600 to-pink-600 border-0 shadow-2xl mb-8 overflow-hidden">
+            <CardContent className="p-8 md:p-12 text-center space-y-6">
+              <div className="flex justify-center mb-4">
+                <div className="bg-white/20 backdrop-blur-sm rounded-full p-4">
+                  <Heart className="w-12 h-12 md:w-16 md:h-16 text-white" fill="white" />
+                </div>
+              </div>
 
-                <section className="space-y-3">
-                  <h2 className="text-xl font-semibold text-gray-900">{t('collectionTitle')}</h2>
-                  <p className="text-gray-700">
-                    {t('collectionText')}
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-3 sm:items-center">
-                    <Button asChild className="bg-red-600 hover:bg-red-700 text-white w-full sm:w-auto cursor-pointer">
-                      <Link
-                        href="https://www.wosp.org.pl/fundacja/jak-wspierac-wosp/wesprzyj-online"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {t('supportOnline')}
-                      </Link>
-                    </Button>
-                    <Button asChild variant="outline" className="w-full sm:w-auto cursor-pointer">
-                      <Link
-                        href="https://www.wosp.org.pl/aktualnosci/choroby-przewodu-pokarmowego-celem-finalu"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {t('aboutGoal')}
-                      </Link>
-                    </Button>
+              <div className="space-y-3">
+                <span className="inline-flex items-center rounded-full bg-white/20 backdrop-blur-sm text-white px-4 py-1.5 text-sm font-semibold">
+                  {t('finalBadge')}
+                </span>
+                <h2 className="text-3xl md:text-5xl font-extrabold text-white">
+                  {t('goalSlogan')}
+                </h2>
+                <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
+                  {t('ctaDescription')}
+                </p>
+              </div>
+
+              <Button
+                asChild
+                size="lg"
+                className="bg-white text-red-600 hover:bg-gray-50 text-lg md:text-xl font-bold py-6 md:py-8 px-8 md:px-12 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer mt-6"
+              >
+                <Link
+                  href="https://eskarbonka.wosp.org.pl/dinudecipa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3"
+                >
+                  <Heart className="w-6 h-6" fill="currentColor" />
+                  {t('donateButton')}
+                  <ExternalLink className="w-5 h-5" />
+                </Link>
+              </Button>
+
+              <p className="text-sm text-white/80 mt-4">
+                {t('securePayment')}
+              </p>
+            </CardContent>
+          </Card>
+
+          {/* Info Section */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <Card className="bg-white border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-3">
+                  <div className="bg-red-100 rounded-full p-2 mt-1">
+                    <Info className="w-5 h-5 text-red-600" />
                   </div>
-                </section>
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('goalTitle')}</h3>
+                    <p className="text-gray-700 text-sm">
+                      {t('goalDescription')}
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-3">
+                  <div className="bg-pink-100 rounded-full p-2 mt-1">
+                    <Heart className="w-5 h-5 text-pink-600" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('whyImportantTitle')}</h3>
+                    <p className="text-gray-700 text-sm">
+                      {t('whyImportantText1')}
+                    </p>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           </div>
+
+          {/* Additional Info */}
+          <Card className="bg-white border border-gray-200 shadow-sm">
+            <CardContent className="p-6">
+              <div className="flex flex-col items-center text-center gap-4">
+                <span className="inline-flex items-center rounded-full bg-red-100 text-red-700 px-3 py-1 text-sm font-semibold">
+                  {t('finalDate')}
+                </span>
+                <p className="text-gray-700 max-w-3xl">
+                  {t('whyImportantText2')}
+                </p>
+                <Button asChild variant="outline" className="cursor-pointer">
+                  <Link
+                    href="https://www.wosp.org.pl/aktualnosci/choroby-przewodu-pokarmowego-celem-finalu"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2"
+                  >
+                    {t('aboutGoal')}
+                    <ExternalLink className="w-4 h-4" />
+                  </Link>
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </main>
 

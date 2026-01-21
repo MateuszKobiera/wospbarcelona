@@ -104,6 +104,7 @@
       "title": "34. Finał WOŚP — Zdrowe brzuszki naszych dzieci",
       "moreButton": "Więcej o zbiórce",
       "supportOnline": "Wesprzyj Fundację online",
+      "eskarbonkaLink": "https://eskarbonka.wosp.org.pl/dinudecipa",
       "description": "Zagramy, by wesprzeć diagnostykę i leczenie chorób przewodu pokarmowego u najmłodszych pacjentów. To realne wsparcie dla około 1,2–1,5 mln dzieci. Razem zadbajmy o zdrowe brzuszki naszych dzieci."
     },
     "sponsorsSection": {
@@ -530,18 +531,18 @@
   },
   "donate": {
     "title": "Wpłać Online",
-    "subtitle": "Tutaj wkrótce uruchomimy zbiórkę online na cel 34. Finału WOŚP.",
+    "subtitle": "Wesprzyj 34. Finał WOŚP Barcelona i pomóż dzieciom z chorobami przewodu pokarmowego.",
     "goalTitle": "Cel 34. Finału WOŚP",
     "finalBadge": "34. Finał WOŚP",
     "finalDate": "25 stycznia 2026 roku",
     "goalSlogan": "Zdrowe brzuszki naszych dzieci",
+    "ctaDescription": "Każda wpłata to realna pomoc dla najmłodszych pacjentów. Wspólnie możemy zmienić ich życie!",
+    "donateButton": "Wpłać teraz na e-skarbonkę",
+    "securePayment": "Bezpieczna płatność przez system WOŚP",
     "goalDescription": "Zagramy, by wesprzeć diagnostykę i leczenie chorób przewodu pokarmowego u najmłodszych pacjentów. To realne wsparcie dla około 1,2–1,5 miliona dzieci, cierpiących na schorzenia gastroenterologiczne.",
     "whyImportantTitle": "Dlaczego to ważne?",
     "whyImportantText1": "Gastroenterologia dziecięca w Polsce mierzy się z rosnącą liczbą pacjentów i potrzebą nowoczesnego sprzętu, który poprawia wyniki diagnostyki i leczenia, w tym także w chirurgii.",
     "whyImportantText2": "Choroby przewodu pokarmowego u dzieci (np. celiakia, choroba Leśniowskiego-Crohna, WZJG, GERD, ciężkie alergie pokarmowe, choroby trzustki i wątroby) oraz zaburzenia żywienia (niedożywienie i otyłość) są coraz częstsze i wpływają na rozwój, odporność i codzienne funkcjonowanie najmłodszych.",
-    "collectionTitle": "Zbiórka jeszcze nie wystartowała",
-    "collectionText": "Aktualnie nie prowadzimy jeszcze zbiórki na cel 34. Finału WOŚP. Rozpoczniemy przyjmowanie wpłat w grudniu.",
-    "supportOnline": "Wesprzyj Fundację online",
     "aboutGoal": "O celu Finału",
     "socials": {
       "title": "Dołącz do nas",

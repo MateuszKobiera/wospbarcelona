@@ -22,6 +22,269 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'zapraszamy-na-34-final-wosp-w-barcelonie',
+    title: 'Zapraszamy na 34. Finał WOŚP w Barcelonie – 25 stycznia 2026!',
+    date: '2026-01-21',
+    excerpt:
+      'Już 25 stycznia 2026 roku zapraszamy na 34. Finał WOŚP w Barcelonie! Dzień pełen warsztatów, koncertów, quizów, licytacji i dobrej zabawy. Gramy dla zdrowych brzuszków polskich dzieci!',
+    coverImage:
+      '/images/34-final/ZDJECIE_W_TLE (1).jpg',
+    tags: ['34FinałWOŚP', 'Barcelona', 'Espacio88', 'WOŚPBarcelona', 'Finał2026'],
+    social: {
+      facebook: 'https://www.facebook.com/events/722563890373111',
+      meetup: 'https://www.meetup.com/wośp-barcelona/events/312210334/',
+    },
+    sourceUrl: undefined,
+    sections: [
+      {
+        body: (
+          <div className="space-y-4">
+            <div
+              className="relative rounded-lg overflow-hidden p-4 md:p-6 text-white shadow-lg"
+              style={{
+                backgroundImage: "linear-gradient(135deg, rgba(220, 38, 38, 0.95) 0%, rgba(239, 68, 68, 0.90) 50%, rgba(251, 146, 60, 0.85) 100%), url('/images/34-final/ZDJECIE_W_TLE (1).jpg')",
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }}
+            >
+              <h3 className="text-xl font-bold mb-3 text-white drop-shadow-md">🎉 A MY, POLACY! – 34. Finał WOŚP w Barcelonie</h3>
+              <ul className="list-disc pl-6 space-y-2 text-white">
+                <li>
+                  <strong>Data:</strong> 25 stycznia 2026 (sobota)
+                </li>
+                <li>
+                  <strong>Godziny:</strong> 11:00 - 20:00
+                </li>
+                <li>
+                  <strong>Miejsce:</strong> Espacio 88 — Carrer de Pamplona 88, Sant Martí, Barcelona
+                </li>
+                <li>
+                  <strong>Cel:</strong> Choroby przewodu pokarmowego u dzieci – "Zdrowe brzuszki naszych dzieci"
+                </li>
+              </ul>
+            </div>
+            <p>
+              Serdecznie zapraszamy na 34. Finał Wielkiej Orkiestry Świątecznej Pomocy w Barcelonie! To będzie wyjątkowy dzień pełen muzyki, warsztatów, licytacji, quizów i wspólnej zabawy. Razem zagramy dla zdrowych brzuszków polskich dzieci!
+            </p>
+          </div>
+        ),
+      },
+      {
+        title: 'Harmonogram dnia',
+        body: (
+          <div className="space-y-4">
+            <Image
+              src="/images/plakaty/PL-Harmonogram-2026.png"
+              alt="Harmonogram 34. Finału WOŚP w Barcelonie"
+              width={1200}
+              height={1600}
+              sizes="(max-width: 768px) 100vw, 768px"
+              className="w-full h-auto rounded-lg shadow-md"
+              priority={true}
+            />
+            <div className="bg-white rounded-lg p-4 border border-gray-200">
+              <h4 className="font-bold text-lg mb-3">📋 Program wydarzenia:</h4>
+              <ul className="space-y-2 text-sm">
+                <li><strong>11:00-16:00</strong> | Warsztaty dla dzieci (Kosmo HisPLano - Carrer d'Àlaba 52)</li>
+                <li><strong>12:00</strong> | Otwarcie sali (Espacio 88)</li>
+                <li><strong>12:30</strong> | Uroczyste rozpoczęcie</li>
+                <li><strong>13:00</strong> | Licytacje</li>
+                <li><strong>13:30</strong> | Quiz - Polacy vs Hiszpanie</li>
+                <li><strong>14:00</strong> | Panel literacki z licytacją</li>
+                <li><strong>15:00</strong> | WOŚP-oliada</li>
+                <li><strong>15:45</strong> | Tort</li>
+                <li><strong>16:00</strong> | Bingo Muzyczne</li>
+                <li><strong>16:30</strong> | Licytacje</li>
+                <li><strong>17:00</strong> | Quiz - Polacy vs Hiszpanie</li>
+                <li><strong>18:00</strong> | Bingo Muzyczne</li>
+                <li><strong>19:00</strong> | Licytacje</li>
+                <li><strong>19:30</strong> | Uroczyste zakończenie</li>
+                <li><strong>20:00</strong> | Światełko do nieba</li>
+              </ul>
+            </div>
+          </div>
+        ),
+      },
+      {
+        title: 'Co dla Was przygotowaliśmy?',
+        body: (
+          <div className="space-y-4">
+            <Image
+              src="/images/plakaty/PL-Ogólny-2026.png"
+              alt="Plakat 34. Finału WOŚP w Barcelonie"
+              width={1200}
+              height={1600}
+              sizes="(max-width: 768px) 100vw, 768px"
+              className="w-full h-auto rounded-lg shadow-md"
+              priority={false}
+            />
+            <div className="grid md:grid-cols-2 gap-4 mt-4">
+              <div className="bg-red-50 rounded-lg p-4 border border-red-100">
+                <h4 className="font-bold text-lg mb-2 text-red-700">🎪 Dla dzieci</h4>
+                <ul className="list-disc pl-5 space-y-1 text-sm">
+                  <li>Warsztaty i gra miejska (Kosmo HisPLano)</li>
+                  <li>Bańki mydlane w parku</li>
+                  <li>Tatuaże</li>
+                  <li>Bransoletki, mydełka</li>
+                  <li>Symulator jazdy</li>
+                  <li>Malowanie twarzy</li>
+                </ul>
+              </div>
+              <div className="bg-orange-50 rounded-lg p-4 border border-orange-100">
+                <h4 className="font-bold text-lg mb-2 text-orange-700">🍽️ Gastronomia</h4>
+                <ul className="list-disc pl-5 space-y-1 text-sm">
+                  <li>Polska kiełbasa</li>
+                  <li>Pierogi</li>
+                  <li>Ciasta, pierogi</li>
+                  <li>Sałatki</li>
+                  <li>Napoje</li>
+                  <li>Tort (Delicias by Bea)</li>
+                </ul>
+              </div>
+              <div className="bg-blue-50 rounded-lg p-4 border border-blue-100">
+                <h4 className="font-bold text-lg mb-2 text-blue-700">📚 Kultura</h4>
+                <ul className="list-disc pl-5 space-y-1 text-sm">
+                  <li>Panel literacki (Marta Cybulska, Agnieszka Łukomska, Agnieszka Wolińska-Skuza)</li>
+                  <li>Licytacje książek</li>
+                  <li>Kiermasz książek</li>
+                </ul>
+              </div>
+              <div className="bg-purple-50 rounded-lg p-4 border border-purple-100">
+                <h4 className="font-bold text-lg mb-2 text-purple-700">🎮 Rozrywka</h4>
+                <ul className="list-disc pl-5 space-y-1 text-sm">
+                  <li>Quiz Polacy vs Hiszpanie</li>
+                  <li>Bingo Muzyczne</li>
+                  <li>Loteria</li>
+                  <li>WOŚP-oliada</li>
+                  <li>Licytacje gadżetów WOŚP</li>
+                  <li>Turniej ping-ponga</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        ),
+      },
+      {
+        title: 'Plakaty w innych językach',
+        body: (
+          <div className="space-y-4">
+            <p>Przygotowaliśmy plakaty również w innych językach, aby każdy mógł poczuć się zaproszony!</p>
+            <div className="grid md:grid-cols-2 gap-4">
+              <div>
+                <h5 className="font-semibold mb-2">🇬🇧 English</h5>
+                <Image
+                  src="/images/plakaty/EN-Ogólny-2026.png"
+                  alt="34th WOŚP Finale in Barcelona - English poster"
+                  width={600}
+                  height={800}
+                  sizes="(max-width: 768px) 50vw, 400px"
+                  className="w-full h-auto rounded-lg shadow-md"
+                  priority={false}
+                />
+              </div>
+              <div>
+                <h5 className="font-semibold mb-2">🇪🇸 Español</h5>
+                <Image
+                  src="/images/plakaty/ES-Ogólny-2026.png"
+                  alt="34º Final WOŚP en Barcelona - Cartel en español"
+                  width={600}
+                  height={800}
+                  sizes="(max-width: 768px) 50vw, 400px"
+                  className="w-full h-auto rounded-lg shadow-md"
+                  priority={false}
+                />
+              </div>
+              <div>
+                <h5 className="font-semibold mb-2">🏴 Català</h5>
+                <Image
+                  src="/images/plakaty/CAT-Ogólny-2026.png"
+                  alt="34è Final WOŚP a Barcelona - Cartell en català"
+                  width={600}
+                  height={800}
+                  sizes="(max-width: 768px) 50vw, 400px"
+                  className="w-full h-auto rounded-lg shadow-md"
+                  priority={false}
+                />
+              </div>
+              <div>
+                <h5 className="font-semibold mb-2">🇬🇧 English - Schedule</h5>
+                <Image
+                  src="/images/plakaty/EN-Harmonogram-2026.png"
+                  alt="34th WOŚP Finale Schedule"
+                  width={600}
+                  height={800}
+                  sizes="(max-width: 768px) 50vw, 400px"
+                  className="w-full h-auto rounded-lg shadow-md"
+                  priority={false}
+                />
+              </div>
+            </div>
+          </div>
+        ),
+      },
+      {
+        title: 'Dlaczego warto przyjść?',
+        body: (
+          <div className="space-y-3">
+            <p>
+              34. Finał WOŚP w Barcelonie to nie tylko zbiórka pieniędzy – to przede wszystkim <strong>wspólnota</strong>, <strong>integracja</strong> i <strong>radość</strong> z pomagania. To miejsce, gdzie spotykają się Polacy, Hiszpanie i międzynarodowa społeczność, aby razem grać dla zdrowych brzuszków polskich dzieci.
+            </p>
+            <p>
+              Podczas finału promujemy polską kulturę, język, twórców i tradycje – tworząc przestrzeń, gdzie każdy może poczuć się jak w domu. To dzień pełen pozytywnej energii, muzyki, smacznego jedzenia i niezapomnianych chwil!
+            </p>
+            <div className="bg-gradient-to-r from-red-50 to-orange-50 rounded-lg p-6 border border-red-100 mt-4">
+              <h4 className="font-bold text-xl mb-3 text-red-700">❤️ Cel 34. Finału WOŚP</h4>
+              <p className="text-gray-800">
+                Zbieramy środki na wsparcie diagnostyki i leczenia chorób przewodu pokarmowego u dzieci – aby najmłodsi pacjenci w Polsce mogli korzystać z najnowocześniejszego sprzętu medycznego (endoskopy pediatryczne, systemy obrazowania, sprzęt do badań czynnościowych) i lepszej opieki medycznej.
+              </p>
+            </div>
+          </div>
+        ),
+      },
+      {
+        title: 'Jak do nas dołączyć?',
+        body: (
+          <div className="space-y-4">
+            <p>
+              Przyjdź 25 stycznia 2026 roku do <strong>Espacio 88</strong> (Carrer de Pamplona 88, Sant Martí, Barcelona) między godziną <strong>11:00 a 20:00</strong>. Wstęp jest darmowy!
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <a
+                href="https://www.facebook.com/events/722563890373111"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-2 rounded-full px-5 py-2.5 bg-red-600 text-white hover:bg-red-700 shadow-sm transition-transform hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-200"
+              >
+                Wydarzenie na Facebook
+                <span className="transition-transform group-hover:translate-x-0.5">→</span>
+              </a>
+              <a
+                href="https://www.meetup.com/wośp-barcelona/events/312210334/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-2 rounded-full px-5 py-2.5 border border-red-200 text-red-700 hover:bg-red-50 shadow-sm transition-transform hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-200"
+              >
+                Wydarzenie na Meetup
+                <span className="transition-transform group-hover:translate-x-0.5">→</span>
+              </a>
+            </div>
+            <p className="text-sm text-gray-600 mt-4">
+              Śledź nasze social media, aby być na bieżąco z aktualnościami dotyczącymi finału!
+            </p>
+          </div>
+        ),
+      },
+      {
+        body: (
+          <div className="bg-gradient-to-r from-red-600 to-orange-600 text-white rounded-lg p-6 text-center">
+            <h3 className="text-2xl font-bold mb-2">Do zobaczenia 25 stycznia!</h3>
+            <p className="text-lg">Razem zagramy dla zdrowych brzuszków polskich dzieci! ❤️</p>
+          </div>
+        ),
+      },
+    ],
+  },
+  {
     slug: 'tak-wygladal-33-final-wosp-w-barcelonie',
     title: 'Tak wyglądał 33. Finał WOŚP w Barcelonie [Zdjęcia]',
     date: '2025-02-04',

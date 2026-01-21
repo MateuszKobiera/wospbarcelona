@@ -31,6 +31,366 @@ export type BlogPostI18n = {
 
 export const blogPostsI18n: BlogPostI18n[] = [
     {
+        slug: 'zapraszamy-na-34-final-wosp-w-barcelonie',
+        date: '2026-01-21',
+        coverImage: '/images/34-final/ZDJECIE_W_TLE (1).jpg',
+        tags: ['34FinałWOŚP', 'Barcelona', 'Espacio88', 'WOŚPBarcelona', 'Finał2026'],
+        social: {
+            facebook: 'https://www.facebook.com/events/722563890373111',
+            meetup: 'https://www.meetup.com/wośp-barcelona/events/312210334/',
+        },
+        content: {
+            pl: {
+                title: 'Zapraszamy na 34. Finał WOŚP w Barcelonie – 25 stycznia 2026!',
+                excerpt: 'Już 25 stycznia 2026 roku zapraszamy na 34. Finał WOŚP w Barcelonie! Dzień pełen warsztatów, koncertów, quizów, licytacji i dobrej zabawy. Gramy dla zdrowych brzuszków polskich dzieci!',
+                sections: [
+                    {
+                        body: (
+                            <div className="space-y-4">
+                                <div
+                                    className="relative rounded-lg overflow-hidden p-4 md:p-6 shadow-lg"
+                                    style={{
+                                        backgroundImage: "linear-gradient(135deg, rgba(220, 38, 38, 0.88) 0%, rgba(239, 68, 68, 0.85) 50%, rgba(251, 146, 60, 0.82) 100%), url('/images/34-final/ZDJECIE_W_TLE (1).jpg')",
+                                        backgroundSize: 'cover',
+                                        backgroundPosition: 'center',
+                                    }}
+                                >
+                                    <h3 className="text-xl font-bold mb-3" style={{ color: '#ffffff', textShadow: '2px 2px 8px rgba(0,0,0,0.9), 0 0 25px rgba(0,0,0,0.6)' }}>🎉 A MY, POLACY! – 34. Finał WOŚP w Barcelonie</h3>
+                                    <ul className="list-disc pl-6 space-y-2" style={{ color: '#ffffff', textShadow: '1px 1px 6px rgba(0,0,0,0.9), 0 0 15px rgba(0,0,0,0.5)' }}>
+                                        <li style={{ color: '#ffffff' }}><strong style={{ color: '#ffffff' }}>Data:</strong> 25 stycznia 2026 (sobota)</li>
+                                        <li style={{ color: '#ffffff' }}><strong style={{ color: '#ffffff' }}>Godziny:</strong> 11:00 - 20:00</li>
+                                        <li style={{ color: '#ffffff' }}><strong style={{ color: '#ffffff' }}>Miejsce:</strong> Espacio 88 — Carrer de Pamplona 88, Sant Martí, Barcelona</li>
+                                        <li style={{ color: '#ffffff' }}><strong style={{ color: '#ffffff' }}>Cel:</strong> Choroby przewodu pokarmowego u dzieci – "Zdrowe brzuszki naszych dzieci"</li>
+                                    </ul>
+                                </div>
+                                <p>Serdecznie zapraszamy na 34. Finał Wielkiej Orkiestry Świątecznej Pomocy w Barcelonie! To będzie wyjątkowy dzień pełen muzyki, warsztatów, licytacji, quizów i wspólnej zabawy. Razem zagramy dla zdrowych brzuszków polskich dzieci!</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Co nas czeka?',
+                        body: (
+                            <div className="space-y-4">
+                                <Image src="/images/plakaty/PL-Ogólny-2026.png" alt="Plakat 34. Finału WOŚP w Barcelonie" width={1200} height={1600} sizes="(max-width: 768px) 100vw, 768px" className="w-full h-auto rounded-lg shadow-md" priority={false} />
+
+                                <div className="prose max-w-none">
+                                    <h4 className="font-bold text-lg mb-3">🎨 Warsztaty dla dzieci</h4>
+                                    <p>W Kosmo HisPLano (Carrer d'Àlaba 52) od 11:00 do 16:00 czekają na najmłodszych kreatywne warsztaty! Dzieci będą mogły wziąć udział w zajęciach plastycznych, grach edukacyjnych i zabawach integracyjnych. To doskonała okazja, by połączyć naukę z rozrywką!</p>
+
+                                    <h4 className="font-bold text-lg mb-3 mt-4">🎭 Atrakcje w Espacio 88</h4>
+                                    <p>W głównej lokalizacji (Espacio 88) przygotowaliśmy mnóstwo atrakcji:</p>
+                                    <ul className="list-disc pl-6 space-y-2">
+                                        <li><strong>Licytacje charytatywne</strong> – wyjątkowe przedmioty i doświadczenia czekają na nowych właścicieli! Wszystkie zebrane środki przeznaczone zostaną na cel tegorocznego Finału.</li>
+                                        <li><strong>Quiz "Polacy vs Hiszpanie"</strong> – sprawdźcie swoją wiedzę w przyjaznej rywalizacji! Będzie zabawnie i edukacyjnie.</li>
+                                        <li><strong>Panel literacki</strong> – spotkanie z polskimi autorami mieszkającymi w Barcelonie, połączone z licytacją książek z autografami.</li>
+                                        <li><strong>WOŚP-oliada</strong> – tradycyjne już konkursy i zabawy, które rozgrzeją atmosferę!</li>
+                                        <li><strong>Bingo Muzyczne</strong> – zaśpiewajcie razem z nami! Dwa sety muzycznego bingo, gdzie zamiast liczb gramy hity!</li>
+                                        <li><strong>Tort urodzinowy</strong> – wspólnie świętujemy 34. urodziny WOŚP!</li>
+                                    </ul>
+
+                                    <h4 className="font-bold text-lg mb-3 mt-4">💫 Światełko do nieba</h4>
+                                    <p>O 20:00 zakończymy dzień tradycyjnym Światełkiem do Nieba – magicznym momentem, gdy wszyscy razem zapalimy światła, by pokazać, że dobro zawsze wygrywa!</p>
+
+                                    <h4 className="font-bold text-lg mb-3 mt-4">🍕 Jedzenie i napoje</h4>
+                                    <p>Przez cały dzień dostępne będą przekąski, napoje i ciepłe posiłki. Zadbamy o to, żeby nikt nie był głodny!</p>
+                                </div>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Harmonogram dnia',
+                        body: (
+                            <div className="space-y-4">
+                                <Image src="/images/plakaty/PL-Harmonogram-2026.png" alt="Harmonogram 34. Finału WOŚP w Barcelonie" width={1200} height={1600} sizes="(max-width: 768px) 100vw, 768px" className="w-full h-auto rounded-lg shadow-md" priority={false} />
+                                <div className="bg-white rounded-lg p-4 border border-gray-200">
+                                    <h4 className="font-bold text-lg mb-3">📋 Program wydarzenia:</h4>
+                                    <ul className="space-y-2 text-sm">
+                                        <li><strong>11:00-16:00</strong> | Warsztaty dla dzieci (Kosmo HisPLano - Carrer d'Àlaba 52)</li>
+                                        <li><strong>12:00</strong> | Otwarcie sali (Espacio 88)</li>
+                                        <li><strong>12:30</strong> | Uroczyste rozpoczęcie</li>
+                                        <li><strong>13:00</strong> | Licytacje</li>
+                                        <li><strong>13:30</strong> | Quiz - Polacy vs Hiszpanie</li>
+                                        <li><strong>14:00</strong> | Panel literacki z licytacją</li>
+                                        <li><strong>15:00</strong> | WOŚP-oliada</li>
+                                        <li><strong>15:45</strong> | Tort</li>
+                                        <li><strong>16:00</strong> | Bingo Muzyczne</li>
+                                        <li><strong>16:30</strong> | Licytacje</li>
+                                        <li><strong>17:00</strong> | Quiz - Polacy vs Hiszpanie</li>
+                                        <li><strong>18:00</strong> | Bingo Muzyczne</li>
+                                        <li><strong>19:00</strong> | Licytacje</li>
+                                        <li><strong>19:30</strong> | Uroczyste zakończenie</li>
+                                        <li><strong>20:00</strong> | Światełko do nieba</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        ),
+                    },
+                ],
+            },
+            en: {
+                title: 'Join us for the 34th WOŚP Finale in Barcelona – January 25, 2026!',
+                excerpt: 'Join us on January 25, 2026 for the 34th WOŚP Finale in Barcelona! A day full of workshops, concerts, quizzes, auctions and fun. We play for healthy tummies of Polish children!',
+                sections: [
+                    {
+                        body: (
+                            <div className="space-y-4">
+                                <div
+                                    className="relative rounded-lg overflow-hidden p-4 md:p-6 shadow-lg"
+                                    style={{
+                                        backgroundImage: "linear-gradient(135deg, rgba(220, 38, 38, 0.88) 0%, rgba(239, 68, 68, 0.85) 50%, rgba(251, 146, 60, 0.82) 100%), url('/images/34-final/ZDJECIE_W_TLE (1).jpg')",
+                                        backgroundSize: 'cover',
+                                        backgroundPosition: 'center',
+                                    }}
+                                >
+                                    <h3 className="text-xl font-bold mb-3" style={{ color: '#ffffff', textShadow: '2px 2px 8px rgba(0,0,0,0.9), 0 0 25px rgba(0,0,0,0.6)' }}>🎉 AND WE, POLES! – 34th WOŚP Finale in Barcelona</h3>
+                                    <ul className="list-disc pl-6 space-y-2" style={{ color: '#ffffff', textShadow: '1px 1px 6px rgba(0,0,0,0.9), 0 0 15px rgba(0,0,0,0.5)' }}>
+                                        <li style={{ color: '#ffffff' }}><strong style={{ color: '#ffffff' }}>Date:</strong> January 25, 2026 (Saturday)</li>
+                                        <li style={{ color: '#ffffff' }}><strong style={{ color: '#ffffff' }}>Time:</strong> 11:00 - 20:00</li>
+                                        <li style={{ color: '#ffffff' }}><strong style={{ color: '#ffffff' }}>Location:</strong> Espacio 88 — Carrer de Pamplona 88, Sant Martí, Barcelona</li>
+                                        <li style={{ color: '#ffffff' }}><strong style={{ color: '#ffffff' }}>Goal:</strong> Digestive tract diseases in children – "Healthy tummies for our children"</li>
+                                    </ul>
+                                </div>
+                                <p>We cordially invite you to the 34th Finale of the Great Orchestra of Christmas Charity in Barcelona! It will be a special day full of music, workshops, auctions, quizzes and fun together. Together we will play for healthy tummies of Polish children!</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'What awaits us?',
+                        body: (
+                            <div className="space-y-4">
+                                <Image src="/images/plakaty/EN-Ogólny-2026.png" alt="Poster of the 34th WOŚP Finale in Barcelona" width={1200} height={1600} sizes="(max-width: 768px) 100vw, 768px" className="w-full h-auto rounded-lg shadow-md" priority={false} />
+
+                                <div className="prose max-w-none">
+                                    <h4 className="font-bold text-lg mb-3">🎨 Children's Workshops</h4>
+                                    <p>At Kosmo HisPLano (Carrer d'Àlaba 52) from 11:00 to 16:00, creative workshops await the youngest! Children will be able to participate in art activities, educational games and integration activities. It's a perfect opportunity to combine learning with fun!</p>
+
+                                    <h4 className="font-bold text-lg mb-3 mt-4">🎭 Attractions at Espacio 88</h4>
+                                    <p>At the main location (Espacio 88) we have prepared plenty of attractions:</p>
+                                    <ul className="list-disc pl-6 space-y-2">
+                                        <li><strong>Charity auctions</strong> – unique items and experiences are waiting for new owners! All collected funds will be allocated to this year's Finale goal.</li>
+                                        <li><strong>Quiz "Poles vs Spaniards"</strong> – test your knowledge in a friendly competition! It will be fun and educational.</li>
+                                        <li><strong>Literary panel</strong> – meeting with Polish authors living in Barcelona, combined with an auction of autographed books.</li>
+                                        <li><strong>WOŚP-oliada</strong> – traditional competitions and games that will heat up the atmosphere!</li>
+                                        <li><strong>Music Bingo</strong> – sing along with us! Two sets of music bingo, where instead of numbers we play hits!</li>
+                                        <li><strong>Birthday cake</strong> – together we celebrate WOŚP's 34th birthday!</li>
+                                    </ul>
+
+                                    <h4 className="font-bold text-lg mb-3 mt-4">💫 Light to the Sky</h4>
+                                    <p>At 20:00 we will end the day with the traditional Light to the Sky – a magical moment when we all light up together to show that good always wins!</p>
+
+                                    <h4 className="font-bold text-lg mb-3 mt-4">🍕 Food and Drinks</h4>
+                                    <p>Throughout the day, snacks, drinks and hot meals will be available. We'll make sure no one goes hungry!</p>
+                                </div>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Schedule',
+                        body: (
+                            <div className="space-y-4">
+                                <Image src="/images/plakaty/EN-Harmonogram-2026.png" alt="Schedule of the 34th WOŚP Finale in Barcelona" width={1200} height={1600} sizes="(max-width: 768px) 100vw, 768px" className="w-full h-auto rounded-lg shadow-md" priority={false} />
+                                <div className="bg-white rounded-lg p-4 border border-gray-200">
+                                    <h4 className="font-bold text-lg mb-3">📋 Event program:</h4>
+                                    <ul className="space-y-2 text-sm">
+                                        <li><strong>11:00-16:00</strong> | Children's workshops (Kosmo HisPLano - Carrer d'Àlaba 52)</li>
+                                        <li><strong>12:00</strong> | Hall opening (Espacio 88)</li>
+                                        <li><strong>12:30</strong> | Grand opening</li>
+                                        <li><strong>13:00</strong> | Auctions</li>
+                                        <li><strong>13:30</strong> | Quiz - Poles vs Spaniards</li>
+                                        <li><strong>14:00</strong> | Literary panel with auction</li>
+                                        <li><strong>15:00</strong> | WOŚP-oliada</li>
+                                        <li><strong>15:45</strong> | Cake</li>
+                                        <li><strong>16:00</strong> | Music Bingo</li>
+                                        <li><strong>16:30</strong> | Auctions</li>
+                                        <li><strong>17:00</strong> | Quiz - Poles vs Spaniards</li>
+                                        <li><strong>18:00</strong> | Music Bingo</li>
+                                        <li><strong>19:00</strong> | Auctions</li>
+                                        <li><strong>19:30</strong> | Grand closing</li>
+                                        <li><strong>20:00</strong> | Light to the Sky</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        ),
+                    },
+                ],
+            },
+            es: {
+                title: '¡Te invitamos al 34º Final de WOŚP en Barcelona – 25 de enero de 2026!',
+                excerpt: '¡El 25 de enero de 2026 te invitamos al 34º Final de WOŚP en Barcelona! Un día lleno de talleres, conciertos, quizzes, subastas y diversión. ¡Jugamos por las barrigas sanas de los niños polacos!',
+                sections: [
+                    {
+                        body: (
+                            <div className="space-y-4">
+                                <div
+                                    className="relative rounded-lg overflow-hidden p-4 md:p-6 shadow-lg"
+                                    style={{
+                                        backgroundImage: "linear-gradient(135deg, rgba(220, 38, 38, 0.88) 0%, rgba(239, 68, 68, 0.85) 50%, rgba(251, 146, 60, 0.82) 100%), url('/images/34-final/ZDJECIE_W_TLE (1).jpg')",
+                                        backgroundSize: 'cover',
+                                        backgroundPosition: 'center',
+                                    }}
+                                >
+                                    <h3 className="text-xl font-bold mb-3" style={{ color: '#ffffff', textShadow: '2px 2px 8px rgba(0,0,0,0.9), 0 0 25px rgba(0,0,0,0.6)' }}>🎉 ¡Y NOSOTROS, POLACOS! – 34º Final de WOŚP en Barcelona</h3>
+                                    <ul className="list-disc pl-6 space-y-2" style={{ color: '#ffffff', textShadow: '1px 1px 6px rgba(0,0,0,0.9), 0 0 15px rgba(0,0,0,0.5)' }}>
+                                        <li style={{ color: '#ffffff' }}><strong style={{ color: '#ffffff' }}>Fecha:</strong> 25 de enero de 2026 (sábado)</li>
+                                        <li style={{ color: '#ffffff' }}><strong style={{ color: '#ffffff' }}>Horario:</strong> 11:00 - 20:00</li>
+                                        <li style={{ color: '#ffffff' }}><strong style={{ color: '#ffffff' }}>Lugar:</strong> Espacio 88 — Carrer de Pamplona 88, Sant Martí, Barcelona</li>
+                                        <li style={{ color: '#ffffff' }}><strong style={{ color: '#ffffff' }}>Objetivo:</strong> Enfermedades del tracto digestivo en niños – "Barrigas sanas para nuestros niños"</li>
+                                    </ul>
+                                </div>
+                                <p>¡Te invitamos cordialmente al 34º Final de la Gran Orquesta de la Caridad Navideña en Barcelona! Será un día especial lleno de música, talleres, subastas, quizzes y diversión juntos. ¡Juntos jugaremos por las barrigas sanas de los niños polacos!</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: '¿Qué nos espera?',
+                        body: (
+                            <div className="space-y-4">
+                                <Image src="/images/plakaty/ES-Ogólny-2026.png" alt="Cartel del 34º Final de WOŚP en Barcelona" width={1200} height={1600} sizes="(max-width: 768px) 100vw, 768px" className="w-full h-auto rounded-lg shadow-md" priority={false} />
+
+                                <div className="prose max-w-none">
+                                    <h4 className="font-bold text-lg mb-3">🎨 Talleres para niños</h4>
+                                    <p>En Kosmo HisPLano (Carrer d'Àlaba 52) de 11:00 a 16:00, ¡talleres creativos esperan a los más pequeños! Los niños podrán participar en actividades artísticas, juegos educativos y actividades de integración. ¡Es una oportunidad perfecta para combinar el aprendizaje con la diversión!</p>
+
+                                    <h4 className="font-bold text-lg mb-3 mt-4">🎭 Atracciones en Espacio 88</h4>
+                                    <p>En la ubicación principal (Espacio 88) hemos preparado muchas atracciones:</p>
+                                    <ul className="list-disc pl-6 space-y-2">
+                                        <li><strong>Subastas benéficas</strong> – ¡artículos y experiencias únicas esperan nuevos dueños! Todos los fondos recaudados se destinarán al objetivo del Final de este año.</li>
+                                        <li><strong>Quiz "Polacos vs Españoles"</strong> – ¡pon a prueba tus conocimientos en una competencia amistosa! Será divertido y educativo.</li>
+                                        <li><strong>Panel literario</strong> – encuentro con autores polacos que viven en Barcelona, combinado con una subasta de libros autografiados.</li>
+                                        <li><strong>WOŚP-oliada</strong> – ¡competiciones y juegos tradicionales que calentarán el ambiente!</li>
+                                        <li><strong>Bingo Musical</strong> – ¡canta con nosotros! Dos sets de bingo musical, donde en lugar de números jugamos con éxitos musicales.</li>
+                                        <li><strong>Tarta de cumpleaños</strong> – ¡juntos celebramos el 34º cumpleaños de WOŚP!</li>
+                                    </ul>
+
+                                    <h4 className="font-bold text-lg mb-3 mt-4">💫 Luz al Cielo</h4>
+                                    <p>A las 20:00 terminaremos el día con la tradicional Luz al Cielo – un momento mágico cuando todos encendemos las luces juntos para mostrar que el bien siempre gana.</p>
+
+                                    <h4 className="font-bold text-lg mb-3 mt-4">🍕 Comida y bebidas</h4>
+                                    <p>Durante todo el día estarán disponibles aperitivos, bebidas y comidas calientes. ¡Nos aseguraremos de que nadie pase hambre!</p>
+                                </div>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Programa',
+                        body: (
+                            <div className="space-y-4">
+                                <Image src="/images/plakaty/ES-Harmonogram-2026.png" alt="Programa del 34º Final de WOŚP en Barcelona" width={1200} height={1600} sizes="(max-width: 768px) 100vw, 768px" className="w-full h-auto rounded-lg shadow-md" priority={false} />
+                                <div className="bg-white rounded-lg p-4 border border-gray-200">
+                                    <h4 className="font-bold text-lg mb-3">📋 Programa del evento:</h4>
+                                    <ul className="space-y-2 text-sm">
+                                        <li><strong>11:00-16:00</strong> | Talleres para niños (Kosmo HisPLano - Carrer d'Àlaba 52)</li>
+                                        <li><strong>12:00</strong> | Apertura de sala (Espacio 88)</li>
+                                        <li><strong>12:30</strong> | Inauguración solemne</li>
+                                        <li><strong>13:00</strong> | Subastas</li>
+                                        <li><strong>13:30</strong> | Quiz - Polacos vs Españoles</li>
+                                        <li><strong>14:00</strong> | Panel literario con subasta</li>
+                                        <li><strong>15:00</strong> | WOŚP-oliada</li>
+                                        <li><strong>15:45</strong> | Tarta</li>
+                                        <li><strong>16:00</strong> | Bingo Musical</li>
+                                        <li><strong>16:30</strong> | Subastas</li>
+                                        <li><strong>17:00</strong> | Quiz - Polacos vs Españoles</li>
+                                        <li><strong>18:00</strong> | Bingo Musical</li>
+                                        <li><strong>19:00</strong> | Subastas</li>
+                                        <li><strong>19:30</strong> | Cierre solemne</li>
+                                        <li><strong>20:00</strong> | Luz al Cielo</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        ),
+                    },
+                ],
+            },
+            ca: {
+                title: 'Us convidem al 34è Final de WOŚP a Barcelona – 25 de gener de 2026!',
+                excerpt: 'El 25 de gener de 2026 us convidem al 34è Final de WOŚP a Barcelona! Un dia ple de tallers, concerts, quizzes, subhastes i diversió. Juguem per les panxes sanes dels nens polonesos!',
+                sections: [
+                    {
+                        body: (
+                            <div className="space-y-4">
+                                <div
+                                    className="relative rounded-lg overflow-hidden p-4 md:p-6 shadow-lg"
+                                    style={{
+                                        backgroundImage: "linear-gradient(135deg, rgba(220, 38, 38, 0.88) 0%, rgba(239, 68, 68, 0.85) 50%, rgba(251, 146, 60, 0.82) 100%), url('/images/34-final/ZDJECIE_W_TLE (1).jpg')",
+                                        backgroundSize: 'cover',
+                                        backgroundPosition: 'center',
+                                    }}
+                                >
+                                    <h3 className="text-xl font-bold mb-3" style={{ color: '#ffffff', textShadow: '2px 2px 8px rgba(0,0,0,0.9), 0 0 25px rgba(0,0,0,0.6)' }}>🎉 I NOSALTRES, POLONESOS! – 34è Final de WOŚP a Barcelona</h3>
+                                    <ul className="list-disc pl-6 space-y-2" style={{ color: '#ffffff', textShadow: '1px 1px 6px rgba(0,0,0,0.9), 0 0 15px rgba(0,0,0,0.5)' }}>
+                                        <li style={{ color: '#ffffff' }}><strong style={{ color: '#ffffff' }}>Data:</strong> 25 de gener de 2026 (dissabte)</li>
+                                        <li style={{ color: '#ffffff' }}><strong style={{ color: '#ffffff' }}>Horari:</strong> 11:00 - 20:00</li>
+                                        <li style={{ color: '#ffffff' }}><strong style={{ color: '#ffffff' }}>Lloc:</strong> Espacio 88 — Carrer de Pamplona 88, Sant Martí, Barcelona</li>
+                                        <li style={{ color: '#ffffff' }}><strong style={{ color: '#ffffff' }}>Objectiu:</strong> Malalties del tracte digestiu en nens – "Panxes sanes per als nostres nens"</li>
+                                    </ul>
+                                </div>
+                                <p>Us convidem cordialment al 34è Final de la Gran Orquestra de la Caritat Nadalenca a Barcelona! Serà un dia especial ple de música, tallers, subhastes, quizzes i diversió junts. Junts jugarem per les panxes sanes dels nens polonesos!</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Què ens espera?',
+                        body: (
+                            <div className="space-y-4">
+                                <Image src="/images/plakaty/CAT-Ogólny-2026.png" alt="Cartell del 34è Final de WOŚP a Barcelona" width={1200} height={1600} sizes="(max-width: 768px) 100vw, 768px" className="w-full h-auto rounded-lg shadow-md" priority={false} />
+
+                                <div className="prose max-w-none">
+                                    <h4 className="font-bold text-lg mb-3">🎨 Tallers per a nens</h4>
+                                    <p>A Kosmo HisPLano (Carrer d'Àlaba 52) d'11:00 a 16:00, tallers creatius esperen els més petits! Els nens podran participar en activitats artístiques, jocs educatius i activitats d'integració. És una oportunitat perfecta per combinar l'aprenentatge amb la diversió!</p>
+
+                                    <h4 className="font-bold text-lg mb-3 mt-4">🎭 Atraccions a Espacio 88</h4>
+                                    <p>A la ubicació principal (Espacio 88) hem preparat moltes atraccions:</p>
+                                    <ul className="list-disc pl-6 space-y-2">
+                                        <li><strong>Subhastes benèfiques</strong> – articles i experiències úniques esperen nous propietaris! Tots els fons recaptats es destinaran a l'objectiu del Final d'aquest any.</li>
+                                        <li><strong>Quiz "Polonesos vs Espanyols"</strong> – posa a prova els teus coneixements en una competència amistosa! Serà divertit i educatiu.</li>
+                                        <li><strong>Panell literari</strong> – trobada amb autors polonesos que viuen a Barcelona, combinada amb una subhasta de llibres autografiats.</li>
+                                        <li><strong>WOŚP-oliada</strong> – competicions i jocs tradicionals que escalfaran l'ambient!</li>
+                                        <li><strong>Bingo Musical</strong> – canta amb nosaltres! Dos sets de bingo musical, on en lloc de números juguem amb èxits musicals.</li>
+                                        <li><strong>Pastís d'aniversari</strong> – junts celebrem el 34è aniversari de WOŚP!</li>
+                                    </ul>
+
+                                    <h4 className="font-bold text-lg mb-3 mt-4">💫 Llum al Cel</h4>
+                                    <p>A les 20:00 acabarem el dia amb el tradicional Llum al Cel – un moment màgic quan tots encendrem les llums junts per mostrar que el bé sempre guanya.</p>
+
+                                    <h4 className="font-bold text-lg mb-3 mt-4">🍕 Menjar i begudes</h4>
+                                    <p>Durant tot el dia estaran disponibles aperitius, begudes i menjars calents. Ens assegurarem que ningú passi gana!</p>
+                                </div>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Programa',
+                        body: (
+                            <div className="space-y-4">
+                                <Image src="/images/plakaty/CAT-Harmonogram-2026.png" alt="Programa del 34è Final de WOŚP a Barcelona" width={1200} height={1600} sizes="(max-width: 768px) 100vw, 768px" className="w-full h-auto rounded-lg shadow-md" priority={false} />
+                                <div className="bg-white rounded-lg p-4 border border-gray-200">
+                                    <h4 className="font-bold text-lg mb-3">📋 Programa de l'esdeveniment:</h4>
+                                    <ul className="space-y-2 text-sm">
+                                        <li><strong>11:00-16:00</strong> | Tallers per a nens (Kosmo HisPLano - Carrer d'Àlaba 52)</li>
+                                        <li><strong>12:00</strong> | Obertura de sala (Espacio 88)</li>
+                                        <li><strong>12:30</strong> | Inauguració solemne</li>
+                                        <li><strong>13:00</strong> | Subhastes</li>
+                                        <li><strong>13:30</strong> | Quiz - Polonesos vs Espanyols</li>
+                                        <li><strong>14:00</strong> | Panell literari amb subhasta</li>
+                                        <li><strong>15:00</strong> | WOŚP-oliada</li>
+                                        <li><strong>15:45</strong> | Pastís</li>
+                                        <li><strong>16:00</strong> | Bingo Musical</li>
+                                        <li><strong>16:30</strong> | Subhastes</li>
+                                        <li><strong>17:00</strong> | Quiz - Polonesos vs Espanyols</li>
+                                        <li><strong>18:00</strong> | Bingo Musical</li>
+                                        <li><strong>19:00</strong> | Subhastes</li>
+                                        <li><strong>19:30</strong> | Tancament solemne</li>
+                                        <li><strong>20:00</strong> | Llum al Cel</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        ),
+                    },
+                ],
+            },
+        },
+    },
+    {
         slug: 'tak-wygladal-33-final-wosp-w-barcelonie',
         date: '2025-02-04',
         coverImage: '/images/blog/33-final/33-Final.png',
