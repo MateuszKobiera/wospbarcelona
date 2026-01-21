@@ -428,7 +428,9 @@
       "warning": "Uwaga",
       "contact": "Kontakt",
       "contactUs": "Skontaktuj się z nami",
-      "addToCalendar": "Dodaj do Google Calendar"
+      "addToCalendar": "Dodaj do Google Calendar",
+      "whatAwaits": "Co nas czeka?",
+      "poster": "Plakat"
     }
   },
   "blog": {

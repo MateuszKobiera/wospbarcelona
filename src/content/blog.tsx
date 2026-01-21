@@ -108,7 +108,7 @@ export const blogPosts: BlogPost[] = [
         body: (
           <div className="space-y-4">
             <Image
-              src="/images/plakaty/PL-Ogólny-2026.png"
+              src="/images/plakaty/PL-Ogolny-2026.png"
               alt="Plakat 34. Finału WOŚP w Barcelonie"
               width={1200}
               height={1600}
@@ -171,7 +171,7 @@ export const blogPosts: BlogPost[] = [
               <div>
                 <h5 className="font-semibold mb-2">🇬🇧 English</h5>
                 <Image
-                  src="/images/plakaty/EN-Ogólny-2026.png"
+                  src="/images/plakaty/EN-Ogolny-2026.png"
                   alt="34th WOŚP Finale in Barcelona - English poster"
                   width={600}
                   height={800}
@@ -183,7 +183,7 @@ export const blogPosts: BlogPost[] = [
               <div>
                 <h5 className="font-semibold mb-2">🇪🇸 Español</h5>
                 <Image
-                  src="/images/plakaty/ES-Ogólny-2026.png"
+                  src="/images/plakaty/ES-Ogolny-2026.png"
                   alt="34º Final WOŚP en Barcelona - Cartel en español"
                   width={600}
                   height={800}
@@ -195,7 +195,7 @@ export const blogPosts: BlogPost[] = [
               <div>
                 <h5 className="font-semibold mb-2">🏴 Català</h5>
                 <Image
-                  src="/images/plakaty/CAT-Ogólny-2026.png"
+                  src="/images/plakaty/CAT-Ogolny-2026.png"
                   alt="34è Final WOŚP a Barcelona - Cartell en català"
                   width={600}
                   height={800}

@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { HeartHandshakeIcon, StoreIcon, UsersIcon, FlagIcon, Heart, Gavel, Wallet, ArrowRight, Sparkles } from 'lucide-react';
 import { siFacebook, siInstagram, siYoutube } from 'simple-icons/icons';
 import { SponsorsMarquee } from '@/components/SponsorsMarquee';
-import { blogPosts } from '@/content/blog';
+import { getAllPostsForLocale } from '@/content/blog-i18n';
 import { ContactForm } from '@/components/ContactForm';
 import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
@@ -25,9 +25,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-export default function HomePage() {
-  const t = useTranslations('home');
-  const locale = useLocale();
+export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'home' });
+  const blogPosts = getAllPostsForLocale(locale);
   return (
     <main>
       <Hero />

@@ -421,7 +421,9 @@
       "contact": "Contact",
       "contactUs": "Contact us",
       "addToCalendar": "Add to Google Calendar",
-      "routeVideo": "Route video"
+      "routeVideo": "Route video",
+      "whatAwaits": "What awaits us?",
+      "poster": "Poster"
     }
   },
   "blog": {

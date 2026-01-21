@@ -626,6 +626,27 @@ export default function EventPage() {
               </Card>
             )}
 
+            {/* Poster for 34th Finale */}
+            {event.id === 1 && (
+              <Card className="bg-white">
+                <CardContent className="p-6">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4">{t('detail.whatAwaits')}</h2>
+                  <div className="relative w-full rounded-lg overflow-hidden">
+                    <img
+                      src={
+                        locale === 'en' ? '/images/plakaty/EN-Ogolny-2026.png' :
+                          locale === 'es' ? '/images/plakaty/ES-Ogolny-2026.png' :
+                            locale === 'ca' ? '/images/plakaty/CAT-Ogolny-2026.png' :
+                              '/images/plakaty/PL-Ogolny-2026.png'
+                      }
+                      alt={`${eventTitle} - ${t('detail.poster')}`}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                </CardContent>
+              </Card>
+            )}
+
             {/* Gallery */}
             {event.gallery && event.gallery.length > 0 && (
               <Card className="bg-white">

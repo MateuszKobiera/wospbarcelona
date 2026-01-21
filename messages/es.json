@@ -413,7 +413,9 @@
       "warning": "Atención",
       "contact": "Contacto",
       "contactUs": "Contáctanos",
-      "addToCalendar": "Añadir a Google Calendar"
+      "addToCalendar": "Añadir a Google Calendar",
+      "whatAwaits": "¿Qué nos espera?",
+      "poster": "Cartel"
     }
   },
   "blog": {

@@ -69,7 +69,7 @@ export const blogPostsI18n: BlogPostI18n[] = [
                         title: 'Co nas czeka?',
                         body: (
                             <div className="space-y-4">
-                                <Image src="/images/plakaty/PL-Ogólny-2026.png" alt="Plakat 34. Finału WOŚP w Barcelonie" width={1200} height={1600} sizes="(max-width: 768px) 100vw, 768px" className="w-full h-auto rounded-lg shadow-md" priority={false} />
+                                <Image src="/images/plakaty/PL-Ogolny-2026.png" alt="Plakat 34. Finału WOŚP w Barcelonie" width={1200} height={1600} sizes="(max-width: 768px) 100vw, 768px" className="w-full h-auto rounded-lg shadow-md" priority={false} />
 
                                 <div className="prose max-w-none">
                                     <h4 className="font-bold text-lg mb-3">🎨 Warsztaty dla dzieci</h4>
@@ -156,7 +156,7 @@ export const blogPostsI18n: BlogPostI18n[] = [
                         title: 'What awaits us?',
                         body: (
                             <div className="space-y-4">
-                                <Image src="/images/plakaty/EN-Ogólny-2026.png" alt="Poster of the 34th WOŚP Finale in Barcelona" width={1200} height={1600} sizes="(max-width: 768px) 100vw, 768px" className="w-full h-auto rounded-lg shadow-md" priority={false} />
+                                <Image src="/images/plakaty/EN-Ogolny-2026.png" alt="Poster of the 34th WOŚP Finale in Barcelona" width={1200} height={1600} sizes="(max-width: 768px) 100vw, 768px" className="w-full h-auto rounded-lg shadow-md" priority={false} />
 
                                 <div className="prose max-w-none">
                                     <h4 className="font-bold text-lg mb-3">🎨 Children's Workshops</h4>
@@ -243,7 +243,7 @@ export const blogPostsI18n: BlogPostI18n[] = [
                         title: '¿Qué nos espera?',
                         body: (
                             <div className="space-y-4">
-                                <Image src="/images/plakaty/ES-Ogólny-2026.png" alt="Cartel del 34º Final de WOŚP en Barcelona" width={1200} height={1600} sizes="(max-width: 768px) 100vw, 768px" className="w-full h-auto rounded-lg shadow-md" priority={false} />
+                                <Image src="/images/plakaty/ES-Ogolny-2026.png" alt="Cartel del 34º Final de WOŚP en Barcelona" width={1200} height={1600} sizes="(max-width: 768px) 100vw, 768px" className="w-full h-auto rounded-lg shadow-md" priority={false} />
 
                                 <div className="prose max-w-none">
                                     <h4 className="font-bold text-lg mb-3">🎨 Talleres para niños</h4>
@@ -330,7 +330,7 @@ export const blogPostsI18n: BlogPostI18n[] = [
                         title: 'Què ens espera?',
                         body: (
                             <div className="space-y-4">
-                                <Image src="/images/plakaty/CAT-Ogólny-2026.png" alt="Cartell del 34è Final de WOŚP a Barcelona" width={1200} height={1600} sizes="(max-width: 768px) 100vw, 768px" className="w-full h-auto rounded-lg shadow-md" priority={false} />
+                                <Image src="/images/plakaty/CAT-Ogolny-2026.png" alt="Cartell del 34è Final de WOŚP a Barcelona" width={1200} height={1600} sizes="(max-width: 768px) 100vw, 768px" className="w-full h-auto rounded-lg shadow-md" priority={false} />
 
                                 <div className="prose max-w-none">
                                     <h4 className="font-bold text-lg mb-3">🎨 Tallers per a nens</h4>
@@ -1129,6 +1129,7 @@ export function getAllPostsForLocale(locale: string) {
             coverImage: post.coverImage,
             tags: post.tags,
             social: post.social,
+            sourceUrl: post.sourceUrl,
             title: content.title,
             excerpt: content.excerpt,
         };
