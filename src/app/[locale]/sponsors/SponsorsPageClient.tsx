@@ -92,6 +92,22 @@ const categories: Category[] = [
                 ],
                 logoUrl: '/images/sponsors/tomex_2.png'
             },
+            {
+                key: 'crisAuto24',
+                links: [
+                    { label: 'Facebook', url: 'https://www.facebook.com/crisauto.13809?mibextid=wwXIfr&rdid=QpYIIQIDEx3MieEq&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AaEKVoHuN%2F%3Fmibextid%3DwwXIfr' },
+                    { label: 'Telefon', url: 'tel:+34675657232' },
+                ],
+                logoUrl: '/images/sponsors/crisauto24.jpeg'
+            },
+            {
+                key: 'crisAuto',
+                links: [
+                    { label: 'Facebook', url: 'https://www.facebook.com/crisauto.13809?mibextid=wwXIfr&rdid=QpYIIQIDEx3MieEq&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AaEKVoHuN%2F%3Fmibextid%3DwwXIfr' },
+                    { label: 'WhatsApp', url: 'https://wa.me/34675657232' },
+                ],
+                logoUrl: '/images/sponsors/CrisAuto.jpeg'
+            },
         ],
     },
     {

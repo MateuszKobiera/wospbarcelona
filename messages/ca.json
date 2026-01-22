@@ -545,7 +545,15 @@
       },
       "tomexCarBus": {
         "name": "Tomex Car-Bus",
-        "description": "Especialista en mecànica, electricitat, aire condicionat i suspensions a Catalunya. Canvi integral d'olis en caixa automàtica, reparació o canvi ràpid i professional de motors. Taller de mecànica de vehicles a Santa Eugènia de Berga que ofereix una amplia gamma de serveis: mecànica general, electricitat, servei d'aire condicionat, canvi d'olis, filtres, fluids, així com reparacions de suspensió, frens i amortidors. S'especialitza en el servei de cotxes particulars, furgonetes, camions fins a 3,5 tones, i també es dedica a la compra i venda d'autobusos i cotxes."
+        "description": "Especialista en mecànica, electricitat, climatització i suspensions a Catalunya. Canvi complet d'olis en caixes de canvis automàtiques, reparació o substitució ràpida i professional de motors. Taller de mecànica de vehicles a Santa Eugènia de Berga que ofereix una àmplia gamma de serveis: mecànica general, electricitat, servei de climatització, canvi d'olis, filtres, líquids, així com reparacions de suspensions, frens i amortidors. S'especialitza en el servei de cotxes de passatgers, furgonetes, camionetes i camions de fins a 3,5 tones, i també es dedica a la compra i venda d'autobusos i cotxes."
+      },
+      "crisAuto24": {
+        "name": "CrisAuto 24h – Assistència en carretera i transport",
+        "description": "L'empresa ofereix assistència en carretera les 24 hores i transport de vehicles. Proporcionen un servei ràpid i professional, equipats amb grues especialitzades per al transport de cotxes. Serveis principals: assistència en carretera, remolc, transport d'automòbils."
+      },
+      "crisAuto": {
+        "name": "CrisAuto – Compra de cotxes i desballestament",
+        "description": "Aquesta part del negoci se centra en la compra de cotxes en qualsevol estat tècnic i el seu desballestament. L'empresa ofereix pagament immediat pels vehicles. Serveis principals: compra de cotxes danyats, accidentats i inundats; tràmits relacionats amb el desballestament (baixa en desguàs)."
       },
       "wawelRestobar": {
         "name": "Wawel RestoBar",

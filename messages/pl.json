@@ -552,6 +552,14 @@
         "name": "Tomex Car-Bus",
         "description": "Specjalista od mechaniki, elektryki, klimatyzacji i zawieszeń w Katalonii. Kompleksowa wymiana olejów w automatycznej skrzyni biegów, szybka i fachowa naprawa lub wymiana silników. Warsztat mechaniki pojazdowej w Santa Eugènia de Berga oferuje szeroki zakres usług: mechanikę ogólną, elektrykę, serwis klimatyzacji, wymianę olejów, filtrów, płynów, a także naprawy zawieszeń, hamulców i amortyzatorów. Specjalizuje się w obsłudze samochodów osobowych, dostawczych, furgonetek i ciężarówek do 3,5 tony, a także zajmuje się kupnem i sprzedażą autobusów oraz samochodów."
       },
+      "crisAuto24": {
+        "name": "CrisAuto 24h – Pomoc drogowa i transport",
+        "description": "Firma oferuje całodobową (24h) pomoc drogową oraz transport pojazdów. Zapewniają szybką i profesjonalną obsługę, dysponując specjalistycznymi lawetami do przewozu aut. Główne usługi: pomoc drogowa, holowanie, transport samochodów."
+      },
+      "crisAuto": {
+        "name": "CrisAuto – Skup aut i kasacja",
+        "description": "Ta część działalności skupia się na odkupowaniu samochodów w każdym stanie technicznym oraz ich złomowaniu. Firma oferuje natychmiastową płatność za pojazdy. Główne usługi: skup aut uszkodzonych, powypadkowych i zalanych; formalności związane z kasacją (baja en desguace)."
+      },
       "wawelRestobar": {
         "name": "Wawel RestoBar",
         "description": "Polska restauracja w Barcelonie. Mały kawałek Polski w sercu Barcelony. W tym miejscu zamówisz doskonale przyrządzone pierogi, zupę i kiełbaski. Kucharze przygotowują tutaj dobre naleśniki, szarlotkę i inne polskie specjały. Zgodnie z opiniami gości, piwo smakuje w tym miejscu wyśmienicie."

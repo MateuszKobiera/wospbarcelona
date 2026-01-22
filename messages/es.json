@@ -535,7 +535,15 @@
       },
       "tomexCarBus": {
         "name": "Tomex Car-Bus",
-        "description": "Especialista en mecánica, electricidad, aire acondicionado y suspensiones en Cataluña. Cambio integral de aceites en caja automática, reparación o cambio rápido y profesional de motores. Taller de mecánica de vehículos en Santa Eugènia de Berga que ofrece una amplia gama de servicios: mecánica general, electricidad, servicio de aire acondicionado, cambio de aceites, filtros, fluidos, así como reparaciones de suspensión, frenos y amortiguadores. Se especializa en el servicio de coches particulares, furgonetas, camiones hasta 3,5 toneladas, y también se dedica a la compra y venta de autobuses y coches."
+        "description": "Especialista en mecánica, electricidad, climatización y suspensiones en Cataluña. Cambio completo de aceites en cajas de cambios automáticas, reparación o sustitución rápida y profesional de motores. Taller de mecánica de vehículos en Santa Eugènia de Berga que ofrece una amplia gama de servicios: mecánica general, electricidad, servicio de climatización, cambio de aceites, filtros, líquidos, así como reparaciones de suspensiones, frenos y amortiguadores. Se especializa en el servicio de coches de pasajeros, furgonetas, camionetas y camiones de hasta 3,5 toneladas, y también se dedica a la compra y venta de autobuses y coches."
+      },
+      "crisAuto24": {
+        "name": "CrisAuto 24h – Asistencia en carretera y transporte",
+        "description": "La empresa ofrece asistencia en carretera las 24 horas y transporte de vehículos. Proporcionan un servicio rápido y profesional, equipados con grúas especializadas para el transporte de coches. Servicios principales: asistencia en carretera, remolque, transporte de automóviles."
+      },
+      "crisAuto": {
+        "name": "CrisAuto – Compra de coches y desguace",
+        "description": "Esta parte del negocio se centra en la compra de coches en cualquier estado técnico y su desguace. La empresa ofrece pago inmediato por los vehículos. Servicios principales: compra de coches dañados, accidentados e inundados; trámites relacionados con el desguace (baja en desguace)."
       },
       "wawelRestobar": {
         "name": "Wawel RestoBar",

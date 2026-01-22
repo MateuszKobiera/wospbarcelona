@@ -29,6 +29,8 @@ const DEFAULT_SPONSORS: Sponsor[] = [
   { name: 'Prezydent Miasta Warszawy Rafał Trzaskowski', logo: '/images/sponsors/Warszawa-znak-400x265.png' },
   { name: 'Bubbles Locos', logo: '/images/sponsors/bubbles-locos.png' },
   { name: 'Stowarzyszenie Edukacyjne Kosmo HisPLano', logo: '/images/sponsors/kosmo-his-plano.png' },
+  { name: 'CrisAuto', logo: '/images/sponsors/CrisAuto.jpeg' },
+  { name: 'CrisAuto24', logo: '/images/sponsors/crisauto24.jpeg' },
 ];
 
 function InitialAvatar({ name }: { name: string }) {
