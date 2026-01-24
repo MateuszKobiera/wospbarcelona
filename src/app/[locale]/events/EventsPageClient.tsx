@@ -24,7 +24,7 @@ const upcomingEventsData = [
   },
   {
     id: 5,
-    date: '2026-01-24',
+    date: '2026-02-01',
     time: '10:30',
     location: 'Hotel W Barcelona',
     categoryKey: 'run',

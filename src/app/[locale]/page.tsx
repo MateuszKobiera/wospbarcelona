@@ -162,7 +162,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute top-3 right-3 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">
-                    24.01
+                    02.01
                   </div>
                 </div>
                 <CardContent className="p-5">
@@ -194,7 +194,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute top-3 right-3 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">
-                    24.01
+                    01.02
                   </div>
                 </div>
                 <CardContent className="p-5">

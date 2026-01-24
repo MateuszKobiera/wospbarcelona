@@ -4,7 +4,6 @@ import { notFound } from 'next/navigation';
 import { locales } from '@/i18n';
 import { Footer } from '@/components/Footer';
 import ClientHeader from '@/components/ClientHeader';
-import RunRouteChangePopup from '@/components/RunRouteChangePopup';
 
 type Locale = (typeof locales)[number];
 
@@ -33,7 +32,6 @@ export default async function LocaleLayout({
   return (
     <NextIntlClientProvider messages={messages}>
       <ClientHeader />
-      <RunRouteChangePopup />
       {children}
       <Footer />
     </NextIntlClientProvider>
