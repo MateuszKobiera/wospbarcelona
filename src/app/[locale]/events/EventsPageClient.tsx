@@ -2,62 +2,43 @@
 
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Calendar, Clock, MapPin } from 'lucide-react';
+import { Calendar, MapPin } from 'lucide-react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { siFacebook, siInstagram, siYoutube } from 'simple-icons/icons';
 import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
 import { ContactForm } from '@/components/ContactForm';
 
 // Event data - only non-translatable fields
-const upcomingEventsData = [
+const pastEventsData = [
   {
-    id: 10,
-    date: '2026-01-24',
-    time: '13:00 - 19:00',
-    location: 'Wawel Restobar, Barcelona',
-    categoryKey: 'workshop',
-    image: '/images/kalendarz/06_SLIDE_34_F_ZAGRA_25_01_2026 (1).jpg',
-    registrationRequired: false,
-    facebookLink: null
-  },
-  {
-    id: 5,
-    date: '2026-01-24',
-    time: '10:30',
-    location: 'Hotel W Barcelona',
-    categoryKey: 'run',
-    image: '/images/kalendarz/workoplecak_20bieg_podglad.jpg',
-    registrationRequired: true,
-    facebookLink: 'https://facebook.com/events/bieg-wosp-policz-sie-z-cukrzyca',
-    isSpecialEvent: true
+    id: 9,
+    date: '2026-02-16',
+    location: 'Online - Allegro.pl',
+    categoryKey: 'onlineAuction',
+    image: '/images/allegro/11_34FinalWOSP2026_grafika_AUKCJE_podglad.png'
   },
   {
     id: 1,
     date: '2026-01-25',
-    time: '10:00 - 22:00',
     location: 'Espacio 88, Sant Martí, Barcelona',
     categoryKey: 'final',
-    image: '/images/kalendarz/fb_FINAL.jpg',
-    registrationRequired: true,
-    isFinal: true,
-    facebookLink: 'https://facebook.com/events/34-final-wosp-barcelona'
+    image: '/images/kalendarz/fb_FINAL.jpg'
   },
   {
-    id: 9,
-    date: '2026-02-16',
-    time: '23:59',
-    location: 'Online - Allegro.pl',
-    categoryKey: 'onlineAuction',
-    image: '/images/allegro/11_34FinalWOSP2026_grafika_AUKCJE_podglad.png',
-    registrationRequired: false,
-    facebookLink: null,
-    allegroLink: 'https://allegro.pl/uzytkownik/Client%3A140580262'
-  }
-];
-
-const pastEventsData = [
+    id: 10,
+    date: '2026-01-24',
+    location: 'Wawel Restobar, Barcelona',
+    categoryKey: 'workshop',
+    image: '/images/kalendarz/06_SLIDE_34_F_ZAGRA_25_01_2026 (1).jpg'
+  },
+  {
+    id: 5,
+    date: '2026-01-24',
+    location: 'Hotel W Barcelona',
+    categoryKey: 'run',
+    image: '/images/kalendarz/workoplecak_20bieg_podglad.jpg'
+  },
   {
     id: 8,
     date: '2025-12-14',
@@ -145,26 +126,8 @@ const pastEventsData = [
 
 export default function EventsPageClient() {
   const t = useTranslations('events');
-  const tHome = useTranslations('home');
   const params = useParams();
   const locale = params.locale as string;
-
-  // Helper for Google Calendar links
-  const getGoogleCalendarUrl = (event: typeof upcomingEventsData[number], title: string, description: string) => {
-    const isAllDay = !event.time || event.time.toLowerCase().includes('cały dzień');
-    let startDate, endDate;
-
-    if (isAllDay) {
-      startDate = event.date.replace(/-/g, '');
-      endDate = event.date.replace(/-/g, '');
-    } else {
-      // For timed events, use a simple format
-      startDate = event.date.replace(/-/g, '') + 'T090000';
-      endDate = event.date.replace(/-/g, '') + 'T100000';
-    }
-
-    return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${startDate}/${endDate}&details=${encodeURIComponent(description || '')}&location=${encodeURIComponent(event.location)}`;
-  };
 
   return (
     <>
@@ -185,160 +148,11 @@ export default function EventsPageClient() {
               <h2 className="text-3xl font-bold text-gray-900">{t('upcoming')}</h2>
             </div>
 
-            <div className="space-y-8">
-              {upcomingEventsData.map((event) => {
-                const isFinal = event.isFinal;
-                const eventTitle = t(`items.${event.id}.title`);
-                const eventDescription = t(`items.${event.id}.description`);
-                const eventCategory = t(`categories.${event.categoryKey}`);
-                const eventLocation = t.has(`items.${event.id}.location`)
-                  ? t(`items.${event.id}.location`)
-                  : event.location;
-                const cardClass = isFinal
-                  ? "h-full overflow-hidden bg-gradient-to-br from-red-50 to-orange-50 border-2 border-red-300 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-                  : "h-full overflow-hidden bg-white border border-red-100 shadow-sm hover:shadow-md transition-shadow";
-
-                return (
-                  <Card key={event.id} className={cardClass}>
-                    <div className={`${isFinal ? 'lg:flex lg:h-full' : 'md:flex md:h-full'}`}>
-                      <div className={isFinal ? 'lg:w-1/2' : 'md:w-1/3'}>
-                        <div className={`${isFinal ? 'h-64 lg:h-full' : 'h-48 md:h-full'} relative rounded-l-md overflow-hidden`}>
-                          {event.image && !event.image.includes('/api/placeholder') ? (
-                            <Image
-                              src={event.image}
-                              alt={eventTitle}
-                              fill
-                              className="object-cover"
-                            />
-                          ) : (
-                            <div className={`w-full h-full bg-linear-to-br ${isFinal ? 'from-red-500 to-orange-500' : 'from-red-400 to-pink-400'} flex items-center justify-center`}>
-                              <Calendar className={`${isFinal ? 'w-24 h-24' : 'w-16 h-16'} text-white`} />
-                            </div>
-                          )}
-                          {isFinal && (
-                            <div className="absolute top-4 right-4 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-bold z-10">
-                              {t('page.final')}
-                            </div>
-                          )}
-                        </div>
-                      </div>
-                      <div className={`${isFinal ? 'lg:w-1/2 p-8' : 'md:w-2/3 p-6'} md:flex md:flex-col md:h-full`}>
-                        <div className="mb-3">
-                          <span className={`inline-block ${isFinal ? 'bg-red-200 text-red-900' : 'bg-red-100 text-red-800'} text-xs px-2 py-1 rounded`}>
-                            {eventCategory}
-                          </span>
-                        </div>
-                        <div className="flex-1">
-                          <h3 className={`${isFinal ? 'text-2xl lg:text-3xl' : 'text-xl'} font-bold text-gray-900 mb-2`}>
-                            {eventTitle}
-                          </h3>
-                          <p className={`text-gray-600 ${isFinal ? 'text-base' : 'line-clamp-3'}`}>
-                            {eventDescription.split(/(\*\*.*?\*\*)/g).map((part, i) => {
-                              if (part.startsWith('**') && part.endsWith('**')) {
-                                return <strong key={i} className="font-bold text-gray-900">{part.slice(2, -2)}</strong>;
-                              }
-                              return part;
-                            })}
-                          </p>
-                        </div>
-
-                        {/* Footer: icons + actions at the bottom */}
-                        <div className="mt-6 border-t pt-4">
-                          <div className="space-y-3 md:space-y-4">
-                            <div className="flex items-center text-sm text-gray-500">
-                              <Calendar className="w-4 h-4 mr-2 text-red-600" />
-                              {event.date}
-                            </div>
-                            <div className="flex items-center text-sm text-gray-500">
-                              <Clock className="w-4 h-4 mr-2 text-red-600" />
-                              {event.time}
-                            </div>
-                            <div className="flex items-center text-sm text-gray-500">
-                              <MapPin className="w-4 h-4 mr-2 text-red-600" />
-                              {(eventLocation.includes('Online') || eventLocation.includes('Allegro')) ? (
-                                <span className="text-gray-600">{eventLocation}</span>
-                              ) : (
-                                <a
-                                  href={event.id === 5 ? 'https://www.google.com/maps/search/?api=1&query=Hotel%20W%20Barcelona' : event.id === 1 ? 'https://maps.app.goo.gl/dJVBoLze5fe5AhB38' : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(eventLocation)}`}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="text-red-600 hover:text-red-700 hover:underline"
-                                >
-                                  {eventLocation}
-                                </a>
-                              )}
-                            </div>
-                          </div>
-
-                          {/* Social links or Allegro button */}
-                          {event.id === 9 && event.allegroLink ? (
-                            <div className="mt-4">
-                              <a
-                                href={event.allegroLink}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="block"
-                              >
-                                <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white">
-                                  {tHome('allegro.viewAuctions')}
-                                </Button>
-                              </a>
-                            </div>
-                          ) : (event.facebookLink || event.allegroLink) && (
-                            <div className="flex space-x-2 mt-4">
-                              {event.facebookLink && (
-                                <a
-                                  href={event.facebookLink}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="inline-flex items-center justify-center h-8 w-8 rounded-md bg-blue-100 text-blue-600 hover:bg-blue-200 transition-colors"
-                                  title={t('page.viewOnFacebook')}
-                                >
-                                  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                                    <path d={siFacebook.path} />
-                                  </svg>
-                                </a>
-                              )}
-                              {event.allegroLink && (
-                                <a
-                                  href={event.allegroLink}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="inline-flex items-center justify-center h-8 w-8 rounded-md bg-orange-100 text-orange-600 hover:bg-orange-200 transition-colors"
-                                  title={t('page.viewOnAllegro')}
-                                >
-                                  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 17.894a.6.6 0 0 1-.848 0l-5.046-5.046-5.046 5.046a.6.6 0 0 1-.848-.848l5.046-5.046-5.046-5.046a.6.6 0 0 1 .848-.848l5.046 5.046 5.046-5.046a.6.6 0 0 1 .848.848l-5.046 5.046 5.046 5.046a.6.6 0 0 1 0 .848z" />
-                                  </svg>
-                                </a>
-                              )}
-                            </div>
-                          )}
-
-                          <div className="flex space-x-3 mt-4">
-                            <Link href={`/${locale}/events/${event.id}`} className="flex-1">
-                              <Button className={`w-full text-white cursor-pointer ${isFinal ? 'bg-red-600 hover:bg-red-700 text-lg py-3' : 'bg-red-600 hover:bg-red-700'}`}>
-                                {t('page.seeMore')}
-                              </Button>
-                            </Link>
-                            {/* Per-event small add-to-calendar */}
-                            <a
-                              href={getGoogleCalendarUrl(event, eventTitle, eventDescription)}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              aria-label={t('page.addToCalendar')}
-                              title={t('page.addToCalendar')}
-                              className="inline-flex items-center justify-center h-9 w-9 rounded-md border border-blue-300 bg-white text-blue-700 hover:bg-blue-50 shadow-sm"
-                            >
-                              <Calendar className="w-4 h-4 text-blue-700" />
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </Card>
-                );
-              })}
+            <div className="flex flex-col items-center justify-center py-16 text-center bg-gray-50 rounded-2xl border border-gray-200">
+              <div className="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center mb-4">
+                <Calendar className="w-8 h-8 text-gray-400" />
+              </div>
+              <p className="text-lg font-medium text-gray-600">{t('noEvents')}</p>
             </div>
           </section>
 

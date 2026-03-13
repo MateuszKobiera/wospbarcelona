@@ -60,6 +60,21 @@
     },
     "cta": "Uneix-te a nosaltres",
     "learnMore": "Més informació",
+    "thankYouSection": {
+      "badge": "El 34è Final WOŚP a Barcelona — ja ha passat!",
+      "title": "Gràcies de tot cor!",
+      "description": "El 34è Final WOŚP a Barcelona ja és història! Donem les gràcies a tots els participants, voluntaris, patrocinadors i a totes les persones que van contribuir a fer possible aquest dia tan especial. La vostra generositat i compromís creen la veritable màgia de l'Orquestra!",
+      "resultsComingSoon": "Aviat anunciarem la quantitat recaptada!",
+      "resultsDescription": "Estem sumant totes les aportacions — torna aviat per saber quant hem recaptat junts per a les barriguetes sanes dels nostres nens.",
+      "blogButton": "Llegeix la crònica del final",
+      "donateStillOpen": "E-skarbonka encara activa",
+      "donateStillOpenDesc": "Encara pots donar suport a la nostra recaptació en línia!",
+      "donateButton": "Dona ara"
+    },
+    "photoSection": {
+      "title": "Fotos del 34è Final WOŚP",
+      "blogLinkText": "Llegeix el reportatge complet del final"
+    },
     "heroFinale": {
       "badge": "Vine al 34è Final WOŚP!",
       "title": "Vine al Final WOŚP Barcelona!",
@@ -314,7 +329,8 @@
         "description": "Som a Facebook, Instagram i YouTube.",
         "facebookDesc": "Mira què hi ha de nou. Actualitzacions, fotos i reportatges d'esdeveniments.",
         "instagramDesc": "Últimes fotos i stories de les nostres activitats a Barcelona.",
-        "youtubeDesc": "Mira els nostres vídeos i reportatges d'esdeveniments de WOŚP Barcelona."
+        "youtubeDesc": "Mira els nostres vídeos i reportatges d'esdeveniments de WOŚP Barcelona.",
+        "allegroDesc": "Puja per articles benèfics i dóna suport a WOŚP Barcelona."
       }
     },
     "categories": {
@@ -339,6 +355,11 @@
         "title": "Reunió de Voluntaris - Wawel",
         "description": "🤝 Reunió de voluntaris de WOŚP Barcelona a Wawel Restobar — el nostre patrocinador principal! Coneix l'equip, tasta menjar polonès i prepara't per al 34è Final.",
         "fullDescription": "🤝 Reunió de voluntaris de WOŚP Barcelona a Wawel Restobar\nEt convidem a una reunió de voluntaris de WOŚP Barcelona a Wawel Restobar — el nostre patrocinador principal! És el lloc ideal per conèixer-se, xerrar i gaudir de deliciosa cuina polonesa i begudes directament de Polònia.\n\nDurant la reunió:\n• coneixeràs l'equip de WOŚP Barcelona\n• t'informaràs sobre els plans per al 34è Final\n• podràs fer preguntes i compartir les teves idees\n• rebràs materials informatius\n• coneixeràs altres voluntaris de Barcelona, Catalunya i Polònia\n\nPer què val la pena venir:\n• Wawel Restobar és un lloc creat per polonesos per a polonesos\n• menjaràs plats tradicionals i beuràs begudes poloneses\n• sentiràs l'ambient de l'hospitalitat polonesa\n• donaràs suport a un patrocinador local de WOŚP\n\n📝 Com unir-se:\nVine a la data indicada o contacta'ns si tens preguntes.\n\nLa reunió se celebrarà a Wawel Restobar — ens veiem!"
+      },
+      "10": {
+        "title": "Elaboració de pierogis per al Final WOŚP",
+        "description": "🥟 Us convidem a elaborar pierogis junts a Wawel Restobar! Prepararem junts deliciosos pierogis per al 34è Final WOŚP. Com més som, millor!",
+        "fullDescription": "🥟 Elaboració de pierogis per al Final WOŚP a Wawel Restobar\n\nConvoquem tothom a elaborar pierogis junts, que es serviran durant el 34è Final WOŚP a Barcelona!\n\n📍 On: Wawel Restobar — el nostre patrocinador principal\n📅 Quan: Dissabte, 24 de gener de 2026\n🕐 Horari: 13:00 - 19:00\n\n✨ Per què val la pena venir?\n\n• Diversió i integració abans del final\n• Aprendràs a elaborar pierogis polonesos tradicionals\n• Ajudaràs a preparar menjar per al final WOŚP\n• Sentiràs l'ambient de l'hospitalitat polonesa\n• Coneixeràs altres voluntaris i simpatitzants de WOŚP\n• Donaràs suport al nostre patrocinador — Wawel Restobar\n\n👥 Per a qui?\nPer a tothom! No necessites experiència en l'elaboració de pierogis — t'ensenyarem tot. Pots venir a qualsevol hora entre les 13:00 i les 19:00.\n\n📝 Inscripció:\nNo cal inscripció — simplement vine! Com més som, més pierogis elaborarem per al final.\n\n💪 Cada parell de mans és útil!\nIndependentment de si ets un expert a la cuina o estàs començant la teva aventura culinària — tota ajuda és valuosa. Junts prepararem deliciosos pierogis que gaudiran tots els participants del final!\n\nEns veiem a Wawel Restobar!"
       },
       "5": {
         "title": "20a Cursa WOŚP \"Compta amb la diabetis\"",

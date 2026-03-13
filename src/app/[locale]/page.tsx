@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { HeartHandshakeIcon, StoreIcon, UsersIcon, FlagIcon, Heart, Gavel, Wallet, ArrowRight, Sparkles } from 'lucide-react';
+import { HeartHandshakeIcon, StoreIcon, UsersIcon, FlagIcon, Heart, ArrowRight, Sparkles } from 'lucide-react';
 import { siFacebook, siInstagram, siYoutube } from 'simple-icons/icons';
 import { SponsorsMarquee } from '@/components/SponsorsMarquee';
 import { getAllPostsForLocale } from '@/content/blog-i18n';
@@ -33,228 +33,72 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     <main>
       <Hero />
 
-      {/* 1. MAIN FINALE INVITATION - Hero section for the event */}
-      <section className="py-16 bg-gradient-to-br from-red-600 via-pink-600 to-red-700 text-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* 1. THANK YOU — Finale is done */}
+      <section className="py-10 bg-gradient-to-br from-red-600 via-pink-600 to-red-700 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="inline-flex items-center gap-2 rounded-full bg-white/20 backdrop-blur-sm text-white px-4 py-2 text-sm font-semibold mb-6">
-              <Heart className="w-4 h-4" fill="white" />
-              {t('heroFinale.badge')}
+            <div className="inline-flex items-center gap-2 rounded-full bg-white/20 backdrop-blur-sm text-white px-3 py-1.5 text-xs font-semibold mb-4">
+              <Heart className="w-3 h-3" fill="white" />
+              {t('thankYouSection.badge')}
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              {t('heroFinale.title')}
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-3 drop-shadow-md">
+              {t('thankYouSection.title')}
             </h2>
-            <p className="text-xl md:text-2xl text-white/90 mb-4 font-medium">
-              {t('heroFinale.date')}
+            <p className="text-base md:text-lg text-white/90 max-w-2xl mx-auto mb-6 leading-relaxed">
+              {t('thankYouSection.description')}
             </p>
-            <p className="text-lg text-white/80 max-w-3xl mx-auto mb-8 leading-relaxed">
-              {t('heroFinale.description')}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                asChild
-                size="lg"
-                className="bg-white text-red-600 hover:bg-gray-100 font-bold px-8 py-4 text-lg rounded-full shadow-lg hover:shadow-xl transition-all"
-              >
-                <Link href={`/${locale}/events/1`} className="flex items-center gap-2">
-                  {t('heroFinale.button')}
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-              </Button>
+
+            {/* Results coming soon card */}
+            <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm rounded-full px-5 py-2.5 mb-5 border border-white/30">
+              <Sparkles className="w-4 h-4 text-yellow-300" />
+              <span className="text-sm font-semibold text-white">{t('thankYouSection.resultsComingSoon')}</span>
+              <Sparkles className="w-4 h-4 text-yellow-300" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* 2. TWO SUPPORT OPTIONS - Donate & Allegro */}
-      <section className="py-16 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold text-gray-900 mb-3">
-              {t('supportSection.title')}
-            </h2>
-            <p className="text-gray-600">
-              {t('supportSection.subtitle')}
-            </p>
+      {/* 2. PHOTO BENTO GRID */}
+      <section className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-5 text-center">{t('photoSection.title')}</h2>
+          <div
+            className="grid grid-cols-4 md:grid-cols-6 gap-1.5"
+            style={{ gridAutoRows: '120px' }}
+          >
+            {[
+              '/images/34-final/wybrane/0a575815-d7c5-48a5-b629-857c1694e344.jpg',
+              '/images/34-final/wybrane/IMG_7392.jpg',
+              '/images/34-final/wybrane/0a885645-72c7-4bbb-ba56-b3ee6895befd.jpg',
+              '/images/34-final/wybrane/1839e07d-8956-4617-b3b5-02805c21b81d.jpg',
+              '/images/34-final/wybrane/IMG_7414.jpg',
+              '/images/34-final/wybrane/1b040fa3-f693-4d7e-99f4-b7ee85710e2a.jpg',
+              '/images/34-final/wybrane/77c5b268-df3e-47b4-b29a-fc35982a8fba.jpg',
+              '/images/34-final/wybrane/IMG_7438.jpg',
+              '/images/34-final/wybrane/cfa889df-f1df-469d-8014-b81ed0330fcf.jpg',
+              '/images/34-final/wybrane/d0080507-e4ec-472e-9ba3-c4328686f552.jpg',
+              '/images/34-final/wybrane/IMG_7446.jpg',
+              '/images/34-final/wybrane/f4854028-f4f0-44f0-a9ef-3eaf6f2a7b11.jpg',
+            ].map((src, i) => (
+              <div key={i} className="relative overflow-hidden rounded-lg">
+                <Image
+                  src={src}
+                  alt={`34. Finał WOŚP Barcelona ${i + 1}`}
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 25vw, 17vw"
+                />
+              </div>
+            ))}
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Donate Online */}
-            <Card className="group border-2 border-pink-200 hover:border-pink-400 shadow-lg hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-8 text-center">
-                <div className="flex justify-center mb-5">
-                  <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-red-500 rounded-full flex items-center justify-center">
-                    <Wallet className="w-8 h-8 text-white" />
-                  </div>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                  {t('supportSection.donate.title')}
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  {t('supportSection.donate.description')}
-                </p>
-                <Button
-                  asChild
-                  size="lg"
-                  className="bg-gradient-to-r from-pink-600 to-red-600 hover:from-pink-700 hover:to-red-700 text-white font-semibold w-full rounded-full"
-                >
-                  <Link href="https://eskarbonka.wosp.org.pl/dinudecipa" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
-                    {t('supportSection.donate.button')}
-                    <Heart className="w-5 h-5" fill="currentColor" />
-                  </Link>
-                </Button>
-                <p className="text-xs text-gray-500 mt-3">{t('supportSection.donate.secure')}</p>
-              </CardContent>
-            </Card>
-
-            {/* Allegro Auctions */}
-            <Card className="group border-2 border-orange-200 hover:border-orange-400 shadow-lg hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-8 text-center">
-                <div className="flex justify-center mb-5">
-                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-amber-500 rounded-full flex items-center justify-center">
-                    <Gavel className="w-8 h-8 text-white" />
-                  </div>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                  {t('supportSection.allegro.title')}
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  {t('supportSection.allegro.description')}
-                </p>
-                <Button
-                  asChild
-                  size="lg"
-                  className="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-semibold w-full rounded-full"
-                >
-                  <Link href="https://allegro.pl/uzytkownik/Client%3A140580262" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
-                    {t('supportSection.allegro.button')}
-                    <Sparkles className="w-5 h-5" />
-                  </Link>
-                </Button>
-                <p className="text-xs text-gray-500 mt-3">{t('supportSection.allegro.info')}</p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* 2.5 UPCOMING EVENTS */}
-      <section className="py-16 bg-gradient-to-br from-gray-50 to-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold text-gray-900 mb-3">
-              {t('upcomingEvents.title')}
-            </h2>
-            <p className="text-gray-600">
-              {t('upcomingEvents.subtitle')}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Event 1: Pierogi Making */}
-            <Link href={`/${locale}/events/10`} className="block group">
-              <Card className="overflow-hidden border-gray-200 hover:border-red-300 transition-all hover:shadow-lg">
-                <div className="relative h-48">
-                  <Image
-                    src="/images/kalendarz/06_SLIDE_34_F_ZAGRA_25_01_2026 (1).jpg"
-                    alt="Lepienie Pierogów"
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute top-3 right-3 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">
-                    24.01
-                  </div>
-                </div>
-                <CardContent className="p-5">
-                  <div className="text-xs text-red-600 font-semibold mb-2">{t('upcomingEvents.workshop')}</div>
-                  <h3 className="font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-red-600 transition-colors">
-                    {t('upcomingEvents.event1.title')}
-                  </h3>
-                  <p className="text-sm text-gray-600 mb-3 line-clamp-2">
-                    {t('upcomingEvents.event1.description')}
-                  </p>
-                  <div className="flex items-center text-xs text-gray-500">
-                    <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    13:00 - 19:00
-                  </div>
-                </CardContent>
-              </Card>
+          <div className="mt-5 text-center">
+            <Link
+              href={`/${locale}/blog/dziekujemy-za-34-final-wosp-w-barcelonie`}
+              className="inline-flex items-center gap-2 text-red-600 hover:text-red-700 font-semibold hover:underline transition-colors"
+            >
+              {t('photoSection.blogLinkText')}
+              <ArrowRight className="w-4 h-4" />
             </Link>
-
-            {/* Event 2: Run */}
-            <Link href={`/${locale}/events/5`} className="block group">
-              <Card className="overflow-hidden border-gray-200 hover:border-red-300 transition-all hover:shadow-lg">
-                <div className="relative h-48">
-                  <Image
-                    src="/images/kalendarz/workoplecak_20bieg_podglad.jpg"
-                    alt="Bieg WOŚP"
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute top-3 right-3 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">
-                    24.01
-                  </div>
-                </div>
-                <CardContent className="p-5">
-                  <div className="text-xs text-blue-600 font-semibold mb-2">{t('upcomingEvents.run')}</div>
-                  <h3 className="font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-red-600 transition-colors">
-                    {t('upcomingEvents.event2.title')}
-                  </h3>
-                  <p className="text-sm text-gray-600 mb-3 line-clamp-2">
-                    {t('upcomingEvents.event2.description')}
-                  </p>
-                  <div className="flex items-center text-xs text-gray-500">
-                    <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    10:30
-                  </div>
-                </CardContent>
-              </Card>
-            </Link>
-
-            {/* Event 3: Final */}
-            <Link href={`/${locale}/events/1`} className="block group">
-              <Card className="overflow-hidden border-gray-200 hover:border-red-300 transition-all hover:shadow-lg">
-                <div className="relative h-48">
-                  <Image
-                    src="/images/kalendarz/fb_FINAL.jpg"
-                    alt="34. Finał WOŚP"
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute top-3 right-3 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">
-                    25.01
-                  </div>
-                </div>
-                <CardContent className="p-5">
-                  <div className="text-xs text-red-600 font-semibold mb-2">{t('upcomingEvents.final')}</div>
-                  <h3 className="font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-red-600 transition-colors">
-                    {t('upcomingEvents.event3.title')}
-                  </h3>
-                  <p className="text-sm text-gray-600 mb-3 line-clamp-2">
-                    {t('upcomingEvents.event3.description')}
-                  </p>
-                  <div className="flex items-center text-xs text-gray-500">
-                    <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    11:00 - 20:00
-                  </div>
-                </CardContent>
-              </Card>
-            </Link>
-          </div>
-
-          <div className="text-center mt-8">
-            <Button asChild className="bg-red-600 hover:bg-red-700 text-white">
-              <Link href={`/${locale}/events`}>
-                {t('upcomingEvents.seeAll')}
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
-            </Button>
           </div>
         </div>
       </section>
@@ -448,32 +292,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       </section>
 
 
-
-      {/* Final Section */}
-      <section className="py-12 bg-gradient-to-br from-white via-red-50 to-pink-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Card className="bg-white border border-red-100 shadow-sm">
-            <CardContent className="p-6 md:p-8 space-y-4">
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                <div>
-                  <h2 className="text-2xl font-bold text-gray-900">{t('finalSection.title')}</h2>
-                </div>
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <Button asChild className="bg-red-600 hover:bg-red-700 text-white w-full sm:w-auto cursor-pointer">
-                    <Link href="https://www.wosp.org.pl/aktualnosci/choroby-przewodu-pokarmowego-celem-finalu" target="_blank" rel="noopener noreferrer">{t('finalSection.moreButton')}</Link>
-                  </Button>
-                  <Button asChild variant="outline" className="w-full sm:w-auto cursor-pointer">
-                    <Link href="https://eskarbonka.wosp.org.pl/dinudecipa" target="_blank" rel="noopener noreferrer">
-                      {t('finalSection.supportOnline')}
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-              <p className="text-gray-700">{t('finalSection.description')}</p>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
 
       {/* Ostatnie wpisy na blogu */}
       <section className="py-16 bg-white">

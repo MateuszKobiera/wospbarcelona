@@ -1,9 +1,8 @@
 import Link from 'next/link';
 import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { siFacebook, siInstagram, siYoutube } from 'simple-icons/icons';
 import { getTranslations } from 'next-intl/server';
-import { Heart, ExternalLink, Info } from 'lucide-react';
+import { Heart, Info } from 'lucide-react';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -53,26 +52,6 @@ export default async function DonatePage() {
                 </p>
               </div>
 
-              <Button
-                asChild
-                size="lg"
-                className="bg-white text-red-600 hover:bg-gray-50 text-lg md:text-xl font-bold py-6 md:py-8 px-8 md:px-12 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer mt-6"
-              >
-                <Link
-                  href="https://eskarbonka.wosp.org.pl/dinudecipa"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3"
-                >
-                  <Heart className="w-6 h-6" fill="currentColor" />
-                  {t('donateButton')}
-                  <ExternalLink className="w-5 h-5" />
-                </Link>
-              </Button>
-
-              <p className="text-sm text-white/80 mt-4">
-                {t('securePayment')}
-              </p>
             </CardContent>
           </Card>
 
@@ -121,17 +100,6 @@ export default async function DonatePage() {
                 <p className="text-gray-700 max-w-3xl">
                   {t('whyImportantText2')}
                 </p>
-                <Button asChild variant="outline" className="cursor-pointer">
-                  <Link
-                    href="https://www.wosp.org.pl/aktualnosci/choroby-przewodu-pokarmowego-celem-finalu"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2"
-                  >
-                    {t('aboutGoal')}
-                    <ExternalLink className="w-4 h-4" />
-                  </Link>
-                </Button>
               </div>
             </CardContent>
           </Card>

@@ -60,6 +60,21 @@
     },
     "cta": "Join us",
     "learnMore": "Learn more",
+    "thankYouSection": {
+      "badge": "34th WOŚP Finale in Barcelona — it's done!",
+      "title": "Thank you from the bottom of our hearts!",
+      "description": "The 34th WOŚP Finale in Barcelona is behind us! We sincerely thank all participants, volunteers, sponsors and everyone who contributed to this special day. Your generosity and dedication create the true magic of the Orchestra!",
+      "resultsComingSoon": "We'll announce the total raised very soon!",
+      "resultsDescription": "We are currently tallying all contributions — come back soon to find out how much we raised together for the healthy tummies of our kids.",
+      "blogButton": "Read the finale report",
+      "donateStillOpen": "E-skarbonka still open",
+      "donateStillOpenDesc": "You can still support our fundraiser online!",
+      "donateButton": "Donate now"
+    },
+    "photoSection": {
+      "title": "Photos from the 34th WOŚP Finale",
+      "blogLinkText": "Read the full finale recap"
+    },
     "heroFinale": {
       "badge": "Join the 34th WOŚP Finale!",
       "title": "Come to WOŚP Barcelona Finale!",
@@ -341,6 +356,11 @@
         "title": "Volunteer Meeting - Wawel",
         "description": "🤝 WOŚP Barcelona volunteer meeting at Wawel Restobar — our main sponsor! Meet the team, taste Polish food and prepare for the 34th Finale.",
         "fullDescription": "🤝 WOŚP Barcelona Volunteer Meeting at Wawel Restobar\nWe invite you to a WOŚP Barcelona volunteer meeting at Wawel Restobar — our main sponsor! It's the perfect place to get to know each other, chat and enjoy delicious Polish food and drinks straight from Poland.\n\nDuring the meeting:\n• you will meet the WOŚP Barcelona team\n• you will learn about plans for the 34th Finale\n• you can ask questions and share your ideas\n• you will receive informational materials\n• you will meet other volunteers from Barcelona, Catalonia and Poland\n\nWhy it's worth coming:\n• Wawel Restobar is a place created by Poles for Poles\n• you will eat traditional dishes and drink Polish beverages\n• you will feel the atmosphere of Polish hospitality\n• you will support a local WOŚP sponsor\n\n📝 How to join:\nCome on the designated date or contact us if you have questions.\n\nThe meeting will be held at Wawel Restobar — see you there!"
+      },
+      "10": {
+        "title": "Pierogi Making for WOŚP Finale",
+        "description": "🥟 Join us for communal pierogi making at Wawel Restobar! We'll prepare delicious pierogis together for the 34th WOŚP Finale. The more the merrier!",
+        "fullDescription": "🥟 Pierogi Making for the WOŚP Finale at Wawel Restobar\n\nWe invite everyone to join us for communal pierogi making, which will be served during the 34th WOŚP Finale in Barcelona!\n\n📍 Where: Wawel Restobar — our main sponsor\n📅 When: Saturday, January 24, 2026\n🕐 Hours: 1:00 PM - 7:00 PM\n\n✨ Why is it worth coming?\n\n• Fun and integration before the finale\n• You'll learn to make traditional Polish pierogis\n• You'll help prepare food for the WOŚP finale\n• You'll feel the atmosphere of Polish hospitality\n• You'll meet other volunteers and WOŚP supporters\n• You'll support our sponsor — Wawel Restobar\n\n👥 For whom?\nFor everyone! You don't need any experience in making pierogis — we'll teach you everything. You can come at any time between 1:00 PM and 7:00 PM.\n\n📝 Registration:\nNo registration required — just come! The more of us there are, the more pierogis we'll make for the finale.\n\n💪 Every pair of hands is needed!\nRegardless of whether you're a kitchen expert or just starting your cooking adventure — every help is valuable. Together we'll prepare delicious pierogis that everyone at the finale will enjoy!\n\nSee you at Wawel Restobar!"
       },
       "5": {
         "title": "20th WOŚP Run \"Count Yourself with Diabetes\"",

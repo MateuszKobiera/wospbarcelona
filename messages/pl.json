@@ -60,6 +60,21 @@
     },
     "cta": "Dołącz do nas",
     "learnMore": "Dowiedz się więcej",
+    "thankYouSection": {
+      "badge": "34. Finał WOŚP w Barcelonie — za nami!",
+      "title": "Dziękujemy Wam z całego serca!",
+      "description": "34. Finał WOŚP w Barcelonie za nami! Serdecznie dziękujemy wszystkim uczestnikom, wolontariuszom, sponsorom i każdej osobie, która przyłożyła rękę do tego wyjątkowego dnia. Wasza hojność i zaangażowanie tworzą prawdziwą magię Orkiestry!",
+      "resultsComingSoon": "Wkrótce ogłosimy zebraną kwotę!",
+      "resultsDescription": "Trwa sumowanie wszystkich wpłat — wróć tu wkrótce, aby dowiedzieć się, ile razem zebraliśmy dla zdrowych brzuszków naszych dzieci.",
+      "blogButton": "Czytaj relację z finału",
+      "donateStillOpen": "E-skarbonka nadal czynna",
+      "donateStillOpenDesc": "Możesz nadal wspierać naszą zbiórkę online!",
+      "donateButton": "Wpłać teraz"
+    },
+    "photoSection": {
+      "title": "Zdjęcia z 34. Finału WOŚP",
+      "blogLinkText": "Przeczytaj pełną relację z finału"
+    },
     "heroFinale": {
       "badge": "Zapraszamy na 34. Finał WOŚP!",
       "title": "Przyjdź na Finał WOŚP Barcelona!",
@@ -313,7 +328,8 @@
         "description": "Jesteśmy na Facebooku, Instagramie i YouTube.",
         "facebookDesc": "Zobacz, co u nas słychać. Aktualności, zdjęcia i relacje z wydarzeń.",
         "instagramDesc": "Najnowsze zdjęcia i stories z naszych działań w Barcelonie.",
-        "youtubeDesc": "Oglądaj nasze filmy i relacje z wydarzeń WOŚP Barcelona."
+        "youtubeDesc": "Oglądaj nasze filmy i relacje z wydarzeń WOŚP Barcelona.",
+        "allegroDesc": "Licytuj przedmioty charytatywne i wspieraj WOŚP Barcelona."
       }
     },
     "categories": {

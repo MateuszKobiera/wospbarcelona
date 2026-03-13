@@ -1,5 +1,46 @@
 import React from 'react';
 import Image from 'next/image';
+import { BlogPhotoGallery } from '@/components/BlogPhotoGallery';
+
+const final34GalleryPhotos: string[] = [
+    '/images/34-final/0a575815-d7c5-48a5-b629-857c1694e344.jpg',
+    '/images/34-final/0a885645-72c7-4bbb-ba56-b3ee6895befd.jpg',
+    '/images/34-final/0beceb8e-b2be-4ea0-b977-3c25efcadcf1.jpg',
+    '/images/34-final/0c5219d3-096f-4df6-98d5-378f97ae067c.jpg',
+    '/images/34-final/103c6f09-6234-48b5-a248-5c9b76db43b6.jpg',
+    '/images/34-final/135271c8-d825-4db3-9154-0f5e8ee93f5a.jpg',
+    '/images/34-final/1839e07d-8956-4617-b3b5-02805c21b81d.jpg',
+    '/images/34-final/1b040fa3-f693-4d7e-99f4-b7ee85710e2a.jpg',
+    '/images/34-final/1e9b394c-34da-4829-8733-a05f109507cd.jpg',
+    '/images/34-final/212454c5-e3e2-4273-bb23-568b971143cf.jpg',
+    '/images/34-final/28cc5948-170e-4000-b513-d25278641a53.jpg',
+    '/images/34-final/2d5ad03e-f6c4-4b6c-b77a-973f1726d4cf.jpg',
+    '/images/34-final/3cdbe168-47f2-4c58-b567-bc85f01d2e79.jpg',
+    '/images/34-final/4673101d-8fb9-4c96-acbb-aa66e6f7a73a.jpg',
+    '/images/34-final/5385472c-724c-48c2-af43-11567e354c5d.jpg',
+    '/images/34-final/5c164d80-e49c-4cf1-9d63-517c4c746cc9.jpg',
+    '/images/34-final/5f280f73-8bb5-4843-8e63-553f33bfb28f.jpg',
+    '/images/34-final/5fe11b00-9140-49cb-9fea-4a179aea23c9.jpg',
+    '/images/34-final/6022b7c7-a343-4e1c-b8f1-b833b1c346c3.jpg',
+    '/images/34-final/741204da-6056-48d9-9c78-a6ce472232e4.jpg',
+    '/images/34-final/77c5b268-df3e-47b4-b29a-fc35982a8fba.jpg',
+    '/images/34-final/867c8d47-35c8-4c65-9c55-c426470f6f15.jpg',
+    '/images/34-final/887bb521-c949-4b8f-9099-cb1453dd1adc.jpg',
+    '/images/34-final/8a160334-ff1e-40a7-8339-545df9e55a24.jpg',
+    '/images/34-final/ae83f333-60cb-4f7f-ae8b-7d526be184d1.jpg',
+    '/images/34-final/af59796e-c140-4f51-8a6c-818d795c5b30.jpg',
+    '/images/34-final/b0f6160a-d974-4a82-a6c0-edfe66c78e78.jpg',
+    '/images/34-final/c0e5f436-f30e-4701-8803-64978fcd1e48.jpg',
+    '/images/34-final/c1e084fb-ff63-4e51-9021-4079bb5e9748.jpg',
+    '/images/34-final/cfa889df-f1df-469d-8014-b81ed0330fcf.jpg',
+    '/images/34-final/d0080507-e4ec-472e-9ba3-c4328686f552.jpg',
+    '/images/34-final/d515e09d-abd3-4194-a735-1e5a58740dca.jpg',
+    '/images/34-final/e0cafe1f-0f0b-442d-bb6f-69fe32395476.jpg',
+    '/images/34-final/ed102d2d-613b-4bbd-9cd6-b3b9db801d12.jpg',
+    '/images/34-final/f4854028-f4f0-44f0-a9ef-3eaf6f2a7b11.jpg',
+    '/images/34-final/IMG_7448.JPG',
+    '/images/34-final/IMG_7449.JPG',
+];
 
 export type LocalizedContent = {
     title: string;
@@ -29,6 +70,424 @@ export type BlogPostI18n = {
 };
 
 export const blogPostsI18n: BlogPostI18n[] = [
+    {
+        slug: 'dziekujemy-za-34-final-wosp-w-barcelonie',
+        date: '2026-01-26',
+        coverImage: '/images/34-final/ZDJECIE_W_TLE (1).jpg',
+        tags: ['34FinałWOŚP', 'Barcelona', 'Dziękujemy', 'WOŚPBarcelona', 'Finał2026'],
+        social: {
+            facebook: 'https://www.facebook.com/sztabWOSPBarcelona',
+            instagram: 'https://www.instagram.com/wospbarcelona/',
+        },
+        content: {
+            pl: {
+                title: 'Dziękujemy! 34. Finał WOŚP w Barcelonie za nami ❤️',
+                excerpt: 'Serdecznie dziękujemy wszystkim uczestnikom, wolontariuszom, sponsorom i każdej osobie, która pomogła nam zagrać dla zdrowych brzuszków naszych dzieci. Wkrótce ogłosimy zebraną kwotę!',
+                sections: [
+                    {
+                        body: (
+                            <div className="space-y-4">
+                                <div
+                                    className="relative rounded-2xl overflow-hidden p-8 md:p-10 text-white shadow-xl text-center"
+                                    style={{
+                                        backgroundImage: "linear-gradient(135deg, rgba(220, 38, 38, 0.92) 0%, rgba(239, 68, 68, 0.88) 50%, rgba(251, 146, 60, 0.85) 100%), url('/images/34-final/ZDJECIE_W_TLE (1).jpg')",
+                                        backgroundSize: 'cover',
+                                        backgroundPosition: 'center',
+                                    }}
+                                >
+                                    <div className="text-6xl mb-4">❤️</div>
+                                    <h3 className="text-3xl md:text-4xl font-extrabold mb-3 text-white drop-shadow-lg">Dziękujemy Wam z całego serca!</h3>
+                                    <p className="text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
+                                        34. Finał WOŚP w Barcelonie za nami — i był to dzień pełen ciepła, radości i bezinteresownej pomocy. Dziękujemy każdemu, kto był z nami tego wyjątkowego dnia!
+                                    </p>
+                                </div>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: '🙌 Dziękujemy wolontariuszom',
+                        body: (
+                            <div className="space-y-3">
+                                <p>
+                                    Ten finał nie byłby możliwy bez naszych niesamowitych <strong>wolontariuszy</strong>. Od wczesnych godzin porannych do późnego wieczoru daliście z siebie wszystko — organizowaliście stoiska, pilnowaliście zbiórek, pomagaliście uczestnikom i dbaliście o to, by każdy poczuł się mile widziany. Jesteście sercem naszego sztabu!
+                                </p>
+                                <p>
+                                    Wasza praca, poświęcony czas i entuzjazm tworzą prawdziwą magię Orkiestry. <strong>Dziękujemy!</strong>
+                                </p>
+                                {/* Photo grid — add volunteer photos below */}
+                                {(() => {
+                                    const photos: string[] = [
+                                        // Dodaj ścieżki do zdjęć wolontariuszy:
+                                        // '/images/34-final/gallery/wolontariusze-01.jpg',
+                                    ];
+                                    return photos.length > 0 ? (
+                                        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-4">
+                                            {photos.map((src, i) => (
+                                                <div key={i} className="relative aspect-square rounded-xl overflow-hidden shadow-md">
+                                                    <Image src={src} alt={`Wolontariusze ${i + 1}`} fill className="object-cover hover:scale-105 transition-transform duration-300" sizes="(max-width: 768px) 50vw, 33vw" />
+                                                </div>
+                                            ))}
+                                        </div>
+                                    ) : null;
+                                })()}
+                            </div>
+                        ),
+                    },
+                    {
+                        title: '💛 Dziękujemy sponsorom i partnerom',
+                        body: (
+                            <div className="space-y-3">
+                                <p>
+                                    Ogromne podziękowania kierujemy do naszych <strong>sponsorów i partnerów</strong>, bez których organizacja finału byłaby niemożliwa. Wasze wsparcie — czy to finansowe, rzeczowe, czy w postaci usług — sprawiło, że mogliśmy zapewnić uczestnikom wyjątkowe doświadczenia i zebrać jeszcze więcej dla dzieci.
+                                </p>
+                                <p>
+                                    Jesteście częścią tej wyjątkowej misji — <strong>dziękujemy!</strong>
+                                </p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: '🎉 Dziękujemy uczestnikom',
+                        body: (
+                            <div className="space-y-3">
+                                <p>
+                                    Dziękujemy każdemu, kto przyszedł do <strong>Espacio 88</strong> 25 stycznia 2026 roku. To Wy tworzycie atmosferę Finału — Wasze uśmiechy, zaangażowanie w licytacje, chęć zabawy i wspólne "Światełko do nieba" sprawiają, że WOŚP ma sens.
+                                </p>
+                                <p>
+                                    Dziękujemy za każdą wpłatę do puszki, każdy wylicytowany przedmiot i każdą chwilę spędzoną razem dla zdrowia polskich dzieci.
+                                </p>
+                                {/* Photo grid — add event photos below */}
+                                {(() => {
+                                    const photos: string[] = [
+                                        // Dodaj ścieżki do zdjęć z wydarzenia:
+                                        // '/images/34-final/gallery/wydarzenie-01.jpg',
+                                    ];
+                                    return photos.length > 0 ? (
+                                        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-4">
+                                            {photos.map((src, i) => (
+                                                <div key={i} className="relative aspect-square rounded-xl overflow-hidden shadow-md">
+                                                    <Image src={src} alt={`Wydarzenie ${i + 1}`} fill className="object-cover hover:scale-105 transition-transform duration-300" sizes="(max-width: 768px) 50vw, 33vw" />
+                                                </div>
+                                            ))}
+                                        </div>
+                                    ) : null;
+                                })()}
+                            </div>
+                        ),
+                    },
+                    {
+                        title: '📸 Galeria zdjęć',
+                        body: (
+                            <div className="space-y-4">
+                                <BlogPhotoGallery photos={final34GalleryPhotos} altPrefix="Zdjęcie z 34. Finału WOŚP Barcelona" />
+                            </div>
+                        ),
+                    },
+                    {
+                        title: '💰 Zebrany wynik — już wkrótce!',
+                        body: (
+                            <div className="bg-gradient-to-r from-red-50 to-pink-50 rounded-xl p-6 border border-red-100 text-center">
+                                <div className="text-5xl mb-4">⏳</div>
+                                <h4 className="text-xl font-bold text-gray-900 mb-2">Trwa sumowanie wyników!</h4>
+                                <p className="text-gray-700 max-w-lg mx-auto">
+                                    Właśnie podsumowujemy wszystkie wpłaty do puszek, aukcje i zbiórki online. Wróć tu wkrótce — ogłosimy ostateczny wynik 34. Finału WOŚP Barcelona!
+                                </p>
+                                <p className="text-sm text-gray-500 mt-3">Śledź nas na social mediach, żeby nie przegapić ogłoszenia. ❤️</p>
+                            </div>
+                        ),
+                    },
+                ],
+            },
+            en: {
+                title: 'Thank you! The 34th WOŚP Finale in Barcelona is behind us ❤️',
+                excerpt: 'A heartfelt thank you to all participants, volunteers, sponsors and everyone who helped us play for the healthy tummies of our kids. We will announce the total raised very soon!',
+                sections: [
+                    {
+                        body: (
+                            <div className="space-y-4">
+                                <div
+                                    className="relative rounded-2xl overflow-hidden p-8 md:p-10 text-white shadow-xl text-center"
+                                    style={{
+                                        backgroundImage: "linear-gradient(135deg, rgba(220, 38, 38, 0.92) 0%, rgba(239, 68, 68, 0.88) 50%, rgba(251, 146, 60, 0.85) 100%), url('/images/34-final/ZDJECIE_W_TLE (1).jpg')",
+                                        backgroundSize: 'cover',
+                                        backgroundPosition: 'center',
+                                    }}
+                                >
+                                    <div className="text-6xl mb-4">❤️</div>
+                                    <h3 className="text-3xl md:text-4xl font-extrabold mb-3 text-white drop-shadow-lg">Thank you from the bottom of our hearts!</h3>
+                                    <p className="text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
+                                        The 34th WOŚP Finale in Barcelona is behind us — and it was a day filled with warmth, joy and selfless giving. Thank you to everyone who was with us on this special day!
+                                    </p>
+                                </div>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: '🙌 Thank you to our volunteers',
+                        body: (
+                            <div className="space-y-3">
+                                <p>This finale would not have been possible without our amazing <strong>volunteers</strong>. From early in the morning until late in the evening, you gave your all — organizing stands, managing collections, helping participants, and making sure everyone felt welcome. You are the heart of our team!</p>
+                                <p>Your hard work, time and enthusiasm create the true magic of the Orchestra. <strong>Thank you!</strong></p>
+                                {(() => {
+                                    const photos: string[] = [];
+                                    return photos.length > 0 ? (
+                                        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-4">
+                                            {photos.map((src, i) => (
+                                                <div key={i} className="relative aspect-square rounded-xl overflow-hidden shadow-md">
+                                                    <Image src={src} alt={`Volunteers ${i + 1}`} fill className="object-cover hover:scale-105 transition-transform duration-300" sizes="(max-width: 768px) 50vw, 33vw" />
+                                                </div>
+                                            ))}
+                                        </div>
+                                    ) : null;
+                                })()}
+                            </div>
+                        ),
+                    },
+                    {
+                        title: '💛 Thank you to our sponsors and partners',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Huge thanks to our <strong>sponsors and partners</strong>, without whom organizing the finale would be impossible. Your support — financial, in-kind, or through services — made it possible for us to provide participants with exceptional experiences and raise even more for the children.</p>
+                                <p>You are part of this special mission — <strong>thank you!</strong></p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: '🎉 Thank you to all participants',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Thank you to everyone who came to <strong>Espacio 88</strong> on January 25, 2026. You create the atmosphere of the Finale — your smiles, enthusiasm for the auctions, willingness to have fun and the shared "Light to Heaven" moment make WOŚP meaningful.</p>
+                                <p>Thank you for every donation, every auctioned item and every moment spent together for the health of Polish children.</p>
+                                {(() => {
+                                    const photos: string[] = [];
+                                    return photos.length > 0 ? (
+                                        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-4">
+                                            {photos.map((src, i) => (
+                                                <div key={i} className="relative aspect-square rounded-xl overflow-hidden shadow-md">
+                                                    <Image src={src} alt={`Event ${i + 1}`} fill className="object-cover hover:scale-105 transition-transform duration-300" sizes="(max-width: 768px) 50vw, 33vw" />
+                                                </div>
+                                            ))}
+                                        </div>
+                                    ) : null;
+                                })()}
+                            </div>
+                        ),
+                    },
+                    {
+                        title: '📸 Photo gallery',
+                        body: (
+                            <div className="space-y-4">
+                                <BlogPhotoGallery photos={final34GalleryPhotos} altPrefix="Photo from the 34th WOŚP Finale Barcelona" />
+                            </div>
+                        ),
+                    },
+                    {
+                        title: '💰 Total raised — coming soon!',
+                        body: (
+                            <div className="bg-gradient-to-r from-red-50 to-pink-50 rounded-xl p-6 border border-red-100 text-center">
+                                <div className="text-5xl mb-4">⏳</div>
+                                <h4 className="text-xl font-bold text-gray-900 mb-2">Tallying the results!</h4>
+                                <p className="text-gray-700 max-w-lg mx-auto">We are currently adding up all box donations, auction results and online contributions. Come back soon — we will announce the final total of the 34th WOŚP Finale Barcelona!</p>
+                                <p className="text-sm text-gray-500 mt-3">Follow us on social media so you don&apos;t miss the announcement. ❤️</p>
+                            </div>
+                        ),
+                    },
+                ],
+            },
+            es: {
+                title: '¡Gracias! El 34.º Final WOŚP en Barcelona ya es historia ❤️',
+                excerpt: '¡Gracias de corazón a todos los participantes, voluntarios, patrocinadores y a todas las personas que nos ayudaron a jugar por las barrigas sanas de nuestros niños! Pronto anunciaremos la cantidad recaudada.',
+                sections: [
+                    {
+                        body: (
+                            <div className="space-y-4">
+                                <div
+                                    className="relative rounded-2xl overflow-hidden p-8 md:p-10 text-white shadow-xl text-center"
+                                    style={{
+                                        backgroundImage: "linear-gradient(135deg, rgba(220, 38, 38, 0.92) 0%, rgba(239, 68, 68, 0.88) 50%, rgba(251, 146, 60, 0.85) 100%), url('/images/34-final/ZDJECIE_W_TLE (1).jpg')",
+                                        backgroundSize: 'cover',
+                                        backgroundPosition: 'center',
+                                    }}
+                                >
+                                    <div className="text-6xl mb-4">❤️</div>
+                                    <h3 className="text-3xl md:text-4xl font-extrabold mb-3 text-white drop-shadow-lg">¡Gracias de todo corazón!</h3>
+                                    <p className="text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
+                                        El 34.º Final WOŚP en Barcelona ya es historia — y fue un día lleno de calidez, alegría y generosidad. ¡Gracias a todos los que estuvieron con nosotros en este día tan especial!
+                                    </p>
+                                </div>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: '🙌 Gracias a nuestros voluntarios',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Este final no habría sido posible sin nuestros increíbles <strong>voluntarios</strong>. Desde primera hora de la mañana hasta bien entrada la noche, lo dieron todo — organizando stands, gestionando colectas, ayudando a los participantes y asegurándose de que todos se sintieran bienvenidos. ¡Sois el corazón de nuestro equipo!</p>
+                                <p>Vuestro trabajo, tiempo y entusiasmo crean la verdadera magia de la Orquesta. <strong>¡Gracias!</strong></p>
+                                {(() => {
+                                    const photos: string[] = [];
+                                    return photos.length > 0 ? (
+                                        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-4">
+                                            {photos.map((src, i) => (
+                                                <div key={i} className="relative aspect-square rounded-xl overflow-hidden shadow-md">
+                                                    <Image src={src} alt={`Voluntarios ${i + 1}`} fill className="object-cover hover:scale-105 transition-transform duration-300" sizes="(max-width: 768px) 50vw, 33vw" />
+                                                </div>
+                                            ))}
+                                        </div>
+                                    ) : null;
+                                })()}
+                            </div>
+                        ),
+                    },
+                    {
+                        title: '💛 Gracias a nuestros patrocinadores y socios',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Un enorme agradecimiento a nuestros <strong>patrocinadores y socios</strong>, sin los cuales organizar el final sería imposible. Vuestro apoyo — económico, en especie o mediante servicios — hizo posible que ofreciéramos a los participantes experiencias excepcionales y recaudáramos aún más para los niños.</p>
+                                <p>Formáis parte de esta misión tan especial — <strong>¡gracias!</strong></p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: '🎉 Gracias a todos los participantes',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Gracias a todos los que vinieron al <strong>Espacio 88</strong> el 25 de enero de 2026. Vosotros creáis la atmósfera del Final — vuestras sonrisas, el entusiasmo en las subastas, las ganas de pasarlo bien y el emotivo momento de la &quot;Luz al cielo&quot; hacen que WOŚP tenga sentido.</p>
+                                <p>Gracias por cada donación, cada artículo subastado y cada momento compartido por la salud de los niños polacos.</p>
+                                {(() => {
+                                    const photos: string[] = [];
+                                    return photos.length > 0 ? (
+                                        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-4">
+                                            {photos.map((src, i) => (
+                                                <div key={i} className="relative aspect-square rounded-xl overflow-hidden shadow-md">
+                                                    <Image src={src} alt={`Evento ${i + 1}`} fill className="object-cover hover:scale-105 transition-transform duration-300" sizes="(max-width: 768px) 50vw, 33vw" />
+                                                </div>
+                                            ))}
+                                        </div>
+                                    ) : null;
+                                })()}
+                            </div>
+                        ),
+                    },
+                    {
+                        title: '📸 Galería de fotos',
+                        body: (
+                            <div className="space-y-4">
+                                <BlogPhotoGallery photos={final34GalleryPhotos} altPrefix="Foto del 34.º Final WOŚP Barcelona" />
+                            </div>
+                        ),
+                    },
+                    {
+                        title: '💰 Total recaudado — ¡muy pronto!',
+                        body: (
+                            <div className="bg-gradient-to-r from-red-50 to-pink-50 rounded-xl p-6 border border-red-100 text-center">
+                                <div className="text-5xl mb-4">⏳</div>
+                                <h4 className="text-xl font-bold text-gray-900 mb-2">¡Sumando los resultados!</h4>
+                                <p className="text-gray-700 max-w-lg mx-auto">Estamos sumando todas las donaciones en caja, resultados de subastas y aportaciones online. ¡Vuelve pronto — anunciaremos el total final del 34.º Final WOŚP Barcelona!</p>
+                                <p className="text-sm text-gray-500 mt-3">Síguenos en redes sociales para no perderte el anuncio. ❤️</p>
+                            </div>
+                        ),
+                    },
+                ],
+            },
+            ca: {
+                title: 'Gràcies! El 34è Final WOŚP a Barcelona ja és història ❤️',
+                excerpt: 'Moltes gràcies a tots els participants, voluntaris, patrocinadors i a totes les persones que ens van ajudar a jugar per les barriguetes sanes dels nostres nens! Aviat anunciarem la quantitat recaptada.',
+                sections: [
+                    {
+                        body: (
+                            <div className="space-y-4">
+                                <div
+                                    className="relative rounded-2xl overflow-hidden p-8 md:p-10 text-white shadow-xl text-center"
+                                    style={{
+                                        backgroundImage: "linear-gradient(135deg, rgba(220, 38, 38, 0.92) 0%, rgba(239, 68, 68, 0.88) 50%, rgba(251, 146, 60, 0.85) 100%), url('/images/34-final/ZDJECIE_W_TLE (1).jpg')",
+                                        backgroundSize: 'cover',
+                                        backgroundPosition: 'center',
+                                    }}
+                                >
+                                    <div className="text-6xl mb-4">❤️</div>
+                                    <h3 className="text-3xl md:text-4xl font-extrabold mb-3 text-white drop-shadow-lg">Gràcies de tot cor!</h3>
+                                    <p className="text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
+                                        El 34è Final WOŚP a Barcelona ja és història — i va ser un dia ple de calor, alegria i generositat. Gràcies a tothom qui va estar amb nosaltres en aquest dia tan especial!
+                                    </p>
+                                </div>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: '🙌 Gràcies als nostres voluntaris',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Aquest final no hauria estat possible sense els nostres increïbles <strong>voluntaris</strong>. Des de primera hora del matí fins ben entrada la nit, ho van donar tot — organitzant parades, gestionant col·lectes, ajudant els participants i assegurant-se que tothom se sentís benvingut. Sou el cor del nostre equip!</p>
+                                <p>La vostra feina, temps i entusiasme creen la veritable màgia de l&apos;Orquestra. <strong>Gràcies!</strong></p>
+                                {(() => {
+                                    const photos: string[] = [];
+                                    return photos.length > 0 ? (
+                                        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-4">
+                                            {photos.map((src, i) => (
+                                                <div key={i} className="relative aspect-square rounded-xl overflow-hidden shadow-md">
+                                                    <Image src={src} alt={`Voluntaris ${i + 1}`} fill className="object-cover hover:scale-105 transition-transform duration-300" sizes="(max-width: 768px) 50vw, 33vw" />
+                                                </div>
+                                            ))}
+                                        </div>
+                                    ) : null;
+                                })()}
+                            </div>
+                        ),
+                    },
+                    {
+                        title: '💛 Gràcies als nostres patrocinadors i socis',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Un enorme agraïment als nostres <strong>patrocinadors i socis</strong>, sense els quals organitzar el final seria impossible. El vostre suport — econòmic, en espècie o mitjançant serveis — va fer possible que oferíssim als participants experiències excepcionals i recaptéssim encara més per als nens.</p>
+                                <p>Formeu part d&apos;aquesta missió tan especial — <strong>gràcies!</strong></p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: '🎉 Gràcies a tots els participants',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Gràcies a tothom qui va venir a l&apos;<strong>Espacio 88</strong> el 25 de gener de 2026. Vosaltres creeu l&apos;atmosfera del Final — els vostres somriures, l&apos;entusiasme a les subhastes, les ganes de passar-ho bé i l&apos;emotiu moment de la &quot;Llum al cel&quot; fan que WOŚP tingui sentit.</p>
+                                <p>Gràcies per cada donació, cada article subhastat i cada moment compartit per la salut dels nens polonesos.</p>
+                                {(() => {
+                                    const photos: string[] = [];
+                                    return photos.length > 0 ? (
+                                        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-4">
+                                            {photos.map((src, i) => (
+                                                <div key={i} className="relative aspect-square rounded-xl overflow-hidden shadow-md">
+                                                    <Image src={src} alt={`Esdeveniment ${i + 1}`} fill className="object-cover hover:scale-105 transition-transform duration-300" sizes="(max-width: 768px) 50vw, 33vw" />
+                                                </div>
+                                            ))}
+                                        </div>
+                                    ) : null;
+                                })()}
+                            </div>
+                        ),
+                    },
+                    {
+                        title: '📸 Galeria de fotos',
+                        body: (
+                            <div className="space-y-4">
+                                <BlogPhotoGallery photos={final34GalleryPhotos} altPrefix="Foto del 34è Final WOŚP Barcelona" />
+                            </div>
+                        ),
+                    },
+                    {
+                        title: '💰 Total recaptat — molt aviat!',
+                        body: (
+                            <div className="bg-gradient-to-r from-red-50 to-pink-50 rounded-xl p-6 border border-red-100 text-center">
+                                <div className="text-5xl mb-4">⏳</div>
+                                <h4 className="text-xl font-bold text-gray-900 mb-2">Sumant els resultats!</h4>
+                                <p className="text-gray-700 max-w-lg mx-auto">Estem sumant totes les donacions a les caixes, resultats de subhastes i aportacions en línia. Torna aviat — anunciarem el total final del 34è Final WOŚP Barcelona!</p>
+                                <p className="text-sm text-gray-500 mt-3">Segueix-nos a les xarxes socials per no perdre&apos;t l&apos;anunci. ❤️</p>
+                            </div>
+                        ),
+                    },
+                ],
+            },
+        },
+    },
     {
         slug: 'zapraszamy-na-34-final-wosp-w-barcelonie',
         date: '2026-01-21',

@@ -68,7 +68,7 @@ export default async function BlogPostPage({
                 {s.title && (
                   <h2 className="text-xl font-semibold text-gray-900">{s.title}</h2>
                 )}
-                <div className="max-w-none leading-relaxed text-gray-900 [&_p]:text-gray-900 [&_h1]:text-gray-900 [&_h2]:text-gray-900 [&_h3]:text-gray-900 [&_li]:text-gray-900 [&_strong]:text-gray-900 [&_em]:text-gray-900/90 [&_a]:text-red-700 hover:[&_a]:underline [&_ul]:list-disc [&_ul]:pl-6 [&_ol]:list-decimal [&_ol]:pl-6 [&_li]:marker:text-gray-500 [&_img]:rounded-lg [&_img]:border">
+                <div className="max-w-none leading-relaxed text-gray-900 [&_p:not(.text-white):not(.text-white\/90)]:text-gray-900 [&_h1:not(.text-white)]:text-gray-900 [&_h2:not(.text-white)]:text-gray-900 [&_h3:not(.text-white)]:text-gray-900 [&_li]:text-gray-900 [&_strong:not(.text-white)]:text-gray-900 [&_em]:text-gray-900/90 [&_a]:text-red-700 hover:[&_a]:underline [&_ul]:list-disc [&_ul]:pl-6 [&_ol]:list-decimal [&_ol]:pl-6 [&_li]:marker:text-gray-500 [&_img]:rounded-lg [&_img]:border">
                   {s.body}
                 </div>
               </section>
