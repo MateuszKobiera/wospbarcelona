@@ -23,7 +23,8 @@ const pastEventsData = [
     date: '2026-01-25',
     location: 'Espacio 88, Sant Martí, Barcelona',
     categoryKey: 'final',
-    image: '/images/kalendarz/fb_FINAL.jpg'
+    image: '/images/kalendarz/fb_FINAL.jpg',
+    totalAmount: '12 408 €'
   },
   {
     id: 10,
@@ -168,6 +169,7 @@ export default function EventsPageClient() {
                 const eventLocation = t.has(`items.${event.id}.location`)
                   ? t(`items.${event.id}.location`)
                   : event.location;
+
                 return (
                   <Card key={event.id} className="h-full bg-white border border-red-100 shadow-sm hover:shadow-md transition-shadow">
                     <div className="h-32 bg-linear-to-br from-gray-400 to-gray-500 flex items-center justify-center">
@@ -207,14 +209,21 @@ export default function EventsPageClient() {
                         </div>
                         {(event.amountRaised || event.totalAmount) && (
                           <div className="space-y-1">
-                            {event.amountRaised && (
+                            {event.amountRaised ? (
+                              <>
+                                <div className="flex items-center text-sm font-semibold text-green-600">
+                                  <span className="mr-2">💰</span>
+                                  {t('page.duringEvent')}: {event.amountRaised}
+                                </div>
+                                {event.totalAmount && (
+                                  <div className="flex items-center text-xs text-gray-600 ml-6">
+                                    {t('page.total')}: {event.totalAmount}
+                                  </div>
+                                )}
+                              </>
+                            ) : (
                               <div className="flex items-center text-sm font-semibold text-green-600">
                                 <span className="mr-2">💰</span>
-                                {t('page.duringEvent')}: {event.amountRaised}
-                              </div>
-                            )}
-                            {event.totalAmount && (
-                              <div className="flex items-center text-xs text-gray-600 ml-6">
                                 {t('page.total')}: {event.totalAmount}
                               </div>
                             )}
@@ -222,9 +231,11 @@ export default function EventsPageClient() {
                         )}
                       </div>
                       <Link href={`/${locale}/events/${event.id}`}>
-                        <Button variant="ghost" className="text-red-600 hover:text-red-700 hover:bg-red-50 p-2 px-4 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-md group cursor-pointer">
-                          <span className="group-hover:translate-x-1 transition-transform duration-300">{t('page.seeReport')}</span>
-                          <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
+                        <Button asChild variant="ghost" className="text-red-600 hover:text-red-700 hover:bg-red-50 p-2 px-4 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-md group cursor-pointer" suppressHydrationWarning>
+                          <span className="flex items-center">
+                            <span className="group-hover:translate-x-1 transition-transform duration-300">{t('page.seeReport')}</span>
+                            <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
+                          </span>
                         </Button>
                       </Link>
                     </CardContent>

@@ -29,6 +29,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'home' });
   const blogPosts = getAllPostsForLocale(locale);
+  const fundsRaisedValue = locale === 'en' ? '48k €+' : locale === 'pl' ? '48 tys. €+' : '48 mil €+';
+
   return (
     <main>
       <Hero />
@@ -48,10 +50,10 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               {t('thankYouSection.description')}
             </p>
 
-            {/* Results coming soon card */}
-            <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm rounded-full px-5 py-2.5 mb-5 border border-white/30">
+            {/* Results card */}
+            <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm rounded-full px-5 py-2.5 mb-5 border border-white/30 shadow-sm">
               <Sparkles className="w-4 h-4 text-yellow-300" />
-              <span className="text-sm font-semibold text-white">{t('thankYouSection.resultsComingSoon')}</span>
+              <span className="text-base font-bold text-white tracking-wide">{t('thankYouSection.resultsAmount')}</span>
               <Sparkles className="w-4 h-4 text-yellow-300" />
             </div>
           </div>
@@ -195,8 +197,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">{t('amountsTitle')}</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {[
+              { finalNum: 34, amount: '12 408.00 €' },
               { finalNum: 33, amount: '13 881.91 €' },
               { finalNum: 32, amount: '10 460.47 €' },
               { finalNum: 31, amount: '8 989.94 €' },
@@ -207,11 +210,11 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                 className="group rounded-2xl p-[1px] bg-gradient-to-br from-red-500 via-pink-500 to-orange-400 shadow-[0_1px_0_rgba(0,0,0,0.03)]"
               >
                 <Card className="rounded-2xl bg-white/95 backdrop-blur border border-gray-200/60 shadow-sm transition-all duration-200 group-hover:shadow-md group-hover:-translate-y-0.5 cursor-default">
-                  <CardContent className="p-6 md:p-7 text-center">
+                  <CardContent className="p-5 md:p-6 text-center">
                     <div className="text-xs font-semibold text-gray-700/90 mb-3 cursor-default">
                       {item.finalNum} {t('finalLabel')}
                     </div>
-                    <div className="text-3xl md:text-4xl font-extrabold tracking-tight text-gray-900 tabular-nums cursor-default">
+                    <div className="text-2xl xl:text-3xl font-extrabold tracking-tight text-gray-900 tabular-nums cursor-default whitespace-nowrap">
                       {item.amount}
                     </div>
                   </CardContent>
@@ -291,8 +294,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </div>
       </section>
 
-
-
       {/* Ostatnie wpisy na blogu */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -336,7 +337,11 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             {[
               { icon: Heart, value: '9+', label: t('stats.yearsHelp') },
               { icon: UsersIcon, value: '100+', label: t('stats.volunteers') },
-              { icon: HeartHandshakeIcon, value: '35 tys. €+', label: t('stats.fundsRaised') }
+              {
+                icon: HeartHandshakeIcon,
+                value: fundsRaisedValue,
+                label: t('stats.fundsRaised')
+              }
             ].map((stat, index) => (
               <div key={index} className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex justify-center mb-4">

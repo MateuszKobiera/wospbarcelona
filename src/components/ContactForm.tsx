@@ -8,8 +8,7 @@ function useIsClient() {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsClient(true), 0);
-    return () => clearTimeout(timer);
+    setIsClient(true);
   }, []);
 
   return isClient;
@@ -75,7 +74,7 @@ export function ContactForm({ to = "sztab@wospbarcelona.org" }: { to?: string })
       </div>
       <div className="mt-4 flex items-center justify-between gap-3">
         <p className="text-xs text-gray-500">{t('note')}</p>
-        <Button type="submit" className="bg-red-600 hover:bg-red-700 text-white cursor-pointer">{t('submit')}</Button>
+        <Button type="submit" className="bg-red-600 hover:bg-red-700 text-white cursor-pointer" suppressHydrationWarning>{t('submit')}</Button>
       </div>
     </form>
   );

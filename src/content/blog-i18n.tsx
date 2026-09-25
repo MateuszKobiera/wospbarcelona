@@ -82,7 +82,7 @@ export const blogPostsI18n: BlogPostI18n[] = [
         content: {
             pl: {
                 title: 'Dziękujemy! 34. Finał WOŚP w Barcelonie za nami ❤️',
-                excerpt: 'Serdecznie dziękujemy wszystkim uczestnikom, wolontariuszom, sponsorom i każdej osobie, która pomogła nam zagrać dla zdrowych brzuszków naszych dzieci. Wkrótce ogłosimy zebraną kwotę!',
+                excerpt: 'Serdecznie dziękujemy wszystkim uczestnikom, wolontariuszom, sponsorom i darczyńcom! Razem podczas 34. Finału w Barcelonie zebraliśmy aż 12 408 € na zdrowe brzuszki naszych dzieci!',
                 sections: [
                     {
                         body: (
@@ -184,15 +184,18 @@ export const blogPostsI18n: BlogPostI18n[] = [
                         ),
                     },
                     {
-                        title: '💰 Zebrany wynik — już wkrótce!',
+                        title: '💰 Zebrany wynik — 12 408 €!',
                         body: (
-                            <div className="bg-gradient-to-r from-red-50 to-pink-50 rounded-xl p-6 border border-red-100 text-center">
-                                <div className="text-5xl mb-4">⏳</div>
-                                <h4 className="text-xl font-bold text-gray-900 mb-2">Trwa sumowanie wyników!</h4>
-                                <p className="text-gray-700 max-w-lg mx-auto">
-                                    Właśnie podsumowujemy wszystkie wpłaty do puszek, aukcje i zbiórki online. Wróć tu wkrótce — ogłosimy ostateczny wynik 34. Finału WOŚP Barcelona!
+                            <div className="bg-gradient-to-r from-red-50 via-pink-50 to-orange-50 rounded-xl p-6 md:p-8 border border-red-200 text-center shadow-sm">
+                                <div className="text-5xl mb-3">🎉</div>
+                                <h4 className="text-2xl md:text-3xl font-extrabold text-red-600 mb-2">12 408 €</h4>
+                                <p className="text-lg font-semibold text-gray-900 mb-2">
+                                    Tyle wspólnie zebraliśmy podczas 34. Finału WOŚP w Barcelonie!
                                 </p>
-                                <p className="text-sm text-gray-500 mt-3">Śledź nas na social mediach, żeby nie przegapić ogłoszenia. ❤️</p>
+                                <p className="text-gray-700 max-w-lg mx-auto">
+                                    Dzięki Waszym gorącym sercom, datkom do puszek, wylicytowanym przedmiotom oraz wpłatom do e-skarbonki, zebrana kwota wesprze zakup nowoczesnego sprzętu do diagnostyki i leczenia chorób przewodu pokarmowego u dzieci w Polsce.
+                                </p>
+                                <p className="text-sm font-semibold text-red-500 mt-4">Dziękujemy, że gracie z nami do końca świata i jeden dzień dłużej! ❤️</p>
                             </div>
                         ),
                     },
@@ -200,7 +203,7 @@ export const blogPostsI18n: BlogPostI18n[] = [
             },
             en: {
                 title: 'Thank you! The 34th WOŚP Finale in Barcelona is behind us ❤️',
-                excerpt: 'A heartfelt thank you to all participants, volunteers, sponsors and everyone who helped us play for the healthy tummies of our kids. We will announce the total raised very soon!',
+                excerpt: 'A heartfelt thank you to all participants, volunteers, sponsors and donors! Together during the 34th Finale in Barcelona we raised 12,408 € for the healthy tummies of our kids!',
                 sections: [
                     {
                         body: (
@@ -282,13 +285,18 @@ export const blogPostsI18n: BlogPostI18n[] = [
                         ),
                     },
                     {
-                        title: '💰 Total raised — coming soon!',
+                        title: '💰 Total raised — 12,408 €!',
                         body: (
-                            <div className="bg-gradient-to-r from-red-50 to-pink-50 rounded-xl p-6 border border-red-100 text-center">
-                                <div className="text-5xl mb-4">⏳</div>
-                                <h4 className="text-xl font-bold text-gray-900 mb-2">Tallying the results!</h4>
-                                <p className="text-gray-700 max-w-lg mx-auto">We are currently adding up all box donations, auction results and online contributions. Come back soon — we will announce the final total of the 34th WOŚP Finale Barcelona!</p>
-                                <p className="text-sm text-gray-500 mt-3">Follow us on social media so you don&apos;t miss the announcement. ❤️</p>
+                            <div className="bg-gradient-to-r from-red-50 via-pink-50 to-orange-50 rounded-xl p-6 md:p-8 border border-red-200 text-center shadow-sm">
+                                <div className="text-5xl mb-3">🎉</div>
+                                <h4 className="text-2xl md:text-3xl font-extrabold text-red-600 mb-2">12,408 €</h4>
+                                <p className="text-lg font-semibold text-gray-900 mb-2">
+                                    That is how much we raised together during the 34th WOŚP Finale in Barcelona!
+                                </p>
+                                <p className="text-gray-700 max-w-lg mx-auto">
+                                    Thanks to your warm hearts, donations into collection boxes, charity auctions, and online e-collection contributions, these funds will support modern equipment for diagnosing and treating gastrointestinal diseases in children in Poland.
+                                </p>
+                                <p className="text-sm font-semibold text-red-500 mt-4">Thank you for playing with us till the end of the world and one day longer! ❤️</p>
                             </div>
                         ),
                     },
@@ -296,7 +304,7 @@ export const blogPostsI18n: BlogPostI18n[] = [
             },
             es: {
                 title: '¡Gracias! El 34.º Final WOŚP en Barcelona ya es historia ❤️',
-                excerpt: '¡Gracias de corazón a todos los participantes, voluntarios, patrocinadores y a todas las personas que nos ayudaron a jugar por las barrigas sanas de nuestros niños! Pronto anunciaremos la cantidad recaudada.',
+                excerpt: '¡Gracias de corazón a todos los participantes, voluntarios, patrocinadores y donantes! Juntos durante el 34.º Final en Barcelona hemos recaudado 12.408 € para las barrigas sanas de nuestros niños.',
                 sections: [
                     {
                         body: (
@@ -378,13 +386,18 @@ export const blogPostsI18n: BlogPostI18n[] = [
                         ),
                     },
                     {
-                        title: '💰 Total recaudado — ¡muy pronto!',
+                        title: '💰 Total recaudado — ¡12.408 €!',
                         body: (
-                            <div className="bg-gradient-to-r from-red-50 to-pink-50 rounded-xl p-6 border border-red-100 text-center">
-                                <div className="text-5xl mb-4">⏳</div>
-                                <h4 className="text-xl font-bold text-gray-900 mb-2">¡Sumando los resultados!</h4>
-                                <p className="text-gray-700 max-w-lg mx-auto">Estamos sumando todas las donaciones en caja, resultados de subastas y aportaciones online. ¡Vuelve pronto — anunciaremos el total final del 34.º Final WOŚP Barcelona!</p>
-                                <p className="text-sm text-gray-500 mt-3">Síguenos en redes sociales para no perderte el anuncio. ❤️</p>
+                            <div className="bg-gradient-to-r from-red-50 via-pink-50 to-orange-50 rounded-xl p-6 md:p-8 border border-red-200 text-center shadow-sm">
+                                <div className="text-5xl mb-3">🎉</div>
+                                <h4 className="text-2xl md:text-3xl font-extrabold text-red-600 mb-2">12.408 €</h4>
+                                <p className="text-lg font-semibold text-gray-900 mb-2">
+                                    ¡Esto es lo que recaudamos juntos durante el 34.º Final WOŚP en Barcelona!
+                                </p>
+                                <p className="text-gray-700 max-w-lg mx-auto">
+                                    Gracias a vuestros corazones solidarios, donaciones a las huchas, subastas benéficas y aportaciones online, estos fondos apoyarán la compra de equipamiento moderno para el diagnóstico y tratamiento de enfermedades gastrointestinales en niños en Polonia.
+                                </p>
+                                <p className="text-sm font-semibold text-red-500 mt-4">¡Gracias por jugar con nosotros hasta el fin del mundo y un día más! ❤️</p>
                             </div>
                         ),
                     },
@@ -392,7 +405,7 @@ export const blogPostsI18n: BlogPostI18n[] = [
             },
             ca: {
                 title: 'Gràcies! El 34è Final WOŚP a Barcelona ja és història ❤️',
-                excerpt: 'Moltes gràcies a tots els participants, voluntaris, patrocinadors i a totes les persones que ens van ajudar a jugar per les barriguetes sanes dels nostres nens! Aviat anunciarem la quantitat recaptada.',
+                excerpt: 'Moltes gràcies a tots els participants, voluntaris, patrocinadors i donants! Junts durant el 34è Final a Barcelona hem recaptat 12.408 € per a les barriguetes sanes dels nostres nens!',
                 sections: [
                     {
                         body: (
@@ -474,13 +487,18 @@ export const blogPostsI18n: BlogPostI18n[] = [
                         ),
                     },
                     {
-                        title: '💰 Total recaptat — molt aviat!',
+                        title: '💰 Total recaptat — 12.408 €!',
                         body: (
-                            <div className="bg-gradient-to-r from-red-50 to-pink-50 rounded-xl p-6 border border-red-100 text-center">
-                                <div className="text-5xl mb-4">⏳</div>
-                                <h4 className="text-xl font-bold text-gray-900 mb-2">Sumant els resultats!</h4>
-                                <p className="text-gray-700 max-w-lg mx-auto">Estem sumant totes les donacions a les caixes, resultats de subhastes i aportacions en línia. Torna aviat — anunciarem el total final del 34è Final WOŚP Barcelona!</p>
-                                <p className="text-sm text-gray-500 mt-3">Segueix-nos a les xarxes socials per no perdre&apos;t l&apos;anunci. ❤️</p>
+                            <div className="bg-gradient-to-r from-red-50 via-pink-50 to-orange-50 rounded-xl p-6 md:p-8 border border-red-200 text-center shadow-sm">
+                                <div className="text-5xl mb-3">🎉</div>
+                                <h4 className="text-2xl md:text-3xl font-extrabold text-red-600 mb-2">12.408 €</h4>
+                                <p className="text-lg font-semibold text-gray-900 mb-2">
+                                    Això és el que hem recaptat junts durant el 34è Final WOŚP a Barcelona!
+                                </p>
+                                <p className="text-gray-700 max-w-lg mx-auto">
+                                    Gràcies als vostres cors solidaris, donacions a les guardioles, subhastes benèfiques i aportacions en línia, aquests fons donaran suport a la compra d&apos;equipament modern per al diagnòstic i tractament de malalties gastrointestinals en infants a Polònia.
+                                </p>
+                                <p className="text-sm font-semibold text-red-500 mt-4">Gràcies per jugar amb nosaltres fins a la fi del món i un dia més! ❤️</p>
                             </div>
                         ),
                     },

@@ -69,7 +69,8 @@
       "blogButton": "Czytaj relację z finału",
       "donateStillOpen": "E-skarbonka nadal czynna",
       "donateStillOpenDesc": "Możesz nadal wspierać naszą zbiórkę online!",
-      "donateButton": "Wpłać teraz"
+      "donateButton": "Wpłać teraz",
+      "resultsAmount": "Razem zebraliśmy 12 408 €!"
     },
     "photoSection": {
       "title": "Zdjęcia z 34. Finału WOŚP",
@@ -344,6 +345,16 @@
       "christmasWorkshop": "Warsztaty Świąteczne"
     },
     "items": {
+      "1": {
+        "title": "34. Finał WOŚP w Barcelonie",
+        "description": "🎉 Wspaniały 34. Finał! Zebraliśmy łącznie 12 408 € na zdrowe brzuszki dla dzieci w Polsce. Dziękujemy wszystkim za obecność i wsparcie!",
+        "fullDescription": "🎉 34. Finał WOŚP w Barcelonie - A MY, POLACY!\n\n📍 Miejsce: Espacio 88 — Carrer de Pamplona 88, Sant Martí, Barcelona\n📅 Data: 25 stycznia 2026\n🕐 Godzina: 11:00 - 20:00\n🎯 Cel: Choroby przewodu pokarmowego u dzieci\n\n📋 HARMONOGRAM DNIA:\n\n11:00-16:00 | Warsztaty dla dzieci (Kosmo HisPLano - Carrer d'Àlaba 52)\n12:00 | Otwarcie sali (Espacio 88)\n12:30 | Uroczyste rozpoczęcie\n13:00 | Licytacje\n13:30 | Quiz - Polacy vs Hiszpanie\n14:00 | Panel literacki z licytacją\n15:00 | WOŚP-oliada\n15:45 | Tort\n16:00 | Bingo Muzyczne\n16:30 | Licytacje\n17:00 | Quiz - Polacy vs Hiszpanie\n18:00 | Bingo Muzyczne\n19:00 | Licytacje\n19:30 | Uroczyste zakończenie\n20:00 | Światełko do nieba\n\n🎪 DLA DZIECI:\n• Warsztaty i gra miejska (Kosmo HisPLano - Carrer d'Àlaba 52)\n• Bańki (Park - Carrer d'Àlaba 37)\n• Tatuaże (Espacio 88)\n• Bransoletki, mydełka\n• Symulator jazdy\n• Malowanie twarzy\n\n🍽️ GASTRONOMIA:\n• Polska kiełbasa\n• Pierogi\n• Ciasta, pierogi\n• Sałatki\n• Napoje\n• Tort (Delicias by Bea)\n\n📚 KULTURA:\n• Panel literacki (Marta Cybulska, Agnieszka Łukomska, Agnieszka Wolińska-Skuza)\n• Licytacje książek\n• Kiermasz książek\n\n🎮 ROZRYWKA:\n• Quiz Polacy vs Hiszpanie\n• Bingo Muzyczne\n• Loteria\n• WOŚP-oliada\n• Licytacje gadżetów WOŚP\n• Turniej ping-ponga\n\n🇵🇱❤️ Polska kultura w Barcelonie\nPodczas finału promujemy polską kulturę, język, twórców i tradycje — tworząc przestrzeń, gdzie Polonia, Hiszpanie i międzynarodowa społeczność mogą spotkać się, współtworzyć i poznawać się nawzajem.\n\n❤️ Dlaczego gramy?\nZbieramy środki na wsparcie diagnostyki i leczenia chorób przewodu pokarmowego u dzieci — aby najmłodsi pacjenci w Polsce mogli korzystać z najnowocześniejszego sprzętu i lepszej opieki."
+      },
+      "5": {
+        "title": "20. Bieg WOŚP \"Policz się z cukrzycą\"",
+        "description": "Bieg charytatywny na 5 km. Start i meta: Hotel W Barcelona (Barceloneta). ** UWAGA: ZMIANA TERMINU I MIEJSCA!** Bieg odbędzie się w NIEDZIELĘ 01.02.2026 spod Hotelu W Barcelona. Trasa wzdłuż plaży, nawrót i powrót.",
+        "fullDescription": "Dołącz do 20. Biegu WOŚP \"Policz się z cukrzycą\"! To bieg charytatywny na dystansie 5 km przez piękną Barcelonę.\n\n🏃‍♂️ SZCZEGÓŁY BIEGU:\n• Dystans: 5 km\n• Data: __NIEDZIELA 01.02.2026__ (zmieniona z powodu pogody)\n• Start/Zbiórka: __Hotel W Barcelona__ (Barceloneta)\n• Trasa: wzdłuż plaży, nawrót i powrót\n• Meta: Hotel W Barcelona (dla każdego czeka medal)\n\n  **UWAGA - ZMIANA TERMINU I MIEJSCA STARTU!**  \nZ powodu zapowiadanych intensywnych opadów deszczu i ze względu na bezpieczeństwo uczestników, bieg został przeniesiony z 18.01 na __**NIEDZIELĘ 01.02.2026**__. Miejsce startu i mety zostało ustalone pod Hotelem W Barcelona.\n\n📞 KONTAKT DO ORGANIZATORÓW:\nW razie pytań lub problemów prosimy o kontakt na czacie lub z koordynatorką biegu Anetą pod numerem +34 637 486 551.\n\nZapraszamy wszystkich na start, nawet bez zapisu — można z nami pobiec, ale tylko zarejestrowani uczestnicy otrzymają oficjalne koszulki."
+      },
       "7": {
         "title": "Spotkanie Wolontariuszy Online",
         "description": "Spotkanie online dla wolontariuszy WOŚP Barcelona. Skontaktuj się z nami przez formularz kontaktowy, aby otrzymać link do spotkania.",
@@ -355,30 +366,35 @@
         "description": "🤝 Spotkanie wolontariuszy WOŚP Barcelona w Wawel Restobar — naszym głównym sponsorze! Poznaj zespół, skosztuj polskiego jedzenia i przygotuj się do 34. Finału.",
         "fullDescription": "🤝 Spotkanie wolontariuszy WOŚP Barcelona w Wawel Restobar\nZapraszamy na spotkanie wolontariuszy WOŚP Barcelona w Wawel Restobar — naszym głównym sponsorze! To idealne miejsce, aby poznać się, porozmawiać i zjeść pyszne polskie jedzenie oraz skosztować napojów prosto z Polski.\n\nPodczas spotkania:\n• poznasz zespół WOŚP Barcelona\n• dowiesz się o planach na 34. Finał\n• zadasz pytania i podzielisz się swoimi pomysłami\n• otrzymasz materiały informacyjne\n• poznasz innych wolontariuszy z Barcelony, Katalonii i Polski\n\nDlaczego warto przyjść:\n• Wawel Restobar to miejsce stworzone przez Polaków dla Polaków\n• zjesz tradycyjne dania i wypijesz polskie napoje\n• poczujesz klimat domowej, polskiej gościnności\n• wesprzesz lokalnego sponsora WOŚP\n\n📝 Jak dołączyć:\nPrzyjdź w wyznaczonym terminie lub skontaktuj się z nami, jeśli masz pytania.\n\nSpotkanie odbędzie się w Wawel Restobar — do zobaczenia!"
       },
-      "10": {
-        "title": "Lepienie Pierogów na Finał WOŚP",
-        "description": "🥟 Zapraszamy na wspólne lepienie pierogów w Wawel Restobar! Przygotujemy razem pyszne pierogi na 34. Finał WOŚP. Im nas więcej, tym lepiej!",
-        "fullDescription": "🥟 Lepienie Pierogów na Finał WOŚP w Wawel Restobar\n\nZapraszamy wszystkich chętnych na wspólne lepienie pierogów, które będą serwowane podczas 34. Finału WOŚP w Barcelonie!\n\n📍 Gdzie: Wawel Restobar — nasz główny sponsor\n📅 Kiedy: Sobota, 24 stycznia 2026\n🕐 Godziny: 13:00 - 19:00\n\n✨ Dlaczego warto przyjść?\n\n• Wspólna zabawa i integracja przed finałem\n• Nauczysz się lepić tradycyjne polskie pierogi\n• Pomożesz przygotować jedzenie na finał WOŚP\n• Poczujesz atmosferę polskiej gościnności\n• Poznasz innych wolontariuszy i sympatyków WOŚP\n• Wesprzesz naszego sponsora — Wawel Restobar\n\n👥 Dla kogo?\nDla każdego! Nie musisz mieć doświadczenia w lepieniu pierogów — nauczymy Cię wszystkiego. Możesz przyjść o dowolnej godzinie między 13:00 a 19:00.\n\n📝 Rejestracja:\nNie jest wymagana rejestracja — po prostu przyjdź! Im nas więcej, tym więcej pierogów ulepimy dla finału.\n\n🥟 Co będziemy robić?\n• Przygotowywanie ciasta na pierogi\n• Lepienie różnych rodzajów pierogów\n• Wspólna praca w przyjaznej atmosferze\n• Rozmowy o planach na finał WOŚP\n\n💪 Każda para rąk się przyda!\nNiezależnie od tego, czy jesteś ekspertem w kuchni, czy dopiero zaczynasz swoją przygodę z gotowaniem — każda pomoc jest cenna. Razem przygotujemy pyszne pierogi, które będą smakowały wszystkim uczestnikom finału!\n\nDo zobaczenia w Wawel Restobar!"
-      },
-      "5": {
-        "title": "20. Bieg WOŚP \"Policz się z cukrzycą\"",
-        "description": "Bieg charytatywny na 5 km. Start i meta: Hotel W Barcelona (Barceloneta). ** UWAGA: ZMIANA TERMINU I MIEJSCA!** Bieg odbędzie się w NIEDZIELĘ 01.02.2026 spod Hotelu W Barcelona. Trasa wzdłuż plaży, nawrót i powrót.",
-        "fullDescription": "Dołącz do 20. Biegu WOŚP \"Policz się z cukrzycą\"! To bieg charytatywny na dystansie 5 km przez piękną Barcelonę.\n\n🏃‍♂️ SZCZEGÓŁY BIEGU:\n• Dystans: 5 km\n• Data: __NIEDZIELA 01.02.2026__ (zmieniona z powodu pogody)\n• Start/Zbiórka: __Hotel W Barcelona__ (Barceloneta)\n• Trasa: wzdłuż plaży, nawrót i powrót\n• Meta: Hotel W Barcelona (dla każdego czeka medal)\n\n  **UWAGA - ZMIANA TERMINU I MIEJSCA STARTU!**  \nZ powodu zapowiadanych intensywnych opadów deszczu i ze względu na bezpieczeństwo uczestników, bieg został przeniesiony z 18.01 na __**NIEDZIELĘ 01.02.2026**__. Miejsce startu i mety zostało ustalone pod Hotelem W Barcelona.\n\n📞 KONTAKT DO ORGANIZATORÓW:\nW razie pytań lub problemów prosimy o kontakt na czacie lub z koordynatorką biegu Anetą pod numerem +34 637 486 551.\n\nZapraszamy wszystkich na start, nawet bez zapisu — można z nami pobiec, ale tylko zarejestrowani uczestnicy otrzymają oficjalne koszulki."
-      },
-      "1": {
-        "title": "34. Finał WOŚP w Barcelonie",
-        "description": "🎉 Największe wydarzenie charytatywne roku w Barcelonie! Dołącz do nas w Espacio 88 na dzień pełen warsztatów, występów, aukcji i integracji. Gramy dla zdrowych brzuszków polskich dzieci!",
-        "fullDescription": "🎉 34. Finał WOŚP w Barcelonie - A MY, POLACY!\n\n📍 Miejsce: Espacio 88 — Carrer de Pamplona 88, Sant Martí, Barcelona\n📅 Data: 25 stycznia 2026\n🕐 Godzina: 11:00 - 20:00\n🎯 Cel: Choroby przewodu pokarmowego u dzieci\n\n📋 HARMONOGRAM DNIA:\n\n11:00-16:00 | Warsztaty dla dzieci (Kosmo HisPLano - Carrer d'Àlaba 52)\n12:00 | Otwarcie sali (Espacio 88)\n12:30 | Uroczyste rozpoczęcie\n13:00 | Licytacje\n13:30 | Quiz - Polacy vs Hiszpanie\n14:00 | Panel literacki z licytacją\n15:00 | WOŚP-oliada\n15:45 | Tort\n16:00 | Bingo Muzyczne\n16:30 | Licytacje\n17:00 | Quiz - Polacy vs Hiszpanie\n18:00 | Bingo Muzyczne\n19:00 | Licytacje\n19:30 | Uroczyste zakończenie\n20:00 | Światełko do nieba\n\n🎪 DLA DZIECI:\n• Warsztaty i gra miejska (Kosmo HisPLano - Carrer d'Àlaba 52)\n• Bańki (Park - Carrer d'Àlaba 37)\n• Tatuaże (Espacio 88)\n• Bransoletki, mydełka\n• Symulator jazdy\n• Malowanie twarzy\n\n🍽️ GASTRONOMIA:\n• Polska kiełbasa\n• Pierogi\n• Ciasta, pierogi\n• Sałatki\n• Napoje\n• Tort (Delicias by Bea)\n\n📚 KULTURA:\n• Panel literacki (Marta Cybulska, Agnieszka Łukomska, Agnieszka Wolińska-Skuza)\n• Licytacje książek\n• Kiermasz książek\n\n🎮 ROZRYWKA:\n• Quiz Polacy vs Hiszpanie\n• Bingo Muzyczne\n• Loteria\n• WOŚP-oliada\n• Licytacje gadżetów WOŚP\n• Turniej ping-ponga\n\n🇵🇱❤️ Polska kultura w Barcelonie\nPodczas finału promujemy polską kulturę, język, twórców i tradycje — tworząc przestrzeń, gdzie Polonia, Hiszpanie i międzynarodowa społeczność mogą spotkać się, współtworzyć i poznawać się nawzajem.\n\n❤️ Dlaczego gramy?\nZbieramy środki na wsparcie diagnostyki i leczenia chorób przewodu pokarmowego u dzieci — aby najmłodsi pacjenci w Polsce mogli korzystać z najnowocześniejszego sprzętu i lepszej opieki."
-      },
       "9": {
         "title": "Koniec Aukcji Charytatywnych na Allegro",
         "description": "Ostatni dzień przyjmowania ofert charytatywnych w ramach Akcji WOŚP. Oferty mogą być prowadzone od 01.12.2025 – 16.02.2026r.",
         "fullDescription": "To ostatni dzień przyjmowania ofert charytatywnych na platformie Allegro w ramach 34. Finału WOŚP!\n\n📅 OKRES AUKCJI CHARYTATYWNYCH:\nOferty charytatywne w ramach Akcji WOŚP mogą być prowadzone w okresie od 01.12.2025 – 16.02.2026r.\n\n💻 JAK WZIĄĆ UDZIAŁ:\nKliknij przycisk \"Zobacz aukcje\" po prawej stronie, wybierz jedną z naszych licytacji, złóż swoją ofertę i licytuj!\n Powodzenia!\n\n🎯 CEL ZBIÓRKI:\nWszystkie środki zebrane podczas aukcji charytatywnych zostaną przekazane na wsparcie diagnostyki i leczenia chorób przewodu pokarmowego u najmłodszych pacjentów - cel 34. Finału WOŚP \"Zdrowe brzuszki naszych dzieci\".\n\n⏰ OSTATNIA SZANSA:\nTo ostatni dzień, aby wziąć udział w aukcjach charytatywnych WOŚP na Allegro. Nie przegap okazji, aby pomóc potrzebującym dzieciom!\n\nDziękujemy wszystkim, którzy wzięli udział w aukcjach charytatywnych przez te ponad 2 miesiące. Każda złotówka ma znaczenie!"
       },
+      "10": {
+        "title": "Lepienie Pierogów na Finał WOŚP",
+        "description": "🥟 Zapraszamy na wspólne lepienie pierogów w Wawel Restobar! Przygotujemy razem pyszne pierogi na 34. Finał WOŚP. Im nas więcej, tym lepiej!",
+        "fullDescription": "🥟 Lepienie Pierogów na Finał WOŚP w Wawel Restobar\n\nZapraszamy wszystkich chętnych na wspólne lepienie pierogów, które będą serwowane podczas 34. Finału WOŚP w Barcelonie!\n\n📍 Gdzie: Wawel Restobar — nasz główny sponsor\n📅 Kiedy: Sobota, 24 stycznia 2026\n🕐 Godziny: 13:00 - 19:00\n\n✨ Dlaczego warto przyjść?\n\n• Wspólna zabawa i integracja przed finałem\n• Nauczysz się lepić tradycyjne polskie pierogi\n• Pomożesz przygotować jedzenie na finał WOŚP\n• Poczujesz atmosferę polskiej gościnności\n• Poznasz innych wolontariuszy i sympatyków WOŚP\n• Wesprzesz naszego sponsora — Wawel Restobar\n\n👥 Dla kogo?\nDla każdego! Nie musisz mieć doświadczenia w lepieniu pierogów — nauczymy Cię wszystkiego. Możesz przyjść o dowolnej godzinie między 13:00 a 19:00.\n\n📝 Rejestracja:\nNie jest wymagana rejestracja — po prostu przyjdź! Im nas więcej, tym więcej pierogów ulepimy dla finału.\n\n🥟 Co będziemy robić?\n• Przygotowywanie ciasta na pierogi\n• Lepienie różnych rodzajów pierogów\n• Wspólna praca w przyjaznej atmosferze\n• Rozmowy o planach na finał WOŚP\n\n💪 Każda para rąk się przyda!\nNiezależnie od tego, czy jesteś ekspertem w kuchni, czy dopiero zaczynasz swoją przygodę z gotowaniem — każda pomoc jest cenna. Razem przygotujemy pyszne pierogi, które będą smakowały wszystkim uczestnikom finału!\n\nDo zobaczenia w Wawel Restobar!"
+      },
       "101": {
         "title": "33. Finał WOŚP w Barcelonie",
         "description": "Niesamowity finał! Zebraliśmy 8,073.48 euro podczas wydarzenia, a łącznie z aukcjami 13,880.62 euro!",
         "fullDescription": "33. Finał WOŚP w Barcelonie\n\nSerdecznie zapraszamy na wyjątkowe wydarzenie, które połączy nas w jednym celu – pomocy potrzebującym! 33. Finał Wielkiej Orkiestry Świątecznej Pomocy w Barcelonie to dzień pełen muzyki, radości i wspólnego działania.\n\n📍 Miejsce: Nau Bostik — Carrer Ferran Turné, 1-11, Sant Andreu, 08027 Barcelona\n📅 Data: 26 stycznia 2025\n🕘 Godzina: Start o 10:30\n\n🎵 Harmonogram koncertów:\n11:00 - ANULKA & DIRTY SPOONS\n12:30 - MARCIN BURY\n14:00 - GUIMERA BLUES & THE SUGAR BOYS\n16:30 - JUSTYNA & JAIME\n18:15 - EYE OF THE STORM\n19:30 - Światełko do nieba\n20:00 - Zakończenie\n\n🎪 Atrakcje podczas wydarzenia:\n• Niesamowite koncerty lokalnych artystów\n• Emocjonujące licytacje\n• Loteria z fantastycznymi nagrodami\n• Kiermasz książek\n• Animacje i zabawy dla dzieci\n• Pyszne pierogi, polskie ciasta i słodycze\n• Napoje z polskich browarów\n\nTo wydarzenie, które musisz przeżyć! Przyjdź i wesprzyj największą orkiestrę serc!"
+      },
+      "104": {
+        "title": "32. Finał WOŚP w Barcelonie",
+        "description": "Wspaniały finał z rekordową frekwencją! Zebrano łącznie 10.460,47 €! Koncerty, licytacje, polskie jedzenie i Światełko do nieba!",
+        "fullDescription": "32. Finał WOŚP w Barcelonie\n\nNiesamowity dzień pełen emocji, muzyki i wsparcia dla Wielkiej Orkiestry Świątecznej Pomocy!\n\n🎪 PROGRAM IMPREZY\n11:00 Rozpoczęcie imprezy\n12:00 Oficjalne przywitanie\n13:00 Matt Zerek /koncert/\n14:15 Guimera Blues & The Sugar Boys /koncert/\n16:00 Tort\n17:00 Headbug /koncert/\n19:00 Eveli Ray /koncert/\n19:40 Światełko do nieba\n\n🎨 Ponadto:\n• 👶 Atrakcje dla dzieci\n• 🍽️ Polskie jedzenie (pierogi, kiełbasa, ciasta)\n• 🍺 Polskie piwo i grzane wino\n• 📚 Kiermasz książek\n• 🎰 Loteria fantowa\n\nGramy razem do końca świata i o jeden dzień dłużej!!!",
+        "photos": [
+          "zdjęcie1.jpg",
+          "zdjęcie2.jpg",
+          "zdjęcie3.jpg"
+        ]
+      },
+      "106": {
+        "title": "31. Finał WOŚP w Barcelonie",
+        "description": "Pierwszy finał po pandemii! Warsztaty dla dzieci, koncerty, licytacje i polskie przysmaki!",
+        "fullDescription": "Sztab WOŚP Barcelona zaprasza na 31 Finał WOŚP w Barcelonie\n\nPierwszy finał po pandemii!\n\n🎪 PROGRAM IMPREZY\n10:00 Wstęp\n11:00 – 12.00 Warsztaty dla dzieci / KOSMOHISPLANO\n12.15 Pokaz baniek / BUBBLES.MASTERS\n14.30 MARCIN BURY & JULIA KWIEK\n16.30 Koncert HEADBUGBAND\n18:30 Koncert SWINGITBABY\n20:00 Światełko do nieba\n\n🎨 Ponadto:\n• 📸 Sesje zdjęciowe od AGPHOTOGRAPHYBCN\n• 📚 Kiermasz książek\n• 🎮 Gry i konkursy, malowanie twarzy\n• 🍽️ Polskie przysmaki (pierogi, kiełbasa, barszcz)\n• 🍺 Piwo polskie, grzane wino\n\n📍 Miejsce: Carrer de Sardenya, 29, 08005 Barcelona"
       },
       "201": {
         "title": "19. Bieg WOŚP \"Policz się z cukrzycą\"",
@@ -409,21 +425,6 @@
         "title": "Warsztaty Świąteczne: \"Wine and Craft\"",
         "description": "Dołącz do wyjątkowego wieczoru kreatywności i relaksu z WOŚP Barcelona! Świąteczne rękodzieło przy grzańcu i winie!",
         "fullDescription": "Dołącz do wyjątkowego wieczoru kreatywności i relaksu z WOŚP Barcelona!\n\nZapraszamy na warsztaty, które łączą świąteczne rękodzieło z wieczorem pełnym dobrej zabawy przy grzańcu i winie!\n\n🎄 Co na Ciebie czeka?\n• 🎅 Świąteczne dekoracje: Tworzenie wyjątkowych ozdób, w tym bombek i dekoracji z filcu\n• 🍷 Grzaniec/wino: Delektuj się pysznym trunkiem, tworząc w świątecznej atmosferze\n• ✨ Nie potrzebujesz doświadczenia – wystarczy Twój entuzjazm!\n\n💰 Koszt: 20 EUR lub 90 PLN\n📅 Kiedy: Sobota, 23 listopada 2024, godz. 17:30\n📍 Gdzie: World Class Barcelona"
-      },
-      "104": {
-        "title": "32. Finał WOŚP w Barcelonie",
-        "description": "Wspaniały finał z rekordową frekwencją! Zebrano łącznie 10.460,47 €! Koncerty, licytacje, polskie jedzenie i Światełko do nieba!",
-        "fullDescription": "32. Finał WOŚP w Barcelonie\n\nNiesamowity dzień pełen emocji, muzyki i wsparcia dla Wielkiej Orkiestry Świątecznej Pomocy!\n\n🎪 PROGRAM IMPREZY\n11:00 Rozpoczęcie imprezy\n12:00 Oficjalne przywitanie\n13:00 Matt Zerek /koncert/\n14:15 Guimera Blues & The Sugar Boys /koncert/\n16:00 Tort\n17:00 Headbug /koncert/\n19:00 Eveli Ray /koncert/\n19:40 Światełko do nieba\n\n🎨 Ponadto:\n• 👶 Atrakcje dla dzieci\n• 🍽️ Polskie jedzenie (pierogi, kiełbasa, ciasta)\n• 🍺 Polskie piwo i grzane wino\n• 📚 Kiermasz książek\n• 🎰 Loteria fantowa\n\nGramy razem do końca świata i o jeden dzień dłużej!!!",
-        "photos": [
-          "zdjęcie1.jpg",
-          "zdjęcie2.jpg",
-          "zdjęcie3.jpg"
-        ]
-      },
-      "106": {
-        "title": "31. Finał WOŚP w Barcelonie",
-        "description": "Pierwszy finał po pandemii! Warsztaty dla dzieci, koncerty, licytacje i polskie przysmaki!",
-        "fullDescription": "Sztab WOŚP Barcelona zaprasza na 31 Finał WOŚP w Barcelonie\n\nPierwszy finał po pandemii!\n\n🎪 PROGRAM IMPREZY\n10:00 Wstęp\n11:00 – 12.00 Warsztaty dla dzieci / KOSMOHISPLANO\n12.15 Pokaz baniek / BUBBLES.MASTERS\n14.30 MARCIN BURY & JULIA KWIEK\n16.30 Koncert HEADBUGBAND\n18:30 Koncert SWINGITBABY\n20:00 Światełko do nieba\n\n🎨 Ponadto:\n• 📸 Sesje zdjęciowe od AGPHOTOGRAPHYBCN\n• 📚 Kiermasz książek\n• 🎮 Gry i konkursy, malowanie twarzy\n• 🍽️ Polskie przysmaki (pierogi, kiełbasa, barszcz)\n• 🍺 Piwo polskie, grzane wino\n\n📍 Miejsce: Carrer de Sardenya, 29, 08005 Barcelona"
       }
     },
     "detail": {

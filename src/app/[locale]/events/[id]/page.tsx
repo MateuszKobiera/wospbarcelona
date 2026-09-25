@@ -134,6 +134,7 @@ const allEvents = [
     ],
     registrationRequired: true,
     isFinal: true,
+    totalAmount: '12 408 €',
     facebookLink: 'https://www.facebook.com/events/722563890373111',
     organizer: 'WOŚP Barcelona',
     contact: 'sztab@wospbarcelona.org'
@@ -803,9 +804,11 @@ export default function EventPage() {
                       </div>
                     )}
                     {event.totalAmount && (
-                      <div className="text-center bg-gray-50 rounded-lg p-3 border border-gray-200">
-                        <div className="text-xs uppercase tracking-wide text-gray-500 mb-1 font-medium">{t('detail.totalDuringFinale')}</div>
-                        <div className="text-2xl font-bold text-gray-700">
+                      <div className={event.amountRaised ? "text-center bg-gray-50 rounded-lg p-3 border border-gray-200" : "text-center bg-green-50 rounded-lg p-4 border-2 border-green-200"}>
+                        <div className={event.amountRaised ? "text-xs uppercase tracking-wide text-gray-500 mb-1 font-medium" : "text-xs uppercase tracking-wide text-gray-600 mb-2 font-semibold"}>
+                          {t('detail.totalDuringFinale')}
+                        </div>
+                        <div className={event.amountRaised ? "text-2xl font-bold text-gray-700" : "text-4xl font-bold text-green-600"}>
                           {event.totalAmount}
                         </div>
                       </div>
@@ -825,16 +828,15 @@ export default function EventPage() {
                 <CardContent className="p-6">
                   <h3 className="text-lg font-bold text-gray-900 mb-4">{t('detail.registration')}</h3>
                   <div className="space-y-3">
-                    <a
-                      href={event.registrationLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block w-full"
-                    >
-                      <Button className="w-full bg-red-600 hover:bg-red-700 text-white cursor-pointer">
+                    <Button asChild className="w-full bg-red-600 hover:bg-red-700 text-white cursor-pointer" suppressHydrationWarning>
+                      <a
+                        href={event.registrationLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         {t('detail.registerForRun')}
-                      </Button>
-                    </a>
+                      </a>
+                    </Button>
                     {event.registrationDeadline && (
                       <p className="text-sm text-gray-600 text-center">
                         {t('detail.registrationDeadline')}: {event.registrationDeadline}
@@ -855,7 +857,7 @@ export default function EventPage() {
               <CardContent className="p-6">
                 <h3 className="text-lg font-bold text-gray-900 mb-4">{t('detail.contact')}</h3>
                 <div className="space-y-3">
-                  <Button asChild className="w-full bg-red-600 hover:bg-red-700 text-white cursor-pointer">
+                  <Button asChild className="w-full bg-red-600 hover:bg-red-700 text-white cursor-pointer" suppressHydrationWarning>
                     <Link href={`/${locale}/contact`}>{t('detail.contactUs')}</Link>
                   </Button>
                 </div>
