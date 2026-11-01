@@ -1,5 +1,13 @@
 {
   "metadata": {
+    "sponsors34": {
+      "title": "Patrocinadors del 34è Final de WOŚP Barcelona",
+      "description": "Coneix els patrocinadors i col·laboradors del 34è Final de WOŚP a Barcelona. Gràcies a les empreses i organitzacions que van donar suport a la nostra recaptació."
+    },
+    "sponsors35": {
+      "title": "Fes-te patrocinador del 35è Final de WOŚP Barcelona",
+      "description": "Busquem patrocinadors i col·laboradors per al 35è Final de WOŚP a Barcelona (31 de gener de 2027). Una oportunitat única per promocionar la teva empresa entre els polonesos de Barcelona."
+    },
     "home": {
       "title": "Inici",
       "description": "Gran Orquestra de la Caritat Nadalenca a Barcelona. Som un equip apassionat que porta 10 anys organitzant Finals de WOŚP i esdeveniments benèfics."
@@ -30,6 +38,8 @@
     }
   },
   "nav": {
+    "sponsors35": "35è Final (2027)",
+    "sponsors34": "34è Final (2026)",
     "home": "Inici",
     "about": "Sobre nosaltres",
     "events": "Calendari",
@@ -510,6 +520,45 @@
     "description": "Som una comunitat dinàmica de polonesos a Barcelona que organitza finals i esdeveniments benèfics des de fa anys."
   },
   "sponsors": {
+    "final34": {
+      "title": "Patrocinadors del 34è Final",
+      "description": "Junts fem el bé! Aquesta pàgina presenta les empreses i institucions que van donar suport al 34è Final de WOŚP a Barcelona. Gràcies per qualsevol forma d'ajuda.",
+      "banner35Title": "Busquem patrocinadors per al 35è Final!",
+      "banner35Desc": "El 31 de gener de 2027 toquem per la salut dels nadons. Uneix-te com a patrocinador o col·laborador.",
+      "banner35Button": "Veure detalls"
+    },
+    "final35": {
+      "badge": "Busquem patrocinadors i col·laboradors",
+      "title": "Patrocinadors del 35è Final",
+      "subtitle": "31 de gener de 2027 · Toquem per la salut dels nadons",
+      "description": "La llista de patrocinadors del 35è Final de WOŚP a Barcelona encara és buida, i aquest lloc t'espera! Convidem empreses, locals, organitzacions i particulars a sumar-s'hi. Qualsevol forma de suport compta: econòmica, material, de serveis o objectes per a la subhasta.",
+      "whyTitle": "Una oportunitat única de promoció",
+      "whyIntro": "Donant suport al Final de WOŚP, dones a conèixer la teva marca a milers de persones en un context positiu i únic, i alhora ajudes de debò els pacients més petits.",
+      "benefits": [
+        {
+          "title": "El teu logo al nostre web",
+          "description": "Presentació de la teva empresa amb logo, descripció i enllaços en aquesta pàgina i a la pàgina principal durant tota la temporada del Final."
+        },
+        {
+          "title": "Xarxes socials i materials",
+          "description": "Agraïments i mencions al nostre Facebook, Instagram i YouTube, i el teu logo als cartells de l'esdeveniment."
+        },
+        {
+          "title": "La comunitat polonesa a Barcelona",
+          "description": "Arribaràs a centenars de polonesos que viuen a Barcelona i Catalunya: participants, voluntaris i les seves famílies."
+        },
+        {
+          "title": "Un bé que es veu",
+          "description": "La teva marca quedarà associada a la campanya benèfica més gran de Polònia i a la salut dels nadons."
+        }
+      ],
+      "ctaButton": "Fes-te patrocinador",
+      "placeholderTitle": "Aquí hi pot haver el teu logo",
+      "placeholderDesc": "Fes clic i escriu-nos",
+      "previousText": "Mira qui va tocar amb nosaltres en el Final anterior.",
+      "previousLink": "Patrocinadors del 34è Final",
+      "contactSubtitle": "Escriu-nos i prepararem una proposta de col·laboració adaptada a la teva empresa."
+    },
     "title": "Patrocinadors",
     "description": "Junts creem el bé! Aquesta pàgina presenta les empreses i institucions que donen suport a WOŚP Barcelona. Gràcies per tota forma d'ajuda.",
     "groups": {

@@ -45,9 +45,9 @@ export default async function BlogPage({
           <Card className="overflow-hidden bg-white border border-red-100 shadow-sm">
             <div className="md:flex">
               <div className="md:w-1/2">
-                {blogPosts[0].coverImage ? (
+                {blogPosts[0].thumbnailImage ? (
                   <img
-                    src={blogPosts[0].coverImage}
+                    src={blogPosts[0].thumbnailImage}
                     alt={blogPosts[0].title}
                     className="h-64 md:h-full w-full object-cover"
                   />
@@ -88,8 +88,8 @@ export default async function BlogPage({
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogPosts.slice(1).map((post) => (
             <Card key={post.slug} className="overflow-hidden bg-white border border-red-100 shadow-sm hover:shadow-md transition-shadow">
-              {post.coverImage ? (
-                <img src={post.coverImage} alt={post.title} className="h-48 w-full object-cover" loading="lazy" />
+              {post.thumbnailImage ? (
+                <img src={post.thumbnailImage} alt={post.title} className="h-48 w-full object-cover" loading="lazy" />
               ) : (
                 <div className="h-48 bg-gradient-to-br from-red-500 via-red-400 to-pink-400 flex items-center justify-center relative overflow-hidden">
                   <HeartBackground size="medium" />

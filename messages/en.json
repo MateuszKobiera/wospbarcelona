@@ -1,5 +1,13 @@
 {
   "metadata": {
+    "sponsors34": {
+      "title": "Sponsors of the 34th WOŚP Finale Barcelona",
+      "description": "Meet the sponsors and partners of the 34th WOŚP Finale in Barcelona. Thank you to the companies and organisations that supported our fundraiser."
+    },
+    "sponsors35": {
+      "title": "Become a sponsor of the 35th WOŚP Finale Barcelona",
+      "description": "We are looking for sponsors and partners for the 35th WOŚP Finale in Barcelona (31 January 2027). A unique opportunity to promote your business among Poles in Barcelona."
+    },
     "home": {
       "title": "Home",
       "description": "Great Orchestra of Christmas Charity in Barcelona. We are a passionate team that has been organizing WOŚP Finales and charity events for 10 years."
@@ -30,6 +38,8 @@
     }
   },
   "nav": {
+    "sponsors35": "35th Finale (2027)",
+    "sponsors34": "34th Finale (2026)",
     "home": "Home",
     "about": "About us",
     "events": "Calendar",
@@ -507,6 +517,45 @@
     "description": "We are a dynamic Polish community in Barcelona organising WOŚP finales and charity events for years."
   },
   "sponsors": {
+    "final34": {
+      "title": "Sponsors of the 34th Finale",
+      "description": "Together we create good! This page presents the companies and institutions that supported the 34th WOŚP Finale in Barcelona. Thank you for every form of help.",
+      "banner35Title": "We are looking for sponsors for the 35th Finale!",
+      "banner35Desc": "On 31 January 2027 we play for the health of newborns. Join us as a sponsor or partner.",
+      "banner35Button": "See details"
+    },
+    "final35": {
+      "badge": "Looking for sponsors and partners",
+      "title": "Sponsors of the 35th Finale",
+      "subtitle": "31 January 2027 · Playing for the health of newborns",
+      "description": "The list of sponsors for the 35th WOŚP Finale in Barcelona is still empty – and this spot is waiting for you! We invite companies, venues, organisations and individuals to play with us. Every form of support matters: financial, in-kind, services or items for the auction.",
+      "whyTitle": "A unique promotional opportunity",
+      "whyIntro": "By supporting the WOŚP Finale, you show your brand to thousands of people in a positive, unique context – while genuinely helping the youngest patients.",
+      "benefits": [
+        {
+          "title": "Your logo on our website",
+          "description": "Your business presented with logo, description and links on this page and on the home page throughout the Finale season."
+        },
+        {
+          "title": "Social media and materials",
+          "description": "Thank-you posts and tags on our Facebook, Instagram and YouTube, plus your logo on event posters."
+        },
+        {
+          "title": "The Polish community in Barcelona",
+          "description": "Reach hundreds of Poles living in Barcelona and Catalonia – participants, volunteers and their families."
+        },
+        {
+          "title": "Good that shows",
+          "description": "Your brand will be associated with the biggest charity campaign in Poland and with the health of newborns."
+        }
+      ],
+      "ctaButton": "Become a sponsor",
+      "placeholderTitle": "Your logo could be here",
+      "placeholderDesc": "Click and get in touch",
+      "previousText": "See who played with us during the previous Finale.",
+      "previousLink": "Sponsors of the 34th Finale",
+      "contactSubtitle": "Write to us – we will prepare a partnership proposal tailored to your business."
+    },
     "title": "Sponsors",
     "description": "Together we create good! This page presents the companies and institutions that support WOŚP Barcelona. Thank you for every form of help.",
     "groups": {

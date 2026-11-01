@@ -55,6 +55,8 @@ export type BlogPostI18n = {
     slug: string;
     date: string;
     coverImage?: string;
+    /** Optional image used for listing thumbnails (blog list, home page); falls back to coverImage. */
+    thumbnailImage?: string;
     tags?: string[];
     social?: {
         facebook?: string;
@@ -74,6 +76,7 @@ export const blogPostsI18n: BlogPostI18n[] = [
         slug: '35-final-wosp-zagramy-dla-noworodkow',
         date: '2026-11-01',
         coverImage: '/images/35-final/35FinalBarcelona.png',
+        thumbnailImage: '/images/35-final/35FinalBarcelona-miniatura.png',
         tags: ['35FinałWOŚP', 'Neonatologia', 'Noworodki', 'WOŚPBarcelona', 'Finał2027'],
         social: {
             facebook: 'https://www.facebook.com/sztabWOSPBarcelona',
@@ -2072,6 +2075,7 @@ export function getAllPostsForLocale(locale: string) {
             slug: post.slug,
             date: post.date,
             coverImage: post.coverImage,
+            thumbnailImage: post.thumbnailImage ?? post.coverImage,
             tags: post.tags,
             social: post.social,
             sourceUrl: post.sourceUrl,

@@ -2,10 +2,11 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
+import Link from 'next/link';
 import { ContactForm } from '@/components/ContactForm';
 import { useState } from 'react';
-import { X } from 'lucide-react';
+import { ArrowRight, X } from 'lucide-react';
 
 type LinkRef = { label: string; url: string };
 type SponsorItem = {
@@ -226,8 +227,9 @@ const categories: Category[] = [
     },
 ];
 
-export default function SponsorsPageClient() {
+export default function Final34SponsorsClient() {
     const t = useTranslations('sponsors');
+    const locale = useLocale();
     const [menuLightbox, setMenuLightbox] = useState<{ open: boolean; url: string; name: string }>({
         open: false,
         url: '',
@@ -288,9 +290,23 @@ export default function SponsorsPageClient() {
         <main className="py-16 bg-gradient-to-br from-white via-red-50 to-pink-100">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                    <h1 className="text-4xl font-bold text-gray-900 mb-6">{t('title')}</h1>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto">{t('description')}</p>
+                    <h1 className="text-4xl font-bold text-gray-900 mb-6">{t('final34.title')}</h1>
+                    <p className="text-xl text-gray-600 max-w-3xl mx-auto">{t('final34.description')}</p>
                 </div>
+
+                <Link
+                    href={`/${locale}/sponsors/35-final`}
+                    className="group mb-16 flex flex-col sm:flex-row items-center justify-between gap-4 rounded-xl bg-gradient-to-r from-red-600 to-pink-500 text-white px-6 py-5 shadow-lg hover:shadow-xl transition-shadow"
+                >
+                    <div className="text-center sm:text-left">
+                        <p className="font-bold text-lg">{t('final34.banner35Title')}</p>
+                        <p className="text-sm text-white/90">{t('final34.banner35Desc')}</p>
+                    </div>
+                    <span className="inline-flex items-center gap-2 bg-white text-red-600 font-semibold px-5 py-2 rounded-lg whitespace-nowrap">
+                        {t('final34.banner35Button')}
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                    </span>
+                </Link>
 
                 <div className="space-y-16">
                     {categories.map((cat) => {

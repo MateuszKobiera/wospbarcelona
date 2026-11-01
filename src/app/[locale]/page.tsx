@@ -326,9 +326,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                 return (
                   <Link key={post.slug} href={href} target={post.sourceUrl ? '_blank' : undefined} rel={post.sourceUrl ? 'noopener noreferrer' : undefined} className="block group">
                     <Card className="overflow-hidden border-gray-200/80 transition hover:shadow-md hover:-translate-y-0.5">
-                      {post.coverImage ? (
+                      {post.thumbnailImage ? (
                         <div className="relative h-44">
-                          <Image src={post.coverImage} alt={post.title} fill className="object-cover" />
+                          <Image src={post.thumbnailImage} alt={post.title} fill className="object-cover" />
                         </div>
                       ) : null}
                       <CardContent className="p-5">

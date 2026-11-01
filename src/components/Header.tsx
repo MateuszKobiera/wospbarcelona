@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { useTranslations, useLocale } from 'next-intl';
-import { Menu, X } from 'lucide-react';
+import { ChevronDown, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
@@ -28,12 +28,21 @@ export function Header() {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  const navigation = [
+  type NavItem = { name: string; href: string; children?: { name: string; href: string }[] };
+
+  const navigation: NavItem[] = [
     { name: t('home'), href: `/${locale}` },
     { name: t('about'), href: `/${locale}/about` },
     { name: t('events'), href: `/${locale}/events` },
     { name: t('blog'), href: `/${locale}/blog` },
-    { name: t('sponsors'), href: `/${locale}/sponsors` },
+    {
+      name: t('sponsors'),
+      href: `/${locale}/sponsors/35-final`,
+      children: [
+        { name: t('sponsors35'), href: `/${locale}/sponsors/35-final` },
+        { name: t('sponsors34'), href: `/${locale}/sponsors/34-final` },
+      ],
+    },
     { name: t('contact'), href: `/${locale}/contact` },
   ];
 
@@ -56,15 +65,40 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-gray-700 hover:text-red-600 transition-colors font-medium"
-              >
-                {item.name}
-              </Link>
-            ))}
+            {navigation.map((item) =>
+              item.children ? (
+                <div key={item.name} className="relative group">
+                  <Link
+                    href={item.href}
+                    className="inline-flex items-center gap-1 text-gray-700 hover:text-red-600 group-hover:text-red-600 transition-colors font-medium"
+                  >
+                    {item.name}
+                    <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
+                  </Link>
+                  <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 invisible opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-opacity">
+                    <div className="min-w-[180px] rounded-lg bg-white border border-gray-200 shadow-lg py-2">
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.href}
+                          href={child.href}
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 whitespace-nowrap"
+                        >
+                          {child.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="text-gray-700 hover:text-red-600 transition-colors font-medium"
+                >
+                  {item.name}
+                </Link>
+              )
+            )}
           </nav>
 
           {/* Language Selector & Donate Button */}
@@ -111,16 +145,32 @@ export function Header() {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="block px-3 py-2 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-md font-medium"
-                  onClick={toggleMenu}
-                >
-                  {item.name}
-                </Link>
-              ))}
+              {navigation.map((item) =>
+                item.children ? (
+                  <div key={item.name}>
+                    <span className="block px-3 py-2 text-gray-700 font-medium">{item.name}</span>
+                    {item.children.map((child) => (
+                      <Link
+                        key={child.href}
+                        href={child.href}
+                        className="block pl-8 pr-3 py-2 text-gray-600 hover:text-red-600 hover:bg-gray-50 rounded-md"
+                        onClick={toggleMenu}
+                      >
+                        {child.name}
+                      </Link>
+                    ))}
+                  </div>
+                ) : (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className="block px-3 py-2 text-gray-700 hover:text-red-600 hover:bg-gray-50 rounded-md font-medium"
+                    onClick={toggleMenu}
+                  >
+                    {item.name}
+                  </Link>
+                )
+              )}
 
               <div className="pt-4 pb-3 border-t border-gray-200">
                 <div className="flex items-center justify-between">

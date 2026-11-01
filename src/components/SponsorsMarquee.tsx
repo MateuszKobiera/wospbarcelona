@@ -68,7 +68,7 @@ export function SponsorsMarquee({ items = DEFAULT_SPONSORS, href }: { items?: Sp
   const loopItems = [...items, ...items];
   const params = useParams<{ locale?: string }>();
   const locale = params?.locale;
-  const targetHref = href ?? (locale ? `/${locale}/sponsors` : '/sponsors');
+  const targetHref = href ?? (locale ? `/${locale}/sponsors/34-final` : '/sponsors/34-final');
 
   return (
     <Link href={targetHref} aria-label="Zobacz wszystkich sponsorów i partnerów" className="block">

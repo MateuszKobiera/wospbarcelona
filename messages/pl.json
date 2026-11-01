@@ -1,5 +1,13 @@
 {
   "metadata": {
+    "sponsors34": {
+      "title": "Sponsorzy 34. Finału WOŚP Barcelona",
+      "description": "Poznaj sponsorów i partnerów 34. Finału WOŚP w Barcelonie. Dziękujemy firmom i organizacjom, które wsparły naszą zbiórkę."
+    },
+    "sponsors35": {
+      "title": "Zostań sponsorem 35. Finału WOŚP Barcelona",
+      "description": "Szukamy sponsorów i partnerów 35. Finału WOŚP w Barcelonie (31 stycznia 2027). Wyjątkowa okazja do promocji Twojej firmy wśród Polaków w Barcelonie."
+    },
     "home": {
       "title": "Strona Główna",
       "description": "Wielka Orkiestra Świątecznej Pomocy w Barcelonie. Jesteśmy zespołem pełnym pasji i zaangażowania, który od 10 lat organizuje Finały WOŚP i wydarzenia charytatywne."
@@ -30,6 +38,8 @@
     }
   },
   "nav": {
+    "sponsors35": "35. Finał (2027)",
+    "sponsors34": "34. Finał (2026)",
     "home": "Strona główna",
     "about": "O nas",
     "events": "Kalendarz",
@@ -510,6 +520,45 @@
     "description": "Jesteśmy dynamiczną społecznością Polaków w Barcelonie, która od 10 lat organizuje Finały WOŚP i wydarzenia charytatywne."
   },
   "sponsors": {
+    "final34": {
+      "title": "Sponsorzy 34. Finału",
+      "description": "Razem tworzymy dobro! Ta strona prezentuje firmy i instytucje, które wsparły 34. Finał WOŚP w Barcelonie. Dziękujemy za każdą formę pomocy.",
+      "banner35Title": "Szukamy sponsorów 35. Finału!",
+      "banner35Desc": "31 stycznia 2027 gramy dla zdrowia noworodków. Dołącz do nas jako sponsor lub partner.",
+      "banner35Button": "Zobacz szczegóły"
+    },
+    "final35": {
+      "badge": "Szukamy sponsorów i partnerów",
+      "title": "Sponsorzy 35. Finału",
+      "subtitle": "31 stycznia 2027 · Gramy dla zdrowia noworodków",
+      "description": "Lista sponsorów 35. Finału WOŚP w Barcelonie jest jeszcze pusta – i to miejsce czeka na Ciebie! Zapraszamy firmy, lokale, organizacje i osoby prywatne do wspólnego grania. Każda forma wsparcia ma znaczenie: finansowa, rzeczowa, usługowa czy przedmioty na licytację.",
+      "whyTitle": "Wyjątkowa okazja do promocji",
+      "whyIntro": "Wspierając Finał WOŚP, pokazujesz swoją markę tysiącom osób w pozytywnym, wyjątkowym kontekście – i jednocześnie realnie pomagasz najmłodszym pacjentom.",
+      "benefits": [
+        {
+          "title": "Twoje logo na stronie",
+          "description": "Prezentacja firmy z logo, opisem i linkami na tej stronie oraz na stronie głównej przez cały sezon finałowy."
+        },
+        {
+          "title": "Social media i materiały",
+          "description": "Podziękowania i oznaczenia na naszym Facebooku, Instagramie i YouTube oraz logo na plakatach wydarzenia."
+        },
+        {
+          "title": "Polska społeczność w Barcelonie",
+          "description": "Dotrzesz do setek Polaków mieszkających w Barcelonie i Katalonii – uczestników, wolontariuszy i ich bliskich."
+        },
+        {
+          "title": "Dobro, które widać",
+          "description": "Twoja marka zostanie połączona z największą akcją charytatywną w Polsce i zdrowiem noworodków."
+        }
+      ],
+      "ctaButton": "Zostań sponsorem",
+      "placeholderTitle": "Tu może być Twoje logo",
+      "placeholderDesc": "Kliknij i napisz do nas",
+      "previousText": "Zobacz, kto zagrał z nami podczas poprzedniego Finału.",
+      "previousLink": "Sponsorzy 34. Finału",
+      "contactSubtitle": "Napisz do nas – przygotujemy dla Ciebie propozycję współpracy dopasowaną do Twojej firmy."
+    },
     "title": "Sponsorzy",
     "description": "Razem tworzymy dobro! Ta strona prezentuje firmy i instytucje, które wspierają WOŚP Barcelona. Dziękujemy za każdą formę pomocy.",
     "groups": {
