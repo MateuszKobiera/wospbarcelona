@@ -35,6 +35,25 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     <main>
       <Hero />
 
+      {/* 0. NEXT FINALE — 35th Finale announcement */}
+      <section className="py-8 bg-white border-b border-gray-100">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="text-xs font-semibold uppercase tracking-wider text-red-600 mb-2">
+            {t('nextFinale.badge')}
+          </div>
+          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-1">{t('nextFinale.title')}</h2>
+          <p className="text-base text-red-600/90 italic mb-2">{t('nextFinale.motto')}</p>
+          <p className="text-sm text-gray-600 mb-4">{t('nextFinale.description')}</p>
+          <Link
+            href={`/${locale}/blog/35-final-wosp-zagramy-dla-noworodkow`}
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-red-600 hover:text-red-700 hover:underline transition-colors"
+          >
+            {t('nextFinale.button')}
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </section>
+
       {/* 1. THANK YOU — Finale is done */}
       <section className="py-10 bg-gradient-to-br from-red-600 via-pink-600 to-red-700 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

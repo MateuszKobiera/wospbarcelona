@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { BlogPhotoGallery } from '@/components/BlogPhotoGallery';
 
 const final34GalleryPhotos: string[] = [
@@ -42,6 +43,43 @@ const final34GalleryPhotos: string[] = [
     '/images/34-final/IMG_7449.JPG',
 ];
 
+function Final35InfoBox({ heading, items }: { heading: string; items: Array<[string, string]> }) {
+    return (
+        <div className="rounded-lg p-4 md:p-6 shadow-lg bg-gradient-to-br from-red-600 via-pink-600 to-red-700">
+            <h3 className="text-xl font-bold mb-3 text-white">👶 {heading}</h3>
+            <ul className="list-disc pl-6 space-y-2 text-white">
+                {items.map(([label, value]) => (
+                    <li key={label} style={{ color: '#ffffff' }}>
+                        <strong className="text-white" style={{ color: '#ffffff' }}>{label}:</strong> {value}
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
+}
+
+const final35SourceLinks: Array<[string, string]> = [
+    ['Fundacja WOŚP – 35. Finał', 'https://www.wosp.org.pl/final/final'],
+    ['TVN24 – Jerzy Owsiak o 35. Finale WOŚP', 'https://tvn24.pl/polska/jerzy-owsiak-o-35-finale-wosp-rocznie-rodzi-sie-okolo-20-tysiecy-wczesniakow-st9293840'],
+    ['Rzeczpospolita – Owsiak ogłosił cel nowego finału WOŚP', 'https://www.rp.pl/kraj/art45347071-jurek-owsiak-ujawnil-plany-wosp-tym-razem-orkiestra-zagra-dla-noworodkow'],
+    ['Alert Medyczny – WOŚP ogłosiła temat 35. Finału', 'https://alertmedyczny.pl/wosp-oglosila-temat-35-finalu-pieniadze-trafia-na-opieke-nad-noworodkami/'],
+    ['Fundacja WOŚP – Historia', 'https://www.wosp.org.pl/fundacja/historia'],
+    ['ngo.pl – 26. Finał WOŚP. Dla wyrównania szans w leczeniu noworodków', 'https://publicystyka.ngo.pl/26-final-wosp-dla-wyrownania-szans-w-leczeniu-noworodkow'],
+    ['NIK – Za drzwiami porodówki (opieka okołoporodowa w Polsce)', 'https://www.nik.gov.pl/aktualnosci/za-drzwiami-porodowki-nik-o-opiece-okoloporodowej-w-polsce.html'],
+];
+
+function Final35Sources() {
+    return (
+        <ul className="text-sm space-y-1">
+            {final35SourceLinks.map(([label, href]) => (
+                <li key={href}>
+                    <a href={href} target="_blank" rel="noopener noreferrer">{label}</a>
+                </li>
+            ))}
+        </ul>
+    );
+}
+
 export type LocalizedContent = {
     title: string;
     excerpt?: string;
@@ -70,6 +108,442 @@ export type BlogPostI18n = {
 };
 
 export const blogPostsI18n: BlogPostI18n[] = [
+    {
+        slug: '35-final-wosp-zagramy-dla-noworodkow',
+        date: '2026-11-01',
+        coverImage: '/images/35-final/35FinalBarcelona.png',
+        tags: ['35FinałWOŚP', 'Neonatologia', 'Noworodki', 'WOŚPBarcelona', 'Finał2027'],
+        social: {
+            facebook: 'https://www.facebook.com/sztabWOSPBarcelona',
+            instagram: 'https://www.instagram.com/wospbarcelona/',
+        },
+        content: {
+            pl: {
+                title: '35. Finał WOŚP – 31 stycznia 2027 gramy dla zdrowia noworodków!',
+                excerpt: '35. Finał Wielkiej Orkiestry Świątecznej Pomocy zagra 31 stycznia 2027 roku pod hasłem „Dzisiaj?! Zdrowie noworodka najważniejsze!”. Wyjaśniamy, czym jest neonatologia, jak WOŚP pomagał jej przez ponad 30 lat i z jakimi problemami mierzą się dziś oddziały noworodkowe.',
+                sections: [
+                    {
+                        body: (
+                            <div className="space-y-4">
+                                <Final35InfoBox
+                                    heading="35. Finał WOŚP – Dzisiaj?! Zdrowie noworodka najważniejsze!"
+                                    items={[
+                                        ['Data', '31 stycznia 2027 (niedziela)'],
+                                        ['Cel', 'Neonatologia – sprzęt dla oddziałów noworodkowych, od sali porodowej po intensywną terapię'],
+                                        ['Barcelona', 'Oczywiście gramy razem z Wami – szczegóły naszego Finału wkrótce!'],
+                                    ]}
+                                />
+                                <p>Fundacja WOŚP ogłosiła cel 35. Finału: tym razem Orkiestra zagra dla <strong>najmłodszych pacjentów – noworodków</strong>, ze szczególnym uwzględnieniem wcześniaków i dzieci wymagających intensywnej terapii. Zebrane pieniądze trafią na nowoczesny sprzęt dla sal porodowych, oddziałów intensywnej terapii noworodka oraz na specjalistyczny transport między szpitalami.</p>
+                                <p>To dla nas wyjątkowy temat – wielu z nas to rodzice, a wielu wolontariuszy Sztabu WOŚP Barcelona samo ma w rodzinie „wcześniacze” historie. Poniżej opowiadamy, o co dokładnie gramy i dlaczego to tak ważne.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Czym jest neonatologia?',
+                        body: (
+                            <div className="space-y-3">
+                                <p><strong>Neonatologia</strong> (od łac. <em>neonatus</em> – noworodek) to dziedzina medycyny zajmująca się zdrowiem dzieci w pierwszych <strong>28 dniach życia</strong>. Neonatolodzy opiekują się zarówno zdrowymi noworodkami, jak i tymi, które od pierwszych minut walczą o życie.</p>
+                                <p>Najważniejszą grupą pacjentów są <strong>wcześniaki</strong>, czyli dzieci urodzone przed ukończeniem 37. tygodnia ciąży. Dzięki postępowi medycyny dziś ratuje się dzieci urodzone nawet w 23.–24. tygodniu, ważące niekiedy poniżej 500 gramów. Takie maluchy mają niedojrzałe płuca, mózg, jelita i oczy – potrzebują inkubatora, wsparcia oddychania, precyzyjnie dawkowanych leków i żywienia, a często wielu tygodni na oddziale intensywnej terapii.</p>
+                                <p>Neonatologia zajmuje się też m.in.:</p>
+                                <ul>
+                                    <li>zaburzeniami oddychania i niewydolnością oddechową,</li>
+                                    <li>zakażeniami i sepsą noworodkową,</li>
+                                    <li>żółtaczką noworodków,</li>
+                                    <li>wadami wrodzonymi (np. serca czy przewodu pokarmowego),</li>
+                                    <li>niedotlenieniem okołoporodowym,</li>
+                                    <li>badaniami przesiewowymi, które pozwalają wcześnie wykryć choroby (np. słuchu, wzroku, chorób metabolicznych).</li>
+                                </ul>
+                                <p>W Polsce opieka nad noworodkami jest zorganizowana w <strong>trzech poziomach referencyjnych</strong>. Oddziały I poziomu przyjmują porody fizjologiczne, II poziomu – ciąże o umiarkowanym ryzyku, a ośrodki III poziomu (najwyższego) zajmują się ciążami wysokiego ryzyka, skrajnymi wcześniakami i dziećmi z ciężkimi wadami wrodzonymi.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Jak WOŚP pomagał neonatologii przez ponad 30 lat',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Neonatologia to jedna z dziedzin najbliższych sercu Orkiestry – według danych Fundacji była już celem Finałów <strong>siedmiokrotnie</strong>. Łącznie na sprzęt dla noworodków WOŚP przeznaczył <strong>ponad 224 mln zł</strong>, kupując <strong>ponad 8 500 urządzeń</strong>.</p>
+                                <ul>
+                                    <li><strong>2. Finał (1994)</strong> – pomoc szpitalom noworodkowym. Zebrano ok. 4,7 mln zł, za które kupiono m.in. <strong>160 inkubatorów</strong>, stanowiska do resuscytacji i pompy strzykawkowe. Wielu lekarzy uważa, że to właśnie wtedy zaczęła się nowoczesna polska neonatologia.</li>
+                                    <li><strong>Program Powszechnych Przesiewowych Badań Słuchu u Noworodków</strong> – od 2002 roku dzięki sprzętowi WOŚP słuch bada się u praktycznie każdego dziecka urodzonego w Polsce, co pozwala wcześnie wykryć niedosłuch i szybko rozpocząć leczenie.</li>
+                                    <li><strong>Program Leczenia Retinopatii Wcześniaków</strong> – Orkiestra wyposażyła ośrodki w sprzęt do diagnostyki i leczenia retinopatii, choroby oczu, która nieleczona może prowadzić u wcześniaków do ślepoty.</li>
+                                    <li><strong>26. Finał (2018)</strong> – „Dla wyrównania szans w leczeniu noworodków”. Do oddziałów noworodkowych – w tym tych mniejszych, I i II poziomu – trafiło <strong>3 844 urządzenia o wartości blisko 122 mln zł</strong>: inkubatory, bilirubinometry, aparaty KTG, pulsoksymetry i wiele innych.</li>
+                                </ul>
+                                <p>Serduszko WOŚP można dziś znaleźć w praktycznie każdym oddziale noworodkowym w Polsce. Dla wielu rodziców to pierwszy symbol nadziei, który widzą obok inkubatora swojego dziecka.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Największe wyzwania: z czym mierzy się dziś opieka nad noworodkami?',
+                        body: (
+                            <div className="space-y-3">
+                                <p><strong>Rodzi się mniej dzieci, ale porody są coraz trudniejsze.</strong> Liczba urodzeń w Polsce jest najniższa od dziesięcioleci, a jednocześnie rośnie odsetek porodów obarczonych ryzykiem powikłań. Kobiety później decydują się na macierzyństwo, częściej rodzą się bliźnięta i dzieci poczęte po leczeniu niepłodności.</p>
+                                <p><strong>Około 20 tysięcy wcześniaków rocznie.</strong> Tyle dzieci co roku rodzi się w Polsce przed czasem. Część z nich wymaga wielotygodniowej, specjalistycznej opieki – a po wyjściu ze szpitala często także wieloletniej rehabilitacji.</p>
+                                <p><strong>Ubywa oddziałów.</strong> Jak przypomniał Jurek Owsiak, jeszcze dekadę temu w Polsce działało ok. 400 oddziałów neonatologicznych, dziś jest ich 266. Według Najwyższej Izby Kontroli w latach 2022–2025 zamknięto ponad 50 oddziałów ginekologiczno-położniczych, a w 136 powiatach nie ma już ani jednej porodówki. Opieka koncentruje się w dużych ośrodkach III poziomu, które muszą przyjmować coraz więcej pacjentów.</p>
+                                <p><strong>Brakuje ludzi.</strong> Kontrola NIK opublikowana w czerwcu 2026 roku wykazała, że w części szpitali brakuje neonatologów i pediatrów – zdarza się, że jeden lekarz obsługuje kilka oddziałów naraz, a dyżury trwają nawet po kilka dób.</p>
+                                <p><strong>Rośnie znaczenie transportu.</strong> Skoro mniejszych oddziałów jest coraz mniej, wiele dzieci trzeba po urodzeniu szybko przewieźć do ośrodka referencyjnego, nierzadko oddalonego o dziesiątki kilometrów. Do tego potrzebne są specjalistyczne karetki z inkubatorem transportowym i respiratorem.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Czy szpitale mają potrzebny sprzęt?',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Podstawowe wyposażenie – w dużej mierze właśnie dzięki wcześniejszym Finałom WOŚP – większość oddziałów posiada. Problem polega na tym, że sprzęt medyczny się starzeje: urządzenia kupione kilka czy kilkanaście lat temu wymagają wymiany, a medycyna w tym czasie zrobiła ogromny krok naprzód.</p>
+                                <p>Wiele nowoczesnych rozwiązań, które pozwalają dziś skuteczniej i łagodniej leczyć wcześniaki – takich jak monitory NIRS, tomografia impedancyjna płuc czy systemy HeRO – wciąż nie jest standardem w każdym oddziale. Do tego ośrodki III poziomu, do których trafia coraz więcej najciężej chorych dzieci, potrzebują więcej stanowisk intensywnej terapii niż jeszcze kilka lat temu. Właśnie tę lukę ma wypełnić 35. Finał.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Co kupi Orkiestra?',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Fundacja WOŚP zapowiedziała zakup m.in.:</p>
+                                <ul>
+                                    <li><strong>stanowisk do resuscytacji noworodka</strong> – pierwsza pomoc dla dziecka tuż po porodzie,</li>
+                                    <li><strong>nowoczesnych respiratorów noworodkowych</strong> i <strong>monitorów funkcji oddechowych</strong>,</li>
+                                    <li><strong>wideolaryngoskopów</strong> – ułatwiających bezpieczną intubację maleńkich pacjentów,</li>
+                                    <li><strong>tomografów impedancyjnych</strong> – do monitorowania wentylacji płuc bez promieniowania,</li>
+                                    <li><strong>monitorów NIRS</strong> – do nieinwazyjnej oceny utlenowania tkanek, m.in. mózgu,</li>
+                                    <li><strong>systemów HeRO</strong> – analizujących zmienność rytmu serca, by wcześnie wychwycić zagrożenia, np. infekcję,</li>
+                                    <li><strong>inkubatorów</strong> umożliwiających bezpieczne kangurowanie nawet najmniejszych wcześniaków,</li>
+                                    <li><strong>karetek typu N</strong> do specjalistycznego transportu noworodków,</li>
+                                    <li><strong>analizatorów mleka kobiecego</strong> dla oddziałów i banków mleka.</li>
+                                </ul>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Gramy razem – także w Barcelonie!',
+                        body: (
+                            <div className="space-y-3">
+                                <p>31 stycznia 2027 roku Sztab WOŚP Barcelona po raz kolejny zagra razem z całą Polską i Polonią na świecie. Już teraz pracujemy nad programem naszego Finału – szczegóły dotyczące miejsca, koncertów, licytacji i atrakcji dla dzieci ogłosimy wkrótce.</p>
+                                <p>Chcesz zostać wolontariuszem, zaproponować przedmiot na licytację albo wesprzeć nas jako sponsor? <Link href="/pl/contact">Napisz do nas</Link> i śledź nas na <a href="https://www.facebook.com/sztabWOSPBarcelona" target="_blank" rel="noopener noreferrer">Facebooku</a> oraz <a href="https://www.instagram.com/wospbarcelona/" target="_blank" rel="noopener noreferrer">Instagramie</a>. Dzisiaj?! Zdrowie noworodka najważniejsze! ❤️</p>
+                            </div>
+                        ),
+                    },
+                    { title: 'Źródła', body: <Final35Sources /> },
+                ],
+            },
+            en: {
+                title: '35th WOŚP Finale – on 31 January 2027 we play for the health of newborns!',
+                excerpt: 'The 35th Finale of the Great Orchestra of Christmas Charity will take place on 31 January 2027 under the motto "Today?! Newborn health comes first!". We explain what neonatology is, how WOŚP has supported it for over 30 years, and what challenges neonatal wards face today.',
+                sections: [
+                    {
+                        body: (
+                            <div className="space-y-4">
+                                <Final35InfoBox
+                                    heading="35th WOŚP Finale – Today?! Newborn health comes first!"
+                                    items={[
+                                        ['Date', '31 January 2027 (Sunday)'],
+                                        ['Goal', 'Neonatology – equipment for neonatal wards, from the delivery room to intensive care'],
+                                        ['Barcelona', 'Of course we are playing with you – details of our Finale coming soon!'],
+                                    ]}
+                                />
+                                <p>The WOŚP Foundation has announced the goal of the 35th Finale: this time the Orchestra will play for the <strong>youngest patients of all – newborns</strong>, with a special focus on premature babies and children who need intensive care. The money raised will go to modern equipment for delivery rooms, neonatal intensive care units and specialised transport between hospitals.</p>
+                                <p>This is a very special cause for us – many of us are parents, and quite a few volunteers of WOŚP Barcelona have their own “preemie” stories in the family. Below we explain exactly what we are playing for and why it matters so much.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'What is neonatology?',
+                        body: (
+                            <div className="space-y-3">
+                                <p><strong>Neonatology</strong> (from Latin <em>neonatus</em> – newborn) is the branch of medicine focused on the health of babies during their first <strong>28 days of life</strong>. Neonatologists care both for healthy newborns and for those who fight for their lives from the very first minutes.</p>
+                                <p>The most important group of patients are <strong>premature babies</strong> – children born before the 37th week of pregnancy. Thanks to medical progress, babies born as early as the 23rd–24th week, sometimes weighing less than 500 grams, can now be saved. These little ones have immature lungs, brains, intestines and eyes – they need an incubator, breathing support, precisely dosed medication and nutrition, and often many weeks in intensive care.</p>
+                                <p>Neonatology also deals with, among other things:</p>
+                                <ul>
+                                    <li>breathing disorders and respiratory failure,</li>
+                                    <li>infections and neonatal sepsis,</li>
+                                    <li>newborn jaundice,</li>
+                                    <li>congenital defects (e.g. of the heart or digestive tract),</li>
+                                    <li>perinatal oxygen deprivation,</li>
+                                    <li>screening tests that detect diseases early (e.g. hearing, vision, metabolic disorders).</li>
+                                </ul>
+                                <p>In Poland, newborn care is organised in <strong>three referral levels</strong>. Level I units handle normal births, level II – moderately risky pregnancies, while level III centres (the highest) take care of high-risk pregnancies, extremely premature babies and children with serious congenital defects.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'How WOŚP has supported neonatology for over 30 years',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Neonatology is one of the causes closest to the Orchestra&apos;s heart – according to the Foundation, it has already been the goal of a Finale <strong>seven times</strong>. In total, WOŚP has spent <strong>over 224 million PLN</strong> on equipment for newborns, buying <strong>more than 8,500 devices</strong>.</p>
+                                <ul>
+                                    <li><strong>2nd Finale (1994)</strong> – support for neonatal hospitals. About 4.7 million PLN was raised and used to buy, among other things, <strong>160 incubators</strong>, resuscitation stations and syringe pumps. Many doctors consider this the moment modern Polish neonatology was born.</li>
+                                    <li><strong>Universal Newborn Hearing Screening Programme</strong> – since 2002, thanks to WOŚP equipment, practically every child born in Poland has their hearing tested, so hearing loss can be detected early and treated quickly.</li>
+                                    <li><strong>Retinopathy of Prematurity Treatment Programme</strong> – the Orchestra equipped centres with devices to diagnose and treat retinopathy, an eye disease that can lead to blindness in premature babies if left untreated.</li>
+                                    <li><strong>26th Finale (2018)</strong> – “To equalise chances in the treatment of newborns”. Neonatal wards – including smaller level I and II units – received <strong>3,844 devices worth almost 122 million PLN</strong>: incubators, bilirubinometers, CTG machines, pulse oximeters and much more.</li>
+                                </ul>
+                                <p>Today the WOŚP heart can be found in practically every neonatal ward in Poland. For many parents it is the first symbol of hope they see next to their baby&apos;s incubator.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'The biggest challenges in newborn care today',
+                        body: (
+                            <div className="space-y-3">
+                                <p><strong>Fewer babies are born, but births are becoming more complicated.</strong> The number of births in Poland is the lowest in decades, while the share of births with a higher risk of complications is growing. Women are deciding to have children later, and twins and babies conceived after fertility treatment are more common.</p>
+                                <p><strong>Around 20,000 premature babies a year.</strong> That is how many children are born too early in Poland every year. Some of them need weeks of specialised care – and, after leaving hospital, often years of rehabilitation.</p>
+                                <p><strong>Wards are disappearing.</strong> As Jurek Owsiak pointed out, a decade ago there were about 400 neonatal wards in Poland – today there are 266. According to Poland&apos;s Supreme Audit Office (NIK), more than 50 obstetric wards were closed in 2022–2025, and 136 counties no longer have a single maternity ward. Care is being concentrated in large level III centres, which have to admit more and more patients.</p>
+                                <p><strong>Staff shortages.</strong> An NIK audit published in June 2026 showed that some hospitals lack neonatologists and paediatricians – sometimes a single doctor covers several wards at once, and shifts can last several days.</p>
+                                <p><strong>Transport is becoming crucial.</strong> With fewer small wards, many babies have to be moved quickly after birth to a referral centre, often tens of kilometres away. This requires specialised ambulances with a transport incubator and a ventilator.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Do hospitals have the equipment they need?',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Most wards have the basic equipment – largely thanks to previous WOŚP Finales. The problem is that medical equipment ages: devices bought several or more than ten years ago need replacing, and medicine has taken a huge leap forward in the meantime.</p>
+                                <p>Many modern solutions that make it possible to treat premature babies more effectively and more gently – such as NIRS monitors, lung impedance tomography or HeRO systems – are still not standard in every ward. On top of that, level III centres, which receive more and more of the sickest babies, need more intensive care beds than just a few years ago. This is exactly the gap the 35th Finale aims to fill.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'What will the Orchestra buy?',
+                        body: (
+                            <div className="space-y-3">
+                                <p>The WOŚP Foundation has announced plans to purchase, among others:</p>
+                                <ul>
+                                    <li><strong>neonatal resuscitation stations</strong> – first aid for a baby right after birth,</li>
+                                    <li><strong>modern neonatal ventilators</strong> and <strong>respiratory function monitors</strong>,</li>
+                                    <li><strong>video laryngoscopes</strong> – making intubation of tiny patients safer,</li>
+                                    <li><strong>electrical impedance tomographs</strong> – to monitor lung ventilation without radiation,</li>
+                                    <li><strong>NIRS monitors</strong> – for non-invasive assessment of tissue oxygenation, including the brain,</li>
+                                    <li><strong>HeRO systems</strong> – analysing heart rate variability to detect threats such as infection early,</li>
+                                    <li><strong>incubators</strong> that allow safe kangaroo care even for the smallest preemies,</li>
+                                    <li><strong>type N ambulances</strong> for specialised newborn transport,</li>
+                                    <li><strong>human milk analysers</strong> for wards and milk banks.</li>
+                                </ul>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Playing together – in Barcelona too!',
+                        body: (
+                            <div className="space-y-3">
+                                <p>On 31 January 2027, WOŚP Barcelona will once again play together with all of Poland and the Polish diaspora around the world. We are already working on the programme of our Finale – details about the venue, concerts, auctions and activities for children will be announced soon.</p>
+                                <p>Would you like to volunteer, donate an item for auction or support us as a sponsor? <Link href="/en/contact">Write to us</Link> and follow us on <a href="https://www.facebook.com/sztabWOSPBarcelona" target="_blank" rel="noopener noreferrer">Facebook</a> and <a href="https://www.instagram.com/wospbarcelona/" target="_blank" rel="noopener noreferrer">Instagram</a>. Today?! Newborn health comes first! ❤️</p>
+                            </div>
+                        ),
+                    },
+                    { title: 'Sources', body: <Final35Sources /> },
+                ],
+            },
+            es: {
+                title: '35ª Final de WOŚP: ¡el 31 de enero de 2027 tocamos por la salud de los recién nacidos!',
+                excerpt: 'La 35ª Final de la Gran Orquesta de la Ayuda Navideña se celebrará el 31 de enero de 2027 con el lema «¿¡Hoy?! La salud del recién nacido es lo primero». Te explicamos qué es la neonatología, cómo WOŚP la ha apoyado durante más de 30 años y a qué retos se enfrentan hoy las unidades neonatales.',
+                sections: [
+                    {
+                        body: (
+                            <div className="space-y-4">
+                                <Final35InfoBox
+                                    heading="35ª Final de WOŚP – ¿¡Hoy?! La salud del recién nacido es lo primero"
+                                    items={[
+                                        ['Fecha', '31 de enero de 2027 (domingo)'],
+                                        ['Objetivo', 'Neonatología – equipamiento para unidades neonatales, desde la sala de partos hasta los cuidados intensivos'],
+                                        ['Barcelona', '¡Por supuesto, tocamos con vosotros! Pronto daremos los detalles de nuestra Final.'],
+                                    ]}
+                                />
+                                <p>La Fundación WOŚP ha anunciado el objetivo de la 35ª Final: esta vez la Orquesta tocará por los <strong>pacientes más pequeños – los recién nacidos</strong>, con especial atención a los bebés prematuros y a los niños que necesitan cuidados intensivos. El dinero recaudado se destinará a equipos modernos para salas de partos, unidades de cuidados intensivos neonatales y transporte especializado entre hospitales.</p>
+                                <p>Es una causa muy especial para nosotros: muchos somos padres y varios voluntarios de WOŚP Barcelona tienen en su familia historias de bebés prematuros. A continuación te contamos por qué tocamos exactamente y por qué es tan importante.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: '¿Qué es la neonatología?',
+                        body: (
+                            <div className="space-y-3">
+                                <p>La <strong>neonatología</strong> (del latín <em>neonatus</em>, recién nacido) es la rama de la medicina que se ocupa de la salud de los bebés durante sus primeros <strong>28 días de vida</strong>. Los neonatólogos atienden tanto a recién nacidos sanos como a aquellos que luchan por su vida desde los primeros minutos.</p>
+                                <p>El grupo de pacientes más importante son los <strong>bebés prematuros</strong>, es decir, los nacidos antes de la semana 37 de embarazo. Gracias a los avances médicos, hoy se puede salvar a bebés nacidos incluso en la semana 23–24, que a veces pesan menos de 500 gramos. Estos pequeños tienen los pulmones, el cerebro, el intestino y los ojos inmaduros: necesitan incubadora, apoyo respiratorio, medicación y nutrición dosificadas con precisión y, a menudo, muchas semanas en cuidados intensivos.</p>
+                                <p>La neonatología también se ocupa, entre otras cosas, de:</p>
+                                <ul>
+                                    <li>trastornos respiratorios e insuficiencia respiratoria,</li>
+                                    <li>infecciones y sepsis neonatal,</li>
+                                    <li>ictericia del recién nacido,</li>
+                                    <li>malformaciones congénitas (p. ej. del corazón o del aparato digestivo),</li>
+                                    <li>falta de oxígeno durante el parto,</li>
+                                    <li>pruebas de cribado que detectan enfermedades a tiempo (p. ej. de audición, visión o metabólicas).</li>
+                                </ul>
+                                <p>En Polonia, la atención neonatal se organiza en <strong>tres niveles de referencia</strong>. Las unidades de nivel I atienden partos normales; las de nivel II, embarazos de riesgo moderado; y los centros de nivel III (el más alto) se ocupan de embarazos de alto riesgo, grandes prematuros y niños con malformaciones congénitas graves.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Cómo WOŚP ha apoyado la neonatología durante más de 30 años',
+                        body: (
+                            <div className="space-y-3">
+                                <p>La neonatología es una de las causas más cercanas al corazón de la Orquesta: según la Fundación, ya ha sido el objetivo de una Final <strong>siete veces</strong>. En total, WOŚP ha destinado <strong>más de 224 millones de zlotys</strong> a equipamiento para recién nacidos, adquiriendo <strong>más de 8.500 aparatos</strong>.</p>
+                                <ul>
+                                    <li><strong>2ª Final (1994)</strong> – ayuda a los hospitales neonatales. Se recaudaron unos 4,7 millones de zlotys, con los que se compraron, entre otras cosas, <strong>160 incubadoras</strong>, puestos de reanimación y bombas de jeringa. Muchos médicos consideran que ahí nació la neonatología moderna en Polonia.</li>
+                                    <li><strong>Programa de Cribado Auditivo Universal de Recién Nacidos</strong> – desde 2002, gracias a los equipos de WOŚP, se examina la audición de prácticamente todos los niños nacidos en Polonia, lo que permite detectar la sordera a tiempo y tratarla rápidamente.</li>
+                                    <li><strong>Programa de Tratamiento de la Retinopatía del Prematuro</strong> – la Orquesta equipó centros con aparatos para diagnosticar y tratar la retinopatía, una enfermedad ocular que, sin tratamiento, puede causar ceguera en los prematuros.</li>
+                                    <li><strong>26ª Final (2018)</strong> – «Para igualar las oportunidades en el tratamiento de los recién nacidos». Las unidades neonatales, incluidas las más pequeñas de nivel I y II, recibieron <strong>3.844 aparatos por valor de casi 122 millones de zlotys</strong>: incubadoras, bilirrubinómetros, cardiotocógrafos, pulsioxímetros y mucho más.</li>
+                                </ul>
+                                <p>Hoy el corazón de WOŚP se encuentra en prácticamente todas las unidades neonatales de Polonia. Para muchos padres es el primer símbolo de esperanza que ven junto a la incubadora de su bebé.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Los mayores retos actuales en la atención al recién nacido',
+                        body: (
+                            <div className="space-y-3">
+                                <p><strong>Nacen menos niños, pero los partos son cada vez más complicados.</strong> El número de nacimientos en Polonia es el más bajo en décadas y, al mismo tiempo, crece la proporción de partos con mayor riesgo de complicaciones. Las mujeres son madres más tarde y son más frecuentes los gemelos y los bebés concebidos tras tratamientos de fertilidad.</p>
+                                <p><strong>Unos 20.000 prematuros al año.</strong> Son los niños que nacen antes de tiempo en Polonia cada año. Algunos necesitan semanas de atención especializada y, tras salir del hospital, a menudo años de rehabilitación.</p>
+                                <p><strong>Desaparecen unidades.</strong> Como recordó Jurek Owsiak, hace una década había en Polonia unas 400 unidades neonatales; hoy hay 266. Según el Tribunal Supremo de Cuentas polaco (NIK), entre 2022 y 2025 se cerraron más de 50 unidades de obstetricia, y en 136 distritos ya no queda ni una sola maternidad. La atención se concentra en grandes centros de nivel III, que deben recibir cada vez más pacientes.</p>
+                                <p><strong>Falta personal.</strong> Una auditoría de la NIK publicada en junio de 2026 mostró que en algunos hospitales faltan neonatólogos y pediatras: a veces un solo médico atiende varias unidades a la vez y las guardias duran incluso varios días.</p>
+                                <p><strong>El transporte es cada vez más importante.</strong> Al haber menos unidades pequeñas, muchos bebés deben ser trasladados rápidamente tras el parto a un centro de referencia, a menudo a decenas de kilómetros. Para ello se necesitan ambulancias especializadas con incubadora de transporte y respirador.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: '¿Tienen los hospitales el equipamiento necesario?',
+                        body: (
+                            <div className="space-y-3">
+                                <p>La mayoría de las unidades cuenta con el equipamiento básico, en gran parte gracias a anteriores Finales de WOŚP. El problema es que los equipos médicos envejecen: los aparatos comprados hace varios o más de diez años necesitan ser sustituidos, y la medicina ha dado entretanto un enorme salto adelante.</p>
+                                <p>Muchas soluciones modernas que permiten tratar a los prematuros de forma más eficaz y suave –como los monitores NIRS, la tomografía de impedancia pulmonar o los sistemas HeRO– todavía no son estándar en todas las unidades. Además, los centros de nivel III, que reciben cada vez más bebés en estado grave, necesitan más puestos de cuidados intensivos que hace unos años. Precisamente ese vacío es el que quiere llenar la 35ª Final.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: '¿Qué comprará la Orquesta?',
+                        body: (
+                            <div className="space-y-3">
+                                <p>La Fundación WOŚP ha anunciado la compra, entre otros, de:</p>
+                                <ul>
+                                    <li><strong>puestos de reanimación neonatal</strong> – primeros auxilios para el bebé justo después del parto,</li>
+                                    <li><strong>respiradores neonatales modernos</strong> y <strong>monitores de función respiratoria</strong>,</li>
+                                    <li><strong>videolaringoscopios</strong> – que hacen más segura la intubación de pacientes diminutos,</li>
+                                    <li><strong>tomógrafos de impedancia eléctrica</strong> – para controlar la ventilación pulmonar sin radiación,</li>
+                                    <li><strong>monitores NIRS</strong> – para evaluar de forma no invasiva la oxigenación de los tejidos, incluido el cerebro,</li>
+                                    <li><strong>sistemas HeRO</strong> – que analizan la variabilidad de la frecuencia cardiaca para detectar a tiempo amenazas como una infección,</li>
+                                    <li><strong>incubadoras</strong> que permiten el método canguro de forma segura incluso con los prematuros más pequeños,</li>
+                                    <li><strong>ambulancias de tipo N</strong> para el transporte neonatal especializado,</li>
+                                    <li><strong>analizadores de leche materna</strong> para unidades y bancos de leche.</li>
+                                </ul>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Tocamos juntos, ¡también en Barcelona!',
+                        body: (
+                            <div className="space-y-3">
+                                <p>El 31 de enero de 2027, WOŚP Barcelona volverá a tocar junto con toda Polonia y la diáspora polaca de todo el mundo. Ya estamos trabajando en el programa de nuestra Final: muy pronto anunciaremos el lugar, los conciertos, las subastas y las actividades para niños.</p>
+                                <p>¿Quieres ser voluntario, donar un objeto para subasta o apoyarnos como patrocinador? <Link href="/es/contact">Escríbenos</Link> y síguenos en <a href="https://www.facebook.com/sztabWOSPBarcelona" target="_blank" rel="noopener noreferrer">Facebook</a> e <a href="https://www.instagram.com/wospbarcelona/" target="_blank" rel="noopener noreferrer">Instagram</a>. ¿¡Hoy?! ¡La salud del recién nacido es lo primero! ❤️</p>
+                            </div>
+                        ),
+                    },
+                    { title: 'Fuentes', body: <Final35Sources /> },
+                ],
+            },
+            ca: {
+                title: '35a Final de WOŚP: el 31 de gener de 2027 toquem per la salut dels nadons!',
+                excerpt: 'La 35a Final de la Gran Orquestra de l\'Ajuda de Nadal se celebrarà el 31 de gener de 2027 amb el lema «Avui?! La salut del nadó és el més important». T\'expliquem què és la neonatologia, com WOŚP l\'ha donat suport durant més de 30 anys i a quins reptes s\'enfronten avui les unitats neonatals.',
+                sections: [
+                    {
+                        body: (
+                            <div className="space-y-4">
+                                <Final35InfoBox
+                                    heading="35a Final de WOŚP – Avui?! La salut del nadó és el més important"
+                                    items={[
+                                        ['Data', '31 de gener de 2027 (diumenge)'],
+                                        ['Objectiu', 'Neonatologia – equipament per a unitats neonatals, des de la sala de parts fins a les cures intensives'],
+                                        ['Barcelona', 'És clar que toquem amb vosaltres! Aviat donarem els detalls de la nostra Final.'],
+                                    ]}
+                                />
+                                <p>La Fundació WOŚP ha anunciat l&apos;objectiu de la 35a Final: aquesta vegada l&apos;Orquestra tocarà pels <strong>pacients més petits – els nadons</strong>, amb una atenció especial als prematurs i als infants que necessiten cures intensives. Els diners recaptats es destinaran a equips moderns per a sales de parts, unitats de cures intensives neonatals i transport especialitzat entre hospitals.</p>
+                                <p>És una causa molt especial per a nosaltres: molts som pares i mares, i diversos voluntaris de WOŚP Barcelona tenen a la família històries de nadons prematurs. A continuació t&apos;expliquem per què toquem exactament i per què és tan important.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Què és la neonatologia?',
+                        body: (
+                            <div className="space-y-3">
+                                <p>La <strong>neonatologia</strong> (del llatí <em>neonatus</em>, nounat) és la branca de la medicina que s&apos;ocupa de la salut dels nadons durant els seus primers <strong>28 dies de vida</strong>. Els neonatòlegs atenen tant nadons sans com aquells que lluiten per la seva vida des dels primers minuts.</p>
+                                <p>El grup de pacients més important són els <strong>prematurs</strong>, és a dir, els nascuts abans de la setmana 37 d&apos;embaràs. Gràcies als avenços mèdics, avui es poden salvar nadons nascuts fins i tot a la setmana 23–24, que de vegades pesen menys de 500 grams. Aquests petits tenen els pulmons, el cervell, l&apos;intestí i els ulls immadurs: necessiten incubadora, suport respiratori, medicació i nutrició dosificades amb precisió i, sovint, moltes setmanes a cures intensives.</p>
+                                <p>La neonatologia també s&apos;ocupa, entre altres coses, de:</p>
+                                <ul>
+                                    <li>trastorns respiratoris i insuficiència respiratòria,</li>
+                                    <li>infeccions i sèpsia neonatal,</li>
+                                    <li>icterícia del nadó,</li>
+                                    <li>malformacions congènites (p. ex. del cor o de l&apos;aparell digestiu),</li>
+                                    <li>manca d&apos;oxigen durant el part,</li>
+                                    <li>proves de cribratge que detecten malalties a temps (p. ex. d&apos;audició, visió o metabòliques).</li>
+                                </ul>
+                                <p>A Polònia, l&apos;atenció neonatal s&apos;organitza en <strong>tres nivells de referència</strong>. Les unitats de nivell I atenen parts normals; les de nivell II, embarassos de risc moderat; i els centres de nivell III (el més alt) s&apos;ocupen d&apos;embarassos d&apos;alt risc, grans prematurs i infants amb malformacions congènites greus.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Com WOŚP ha donat suport a la neonatologia durant més de 30 anys',
+                        body: (
+                            <div className="space-y-3">
+                                <p>La neonatologia és una de les causes més properes al cor de l&apos;Orquestra: segons la Fundació, ja ha estat l&apos;objectiu d&apos;una Final <strong>set vegades</strong>. En total, WOŚP ha destinat <strong>més de 224 milions de zlotys</strong> a equipament per a nadons, adquirint <strong>més de 8.500 aparells</strong>.</p>
+                                <ul>
+                                    <li><strong>2a Final (1994)</strong> – ajuda als hospitals neonatals. Es van recaptar uns 4,7 milions de zlotys, amb els quals es van comprar, entre altres coses, <strong>160 incubadores</strong>, llocs de reanimació i bombes de xeringa. Molts metges consideren que llavors va néixer la neonatologia moderna a Polònia.</li>
+                                    <li><strong>Programa de Cribratge Auditiu Universal de Nadons</strong> – des del 2002, gràcies als equips de WOŚP, s&apos;examina l&apos;audició de pràcticament tots els infants nascuts a Polònia, cosa que permet detectar la sordesa a temps i tractar-la ràpidament.</li>
+                                    <li><strong>Programa de Tractament de la Retinopatia del Prematur</strong> – l&apos;Orquestra va equipar centres amb aparells per diagnosticar i tractar la retinopatia, una malaltia ocular que, sense tractament, pot causar ceguesa als prematurs.</li>
+                                    <li><strong>26a Final (2018)</strong> – «Per igualar les oportunitats en el tractament dels nadons». Les unitats neonatals, incloses les més petites de nivell I i II, van rebre <strong>3.844 aparells per valor de gairebé 122 milions de zlotys</strong>: incubadores, bilirubinòmetres, cardiotocògrafs, pulsioxímetres i molt més.</li>
+                                </ul>
+                                <p>Avui el cor de WOŚP es troba a pràcticament totes les unitats neonatals de Polònia. Per a molts pares és el primer símbol d&apos;esperança que veuen al costat de la incubadora del seu nadó.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Els reptes més grans actuals en l\'atenció al nadó',
+                        body: (
+                            <div className="space-y-3">
+                                <p><strong>Neixen menys infants, però els parts són cada cop més complicats.</strong> El nombre de naixements a Polònia és el més baix en dècades i, alhora, creix la proporció de parts amb més risc de complicacions. Les dones són mares més tard i són més freqüents els bessons i els nadons concebuts després de tractaments de fertilitat.</p>
+                                <p><strong>Uns 20.000 prematurs l&apos;any.</strong> Són els infants que neixen abans d&apos;hora a Polònia cada any. Alguns necessiten setmanes d&apos;atenció especialitzada i, després de sortir de l&apos;hospital, sovint anys de rehabilitació.</p>
+                                <p><strong>Desapareixen unitats.</strong> Com va recordar Jurek Owsiak, fa una dècada hi havia a Polònia unes 400 unitats neonatals; avui n&apos;hi ha 266. Segons la Sindicatura Suprema de Comptes polonesa (NIK), entre el 2022 i el 2025 es van tancar més de 50 unitats d&apos;obstetrícia, i en 136 comarques ja no hi queda ni una sola maternitat. L&apos;atenció es concentra en grans centres de nivell III, que han de rebre cada cop més pacients.</p>
+                                <p><strong>Manca personal.</strong> Una auditoria de la NIK publicada el juny del 2026 va mostrar que en alguns hospitals falten neonatòlegs i pediatres: de vegades un sol metge atén diverses unitats alhora i les guàrdies duren fins i tot uns quants dies.</p>
+                                <p><strong>El transport és cada cop més important.</strong> Com que hi ha menys unitats petites, molts nadons han de ser traslladats ràpidament després del part a un centre de referència, sovint a desenes de quilòmetres. Per això calen ambulàncies especialitzades amb incubadora de transport i respirador.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Tenen els hospitals l\'equipament necessari?',
+                        body: (
+                            <div className="space-y-3">
+                                <p>La majoria de les unitats disposen de l&apos;equipament bàsic, en gran part gràcies a Finals anteriors de WOŚP. El problema és que els equips mèdics envelleixen: els aparells comprats fa uns quants anys o més de deu necessiten ser substituïts, i la medicina ha fet mentrestant un salt enorme endavant.</p>
+                                <p>Moltes solucions modernes que permeten tractar els prematurs de manera més eficaç i suau –com els monitors NIRS, la tomografia d&apos;impedància pulmonar o els sistemes HeRO– encara no són estàndard a totes les unitats. A més, els centres de nivell III, que reben cada cop més nadons en estat greu, necessiten més llocs de cures intensives que fa uns anys. Precisament aquest buit és el que vol omplir la 35a Final.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Què comprarà l\'Orquestra?',
+                        body: (
+                            <div className="space-y-3">
+                                <p>La Fundació WOŚP ha anunciat la compra, entre d&apos;altres, de:</p>
+                                <ul>
+                                    <li><strong>llocs de reanimació neonatal</strong> – primers auxilis per al nadó just després del part,</li>
+                                    <li><strong>respiradors neonatals moderns</strong> i <strong>monitors de funció respiratòria</strong>,</li>
+                                    <li><strong>videolaringoscopis</strong> – que fan més segura la intubació de pacients diminuts,</li>
+                                    <li><strong>tomògrafs d&apos;impedància elèctrica</strong> – per controlar la ventilació pulmonar sense radiació,</li>
+                                    <li><strong>monitors NIRS</strong> – per avaluar de manera no invasiva l&apos;oxigenació dels teixits, inclòs el cervell,</li>
+                                    <li><strong>sistemes HeRO</strong> – que analitzen la variabilitat de la freqüència cardíaca per detectar a temps amenaces com una infecció,</li>
+                                    <li><strong>incubadores</strong> que permeten el mètode cangur de manera segura fins i tot amb els prematurs més petits,</li>
+                                    <li><strong>ambulàncies de tipus N</strong> per al transport neonatal especialitzat,</li>
+                                    <li><strong>analitzadors de llet materna</strong> per a unitats i bancs de llet.</li>
+                                </ul>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Toquem junts, també a Barcelona!',
+                        body: (
+                            <div className="space-y-3">
+                                <p>El 31 de gener de 2027, WOŚP Barcelona tornarà a tocar juntament amb tota Polònia i la diàspora polonesa arreu del món. Ja estem treballant en el programa de la nostra Final: molt aviat anunciarem el lloc, els concerts, les subhastes i les activitats per als infants.</p>
+                                <p>Vols ser voluntari, donar un objecte per a la subhasta o donar-nos suport com a patrocinador? <Link href="/ca/contact">Escriu-nos</Link> i segueix-nos a <a href="https://www.facebook.com/sztabWOSPBarcelona" target="_blank" rel="noopener noreferrer">Facebook</a> i <a href="https://www.instagram.com/wospbarcelona/" target="_blank" rel="noopener noreferrer">Instagram</a>. Avui?! La salut del nadó és el més important! ❤️</p>
+                            </div>
+                        ),
+                    },
+                    { title: 'Fonts', body: <Final35Sources /> },
+                ],
+            },
+        },
+    },
     {
         slug: 'dziekujemy-za-34-final-wosp-w-barcelonie',
         date: '2026-01-26',
