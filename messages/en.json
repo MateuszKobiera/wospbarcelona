@@ -21,7 +21,7 @@
       "description": "See upcoming and past WOŚP Barcelona events. Concerts, auctions, charity runs and more."
     },
     "blog": {
-      "title": "Blog",
+      "title": "News",
       "description": "News, event reports and stories from WOŚP Barcelona. Stay up to date with our charity activities."
     },
     "sponsors": {
@@ -43,10 +43,11 @@
     "home": "Home",
     "about": "About us",
     "events": "Calendar",
-    "blog": "Blog",
+    "blog": "News",
     "contact": "Contact",
     "donate": "Donate online",
-    "sponsors": "Sponsors"
+    "sponsors": "Sponsors",
+    "search": "Search"
   },
   "home": {
     "title": "WOŚP Barcelona",
@@ -224,6 +225,13 @@
         "title": "34th WOŚP Finale in Barcelona",
         "description": "The biggest charity event of the year! Workshops, performances, auctions and integration."
       }
+    },
+    "newsSection": {
+      "title": "Latest news",
+      "subtitle": "News, guides and stories from the life of WOŚP Barcelona",
+      "latestTitle": "Latest",
+      "featuredTitle": "Most interesting",
+      "allArticles": "See all articles"
     }
   },
   "about": {
@@ -274,7 +282,12 @@
         "historyTitle": "WOŚP history",
         "goalsTitle": "Medical goals",
         "foundationTitle": "Jerzy Owsiak & Foundation",
-        "visitLink": "Visit official WOŚP site"
+        "visitLink": "Visit official WOŚP site",
+        "nextFinale": {
+          "title": "35th WOŚP Finale — 31 January 2027: playing for newborns",
+          "text": "The motto of the 35th Finale is “Today?! Newborn health comes first!”. The money raised will buy modern equipment for neonatal wards — from the delivery room, through intensive care, to specialised transport for premature babies. Of course WOŚP Barcelona will play together with you!",
+          "link": "Read more about the goal of the 35th Finale"
+        }
       },
       "barcelonaSection": {
         "title": "WOŚP Barcelona",
@@ -319,7 +332,7 @@
       },
       "final33Summary": {
         "title": "33rd WOŚP Finale in Barcelona (January 2025)",
-        "medicalDesc": "The 33rd Finale was dedicated to palliative and hospice medicine. The funds raised were used to purchase medical equipment that helps ensure a dignified life and death for patients in their most difficult moments.",
+        "medicalDesc": "The 33rd Finale played for children with cancer and blood diseases. The funds raised went to equipment for faster diagnosis and more effective treatment – including for 18 paediatric oncology and haematology wards and 17 hospices.",
         "collectedDesc": "raised during the 33rd Finale",
         "readArticle": "See what the 33rd Finale looked like"
       }
@@ -354,7 +367,8 @@
         "instagramDesc": "Latest photos and stories from our activities in Barcelona.",
         "youtubeDesc": "Watch our videos and event reports from WOŚP Barcelona.",
         "allegroDesc": "Bid on charity items and support WOŚP Barcelona."
-      }
+      },
+      "readGoalArticle": "Read about the 35th Finale goal"
     },
     "categories": {
       "volunteerMeeting": "Volunteer Meeting",
@@ -398,6 +412,12 @@
         "title": "Pierogi Making for WOŚP Finale",
         "description": "🥟 Join us for communal pierogi making at Wawel Restobar! We'll prepare delicious pierogis together for the 34th WOŚP Finale. The more the merrier!",
         "fullDescription": "🥟 Pierogi Making for the WOŚP Finale at Wawel Restobar\n\nWe invite everyone to join us for communal pierogi making, which will be served during the 34th WOŚP Finale in Barcelona!\n\n📍 Where: Wawel Restobar — our main sponsor\n📅 When: Saturday, January 24, 2026\n🕐 Hours: 1:00 PM - 7:00 PM\n\n✨ Why is it worth coming?\n\n• Fun and integration before the finale\n• You'll learn to make traditional Polish pierogis\n• You'll help prepare food for the WOŚP finale\n• You'll feel the atmosphere of Polish hospitality\n• You'll meet other volunteers and WOŚP supporters\n• You'll support our sponsor — Wawel Restobar\n\n👥 For whom?\nFor everyone! You don't need any experience in making pierogis — we'll teach you everything. You can come at any time between 1:00 PM and 7:00 PM.\n\n📝 Registration:\nNo registration required — just come! The more of us there are, the more pierogis we'll make for the finale.\n\n💪 Every pair of hands is needed!\nRegardless of whether you're a kitchen expert or just starting your cooking adventure — every help is valuable. Together we'll prepare delicious pierogis that everyone at the finale will enjoy!\n\nSee you at Wawel Restobar!"
+      },
+      "11": {
+        "title": "35th WOŚP Finale in Barcelona",
+        "description": "🎉 On 31 January 2027 we play for the health of newborns! The exact venue in Barcelona will be announced soon.",
+        "location": "Barcelona – venue TBA",
+        "fullDescription": "🎉 35th WOŚP Finale in Barcelona\n\n📅 Date: 31 January 2027 (Sunday)\n📍 Venue: Barcelona — the exact location will be announced soon\n🎯 Goal: \"Today?! Newborn health comes first!\"\n\n❤️ Why do we play?\nThis time the Orchestra plays for the youngest patients — newborns, with a special focus on premature babies and children who need intensive care. The money raised will go to modern equipment for delivery rooms, neonatal intensive care units and specialised transport between hospitals.\n\n📝 What's next?\nWe are working on the programme of our Finale — details about the venue, concerts, auctions and activities for children will be announced soon. Want to help as a volunteer or sponsor? Get in touch!"
       },
       "101": {
         "title": "33rd WOŚP Finale in Barcelona",
@@ -465,18 +485,23 @@
       "addToCalendar": "Add to Google Calendar",
       "routeVideo": "Route video",
       "whatAwaits": "What awaits us?",
-      "poster": "Poster"
+      "poster": "Poster",
+      "readGoalArticle": "Read about the 35th Finale goal"
     }
   },
   "blog": {
-    "title": "WOŚP Barcelona Blog",
+    "relatedTitle": "You may also like",
+    "title": "WOŚP Barcelona News",
     "description": "Discover our stories, events and initiatives. Learn more about our charitable activities.",
     "article": "Article",
     "readMore": "Read more",
-    "backToBlog": "← Back to blog",
+    "backToBlog": "← Back to news",
     "tags": "Tags",
     "followUs": "Follow us",
-    "noPosts": "No blog posts"
+    "noPosts": "No articles yet",
+    "postNavigation": "Article navigation",
+    "newerPost": "Newer article",
+    "olderPost": "Older article"
   },
   "contact": {
     "title": "Contact",
@@ -718,5 +743,22 @@
     "cta": "See run details",
     "close": "Close",
     "routeVideo": "Route video"
+  },
+  "search": {
+    "title": "Search",
+    "description": "Search the news, events, sponsors and information about us.",
+    "placeholder": "What are you looking for? e.g. finale, pierogi, volunteer…",
+    "clear": "Clear",
+    "all": "All",
+    "categories": {
+      "blog": "News",
+      "events": "Events",
+      "sponsors": "Sponsors",
+      "about": "About us"
+    },
+    "minChars": "Type at least {count} characters to start searching.",
+    "results": "{count, plural, one {# result} other {# results}}",
+    "noResults": "No results for \"{query}\"",
+    "noResultsHint": "Try a different word or pick another category."
   }
 }

@@ -2,7 +2,7 @@
 
 import { Card, CardContent } from '@/components/ui/card';
 import { useLocale, useTranslations } from 'next-intl';
-import { Calendar, Award, Stethoscope, ExternalLink, Users, Heart, HeartHandshakeIcon, StoreIcon, UsersIcon, FlagIcon, ArrowRight } from 'lucide-react';
+import { Calendar, Award, Stethoscope, ExternalLink, Users, Heart, HeartHandshakeIcon, StoreIcon, UsersIcon, FlagIcon, ArrowRight, Baby } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 import { BlogPhotoGallery } from '@/components/BlogPhotoGallery';
@@ -63,6 +63,22 @@ export default function AboutPageClient() {
                                 </h3>
                                 <p className="mb-4">{t('wospHistory.jurek.content')}</p>
                                 <p>{t('wospHistory.jurek.transparency')}</p>
+                            </div>
+
+                            {/* 35th Finale goal */}
+                            <div className="border-l-4 border-red-500 bg-white pl-5 pr-4 py-4 rounded-r-lg mb-8 not-prose">
+                                <h3 className="text-lg font-bold text-gray-900 mb-2 flex items-center">
+                                    <Baby className="w-5 h-5 text-red-600 mr-2 flex-shrink-0" />
+                                    {t('page.wospSection.nextFinale.title')}
+                                </h3>
+                                <p className="text-base text-gray-700 mb-3">{t('page.wospSection.nextFinale.text')}</p>
+                                <Link
+                                    href={`/${locale}/news/35-final-wosp-zagramy-dla-noworodkow`}
+                                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-red-600 hover:text-red-700 hover:underline"
+                                >
+                                    {t('page.wospSection.nextFinale.link')}
+                                    <ArrowRight className="w-4 h-4" />
+                                </Link>
                             </div>
 
                             <div className="text-center mt-8">
@@ -249,7 +265,7 @@ export default function AboutPageClient() {
 
                             <div className="text-center mt-8 not-prose">
                                 <Link
-                                    href={`/${locale}/blog/dziekujemy-za-34-final-wosp-w-barcelonie`}
+                                    href={`/${locale}/news/dziekujemy-za-34-final-wosp-w-barcelonie`}
                                     className="inline-flex items-center space-x-2 bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors shadow-md hover:shadow-lg"
                                 >
                                     <span>{t('page.final34Section.readArticle')}</span>
@@ -277,7 +293,7 @@ export default function AboutPageClient() {
                         </div>
                         <div className="text-center mt-6">
                             <Link
-                                href={`/${locale}/blog/tak-wygladal-33-final-wosp-w-barcelonie`}
+                                href={`/${locale}/news/tak-wygladal-33-final-wosp-w-barcelonie`}
                                 className="inline-flex items-center space-x-2 border border-red-200 text-red-700 hover:bg-red-50 font-semibold px-6 py-3 rounded-lg transition-colors"
                             >
                                 <span>{t('page.final33Summary.readArticle')}</span>

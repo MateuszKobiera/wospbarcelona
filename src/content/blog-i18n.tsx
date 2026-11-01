@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { BlogPhotoGallery } from '@/components/BlogPhotoGallery';
 import { final34GalleryPhotos } from '@/content/final34Gallery';
+import { newsPostsI18n } from '@/content/blog-news';
 
 
 function Final35InfoBox({ heading, items }: { heading: string; items: Array<[string, string]> }) {
@@ -42,6 +43,32 @@ function Final35Sources() {
     );
 }
 
+function PostFigure({ src, alt, caption, width, height, className }: { src: string; alt: string; caption?: string; width: number; height: number; className?: string }) {
+    return (
+        <figure className={`my-4 ${className ?? ''}`}>
+            <Image src={src} alt={alt} width={width} height={height} sizes="(max-width: 768px) 100vw, 768px" className="w-full h-auto rounded-lg shadow-md" />
+            {caption && <figcaption className="mt-2 text-sm text-gray-600 italic text-center">{caption}</figcaption>}
+        </figure>
+    );
+}
+
+function SocialPills() {
+    const links: Array<[string, string]> = [
+        ['Facebook', 'https://www.facebook.com/sztabWOSPBarcelona/'],
+        ['Instagram', 'https://www.instagram.com/wospbarcelona/'],
+        ['TikTok', 'https://www.tiktok.com/@wospbarcelona'],
+    ];
+    return (
+        <div className="flex flex-wrap gap-3">
+            {links.map(([label, href]) => (
+                <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 border border-red-200 bg-white text-red-700 hover:bg-red-50 shadow-sm transition-transform hover:-translate-y-0.5">
+                    {label}
+                </a>
+            ))}
+        </div>
+    );
+}
+
 export type LocalizedContent = {
     title: string;
     excerpt?: string;
@@ -71,7 +98,7 @@ export type BlogPostI18n = {
     };
 };
 
-export const blogPostsI18n: BlogPostI18n[] = [
+const basePostsI18n: BlogPostI18n[] = [
     {
         slug: '35-final-wosp-zagramy-dla-noworodkow',
         date: '2026-11-01',
@@ -1345,7 +1372,6 @@ export const blogPostsI18n: BlogPostI18n[] = [
             facebook: 'https://www.facebook.com/sztabWOSPBarcelona',
             instagram: 'https://www.instagram.com/wospbarcelona/',
         },
-        sourceUrl: 'https://wospbarcelona.org/index.php/2025/02/04/tak-wygladal-33-final-wosp-w-barcelonie/',
         content: {
             pl: {
                 title: 'Tak wyglądał 33. Finał WOŚP w Barcelonie [Zdjęcia]',
@@ -1788,38 +1814,363 @@ export const blogPostsI18n: BlogPostI18n[] = [
     {
         slug: '33-final-wosp-w-barcelonie-muzyka-licytacje-i-pomoc',
         date: '2025-01-26',
-        sourceUrl: 'https://wospbarcelona.org/index.php/2025/01/26/33-final-wosp-w-barcelonie-muzyka-licytacje-i-pomoc-w-jednym-miejscu/',
+        coverImage: '/images/33-final/DSCF7321.jpg',
+        tags: ['33FinałWOŚP', 'Barcelona', 'NauBostik', 'Koncerty', 'Licytacje'],
         content: {
             pl: {
                 title: '33. Finał WOŚP w Barcelonie – Muzyka, Licytacje i Pomoc w Jednym Miejscu!',
+                excerpt: '26 stycznia 2025 w Nau Bostik gramy w 33. Finale WOŚP dla onkologii i hematologii dziecięcej! Pięć koncertów, cztery sesje licytacji, polska kuchnia, atrakcje dla dzieci i Światełko do nieba – sprawdź, co na Was czeka.',
                 sections: [
-                    { title: 'Co dla Was przygotowaliśmy?', body: (<><p>Pierwsza, jasna sala:</p><ul className="list-disc pl-6 space-y-1"><li>Wystawa sztuki na licytację</li><li>Kulinaria: domowe ciasta, pierogi, grill, sałatki, kawa</li><li>Loteria – każdy los wygrywa</li><li>Malowanie twarzy</li></ul><p>Druga, ciemna sala:</p><ul className="list-disc pl-6 space-y-1"><li>Koncerty i licytacje</li><li>Bar: polskie piwa kraftowe, wina, grzaniec i inne</li></ul></>) },
-                    { title: 'Informacje o płatnościach', body: (<ul className="list-disc pl-6 space-y-1"><li>Kupony płatne kartą lub gotówką do puszki</li><li>Stoisko Delicious by Bea: płatność u sprzedawcy</li><li>Bar: część asortymentu tylko za gotówkę, reszta za kupony</li><li>Kubki: darmowy, kolekcjonerski Wawel/Sol De Gracia (kaucja 1 €), kolekcjonerski WOŚP Barcelona (2 €)</li></ul>) },
-                    { title: 'Licytacje', body: (<p>Na aukcjach do zdobycia m.in. unikatowe dzieła sztuki, vouchery i rękodzieło. Szczegóły: „Licytacje podczas 33. Finału WOŚP w Barcelonie".</p>) },
+                    {
+                        body: (
+                            <div className="space-y-3">
+                                <p>Wielki dzień nadszedł! <strong>26 stycznia 2025 roku</strong> Sztab WOŚP Barcelona zaprasza na <strong>33. Finał Wielkiej Orkiestry Świątecznej Pomocy</strong>. Tegoroczny cel to <strong>onkologia i hematologia dziecięca</strong> – zebrane pieniądze pomogą w diagnostyce i leczeniu dzieci chorych na nowotwory.</p>
+                                <ul>
+                                    <li><strong>Miejsce:</strong> Nau Bostik – Carrer Ferran Turné 1-11, Sant Andreu, Barcelona</li>
+                                    <li><strong>Start:</strong> 10:30</li>
+                                    <li><strong>Zakończenie:</strong> ok. 20:00, po Światełku do nieba</li>
+                                    <li><strong>Wstęp:</strong> wolny – zapraszamy całe rodziny, znajomych i sąsiadów!</li>
+                                </ul>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Harmonogram koncertów',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Przez cały dzień na scenie w ciemnej sali zagrają artyści, którzy wspierają Orkiestrę za darmo:</p>
+                                <ul>
+                                    <li><strong>11:00</strong> – Anulka &amp; Dirty Spoons</li>
+                                    <li><strong>12:30</strong> – Marcin Bury</li>
+                                    <li><strong>14:00</strong> – Guimera Blues &amp; The Sugar Boys</li>
+                                    <li><strong>16:30</strong> – Justyna &amp; Jaime</li>
+                                    <li><strong>18:15</strong> – Eye of the Storm</li>
+                                    <li><strong>19:30</strong> – Światełko do nieba</li>
+                                </ul>
+                                <PostFigure src="/images/33-final/DSCF7186.jpg" width={1024} height={683} alt="Koncert na scenie 33. Finału WOŚP w Nau Bostik" caption="Scena w Nau Bostik podczas 33. Finału. Zdjęcie: Hela Staniszewska" />
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Co dla Was przygotowaliśmy?',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Nau Bostik podzieliliśmy na dwie strefy, żeby każdy znalazł coś dla siebie.</p>
+                                <p><strong>Pierwsza, jasna sala:</strong></p>
+                                <ul>
+                                    <li>wystawa sztuki – obrazy, które trafią na licytację,</li>
+                                    <li>kulinaria: domowe ciasta, pierogi, grill, sałatki, kawa,</li>
+                                    <li>loteria – każdy los wygrywa,</li>
+                                    <li>malowanie twarzy, tatuaże z serduszkiem WOŚP i animacje dla dzieci.</li>
+                                </ul>
+                                <p><strong>Druga, ciemna sala:</strong></p>
+                                <ul>
+                                    <li>koncerty i licytacje,</li>
+                                    <li>bar: polskie piwa kraftowe, wina, grzaniec i inne napoje.</li>
+                                </ul>
+                                <p>Wszystkie potrawy przygotowują nasi wolontariusze – a cały dochód z ich sprzedaży trafia na konto Fundacji WOŚP.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Informacje o płatnościach',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Żeby wszystko szło sprawnie, na Finale działa system kuponów:</p>
+                                <ul>
+                                    <li>kupony kupisz kartą lub gotówką wrzuconą do puszki,</li>
+                                    <li>stoisko Delicias by Bea – płatność bezpośrednio u sprzedawcy,</li>
+                                    <li>bar – część asortymentu tylko za gotówkę, reszta za kupony,</li>
+                                    <li>kubki: zwykły – za darmo, kolekcjonerski Wawel/Sol de Gràcia – kaucja 1 €, kolekcjonerski WOŚP Barcelona – 2 €.</li>
+                                </ul>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Licytacje',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Przygotowaliśmy cztery sesje licytacji. Do zdobycia będą m.in. unikatowe dzieła sztuki z wernisażu „Sztuka dla WOŚP”, vouchery, rękodzieło, książki z dedykacjami i gadżety WOŚP. O 15:00 odbędzie się licytacja <strong>złotego serduszka</strong> wykonanego przez Jakuba Rajchelta z logo naszego sztabu.</p>
+                                <p>Pełną listę przedmiotów znajdziesz w artykule <Link href="/pl/news/licytacje-podczas-33-finalu-wosp-w-barcelonie">„Licytacje podczas 33. Finału WOŚP w Barcelonie”</Link>.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Światełko do nieba',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Tradycyjnie zakończymy dzień <strong>Światełkiem do nieba o 19:30</strong> – to moment, w którym wszyscy uczestnicy Finałów w Polsce i na świecie wysyłają w niebo symboliczny znak, że gramy razem. Bądźcie z nami do końca!</p>
+                                <p><em>Aktualizacja:</em> zobacz, jak było – przeczytaj <Link href="/pl/news/tak-wygladal-33-final-wosp-w-barcelonie">relację ze zdjęciami z 33. Finału</Link>.</p>
+                            </div>
+                        ),
+                    },
                 ],
             },
             en: {
                 title: '33rd WOŚP Finale in Barcelona – Music, Auctions and Help in One Place!',
+                excerpt: 'On 26 January 2025 at Nau Bostik we play in the 33rd WOŚP Finale for paediatric oncology and haematology! Five concerts, four auction sessions, Polish food, activities for kids and the Light to Heaven – see what awaits you.',
                 sections: [
-                    { title: 'What have we prepared for you?', body: (<><p>First, bright hall:</p><ul className="list-disc pl-6 space-y-1"><li>Art exhibition for auction</li><li>Culinary: homemade cakes, pierogi, grill, salads, coffee</li><li>Lottery – every ticket wins</li><li>Face painting</li></ul><p>Second, dark hall:</p><ul className="list-disc pl-6 space-y-1"><li>Concerts and auctions</li><li>Bar: Polish craft beers, wines, mulled wine and more</li></ul></>) },
-                    { title: 'Payment information', body: (<ul className="list-disc pl-6 space-y-1"><li>Coupons payable by card or cash to the collection box</li><li>Delicious by Bea stand: payment at the seller</li><li>Bar: some items cash only, rest for coupons</li><li>Mugs: free, collector's Wawel/Sol De Gracia (€1 deposit), collector's WOŚP Barcelona (€2)</li></ul>) },
-                    { title: 'Auctions', body: (<p>At the auctions you can win unique works of art, vouchers and handicrafts. Details: "Auctions during the 33rd WOŚP Finale in Barcelona".</p>) },
+                    {
+                        body: (
+                            <div className="space-y-3">
+                                <p>The big day is here! On <strong>26 January 2025</strong> WOŚP Barcelona invites you to the <strong>33rd Finale of the Great Orchestra of Christmas Charity</strong>. This year&apos;s goal is <strong>paediatric oncology and haematology</strong> – the money raised will help diagnose and treat children with cancer.</p>
+                                <ul>
+                                    <li><strong>Venue:</strong> Nau Bostik – Carrer Ferran Turné 1-11, Sant Andreu, Barcelona</li>
+                                    <li><strong>Start:</strong> 10:30</li>
+                                    <li><strong>End:</strong> around 20:00, after the Light to Heaven</li>
+                                    <li><strong>Entry:</strong> free – bring your family, friends and neighbours!</li>
+                                </ul>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Concert schedule',
+                        body: (
+                            <div className="space-y-3">
+                                <p>All day long, artists who support the Orchestra for free will play on the stage in the dark hall:</p>
+                                <ul>
+                                    <li><strong>11:00</strong> – Anulka &amp; Dirty Spoons</li>
+                                    <li><strong>12:30</strong> – Marcin Bury</li>
+                                    <li><strong>14:00</strong> – Guimera Blues &amp; The Sugar Boys</li>
+                                    <li><strong>16:30</strong> – Justyna &amp; Jaime</li>
+                                    <li><strong>18:15</strong> – Eye of the Storm</li>
+                                    <li><strong>19:30</strong> – Light to Heaven</li>
+                                </ul>
+                                <PostFigure src="/images/33-final/DSCF7186.jpg" width={1024} height={683} alt="Concert on the stage of the 33rd WOŚP Finale at Nau Bostik" caption="The stage at Nau Bostik during the 33rd Finale. Photo: Hela Staniszewska" />
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'What have we prepared for you?',
+                        body: (
+                            <div className="space-y-3">
+                                <p>We have split Nau Bostik into two zones so that everyone finds something for themselves.</p>
+                                <p><strong>First, bright hall:</strong></p>
+                                <ul>
+                                    <li>art exhibition – paintings that will go up for auction,</li>
+                                    <li>food: homemade cakes, pierogi, grill, salads, coffee,</li>
+                                    <li>lottery – every ticket wins,</li>
+                                    <li>face painting, WOŚP heart tattoos and activities for children.</li>
+                                </ul>
+                                <p><strong>Second, dark hall:</strong></p>
+                                <ul>
+                                    <li>concerts and auctions,</li>
+                                    <li>bar: Polish craft beers, wines, mulled wine and other drinks.</li>
+                                </ul>
+                                <p>All the food is prepared by our volunteers – and all the proceeds go to the WOŚP Foundation.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Payment information',
+                        body: (
+                            <div className="space-y-3">
+                                <p>To keep things running smoothly, the Finale uses a coupon system:</p>
+                                <ul>
+                                    <li>buy coupons by card or with cash dropped into a collection box,</li>
+                                    <li>Delicias by Bea stand – pay the seller directly,</li>
+                                    <li>bar – some items cash only, the rest for coupons,</li>
+                                    <li>mugs: regular – free, Wawel/Sol de Gràcia collector&apos;s mug – €1 deposit, WOŚP Barcelona collector&apos;s mug – €2.</li>
+                                </ul>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Auctions',
+                        body: (
+                            <div className="space-y-3">
+                                <p>We have prepared four auction sessions. Up for grabs: unique artworks from the “Art for WOŚP” vernissage, vouchers, handicrafts, dedicated books and WOŚP gadgets. At 15:00 we will auction a <strong>golden heart</strong> made by Jakub Rajchelt with our team&apos;s logo.</p>
+                                <p>See the full list of items in the article <Link href="/en/news/licytacje-podczas-33-finalu-wosp-w-barcelonie">“Auctions during the 33rd WOŚP Finale in Barcelona”</Link>.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Light to Heaven',
+                        body: (
+                            <div className="space-y-3">
+                                <p>As always, we will end the day with the <strong>Light to Heaven at 19:30</strong> – the moment when everyone taking part in Finales in Poland and around the world sends a symbolic light into the sky to show that we play together. Stay with us until the end!</p>
+                                <p><em>Update:</em> see how it went – read the <Link href="/en/news/tak-wygladal-33-final-wosp-w-barcelonie">photo report from the 33rd Finale</Link>.</p>
+                            </div>
+                        ),
+                    },
                 ],
             },
             es: {
-                title: '33ª Final de WOŚP en Barcelona – ¡Música, Subastas y Ayuda en Un Solo Lugar!',
+                title: '33ª Final de WOŚP en Barcelona: ¡música, subastas y ayuda en un solo lugar!',
+                excerpt: 'El 26 de enero de 2025 en Nau Bostik tocamos en la 33ª Final de WOŚP por la oncología y hematología infantil. Cinco conciertos, cuatro sesiones de subastas, comida polaca, actividades para niños y la Luz al Cielo: descubre lo que te espera.',
                 sections: [
-                    { title: '¿Qué hemos preparado para vosotros?', body: (<><p>Primera sala, luminosa:</p><ul className="list-disc pl-6 space-y-1"><li>Exposición de arte para subasta</li><li>Culinaria: pasteles caseros, pierogi, parrilla, ensaladas, café</li><li>Lotería – cada boleto gana</li><li>Pintura facial</li></ul><p>Segunda sala, oscura:</p><ul className="list-disc pl-6 space-y-1"><li>Conciertos y subastas</li><li>Bar: cervezas artesanales polacas, vinos, vino caliente y más</li></ul></>) },
-                    { title: 'Información de pago', body: (<ul className="list-disc pl-6 space-y-1"><li>Cupones pagables con tarjeta o efectivo a la hucha</li><li>Stand Delicious by Bea: pago al vendedor</li><li>Bar: algunos artículos solo en efectivo, el resto con cupones</li><li>Tazas: gratis, coleccionable Wawel/Sol De Gracia (depósito 1€), coleccionable WOŚP Barcelona (2€)</li></ul>) },
-                    { title: 'Subastas', body: (<p>En las subastas puedes ganar obras de arte únicas, vales y artesanías. Detalles: "Subastas durante la 33ª Final de WOŚP en Barcelona".</p>) },
+                    {
+                        body: (
+                            <div className="space-y-3">
+                                <p>¡Ha llegado el gran día! El <strong>26 de enero de 2025</strong> WOŚP Barcelona te invita a la <strong>33ª Final de la Gran Orquesta de la Ayuda Navideña</strong>. El objetivo de este año es la <strong>oncología y hematología infantil</strong>: lo recaudado ayudará a diagnosticar y tratar a niños con cáncer.</p>
+                                <ul>
+                                    <li><strong>Lugar:</strong> Nau Bostik – Carrer Ferran Turné 1-11, Sant Andreu, Barcelona</li>
+                                    <li><strong>Inicio:</strong> 10:30</li>
+                                    <li><strong>Fin:</strong> hacia las 20:00, después de la Luz al Cielo</li>
+                                    <li><strong>Entrada:</strong> libre. ¡Ven con tu familia, amigos y vecinos!</li>
+                                </ul>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Horario de conciertos',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Durante todo el día, en el escenario de la sala oscura tocarán artistas que apoyan a la Orquesta de forma gratuita:</p>
+                                <ul>
+                                    <li><strong>11:00</strong> – Anulka &amp; Dirty Spoons</li>
+                                    <li><strong>12:30</strong> – Marcin Bury</li>
+                                    <li><strong>14:00</strong> – Guimera Blues &amp; The Sugar Boys</li>
+                                    <li><strong>16:30</strong> – Justyna &amp; Jaime</li>
+                                    <li><strong>18:15</strong> – Eye of the Storm</li>
+                                    <li><strong>19:30</strong> – Luz al Cielo</li>
+                                </ul>
+                                <PostFigure src="/images/33-final/DSCF7186.jpg" width={1024} height={683} alt="Concierto en el escenario de la 33ª Final de WOŚP en Nau Bostik" caption="El escenario de Nau Bostik durante la 33ª Final. Foto: Hela Staniszewska" />
+                            </div>
+                        ),
+                    },
+                    {
+                        title: '¿Qué hemos preparado para vosotros?',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Hemos dividido Nau Bostik en dos zonas para que cada uno encuentre algo para sí.</p>
+                                <p><strong>Primera sala, luminosa:</strong></p>
+                                <ul>
+                                    <li>exposición de arte: cuadros que saldrán a subasta,</li>
+                                    <li>gastronomía: pasteles caseros, pierogi, barbacoa, ensaladas, café,</li>
+                                    <li>lotería: ¡todos los boletos tienen premio!,</li>
+                                    <li>pintacaras, tatuajes con el corazón de WOŚP y animación infantil.</li>
+                                </ul>
+                                <p><strong>Segunda sala, oscura:</strong></p>
+                                <ul>
+                                    <li>conciertos y subastas,</li>
+                                    <li>bar: cervezas artesanas polacas, vinos, vino caliente y otras bebidas.</li>
+                                </ul>
+                                <p>Toda la comida la preparan nuestros voluntarios, y todo lo recaudado va a la Fundación WOŚP.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Información sobre pagos',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Para que todo funcione con fluidez, en la Final usamos un sistema de cupones:</p>
+                                <ul>
+                                    <li>compra cupones con tarjeta o en efectivo en la hucha,</li>
+                                    <li>puesto de Delicias by Bea: se paga directamente a la vendedora,</li>
+                                    <li>bar: algunos productos solo en efectivo, el resto con cupones,</li>
+                                    <li>vasos: normal – gratis; de colección Wawel/Sol de Gràcia – depósito de 1 €; de colección WOŚP Barcelona – 2 €.</li>
+                                </ul>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Subastas',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Hemos preparado cuatro sesiones de subastas. Podrás conseguir obras de arte únicas de la exposición «Arte para WOŚP», vales, artesanía, libros dedicados y artículos de WOŚP. A las 15:00 subastaremos un <strong>corazón de oro</strong> realizado por Jakub Rajchelt con el logo de nuestro equipo.</p>
+                                <p>Consulta la lista completa en el artículo <Link href="/es/news/licytacje-podczas-33-finalu-wosp-w-barcelonie">«Subastas durante la 33ª Final de WOŚP en Barcelona»</Link>.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Luz al Cielo',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Como siempre, terminaremos el día con la <strong>Luz al Cielo a las 19:30</strong>: el momento en que todos los participantes de las Finales en Polonia y en el mundo envían al cielo una señal simbólica de que tocamos juntos. ¡Quédate con nosotros hasta el final!</p>
+                                <p><em>Actualización:</em> mira cómo fue en la <Link href="/es/news/tak-wygladal-33-final-wosp-w-barcelonie">crónica con fotos de la 33ª Final</Link>.</p>
+                            </div>
+                        ),
+                    },
                 ],
             },
             ca: {
-                title: '33a Final de WOŚP a Barcelona – Música, Subhastes i Ajuda en Un Sol Lloc!',
+                title: '33a Final de WOŚP a Barcelona: música, subhastes i ajuda en un sol lloc!',
+                excerpt: 'El 26 de gener de 2025 a Nau Bostik toquem a la 33a Final de WOŚP per l’oncologia i l’hematologia infantil. Cinc concerts, quatre sessions de subhastes, menjar polonès, activitats per als infants i la Llum al Cel: descobreix què t’espera.',
                 sections: [
-                    { title: 'Què hem preparat per a vosaltres?', body: (<><p>Primera sala, lluminosa:</p><ul className="list-disc pl-6 space-y-1"><li>Exposició d'art per a subhasta</li><li>Culinària: pastissos casolans, pierogi, graella, amanides, cafè</li><li>Loteria – cada bitllet guanya</li><li>Pintura facial</li></ul><p>Segona sala, fosca:</p><ul className="list-disc pl-6 space-y-1"><li>Concerts i subhastes</li><li>Bar: cerveses artesanals poloneses, vins, vi calent i més</li></ul></>) },
-                    { title: 'Informació de pagament', body: (<ul className="list-disc pl-6 space-y-1"><li>Cupons pagables amb targeta o efectiu a la guardiola</li><li>Stand Delicious by Bea: pagament al venedor</li><li>Bar: alguns articles només en efectiu, la resta amb cupons</li><li>Tasses: gratis, col·leccionable Wawel/Sol De Gracia (dipòsit 1€), col·leccionable WOŚP Barcelona (2€)</li></ul>) },
-                    { title: 'Subhastes', body: (<p>A les subhastes pots guanyar obres d'art úniques, vals i artesanies. Detalls: "Subhastes durant la 33a Final de WOŚP a Barcelona".</p>) },
+                    {
+                        body: (
+                            <div className="space-y-3">
+                                <p>Ha arribat el gran dia! El <strong>26 de gener de 2025</strong> WOŚP Barcelona et convida a la <strong>33a Final de la Gran Orquestra de l’Ajuda de Nadal</strong>. L’objectiu d’enguany és l’<strong>oncologia i l’hematologia infantil</strong>: el que es recapti ajudarà a diagnosticar i tractar infants amb càncer.</p>
+                                <ul>
+                                    <li><strong>Lloc:</strong> Nau Bostik – Carrer Ferran Turné 1-11, Sant Andreu, Barcelona</li>
+                                    <li><strong>Inici:</strong> 10:30</li>
+                                    <li><strong>Final:</strong> cap a les 20:00, després de la Llum al Cel</li>
+                                    <li><strong>Entrada:</strong> lliure. Vine amb la família, els amics i els veïns!</li>
+                                </ul>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Horari dels concerts',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Durant tot el dia, a l’escenari de la sala fosca tocaran artistes que donen suport a l’Orquestra de manera gratuïta:</p>
+                                <ul>
+                                    <li><strong>11:00</strong> – Anulka &amp; Dirty Spoons</li>
+                                    <li><strong>12:30</strong> – Marcin Bury</li>
+                                    <li><strong>14:00</strong> – Guimera Blues &amp; The Sugar Boys</li>
+                                    <li><strong>16:30</strong> – Justyna &amp; Jaime</li>
+                                    <li><strong>18:15</strong> – Eye of the Storm</li>
+                                    <li><strong>19:30</strong> – Llum al Cel</li>
+                                </ul>
+                                <PostFigure src="/images/33-final/DSCF7186.jpg" width={1024} height={683} alt="Concert a l’escenari de la 33a Final de WOŚP a Nau Bostik" caption="L’escenari de Nau Bostik durant la 33a Final. Foto: Hela Staniszewska" />
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Què us hem preparat?',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Hem dividit Nau Bostik en dues zones perquè tothom hi trobi alguna cosa.</p>
+                                <p><strong>Primera sala, lluminosa:</strong></p>
+                                <ul>
+                                    <li>exposició d’art: quadres que sortiran a subhasta,</li>
+                                    <li>gastronomia: pastissos casolans, pierogi, brasa, amanides, cafè,</li>
+                                    <li>loteria: tots els bitllets tenen premi!,</li>
+                                    <li>pintacares, tatuatges amb el cor de WOŚP i animació infantil.</li>
+                                </ul>
+                                <p><strong>Segona sala, fosca:</strong></p>
+                                <ul>
+                                    <li>concerts i subhastes,</li>
+                                    <li>bar: cerveses artesanes poloneses, vins, vi calent i altres begudes.</li>
+                                </ul>
+                                <p>Tot el menjar el preparen els nostres voluntaris, i tot el que es recapta va a la Fundació WOŚP.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Informació sobre els pagaments',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Perquè tot funcioni bé, a la Final fem servir un sistema de cupons:</p>
+                                <ul>
+                                    <li>compra cupons amb targeta o en efectiu a la guardiola,</li>
+                                    <li>parada de Delicias by Bea: es paga directament a la venedora,</li>
+                                    <li>bar: alguns productes només en efectiu, la resta amb cupons,</li>
+                                    <li>gots: normal – gratuït; de col·lecció Wawel/Sol de Gràcia – dipòsit d’1 €; de col·lecció WOŚP Barcelona – 2 €.</li>
+                                </ul>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Subhastes',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Hem preparat quatre sessions de subhastes. Podràs aconseguir obres d’art úniques de l’exposició «Art per WOŚP», vals, artesania, llibres dedicats i articles de WOŚP. A les 15:00 subhastarem un <strong>cor d’or</strong> fet per Jakub Rajchelt amb el logotip del nostre equip.</p>
+                                <p>Consulta la llista completa a l’article <Link href="/ca/news/licytacje-podczas-33-finalu-wosp-w-barcelonie">«Subhastes durant la 33a Final de WOŚP a Barcelona»</Link>.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Llum al Cel',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Com sempre, acabarem el dia amb la <strong>Llum al Cel a les 19:30</strong>: el moment en què tots els participants de les Finals a Polònia i arreu del món envien al cel un senyal simbòlic que toquem junts. Queda’t amb nosaltres fins al final!</p>
+                                <p><em>Actualització:</em> mira com va anar a la <Link href="/ca/news/tak-wygladal-33-final-wosp-w-barcelonie">crònica amb fotos de la 33a Final</Link>.</p>
+                            </div>
+                        ),
+                    },
                 ],
             },
         },
@@ -1827,38 +2178,243 @@ export const blogPostsI18n: BlogPostI18n[] = [
     {
         slug: 'licytacje-podczas-33-finalu-wosp-w-barcelonie',
         date: '2025-01-25',
-        sourceUrl: 'https://wospbarcelona.org/index.php/2025/01/25/licytacje-podczas-33-finalu-wosp-w-barcelonie/',
+        coverImage: '/images/blog/33-final/Aukcje-16.png',
+        tags: ['33FinałWOŚP', 'Licytacje', 'ZłoteSerduszko', 'Barcelona'],
         content: {
             pl: {
                 title: 'Licytacje podczas 33. Finału WOŚP w Barcelonie',
+                excerpt: 'Cztery sesje licytacji, złote serduszko Jakuba Rajchelta i obrazy z wernisażu „Sztuka dla WOŚP” – zobacz, co będzie można wylicytować podczas 33. Finału WOŚP w Barcelonie i jak wziąć udział.',
                 sections: [
-                    { title: 'Licytacje na Finale WOŚP Barcelona', body: (<><p>Przygotowano cztery panele licytacji z wyjątkowymi pozycjami:</p><ul className="list-disc pl-6 space-y-1"><li>Panel 11:45–12:30: zegar WOŚP, kalendarz, obrazy, płyta z podpisem Krzysztofa Cugowskiego, handmade poduszka, koszulka biegu</li><li>Panel 13:14–14:00: obrazy, liczne książki z dedykacjami, oprowadzanie po Barcelonie, lekcje hiszpańskiego, złote serduszko, płyta A. Piasecznego</li><li>Panel 15:00–16:30: obrazy, gadżety WOŚP, książka z autografem, sesja coachingowa</li><li>Panel 17:30–18:15: obraz, książka „Mecz to pretekst", gadżety WOŚP</li></ul></>) },
-                    { title: 'Licytacja złotego serduszka', body: (<p>Złote serduszko wykonane przez Jakuba Rajchelta – złoto próby 585, ok. 2.2 g, z logo sztabu WOŚP Barcelona – do wylicytowania o 15:00.</p>) },
-                    { title: 'Licytacja obrazów', body: (<p>Na licytacji 10 obrazów z wernisażu „Sztuka dla WOŚP" – m.in. Daria Stróżyk, Magdalena Gładysz, Marta Cybulska, Roxane Durtheil, Natalia Sarzyńska, Jordina González Zygmuntowicz, Katarzyna Rzędzian.</p>) },
+                    {
+                        body: (
+                            <div className="space-y-3">
+                                <p>Licytacje to jeden z najbardziej emocjonujących punktów każdego Finału – i jeden z najważniejszych, jeśli chodzi o zebraną kwotę. Podczas 33. Finału WOŚP w Barcelonie, <strong>26 stycznia 2025 w Nau Bostik</strong>, przygotowaliśmy aż cztery sesje licytacji. Cały dochód trafi na cel Finału: <strong>onkologię i hematologię dziecięcą</strong>.</p>
+                                <p>Wszystkie przedmioty i usługi przekazali nam za darmo artyści, autorzy, firmy i przyjaciele sztabu – dziękujemy!</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Harmonogram i przedmioty',
+                        body: (
+                            <div className="space-y-3">
+                                <ul>
+                                    <li><strong>Sesja 11:45–12:30:</strong> zegar WOŚP, kalendarz, obrazy, płyta z podpisem Krzysztofa Cugowskiego, ręcznie szyta poduszka, koszulka z biegu.</li>
+                                    <li><strong>Sesja 13:15–14:00:</strong> obrazy, liczne książki z dedykacjami, oprowadzanie po Barcelonie, lekcje hiszpańskiego, złote serduszko, płyta Andrzeja Piasecznego.</li>
+                                    <li><strong>Sesja 15:00–16:30:</strong> obrazy, gadżety WOŚP, książka z autografem, sesja coachingowa.</li>
+                                    <li><strong>Sesja 17:30–18:15:</strong> obraz, książka „Mecz to pretekst”, gadżety WOŚP.</li>
+                                </ul>
+                                <p>Godziny mogą się nieznacznie przesunąć – śledźcie komunikaty ze sceny.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Licytacja złotego serduszka',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Perełką tegorocznych licytacji jest <strong>złote serduszko wykonane przez Jakuba Rajchelta</strong> – ze złota próby 585, o wadze ok. 2,2 g, z logo sztabu WOŚP Barcelona. To jedyny taki egzemplarz na świecie i wyjątkowa pamiątka z barcelońskiego Finału. Licytacja odbędzie się <strong>o 15:00</strong>.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Licytacja obrazów',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Na licytację trafi <strong>10 obrazów z wernisażu „Sztuka dla WOŚP”</strong>, który odbył się 18 stycznia 2025 w Templo Beauty. Swoje prace przekazali m.in. Daria Stróżyk, Magdalena Gładysz, Marta Cybulska, Roxane Durtheil, Natalia Sarzyńska, Jordina González Zygmuntowicz i Katarzyna Rzędzian.</p>
+                                <p>Obrazy będzie można obejrzeć przez cały dzień na wystawie w jasnej sali – warto przyjść wcześniej i wybrać swojego faworyta!</p>
+                                <PostFigure src="/images/33-final/DSCF7189.jpg" width={1024} height={683} alt="Obraz prezentowany na scenie podczas licytacji 33. Finału WOŚP w Barcelonie" caption="Licytacja obrazów podczas 33. Finału. Zdjęcie: Hela Staniszewska" />
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Jak wziąć udział w licytacji?',
+                        body: (
+                            <div className="space-y-3">
+                                <ul>
+                                    <li>Przyjdź do ciemnej sali, gdzie przy scenie prowadzone są licytacje.</li>
+                                    <li>Prowadzący przedstawia przedmiot i cenę wywoławczą – podbijasz, podnosząc rękę.</li>
+                                    <li>Wygrywa najwyższa oferta. Szczegóły płatności i odbioru poda prowadzący.</li>
+                                </ul>
+                                <p>Nie możesz być z nami w Nau Bostik? Część przedmiotów wystawiliśmy także online – zajrzyj do artykułu <Link href="/pl/news/aukcje-wosp-licytuj-i-pomagaj">„Aukcje WOŚP – licytuj i pomagaj!”</Link>.</p>
+                            </div>
+                        ),
+                    },
                 ],
             },
             en: {
                 title: 'Auctions during the 33rd WOŚP Finale in Barcelona',
+                excerpt: 'Four auction sessions, a golden heart by Jakub Rajchelt and paintings from the “Art for WOŚP” vernissage – see what you can bid on at the 33rd WOŚP Finale in Barcelona and how to take part.',
                 sections: [
-                    { title: 'Auctions at the WOŚP Barcelona Finale', body: (<><p>Four auction panels with exceptional items were prepared:</p><ul className="list-disc pl-6 space-y-1"><li>Panel 11:45–12:30: WOŚP clock, calendar, paintings, CD signed by Krzysztof Cugowski, handmade pillow, run t-shirt</li><li>Panel 13:14–14:00: paintings, numerous books with dedications, Barcelona tour, Spanish lessons, golden heart, A. Piaseczny CD</li><li>Panel 15:00–16:30: paintings, WOŚP gadgets, autographed book, coaching session</li><li>Panel 17:30–18:15: painting, book "The Match is a Pretext", WOŚP gadgets</li></ul></>) },
-                    { title: 'Golden heart auction', body: (<p>Golden heart made by Jakub Rajchelt – 585 gold, approx. 2.2 g, with WOŚP Barcelona staff logo – to be auctioned at 15:00.</p>) },
-                    { title: 'Painting auction', body: (<p>10 paintings from the "Art for WOŚP" vernissage on auction – including Daria Stróżyk, Magdalena Gładysz, Marta Cybulska, Roxane Durtheil, Natalia Sarzyńska, Jordina González Zygmuntowicz, Katarzyna Rzędzian.</p>) },
+                    {
+                        body: (
+                            <div className="space-y-3">
+                                <p>Auctions are one of the most exciting parts of every Finale – and one of the most important when it comes to the amount raised. At the 33rd WOŚP Finale in Barcelona, <strong>on 26 January 2025 at Nau Bostik</strong>, we have prepared four auction sessions. All proceeds go to the Finale&apos;s goal: <strong>paediatric oncology and haematology</strong>.</p>
+                                <p>All items and services were donated free of charge by artists, authors, companies and friends of our team – thank you!</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Schedule and items',
+                        body: (
+                            <div className="space-y-3">
+                                <ul>
+                                    <li><strong>Session 11:45–12:30:</strong> WOŚP clock, calendar, paintings, CD signed by Krzysztof Cugowski, handmade pillow, run T-shirt.</li>
+                                    <li><strong>Session 13:15–14:00:</strong> paintings, many dedicated books, a guided tour of Barcelona, Spanish lessons, the golden heart, CD by Andrzej Piaseczny.</li>
+                                    <li><strong>Session 15:00–16:30:</strong> paintings, WOŚP gadgets, autographed book, coaching session.</li>
+                                    <li><strong>Session 17:30–18:15:</strong> painting, the book “Mecz to pretekst”, WOŚP gadgets.</li>
+                                </ul>
+                                <p>Times may shift slightly – listen for announcements from the stage.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Golden heart auction',
+                        body: (
+                            <div className="space-y-3">
+                                <p>The highlight of this year&apos;s auctions is a <strong>golden heart made by Jakub Rajchelt</strong> – 585 gold, about 2.2 g, featuring the WOŚP Barcelona logo. It is one of a kind and a unique keepsake from the Barcelona Finale. The auction takes place <strong>at 15:00</strong>.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Painting auction',
+                        body: (
+                            <div className="space-y-3">
+                                <p><strong>10 paintings from the “Art for WOŚP” vernissage</strong>, held on 18 January 2025 at Templo Beauty, will be auctioned. Works were donated by, among others, Daria Stróżyk, Magdalena Gładysz, Marta Cybulska, Roxane Durtheil, Natalia Sarzyńska, Jordina González Zygmuntowicz and Katarzyna Rzędzian.</p>
+                                <p>You can see the paintings all day at the exhibition in the bright hall – come early and pick your favourite!</p>
+                                <PostFigure src="/images/33-final/DSCF7189.jpg" width={1024} height={683} alt="A painting presented on stage during the 33rd WOŚP Finale auction in Barcelona" caption="Painting auction during the 33rd Finale. Photo: Hela Staniszewska" />
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'How to take part in an auction?',
+                        body: (
+                            <div className="space-y-3">
+                                <ul>
+                                    <li>Come to the dark hall, where the auctions are held by the stage.</li>
+                                    <li>The host presents the item and the starting price – raise your hand to bid.</li>
+                                    <li>The highest bid wins. The host will give details on payment and collection.</li>
+                                </ul>
+                                <p>Can&apos;t make it to Nau Bostik? Some items are also available online – see the article <Link href="/en/news/aukcje-wosp-licytuj-i-pomagaj">“WOŚP Auctions – bid and help!”</Link>.</p>
+                            </div>
+                        ),
+                    },
                 ],
             },
             es: {
                 title: 'Subastas durante la 33ª Final de WOŚP en Barcelona',
+                excerpt: 'Cuatro sesiones de subastas, un corazón de oro de Jakub Rajchelt y cuadros de la exposición «Arte para WOŚP»: descubre qué podrás pujar en la 33ª Final de WOŚP en Barcelona y cómo participar.',
                 sections: [
-                    { title: 'Subastas en la Final de WOŚP Barcelona', body: (<><p>Se prepararon cuatro paneles de subastas con artículos excepcionales:</p><ul className="list-disc pl-6 space-y-1"><li>Panel 11:45–12:30: reloj WOŚP, calendario, cuadros, CD firmado por Krzysztof Cugowski, almohada hecha a mano, camiseta de carrera</li><li>Panel 13:14–14:00: cuadros, numerosos libros con dedicatorias, tour por Barcelona, clases de español, corazón dorado, CD de A. Piaseczny</li><li>Panel 15:00–16:30: cuadros, artículos WOŚP, libro autografiado, sesión de coaching</li><li>Panel 17:30–18:15: cuadro, libro "El partido es un pretexto", artículos WOŚP</li></ul></>) },
-                    { title: 'Subasta del corazón dorado', body: (<p>Corazón dorado hecho por Jakub Rajchelt – oro 585, aprox. 2.2 g, con logo del equipo WOŚP Barcelona – a subastar a las 15:00.</p>) },
-                    { title: 'Subasta de cuadros', body: (<p>10 cuadros del vernissage "Arte para WOŚP" en subasta – incluyendo Daria Stróżyk, Magdalena Gładysz, Marta Cybulska, Roxane Durtheil, Natalia Sarzyńska, Jordina González Zygmuntowicz, Katarzyna Rzędzian.</p>) },
+                    {
+                        body: (
+                            <div className="space-y-3">
+                                <p>Las subastas son uno de los momentos más emocionantes de cada Final, y de los más importantes en cuanto a la cantidad recaudada. En la 33ª Final de WOŚP en Barcelona, <strong>el 26 de enero de 2025 en Nau Bostik</strong>, hemos preparado cuatro sesiones de subastas. Todo lo recaudado se destinará al objetivo de la Final: <strong>la oncología y hematología infantil</strong>.</p>
+                                <p>Todos los objetos y servicios han sido donados de forma gratuita por artistas, autores, empresas y amigos del equipo. ¡Gracias!</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Horario y objetos',
+                        body: (
+                            <div className="space-y-3">
+                                <ul>
+                                    <li><strong>Sesión 11:45–12:30:</strong> reloj de WOŚP, calendario, cuadros, CD firmado por Krzysztof Cugowski, cojín hecho a mano, camiseta de la carrera.</li>
+                                    <li><strong>Sesión 13:15–14:00:</strong> cuadros, muchos libros dedicados, visita guiada por Barcelona, clases de español, el corazón de oro, CD de Andrzej Piaseczny.</li>
+                                    <li><strong>Sesión 15:00–16:30:</strong> cuadros, artículos de WOŚP, libro autografiado, sesión de coaching.</li>
+                                    <li><strong>Sesión 17:30–18:15:</strong> cuadro, el libro «Mecz to pretekst», artículos de WOŚP.</li>
+                                </ul>
+                                <p>Los horarios pueden variar ligeramente: atentos a los avisos desde el escenario.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Subasta del corazón de oro',
+                        body: (
+                            <div className="space-y-3">
+                                <p>La joya de las subastas de este año es un <strong>corazón de oro realizado por Jakub Rajchelt</strong>: oro de 585 milésimas, unos 2,2 g, con el logo de WOŚP Barcelona. Es una pieza única y un recuerdo especial de la Final de Barcelona. La subasta será <strong>a las 15:00</strong>.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Subasta de cuadros',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Saldrán a subasta <strong>10 cuadros de la exposición «Arte para WOŚP»</strong>, celebrada el 18 de enero de 2025 en Templo Beauty. Han donado sus obras, entre otras, Daria Stróżyk, Magdalena Gładysz, Marta Cybulska, Roxane Durtheil, Natalia Sarzyńska, Jordina González Zygmuntowicz y Katarzyna Rzędzian.</p>
+                                <p>Podrás ver los cuadros todo el día en la exposición de la sala luminosa. ¡Ven pronto y elige tu favorito!</p>
+                                <PostFigure src="/images/33-final/DSCF7189.jpg" width={1024} height={683} alt="Un cuadro presentado en el escenario durante la subasta de la 33ª Final de WOŚP en Barcelona" caption="Subasta de cuadros durante la 33ª Final. Foto: Hela Staniszewska" />
+                            </div>
+                        ),
+                    },
+                    {
+                        title: '¿Cómo participar en una subasta?',
+                        body: (
+                            <div className="space-y-3">
+                                <ul>
+                                    <li>Ven a la sala oscura, donde se celebran las subastas junto al escenario.</li>
+                                    <li>El presentador muestra el objeto y el precio de salida: para pujar, levanta la mano.</li>
+                                    <li>Gana la puja más alta. El presentador indicará cómo pagar y recoger el objeto.</li>
+                                </ul>
+                                <p>¿No puedes venir a Nau Bostik? Algunos objetos también están en internet: consulta el artículo <Link href="/es/news/aukcje-wosp-licytuj-i-pomagaj">«Subastas de WOŚP: ¡puja y ayuda!»</Link>.</p>
+                            </div>
+                        ),
+                    },
                 ],
             },
             ca: {
                 title: 'Subhastes durant la 33a Final de WOŚP a Barcelona',
+                excerpt: 'Quatre sessions de subhastes, un cor d’or de Jakub Rajchelt i quadres de l’exposició «Art per WOŚP»: descobreix per què podràs licitar a la 33a Final de WOŚP a Barcelona i com participar-hi.',
                 sections: [
-                    { title: 'Subhastes a la Final de WOŚP Barcelona', body: (<><p>Es van preparar quatre panells de subhastes amb articles excepcionals:</p><ul className="list-disc pl-6 space-y-1"><li>Panell 11:45–12:30: rellotge WOŚP, calendari, quadres, CD signat per Krzysztof Cugowski, coixí fet a mà, samarreta de cursa</li><li>Panell 13:14–14:00: quadres, nombrosos llibres amb dedicatòries, tour per Barcelona, classes d'espanyol, cor daurat, CD d'A. Piaseczny</li><li>Panell 15:00–16:30: quadres, articles WOŚP, llibre autografiat, sessió de coaching</li><li>Panell 17:30–18:15: quadre, llibre "El partit és un pretext", articles WOŚP</li></ul></>) },
-                    { title: 'Subhasta del cor daurat', body: (<p>Cor daurat fet per Jakub Rajchelt – or 585, aprox. 2.2 g, amb logo de l'equip WOŚP Barcelona – a subhastar a les 15:00.</p>) },
-                    { title: 'Subhasta de quadres', body: (<p>10 quadres del vernissatge "Art per a WOŚP" en subhasta – incloent Daria Stróżyk, Magdalena Gładysz, Marta Cybulska, Roxane Durtheil, Natalia Sarzyńska, Jordina González Zygmuntowicz, Katarzyna Rzędzian.</p>) },
+                    {
+                        body: (
+                            <div className="space-y-3">
+                                <p>Les subhastes són un dels moments més emocionants de cada Final, i dels més importants pel que fa a la quantitat recaptada. A la 33a Final de WOŚP a Barcelona, <strong>el 26 de gener de 2025 a Nau Bostik</strong>, hem preparat quatre sessions de subhastes. Tot el que es recapti es destinarà a l’objectiu de la Final: <strong>l’oncologia i l’hematologia infantil</strong>.</p>
+                                <p>Tots els objectes i serveis els han donat gratuïtament artistes, autors, empreses i amics de l’equip. Gràcies!</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Horari i objectes',
+                        body: (
+                            <div className="space-y-3">
+                                <ul>
+                                    <li><strong>Sessió 11:45–12:30:</strong> rellotge de WOŚP, calendari, quadres, CD signat per Krzysztof Cugowski, coixí fet a mà, samarreta de la cursa.</li>
+                                    <li><strong>Sessió 13:15–14:00:</strong> quadres, molts llibres dedicats, visita guiada per Barcelona, classes d’espanyol, el cor d’or, CD d’Andrzej Piaseczny.</li>
+                                    <li><strong>Sessió 15:00–16:30:</strong> quadres, articles de WOŚP, llibre autografiat, sessió de coaching.</li>
+                                    <li><strong>Sessió 17:30–18:15:</strong> quadre, el llibre «Mecz to pretekst», articles de WOŚP.</li>
+                                </ul>
+                                <p>Els horaris poden variar lleugerament: estigueu atents als avisos des de l’escenari.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Subhasta del cor d’or',
+                        body: (
+                            <div className="space-y-3">
+                                <p>La joia de les subhastes d’enguany és un <strong>cor d’or fet per Jakub Rajchelt</strong>: or de 585 mil·lèsimes, uns 2,2 g, amb el logotip de WOŚP Barcelona. És una peça única i un record especial de la Final de Barcelona. La subhasta serà <strong>a les 15:00</strong>.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Subhasta de quadres',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Sortiran a subhasta <strong>10 quadres de l’exposició «Art per WOŚP»</strong>, celebrada el 18 de gener de 2025 a Templo Beauty. Han donat les seves obres, entre d’altres, Daria Stróżyk, Magdalena Gładysz, Marta Cybulska, Roxane Durtheil, Natalia Sarzyńska, Jordina González Zygmuntowicz i Katarzyna Rzędzian.</p>
+                                <p>Podràs veure els quadres tot el dia a l’exposició de la sala lluminosa. Vine aviat i tria el teu preferit!</p>
+                                <PostFigure src="/images/33-final/DSCF7189.jpg" width={1024} height={683} alt="Un quadre presentat a l’escenari durant la subhasta de la 33a Final de WOŚP a Barcelona" caption="Subhasta de quadres durant la 33a Final. Foto: Hela Staniszewska" />
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Com participar en una subhasta?',
+                        body: (
+                            <div className="space-y-3">
+                                <ul>
+                                    <li>Vine a la sala fosca, on se celebren les subhastes al costat de l’escenari.</li>
+                                    <li>El presentador mostra l’objecte i el preu de sortida: per licitar, aixeca la mà.</li>
+                                    <li>Guanya l’oferta més alta. El presentador indicarà com pagar i recollir l’objecte.</li>
+                                </ul>
+                                <p>No pots venir a Nau Bostik? Alguns objectes també són a internet: consulta l’article <Link href="/ca/news/aukcje-wosp-licytuj-i-pomagaj">«Subhastes de WOŚP: licita i ajuda!»</Link>.</p>
+                            </div>
+                        ),
+                    },
                 ],
             },
         },
@@ -1866,42 +2422,215 @@ export const blogPostsI18n: BlogPostI18n[] = [
     {
         slug: 'sie-gotuje-sie-pomaga-smaki-swiata-z-wosp',
         date: '2025-01-22',
-        sourceUrl: 'https://wospbarcelona.org/index.php/2025/01/22/elementor-1959/',
+        coverImage: '/images/allegro/Sie gotuje...4.jpg',
+        tags: ['WOŚPBarcelona', 'Kuchnia', 'Katalonia', 'Przepisy'],
         content: {
             pl: {
                 title: 'Się gotuje, się pomaga! Smaki świata z WOŚP',
+                excerpt: 'Sztab WOŚP Barcelona dołożył dwa katalońskie przepisy do charytatywnej książki kucharskiej ze smakami z całego świata: marcepanowe panellets i góralski trinxat z Cerdanyi. Poznaj historię tych potraw!',
                 sections: [
-                    { title: 'Przepisy od sztabu Barcelona', body: (<p>Sztab WOŚP w Barcelonie przygotował dwa wyjątkowe katalońskie przepisy, które znalazły się w książce.</p>) },
-                    { title: 'Panellets (Marcepanowe ciasteczka)', body: (<p>Tradycyjne katalońskie ciasteczka marcepanowe spożywane na święto Castañada. Zachęcamy do spróbowania przepisu!</p>) },
-                    { title: 'Trinxat de la Cerdanya con setas', body: (<p>Danie z katalońskich regionów górskich z kapusty i ziemniaków. Nazwa pochodzi od „trinxar" – siekać.</p>) },
-                    { title: 'Dołącz do naszych działań!', body: (<><p>Zapraszamy do odkrycia smaków z różnych zakątków świata i spróbowania katalońskich przysmaków, które przygotował sztab WOŚP Barcelona!</p><p>Do zobaczenia na naszych wydarzeniach kulinarnych!</p></>) },
+                    {
+                        body: (
+                            <div className="space-y-3">
+                                <p>Orkiestra gra nie tylko na scenie – czasem gra też w kuchni! Sztaby WOŚP z całego świata podzieliły się swoimi ulubionymi przepisami, które trafiły do wspólnej, charytatywnej książki kucharskiej. To kulinarna podróż przez kraje, w których mieszkają Polacy grający z Orkiestrą.</p>
+                                <p>Nie mogło w niej zabraknąć Katalonii! <strong>Sztab WOŚP Barcelona przygotował dwa przepisy</strong>, które dobrze pokazują, jak smakuje nasz drugi dom: jeden słodki, świąteczny, i jeden sycący, prosto z Pirenejów.</p>
+                                <PostFigure src="/images/allegro/Sie gotuje...4.jpg" width={3024} height={4032} alt="Charytatywna książka kucharska WOŚP z przepisami z całego świata" caption="Książka z przepisami sztabów WOŚP – trafiła także na nasze licytacje." className="max-w-sm mx-auto" />
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Panellets – marcepanowe ciasteczka na Castanyadę',
+                        body: (
+                            <div className="space-y-3">
+                                <p><strong>Panellets</strong> to małe ciasteczka z masy marcepanowej – z mielonych migdałów i cukru, często z dodatkiem gotowanego ziemniaka lub batata, dzięki czemu są wilgotne i delikatne. Najbardziej znane są te obtoczone w <strong>orzeszkach piniowych</strong>, ale spotkać można też wersje kokosowe, kakaowe, kawowe czy z kandyzowaną wiśnią.</p>
+                                <p>Katalończycy jedzą je przede wszystkim podczas <strong>La Castanyada</strong>, czyli święta obchodzonego w wigilię Wszystkich Świętych (31 października). Na stołach pojawiają się wtedy także pieczone kasztany i słodkie ziemniaki, a do panellets tradycyjnie podaje się słodkie wino muszkatowe. Dla nas, Polaków, to ciekawy kontrast – podczas gdy w Polsce 1 listopada kojarzy się ze zniczami i zadumą, w Katalonii to także czas rodzinnych spotkań przy słodkościach.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Trinxat de la Cerdanya con setas',
+                        body: (
+                            <div className="space-y-3">
+                                <p><strong>Trinxat</strong> pochodzi z Cerdanyi – górskiej doliny w katalońskich Pirenejach, gdzie zimy są długie i mroźne. To proste, chłopskie danie z <strong>kapusty zimowej i ziemniaków</strong>, które gotuje się, ugniata, a potem smaży na złoty placek, zwykle z czosnkiem i boczkiem. Nazwa pochodzi od katalońskiego czasownika „trinxar” – siekać.</p>
+                                <p>W naszej wersji trinxat podajemy z <strong>grzybami</strong> (setas), które w Katalonii są prawdziwą jesienną pasją – grzybobranie jest tu równie popularne jak w Polsce! Danie przypomina trochę nasze swojskie potrawy z kapusty i ziemniaków, więc każdy Polak poczuje się przy nim jak w domu.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Polsko-katalońska kuchnia na Finałach',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Jedzenie to ważna część naszych Finałów. Co roku nasi wolontariusze lepią setki pierogów, pieką ciasta i przygotowują polskie specjały – a goście z Katalonii i całego świata mogą spróbować „Cultura Polaca” od kuchni. Cały dochód ze sprzedaży trafia na konto Fundacji WOŚP.</p>
+                                <p>Zachęcamy do wypróbowania katalońskich przepisów w domu – i do odwiedzenia naszego stoiska z jedzeniem podczas najbliższego Finału!</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Dołącz do naszych działań!',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Aby być na bieżąco z naszymi wydarzeniami kulinarnymi i nie tylko, śledź nas w mediach społecznościowych:</p>
+                                <SocialPills />
+                                <p>Do zobaczenia na naszych wydarzeniach kulinarnych!</p>
+                            </div>
+                        ),
+                    },
                 ],
             },
             en: {
-                title: 'Cooking and helping! Flavors of the world with WOŚP',
+                title: 'Cooking and helping! Flavours of the world with WOŚP',
+                excerpt: 'WOŚP Barcelona contributed two Catalan recipes to a charity cookbook full of flavours from around the world: marzipan panellets and hearty trinxat from Cerdanya. Discover the story behind these dishes!',
                 sections: [
-                    { title: 'Recipes from the Barcelona team', body: (<p>The WOŚP team in Barcelona prepared two unique Catalan recipes that were included in the book.</p>) },
-                    { title: 'Panellets (Marzipan cookies)', body: (<p>Traditional Catalan marzipan cookies eaten during the Castañada festival. We encourage you to try the recipe!</p>) },
-                    { title: 'Trinxat de la Cerdanya con setas', body: (<p>A dish from the Catalan mountain regions made of cabbage and potatoes. The name comes from "trinxar" – to chop.</p>) },
-                    { title: 'Join our activities!', body: (<><p>We invite you to discover flavors from different corners of the world and try the Catalan delicacies prepared by the WOŚP Barcelona team!</p><p>See you at our culinary events!</p></>) },
+                    {
+                        body: (
+                            <div className="space-y-3">
+                                <p>The Orchestra doesn&apos;t only play on stage – sometimes it plays in the kitchen too! WOŚP teams from all over the world shared their favourite recipes, which ended up in a joint charity cookbook. It is a culinary journey through the countries where Poles playing with the Orchestra live.</p>
+                                <p>Catalonia couldn&apos;t be missing! <strong>WOŚP Barcelona prepared two recipes</strong> that show what our second home tastes like: one sweet and festive, and one hearty, straight from the Pyrenees.</p>
+                                <PostFigure src="/images/allegro/Sie gotuje...4.jpg" width={3024} height={4032} alt="WOŚP charity cookbook with recipes from around the world" caption="The cookbook of WOŚP teams – it also went up for auction with us." className="max-w-sm mx-auto" />
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Panellets – marzipan sweets for the Castanyada',
+                        body: (
+                            <div className="space-y-3">
+                                <p><strong>Panellets</strong> are small marzipan sweets made from ground almonds and sugar, often with boiled potato or sweet potato added, which keeps them moist and tender. The best known are coated in <strong>pine nuts</strong>, but you will also find coconut, cocoa, coffee or candied-cherry versions.</p>
+                                <p>Catalans eat them above all during <strong>La Castanyada</strong>, celebrated on the eve of All Saints&apos; Day (31 October). Roasted chestnuts and sweet potatoes also appear on the table, and panellets are traditionally served with sweet muscat wine. For us Poles it is an interesting contrast – in Poland 1 November is about candles and reflection, while in Catalonia it is also a time for family gatherings over sweets.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Trinxat de la Cerdanya with mushrooms',
+                        body: (
+                            <div className="space-y-3">
+                                <p><strong>Trinxat</strong> comes from Cerdanya – a mountain valley in the Catalan Pyrenees with long, cold winters. It is a simple peasant dish of <strong>winter cabbage and potatoes</strong>, boiled, mashed and then fried into a golden cake, usually with garlic and bacon. The name comes from the Catalan verb “trinxar” – to chop.</p>
+                                <p>In our version we serve trinxat with <strong>mushrooms</strong> (setas), a true autumn passion in Catalonia – mushroom picking is as popular here as in Poland! The dish is a bit like our home-style cabbage and potato dishes, so every Pole will feel right at home.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Polish-Catalan food at our Finales',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Food is an important part of our Finales. Every year our volunteers make hundreds of pierogi, bake cakes and prepare Polish specialities – and guests from Catalonia and around the world get a taste of “Cultura Polaca”. All proceeds go to the WOŚP Foundation.</p>
+                                <p>We encourage you to try the Catalan recipes at home – and to visit our food stand at the next Finale!</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Join our activities!',
+                        body: (
+                            <div className="space-y-3">
+                                <p>To stay up to date with our culinary events and more, follow us on social media:</p>
+                                <SocialPills />
+                                <p>See you at our culinary events!</p>
+                            </div>
+                        ),
+                    },
                 ],
             },
             es: {
                 title: '¡Se cocina, se ayuda! Sabores del mundo con WOŚP',
+                excerpt: 'WOŚP Barcelona aportó dos recetas catalanas a un libro de cocina solidario con sabores de todo el mundo: los panellets de mazapán y el contundente trinxat de la Cerdanya. ¡Descubre la historia de estos platos!',
                 sections: [
-                    { title: 'Recetas del equipo de Barcelona', body: (<p>El equipo de WOŚP en Barcelona preparó dos recetas catalanas únicas que se incluyeron en el libro.</p>) },
-                    { title: 'Panellets (Galletas de mazapán)', body: (<p>Galletas de mazapán catalanas tradicionales que se comen durante la fiesta de la Castañada. ¡Te animamos a probar la receta!</p>) },
-                    { title: 'Trinxat de la Cerdanya con setas', body: (<p>Un plato de las regiones montañosas catalanas hecho de col y patatas. El nombre viene de "trinxar" – picar.</p>) },
-                    { title: '¡Únete a nuestras actividades!', body: (<><p>¡Te invitamos a descubrir sabores de diferentes rincones del mundo y probar las delicias catalanas preparadas por el equipo de WOŚP Barcelona!</p><p>¡Nos vemos en nuestros eventos culinarios!</p></>) },
+                    {
+                        body: (
+                            <div className="space-y-3">
+                                <p>La Orquesta no solo toca en el escenario: ¡a veces también toca en la cocina! Equipos de WOŚP de todo el mundo compartieron sus recetas favoritas, que acabaron en un libro de cocina solidario conjunto. Es un viaje culinario por los países donde viven los polacos que tocan con la Orquesta.</p>
+                                <p>¡No podía faltar Cataluña! <strong>WOŚP Barcelona preparó dos recetas</strong> que muestran a qué sabe nuestro segundo hogar: una dulce y festiva, y otra contundente, directamente de los Pirineos.</p>
+                                <PostFigure src="/images/allegro/Sie gotuje...4.jpg" width={3024} height={4032} alt="Libro de cocina solidario de WOŚP con recetas de todo el mundo" caption="El libro de recetas de los equipos de WOŚP, que también salió en nuestras subastas." className="max-w-sm mx-auto" />
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Panellets: dulces de mazapán para la Castanyada',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Los <strong>panellets</strong> son pequeños dulces de mazapán hechos con almendra molida y azúcar, a menudo con patata o boniato cocido, que los hace jugosos y tiernos. Los más conocidos van rebozados en <strong>piñones</strong>, pero también los hay de coco, cacao, café o con cereza confitada.</p>
+                                <p>Los catalanes los comen sobre todo durante <strong>La Castanyada</strong>, que se celebra la víspera de Todos los Santos (31 de octubre). En la mesa también hay castañas asadas y boniatos, y los panellets se acompañan tradicionalmente de moscatel. Para los polacos es un contraste curioso: en Polonia el 1 de noviembre se asocia a velas y recogimiento, mientras que en Cataluña también es tiempo de reuniones familiares con dulces.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Trinxat de la Cerdanya con setas',
+                        body: (
+                            <div className="space-y-3">
+                                <p>El <strong>trinxat</strong> procede de la Cerdanya, un valle de montaña de los Pirineos catalanes con inviernos largos y fríos. Es un sencillo plato campesino de <strong>col de invierno y patata</strong>, que se hierven, se chafan y se fríen como una torta dorada, normalmente con ajo y panceta. El nombre viene del verbo catalán «trinxar», picar.</p>
+                                <p>En nuestra versión lo servimos con <strong>setas</strong>, una auténtica pasión otoñal en Cataluña: ¡aquí buscar setas es tan popular como en Polonia! El plato recuerda a nuestras recetas caseras de col y patata, así que cualquier polaco se sentirá como en casa.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Cocina polaco-catalana en nuestras Finales',
+                        body: (
+                            <div className="space-y-3">
+                                <p>La comida es una parte importante de nuestras Finales. Cada año nuestros voluntarios hacen cientos de pierogi, hornean pasteles y preparan especialidades polacas, y los invitados de Cataluña y de todo el mundo pueden probar la «Cultura Polaca». Todo lo recaudado va a la Fundación WOŚP.</p>
+                                <p>Te animamos a probar las recetas catalanas en casa… ¡y a visitar nuestro puesto de comida en la próxima Final!</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: '¡Únete a nuestras actividades!',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Para estar al día de nuestros eventos culinarios y mucho más, síguenos en redes sociales:</p>
+                                <SocialPills />
+                                <p>¡Nos vemos en nuestros eventos culinarios!</p>
+                            </div>
+                        ),
+                    },
                 ],
             },
             ca: {
-                title: 'Es cuina, s\'ajuda! Sabors del món amb WOŚP',
+                title: 'Es cuina, s’ajuda! Sabors del món amb WOŚP',
+                excerpt: 'WOŚP Barcelona va aportar dues receptes catalanes a un llibre de cuina solidari amb sabors de tot el món: els panellets de massapà i el contundent trinxat de la Cerdanya. Descobreix la història d’aquests plats!',
                 sections: [
-                    { title: 'Receptes de l\'equip de Barcelona', body: (<p>L'equip de WOŚP a Barcelona va preparar dues receptes catalanes úniques que es van incloure al llibre.</p>) },
-                    { title: 'Panellets (Galetes de massapà)', body: (<p>Galetes de massapà catalanes tradicionals que es mengen durant la festa de la Castanyada. T'animem a provar la recepta!</p>) },
-                    { title: 'Trinxat de la Cerdanya amb bolets', body: (<p>Un plat de les regions muntanyoses catalanes fet de col i patates. El nom ve de "trinxar" – tallar.</p>) },
-                    { title: 'Uneix-te a les nostres activitats!', body: (<><p>T'invitem a descobrir sabors de diferents racons del món i provar les delícies catalanes preparades per l'equip de WOŚP Barcelona!</p><p>Ens veiem als nostres esdeveniments culinaris!</p></>) },
+                    {
+                        body: (
+                            <div className="space-y-3">
+                                <p>L’Orquestra no només toca a l’escenari: de vegades també toca a la cuina! Equips de WOŚP de tot el món van compartir les seves receptes preferides, que van acabar en un llibre de cuina solidari conjunt. És un viatge culinari pels països on viuen els polonesos que toquen amb l’Orquestra.</p>
+                                <p>No hi podia faltar Catalunya! <strong>WOŚP Barcelona va preparar dues receptes</strong> que mostren a què té gust la nostra segona llar: una de dolça i festiva, i una altra de contundent, directament dels Pirineus.</p>
+                                <PostFigure src="/images/allegro/Sie gotuje...4.jpg" width={3024} height={4032} alt="Llibre de cuina solidari de WOŚP amb receptes de tot el món" caption="El llibre de receptes dels equips de WOŚP, que també va sortir a les nostres subhastes." className="max-w-sm mx-auto" />
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Panellets: dolços de massapà per la Castanyada',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Els <strong>panellets</strong> són petits dolços de massapà fets amb ametlla mòlta i sucre, sovint amb patata o moniato bullit, que els fa sucosos i tendres. Els més coneguts són els arrebossats amb <strong>pinyons</strong>, però també n’hi ha de coco, de cacau, de cafè o amb cirera confitada.</p>
+                                <p>Els catalans els mengen sobretot per <strong>la Castanyada</strong>, que se celebra la vigília de Tots Sants (31 d’octubre). A taula també hi ha castanyes torrades i moniatos, i els panellets s’acompanyen tradicionalment de moscatell. Per als polonesos és un contrast curiós: a Polònia l’1 de novembre s’associa a espelmes i recolliment, mentre que a Catalunya també és temps de trobades familiars amb dolços.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Trinxat de la Cerdanya amb bolets',
+                        body: (
+                            <div className="space-y-3">
+                                <p>El <strong>trinxat</strong> ve de la Cerdanya, una vall de muntanya dels Pirineus catalans amb hiverns llargs i freds. És un plat pagès senzill de <strong>col d’hivern i patata</strong>, que es bullen, s’aixafen i es fregeixen com una coca daurada, normalment amb all i cansalada. El nom ve del verb «trinxar».</p>
+                                <p>En la nostra versió el servim amb <strong>bolets</strong>, una autèntica passió tardorenca a Catalunya: aquí anar a buscar bolets és tan popular com a Polònia! El plat recorda les nostres receptes casolanes de col i patata, així que qualsevol polonès s’hi sentirà com a casa.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Cuina polonesa i catalana a les nostres Finals',
+                        body: (
+                            <div className="space-y-3">
+                                <p>El menjar és una part important de les nostres Finals. Cada any els nostres voluntaris fan centenars de pierogi, couen pastissos i preparen especialitats poloneses, i els convidats de Catalunya i de tot el món poden tastar la «Cultura Polaca». Tot el que es recapta va a la Fundació WOŚP.</p>
+                                <p>T’animem a provar les receptes catalanes a casa… i a visitar la nostra parada de menjar a la propera Final!</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Uneix-te a les nostres activitats!',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Per estar al dia dels nostres esdeveniments culinaris i molt més, segueix-nos a les xarxes socials:</p>
+                                <SocialPills />
+                                <p>Ens veiem als nostres esdeveniments culinaris!</p>
+                            </div>
+                        ),
+                    },
                 ],
             },
         },
@@ -1909,34 +2638,255 @@ export const blogPostsI18n: BlogPostI18n[] = [
     {
         slug: 'aukcje-wosp-licytuj-i-pomagaj',
         date: '2025-01-19',
-        sourceUrl: 'https://wospbarcelona.org/index.php/2025/01/19/aukcje-wosp-licytuj-i-pomagaj/',
+        coverImage: '/images/blog/33-final/Aukcje-18-1024x672.png',
+        tags: ['33FinałWOŚP', 'Aukcje', 'Allegro', '4Fund'],
         content: {
             pl: {
                 title: 'Aukcje WOŚP – licytuj i pomagaj!',
+                excerpt: 'Nie musisz być w Barcelonie, żeby pomóc! Na 4Fund i Allegro czekają książki z dedykacjami, kursy językowe, sesja zdjęciowa, winyle i kalendarze z podpisem Jurka Owsiaka. Sprawdź, jak licytować krok po kroku.',
                 sections: [
-                    { title: '4Fund: Aukcje dla Polonii w Barcelonie', body: (<p>Aukcje z unikalnymi propozycjami dla Polonii – m.in. książki z dedykacjami, kurs języka polskiego.</p>) },
-                    { title: 'Allegro: Unikalne Skarby', body: (<p>Na Allegro m.in. sesja zdjęciowa, kurs hiszpańskiego, magnesy, winyle, książki z dedykacjami, kalendarze z podpisem Jurka.</p>) },
+                    {
+                        body: (
+                            <div className="space-y-3">
+                                <p>Finał WOŚP to nie tylko jeden dzień w Nau Bostik. Na 33. Finał przygotowaliśmy także <strong>licytacje internetowe</strong> – dzięki nim możesz wesprzeć <strong>onkologię i hematologię dziecięcą</strong> z dowolnego miejsca, nawet jeśli 26 stycznia nie będzie Cię w Barcelonie.</p>
+                                <p>Wszystkie przedmioty i usługi podarowali nam przyjaciele sztabu, artyści, autorzy i lokalne firmy. Wygrywasz Ty – i wygrywają dzieci.</p>
+                                <PostFigure src="/images/blog/33-final/Aukcje-18-1024x672.png" width={1024} height={672} alt="Przegląd aukcji WOŚP Barcelona na Allegro" caption="Wybrane aukcje sztabu WOŚP Barcelona." />
+                            </div>
+                        ),
+                    },
+                    {
+                        title: '4Fund: aukcje dla Polonii w Barcelonie',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Na platformie <strong>4Fund</strong> wystawiliśmy aukcje skierowane przede wszystkim do Polaków mieszkających w Barcelonie i okolicach – to przedmioty i usługi, z których najłatwiej skorzystać na miejscu. Znajdziesz tam m.in. <strong>książki z dedykacjami</strong> i <strong>kurs języka polskiego</strong> – świetny pomysł dla dzieci dorastających w Hiszpanii albo dla katalońskich przyjaciół, którzy chcą poznać nasz język.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Allegro: unikalne skarby',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Na <strong>Allegro</strong> działamy w ramach Allegro Charytatywni – pieniądze z wygranych aukcji trafiają bezpośrednio na konto Fundacji WOŚP. Do wylicytowania są m.in.:</p>
+                                <ul>
+                                    <li>sesja zdjęciowa w Barcelonie,</li>
+                                    <li>kurs języka hiszpańskiego,</li>
+                                    <li>magnesy i gadżety z barcelońskim serduszkiem,</li>
+                                    <li>płyty winylowe,</li>
+                                    <li>książki z dedykacjami autorów,</li>
+                                    <li>kalendarze z podpisem Jurka Owsiaka.</li>
+                                </ul>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Jak licytować? Krok po kroku',
+                        body: (
+                            <div className="space-y-3">
+                                <ol>
+                                    <li>Załóż konto na Allegro lub 4Fund (albo zaloguj się na istniejące).</li>
+                                    <li>Wejdź na aukcję, która Cię interesuje, i przeczytaj opis – znajdziesz tam szczegóły dostawy lub odbioru.</li>
+                                    <li>Wpisz swoją maksymalną kwotę i złóż ofertę. Do końca aukcji ktoś może Cię przebić – warto zaglądać!</li>
+                                    <li>Po wygranej opłać aukcję zgodnie z instrukcją. Gotowe – właśnie pomogłeś!</li>
+                                </ol>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Dlaczego warto?',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Każde euro i każda złotówka z aukcji jest publicznie rozliczana przez Fundację WOŚP i zamienia się w nowoczesny sprzęt dla oddziałów onkologii i hematologii dziecięcej w Polsce. A Ty zyskujesz wyjątkową pamiątkę lub doświadczenie.</p>
+                                <p>Wolisz licytować na żywo? Zobacz, co przygotowaliśmy na <Link href="/pl/news/licytacje-podczas-33-finalu-wosp-w-barcelonie">licytacje podczas Finału w Nau Bostik</Link>.</p>
+                                <p><em>Aktualizacja:</em> do 4 lutego aukcje na Allegro przyniosły już ponad 3000 euro – <Link href="/pl/news/tak-wygladal-33-final-wosp-w-barcelonie">zobacz podsumowanie 33. Finału</Link>.</p>
+                            </div>
+                        ),
+                    },
                 ],
             },
             en: {
                 title: 'WOŚP Auctions – bid and help!',
+                excerpt: 'You don’t need to be in Barcelona to help! On 4Fund and Allegro you can bid on dedicated books, language courses, a photo session, vinyl records and calendars signed by Jurek Owsiak. Here is how to bid, step by step.',
                 sections: [
-                    { title: '4Fund: Auctions for the Polish community in Barcelona', body: (<p>Auctions with unique offers for the Polish community – including books with dedications, Polish language course.</p>) },
-                    { title: 'Allegro: Unique Treasures', body: (<p>On Allegro: photo session, Spanish course, magnets, vinyl records, books with dedications, calendars signed by Jurek.</p>) },
+                    {
+                        body: (
+                            <div className="space-y-3">
+                                <p>The WOŚP Finale is not just one day at Nau Bostik. For the 33rd Finale we have also prepared <strong>online auctions</strong> – so you can support <strong>paediatric oncology and haematology</strong> from anywhere, even if you are not in Barcelona on 26 January.</p>
+                                <p>All items and services were donated by friends of our team, artists, authors and local businesses. You win – and so do the children.</p>
+                                <PostFigure src="/images/blog/33-final/Aukcje-18-1024x672.png" width={1024} height={672} alt="Overview of WOŚP Barcelona auctions on Allegro" caption="A selection of WOŚP Barcelona auctions." />
+                            </div>
+                        ),
+                    },
+                    {
+                        title: '4Fund: auctions for the Polish community in Barcelona',
+                        body: (
+                            <div className="space-y-3">
+                                <p>On the <strong>4Fund</strong> platform we listed auctions aimed mainly at Poles living in and around Barcelona – items and services that are easiest to enjoy locally. You will find <strong>books with dedications</strong> and a <strong>Polish language course</strong> – a great idea for children growing up in Spain or for Catalan friends who want to learn our language.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Allegro: unique treasures',
+                        body: (
+                            <div className="space-y-3">
+                                <p>On <strong>Allegro</strong> we run our auctions through Allegro Charytatywni (Allegro&apos;s charity section) – the money from winning bids goes directly to the WOŚP Foundation. Up for auction:</p>
+                                <ul>
+                                    <li>a photo session in Barcelona,</li>
+                                    <li>a Spanish language course,</li>
+                                    <li>magnets and gadgets with the Barcelona heart,</li>
+                                    <li>vinyl records,</li>
+                                    <li>books dedicated by their authors,</li>
+                                    <li>calendars signed by Jurek Owsiak.</li>
+                                </ul>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'How to bid, step by step',
+                        body: (
+                            <div className="space-y-3">
+                                <ol>
+                                    <li>Create an account on Allegro or 4Fund (or log in to an existing one).</li>
+                                    <li>Open the auction you like and read the description – it includes delivery or pickup details.</li>
+                                    <li>Enter your maximum amount and place your bid. Someone may outbid you before the end – keep checking!</li>
+                                    <li>Once you win, pay as instructed. Done – you have just helped!</li>
+                                </ol>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Why bid?',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Every euro and every zloty from the auctions is publicly accounted for by the WOŚP Foundation and turns into modern equipment for paediatric oncology and haematology wards in Poland. And you get a unique keepsake or experience.</p>
+                                <p>Prefer live bidding? See what we have prepared for the <Link href="/en/news/licytacje-podczas-33-finalu-wosp-w-barcelonie">auctions during the Finale at Nau Bostik</Link>.</p>
+                                <p><em>Update:</em> by 4 February the Allegro auctions had already raised over €3,000 – <Link href="/en/news/tak-wygladal-33-final-wosp-w-barcelonie">see the 33rd Finale summary</Link>.</p>
+                            </div>
+                        ),
+                    },
                 ],
             },
             es: {
-                title: 'Subastas WOŚP – ¡puja y ayuda!',
+                title: 'Subastas de WOŚP: ¡puja y ayuda!',
+                excerpt: '¡No hace falta estar en Barcelona para ayudar! En 4Fund y Allegro puedes pujar por libros dedicados, cursos de idiomas, una sesión de fotos, vinilos y calendarios firmados por Jurek Owsiak. Te explicamos cómo pujar paso a paso.',
                 sections: [
-                    { title: '4Fund: Subastas para la comunidad polaca en Barcelona', body: (<p>Subastas con ofertas únicas para la comunidad polaca – incluyendo libros con dedicatorias, curso de polaco.</p>) },
-                    { title: 'Allegro: Tesoros Únicos', body: (<p>En Allegro: sesión de fotos, curso de español, imanes, vinilos, libros con dedicatorias, calendarios firmados por Jurek.</p>) },
+                    {
+                        body: (
+                            <div className="space-y-3">
+                                <p>La Final de WOŚP no es solo un día en Nau Bostik. Para la 33ª Final también hemos preparado <strong>subastas en internet</strong>, para que puedas apoyar la <strong>oncología y hematología infantil</strong> desde cualquier lugar, aunque el 26 de enero no estés en Barcelona.</p>
+                                <p>Todos los objetos y servicios los han donado amigos del equipo, artistas, autores y empresas locales. Ganas tú… y ganan los niños.</p>
+                                <PostFigure src="/images/blog/33-final/Aukcje-18-1024x672.png" width={1024} height={672} alt="Resumen de las subastas de WOŚP Barcelona en Allegro" caption="Una selección de subastas de WOŚP Barcelona." />
+                            </div>
+                        ),
+                    },
+                    {
+                        title: '4Fund: subastas para la comunidad polaca en Barcelona',
+                        body: (
+                            <div className="space-y-3">
+                                <p>En la plataforma <strong>4Fund</strong> hemos publicado subastas dirigidas sobre todo a los polacos que viven en Barcelona y alrededores: objetos y servicios que es más fácil disfrutar aquí. Encontrarás <strong>libros dedicados</strong> y un <strong>curso de polaco</strong>, una gran idea para niños que crecen en España o para amigos catalanes que quieran aprender nuestro idioma.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Allegro: tesoros únicos',
+                        body: (
+                            <div className="space-y-3">
+                                <p>En <strong>Allegro</strong> subastamos a través de Allegro Charytatywni (la sección solidaria de Allegro): el dinero de las pujas ganadoras va directamente a la Fundación WOŚP. Podrás pujar, entre otros, por:</p>
+                                <ul>
+                                    <li>una sesión de fotos en Barcelona,</li>
+                                    <li>un curso de español,</li>
+                                    <li>imanes y artículos con el corazón de Barcelona,</li>
+                                    <li>discos de vinilo,</li>
+                                    <li>libros dedicados por sus autores,</li>
+                                    <li>calendarios firmados por Jurek Owsiak.</li>
+                                </ul>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Cómo pujar, paso a paso',
+                        body: (
+                            <div className="space-y-3">
+                                <ol>
+                                    <li>Crea una cuenta en Allegro o 4Fund (o inicia sesión).</li>
+                                    <li>Abre la subasta que te interese y lee la descripción: allí verás los detalles de envío o recogida.</li>
+                                    <li>Introduce tu cantidad máxima y puja. Alguien puede superarte antes del final: ¡vuelve a mirar!</li>
+                                    <li>Si ganas, paga siguiendo las instrucciones. ¡Listo, acabas de ayudar!</li>
+                                </ol>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: '¿Por qué pujar?',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Cada euro y cada esloti de las subastas lo rinde públicamente la Fundación WOŚP y se convierte en equipos modernos para las unidades de oncología y hematología infantil de Polonia. Y tú consigues un recuerdo o una experiencia única.</p>
+                                <p>¿Prefieres pujar en directo? Mira lo que hemos preparado para las <Link href="/es/news/licytacje-podczas-33-finalu-wosp-w-barcelonie">subastas durante la Final en Nau Bostik</Link>.</p>
+                                <p><em>Actualización:</em> hasta el 4 de febrero las subastas de Allegro ya habían recaudado más de 3.000 € – <Link href="/es/news/tak-wygladal-33-final-wosp-w-barcelonie">consulta el resumen de la 33ª Final</Link>.</p>
+                            </div>
+                        ),
+                    },
                 ],
             },
             ca: {
-                title: 'Subhastes WOŚP – licita i ajuda!',
+                title: 'Subhastes de WOŚP: licita i ajuda!',
+                excerpt: 'No cal ser a Barcelona per ajudar! A 4Fund i Allegro pots licitar per llibres dedicats, cursos d’idiomes, una sessió de fotos, vinils i calendaris signats per Jurek Owsiak. T’expliquem com licitar pas a pas.',
                 sections: [
-                    { title: '4Fund: Subhastes per a la comunitat polonesa a Barcelona', body: (<p>Subhastes amb ofertes úniques per a la comunitat polonesa – incloent llibres amb dedicatòries, curs de polonès.</p>) },
-                    { title: 'Allegro: Tresors Únics', body: (<p>A Allegro: sessió de fotos, curs d'espanyol, imants, vinils, llibres amb dedicatòries, calendaris signats per Jurek.</p>) },
+                    {
+                        body: (
+                            <div className="space-y-3">
+                                <p>La Final de WOŚP no és només un dia a Nau Bostik. Per a la 33a Final també hem preparat <strong>subhastes a internet</strong>, perquè puguis donar suport a l’<strong>oncologia i l’hematologia infantil</strong> des de qualsevol lloc, encara que el 26 de gener no siguis a Barcelona.</p>
+                                <p>Tots els objectes i serveis els han donat amics de l’equip, artistes, autors i empreses locals. Guanyes tu… i guanyen els infants.</p>
+                                <PostFigure src="/images/blog/33-final/Aukcje-18-1024x672.png" width={1024} height={672} alt="Resum de les subhastes de WOŚP Barcelona a Allegro" caption="Una selecció de subhastes de WOŚP Barcelona." />
+                            </div>
+                        ),
+                    },
+                    {
+                        title: '4Fund: subhastes per a la comunitat polonesa a Barcelona',
+                        body: (
+                            <div className="space-y-3">
+                                <p>A la plataforma <strong>4Fund</strong> hem publicat subhastes adreçades sobretot als polonesos que viuen a Barcelona i rodalia: objectes i serveis que és més fàcil gaudir aquí. Hi trobaràs <strong>llibres dedicats</strong> i un <strong>curs de polonès</strong>, una gran idea per a infants que creixen a Espanya o per a amics catalans que vulguin aprendre la nostra llengua.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Allegro: tresors únics',
+                        body: (
+                            <div className="space-y-3">
+                                <p>A <strong>Allegro</strong> subhastem a través d’Allegro Charytatywni (la secció solidària d’Allegro): els diners de les licitacions guanyadores van directament a la Fundació WOŚP. Podràs licitar, entre d’altres, per:</p>
+                                <ul>
+                                    <li>una sessió de fotos a Barcelona,</li>
+                                    <li>un curs d’espanyol,</li>
+                                    <li>imants i articles amb el cor de Barcelona,</li>
+                                    <li>discos de vinil,</li>
+                                    <li>llibres dedicats pels seus autors,</li>
+                                    <li>calendaris signats per Jurek Owsiak.</li>
+                                </ul>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Com licitar, pas a pas',
+                        body: (
+                            <div className="space-y-3">
+                                <ol>
+                                    <li>Crea un compte a Allegro o 4Fund (o inicia la sessió).</li>
+                                    <li>Obre la subhasta que t’interessi i llegeix la descripció: hi veuràs els detalls d’enviament o recollida.</li>
+                                    <li>Introdueix la teva quantitat màxima i licita. Algú et pot superar abans del final: torna-hi a mirar!</li>
+                                    <li>Si guanyes, paga seguint les instruccions. Fet, acabes d’ajudar!</li>
+                                </ol>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Per què licitar?',
+                        body: (
+                            <div className="space-y-3">
+                                <p>La Fundació WOŚP ret comptes públicament de cada euro i cada zloty de les subhastes, que es converteixen en equips moderns per a les unitats d’oncologia i hematologia infantil de Polònia. I tu aconsegueixes un record o una experiència única.</p>
+                                <p>Prefereixes licitar en directe? Mira què hem preparat per a les <Link href="/ca/news/licytacje-podczas-33-finalu-wosp-w-barcelonie">subhastes durant la Final a Nau Bostik</Link>.</p>
+                                <p><em>Actualització:</em> fins al 4 de febrer les subhastes d’Allegro ja havien recaptat més de 3.000 € – <Link href="/ca/news/tak-wygladal-33-final-wosp-w-barcelonie">consulta el resum de la 33a Final</Link>.</p>
+                            </div>
+                        ),
+                    },
                 ],
             },
         },
@@ -1944,34 +2894,235 @@ export const blogPostsI18n: BlogPostI18n[] = [
     {
         slug: 'o-nas-nasza-druzyna-wosp-w-barcelonie',
         date: '2025-01-17',
-        sourceUrl: 'https://wospbarcelona.org/index.php/2025/01/17/o-nas-nasza-druzyna-wosp-w-barcelonie/',
+        coverImage: '/images/33-final/DSCF7320.jpg',
+        tags: ['WOŚPBarcelona', 'Wolontariusze', 'Drużyna'],
         content: {
             pl: {
                 title: 'O Nas – Nasza Drużyna WOŚP w Barcelonie',
+                excerpt: 'Kim są ludzie, którzy od lat organizują Finały WOŚP w Barcelonie? Poznaj naszą drużynę wolontariuszy – czym się zajmujemy, jak wygląda nasz rok i jak możesz do nas dołączyć.',
                 sections: [
-                    { title: 'Kto Tworzy Naszą Drużynę?', body: (<p>Nasza drużyna to wyjątkowi wolontariusze – różne role, wspólny cel i pasja do Orkiestry.</p>) },
-                    { title: 'Wspólne wspomnienia i współpraca', body: (<p>Pamiętne chwile z finałów, spotkania i siła współpracy budują naszą społeczność.</p>) },
+                    {
+                        body: (
+                            <div className="space-y-3">
+                                <p>Sztab WOŚP Barcelona to grupa Polaków mieszkających w Barcelonie i okolicach, którzy w wolnym czasie grają z Wielką Orkiestrą Świątecznej Pomocy. Organizujemy Finały WOŚP w stolicy Katalonii i wydarzenia przez cały rok – a wszystko to jako <strong>wolontariusze</strong>, bez wynagrodzenia, z czystej chęci pomagania.</p>
+                                <PostFigure src="/images/33-final/DSCF7320.jpg" width={1024} height={683} alt="Wolontariusze i uczestnicy 33. Finału WOŚP w Barcelonie na wspólnym zdjęciu" caption="Nasza drużyna i przyjaciele podczas 33. Finału. Zdjęcie: Hela Staniszewska" />
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Kto tworzy naszą drużynę?',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Nasza drużyna to wyjątkowi wolontariusze – różne zawody, różne historie, wspólny cel i pasja do Orkiestry. Są wśród nas studenci, rodzice z dziećmi, osoby, które mieszkają w Barcelonie od lat, i takie, które dopiero co przyjechały. Każdy wnosi to, w czym jest najlepszy:</p>
+                                <ul>
+                                    <li><strong>koordynacja</strong> – planowanie Finału, kontakt z Fundacją, lokalami i urzędami,</li>
+                                    <li><strong>wolontariusze z puszkami</strong> – zbiórka podczas Finału i wydarzeń,</li>
+                                    <li><strong>kuchnia</strong> – lepienie pierogów, pieczenie ciast, grill i obsługa stoisk,</li>
+                                    <li><strong>licytacje</strong> – zbieranie przedmiotów, aukcje na żywo i w internecie,</li>
+                                    <li><strong>atrakcje dla dzieci</strong> – malowanie twarzy, warsztaty i zabawy,</li>
+                                    <li><strong>scena i muzyka</strong> – kontakt z artystami i harmonogram koncertów,</li>
+                                    <li><strong>media i zdjęcia</strong> – social media, grafiki, fotorelacje,</li>
+                                    <li><strong>sponsorzy</strong> – współpraca z firmami, które grają razem z nami.</li>
+                                </ul>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Nie tylko w styczniu',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Finał to kulminacja, ale pracujemy przez cały rok. Przed 33. Finałem zorganizowaliśmy m.in. warsztaty świąteczne „Wine and Craft”, plenerowe warsztaty fotograficzne, „Gwiazdkę Literacką” ze spotkaniem z polskimi autorami, warsztaty „Bubbly Craft”, wernisaż „Sztuka dla WOŚP” oraz barceloński bieg „Policz się z cukrzycą”. Każde z tych wydarzeń to okazja, żeby się spotkać, poznać nowych ludzi i zebrać dodatkowe środki.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Wspólne wspomnienia i współpraca',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Pamiętne chwile z Finałów, spotkania wolontariuszy i siła współpracy budują naszą społeczność. Pamiętamy pierwszy Finał po pandemii, kiedy znów mogliśmy grać razem na żywo, wyprzedane pierogi, wzruszające Światełka do nieba i rekordowe licytacje. Wiele przyjaźni zaczęło się właśnie przy stoisku z jedzeniem albo za kulisami sceny.</p>
+                                <p>Dla wielu z nas sztab to także kawałek Polski w Barcelonie – miejsce, gdzie nowo przybyli mogą znaleźć znajomych, a Katalończycy i goście z całego świata poznają polską kulturę.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Dołącz do nas!',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Szukamy ludzi z dobrym sercem – nie potrzebujesz doświadczenia, wystarczy chęć i trochę wolnego czasu. Możesz pomóc tylko w dniu Finału albo zaangażować się na dłużej. <Link href="/pl/contact">Napisz do nas</Link> – odezwiemy się i opowiemy, jak możesz zagrać z Orkiestrą w Barcelonie!</p>
+                            </div>
+                        ),
+                    },
                 ],
             },
             en: {
                 title: 'About Us – Our WOŚP Team in Barcelona',
+                excerpt: 'Who are the people who have been organising WOŚP Finales in Barcelona for years? Meet our team of volunteers – what we do, what our year looks like and how you can join us.',
                 sections: [
-                    { title: 'Who Makes Up Our Team?', body: (<p>Our team consists of exceptional volunteers – different roles, common goal and passion for the Orchestra.</p>) },
-                    { title: 'Shared memories and cooperation', body: (<p>Memorable moments from finales, meetings and the power of cooperation build our community.</p>) },
+                    {
+                        body: (
+                            <div className="space-y-3">
+                                <p>WOŚP Barcelona is a group of Poles living in and around Barcelona who play with the Great Orchestra of Christmas Charity in their free time. We organise WOŚP Finales in the Catalan capital and events all year round – all as <strong>volunteers</strong>, unpaid, purely because we want to help.</p>
+                                <PostFigure src="/images/33-final/DSCF7320.jpg" width={1024} height={683} alt="Volunteers and participants of the 33rd WOŚP Finale in Barcelona in a group photo" caption="Our team and friends during the 33rd Finale. Photo: Hela Staniszewska" />
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Who makes up our team?',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Our team consists of exceptional volunteers – different professions, different stories, a common goal and a passion for the Orchestra. Among us are students, parents with kids, people who have lived in Barcelona for years and some who have just arrived. Everyone brings what they do best:</p>
+                                <ul>
+                                    <li><strong>coordination</strong> – planning the Finale, liaising with the Foundation, venues and authorities,</li>
+                                    <li><strong>volunteers with collection boxes</strong> – collecting during the Finale and events,</li>
+                                    <li><strong>kitchen</strong> – making pierogi, baking cakes, the grill and running the stands,</li>
+                                    <li><strong>auctions</strong> – gathering items, live and online auctions,</li>
+                                    <li><strong>kids&apos; activities</strong> – face painting, workshops and games,</li>
+                                    <li><strong>stage and music</strong> – contact with artists and the concert schedule,</li>
+                                    <li><strong>media and photos</strong> – social media, graphics, photo reports,</li>
+                                    <li><strong>sponsors</strong> – working with companies that play with us.</li>
+                                </ul>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Not only in January',
+                        body: (
+                            <div className="space-y-3">
+                                <p>The Finale is the high point, but we work all year round. Before the 33rd Finale we organised, among others, the “Wine and Craft” Christmas workshops, outdoor photography workshops, a “Literary Christmas” with Polish authors, “Bubbly Craft” workshops, the “Art for WOŚP” vernissage and the Barcelona “Count on Diabetes” run. Each event is a chance to meet, get to know new people and raise extra funds.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Shared memories and cooperation',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Memorable moments from the Finales, volunteer meetings and the power of cooperation build our community. We remember the first Finale after the pandemic, when we could play together live again, sold-out pierogi, moving Lights to Heaven and record-breaking auctions. Many friendships started at the food stand or backstage.</p>
+                                <p>For many of us the team is also a piece of Poland in Barcelona – a place where newcomers can find friends, and where Catalans and guests from around the world discover Polish culture.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Join us!',
+                        body: (
+                            <div className="space-y-3">
+                                <p>We are looking for people with big hearts – no experience needed, just willingness and a bit of free time. You can help only on Finale day or get involved for longer. <Link href="/en/contact">Write to us</Link> – we will get back to you and tell you how you can play with the Orchestra in Barcelona!</p>
+                            </div>
+                        ),
+                    },
                 ],
             },
             es: {
-                title: 'Sobre Nosotros – Nuestro Equipo WOŚP en Barcelona',
+                title: 'Sobre nosotros: nuestro equipo de WOŚP en Barcelona',
+                excerpt: '¿Quiénes son las personas que desde hace años organizan las Finales de WOŚP en Barcelona? Conoce a nuestro equipo de voluntarios: qué hacemos, cómo es nuestro año y cómo puedes unirte.',
                 sections: [
-                    { title: '¿Quién forma nuestro equipo?', body: (<p>Nuestro equipo está formado por voluntarios excepcionales – diferentes roles, objetivo común y pasión por la Orquesta.</p>) },
-                    { title: 'Recuerdos compartidos y cooperación', body: (<p>Momentos memorables de las finales, encuentros y el poder de la cooperación construyen nuestra comunidad.</p>) },
+                    {
+                        body: (
+                            <div className="space-y-3">
+                                <p>WOŚP Barcelona es un grupo de polacos que viven en Barcelona y alrededores y que, en su tiempo libre, tocan con la Gran Orquesta de la Ayuda Navideña. Organizamos las Finales de WOŚP en la capital catalana y eventos durante todo el año, siempre como <strong>voluntarios</strong>, sin cobrar, por puras ganas de ayudar.</p>
+                                <PostFigure src="/images/33-final/DSCF7320.jpg" width={1024} height={683} alt="Voluntarios y participantes de la 33ª Final de WOŚP en Barcelona en una foto de grupo" caption="Nuestro equipo y amigos durante la 33ª Final. Foto: Hela Staniszewska" />
+                            </div>
+                        ),
+                    },
+                    {
+                        title: '¿Quién forma nuestro equipo?',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Nuestro equipo está formado por voluntarios excepcionales: distintas profesiones, distintas historias, un objetivo común y pasión por la Orquesta. Hay estudiantes, padres con niños, personas que llevan años en Barcelona y otras que acaban de llegar. Cada uno aporta lo que mejor sabe hacer:</p>
+                                <ul>
+                                    <li><strong>coordinación</strong>: planificar la Final y tratar con la Fundación, los locales y la administración,</li>
+                                    <li><strong>voluntarios con hucha</strong>: recaudación durante la Final y los eventos,</li>
+                                    <li><strong>cocina</strong>: hacer pierogi, hornear pasteles, la barbacoa y los puestos,</li>
+                                    <li><strong>subastas</strong>: reunir objetos, subastas en directo y en internet,</li>
+                                    <li><strong>actividades infantiles</strong>: pintacaras, talleres y juegos,</li>
+                                    <li><strong>escenario y música</strong>: contacto con los artistas y horario de conciertos,</li>
+                                    <li><strong>medios y fotos</strong>: redes sociales, diseño, crónicas fotográficas,</li>
+                                    <li><strong>patrocinadores</strong>: colaboración con las empresas que tocan con nosotros.</li>
+                                </ul>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'No solo en enero',
+                        body: (
+                            <div className="space-y-3">
+                                <p>La Final es el punto culminante, pero trabajamos todo el año. Antes de la 33ª Final organizamos, entre otros, los talleres navideños «Wine and Craft», talleres de fotografía al aire libre, una «Navidad Literaria» con autores polacos, los talleres «Bubbly Craft», la exposición «Arte para WOŚP» y la carrera barcelonesa «Cuenta con la Diabetes». Cada evento es una ocasión para encontrarnos, conocer gente nueva y recaudar fondos extra.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Recuerdos compartidos y colaboración',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Los momentos inolvidables de las Finales, las reuniones de voluntarios y la fuerza de la colaboración construyen nuestra comunidad. Recordamos la primera Final después de la pandemia, cuando por fin pudimos volver a tocar juntos en directo, los pierogi agotados, las emocionantes Luces al Cielo y las subastas récord. Muchas amistades empezaron en el puesto de comida o detrás del escenario.</p>
+                                <p>Para muchos de nosotros, el equipo es también un pedacito de Polonia en Barcelona: un lugar donde los recién llegados encuentran amigos, y donde catalanes e invitados de todo el mundo descubren la cultura polaca.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: '¡Únete a nosotros!',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Buscamos personas de buen corazón: no necesitas experiencia, solo ganas y un poco de tiempo libre. Puedes ayudar solo el día de la Final o implicarte más tiempo. <Link href="/es/contact">Escríbenos</Link> y te contaremos cómo puedes tocar con la Orquesta en Barcelona.</p>
+                            </div>
+                        ),
+                    },
                 ],
             },
             ca: {
-                title: 'Sobre Nosaltres – El Nostre Equip WOŚP a Barcelona',
+                title: 'Qui som: el nostre equip de WOŚP a Barcelona',
+                excerpt: 'Qui són les persones que fa anys que organitzen les Finals de WOŚP a Barcelona? Coneix el nostre equip de voluntaris: què fem, com és el nostre any i com t’hi pots unir.',
                 sections: [
-                    { title: 'Qui forma el nostre equip?', body: (<p>El nostre equip està format per voluntaris excepcionals – diferents rols, objectiu comú i passió per l'Orquestra.</p>) },
-                    { title: 'Records compartits i cooperació', body: (<p>Moments memorables de les finals, trobades i el poder de la cooperació construeixen la nostra comunitat.</p>) },
+                    {
+                        body: (
+                            <div className="space-y-3">
+                                <p>WOŚP Barcelona és un grup de polonesos que viuen a Barcelona i rodalia i que, en el seu temps lliure, toquen amb la Gran Orquestra de l’Ajuda de Nadal. Organitzem les Finals de WOŚP a la capital catalana i esdeveniments durant tot l’any, sempre com a <strong>voluntaris</strong>, sense cobrar, per pures ganes d’ajudar.</p>
+                                <PostFigure src="/images/33-final/DSCF7320.jpg" width={1024} height={683} alt="Voluntaris i participants de la 33a Final de WOŚP a Barcelona en una foto de grup" caption="El nostre equip i amics durant la 33a Final. Foto: Hela Staniszewska" />
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Qui forma el nostre equip?',
+                        body: (
+                            <div className="space-y-3">
+                                <p>El nostre equip està format per voluntaris excepcionals: professions diferents, històries diferents, un objectiu comú i passió per l’Orquestra. Hi ha estudiants, pares i mares amb infants, persones que fa anys que viuen a Barcelona i d’altres que acaben d’arribar. Cadascú aporta el que fa millor:</p>
+                                <ul>
+                                    <li><strong>coordinació</strong>: planificar la Final i tractar amb la Fundació, els locals i l’administració,</li>
+                                    <li><strong>voluntaris amb guardiola</strong>: recaptació durant la Final i els esdeveniments,</li>
+                                    <li><strong>cuina</strong>: fer pierogi, coure pastissos, la brasa i les parades,</li>
+                                    <li><strong>subhastes</strong>: reunir objectes, subhastes en directe i a internet,</li>
+                                    <li><strong>activitats infantils</strong>: pintacares, tallers i jocs,</li>
+                                    <li><strong>escenari i música</strong>: contacte amb els artistes i horari dels concerts,</li>
+                                    <li><strong>mitjans i fotos</strong>: xarxes socials, disseny, cròniques fotogràfiques,</li>
+                                    <li><strong>patrocinadors</strong>: col·laboració amb les empreses que toquen amb nosaltres.</li>
+                                </ul>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'No només al gener',
+                        body: (
+                            <div className="space-y-3">
+                                <p>La Final és el punt culminant, però treballem tot l’any. Abans de la 33a Final vam organitzar, entre d’altres, els tallers nadalencs «Wine and Craft», tallers de fotografia a l’aire lliure, un «Nadal Literari» amb autors polonesos, els tallers «Bubbly Craft», l’exposició «Art per WOŚP» i la cursa barcelonina «Compta amb la Diabetis». Cada esdeveniment és una ocasió per trobar-nos, conèixer gent nova i recaptar fons extra.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Records compartits i col·laboració',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Els moments inoblidables de les Finals, les trobades de voluntaris i la força de la col·laboració construeixen la nostra comunitat. Recordem la primera Final després de la pandèmia, quan per fi vam poder tornar a tocar junts en directe, els pierogi exhaurits, les emocionants Llums al Cel i les subhastes rècord. Moltes amistats van començar a la parada de menjar o darrere l’escenari.</p>
+                                <p>Per a molts de nosaltres, l’equip és també un trosset de Polònia a Barcelona: un lloc on els nouvinguts troben amics, i on catalans i convidats de tot el món descobreixen la cultura polonesa.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Uneix-te a nosaltres!',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Busquem persones de bon cor: no cal experiència, només ganes i una mica de temps lliure. Pots ajudar només el dia de la Final o implicar-t’hi més temps. <Link href="/ca/contact">Escriu-nos</Link> i t’explicarem com pots tocar amb l’Orquestra a Barcelona.</p>
+                            </div>
+                        ),
+                    },
                 ],
             },
         },
@@ -1979,30 +3130,227 @@ export const blogPostsI18n: BlogPostI18n[] = [
     {
         slug: 'o-naszych-wspanialych-sponsorach',
         date: '2025-01-15',
-        sourceUrl: 'https://wospbarcelona.org/index.php/2025/01/15/o-naszych-wspanialych-sponsorach/',
+        coverImage: '/images/33-final/DSCF7250.jpg',
+        tags: ['33FinałWOŚP', 'Sponsorzy', 'Partnerzy', 'Barcelona'],
         content: {
             pl: {
                 title: 'O Naszych Wspaniałych Sponsorach',
+                excerpt: 'Bez nich nie byłoby Finału! Poznaj sponsorów, partnerów i współorganizatorów 33. Finału WOŚP w Barcelonie – polskie i katalońskie firmy, które grają razem z nami.',
                 sections: [
-                    { title: 'Sponsorzy WOŚP 2025', body: (<><p>Poznaj naszych sponsorów, partnerów i współorganizatorów, dzięki którym dzieje się magia!</p><ul className="list-disc pl-6 space-y-1"><li>Moja Katalonia</li><li>Wawel RestoBar</li><li>PolCat</li><li>Delicias by Bea</li><li>Alira Health</li><li>Tomex Car-Bus</li><li>World Class Barcelona</li><li>ART-TUR</li><li>Templo Beauty</li></ul></>) },
+                    {
+                        body: (
+                            <div className="space-y-3">
+                                <p>Zorganizowanie Finału WOŚP w Barcelonie to ogromne przedsięwzięcie: sala, scena, nagłośnienie, transport, jedzenie, nagrody do loterii i przedmioty na licytacje. Wszystko to jest możliwe dzięki <strong>sponsorom, partnerom i współorganizatorom</strong>, którzy wspierają nas finansowo, rzeczowo i organizacyjnie. Poznajcie ich!</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Sponsorzy i partnerzy 33. Finału',
+                        body: (
+                            <div className="space-y-3">
+                                <ul>
+                                    <li><strong>Moja Katalonia</strong> – polskie biuro podróży w Katalonii, organizujące wycieczki i zwiedzanie regionu.</li>
+                                    <li><strong>Wawel RestoBar</strong> – polska restauracja w Barcelonie, mały kawałek Polski z pierogami, zupami i kiełbaskami. To tu często spotykają się nasi wolontariusze.</li>
+                                    <li><strong>PolCat</strong> – biuro podróży z niemal 20-letnim doświadczeniem w organizacji wycieczek i transferów.</li>
+                                    <li><strong>Delicias by Bea</strong> – polska cukierniczka z dzielnicy Gotyckiej, łącząca rodzinne smaki z nowoczesnym cukiernictwem. Jej stoisko na Finale to obowiązkowy przystanek!</li>
+                                    <li><strong>Alira Health</strong> – międzynarodowa firma z branży ochrony zdrowia, która wspiera nasze granie dla zdrowia dzieci.</li>
+                                    <li><strong>Tomex Car-Bus</strong> – warsztat samochodowy w Santa Eugènia de Berga: mechanika, elektryka, klimatyzacja i zawieszenia.</li>
+                                    <li><strong>World Class Barcelona</strong> – szkoła języka hiszpańskiego w centrum Barcelony, gospodarz wielu naszych warsztatów.</li>
+                                    <li><strong>ART-TUR</strong> – firma transportowa łącząca Polskę i Hiszpanię od 1993 roku.</li>
+                                    <li><strong>Templo Beauty</strong> – salon przy Ronda del Guinardó, w którym odbył się nasz wernisaż „Sztuka dla WOŚP”.</li>
+                                </ul>
+                                <PostFigure src="/images/33-final/DSCF7186.jpg" width={1024} height={683} alt="Scena 33. Finału WOŚP z logo sponsora ART-TUR na ekranie" caption="Logo naszego sponsora ART-TUR na scenie 33. Finału. Zdjęcie: Hela Staniszewska" />
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Jak wspierają nas firmy?',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Każda forma pomocy ma znaczenie:</p>
+                                <ul>
+                                    <li><strong>wsparcie finansowe</strong> – pokrycie kosztów organizacji, dzięki czemu cała kwota z puszek trafia do Fundacji,</li>
+                                    <li><strong>wsparcie rzeczowe</strong> – jedzenie, napoje, nagrody do loterii, materiały,</li>
+                                    <li><strong>przedmioty i usługi na licytacje</strong> – vouchery, kursy, wycieczki,</li>
+                                    <li><strong>lokal i logistyka</strong> – miejsce na warsztaty i spotkania, transport.</li>
+                                </ul>
+                                <p>W zamian sponsorzy pokazują się tysiącom osób w wyjątkowym kontekście – na naszej stronie, w mediach społecznościowych, na plakatach i podczas samego Finału.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Zostań sponsorem!',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Prowadzisz firmę w Barcelonie lub w Polsce i chcesz zagrać z nami? Zajrzyj na stronę <Link href="/pl/sponsors">Sponsorzy</Link> albo <Link href="/pl/contact">napisz do nas</Link> – przygotujemy propozycję współpracy dopasowaną do Ciebie. Wszystkim naszym sponsorom z całego serca dziękujemy! ❤️</p>
+                            </div>
+                        ),
+                    },
                 ],
             },
             en: {
                 title: 'About Our Wonderful Sponsors',
+                excerpt: 'There would be no Finale without them! Meet the sponsors, partners and co-organisers of the 33rd WOŚP Finale in Barcelona – Polish and Catalan businesses that play together with us.',
                 sections: [
-                    { title: 'WOŚP 2025 Sponsors', body: (<><p>Meet our sponsors, partners and co-organizers who make the magic happen!</p><ul className="list-disc pl-6 space-y-1"><li>Moja Katalonia</li><li>Wawel RestoBar</li><li>PolCat</li><li>Delicias by Bea</li><li>Alira Health</li><li>Tomex Car-Bus</li><li>World Class Barcelona</li><li>ART-TUR</li><li>Templo Beauty</li></ul></>) },
+                    {
+                        body: (
+                            <div className="space-y-3">
+                                <p>Organising a WOŚP Finale in Barcelona is a huge undertaking: the venue, stage, sound system, transport, food, lottery prizes and auction items. All of it is possible thanks to <strong>sponsors, partners and co-organisers</strong> who support us financially, in kind and organisationally. Meet them!</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Sponsors and partners of the 33rd Finale',
+                        body: (
+                            <div className="space-y-3">
+                                <ul>
+                                    <li><strong>Moja Katalonia</strong> – a Polish travel agency in Catalonia, organising trips and sightseeing around the region.</li>
+                                    <li><strong>Wawel RestoBar</strong> – a Polish restaurant in Barcelona, a little piece of Poland with pierogi, soups and sausages. Our volunteers often meet here.</li>
+                                    <li><strong>PolCat</strong> – a travel agency with almost 20 years of experience in organising trips and transfers.</li>
+                                    <li><strong>Delicias by Bea</strong> – a Polish pastry chef in the Gothic Quarter, combining family flavours with modern patisserie. Her stand at the Finale is a must!</li>
+                                    <li><strong>Alira Health</strong> – an international healthcare company that supports our playing for children&apos;s health.</li>
+                                    <li><strong>Tomex Car-Bus</strong> – a car workshop in Santa Eugènia de Berga: mechanics, electrics, air conditioning and suspension.</li>
+                                    <li><strong>World Class Barcelona</strong> – a Spanish language school in central Barcelona and host of many of our workshops.</li>
+                                    <li><strong>ART-TUR</strong> – a transport company connecting Poland and Spain since 1993.</li>
+                                    <li><strong>Templo Beauty</strong> – a salon on Ronda del Guinardó that hosted our “Art for WOŚP” vernissage.</li>
+                                </ul>
+                                <PostFigure src="/images/33-final/DSCF7186.jpg" width={1024} height={683} alt="Stage of the 33rd WOŚP Finale with the ART-TUR sponsor logo on screen" caption="Our sponsor ART-TUR's logo on the stage of the 33rd Finale. Photo: Hela Staniszewska" />
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'How do businesses support us?',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Every form of help matters:</p>
+                                <ul>
+                                    <li><strong>financial support</strong> – covering organisational costs, so that everything in the collection boxes goes to the Foundation,</li>
+                                    <li><strong>in-kind support</strong> – food, drinks, lottery prizes, materials,</li>
+                                    <li><strong>items and services for auctions</strong> – vouchers, courses, trips,</li>
+                                    <li><strong>venues and logistics</strong> – space for workshops and meetings, transport.</li>
+                                </ul>
+                                <p>In return, sponsors are seen by thousands of people in a special context – on our website, on social media, on posters and at the Finale itself.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Become a sponsor!',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Do you run a business in Barcelona or in Poland and want to play with us? Visit our <Link href="/en/sponsors">Sponsors</Link> page or <Link href="/en/contact">write to us</Link> – we will prepare a partnership proposal tailored to you. A heartfelt thank you to all our sponsors! ❤️</p>
+                            </div>
+                        ),
+                    },
                 ],
             },
             es: {
-                title: 'Sobre Nuestros Maravillosos Patrocinadores',
+                title: 'Sobre nuestros maravillosos patrocinadores',
+                excerpt: '¡Sin ellos no habría Final! Conoce a los patrocinadores, socios y coorganizadores de la 33ª Final de WOŚP en Barcelona: empresas polacas y catalanas que tocan con nosotros.',
                 sections: [
-                    { title: 'Patrocinadores WOŚP 2025', body: (<><p>¡Conoce a nuestros patrocinadores, socios y coorganizadores que hacen posible la magia!</p><ul className="list-disc pl-6 space-y-1"><li>Moja Katalonia</li><li>Wawel RestoBar</li><li>PolCat</li><li>Delicias by Bea</li><li>Alira Health</li><li>Tomex Car-Bus</li><li>World Class Barcelona</li><li>ART-TUR</li><li>Templo Beauty</li></ul></>) },
+                    {
+                        body: (
+                            <div className="space-y-3">
+                                <p>Organizar una Final de WOŚP en Barcelona es un gran reto: el local, el escenario, el sonido, el transporte, la comida, los premios de la lotería y los objetos para subastar. Todo ello es posible gracias a <strong>patrocinadores, socios y coorganizadores</strong> que nos apoyan económicamente, con material y con su organización. ¡Te los presentamos!</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Patrocinadores y socios de la 33ª Final',
+                        body: (
+                            <div className="space-y-3">
+                                <ul>
+                                    <li><strong>Moja Katalonia</strong>: agencia de viajes polaca en Cataluña que organiza excursiones y visitas por la región.</li>
+                                    <li><strong>Wawel RestoBar</strong>: restaurante polaco en Barcelona, un pedacito de Polonia con pierogi, sopas y salchichas. Aquí se reúnen a menudo nuestros voluntarios.</li>
+                                    <li><strong>PolCat</strong>: agencia de viajes con casi 20 años de experiencia en excursiones y traslados.</li>
+                                    <li><strong>Delicias by Bea</strong>: pastelera polaca en el Barrio Gótico que combina sabores familiares con pastelería moderna. ¡Su puesto en la Final es parada obligatoria!</li>
+                                    <li><strong>Alira Health</strong>: empresa internacional del sector sanitario que apoya nuestra música por la salud infantil.</li>
+                                    <li><strong>Tomex Car-Bus</strong>: taller mecánico en Santa Eugènia de Berga: mecánica, electricidad, climatización y suspensiones.</li>
+                                    <li><strong>World Class Barcelona</strong>: escuela de español en el centro de Barcelona y sede de muchos de nuestros talleres.</li>
+                                    <li><strong>ART-TUR</strong>: empresa de transporte que une Polonia y España desde 1993.</li>
+                                    <li><strong>Templo Beauty</strong>: salón en la Ronda del Guinardó donde se celebró nuestra exposición «Arte para WOŚP».</li>
+                                </ul>
+                                <PostFigure src="/images/33-final/DSCF7186.jpg" width={1024} height={683} alt="Escenario de la 33ª Final de WOŚP con el logo del patrocinador ART-TUR en la pantalla" caption="El logo de nuestro patrocinador ART-TUR en el escenario de la 33ª Final. Foto: Hela Staniszewska" />
+                            </div>
+                        ),
+                    },
+                    {
+                        title: '¿Cómo nos apoyan las empresas?',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Toda ayuda cuenta:</p>
+                                <ul>
+                                    <li><strong>apoyo económico</strong>: cubre los gastos de organización para que todo lo de las huchas vaya a la Fundación,</li>
+                                    <li><strong>apoyo en especie</strong>: comida, bebida, premios de lotería, materiales,</li>
+                                    <li><strong>objetos y servicios para subastas</strong>: vales, cursos, excursiones,</li>
+                                    <li><strong>local y logística</strong>: espacio para talleres y reuniones, transporte.</li>
+                                </ul>
+                                <p>A cambio, los patrocinadores llegan a miles de personas en un contexto especial: en nuestra web, en redes sociales, en los carteles y durante la propia Final.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: '¡Hazte patrocinador!',
+                        body: (
+                            <div className="space-y-3">
+                                <p>¿Tienes una empresa en Barcelona o en Polonia y quieres tocar con nosotros? Visita la página de <Link href="/es/sponsors">Patrocinadores</Link> o <Link href="/es/contact">escríbenos</Link>: te prepararemos una propuesta de colaboración a tu medida. ¡Gracias de corazón a todos nuestros patrocinadores! ❤️</p>
+                            </div>
+                        ),
+                    },
                 ],
             },
             ca: {
-                title: 'Sobre els Nostres Meravellosos Patrocinadors',
+                title: 'Sobre els nostres meravellosos patrocinadors',
+                excerpt: 'Sense ells no hi hauria Final! Coneix els patrocinadors, socis i coorganitzadors de la 33a Final de WOŚP a Barcelona: empreses poloneses i catalanes que toquen amb nosaltres.',
                 sections: [
-                    { title: 'Patrocinadors WOŚP 2025', body: (<><p>Coneix els nostres patrocinadors, socis i coorganitzadors que fan possible la màgia!</p><ul className="list-disc pl-6 space-y-1"><li>Moja Katalonia</li><li>Wawel RestoBar</li><li>PolCat</li><li>Delicias by Bea</li><li>Alira Health</li><li>Tomex Car-Bus</li><li>World Class Barcelona</li><li>ART-TUR</li><li>Templo Beauty</li></ul></>) },
+                    {
+                        body: (
+                            <div className="space-y-3">
+                                <p>Organitzar una Final de WOŚP a Barcelona és un gran repte: el local, l’escenari, el so, el transport, el menjar, els premis de la loteria i els objectes per subhastar. Tot això és possible gràcies als <strong>patrocinadors, socis i coorganitzadors</strong> que ens donen suport econòmic, material i organitzatiu. Us els presentem!</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Patrocinadors i socis de la 33a Final',
+                        body: (
+                            <div className="space-y-3">
+                                <ul>
+                                    <li><strong>Moja Katalonia</strong>: agència de viatges polonesa a Catalunya que organitza excursions i visites per la regió.</li>
+                                    <li><strong>Wawel RestoBar</strong>: restaurant polonès a Barcelona, un trosset de Polònia amb pierogi, sopes i salsitxes. Aquí s’hi troben sovint els nostres voluntaris.</li>
+                                    <li><strong>PolCat</strong>: agència de viatges amb gairebé 20 anys d’experiència en excursions i trasllats.</li>
+                                    <li><strong>Delicias by Bea</strong>: pastissera polonesa al Barri Gòtic que combina sabors familiars amb pastisseria moderna. La seva parada a la Final és parada obligatòria!</li>
+                                    <li><strong>Alira Health</strong>: empresa internacional del sector sanitari que dona suport a la nostra música per la salut infantil.</li>
+                                    <li><strong>Tomex Car-Bus</strong>: taller mecànic a Santa Eugènia de Berga: mecànica, electricitat, climatització i suspensions.</li>
+                                    <li><strong>World Class Barcelona</strong>: escola d’espanyol al centre de Barcelona i seu de molts dels nostres tallers.</li>
+                                    <li><strong>ART-TUR</strong>: empresa de transport que uneix Polònia i Espanya des del 1993.</li>
+                                    <li><strong>Templo Beauty</strong>: saló a la Ronda del Guinardó on es va fer la nostra exposició «Art per WOŚP».</li>
+                                </ul>
+                                <PostFigure src="/images/33-final/DSCF7186.jpg" width={1024} height={683} alt="Escenari de la 33a Final de WOŚP amb el logotip del patrocinador ART-TUR a la pantalla" caption="El logotip del nostre patrocinador ART-TUR a l’escenari de la 33a Final. Foto: Hela Staniszewska" />
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Com ens donen suport les empreses?',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Tota ajuda compta:</p>
+                                <ul>
+                                    <li><strong>suport econòmic</strong>: cobreix les despeses d’organització perquè tot el de les guardioles vagi a la Fundació,</li>
+                                    <li><strong>suport en espècie</strong>: menjar, beguda, premis de loteria, materials,</li>
+                                    <li><strong>objectes i serveis per a subhastes</strong>: vals, cursos, excursions,</li>
+                                    <li><strong>local i logística</strong>: espai per a tallers i trobades, transport.</li>
+                                </ul>
+                                <p>A canvi, els patrocinadors arriben a milers de persones en un context especial: al nostre web, a les xarxes socials, als cartells i durant la mateixa Final.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Fes-te patrocinador!',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Tens una empresa a Barcelona o a Polònia i vols tocar amb nosaltres? Visita la pàgina de <Link href="/ca/sponsors">Patrocinadors</Link> o <Link href="/ca/contact">escriu-nos</Link>: et prepararem una proposta de col·laboració a mida. Gràcies de tot cor a tots els nostres patrocinadors! ❤️</p>
+                            </div>
+                        ),
+                    },
                 ],
             },
         },
@@ -2010,34 +3358,251 @@ export const blogPostsI18n: BlogPostI18n[] = [
     {
         slug: 'bieg-policz-sie-z-cukrzyca-dolacz-do-nas',
         date: '2024-12-30',
-        sourceUrl: 'https://wospbarcelona.org/index.php/2024/12/30/bieg-policz-sie-z-cukrzyca-dolacz-do-nas/',
+        coverImage: '/images/pictures/pexels-valdemaras-d-784301-1874675.jpg',
+        tags: ['BiegWOŚP', 'PoliczSięZCukrzycą', 'Barcelona', 'HotelW'],
         content: {
             pl: {
-                title: 'Bieg „Policz się z cukrzycą" – dołącz do nas!',
+                title: 'Bieg „Policz się z cukrzycą” – dołącz do nas!',
+                excerpt: '19 stycznia 2025 biegniemy 5 km spod Sagrady Familii pod Hotel W! Dołącz do 19. Biegu „Policz się z cukrzycą” w Barcelonie – biegiem, spacerem, na rolkach albo rowerze. Sprawdź, jak się zapisać i zdobyć koszulkę.',
                 sections: [
-                    { title: 'Jak to się zaczęło?', body: (<p>Barcelońska edycja rozpoczęła się w 2021 roku podczas 29. Finału WOŚP. Z roku na rok rośniemy!</p>) },
-                    { title: 'Jak do nas dołączyć?', body: (<p>Dołącz w dowolnej formie aktywności. Szczegóły rejestracji na Slotmarket i mail kontaktowy w artykule źródłowym.</p>) },
+                    {
+                        body: (
+                            <div className="space-y-3">
+                                <p>Biegasz, spacerujesz, jeździsz na rolkach albo rowerze? Mamy dla Ciebie wydarzenie! <strong>19 stycznia 2025</strong> odbędzie się barcelońska edycja <strong>19. Biegu WOŚP „Policz się z cukrzycą”</strong> – i to z widokiem na morze na mecie.</p>
+                                <ul>
+                                    <li><strong>Data:</strong> niedziela, 19 stycznia 2025</li>
+                                    <li><strong>Start:</strong> 10:30, zbiórka pod Sagradą Familią</li>
+                                    <li><strong>Meta:</strong> Hotel W Barcelona</li>
+                                    <li><strong>Dystans:</strong> 5 km</li>
+                                </ul>
+                                <PostFigure src="/images/pictures/pexels-valdemaras-d-784301-1874675.jpg" width={2322} height={2322} alt="Hotel W Barcelona nad morzem – meta biegu" caption="Hotel W Barcelona – tu czeka na Was meta i pamiątkowe medale." className="max-w-md mx-auto" />
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'O co chodzi w tym biegu?',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Bieg „Policz się z cukrzycą” to jedna z najstarszych akcji towarzyszących Finałom WOŚP. Odbywa się w wielu miastach w Polsce i na świecie, a jego celem jest przypominanie o profilaktyce cukrzycy i o tym, jak ważny jest ruch. Fundacja WOŚP od lat prowadzi też program, dzięki któremu dzieci i kobiety w ciąży chore na cukrzycę mogą korzystać z osobistych pomp insulinowych.</p>
+                                <p>Dla nas to przede wszystkim świetna okazja, żeby się spotkać, poruszać i pokazać, że Barcelona gra z Orkiestrą!</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Jak to się zaczęło w Barcelonie?',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Barcelońska edycja biegu wystartowała w 2021 roku, podczas 29. Finału WOŚP. Zaczynaliśmy w małym gronie – z roku na rok jest nas coraz więcej, a trasa między Sagradą Familią a plażą stała się już naszą tradycją.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Jak się zapisać?',
+                        body: (
+                            <div className="space-y-3">
+                                <ol>
+                                    <li>Zarejestruj się na Slotmarket na <strong>bieg wirtualny</strong>: <a href="https://slotmarket.pl/event/details/645/preview" target="_blank" rel="noopener noreferrer">slotmarket.pl/event/details/645/preview</a>.</li>
+                                    <li>Jako adres wysyłki podaj adres Fundacji WOŚP: Dominikańska 19C, 02-738 Warszawa.</li>
+                                    <li>Przy wyborze rozmiaru koszulki w polu „Klub” wpisz: <strong>Barcelona</strong>.</li>
+                                    <li>Wybierz przesyłkę krajową (do Polski).</li>
+                                    <li>Potwierdzenie rejestracji z imieniem, nazwiskiem i rozmiarem koszulki wyślij na adres <strong>biegwospbarcelona@gmail.com</strong>.</li>
+                                </ol>
+                                <p><strong>Koszt:</strong> 85 zł. Rejestracja do <strong>5 stycznia 2025</strong> gwarantuje koszulkę 19. Biegu i darmową przesyłkę – koszulki przywieziemy do Barcelony. Później zapisy nadal są możliwe (aż do 19 stycznia i podczas zbiórki), ale już bez gwarancji koszulki.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Medale i nagrody',
+                        body: (
+                            <div className="space-y-3">
+                                <p>Na mecie <strong>każdy uczestnik otrzyma pamiątkowy medal</strong>, a dla najlepszych przewidzieliśmy atrakcyjne nagrody. Nie musisz jednak biec na czas – liczy się wspólna zabawa! Możesz pokonać trasę spacerem, w spokojnym truchcie, na rolkach czy rowerze.</p>
+                                <p>Masz pytania? Napisz na <strong>biegwospbarcelona@gmail.com</strong> albo do nas przez <Link href="/pl/contact">formularz kontaktowy</Link>. Do zobaczenia na starcie!</p>
+                            </div>
+                        ),
+                    },
                 ],
             },
             en: {
-                title: '"Count on Diabetes" Run – join us!',
+                title: '“Count on Diabetes” Run – join us!',
+                excerpt: 'On 19 January 2025 we run 5 km from the Sagrada Família to Hotel W! Join the 19th “Count on Diabetes” Run in Barcelona – running, walking, on rollerblades or by bike. Here is how to sign up and get your T-shirt.',
                 sections: [
-                    { title: 'How did it start?', body: (<p>The Barcelona edition started in 2021 during the 29th WOŚP Finale. We grow every year!</p>) },
-                    { title: 'How to join us?', body: (<p>Join in any form of activity. Registration details on Slotmarket and contact email in the source article.</p>) },
+                    {
+                        body: (
+                            <div className="space-y-3">
+                                <p>Do you run, walk, rollerblade or cycle? We have an event for you! On <strong>19 January 2025</strong> the Barcelona edition of the <strong>19th WOŚP “Count on Diabetes” Run</strong> takes place – with a sea view at the finish line.</p>
+                                <ul>
+                                    <li><strong>Date:</strong> Sunday, 19 January 2025</li>
+                                    <li><strong>Start:</strong> 10:30, meeting point at the Sagrada Família</li>
+                                    <li><strong>Finish:</strong> Hotel W Barcelona</li>
+                                    <li><strong>Distance:</strong> 5 km</li>
+                                </ul>
+                                <PostFigure src="/images/pictures/pexels-valdemaras-d-784301-1874675.jpg" width={2322} height={2322} alt="Hotel W Barcelona by the sea – the finish line of the run" caption="Hotel W Barcelona – the finish line and your medals await you here." className="max-w-md mx-auto" />
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'What is this run about?',
+                        body: (
+                            <div className="space-y-3">
+                                <p>The “Count on Diabetes” Run (Policz się z cukrzycą) is one of the longest-running events accompanying the WOŚP Finales. It takes place in many cities in Poland and around the world, and its aim is to raise awareness of diabetes prevention and the importance of physical activity. For years the WOŚP Foundation has also run a programme that gives children and pregnant women with diabetes access to personal insulin pumps.</p>
+                                <p>For us it is above all a great chance to meet, get moving and show that Barcelona plays with the Orchestra!</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'How did it start in Barcelona?',
+                        body: (
+                            <div className="space-y-3">
+                                <p>The Barcelona edition started in 2021, during the 29th WOŚP Finale. We began as a small group – every year there are more of us, and the route between the Sagrada Família and the beach has become our tradition.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'How to sign up?',
+                        body: (
+                            <div className="space-y-3">
+                                <ol>
+                                    <li>Register on Slotmarket for the <strong>virtual run</strong>: <a href="https://slotmarket.pl/event/details/645/preview" target="_blank" rel="noopener noreferrer">slotmarket.pl/event/details/645/preview</a>.</li>
+                                    <li>As the shipping address, enter the WOŚP Foundation&apos;s address: Dominikańska 19C, 02-738 Warszawa.</li>
+                                    <li>When choosing your T-shirt size, type <strong>Barcelona</strong> in the “Klub” (club) field.</li>
+                                    <li>Choose domestic shipping (within Poland).</li>
+                                    <li>Send your registration confirmation with your name and T-shirt size to <strong>biegwospbarcelona@gmail.com</strong>.</li>
+                                </ol>
+                                <p><strong>Cost:</strong> 85 PLN. Registering by <strong>5 January 2025</strong> guarantees a 19th Run T-shirt and free shipping – we will bring the T-shirts to Barcelona. After that you can still sign up (until 19 January and at the meeting point), but without a guaranteed T-shirt.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Medals and prizes',
+                        body: (
+                            <div className="space-y-3">
+                                <p>At the finish line <strong>every participant will receive a commemorative medal</strong>, and there are great prizes for the best. But you don&apos;t have to race – it&apos;s all about having fun together! You can walk, jog, rollerblade or cycle the route.</p>
+                                <p>Questions? Email <strong>biegwospbarcelona@gmail.com</strong> or use our <Link href="/en/contact">contact form</Link>. See you at the start!</p>
+                            </div>
+                        ),
+                    },
                 ],
             },
             es: {
-                title: 'Carrera "Cuenta con la Diabetes" – ¡únete a nosotros!',
+                title: 'Carrera «Cuenta con la Diabetes»: ¡únete a nosotros!',
+                excerpt: 'El 19 de enero de 2025 corremos 5 km desde la Sagrada Família hasta el Hotel W. Únete a la 19ª Carrera «Cuenta con la Diabetes» en Barcelona: corriendo, caminando, en patines o en bici. Te contamos cómo inscribirte y conseguir la camiseta.',
                 sections: [
-                    { title: '¿Cómo empezó?', body: (<p>La edición de Barcelona comenzó en 2021 durante la 29ª Final de WOŚP. ¡Crecemos cada año!</p>) },
-                    { title: '¿Cómo unirse?', body: (<p>Únete en cualquier forma de actividad. Detalles de registro en Slotmarket y email de contacto en el artículo fuente.</p>) },
+                    {
+                        body: (
+                            <div className="space-y-3">
+                                <p>¿Corres, caminas, patinas o vas en bici? ¡Tenemos un evento para ti! El <strong>19 de enero de 2025</strong> se celebra la edición barcelonesa de la <strong>19ª Carrera de WOŚP «Cuenta con la Diabetes»</strong>, con vistas al mar en la meta.</p>
+                                <ul>
+                                    <li><strong>Fecha:</strong> domingo, 19 de enero de 2025</li>
+                                    <li><strong>Salida:</strong> 10:30, punto de encuentro en la Sagrada Família</li>
+                                    <li><strong>Meta:</strong> Hotel W Barcelona</li>
+                                    <li><strong>Distancia:</strong> 5 km</li>
+                                </ul>
+                                <PostFigure src="/images/pictures/pexels-valdemaras-d-784301-1874675.jpg" width={2322} height={2322} alt="El Hotel W Barcelona junto al mar, meta de la carrera" caption="Hotel W Barcelona: aquí te esperan la meta y las medallas." className="max-w-md mx-auto" />
+                            </div>
+                        ),
+                    },
+                    {
+                        title: '¿De qué trata esta carrera?',
+                        body: (
+                            <div className="space-y-3">
+                                <p>La carrera «Cuenta con la Diabetes» (Policz się z cukrzycą) es una de las acciones más veteranas que acompañan a las Finales de WOŚP. Se celebra en muchas ciudades de Polonia y del mundo, y su objetivo es concienciar sobre la prevención de la diabetes y la importancia del ejercicio. Además, desde hace años la Fundación WOŚP mantiene un programa gracias al cual niños y embarazadas con diabetes pueden usar bombas de insulina personales.</p>
+                                <p>Para nosotros es, sobre todo, una gran ocasión para encontrarnos, movernos y demostrar que Barcelona toca con la Orquesta.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: '¿Cómo empezó en Barcelona?',
+                        body: (
+                            <div className="space-y-3">
+                                <p>La edición barcelonesa empezó en 2021, durante la 29ª Final de WOŚP. Empezamos siendo un grupo pequeño; cada año somos más, y el recorrido entre la Sagrada Família y la playa ya se ha convertido en nuestra tradición.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: '¿Cómo inscribirse?',
+                        body: (
+                            <div className="space-y-3">
+                                <ol>
+                                    <li>Regístrate en Slotmarket en la <strong>carrera virtual</strong>: <a href="https://slotmarket.pl/event/details/645/preview" target="_blank" rel="noopener noreferrer">slotmarket.pl/event/details/645/preview</a>.</li>
+                                    <li>Como dirección de envío, indica la de la Fundación WOŚP: Dominikańska 19C, 02-738 Varsovia.</li>
+                                    <li>Al elegir la talla de la camiseta, escribe <strong>Barcelona</strong> en el campo «Klub» (club).</li>
+                                    <li>Elige envío nacional (dentro de Polonia).</li>
+                                    <li>Envía la confirmación de inscripción con tu nombre, apellidos y talla a <strong>biegwospbarcelona@gmail.com</strong>.</li>
+                                </ol>
+                                <p><strong>Precio:</strong> 85 zlotys. Inscribirse antes del <strong>5 de enero de 2025</strong> garantiza la camiseta de la 19ª Carrera y el envío gratuito: traeremos las camisetas a Barcelona. Después aún podrás inscribirte (hasta el 19 de enero y en el punto de encuentro), pero sin camiseta garantizada.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Medallas y premios',
+                        body: (
+                            <div className="space-y-3">
+                                <p>En la meta <strong>cada participante recibirá una medalla conmemorativa</strong>, y habrá premios para los mejores. Pero no hace falta competir: ¡lo importante es divertirse juntos! Puedes hacer el recorrido caminando, trotando, en patines o en bici.</p>
+                                <p>¿Tienes preguntas? Escribe a <strong>biegwospbarcelona@gmail.com</strong> o usa nuestro <Link href="/es/contact">formulario de contacto</Link>. ¡Nos vemos en la salida!</p>
+                            </div>
+                        ),
+                    },
                 ],
             },
             ca: {
-                title: 'Cursa "Compta amb la Diabetis" – uneix-te a nosaltres!',
+                title: 'Cursa «Compta amb la Diabetis»: uneix-te a nosaltres!',
+                excerpt: 'El 19 de gener de 2025 correm 5 km des de la Sagrada Família fins a l’Hotel W. Uneix-te a la 19a Cursa «Compta amb la Diabetis» a Barcelona: corrent, caminant, amb patins o en bici. T’expliquem com inscriure’t i aconseguir la samarreta.',
                 sections: [
-                    { title: 'Com va començar?', body: (<p>L'edició de Barcelona va començar el 2021 durant la 29a Final de WOŚP. Creixem cada any!</p>) },
-                    { title: 'Com unir-se?', body: (<p>Uneix-te en qualsevol forma d'activitat. Detalls de registre a Slotmarket i email de contacte a l'article font.</p>) },
+                    {
+                        body: (
+                            <div className="space-y-3">
+                                <p>Corres, camines, patines o vas en bici? Tenim un esdeveniment per a tu! El <strong>19 de gener de 2025</strong> se celebra l’edició barcelonina de la <strong>19a Cursa de WOŚP «Compta amb la Diabetis»</strong>, amb vistes al mar a la meta.</p>
+                                <ul>
+                                    <li><strong>Data:</strong> diumenge, 19 de gener de 2025</li>
+                                    <li><strong>Sortida:</strong> 10:30, punt de trobada a la Sagrada Família</li>
+                                    <li><strong>Meta:</strong> Hotel W Barcelona</li>
+                                    <li><strong>Distància:</strong> 5 km</li>
+                                </ul>
+                                <PostFigure src="/images/pictures/pexels-valdemaras-d-784301-1874675.jpg" width={2322} height={2322} alt="L’Hotel W Barcelona vora el mar, meta de la cursa" caption="Hotel W Barcelona: aquí t’esperen la meta i les medalles." className="max-w-md mx-auto" />
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'De què va aquesta cursa?',
+                        body: (
+                            <div className="space-y-3">
+                                <p>La cursa «Compta amb la Diabetis» (Policz się z cukrzycą) és una de les accions més veteranes que acompanyen les Finals de WOŚP. Se celebra a moltes ciutats de Polònia i del món, i el seu objectiu és conscienciar sobre la prevenció de la diabetis i la importància de l’exercici. A més, des de fa anys la Fundació WOŚP manté un programa gràcies al qual infants i embarassades amb diabetis poden fer servir bombes d’insulina personals.</p>
+                                <p>Per a nosaltres és, sobretot, una gran ocasió per trobar-nos, moure’ns i demostrar que Barcelona toca amb l’Orquestra.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Com va començar a Barcelona?',
+                        body: (
+                            <div className="space-y-3">
+                                <p>L’edició barcelonina va començar el 2021, durant la 29a Final de WOŚP. Vam començar sent un grup petit; cada any som més, i el recorregut entre la Sagrada Família i la platja ja s’ha convertit en la nostra tradició.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Com inscriure’s?',
+                        body: (
+                            <div className="space-y-3">
+                                <ol>
+                                    <li>Registra’t a Slotmarket a la <strong>cursa virtual</strong>: <a href="https://slotmarket.pl/event/details/645/preview" target="_blank" rel="noopener noreferrer">slotmarket.pl/event/details/645/preview</a>.</li>
+                                    <li>Com a adreça d’enviament, indica la de la Fundació WOŚP: Dominikańska 19C, 02-738 Varsòvia.</li>
+                                    <li>En triar la talla de la samarreta, escriu <strong>Barcelona</strong> al camp «Klub» (club).</li>
+                                    <li>Tria l’enviament nacional (dins de Polònia).</li>
+                                    <li>Envia la confirmació d’inscripció amb el teu nom, cognoms i talla a <strong>biegwospbarcelona@gmail.com</strong>.</li>
+                                </ol>
+                                <p><strong>Preu:</strong> 85 zlotys. Inscriure’s abans del <strong>5 de gener de 2025</strong> garanteix la samarreta de la 19a Cursa i l’enviament gratuït: portarem les samarretes a Barcelona. Després encara t’hi podràs inscriure (fins al 19 de gener i al punt de trobada), però sense samarreta garantida.</p>
+                            </div>
+                        ),
+                    },
+                    {
+                        title: 'Medalles i premis',
+                        body: (
+                            <div className="space-y-3">
+                                <p>A la meta <strong>cada participant rebrà una medalla commemorativa</strong>, i hi haurà premis per als millors. Però no cal competir: el més important és divertir-nos junts! Pots fer el recorregut caminant, trotant, amb patins o en bici.</p>
+                                <p>Tens preguntes? Escriu a <strong>biegwospbarcelona@gmail.com</strong> o fes servir el nostre <Link href="/ca/contact">formulari de contacte</Link>. Ens veiem a la sortida!</p>
+                            </div>
+                        ),
+                    },
                 ],
             },
         },
@@ -2045,6 +3610,9 @@ export const blogPostsI18n: BlogPostI18n[] = [
 ];
 
 // Helper function to get post by slug and locale
+// All posts, newest first
+export const blogPostsI18n: BlogPostI18n[] = [...basePostsI18n, ...newsPostsI18n].sort((a, b) => b.date.localeCompare(a.date));
+
 export function getPostBySlugAndLocale(slug: string, locale: string) {
     const post = blogPostsI18n.find((p) => p.slug === slug);
     if (!post) return null;

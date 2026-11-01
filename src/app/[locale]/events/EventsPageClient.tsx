@@ -4,126 +4,12 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Calendar, MapPin } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { siFacebook, siInstagram, siYoutube } from 'simple-icons/icons';
 import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
 import { ContactForm } from '@/components/ContactForm';
-
-// Event data - only non-translatable fields
-const pastEventsData = [
-  {
-    id: 9,
-    date: '2026-02-16',
-    location: 'Online - Allegro.pl',
-    categoryKey: 'onlineAuction',
-    image: '/images/allegro/11_34FinalWOSP2026_grafika_AUKCJE_podglad.png'
-  },
-  {
-    id: 1,
-    date: '2026-01-25',
-    location: 'Espacio 88, Sant Martí, Barcelona',
-    categoryKey: 'final',
-    image: '/images/kalendarz/fb_FINAL.jpg',
-    totalAmount: '12 408 €'
-  },
-  {
-    id: 10,
-    date: '2026-01-24',
-    location: 'Wawel Restobar, Barcelona',
-    categoryKey: 'workshop',
-    image: '/images/kalendarz/06_SLIDE_34_F_ZAGRA_25_01_2026 (1).jpg'
-  },
-  {
-    id: 5,
-    date: '2026-01-24',
-    location: 'Hotel W Barcelona',
-    categoryKey: 'run',
-    image: '/images/kalendarz/workoplecak_20bieg_podglad.jpg'
-  },
-  {
-    id: 8,
-    date: '2025-12-14',
-    time: '15:00',
-    location: 'Wawel, Barcelona',
-    categoryKey: 'volunteerMeeting',
-    image: '/images/kalendarz/06_SLIDE_34_F_ZAGRA_25_01_2026 (1).jpg'
-  },
-  {
-    id: 7,
-    date: '2025-12-03',
-    time: '19:30',
-    location: 'Online (link zostanie wysłany)',
-    categoryKey: 'volunteerMeeting',
-    image: '/images/kalendarz/06_SLIDE_34_F_ZAGRA_25_01_2026 (1).jpg'
-  },
-  {
-    id: 101,
-    date: '2025-01-26',
-    location: 'Nau Bostik, Sant Andreu, Barcelona',
-    categoryKey: 'final',
-    image: '/api/placeholder/400/250',
-    amountRaised: '8,073.48 €',
-    totalAmount: '13,880.62 €'
-  },
-  {
-    id: 201,
-    date: '2025-01-19',
-    location: 'Start: Sagrada Familia, Meta: Hotel W Barcelona',
-    categoryKey: 'run',
-    image: '/api/placeholder/400/250'
-  },
-  {
-    id: 202,
-    date: '2025-01-18',
-    location: 'Templo Beauty, Ronda del Guinardó 64, Horta-Guinardó, Barcelona',
-    categoryKey: 'vernissage',
-    image: '/api/placeholder/400/250'
-  },
-  {
-    id: 203,
-    date: '2025-01-11',
-    location: 'World Class Barcelona',
-    categoryKey: 'workshop',
-    image: '/images/kalendarz/485066667_1070766505083825_7426193123650026575_n.jpg'
-  },
-  {
-    id: 204,
-    date: '2024-12-15',
-    location: 'World Class Bcn Spanish school - Carrer del Bisbe Laguarda, 4, Ciutat Vella, 08001 Barcelona',
-    categoryKey: 'literaryMeeting',
-    image: '/images/kalendarz/485066667_1070766505083825_7426193123650026575_n.jpg'
-  },
-  {
-    id: 205,
-    date: '2024-11-30',
-    location: 'Jardins de Mossèn Costa i Llobera, Barcelona',
-    categoryKey: 'photoWorkshop',
-    image: '/images/kalendarz/485066667_1070766505083825_7426193123650026575_n.jpg'
-  },
-  {
-    id: 206,
-    date: '2024-11-23',
-    location: 'World Class Barcelona Carrer del Bisbe Laguarda, 4, Ciutat Vella, 08001 Barcelona',
-    categoryKey: 'christmasWorkshop',
-    image: '/images/kalendarz/485066667_1070766505083825_7426193123650026575_n.jpg'
-  },
-  {
-    id: 104,
-    date: '2023-01-29',
-    location: 'Nau Bostik, Sant Andreu, Barcelona',
-    categoryKey: 'final',
-    image: '/images/33-final/final-2024-main.jpg',
-    amountRaised: '10,460.47 €'
-  },
-  {
-    id: 106,
-    date: '2022-01-30',
-    location: 'Carrer de Sardenya, 29, 08005 Barcelona',
-    categoryKey: 'final',
-    image: '/images/33-final/final-2024-main.jpg',
-    amountRaised: '8,989.94 €'
-  }
-];
+import { upcomingEventsData, pastEventsData } from '@/content/events';
 
 export default function EventsPageClient() {
   const t = useTranslations('events');
@@ -149,12 +35,65 @@ export default function EventsPageClient() {
               <h2 className="text-3xl font-bold text-gray-900">{t('upcoming')}</h2>
             </div>
 
-            <div className="flex flex-col items-center justify-center py-16 text-center bg-gray-50 rounded-2xl border border-gray-200">
-              <div className="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center mb-4">
-                <Calendar className="w-8 h-8 text-gray-400" />
+            {upcomingEventsData.length === 0 ? (
+              <div className="flex flex-col items-center justify-center py-16 text-center bg-gray-50 rounded-2xl border border-gray-200">
+                <div className="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center mb-4">
+                  <Calendar className="w-8 h-8 text-gray-400" />
+                </div>
+                <p className="text-lg font-medium text-gray-600">{t('noEvents')}</p>
               </div>
-              <p className="text-lg font-medium text-gray-600">{t('noEvents')}</p>
-            </div>
+            ) : (
+              <div className="flex flex-col gap-6 max-w-6xl mx-auto">
+                {upcomingEventsData.map((event) => {
+                  const eventTitle = t(`items.${event.id}.title`);
+                  return (
+                    <Card key={event.id} className="w-full bg-white border-2 border-red-200 shadow-md hover:shadow-lg transition-shadow overflow-hidden flex flex-col md:flex-row">
+                      <Link href={`/${locale}/events/${event.id}`} className="block relative aspect-[607/365] md:aspect-auto md:min-h-80 md:w-1/2 shrink-0 overflow-hidden bg-gray-100">
+                        <Image
+                          src={event.image}
+                          alt={eventTitle}
+                          fill
+                          className="object-cover object-left transition-transform duration-500 hover:scale-105"
+                          sizes="(max-width: 768px) 100vw, 50vw"
+                        />
+                      </Link>
+                      <CardContent className="p-6 md:p-8 flex flex-col justify-center md:w-1/2">
+                        <div className="mb-3 flex gap-2">
+                          <span className="inline-block bg-red-600 text-white text-xs px-2 py-1 rounded font-semibold">
+                            {t('page.final')}
+                          </span>
+                          <span className="inline-block bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">
+                            {t(`categories.${event.categoryKey}`)}
+                          </span>
+                        </div>
+                        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">{eventTitle}</h3>
+                        <p className="text-gray-600 mb-4">{t(`items.${event.id}.description`)}</p>
+                        <div className="space-y-1 mb-5">
+                          <div className="flex items-center text-sm text-gray-500">
+                            <Calendar className="w-3 h-3 mr-2" />
+                            {event.date}
+                          </div>
+                          <div className="flex items-center text-sm text-gray-500">
+                            <MapPin className="w-3 h-3 mr-2" />
+                            {t(`items.${event.id}.location`)}
+                          </div>
+                        </div>
+                        <div className="flex flex-wrap gap-3">
+                          <Button asChild className="bg-red-600 hover:bg-red-700 text-white">
+                            <Link href={`/${locale}/events/${event.id}`}>{t('page.seeMore')}</Link>
+                          </Button>
+                          {event.blogSlug && (
+                            <Button asChild variant="outline" className="bg-white border-red-300 text-red-600 hover:bg-red-50 hover:text-red-700">
+                              <Link href={`/${locale}/news/${event.blogSlug}`}>{t('page.readGoalArticle')}</Link>
+                            </Button>
+                          )}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  );
+                })}
+              </div>
+            )}
           </section>
 
           {/* Past Events */}
@@ -172,9 +111,15 @@ export default function EventsPageClient() {
 
                 return (
                   <Card key={event.id} className="h-full bg-white border border-red-100 shadow-sm hover:shadow-md transition-shadow">
-                    <div className="h-32 bg-linear-to-br from-gray-400 to-gray-500 flex items-center justify-center">
-                      <Calendar className="w-12 h-12 text-white" />
-                    </div>
+                    <Link href={`/${locale}/events/${event.id}`} className="block relative h-44 overflow-hidden rounded-t-lg bg-gray-100">
+                      <Image
+                        src={event.image}
+                        alt={eventTitle}
+                        fill
+                        className="object-cover transition-transform duration-500 hover:scale-105"
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                      />
+                    </Link>
                     <CardContent className="p-6">
                       <div className="mb-3">
                         <span className="inline-block bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">

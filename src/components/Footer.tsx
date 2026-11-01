@@ -22,7 +22,7 @@ export function Footer() {
     { name: t('quickLinks'), isHeader: true },
     { name: 'about', href: `/${locale}/about` },
     { name: 'events', href: `/${locale}/events` },
-    { name: 'blog', href: `/${locale}/blog` },
+    { name: 'blog', href: `/${locale}/news` },
     { name: 'sponsors', href: `/${locale}/sponsors` },
     { name: 'contact', href: `/${locale}/contact` },
   ];

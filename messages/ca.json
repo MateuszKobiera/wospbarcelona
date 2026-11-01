@@ -21,7 +21,7 @@
       "description": "Mira els propers i passats esdeveniments de WOŚP Barcelona. Concerts, subhastes, curses benèfiques i més."
     },
     "blog": {
-      "title": "Blog",
+      "title": "Notícies",
       "description": "Notícies, reportatges d'esdeveniments i històries de WOŚP Barcelona. Mantén-te al dia amb les nostres activitats benèfiques."
     },
     "sponsors": {
@@ -43,10 +43,11 @@
     "home": "Inici",
     "about": "Sobre nosaltres",
     "events": "Calendari",
-    "blog": "Blog",
+    "blog": "Notícies",
     "contact": "Contacte",
     "donate": "Donar online",
-    "sponsors": "Patrocinadors"
+    "sponsors": "Patrocinadors",
+    "search": "Cerca"
   },
   "home": {
     "title": "WOŚP Barcelona",
@@ -223,6 +224,13 @@
         "title": "34è Final WOŚP a Barcelona",
         "description": "El major event benèfic de l'any! Tallers, actuacions, subhastes i integració."
       }
+    },
+    "newsSection": {
+      "title": "Notícies",
+      "subtitle": "Notícies, guies i cròniques de la vida de WOŚP Barcelona",
+      "latestTitle": "El més recent",
+      "featuredTitle": "El més interessant",
+      "allArticles": "Veure tots els articles"
     }
   },
   "about": {
@@ -273,7 +281,12 @@
         "historyTitle": "Història de la WOŚP",
         "goalsTitle": "Objectius mèdics",
         "foundationTitle": "Jerzy Owsiak i la Fundació",
-        "visitLink": "Visita el lloc oficial de la WOŚP"
+        "visitLink": "Visita el lloc oficial de la WOŚP",
+        "nextFinale": {
+          "title": "35a Final de WOŚP — 31 de gener de 2027: toquem pels nadons",
+          "text": "El lema de la 35a Final és «Avui?! La salut del nadó és el més important». El que es recapti es destinarà a equips moderns per a unitats neonatals: des de la sala de parts i les cures intensives fins al transport especialitzat de nadons prematurs. És clar que WOŚP Barcelona tocarà amb vosaltres!",
+          "link": "Més sobre l'objectiu de la 35a Final"
+        }
       },
       "barcelonaSection": {
         "title": "WOŚP Barcelona",
@@ -318,7 +331,7 @@
       },
       "final33Summary": {
         "title": "33è Final de WOŚP a Barcelona (gener de 2025)",
-        "medicalDesc": "El 33è Final es va dedicar a la medicina pal·liativa i d'hospici. Els fons recaptats es van destinar a la compra d'equips mèdics que ajuden a garantir una vida i una mort dignes als pacients en els moments més difícils.",
+        "medicalDesc": "El 33è Final va tocar pels infants amb càncer i malalties hematològiques. El que es va recaptar es va destinar a equips per a un diagnòstic més ràpid i un tractament més eficaç, entre d'altres per a 18 serveis d'oncologia i hematologia pediàtriques i 17 hospicis.",
         "collectedDesc": "recaptats durant el 33è Final",
         "readArticle": "Mira com va ser el 33è Final"
       }
@@ -353,7 +366,8 @@
         "instagramDesc": "Últimes fotos i stories de les nostres activitats a Barcelona.",
         "youtubeDesc": "Mira els nostres vídeos i reportatges d'esdeveniments de WOŚP Barcelona.",
         "allegroDesc": "Puja per articles benèfics i dóna suport a WOŚP Barcelona."
-      }
+      },
+      "readGoalArticle": "Llegeix sobre l'objectiu de la 35a Final"
     },
     "categories": {
       "volunteerMeeting": "Reunió de Voluntaris",
@@ -397,6 +411,12 @@
         "title": "Elaboració de pierogis per al Final WOŚP",
         "description": "🥟 Us convidem a elaborar pierogis junts a Wawel Restobar! Prepararem junts deliciosos pierogis per al 34è Final WOŚP. Com més som, millor!",
         "fullDescription": "🥟 Elaboració de pierogis per al Final WOŚP a Wawel Restobar\n\nConvoquem tothom a elaborar pierogis junts, que es serviran durant el 34è Final WOŚP a Barcelona!\n\n📍 On: Wawel Restobar — el nostre patrocinador principal\n📅 Quan: Dissabte, 24 de gener de 2026\n🕐 Horari: 13:00 - 19:00\n\n✨ Per què val la pena venir?\n\n• Diversió i integració abans del final\n• Aprendràs a elaborar pierogis polonesos tradicionals\n• Ajudaràs a preparar menjar per al final WOŚP\n• Sentiràs l'ambient de l'hospitalitat polonesa\n• Coneixeràs altres voluntaris i simpatitzants de WOŚP\n• Donaràs suport al nostre patrocinador — Wawel Restobar\n\n👥 Per a qui?\nPer a tothom! No necessites experiència en l'elaboració de pierogis — t'ensenyarem tot. Pots venir a qualsevol hora entre les 13:00 i les 19:00.\n\n📝 Inscripció:\nNo cal inscripció — simplement vine! Com més som, més pierogis elaborarem per al final.\n\n💪 Cada parell de mans és útil!\nIndependentment de si ets un expert a la cuina o estàs començant la teva aventura culinària — tota ajuda és valuosa. Junts prepararem deliciosos pierogis que gaudiran tots els participants del final!\n\nEns veiem a Wawel Restobar!"
+      },
+      "11": {
+        "title": "35a Final de WOŚP a Barcelona",
+        "description": "🎉 El 31 de gener de 2027 toquem per la salut dels nadons! Molt aviat anunciarem el lloc exacte a Barcelona.",
+        "location": "Barcelona – lloc per confirmar",
+        "fullDescription": "🎉 35a Final de WOŚP a Barcelona\n\n📅 Data: 31 de gener de 2027 (diumenge)\n📍 Lloc: Barcelona — molt aviat anunciarem la ubicació exacta\n🎯 Objectiu: «Avui?! La salut del nadó és el més important»\n\n❤️ Per què toquem?\nAquesta vegada l'Orquestra toca pels pacients més petits — els nadons, amb una atenció especial als prematurs i als infants que necessiten cures intensives. Els diners recaptats es destinaran a equips moderns per a sales de parts, unitats de cures intensives neonatals i transport especialitzat entre hospitals.\n\n📝 I ara què?\nEstem preparant el programa de la nostra Final: molt aviat anunciarem el lloc, els concerts, les subhastes i les activitats per als infants. Vols ajudar com a voluntari o patrocinador? Contacta amb nosaltres!"
       },
       "101": {
         "title": "33è Final WOŚP a Barcelona",
@@ -464,22 +484,27 @@
       "contactUs": "Contacta'ns",
       "addToCalendar": "Afegir a Google Calendar",
       "whatAwaits": "Què ens espera?",
-      "poster": "Cartell"
+      "poster": "Cartell",
+      "readGoalArticle": "Llegeix sobre l'objectiu de la 35a Final"
     }
   },
   "blog": {
+    "relatedTitle": "També et pot interessar",
     "blogSection": {
       "latestTitle": "Últimes entrades",
       "readMore": "Llegir més"
     },
-    "title": "Blog WOŚP Barcelona",
+    "title": "Notícies WOŚP Barcelona",
     "description": "Descobreix les nostres històries, esdeveniments i iniciatives. Coneix més sobre les nostres activitats benèfiques.",
     "article": "Article",
     "readMore": "Llegir més",
-    "backToBlog": "← Tornar al blog",
+    "backToBlog": "← Tornar a notícies",
     "tags": "Etiquetes",
     "followUs": "Segueix-nos",
-    "noPosts": "No hi ha entrades al blog"
+    "noPosts": "Encara no hi ha articles",
+    "postNavigation": "Navegació entre articles",
+    "newerPost": "Article més recent",
+    "olderPost": "Article anterior"
   },
   "contact": {
     "title": "Contacte",
@@ -727,5 +752,22 @@
     "close": "Tancar",
     "open": "Obrir",
     "menu": "Menú"
+  },
+  "search": {
+    "title": "Cercador",
+    "description": "Cerca a les notícies, als esdeveniments, als patrocinadors i a la informació sobre nosaltres.",
+    "placeholder": "Què busques? p. ex. final, pierogi, voluntari…",
+    "clear": "Esborra",
+    "all": "Tot",
+    "categories": {
+      "blog": "Notícies",
+      "events": "Esdeveniments",
+      "sponsors": "Patrocinadors",
+      "about": "Qui som"
+    },
+    "minChars": "Escriu almenys {count} caràcters per començar a cercar.",
+    "results": "{count, plural, one {# resultat} other {# resultats}}",
+    "noResults": "No hi ha resultats per a «{query}»",
+    "noResultsHint": "Prova amb una altra paraula o tria una altra categoria."
   }
 }

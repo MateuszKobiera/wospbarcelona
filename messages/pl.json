@@ -21,7 +21,7 @@
       "description": "Zobacz nadchodzące i minione wydarzenia WOŚP Barcelona. Koncerty, licytacje, biegi charytatywne i więcej."
     },
     "blog": {
-      "title": "Blog",
+      "title": "Aktualności",
       "description": "Aktualności, relacje z wydarzeń i historie WOŚP Barcelona. Bądź na bieżąco z naszą działalnością charytatywną."
     },
     "sponsors": {
@@ -43,10 +43,11 @@
     "home": "Strona główna",
     "about": "O nas",
     "events": "Kalendarz",
-    "blog": "Blog",
+    "blog": "Aktualności",
     "contact": "Kontakt",
     "donate": "Wpłać online",
-    "sponsors": "Sponsorzy"
+    "sponsors": "Sponsorzy",
+    "search": "Szukaj"
   },
   "home": {
     "title": "WOŚP Barcelona",
@@ -223,6 +224,13 @@
         "title": "34. Finał WOŚP w Barcelonie",
         "description": "Największe wydarzenie charytatywne roku! Warsztaty, występy, aukcje i integracja."
       }
+    },
+    "newsSection": {
+      "title": "Aktualności",
+      "subtitle": "Aktualności, poradniki i relacje z życia sztabu WOŚP Barcelona",
+      "latestTitle": "Najnowsze",
+      "featuredTitle": "Najciekawsze",
+      "allArticles": "Zobacz wszystkie artykuły"
     }
   },
   "about": {
@@ -273,7 +281,12 @@
         "historyTitle": "Historia WOŚP",
         "goalsTitle": "Cele medyczne",
         "foundationTitle": "Jerzy Owsiak i Fundacja",
-        "visitLink": "Odwiedź oficjalną stronę WOŚP"
+        "visitLink": "Odwiedź oficjalną stronę WOŚP",
+        "nextFinale": {
+          "title": "35. Finał WOŚP — 31 stycznia 2027: gramy dla noworodków",
+          "text": "Hasło 35. Finału to „Dzisiaj?! Zdrowie noworodka najważniejsze!”. Zebrane środki trafią na nowoczesny sprzęt dla oddziałów noworodkowych — od sali porodowej, przez intensywną terapię, po specjalistyczny transport wcześniaków. Sztab WOŚP Barcelona oczywiście zagra razem z Wami!",
+          "link": "Przeczytaj więcej o celu 35. Finału"
+        }
       },
       "barcelonaSection": {
         "title": "WOŚP Barcelona",
@@ -317,7 +330,7 @@
       },
       "final33Summary": {
         "title": "33. Finał WOŚP w Barcelonie (styczeń 2025)",
-        "medicalDesc": "33. Finał grał dla medycyny paliatywnej i hospicyjnej. Zebrane środki poszły na zakup sprzętu medycznego, który pomaga zapewnić godne życie i śmierć pacjentom w najtrudniejszych chwilach.",
+        "medicalDesc": "33. Finał grał dla dzieci z chorobami nowotworowymi i hematologicznymi. Zebrane środki przeznaczono na sprzęt do szybszej diagnostyki i skuteczniejszego leczenia – m.in. dla 18 oddziałów onkologii i hematologii dziecięcej oraz 17 hospicjów.",
         "collectedDesc": "zebraliśmy podczas 33. Finału",
         "readArticle": "Zobacz, jak wyglądał 33. Finał"
       }
@@ -352,7 +365,8 @@
         "instagramDesc": "Najnowsze zdjęcia i stories z naszych działań w Barcelonie.",
         "youtubeDesc": "Oglądaj nasze filmy i relacje z wydarzeń WOŚP Barcelona.",
         "allegroDesc": "Licytuj przedmioty charytatywne i wspieraj WOŚP Barcelona."
-      }
+      },
+      "readGoalArticle": "Przeczytaj o celu 35. Finału"
     },
     "categories": {
       "volunteerMeeting": "Spotkanie Wolontariuszy",
@@ -396,6 +410,12 @@
         "title": "Lepienie Pierogów na Finał WOŚP",
         "description": "🥟 Zapraszamy na wspólne lepienie pierogów w Wawel Restobar! Przygotujemy razem pyszne pierogi na 34. Finał WOŚP. Im nas więcej, tym lepiej!",
         "fullDescription": "🥟 Lepienie Pierogów na Finał WOŚP w Wawel Restobar\n\nZapraszamy wszystkich chętnych na wspólne lepienie pierogów, które będą serwowane podczas 34. Finału WOŚP w Barcelonie!\n\n📍 Gdzie: Wawel Restobar — nasz główny sponsor\n📅 Kiedy: Sobota, 24 stycznia 2026\n🕐 Godziny: 13:00 - 19:00\n\n✨ Dlaczego warto przyjść?\n\n• Wspólna zabawa i integracja przed finałem\n• Nauczysz się lepić tradycyjne polskie pierogi\n• Pomożesz przygotować jedzenie na finał WOŚP\n• Poczujesz atmosferę polskiej gościnności\n• Poznasz innych wolontariuszy i sympatyków WOŚP\n• Wesprzesz naszego sponsora — Wawel Restobar\n\n👥 Dla kogo?\nDla każdego! Nie musisz mieć doświadczenia w lepieniu pierogów — nauczymy Cię wszystkiego. Możesz przyjść o dowolnej godzinie między 13:00 a 19:00.\n\n📝 Rejestracja:\nNie jest wymagana rejestracja — po prostu przyjdź! Im nas więcej, tym więcej pierogów ulepimy dla finału.\n\n🥟 Co będziemy robić?\n• Przygotowywanie ciasta na pierogi\n• Lepienie różnych rodzajów pierogów\n• Wspólna praca w przyjaznej atmosferze\n• Rozmowy o planach na finał WOŚP\n\n💪 Każda para rąk się przyda!\nNiezależnie od tego, czy jesteś ekspertem w kuchni, czy dopiero zaczynasz swoją przygodę z gotowaniem — każda pomoc jest cenna. Razem przygotujemy pyszne pierogi, które będą smakowały wszystkim uczestnikom finału!\n\nDo zobaczenia w Wawel Restobar!"
+      },
+      "11": {
+        "title": "35. Finał WOŚP w Barcelonie",
+        "description": "🎉 31 stycznia 2027 gramy dla zdrowia noworodków! Dokładne miejsce finału w Barcelonie ogłosimy wkrótce.",
+        "location": "Barcelona – miejsce wkrótce",
+        "fullDescription": "🎉 35. Finał WOŚP w Barcelonie\n\n📅 Data: 31 stycznia 2027 (niedziela)\n📍 Miejsce: Barcelona — dokładną lokalizację ogłosimy wkrótce\n🎯 Cel: „Dzisiaj?! Zdrowie noworodka najważniejsze!”\n\n❤️ Dlaczego gramy?\nTym razem Orkiestra zagra dla najmłodszych pacjentów — noworodków, ze szczególnym uwzględnieniem wcześniaków i dzieci wymagających intensywnej terapii. Zebrane pieniądze trafią na nowoczesny sprzęt dla sal porodowych, oddziałów intensywnej terapii noworodka oraz na specjalistyczny transport między szpitalami.\n\n📝 Co dalej?\nPracujemy nad programem naszego Finału — szczegóły dotyczące miejsca, koncertów, licytacji i atrakcji dla dzieci ogłosimy wkrótce. Chcesz pomóc jako wolontariusz lub sponsor? Skontaktuj się z nami!"
       },
       "101": {
         "title": "33. Finał WOŚP w Barcelonie",
@@ -468,18 +488,23 @@
       "contactUs": "Skontaktuj się z nami",
       "addToCalendar": "Dodaj do Google Calendar",
       "whatAwaits": "Co nas czeka?",
-      "poster": "Plakat"
+      "poster": "Plakat",
+      "readGoalArticle": "Przeczytaj o celu 35. Finału"
     }
   },
   "blog": {
-    "title": "Blog WOŚP Barcelona",
+    "relatedTitle": "Przeczytaj również",
+    "title": "Aktualności WOŚP Barcelona",
     "description": "Poznaj nasze historie, wydarzenia i inicjatywy. Dowiedz się więcej o naszej działalności charytatywnej.",
     "article": "Artykuł",
     "readMore": "Czytaj dalej",
-    "backToBlog": "← Wróć do bloga",
+    "backToBlog": "← Wróć do aktualności",
     "tags": "Tagi",
     "followUs": "Śledź nas",
-    "noPosts": "Brak wpisów na blogu"
+    "noPosts": "Brak artykułów",
+    "postNavigation": "Nawigacja między artykułami",
+    "newerPost": "Nowszy artykuł",
+    "olderPost": "Starszy artykuł"
   },
   "contact": {
     "title": "Kontakt",
@@ -720,5 +745,22 @@
     "cta": "Zobacz szczegóły biegu",
     "close": "Zamknij",
     "routeVideo": "Opis trasy (filmik)"
+  },
+  "search": {
+    "title": "Wyszukiwarka",
+    "description": "Przeszukaj aktualności, wydarzenia, sponsorów i informacje o nas.",
+    "placeholder": "Czego szukasz? np. finał, pierogi, wolontariusz…",
+    "clear": "Wyczyść",
+    "all": "Wszystko",
+    "categories": {
+      "blog": "Aktualności",
+      "events": "Wydarzenia",
+      "sponsors": "Sponsorzy",
+      "about": "O nas"
+    },
+    "minChars": "Wpisz co najmniej {count} znaki, aby rozpocząć wyszukiwanie.",
+    "results": "{count, plural, one {# wynik} few {# wyniki} many {# wyników} other {# wyniku}}",
+    "noResults": "Brak wyników dla „{query}”",
+    "noResultsHint": "Spróbuj innego słowa lub wybierz inną kategorię."
   }
 }

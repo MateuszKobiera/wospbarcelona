@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { useTranslations, useLocale } from 'next-intl';
-import { ChevronDown, Menu, X } from 'lucide-react';
+import { ChevronDown, Menu, Search, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
@@ -34,7 +34,7 @@ export function Header() {
     { name: t('home'), href: `/${locale}` },
     { name: t('about'), href: `/${locale}/about` },
     { name: t('events'), href: `/${locale}/events` },
-    { name: t('blog'), href: `/${locale}/blog` },
+    { name: t('blog'), href: `/${locale}/news` },
     {
       name: t('sponsors'),
       href: `/${locale}/sponsors/35-final`,
@@ -103,6 +103,14 @@ export function Header() {
 
           {/* Language Selector & Donate Button */}
           <div className="hidden md:flex items-center space-x-4">
+            <Link
+              href={`/${locale}/search`}
+              aria-label={t('search')}
+              title={t('search')}
+              className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-white text-gray-700 hover:text-red-600 hover:bg-red-50 transition-colors"
+            >
+              <Search className="w-5 h-5" />
+            </Link>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" size="sm" className="flex items-center space-x-2 text-gray-900 cursor-pointer">
@@ -125,7 +133,15 @@ export function Header() {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-1">
+            <Link
+              href={`/${locale}/search`}
+              aria-label={t('search')}
+              onClick={() => setIsMenuOpen(false)}
+              className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-white text-gray-700 hover:text-red-600 hover:bg-red-50 transition-colors"
+            >
+              <Search className="w-5 h-5" />
+            </Link>
             <Button
               variant="ghost"
               size="sm"

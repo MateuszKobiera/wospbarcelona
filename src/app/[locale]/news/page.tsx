@@ -76,7 +76,7 @@ export default async function BlogPage({
                     {blogPosts[0].date}
                   </div>
                 </div>
-                <Link className="inline-flex bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md" href={`/${locale}/blog/${blogPosts[0].slug}`}>
+                <Link className="inline-flex bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md" href={`/${locale}/news/${blogPosts[0].slug}`}>
                   {t('readMore')}
                 </Link>
               </div>
@@ -116,7 +116,7 @@ export default async function BlogPage({
                     {post.date}
                   </div>
                 </div>
-                <Link className="inline-flex w-full justify-center border border-red-200 text-red-700 hover:bg-red-50 px-4 py-2 rounded-md" href={`/${locale}/blog/${post.slug}`}>
+                <Link className="inline-flex w-full justify-center border border-red-200 text-red-700 hover:bg-red-50 px-4 py-2 rounded-md" href={`/${locale}/news/${post.slug}`}>
                   {t('readMore')}
                 </Link>
               </CardContent>

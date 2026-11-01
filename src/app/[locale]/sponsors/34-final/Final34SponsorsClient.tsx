@@ -339,7 +339,8 @@ export default function Final34SponsorsClient() {
                                             return (
                                                 <Card
                                                     key={`${cat.categoryKey}-${s.key}`}
-                                                    className="bg-white border border-red-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                                                    id={s.key}
+                                                    className="scroll-mt-24 bg-white border border-red-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                                                 >
                                                     <CardHeader className="text-center pb-4">
                                                         {s.logoUrl ? (
@@ -428,7 +429,8 @@ export default function Final34SponsorsClient() {
                                                 return (
                                                     <div
                                                         key={`${cat.categoryKey}-${s.key}`}
-                                                        className="bg-white border border-gray-200 rounded-lg p-4 flex flex-col items-center justify-center hover:shadow-md transition-shadow"
+                                                        id={s.key}
+                                                        className="scroll-mt-24 bg-white border border-gray-200 rounded-lg p-4 flex flex-col items-center justify-center hover:shadow-md transition-shadow"
                                                     >
                                                         {s.logoUrl ? (
                                                             <div className="w-16 h-16 flex items-center justify-center mb-2">

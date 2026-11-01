@@ -8,6 +8,13 @@ const nextConfig: NextConfig = {
     unoptimized: true,
     formats: ['image/webp', 'image/avif'],
   },
-  };
+  async redirects() {
+    // The "Blog" section was renamed to "Aktualności" / "News" – keep old links working.
+    return [
+      { source: '/:locale(pl|en|es|ca)/blog', destination: '/:locale/news', permanent: true },
+      { source: '/:locale(pl|en|es|ca)/blog/:path*', destination: '/:locale/news/:path*', permanent: true },
+    ];
+  },
+};
 
 export default withNextIntl(nextConfig);

@@ -6,6 +6,8 @@ import { getPostBySlugAndLocale } from '@/content/blog-i18n';
 import { Facebook, Instagram, MessageSquare } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
+import { RelatedPosts } from '@/components/RelatedPosts';
+import { PostNavigation } from '@/components/PostNavigation';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
   const { locale, slug } = await params;
@@ -42,7 +44,7 @@ export default async function BlogPostPage({
     <main className="py-16 bg-gradient-to-br from-white via-red-50 to-pink-100">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
-          <Link href={`/${locale}/blog`} className="text-red-600 hover:underline">
+          <Link href={`/${locale}/news`} className="text-red-600 hover:underline">
             {t('backToBlog')}
           </Link>
         </div>
@@ -114,6 +116,14 @@ export default async function BlogPostPage({
             )}
           </CardContent>
         </Card>
+
+        <PostNavigation
+          locale={locale}
+          currentSlug={post.slug}
+          labels={{ navigation: t('postNavigation'), newer: t('newerPost'), older: t('olderPost') }}
+        />
+
+        <RelatedPosts locale={locale} currentSlug={post.slug} title={t('relatedTitle')} readMoreLabel={t('readMore')} />
       </div>
     </main>
   );

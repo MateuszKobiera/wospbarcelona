@@ -38,9 +38,10 @@ src/app/
     layout.tsx            # Locale layout: wraps all pages with NextIntlClientProvider, Header, Footer
     page.tsx              # Home page
     about/                # About page (server + client split)
-    blog/
-      page.tsx            # Blog listing
-      [slug]/page.tsx     # Blog post detail
+    news/                 # "Aktualności" section (formerly /blog – next.config.ts redirects /:locale/blog/* here)
+      page.tsx            # Article listing
+      [slug]/page.tsx     # Article detail
+    search/               # Site search (index built in src/lib/search-index.ts)
     contact/              # Contact page (server + client split)
     donate/               # Donate page
     events/

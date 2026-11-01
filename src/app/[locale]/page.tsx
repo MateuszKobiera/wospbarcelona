@@ -7,8 +7,8 @@ import { Button } from '@/components/ui/button';
 import { HeartHandshakeIcon, StoreIcon, UsersIcon, FlagIcon, Heart, ArrowRight, Sparkles } from 'lucide-react';
 import { siFacebook, siInstagram, siYoutube } from 'simple-icons/icons';
 import { SponsorsMarquee } from '@/components/SponsorsMarquee';
-import { getAllPostsForLocale } from '@/content/blog-i18n';
 import { ContactForm } from '@/components/ContactForm';
+import { HomeNews } from '@/components/HomeNews';
 import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
 
@@ -28,7 +28,6 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'home' });
-  const blogPosts = getAllPostsForLocale(locale);
   const fundsRaisedValue = locale === 'en' ? '48k €+' : locale === 'pl' ? '48 tys. €+' : '48 mil €+';
 
   return (
@@ -45,7 +44,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <p className="text-base text-red-600/90 italic mb-2">{t('nextFinale.motto')}</p>
           <p className="text-sm text-gray-600 mb-4">{t('nextFinale.description')}</p>
           <Link
-            href={`/${locale}/blog/35-final-wosp-zagramy-dla-noworodkow`}
+            href={`/${locale}/news/35-final-wosp-zagramy-dla-noworodkow`}
             className="inline-flex items-center gap-1.5 text-sm font-semibold text-red-600 hover:text-red-700 hover:underline transition-colors"
           >
             {t('nextFinale.button')}
@@ -53,6 +52,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </Link>
         </div>
       </section>
+
+      {/* NEWS — latest + most interesting articles (Onet-style) */}
+      <HomeNews locale={locale} />
 
       {/* 1. THANK YOU — Finale is done */}
       <section className="py-10 bg-gradient-to-br from-red-600 via-pink-600 to-red-700 text-white">
@@ -114,7 +116,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </div>
           <div className="mt-5 text-center">
             <Link
-              href={`/${locale}/blog/dziekujemy-za-34-final-wosp-w-barcelonie`}
+              href={`/${locale}/news/dziekujemy-za-34-final-wosp-w-barcelonie`}
               className="inline-flex items-center gap-2 text-red-600 hover:text-red-700 font-semibold hover:underline transition-colors"
             >
               {t('photoSection.blogLinkText')}
@@ -309,42 +311,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                 <p className="text-sm text-gray-700">{t('missionSection.cards.cultureDesc')}</p>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Ostatnie wpisy na blogu */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">{t('blogSection.latestTitle')}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[...blogPosts]
-              .sort((a, b) => (a.date < b.date ? 1 : -1))
-              .slice(0, 3)
-              .map((post) => {
-                const href = post.sourceUrl ?? `/${locale}/blog/${post.slug}`;
-                return (
-                  <Link key={post.slug} href={href} target={post.sourceUrl ? '_blank' : undefined} rel={post.sourceUrl ? 'noopener noreferrer' : undefined} className="block group">
-                    <Card className="overflow-hidden border-gray-200/80 transition hover:shadow-md hover:-translate-y-0.5">
-                      {post.thumbnailImage ? (
-                        <div className="relative h-44">
-                          <Image src={post.thumbnailImage} alt={post.title} fill className="object-cover" />
-                        </div>
-                      ) : null}
-                      <CardContent className="p-5">
-                        <div className="text-xs text-gray-500 mb-2">{post.date}</div>
-                        <h3 className="font-semibold text-gray-900 mb-2 line-clamp-2">
-                          {post.title}
-                        </h3>
-                        {post.excerpt ? (
-                          <p className="text-sm text-gray-700 line-clamp-3">{post.excerpt}</p>
-                        ) : null}
-                        <div className="mt-4 text-sm font-medium text-red-600 group-hover:underline">{t('blogSection.readMore')}</div>
-                      </CardContent>
-                    </Card>
-                  </Link>
-                );
-              })}
           </div>
         </div>
       </section>

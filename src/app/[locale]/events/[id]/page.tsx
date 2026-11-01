@@ -46,6 +46,24 @@ const FormattedText = ({ text }: { text: string }) => {
 // Mock events data (same as in events page)
 const allEvents = [
   {
+    id: 11,
+    title: '35. Finał WOŚP w Barcelonie',
+    description: '🎉 35. Finał WOŚP – 31 stycznia 2027 gramy dla zdrowia noworodków! Miejsce w Barcelonie ogłosimy wkrótce.',
+    fullDescription: '🎉 35. Finał WOŚP w Barcelonie\n\n📅 Data: 31 stycznia 2027 (niedziela)\n📍 Miejsce: Barcelona — dokładną lokalizację ogłosimy wkrótce\n🎯 Cel: „Dzisiaj?! Zdrowie noworodka najważniejsze!” — sprzęt dla sal porodowych, oddziałów intensywnej terapii noworodka i specjalistycznego transportu',
+    date: '2027-01-31',
+    location: 'Barcelona',
+    locationTbd: true,
+    category: 'Finał WOŚP',
+    image: '/images/35-final/35FinalBarcelona.png',
+    gallery: [],
+    registrationRequired: false,
+    isFinal: true,
+    blogSlug: '35-final-wosp-zagramy-dla-noworodkow',
+    facebookLink: null,
+    organizer: 'WOŚP Barcelona',
+    contact: 'sztab@wospbarcelona.org'
+  },
+  {
     id: 7,
     title: 'Spotkanie Wolontariuszy Online',
     description: 'Spotkanie online dla wolontariuszy WOŚP Barcelona. Skontaktuj się z nami przez formularz kontaktowy, aby otrzymać link do spotkania.',
@@ -54,11 +72,8 @@ const allEvents = [
     time: '19:30',
     location: 'Online',
     category: 'Spotkanie Wolontariuszy',
-    image: '/images/kalendarz/06_SLIDE_34_F_ZAGRA_25_01_2026 (1).jpg',
-    gallery: [
-      '/images/blog/online-1.jpg',
-      '/images/blog/online-2.jpg'
-    ],
+    image: '/images/34-final/IMG_7448.JPG',
+    gallery: [],
     registrationRequired: true,
     facebookLink: 'https://www.facebook.com/events/959414393911595',
     organizer: 'WOŚP Barcelona',
@@ -73,11 +88,8 @@ const allEvents = [
     time: '15:00',
     location: 'Wawel, Barcelona',
     category: 'Spotkanie Wolontariuszy',
-    image: '/images/kalendarz/06_SLIDE_34_F_ZAGRA_25_01_2026 (1).jpg',
-    gallery: [
-      '/images/blog/wolontariusze-grudzien-1.jpg',
-      '/images/blog/wolontariusze-grudzien-2.jpg'
-    ],
+    image: '/images/34-final/IMG_7449.JPG',
+    gallery: [],
     registrationRequired: false,
     facebookLink: 'https://www.facebook.com/events/2638201476539435',
     organizer: 'WOŚP Barcelona',
@@ -92,7 +104,7 @@ const allEvents = [
     time: '13:00 - 19:00',
     location: 'Wawel Restobar, Barcelona',
     category: 'Warsztaty',
-    image: '/images/kalendarz/06_SLIDE_34_F_ZAGRA_25_01_2026 (1).jpg',
+    image: '/images/34-final/d0080507-e4ec-472e-9ba3-c4328686f552.jpg',
     gallery: [],
     videoUrl: '/videos/WhatsApp Video 2026-01-21 at 01.38.11.mp4',
     registrationRequired: false,
@@ -193,14 +205,14 @@ const allEvents = [
     date: '2025-01-26',
     location: 'Nau Bostik, Sant Andreu, Barcelona',
     category: 'Finał WOŚP',
-    image: '/images/33-final/final-2024-main.jpg',
+    image: '/images/33-final/DSCF7321.jpg',
     gallery: [
-      '/images/33-final/final-2024-1.jpg',
-      '/images/33-final/final-2024-2.jpg',
-      '/images/33-final/final-2024-3.jpg',
-      '/images/33-final/final-2024-4.jpg',
-      '/images/33-final/final-2024-5.jpg',
-      '/images/33-final/final-2024-6.jpg'
+      '/images/33-final/DSCF7186.jpg',
+      '/images/33-final/DSCF7239.jpg',
+      '/images/33-final/DSCF7271.jpg',
+      '/images/33-final/DSCF7290.jpg',
+      '/images/33-final/DSCF7309.jpg',
+      '/images/33-final/DSCF7369.jpg'
     ],
     amountRaised: '8,073.48 €',
     totalAmount: '13,880.62 €',
@@ -221,7 +233,7 @@ const allEvents = [
     time: 'Start: 10:30',
     location: 'Start: Sagrada Familia, Meta: Hotel W Barcelona',
     category: 'Bieg',
-    image: '/images/blog/bieg-2025.jpg',
+    image: '/images/pictures/pexels-valdemaras-d-784301-1874675.jpg',
     gallery: [],
     registrationRequired: true,
     registrationLink: 'https://slotmarket.pl/event/details/645/preview',
@@ -239,7 +251,7 @@ const allEvents = [
     time: '11:00 - 22:00',
     location: 'Templo Beauty, Ronda del Guinardó 64, Horta-Guinardó, Barcelona',
     category: 'Wernisaż',
-    image: '/images/blog/wernisaz-2025.jpg',
+    image: '/images/33-final/DSCF7344.jpg',
     gallery: [],
     registrationRequired: false,
     organizer: 'WOŚP Barcelona',
@@ -255,7 +267,7 @@ const allEvents = [
     time: '17:30',
     location: 'World Class Barcelona Carrer del Bisbe Laguarda, 4, Ciutat Vella, 08001 Barcelona',
     category: 'Warsztaty Świąteczne',
-    image: '/images/kalendarz/485066667_1070766505083825_7426193123650026575_n.jpg',
+    image: '/images/kalendarz/485148348_1068884908605318_1878161433152570333_n.jpg',
     gallery: [],
     registrationRequired: true,
     registrationLink: 'https://wospbarcelona.org/wine-craft-christmas/',
@@ -272,7 +284,7 @@ const allEvents = [
     time: '14:30 - 17:30',
     location: 'Jardins de Mossèn Costa i Llobera, Barcelona',
     category: 'Warsztaty Fotograficzne',
-    image: '/images/kalendarz/485066667_1070766505083825_7426193123650026575_n.jpg',
+    image: '/images/pictures/pexels-frederic-bartl-256900-786126.jpg',
     gallery: [],
     registrationRequired: true,
     registrationLink: 'https://wospbarcelona.org/warsztaty-fotograficzne/',
@@ -289,7 +301,7 @@ const allEvents = [
     time: '15:00 - 19:00',
     location: 'World Class Bcn Spanish school - Carrer del Bisbe Laguarda, 4, Ciutat Vella, 08001 Barcelona',
     category: 'Spotkanie Literackie',
-    image: '/images/kalendarz/485066667_1070766505083825_7426193123650026575_n.jpg',
+    image: '/images/34-final/0a885645-72c7-4bbb-ba56-b3ee6895befd.jpg',
     gallery: [],
     registrationRequired: false,
     organizer: 'WOŚP Barcelona',
@@ -322,15 +334,8 @@ const allEvents = [
     time: '11:00 - 20:00',
     location: 'Nau Bostik, Sant Andreu, Barcelona',
     category: 'Finał WOŚP',
-    image: '/images/33-final/final-2024-main.jpg',
-    gallery: [
-      '/images/33-final/final-2024-1.jpg',
-      '/images/33-final/final-2024-2.jpg',
-      '/images/33-final/final-2024-3.jpg',
-      '/images/33-final/final-2024-4.jpg',
-      '/images/33-final/final-2024-5.jpg',
-      '/images/33-final/final-2024-6.jpg'
-    ],
+    image: '/images/33-final/DSCF7258.jpg',
+    gallery: [],
     amountRaised: '10,460.47 €',
     organizer: 'WOŚP Barcelona',
     highlights: [
@@ -350,15 +355,8 @@ const allEvents = [
     time: '10:00 - 20:00',
     location: 'Carrer de Sardenya, 29, 08005 Barcelona',
     category: 'Finał WOŚP',
-    image: '/images/33-final/final-2024-main.jpg',
-    gallery: [
-      '/images/33-final/final-2024-1.jpg',
-      '/images/33-final/final-2024-2.jpg',
-      '/images/33-final/final-2024-3.jpg',
-      '/images/33-final/final-2024-4.jpg',
-      '/images/33-final/final-2024-5.jpg',
-      '/images/33-final/final-2024-6.jpg'
-    ],
+    image: '/images/33-final/DSCF7250.jpg',
+    gallery: [],
     amountRaised: '8,989.94 €',
     organizer: 'WOŚP Barcelona',
     highlights: [
@@ -712,7 +710,7 @@ export default function EventPage() {
                   <div className="flex items-center text-gray-700">
                     <MapPin className="w-5 h-5 mr-3 text-red-600 flex-shrink-0" />
                     <div>
-                      {(eventLocation.includes('Online') || eventLocation.includes('Allegro')) ? (
+                      {(event.locationTbd || eventLocation.includes('Online') || eventLocation.includes('Allegro')) ? (
                         <span className="text-gray-700">{eventLocation}</span>
                       ) : (
                         <a
@@ -739,6 +737,16 @@ export default function EventPage() {
                           {t('detail.routeVideo')}
                         </Button>
                       </a>
+                    </div>
+                  )}
+
+                  {event.blogSlug && (
+                    <div className="pt-2">
+                      <Link href={`/${locale}/news/${event.blogSlug}`} className="block w-full">
+                        <Button className="w-full bg-red-600 hover:bg-red-700 text-white cursor-pointer">
+                          {t('detail.readGoalArticle')}
+                        </Button>
+                      </Link>
                     </div>
                   )}
 
