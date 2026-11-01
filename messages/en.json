@@ -47,7 +47,8 @@
     "contact": "Contact",
     "donate": "Donate online",
     "sponsors": "Sponsors",
-    "search": "Search"
+    "search": "Search",
+    "social": "Social media"
   },
   "home": {
     "title": "WOŚP Barcelona",
@@ -762,5 +763,36 @@
     "results": "{count, plural, one {# result} other {# results}}",
     "noResults": "No results for \"{query}\"",
     "noResultsHint": "Try a different word or pick another category."
+  },
+  "social": {
+    "title": "Find us on social media",
+    "metaTitle": "Social media",
+    "description": "The latest videos and posts from WOŚP Barcelona on YouTube, Facebook, Instagram and TikTok. Follow us so you don’t miss a thing!",
+    "followTitle": "Follow us",
+    "youtube": {
+      "title": "Latest YouTube videos",
+      "channel": "Visit channel",
+      "empty": "We couldn’t load the videos right now. Please visit our YouTube channel directly."
+    },
+    "facebook": {
+      "title": "Latest Facebook posts",
+      "iframeTitle": "Latest WOŚP Barcelona posts on Facebook"
+    },
+    "instagram": {
+      "title": "Latest Instagram posts",
+      "iframeTitle": "Latest WOŚP Barcelona posts on Instagram"
+    },
+    "tiktok": {
+      "title": "Latest TikTok videos"
+    },
+    "embed": {
+      "consentText": "We only show {name} content after you agree – once you click, {name} may store cookies in your browser.",
+      "load": "Show {name} posts",
+      "remember": "Remember my choice",
+      "openProfile": "Or open our {name} profile →",
+      "openProfileShort": "Open profile →",
+      "fallback": "Posts not loading? Your browser may be blocking content from {name}.",
+      "forget": "Hide {name} content and forget my consent"
+    }
   }
 }

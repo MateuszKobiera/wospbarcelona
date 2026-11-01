@@ -47,7 +47,8 @@
     "contact": "Contacto",
     "donate": "Donar online",
     "sponsors": "Patrocinadores",
-    "search": "Buscar"
+    "search": "Buscar",
+    "social": "Redes sociales"
   },
   "home": {
     "title": "WOŚP Barcelona",
@@ -768,5 +769,36 @@
     "results": "{count, plural, one {# resultado} other {# resultados}}",
     "noResults": "No hay resultados para «{query}»",
     "noResultsHint": "Prueba con otra palabra o elige otra categoría."
+  },
+  "social": {
+    "title": "Estamos en las redes sociales",
+    "metaTitle": "Redes sociales",
+    "description": "Los últimos vídeos y publicaciones de WOŚP Barcelona en YouTube, Facebook, Instagram y TikTok. ¡Síguenos para no perderte nada!",
+    "followTitle": "Síguenos",
+    "youtube": {
+      "title": "Últimos vídeos en YouTube",
+      "channel": "Ver canal",
+      "empty": "Ahora mismo no hemos podido cargar los vídeos. Visita directamente nuestro canal de YouTube."
+    },
+    "facebook": {
+      "title": "Últimas publicaciones en Facebook",
+      "iframeTitle": "Últimas publicaciones de WOŚP Barcelona en Facebook"
+    },
+    "instagram": {
+      "title": "Últimas publicaciones en Instagram",
+      "iframeTitle": "Últimas publicaciones de WOŚP Barcelona en Instagram"
+    },
+    "tiktok": {
+      "title": "Últimos vídeos en TikTok"
+    },
+    "embed": {
+      "consentText": "Solo mostramos el contenido de {name} con tu consentimiento: al hacer clic, {name} puede guardar cookies en tu navegador.",
+      "load": "Mostrar publicaciones de {name}",
+      "remember": "Recordar mi elección",
+      "openProfile": "O abre nuestro perfil de {name} →",
+      "openProfileShort": "Abrir perfil →",
+      "fallback": "¿No se cargan las publicaciones? Puede que tu navegador bloquee el contenido de {name}.",
+      "forget": "Ocultar el contenido de {name} y olvidar mi consentimiento"
+    }
   }
 }

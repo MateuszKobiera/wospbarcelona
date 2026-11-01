@@ -43,6 +43,7 @@ export function Header() {
         { name: t('sponsors34'), href: `/${locale}/sponsors/34-final` },
       ],
     },
+    { name: t('social'), href: `/${locale}/social` },
     { name: t('contact'), href: `/${locale}/contact` },
   ];
 

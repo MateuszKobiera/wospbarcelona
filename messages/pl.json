@@ -47,7 +47,8 @@
     "contact": "Kontakt",
     "donate": "Wpłać online",
     "sponsors": "Sponsorzy",
-    "search": "Szukaj"
+    "search": "Szukaj",
+    "social": "Social media"
   },
   "home": {
     "title": "WOŚP Barcelona",
@@ -764,5 +765,36 @@
     "results": "{count, plural, one {# wynik} few {# wyniki} many {# wyników} other {# wyniku}}",
     "noResults": "Brak wyników dla „{query}”",
     "noResultsHint": "Spróbuj innego słowa lub wybierz inną kategorię."
+  },
+  "social": {
+    "title": "Jesteśmy w social mediach",
+    "metaTitle": "Social media",
+    "description": "Najnowsze filmy i posty Sztabu WOŚP Barcelona z YouTube, Facebooka, Instagrama i TikToka. Obserwuj nas, żeby niczego nie przegapić!",
+    "followTitle": "Obserwuj nas",
+    "youtube": {
+      "title": "Najnowsze filmy na YouTube",
+      "channel": "Zobacz kanał",
+      "empty": "Nie udało się teraz pobrać filmów. Zajrzyj bezpośrednio na nasz kanał YouTube."
+    },
+    "facebook": {
+      "title": "Najnowsze posty na Facebooku",
+      "iframeTitle": "Najnowsze posty WOŚP Barcelona na Facebooku"
+    },
+    "instagram": {
+      "title": "Najnowsze posty na Instagramie",
+      "iframeTitle": "Najnowsze posty WOŚP Barcelona na Instagramie"
+    },
+    "tiktok": {
+      "title": "Najnowsze filmy na TikToku"
+    },
+    "embed": {
+      "consentText": "Treści z serwisu {name} wyświetlamy dopiero po Twojej zgodzie – po kliknięciu {name} może zapisać pliki cookie w Twojej przeglądarce.",
+      "load": "Pokaż posty z serwisu {name}",
+      "remember": "Zapamiętaj mój wybór",
+      "openProfile": "Albo otwórz nasz profil w serwisie {name} →",
+      "openProfileShort": "Otwórz profil →",
+      "fallback": "Posty się nie wczytują? Twoja przeglądarka może blokować treści z serwisu {name}.",
+      "forget": "Ukryj treści z serwisu {name} i zapomnij zgodę"
+    }
   }
 }

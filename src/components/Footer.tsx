@@ -24,6 +24,7 @@ export function Footer() {
     { name: 'events', href: `/${locale}/events` },
     { name: 'blog', href: `/${locale}/news` },
     { name: 'sponsors', href: `/${locale}/sponsors` },
+    { name: 'social', href: `/${locale}/social` },
     { name: 'contact', href: `/${locale}/contact` },
   ];
 
