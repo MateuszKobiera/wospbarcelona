@@ -354,7 +354,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             {[
-              { icon: Heart, value: '9+', label: t('stats.yearsHelp') },
+              { icon: Heart, value: '10+', label: t('stats.yearsHelp') },
               { icon: UsersIcon, value: '100+', label: t('stats.volunteers') },
               {
                 icon: HeartHandshakeIcon,

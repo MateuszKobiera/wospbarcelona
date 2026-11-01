@@ -2,11 +2,11 @@
   "metadata": {
     "home": {
       "title": "Inici",
-      "description": "Gran Orquestra de la Caritat Nadalenca a Barcelona. Som un equip apassionat que porta 9 anys organitzant Finals de WOŚP i esdeveniments benèfics."
+      "description": "Gran Orquestra de la Caritat Nadalenca a Barcelona. Som un equip apassionat que porta 10 anys organitzant Finals de WOŚP i esdeveniments benèfics."
     },
     "about": {
       "title": "Sobre Nosaltres",
-      "description": "Coneix l'equip de WOŚP Barcelona. Som un grup de voluntaris que porta 9 anys organitzant Finals de WOŚP a Barcelona."
+      "description": "Coneix l'equip de WOŚP Barcelona. Som un grup de voluntaris que porta 10 anys organitzant Finals de WOŚP a Barcelona."
     },
     "events": {
       "title": "Calendari d'Esdeveniments",
@@ -41,7 +41,7 @@
   "home": {
     "title": "WOŚP Barcelona",
     "subtitle": "Gran Orquestra de l'Ajuda Nadalenca a Barcelona",
-    "description": "Som una comunitat dinàmica de polonesos a Barcelona que des de fa 8 anys organitza Finals de WOŚP i esdeveniments benèfics, unint la passió amb l'ajuda.",
+    "description": "Som una comunitat dinàmica de polonesos a Barcelona que des de fa 10 anys organitza Finals de WOŚP i esdeveniments benèfics, unint la passió amb l'ajuda.",
     "final34Banner": {
       "title": "Compte enrere per al 34è Final de WOŚP",
       "dateLabel": "Data",
@@ -219,7 +219,7 @@
     "title": "Sobre nosaltres",
     "description": "Coneix la nostra història i missió",
     "mission": "La nostra missió és ajudar a nens i gent gran mitjançant l'organització d'esdeveniments benèfics a Barcelona.",
-    "history": "Fa 9 anys que donem suport a la Gran Orquestra del Nadal, recaptant fons per a les causes més importants.",
+    "history": "Fa 10 anys que donem suport a la Gran Orquestra del Nadal, recaptant fons per a les causes més importants.",
     "missionCards": [
       {
         "title": "Donant suport als més necessitats",
@@ -267,7 +267,7 @@
       },
       "barcelonaSection": {
         "title": "WOŚP Barcelona",
-        "subtitle": "Des de fa més de 9 anys creem a Barcelona un espai únic on l'energia polonesa i el temperament català s'uneixen per ajudar."
+        "subtitle": "Des de fa més de 10 anys creem a Barcelona un espai únic on l'energia polonesa i el temperament català s'uneixen per ajudar."
       },
       "workSection": {
         "title": "Com treballem",
@@ -295,18 +295,22 @@
         "youtubeDesc": "Mira els nostres vídeos i reportatges d'esdeveniments de WOŚP Barcelona.",
         "allegroDesc": "Puja per articles benèfics i dona suport a WOŚP Barcelona."
       },
-      "final33Section": {
-        "title": "33è Final de la WOŚP a Barcelona",
-        "intro": "Al gener de 2025 vam organitzar el 33è Final de la WOŚP a Barcelona. Va ser el nostre millor Final fins ara!",
+      "final34Section": {
+        "title": "34è Final de WOŚP a Barcelona",
+        "intro": "El 25 de gener de 2026, a l'Espacio 88, vam celebrar el 34è Final de la Gran Orquestra de la Caritat Nadalenca a Barcelona. Gràcies a tots els participants, voluntaris, patrocinadors i donants!",
         "resultsTitle": "Resultats de la recaptació",
-        "collectedDesc": "recaptats durant el 33è Final",
+        "collectedDesc": "recaptats durant el 34è Final",
         "medicalTitle": "Objectiu mèdic",
-        "medicalDesc": "El 33è Final es va dedicar a la medicina pal·liativa i d'hospici. Els fons recaptats es van destinar a la compra d'equips mèdics que ajuden a garantir una vida i mort dignes als pacients en els moments més difícils.",
-        "galleryTitle": "Galeria de fotos del 33è Final",
-        "loadMore": "Carrega més fotos",
-        "remaining": "restants",
-        "photoCredit": "Fotos de",
-        "photoCreditThanks": "Gràcies per capturar els meravellosos moments del nostre 33è Final!"
+        "medicalDesc": "El 34è Final es va celebrar per la salut digestiva dels nostres infants. Els fons recaptats donaran suport a la compra d'equips moderns per al diagnòstic i tractament de malalties de l'aparell digestiu en infants a Polònia.",
+        "readArticle": "Llegeix la crònica del 34è Final",
+        "galleryTitle": "Galeria de fotos del 34è Final",
+        "photoAlt": "Foto del 34è Final WOŚP Barcelona"
+      },
+      "final33Summary": {
+        "title": "33è Final de WOŚP a Barcelona (gener de 2025)",
+        "medicalDesc": "El 33è Final es va dedicar a la medicina pal·liativa i d'hospici. Els fons recaptats es van destinar a la compra d'equips mèdics que ajuden a garantir una vida i una mort dignes als pacients en els moments més difícils.",
+        "collectedDesc": "recaptats durant el 33è Final",
+        "readArticle": "Mira com va ser el 33è Final"
       }
     }
   },

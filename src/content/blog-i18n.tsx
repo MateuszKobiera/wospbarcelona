@@ -2,46 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { BlogPhotoGallery } from '@/components/BlogPhotoGallery';
+import { final34GalleryPhotos } from '@/content/final34Gallery';
 
-const final34GalleryPhotos: string[] = [
-    '/images/34-final/0a575815-d7c5-48a5-b629-857c1694e344.jpg',
-    '/images/34-final/0a885645-72c7-4bbb-ba56-b3ee6895befd.jpg',
-    '/images/34-final/0beceb8e-b2be-4ea0-b977-3c25efcadcf1.jpg',
-    '/images/34-final/0c5219d3-096f-4df6-98d5-378f97ae067c.jpg',
-    '/images/34-final/103c6f09-6234-48b5-a248-5c9b76db43b6.jpg',
-    '/images/34-final/135271c8-d825-4db3-9154-0f5e8ee93f5a.jpg',
-    '/images/34-final/1839e07d-8956-4617-b3b5-02805c21b81d.jpg',
-    '/images/34-final/1b040fa3-f693-4d7e-99f4-b7ee85710e2a.jpg',
-    '/images/34-final/1e9b394c-34da-4829-8733-a05f109507cd.jpg',
-    '/images/34-final/212454c5-e3e2-4273-bb23-568b971143cf.jpg',
-    '/images/34-final/28cc5948-170e-4000-b513-d25278641a53.jpg',
-    '/images/34-final/2d5ad03e-f6c4-4b6c-b77a-973f1726d4cf.jpg',
-    '/images/34-final/3cdbe168-47f2-4c58-b567-bc85f01d2e79.jpg',
-    '/images/34-final/4673101d-8fb9-4c96-acbb-aa66e6f7a73a.jpg',
-    '/images/34-final/5385472c-724c-48c2-af43-11567e354c5d.jpg',
-    '/images/34-final/5c164d80-e49c-4cf1-9d63-517c4c746cc9.jpg',
-    '/images/34-final/5f280f73-8bb5-4843-8e63-553f33bfb28f.jpg',
-    '/images/34-final/5fe11b00-9140-49cb-9fea-4a179aea23c9.jpg',
-    '/images/34-final/6022b7c7-a343-4e1c-b8f1-b833b1c346c3.jpg',
-    '/images/34-final/741204da-6056-48d9-9c78-a6ce472232e4.jpg',
-    '/images/34-final/77c5b268-df3e-47b4-b29a-fc35982a8fba.jpg',
-    '/images/34-final/867c8d47-35c8-4c65-9c55-c426470f6f15.jpg',
-    '/images/34-final/887bb521-c949-4b8f-9099-cb1453dd1adc.jpg',
-    '/images/34-final/8a160334-ff1e-40a7-8339-545df9e55a24.jpg',
-    '/images/34-final/ae83f333-60cb-4f7f-ae8b-7d526be184d1.jpg',
-    '/images/34-final/af59796e-c140-4f51-8a6c-818d795c5b30.jpg',
-    '/images/34-final/b0f6160a-d974-4a82-a6c0-edfe66c78e78.jpg',
-    '/images/34-final/c0e5f436-f30e-4701-8803-64978fcd1e48.jpg',
-    '/images/34-final/c1e084fb-ff63-4e51-9021-4079bb5e9748.jpg',
-    '/images/34-final/cfa889df-f1df-469d-8014-b81ed0330fcf.jpg',
-    '/images/34-final/d0080507-e4ec-472e-9ba3-c4328686f552.jpg',
-    '/images/34-final/d515e09d-abd3-4194-a735-1e5a58740dca.jpg',
-    '/images/34-final/e0cafe1f-0f0b-442d-bb6f-69fe32395476.jpg',
-    '/images/34-final/ed102d2d-613b-4bbd-9cd6-b3b9db801d12.jpg',
-    '/images/34-final/f4854028-f4f0-44f0-a9ef-3eaf6f2a7b11.jpg',
-    '/images/34-final/IMG_7448.JPG',
-    '/images/34-final/IMG_7449.JPG',
-];
 
 function Final35InfoBox({ heading, items }: { heading: string; items: Array<[string, string]> }) {
     return (
@@ -168,6 +130,10 @@ export const blogPostsI18n: BlogPostI18n[] = [
                                     <li><strong>Program Leczenia Retinopatii Wcześniaków</strong> – Orkiestra wyposażyła ośrodki w sprzęt do diagnostyki i leczenia retinopatii, choroby oczu, która nieleczona może prowadzić u wcześniaków do ślepoty.</li>
                                     <li><strong>26. Finał (2018)</strong> – „Dla wyrównania szans w leczeniu noworodków”. Do oddziałów noworodkowych – w tym tych mniejszych, I i II poziomu – trafiło <strong>3 844 urządzenia o wartości blisko 122 mln zł</strong>: inkubatory, bilirubinometry, aparaty KTG, pulsoksymetry i wiele innych.</li>
                                 </ul>
+                                <figure className="my-4">
+                                    <Image src="/images/35-final/26-final.webp" alt="Jurek Owsiak z wolontariuszem podczas 26. Finału WOŚP (2018)" width={750} height={500} sizes="(max-width: 768px) 100vw, 768px" className="w-full h-auto rounded-lg shadow-md" />
+                                    <figcaption className="mt-2 text-sm text-gray-600 italic text-center">26. Finał WOŚP (14 stycznia 2018) – „Dla wyrównania szans w leczeniu noworodków”. Jurek Owsiak z wolontariuszem i jego puszką.</figcaption>
+                                </figure>
                                 <p>Serduszko WOŚP można dziś znaleźć w praktycznie każdym oddziale noworodkowym w Polsce. Dla wielu rodziców to pierwszy symbol nadziei, który widzą obok inkubatora swojego dziecka.</p>
                             </div>
                         ),
@@ -189,6 +155,10 @@ export const blogPostsI18n: BlogPostI18n[] = [
                         body: (
                             <div className="space-y-3">
                                 <p>Podstawowe wyposażenie – w dużej mierze właśnie dzięki wcześniejszym Finałom WOŚP – większość oddziałów posiada. Problem polega na tym, że sprzęt medyczny się starzeje: urządzenia kupione kilka czy kilkanaście lat temu wymagają wymiany, a medycyna w tym czasie zrobiła ogromny krok naprzód.</p>
+                                <figure className="my-4">
+                                    <Image src="/images/35-final/noworodek-sprzet-wosp.webp" alt="Noworodek w inkubatorze otoczony sprzętem medycznym z naklejkami serduszka WOŚP" width={1000} height={666} sizes="(max-width: 768px) 100vw, 768px" className="w-full h-auto rounded-lg shadow-md" />
+                                    <figcaption className="mt-2 text-sm text-gray-600 italic text-center">Noworodek na oddziale intensywnej terapii – niemal każde urządzenie wokół niego oznaczone jest serduszkiem WOŚP.</figcaption>
+                                </figure>
                                 <p>Wiele nowoczesnych rozwiązań, które pozwalają dziś skuteczniej i łagodniej leczyć wcześniaki – takich jak monitory NIRS, tomografia impedancyjna płuc czy systemy HeRO – wciąż nie jest standardem w każdym oddziale. Do tego ośrodki III poziomu, do których trafia coraz więcej najciężej chorych dzieci, potrzebują więcej stanowisk intensywnej terapii niż jeszcze kilka lat temu. Właśnie tę lukę ma wypełnić 35. Finał.</p>
                             </div>
                         ),
@@ -274,6 +244,10 @@ export const blogPostsI18n: BlogPostI18n[] = [
                                     <li><strong>Retinopathy of Prematurity Treatment Programme</strong> – the Orchestra equipped centres with devices to diagnose and treat retinopathy, an eye disease that can lead to blindness in premature babies if left untreated.</li>
                                     <li><strong>26th Finale (2018)</strong> – “To equalise chances in the treatment of newborns”. Neonatal wards – including smaller level I and II units – received <strong>3,844 devices worth almost 122 million PLN</strong>: incubators, bilirubinometers, CTG machines, pulse oximeters and much more.</li>
                                 </ul>
+                                <figure className="my-4">
+                                    <Image src="/images/35-final/26-final.webp" alt="Jurek Owsiak with a volunteer during the 26th WOŚP Finale (2018)" width={750} height={500} sizes="(max-width: 768px) 100vw, 768px" className="w-full h-auto rounded-lg shadow-md" />
+                                    <figcaption className="mt-2 text-sm text-gray-600 italic text-center">26th WOŚP Finale (14 January 2018) – “To equalise chances in the treatment of newborns”. Jurek Owsiak with a volunteer and his collection box.</figcaption>
+                                </figure>
                                 <p>Today the WOŚP heart can be found in practically every neonatal ward in Poland. For many parents it is the first symbol of hope they see next to their baby&apos;s incubator.</p>
                             </div>
                         ),
@@ -295,6 +269,10 @@ export const blogPostsI18n: BlogPostI18n[] = [
                         body: (
                             <div className="space-y-3">
                                 <p>Most wards have the basic equipment – largely thanks to previous WOŚP Finales. The problem is that medical equipment ages: devices bought several or more than ten years ago need replacing, and medicine has taken a huge leap forward in the meantime.</p>
+                                <figure className="my-4">
+                                    <Image src="/images/35-final/noworodek-sprzet-wosp.webp" alt="A newborn in an incubator surrounded by medical equipment with WOŚP heart stickers" width={1000} height={666} sizes="(max-width: 768px) 100vw, 768px" className="w-full h-auto rounded-lg shadow-md" />
+                                    <figcaption className="mt-2 text-sm text-gray-600 italic text-center">A newborn in an intensive care unit – almost every device around the baby bears the WOŚP heart.</figcaption>
+                                </figure>
                                 <p>Many modern solutions that make it possible to treat premature babies more effectively and more gently – such as NIRS monitors, lung impedance tomography or HeRO systems – are still not standard in every ward. On top of that, level III centres, which receive more and more of the sickest babies, need more intensive care beds than just a few years ago. This is exactly the gap the 35th Finale aims to fill.</p>
                             </div>
                         ),
@@ -380,6 +358,10 @@ export const blogPostsI18n: BlogPostI18n[] = [
                                     <li><strong>Programa de Tratamiento de la Retinopatía del Prematuro</strong> – la Orquesta equipó centros con aparatos para diagnosticar y tratar la retinopatía, una enfermedad ocular que, sin tratamiento, puede causar ceguera en los prematuros.</li>
                                     <li><strong>26ª Final (2018)</strong> – «Para igualar las oportunidades en el tratamiento de los recién nacidos». Las unidades neonatales, incluidas las más pequeñas de nivel I y II, recibieron <strong>3.844 aparatos por valor de casi 122 millones de zlotys</strong>: incubadoras, bilirrubinómetros, cardiotocógrafos, pulsioxímetros y mucho más.</li>
                                 </ul>
+                                <figure className="my-4">
+                                    <Image src="/images/35-final/26-final.webp" alt="Jurek Owsiak con un voluntario durante la 26ª Final de WOŚP (2018)" width={750} height={500} sizes="(max-width: 768px) 100vw, 768px" className="w-full h-auto rounded-lg shadow-md" />
+                                    <figcaption className="mt-2 text-sm text-gray-600 italic text-center">26ª Final de WOŚP (14 de enero de 2018) – «Para igualar las oportunidades en el tratamiento de los recién nacidos». Jurek Owsiak con un voluntario y su hucha.</figcaption>
+                                </figure>
                                 <p>Hoy el corazón de WOŚP se encuentra en prácticamente todas las unidades neonatales de Polonia. Para muchos padres es el primer símbolo de esperanza que ven junto a la incubadora de su bebé.</p>
                             </div>
                         ),
@@ -401,6 +383,10 @@ export const blogPostsI18n: BlogPostI18n[] = [
                         body: (
                             <div className="space-y-3">
                                 <p>La mayoría de las unidades cuenta con el equipamiento básico, en gran parte gracias a anteriores Finales de WOŚP. El problema es que los equipos médicos envejecen: los aparatos comprados hace varios o más de diez años necesitan ser sustituidos, y la medicina ha dado entretanto un enorme salto adelante.</p>
+                                <figure className="my-4">
+                                    <Image src="/images/35-final/noworodek-sprzet-wosp.webp" alt="Un recién nacido en una incubadora rodeado de equipos médicos con el corazón de WOŚP" width={1000} height={666} sizes="(max-width: 768px) 100vw, 768px" className="w-full h-auto rounded-lg shadow-md" />
+                                    <figcaption className="mt-2 text-sm text-gray-600 italic text-center">Un recién nacido en cuidados intensivos: casi todos los aparatos a su alrededor llevan el corazón de WOŚP.</figcaption>
+                                </figure>
                                 <p>Muchas soluciones modernas que permiten tratar a los prematuros de forma más eficaz y suave –como los monitores NIRS, la tomografía de impedancia pulmonar o los sistemas HeRO– todavía no son estándar en todas las unidades. Además, los centros de nivel III, que reciben cada vez más bebés en estado grave, necesitan más puestos de cuidados intensivos que hace unos años. Precisamente ese vacío es el que quiere llenar la 35ª Final.</p>
                             </div>
                         ),
@@ -486,6 +472,10 @@ export const blogPostsI18n: BlogPostI18n[] = [
                                     <li><strong>Programa de Tractament de la Retinopatia del Prematur</strong> – l&apos;Orquestra va equipar centres amb aparells per diagnosticar i tractar la retinopatia, una malaltia ocular que, sense tractament, pot causar ceguesa als prematurs.</li>
                                     <li><strong>26a Final (2018)</strong> – «Per igualar les oportunitats en el tractament dels nadons». Les unitats neonatals, incloses les més petites de nivell I i II, van rebre <strong>3.844 aparells per valor de gairebé 122 milions de zlotys</strong>: incubadores, bilirubinòmetres, cardiotocògrafs, pulsioxímetres i molt més.</li>
                                 </ul>
+                                <figure className="my-4">
+                                    <Image src="/images/35-final/26-final.webp" alt="Jurek Owsiak amb un voluntari durant la 26a Final de WOŚP (2018)" width={750} height={500} sizes="(max-width: 768px) 100vw, 768px" className="w-full h-auto rounded-lg shadow-md" />
+                                    <figcaption className="mt-2 text-sm text-gray-600 italic text-center">26a Final de WOŚP (14 de gener de 2018) – «Per igualar les oportunitats en el tractament dels nadons». Jurek Owsiak amb un voluntari i la seva guardiola.</figcaption>
+                                </figure>
                                 <p>Avui el cor de WOŚP es troba a pràcticament totes les unitats neonatals de Polònia. Per a molts pares és el primer símbol d&apos;esperança que veuen al costat de la incubadora del seu nadó.</p>
                             </div>
                         ),
@@ -507,6 +497,10 @@ export const blogPostsI18n: BlogPostI18n[] = [
                         body: (
                             <div className="space-y-3">
                                 <p>La majoria de les unitats disposen de l&apos;equipament bàsic, en gran part gràcies a Finals anteriors de WOŚP. El problema és que els equips mèdics envelleixen: els aparells comprats fa uns quants anys o més de deu necessiten ser substituïts, i la medicina ha fet mentrestant un salt enorme endavant.</p>
+                                <figure className="my-4">
+                                    <Image src="/images/35-final/noworodek-sprzet-wosp.webp" alt="Un nadó en una incubadora envoltat d'equips mèdics amb el cor de WOŚP" width={1000} height={666} sizes="(max-width: 768px) 100vw, 768px" className="w-full h-auto rounded-lg shadow-md" />
+                                    <figcaption className="mt-2 text-sm text-gray-600 italic text-center">Un nadó a cures intensives: gairebé tots els aparells que l&apos;envolten porten el cor de WOŚP.</figcaption>
+                                </figure>
                                 <p>Moltes solucions modernes que permeten tractar els prematurs de manera més eficaç i suau –com els monitors NIRS, la tomografia d&apos;impedància pulmonar o els sistemes HeRO– encara no són estàndard a totes les unitats. A més, els centres de nivell III, que reben cada cop més nadons en estat greu, necessiten més llocs de cures intensives que fa uns anys. Precisament aquest buit és el que vol omplir la 35a Final.</p>
                             </div>
                         ),

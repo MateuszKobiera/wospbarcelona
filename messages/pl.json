@@ -2,11 +2,11 @@
   "metadata": {
     "home": {
       "title": "Strona Główna",
-      "description": "Wielka Orkiestra Świątecznej Pomocy w Barcelonie. Jesteśmy zespołem pełnym pasji i zaangażowania, który od 9 lat organizuje Finały WOŚP i wydarzenia charytatywne."
+      "description": "Wielka Orkiestra Świątecznej Pomocy w Barcelonie. Jesteśmy zespołem pełnym pasji i zaangażowania, który od 10 lat organizuje Finały WOŚP i wydarzenia charytatywne."
     },
     "about": {
       "title": "O Nas",
-      "description": "Poznaj nasz zespół WOŚP Barcelona. Jesteśmy grupą wolontariuszy, którzy od 9 lat organizują Finały WOŚP w Barcelonie."
+      "description": "Poznaj nasz zespół WOŚP Barcelona. Jesteśmy grupą wolontariuszy, którzy od 10 lat organizują Finały WOŚP w Barcelonie."
     },
     "events": {
       "title": "Kalendarz Wydarzeń",
@@ -41,7 +41,7 @@
   "home": {
     "title": "WOŚP Barcelona",
     "subtitle": "Wielka Orkiestra Świątecznej Pomocy w Barcelonie",
-    "description": "Jesteśmy dynamiczną społecznością Polaków w Barcelonie, która od 9 lat organizuje Finały WOŚP i wydarzenia charytatywne, łącząc pasję z pomocą.",
+    "description": "Jesteśmy dynamiczną społecznością Polaków w Barcelonie, która od 10 lat organizuje Finały WOŚP i wydarzenia charytatywne, łącząc pasję z pomocą.",
     "final34Banner": {
       "title": "Do finału zostało",
       "dateLabel": "Data",
@@ -219,7 +219,7 @@
     "title": "O nas",
     "description": "Poznaj naszą historię i misję",
     "mission": "Naszą misją jest pomoc dzieciom i seniorom poprzez organizację wydarzeń charytatywnych w Barcelonie.",
-    "history": "Od 9 lat działamy na rzecz Wielkiej Orkiestry Świątecznej Pomocy, zbierając fundusze na najważniejsze cele.",
+    "history": "Od 10 lat działamy na rzecz Wielkiej Orkiestry Świątecznej Pomocy, zbierając fundusze na najważniejsze cele.",
     "missionCards": [
       {
         "title": "Wspieranie najbardziej potrzebujących",
@@ -267,7 +267,7 @@
       },
       "barcelonaSection": {
         "title": "WOŚP Barcelona",
-        "subtitle": "Od ponad 9 lat budujemy w Barcelonie wyjątkowe miejsce, w którym polska energia i hiszpański temperament łączą się w jednym celu – by pomagać."
+        "subtitle": "Od ponad 10 lat budujemy w Barcelonie wyjątkowe miejsce, w którym polska energia i hiszpański temperament łączą się w jednym celu – by pomagać."
       },
       "workSection": {
         "title": "Jak pracujemy",
@@ -294,18 +294,22 @@
         "instagramDesc": "Najnowsze zdjęcia i stories z naszych działań w Barcelonie.",
         "youtubeDesc": "Oglądaj nasze filmy i relacje z wydarzeń WOŚP Barcelona."
       },
-      "final33Section": {
-        "title": "33. Finał WOŚP w Barcelonie",
-        "intro": "W styczniu 2025 roku zorganizowaliśmy już 33. Finał Wielkiej Orkiestry Świątecznej Pomocy w Barcelonie. Był to nasz najlepszy Finał do tej pory!",
+      "final34Section": {
+        "title": "34. Finał WOŚP w Barcelonie",
+        "intro": "25 stycznia 2026 roku w Espacio 88 zagraliśmy 34. Finał Wielkiej Orkiestry Świątecznej Pomocy w Barcelonie. Dziękujemy wszystkim uczestnikom, wolontariuszom, sponsorom i darczyńcom!",
         "resultsTitle": "Wyniki zbiórki",
-        "collectedDesc": "zebraliśmy podczas 33. Finału",
+        "collectedDesc": "zebraliśmy podczas 34. Finału",
         "medicalTitle": "Cel medyczny",
+        "medicalDesc": "34. Finał grał dla zdrowych brzuszków naszych dzieci. Zebrane środki wesprą zakup nowoczesnego sprzętu do diagnostyki i leczenia chorób przewodu pokarmowego u dzieci w Polsce.",
+        "readArticle": "Przeczytaj relację z 34. Finału",
+        "galleryTitle": "Galeria zdjęć z 34. Finału",
+        "photoAlt": "Zdjęcie z 34. Finału WOŚP Barcelona"
+      },
+      "final33Summary": {
+        "title": "33. Finał WOŚP w Barcelonie (styczeń 2025)",
         "medicalDesc": "33. Finał grał dla medycyny paliatywnej i hospicyjnej. Zebrane środki poszły na zakup sprzętu medycznego, który pomaga zapewnić godne życie i śmierć pacjentom w najtrudniejszych chwilach.",
-        "galleryTitle": "Galeria zdjęć z 33. Finału",
-        "loadMore": "Załaduj więcej zdjęć",
-        "remaining": "pozostało",
-        "photoCredit": "Zdjęcia wykonała",
-        "photoCreditThanks": "Dziękujemy za uwiecznienie wspaniałych chwil z naszego 33. Finału!"
+        "collectedDesc": "zebraliśmy podczas 33. Finału",
+        "readArticle": "Zobacz, jak wyglądał 33. Finał"
       }
     }
   },
@@ -503,7 +507,7 @@
     "socials": "Social media",
     "newsletter": "Zapisz się do newslettera",
     "quickLinks": "Szybkie linki",
-    "description": "Jesteśmy dynamiczną społecznością Polaków w Barcelonie, która od 9 lat organizuje Finały WOŚP i wydarzenia charytatywne."
+    "description": "Jesteśmy dynamiczną społecznością Polaków w Barcelonie, która od 10 lat organizuje Finały WOŚP i wydarzenia charytatywne."
   },
   "sponsors": {
     "title": "Sponsorzy",

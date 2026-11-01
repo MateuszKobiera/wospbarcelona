@@ -2,11 +2,11 @@
   "metadata": {
     "home": {
       "title": "Home",
-      "description": "Great Orchestra of Christmas Charity in Barcelona. We are a passionate team that has been organizing WOŚP Finales and charity events for 9 years."
+      "description": "Great Orchestra of Christmas Charity in Barcelona. We are a passionate team that has been organizing WOŚP Finales and charity events for 10 years."
     },
     "about": {
       "title": "About Us",
-      "description": "Meet the WOŚP Barcelona team. We are a group of volunteers who have been organizing WOŚP Finales in Barcelona for 9 years."
+      "description": "Meet the WOŚP Barcelona team. We are a group of volunteers who have been organizing WOŚP Finales in Barcelona for 10 years."
     },
     "events": {
       "title": "Events Calendar",
@@ -41,7 +41,7 @@
   "home": {
     "title": "WOŚP Barcelona",
     "subtitle": "Great Orchestra of Christmas Charity in Barcelona",
-    "description": "We are a dynamic community of Poles in Barcelona who for 8 years has been organizing WOŚP Finals and charity events, combining passion with help.",
+    "description": "We are a dynamic community of Poles in Barcelona who for 10 years has been organizing WOŚP Finals and charity events, combining passion with help.",
     "final34Banner": {
       "title": "Countdown to the 34th WOŚP Finale",
       "dateLabel": "Date",
@@ -220,7 +220,7 @@
     "title": "About us",
     "description": "Meet our history and mission",
     "mission": "Our mission is to help children and seniors through the organization of charity events in Barcelona.",
-    "history": "We have been supporting the Great Orchestra of Christmas Charity for 9 years, raising funds for the most important goals.",
+    "history": "We have been supporting the Great Orchestra of Christmas Charity for 10 years, raising funds for the most important goals.",
     "missionCards": [
       {
         "title": "Supporting those most in need",
@@ -268,7 +268,7 @@
       },
       "barcelonaSection": {
         "title": "WOŚP Barcelona",
-        "subtitle": "For over 9 years we have been building in Barcelona a unique place where Polish energy and Spanish temperament unite to help."
+        "subtitle": "For over 10 years we have been building in Barcelona a unique place where Polish energy and Spanish temperament unite to help."
       },
       "workSection": {
         "title": "How we work",
@@ -296,18 +296,22 @@
         "youtubeDesc": "Watch our videos and event reports from WOŚP Barcelona.",
         "allegroDesc": "Bid on charity items and support WOŚP Barcelona."
       },
-      "final33Section": {
-        "title": "33rd WOŚP Finale in Barcelona",
-        "intro": "In January 2025 we organised the 33rd WOŚP Finale in Barcelona. It was our best Finale so far!",
-        "resultsTitle": "Collection results",
-        "collectedDesc": "collected during the 33rd Finale",
+      "final34Section": {
+        "title": "34th WOŚP Finale in Barcelona",
+        "intro": "On 25 January 2026 at Espacio 88 we played the 34th Finale of the Great Orchestra of Christmas Charity in Barcelona. Thank you to all participants, volunteers, sponsors and donors!",
+        "resultsTitle": "Fundraising results",
+        "collectedDesc": "raised during the 34th Finale",
         "medicalTitle": "Medical goal",
+        "medicalDesc": "The 34th Finale played for the healthy tummies of our kids. The funds raised will support the purchase of modern equipment for diagnosing and treating digestive diseases in children in Poland.",
+        "readArticle": "Read the 34th Finale report",
+        "galleryTitle": "Photo gallery from the 34th Finale",
+        "photoAlt": "Photo from the 34th WOŚP Finale Barcelona"
+      },
+      "final33Summary": {
+        "title": "33rd WOŚP Finale in Barcelona (January 2025)",
         "medicalDesc": "The 33rd Finale was dedicated to palliative and hospice medicine. The funds raised were used to purchase medical equipment that helps ensure a dignified life and death for patients in their most difficult moments.",
-        "galleryTitle": "Photo gallery from the 33rd Finale",
-        "loadMore": "Load more photos",
-        "remaining": "remaining",
-        "photoCredit": "Photos by",
-        "photoCreditThanks": "Thank you for capturing the wonderful moments from our 33rd Finale!"
+        "collectedDesc": "raised during the 33rd Finale",
+        "readArticle": "See what the 33rd Finale looked like"
       }
     }
   },
