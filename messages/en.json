@@ -501,7 +501,9 @@
     "noPosts": "No articles yet",
     "postNavigation": "Article navigation",
     "newerPost": "Newer article",
-    "olderPost": "Older article"
+    "olderPost": "Older article",
+    "featuredTitle": "Most interesting articles",
+    "allTitle": "All articles"
   },
   "contact": {
     "title": "Contact",
@@ -637,7 +639,7 @@
       },
       "deliciasByBea": {
         "name": "Delicias by Bea",
-        "description": "Polish confectionery in Barcelona. Bea Michalak is an experienced confectioner who combines traditional flavors of Polish cuisine with modern confectionery techniques. She developed her passion for baking since childhood and perfected it in Berlin and Barcelona. Today, in the heart of the Gothic district of Barcelona, she creates exceptional pastries inspired by both family traditions and multicultural surroundings."
+        "description": "Polish patisserie in Barcelona. Bea Michalak is an experienced confectioner who combines traditional Polish flavours with modern pastry techniques. She learned to bake with her mother in Namysłów and perfected her craft in Berlin and Barcelona. Since March 2026 she has had her own patisserie in Les Corts (Travessera de les Corts 303), where every morning she bakes sernik cheesecake, szarlotka apple cake, sweet buns and cakes to order."
       },
       "polcat": {
         "name": "PolCat",

@@ -1007,7 +1007,7 @@ const basePostsI18n: BlogPostI18n[] = [
     {
         slug: 'zapraszamy-na-34-final-wosp-w-barcelonie',
         date: '2026-01-21',
-        coverImage: '/images/34-final/ZDJECIE_W_TLE (1).jpg',
+        coverImage: '/images/kalendarz/36_34FinalWOSP2026_grafika_podglad.jpg',
         tags: ['34FinałWOŚP', 'Barcelona', 'Espacio88', 'WOŚPBarcelona', 'Finał2026'],
         social: {
             facebook: 'https://www.facebook.com/events/722563890373111',
@@ -3130,7 +3130,7 @@ const basePostsI18n: BlogPostI18n[] = [
     {
         slug: 'o-naszych-wspanialych-sponsorach',
         date: '2025-01-15',
-        coverImage: '/images/33-final/DSCF7250.jpg',
+        coverImage: '/images/33-final/DSCF7351.jpg',
         tags: ['33FinałWOŚP', 'Sponsorzy', 'Partnerzy', 'Barcelona'],
         content: {
             pl: {

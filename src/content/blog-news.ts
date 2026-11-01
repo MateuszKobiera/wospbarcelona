@@ -12,6 +12,11 @@ import { wynik34Finalu } from '@/content/news/wynik-34-finalu';
 import { polandrock2026 } from '@/content/news/polandrock-2026';
 import { wolontariusze35 } from '@/content/news/wolontariusze-35';
 import { praktykiStudenckie } from '@/content/news/praktyki-studenckie';
+import { papiezSagrada } from '@/content/news/papiez-sagrada-familia';
+import { tourDeFranceBarcelona } from '@/content/news/tour-de-france-barcelona';
+import { kosztyZycia2026 } from '@/content/news/koszty-zycia-2026';
+import { sponsorzyRozwoj } from '@/content/news/sponsorzy-rozwoj';
+import { deliciasCukiernia } from '@/content/news/delicias-by-bea-cukiernia';
 
 /**
  * Data-driven articles (one file per article in `src/content/news/`).
@@ -31,4 +36,9 @@ export const newsPostsI18n: BlogPostI18n[] = [
     polandrock2026,
     wolontariusze35,
     praktykiStudenckie,
+    papiezSagrada,
+    tourDeFranceBarcelona,
+    kosztyZycia2026,
+    sponsorzyRozwoj,
+    deliciasCukiernia,
 ].map(buildPost);

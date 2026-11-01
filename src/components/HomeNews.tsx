@@ -96,17 +96,19 @@ export async function HomeNews({ locale }: { locale: string }) {
         <div className="grid gap-6 lg:grid-cols-4">
           {/* Main grid */}
           <div className="lg:col-span-3 grid gap-6 md:grid-cols-3 content-start">
-            {/* Lead: title over the photo */}
-            <Link href={postHref(lead, locale)} className="group relative block md:col-span-2 overflow-hidden rounded-xl bg-gray-100 aspect-[16/10] md:aspect-auto md:min-h-[300px]">
-              <PostImage post={lead} sizes="(max-width: 768px) 100vw, 50vw" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 p-5 md:p-6">
-                <div className="border-l-4 border-red-500 pl-3">
-                  <h3 className="text-xl md:text-2xl font-bold text-white leading-snug group-hover:underline decoration-2 underline-offset-4">
-                    {lead.title}
-                  </h3>
-                  <div className="mt-2 text-xs text-white/75">{formatDate(lead.date, locale)}</div>
-                </div>
+            {/* Lead: photo + solid dark caption panel (high contrast, readable regardless of the photo) */}
+            <Link
+              href={postHref(lead, locale)}
+              className="group flex flex-col md:col-span-2 overflow-hidden rounded-xl bg-gray-900 focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-red-600"
+            >
+              <div className="relative aspect-[16/9] md:aspect-auto md:flex-1 md:min-h-[200px] overflow-hidden">
+                <PostImage post={lead} sizes="(max-width: 768px) 100vw, 50vw" />
+              </div>
+              <div className="border-l-4 border-red-500 px-5 py-4">
+                <h3 className="text-xl md:text-2xl font-bold text-white leading-snug group-hover:underline decoration-2 underline-offset-4">
+                  {lead.title}
+                </h3>
+                <div className="mt-1 text-sm text-gray-300">{formatDate(lead.date, locale)}</div>
               </div>
             </Link>
 

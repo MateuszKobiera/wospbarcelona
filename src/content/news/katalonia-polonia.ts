@@ -34,7 +34,7 @@ const firms: Record<Locale, NewsSection> = {
             'Oto kilka miejsc prowadzonych przez Polaków, które warto znać i odwiedzić:',
         ],
         cards: firmCards('pl', {
-            delicias: { kind: 'Cukiernia · sponsor', text: 'Polska cukiernia **Bei Michalak** w sercu Dzielnicy Gotyckiej. Bea łączy smaki rodzinnych, polskich przepisów z nowoczesną sztuką cukierniczą, którą doskonaliła w Berlinie i Barcelonie.' },
+            delicias: { kind: 'Cukiernia · sponsor', text: 'Polska cukiernia **Bei Michalak** w Barcelonie. Bea łączy smaki rodzinnych, polskich przepisów z nowoczesną sztuką cukierniczą, którą doskonaliła w Berlinie i Barcelonie.' },
             worldClass: { kind: 'Szkoła hiszpańskiego · partner', text: 'Szkoła języka hiszpańskiego w centrum Barcelony z wyjątkową społecznością uczniów i nauczycieli. Intensywne kursy, lekcje próbne i mnóstwo aktywności – idealny start dla nowych mieszkańców miasta.' },
             krakoviak: { kind: 'Polski sklep · sponsor', text: 'Polski sklep tuż obok Sagrady Família, przy ulicy Sicília. Pierogi, twaróg, ogórki kiszone, wędliny, kiełbasy, serki – wszystko, za czym tęsknimy. Otwarty także w niedziele!' },
             wawel: { kind: 'Polska restauracja · partner', text: 'Mały kawałek Polski w Barcelonie: pierogi, zupy, kiełbaski, naleśniki i szarlotka – a do tego, jak zgodnie twierdzą goście, wyśmienite piwo.' },
@@ -48,7 +48,7 @@ const firms: Record<Locale, NewsSection> = {
             'Here are some Polish-run places worth knowing and visiting:',
         ],
         cards: firmCards('en', {
-            delicias: { kind: 'Patisserie · sponsor', text: 'The Polish patisserie of **Bea Michalak** in the heart of the Gothic Quarter. Bea combines the flavours of Polish family recipes with modern pastry techniques she perfected in Berlin and Barcelona.' },
+            delicias: { kind: 'Patisserie · sponsor', text: 'The Polish patisserie of **Bea Michalak** in Barcelona. Bea combines the flavours of Polish family recipes with modern pastry techniques she perfected in Berlin and Barcelona.' },
             worldClass: { kind: 'Spanish school · partner', text: 'A Spanish language school in central Barcelona with a great community of students and teachers. Intensive courses, trial lessons and lots of activities – a perfect start for newcomers to the city.' },
             krakoviak: { kind: 'Polish shop · sponsor', text: 'A Polish shop right next to the Sagrada Família, on Carrer de Sicília. Pierogi, twaróg, pickles, cold cuts, sausages – everything we miss from home. Open on Sundays too!' },
             wawel: { kind: 'Polish restaurant · partner', text: 'A little piece of Poland in Barcelona: pierogi, soups, sausages, pancakes and apple pie – plus, as guests agree, excellent beer.' },
@@ -62,7 +62,7 @@ const firms: Record<Locale, NewsSection> = {
             'Estos son algunos lugares gestionados por polacos que vale la pena conocer y visitar:',
         ],
         cards: firmCards('es', {
-            delicias: { kind: 'Pastelería · patrocinador', text: 'La pastelería polaca de **Bea Michalak**, en el corazón del Barrio Gótico. Bea combina los sabores de las recetas familiares polacas con técnicas de repostería modernas que perfeccionó en Berlín y Barcelona.' },
+            delicias: { kind: 'Pastelería · patrocinador', text: 'La pastelería polaca de **Bea Michalak** en Barcelona. Bea combina los sabores de las recetas familiares polacas con técnicas de repostería modernas que perfeccionó en Berlín y Barcelona.' },
             worldClass: { kind: 'Escuela de español · colaborador', text: 'Una escuela de español en el centro de Barcelona con una gran comunidad de alumnos y profesores. Cursos intensivos, clases de prueba y muchas actividades: el comienzo perfecto para quien acaba de llegar a la ciudad.' },
             krakoviak: { kind: 'Tienda polaca · patrocinador', text: 'Una tienda polaca justo al lado de la Sagrada Família, en la calle Sicília. Pierogi, requesón, pepinillos, embutidos, salchichas: todo lo que echamos de menos. ¡Abierta también los domingos!' },
             wawel: { kind: 'Restaurante polaco · colaborador', text: 'Un pedacito de Polonia en Barcelona: pierogi, sopas, salchichas, crepes y pastel de manzana, y además, según los clientes, una cerveza excelente.' },
@@ -76,7 +76,7 @@ const firms: Record<Locale, NewsSection> = {
             'Aquests són alguns llocs gestionats per polonesos que val la pena conèixer i visitar:',
         ],
         cards: firmCards('ca', {
-            delicias: { kind: 'Pastisseria · patrocinador', text: 'La pastisseria polonesa de **Bea Michalak**, al cor del Barri Gòtic. La Bea combina els sabors de les receptes familiars poloneses amb tècniques de pastisseria modernes que va perfeccionar a Berlín i Barcelona.' },
+            delicias: { kind: 'Pastisseria · patrocinador', text: 'La pastisseria polonesa de **Bea Michalak** a Barcelona. La Bea combina els sabors de les receptes familiars poloneses amb tècniques de pastisseria modernes que va perfeccionar a Berlín i Barcelona.' },
             worldClass: { kind: 'Escola d\'espanyol · col·laborador', text: 'Una escola d\'espanyol al centre de Barcelona amb una gran comunitat d\'alumnes i professors. Cursos intensius, classes de prova i moltes activitats: el començament perfecte per a qui acaba d\'arribar a la ciutat.' },
             krakoviak: { kind: 'Botiga polonesa · patrocinador', text: 'Una botiga polonesa just al costat de la Sagrada Família, al carrer de Sicília. Pierogi, mató, cogombrets, embotits, salsitxes: tot el que trobem a faltar. Oberta també els diumenges!' },
             wawel: { kind: 'Restaurant polonès · col·laborador', text: 'Un trosset de Polònia a Barcelona: pierogi, sopes, salsitxes, creps i pastís de poma, i a més, segons els clients, una cervesa excel·lent.' },

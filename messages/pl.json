@@ -504,7 +504,9 @@
     "noPosts": "Brak artykułów",
     "postNavigation": "Nawigacja między artykułami",
     "newerPost": "Nowszy artykuł",
-    "olderPost": "Starszy artykuł"
+    "olderPost": "Starszy artykuł",
+    "featuredTitle": "Najciekawsze artykuły",
+    "allTitle": "Wszystkie artykuły"
   },
   "contact": {
     "title": "Kontakt",
@@ -640,7 +642,7 @@
       },
       "deliciasByBea": {
         "name": "Delicias by Bea",
-        "description": "Polska cukierniczka w Barcelonie. Bea Michalak to doświadczona cukierniczka, która łączy tradycyjne smaki polskiej kuchni z nowoczesnymi technikami cukierniczymi. Swoją pasję do pieczenia rozwijała od dzieciństwa, a doskonaliła ją w Berlinie i Barcelonie. Dziś, w sercu gotyckiej dzielnicy Barcelony, tworzy wyjątkowe wypieki inspirowane zarówno rodzinnymi tradycjami, jak i wielokulturowym otoczeniem."
+        "description": "Polska cukiernia w Barcelonie. Bea Michalak to doświadczona cukierniczka, która łączy tradycyjne smaki polskiej kuchni z nowoczesnymi technikami cukierniczymi. Piec uczyła się z mamą w Namysłowie, a warsztat doskonaliła w Berlinie i Barcelonie. Od marca 2026 roku ma własną cukiernię w dzielnicy Les Corts (Travessera de les Corts 303), gdzie każdego ranka piecze sernik, szarlotkę, drożdżówki i torty na zamówienie."
       },
       "polcat": {
         "name": "PolCat",

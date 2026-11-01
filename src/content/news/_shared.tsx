@@ -147,7 +147,7 @@ function renderSection(section: NewsSection, locale: Locale): React.ReactNode {
             {section.image && renderImage(section.image, locale)}
             {section.cta && (
                 <p>
-                    <a href={`/${locale}${section.cta.href}`} className="inline-flex items-center rounded-lg bg-red-600 px-5 py-2.5 font-semibold text-white no-underline hover:bg-red-700 text-white!">
+                    <a href={`/${locale}${section.cta.href}`} className="inline-flex items-center rounded-lg bg-red-600 px-5 py-2.5 font-semibold no-underline! hover:bg-red-700 text-white!">
                         {section.cta.label} →
                     </a>
                 </p>

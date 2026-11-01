@@ -504,7 +504,9 @@
     "noPosts": "Encara no hi ha articles",
     "postNavigation": "Navegació entre articles",
     "newerPost": "Article més recent",
-    "olderPost": "Article anterior"
+    "olderPost": "Article anterior",
+    "featuredTitle": "Articles més interessants",
+    "allTitle": "Tots els articles"
   },
   "contact": {
     "title": "Contacte",
@@ -640,7 +642,7 @@
       },
       "deliciasByBea": {
         "name": "Delicias by Bea",
-        "description": "Pastisseria polonesa a Barcelona. Bea Michalak és una pastissera experimentada que combina els sabors tradicionals de la cuina polonesa amb tècniques de pastisseria modernes. Va desenvolupar la seva passió per la pastisseria des de la infància i la va perfeccionar a Berlín i Barcelona. Avui, al cor del barri gòtic de Barcelona, crea pastissos excepcionals inspirats tant en les tradicions familiars com en l'entorn multicultural."
+        "description": "Pastisseria polonesa a Barcelona. Bea Michalak és una pastissera experimentada que combina els sabors tradicionals polonesos amb tècniques de pastisseria modernes. Va aprendre a fornejar amb la seva mare a Namysłów i va perfeccionar l'ofici a Berlín i Barcelona. Des del març de 2026 té la seva pròpia pastisseria a Les Corts (Travessera de les Corts 303), on cada matí fa sernik, szarlotka, brioixos i pastissos per encàrrec."
       },
       "polcat": {
         "name": "PolCat",

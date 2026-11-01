@@ -508,7 +508,9 @@
     "noPosts": "Todavía no hay artículos",
     "postNavigation": "Navegación entre artículos",
     "newerPost": "Artículo más reciente",
-    "olderPost": "Artículo anterior"
+    "olderPost": "Artículo anterior",
+    "featuredTitle": "Artículos más interesantes",
+    "allTitle": "Todos los artículos"
   },
   "contact": {
     "title": "Contacto",
@@ -644,7 +646,7 @@
       },
       "deliciasByBea": {
         "name": "Delicias by Bea",
-        "description": "Pastelería polaca en Barcelona. Bea Michalak es una pastelera experimentada que combina los sabores tradicionales de la cocina polaca con técnicas de repostería modernas. Desarrolló su pasión por la repostería desde la infancia y la perfeccionó en Berlín y Barcelona. Hoy, en el corazón del barrio gótico de Barcelona, crea pasteles excepcionales inspirados tanto en las tradiciones familiares como en el entorno multicultural."
+        "description": "Pastelería polaca en Barcelona. Bea Michalak es una pastelera experimentada que combina los sabores tradicionales polacos con técnicas de repostería modernas. Aprendió a hornear con su madre en Namysłów y perfeccionó su oficio en Berlín y Barcelona. Desde marzo de 2026 tiene su propia pastelería en Les Corts (Travessera de les Corts 303), donde cada mañana hornea sernik, szarlotka, bollos dulces y tartas por encargo."
       },
       "polcat": {
         "name": "PolCat",

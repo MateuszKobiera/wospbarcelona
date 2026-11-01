@@ -53,6 +53,36 @@ export const IMG = {
         alt: 'Nocna panorama Barcelony z Sagradą Família i Torre Glòries',
         credit: { author: 'Jcca76', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Barcelona_desde_El_Carmelo.JPG' },
     },
+    sagradaStairs: {
+        src: base + 'sagrada-familia.jpg',
+        alt: 'Kręcone schody w wieży Męki Pańskiej w Sagradzie Família',
+        credit: { author: 'Reda Kerbush', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Stairs_down_the_Passion_tower_in_Barcelona%27s_Sagrada_Familia.jpg' },
+    },
+    sagradaPinnacle: {
+        src: base + 'sagrada-familia-ext2.jpg',
+        alt: 'Mozaikowe zwieńczenie wieży Sagrady Família z widokiem na Barcelonę',
+        credit: { author: 'Matti Blume', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Sagrada_Familia,_Barcelona_(P1170689).jpg' },
+    },
+    montserrat: {
+        src: base + 'montserrat.jpg',
+        alt: 'Klasztor Sant Benet w masywie Montserrat',
+        credit: { author: 'José Luiz', license: 'CC BY-SA 3.0', url: 'https://commons.wikimedia.org/wiki/File:Monestir_de_St._Benedict_(Sant_Benet)_de_Montserrat_-_Montserrat_2014_(2).JPG' },
+    },
+    estadiOlimpic: {
+        src: base + 'estadi-olimpic.jpg',
+        alt: 'Stadion Olimpijski na Montjuïc w Barcelonie z lotu ptaka',
+        credit: { author: 'Amadalvarez', license: 'CC BY 3.0', url: 'https://commons.wikimedia.org/wiki/File:BCN-EstadiOlimpic-4860.jpg' },
+    },
+    eixample: {
+        src: base + 'eixample-aerial.jpg',
+        alt: 'Fasada kamienicy w dzielnicy Eixample w Barcelonie',
+        credit: { author: 'Otger Cataló', license: 'CC BY 3.0', url: 'https://commons.wikimedia.org/wiki/File:Eixample-Gracia._Barcelona_-_panoramio.jpg' },
+    },
+    peloton: {
+        src: base + 'tour-de-france-peloton.jpg',
+        alt: 'Peleton Tour de France',
+        credit: { author: 'Hugo LUC', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Tadej_Pogacar_and_his_team_in_front_of_the_peloton_during_Simacourbe_climb_of_Tour_de_France_2024_stage_13.jpg' },
+    },
 } satisfies Record<string, NewsImage>;
 
 /** Same photo with a (localized) caption. */

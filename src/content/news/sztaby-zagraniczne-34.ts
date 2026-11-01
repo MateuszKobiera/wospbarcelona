@@ -1,7 +1,7 @@
 import type { NewsSource } from './_shared';
 import { IMG, withCaption } from './_images';
 
-const group = '/images/34-final/5fe11b00-9140-49cb-9fea-4a179aea23c9.jpg';
+const group = '/images/34-final/IMG_7448.JPG';
 const hearts = '/images/34-final/IMG_7449.JPG';
 
 export const sztabyZagraniczne34: NewsSource = {
