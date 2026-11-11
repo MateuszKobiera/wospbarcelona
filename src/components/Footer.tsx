@@ -106,6 +106,15 @@ export function Footer() {
           <p className="text-gray-400">
             © 2026 WOŚP Barcelona. {t('rights')}.
           </p>
+          <a
+            href="https://www.ovhcloud.com/en/mail/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 mt-3 text-sm text-gray-500 hover:text-white transition-colors"
+          >
+            <Mail className="w-3.5 h-3.5" />
+            {t('webmail')}
+          </a>
         </div>
       </div>
     </footer>

@@ -44,15 +44,17 @@ export default function EventsPageClient() {
               </div>
             ) : (
               <div className="flex flex-col gap-6 max-w-6xl mx-auto">
-                {upcomingEventsData.map((event) => {
+                {upcomingEventsData.map((event, index) => {
                   const eventTitle = t(`items.${event.id}.title`);
                   return (
                     <Card key={event.id} className="w-full bg-white border-2 border-red-200 shadow-md hover:shadow-lg transition-shadow overflow-hidden flex flex-col md:flex-row">
-                      <Link href={`/${locale}/events/${event.id}`} className="block relative aspect-[607/365] md:aspect-auto md:min-h-80 md:w-1/2 shrink-0 overflow-hidden bg-gray-100">
+                      <Link href={`/${locale}/events/${event.id}`} className="block relative aspect-607/365 md:aspect-auto md:min-h-80 md:w-1/2 shrink-0 overflow-hidden bg-gray-100">
                         <Image
                           src={event.image}
                           alt={eventTitle}
                           fill
+                          loading={index === 0 ? 'eager' : 'lazy'}
+                          fetchPriority={index === 0 ? 'high' : 'auto'}
                           className="object-cover object-left transition-transform duration-500 hover:scale-105"
                           sizes="(max-width: 768px) 100vw, 50vw"
                         />
