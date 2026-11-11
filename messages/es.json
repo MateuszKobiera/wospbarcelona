@@ -524,7 +524,8 @@
       "placeholderEmail": "tu@email.com",
       "placeholderMessage": "Escribe un mensaje...",
       "submit": "Enviar mensaje",
-      "note": "El envío abrirá tu cliente de correo predeterminado.",
+      "note": "Responderemos a la dirección de correo que indiques.",
+      "sending": "Enviando...",
       "success": "¡Mensaje enviado con éxito!",
       "error": "Ocurrió un error. Inténtalo de nuevo."
     },

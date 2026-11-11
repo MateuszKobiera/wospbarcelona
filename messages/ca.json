@@ -519,7 +519,8 @@
       "placeholderName": "Joan Pérez",
       "placeholderEmail": "teu@email.com",
       "placeholderMessage": "Escriu un missatge...",
-      "note": "L'enviament obrirà el teu client de correu predeterminat.",
+      "note": "Respondrem a l'adreça de correu que indiquis.",
+      "sending": "Enviant...",
       "submit": "Enviar missatge",
       "success": "Missatge enviat amb èxit!",
       "error": "S'ha produït un error. Torna-ho a provar."

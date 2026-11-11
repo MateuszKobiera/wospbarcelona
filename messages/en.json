@@ -516,7 +516,8 @@
       "placeholderName": "John Doe",
       "placeholderEmail": "your@email.com",
       "placeholderMessage": "Write a message...",
-      "note": "Sending will open your default mail client.",
+      "note": "We will reply to the email address you provide.",
+      "sending": "Sending...",
       "submit": "Send message",
       "success": "Message sent successfully!",
       "error": "An error occurred. Please try again."

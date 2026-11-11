@@ -520,7 +520,8 @@
       "placeholderEmail": "twoj@email.com",
       "placeholderMessage": "Napisz wiadomość...",
       "submit": "Wyślij wiadomość",
-      "note": "Wysłanie otworzy domyślny program pocztowy.",
+      "note": "Odpowiemy na podany adres e-mail.",
+      "sending": "Wysyłanie...",
       "success": "Wiadomość wysłana pomyślnie!",
       "error": "Wystąpił błąd. Spróbuj ponownie."
     },

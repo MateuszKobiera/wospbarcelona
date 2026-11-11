@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { useTranslations } from 'next-intl';
 import { Button } from "@/components/ui/button";
+import { sendContactMessage } from "@/app/actions/contact";
 
 // Custom hook to safely handle client-side mounting
 function useIsClient() {
@@ -14,22 +15,43 @@ function useIsClient() {
   return isClient;
 }
 
-export function ContactForm({ to = "sztab@wospbarcelona.org" }: { to?: string }) {
+type Status = 'idle' | 'sending' | 'success' | 'error';
+
+export function ContactForm() {
   const t = useTranslations('contact.form');
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [status, setStatus] = useState<Status>('idle');
   const isClient = useIsClient();
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`Wiadomość ze strony – ${name || "Bez imienia"}`);
-    const body = encodeURIComponent(`Imię i nazwisko: ${name}\nEmail: ${email}\n\nWiadomość:\n${message}`);
-    window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+    setStatus('sending');
+    try {
+      const result = await sendContactMessage(new FormData(e.currentTarget));
+      if (result.ok) {
+        setStatus('success');
+        setName("");
+        setEmail("");
+        setMessage("");
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      setStatus('error');
+    }
   };
 
   return (
     <form onSubmit={onSubmit} className="mx-auto w-full max-w-4xl">
+      {/* Pole-pułapka na boty – ukryte dla ludzi i czytników ekranu */}
+      <div aria-hidden="true" className="absolute -left-[9999px] h-0 w-0 overflow-hidden">
+        <label>
+          Website
+          <input type="text" name="website" tabIndex={-1} autoComplete="off" defaultValue="" />
+        </label>
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="md:col-span-1 space-y-4">
           <div>
@@ -37,8 +59,10 @@ export function ContactForm({ to = "sztab@wospbarcelona.org" }: { to?: string })
             <input
               key={isClient ? 'name-client' : 'name-server'}
               type="text"
+              name="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              maxLength={200}
               className="w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-300"
               placeholder={t('placeholderName')}
               suppressHydrationWarning
@@ -49,9 +73,11 @@ export function ContactForm({ to = "sztab@wospbarcelona.org" }: { to?: string })
             <input
               key={isClient ? 'email-client' : 'email-server'}
               type="email"
+              name="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
+              maxLength={200}
               className="w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-300"
               placeholder={t('placeholderEmail')}
               suppressHydrationWarning
@@ -62,9 +88,11 @@ export function ContactForm({ to = "sztab@wospbarcelona.org" }: { to?: string })
           <label className="mb-1 block text-sm font-medium text-gray-700">{t('message')}</label>
           <textarea
             key={isClient ? 'message-client' : 'message-server'}
+            name="message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             required
+            maxLength={5000}
             rows={6}
             className="w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-300"
             placeholder={t('placeholderMessage')}
@@ -73,8 +101,19 @@ export function ContactForm({ to = "sztab@wospbarcelona.org" }: { to?: string })
         </div>
       </div>
       <div className="mt-4 flex items-center justify-between gap-3">
-        <p className="text-xs text-gray-500">{t('note')}</p>
-        <Button type="submit" className="bg-red-600 hover:bg-red-700 text-white cursor-pointer" suppressHydrationWarning>{t('submit')}</Button>
+        <p className="text-xs text-gray-500" aria-live="polite">
+          {status === 'success' && <span className="text-green-700 font-medium">{t('success')}</span>}
+          {status === 'error' && <span className="text-red-600 font-medium">{t('error')}</span>}
+          {(status === 'idle' || status === 'sending') && t('note')}
+        </p>
+        <Button
+          type="submit"
+          disabled={status === 'sending'}
+          className="bg-red-600 hover:bg-red-700 text-white cursor-pointer disabled:opacity-60 disabled:cursor-wait"
+          suppressHydrationWarning
+        >
+          {status === 'sending' ? t('sending') : t('submit')}
+        </Button>
       </div>
     </form>
   );
