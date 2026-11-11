@@ -15,6 +15,8 @@ export type NewsImage = {
     caption?: string;
     /** Attribution for third-party (e.g. Wikimedia Commons) photos */
     credit?: { author: string; license: string; url: string };
+    /** Show the whole image without cropping (e.g. posters) */
+    fit?: 'contain';
 };
 
 export type NewsSection = {
@@ -73,7 +75,7 @@ function renderImage(img: NewsImage, locale: Locale) {
     return (
         <figure className="my-4">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={img.src} alt={img.alt} loading="lazy" className="w-full max-h-[480px] object-cover rounded-xl shadow-md" />
+            <img src={img.src} alt={img.alt} loading="lazy" className={img.fit === 'contain' ? 'mx-auto w-full max-w-xl h-auto rounded-xl shadow-md' : 'w-full max-h-[480px] object-cover rounded-xl shadow-md'} />
             {(img.caption || img.credit) && (
                 <figcaption className="mt-2 text-sm text-gray-500">
                     {img.caption}

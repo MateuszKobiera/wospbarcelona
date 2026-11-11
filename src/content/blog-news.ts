@@ -17,6 +17,7 @@ import { tourDeFranceBarcelona } from '@/content/news/tour-de-france-barcelona';
 import { kosztyZycia2026 } from '@/content/news/koszty-zycia-2026';
 import { sponsorzyRozwoj } from '@/content/news/sponsorzy-rozwoj';
 import { deliciasCukiernia } from '@/content/news/delicias-by-bea-cukiernia';
+import { lalkaKino } from '@/content/news/lalka-kino-barcelona';
 
 /**
  * Data-driven articles (one file per article in `src/content/news/`).
@@ -41,4 +42,5 @@ export const newsPostsI18n: BlogPostI18n[] = [
     kosztyZycia2026,
     sponsorzyRozwoj,
     deliciasCukiernia,
+    lalkaKino,
 ].map(buildPost);

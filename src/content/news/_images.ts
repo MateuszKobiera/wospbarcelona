@@ -83,6 +83,28 @@ export const IMG = {
         alt: 'Peleton Tour de France',
         credit: { author: 'Hugo LUC', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Tadej_Pogacar_and_his_team_in_front_of_the_peloton_during_Simacourbe_climb_of_Tour_de_France_2024_stage_13.jpg' },
     },
+    kinoFotele: {
+        src: base + 'kino-czerwone-fotele.jpg',
+        alt: 'Rzędy czerwonych foteli w sali kinowej',
+        credit: { author: 'reynermedia', license: 'CC BY 2.0', url: 'https://commons.wikimedia.org/wiki/File:Red_cinema_sits_(11285613595).jpg' },
+    },
+    prus: {
+        src: base + 'boleslaw-prus-1905.jpg',
+        alt: 'Portret Bolesława Prusa, ok. 1905',
+        fit: 'contain',
+        credit: { author: 'Wilhelm Feldman', license: 'domena publiczna', url: 'https://commons.wikimedia.org/wiki/File:Boles%C5%82aw_Prus_(ca._1905).jpg' },
+    },
+    lalkaWydanie: {
+        src: base + 'lalka-pierwsze-wydanie.jpg',
+        alt: 'Strona tytułowa pierwszego książkowego wydania „Lalki” Bolesława Prusa',
+        fit: 'contain',
+        credit: { author: 'Bolesław Prus', license: 'domena publiczna', url: 'https://commons.wikimedia.org/wiki/File:Lalka_-_strona_tytulowa_1_wydania.jpg' },
+    },
+    krakowskiePrzedmiescie: {
+        src: base + 'krakowskie-przedmiescie.jpg',
+        alt: 'Krakowskie Przedmieście w Warszawie w zimowy wieczór',
+        credit: { author: 'Pudelek', license: 'CC BY-SA 4.0', url: 'https://commons.wikimedia.org/wiki/File:Krakowskie_Przedmie%C5%9Bcie,_styczniowy_wiecz%C3%B3r_2016.JPG' },
+    },
 } satisfies Record<string, NewsImage>;
 
 /** Same photo with a (localized) caption. */
