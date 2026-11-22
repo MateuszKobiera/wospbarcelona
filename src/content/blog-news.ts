@@ -18,6 +18,7 @@ import { kosztyZycia2026 } from '@/content/news/koszty-zycia-2026';
 import { sponsorzyRozwoj } from '@/content/news/sponsorzy-rozwoj';
 import { deliciasCukiernia } from '@/content/news/delicias-by-bea-cukiernia';
 import { lalkaKino } from '@/content/news/lalka-kino-barcelona';
+import { kosmoHisplano35 } from '@/content/news/kosmo-hisplano-35-final';
 
 /**
  * Data-driven articles (one file per article in `src/content/news/`).
@@ -43,4 +44,5 @@ export const newsPostsI18n: BlogPostI18n[] = [
     sponsorzyRozwoj,
     deliciasCukiernia,
     lalkaKino,
+    kosmoHisplano35,
 ].map(buildPost);

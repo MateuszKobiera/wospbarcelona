@@ -4,6 +4,7 @@ import { IMG, withCaption } from './_images';
 const FB = 'https://www.facebook.com/sztabWOSPBarcelona';
 const POST = 'https://www.facebook.com/groups/90649210871/permalink/10163712977470872/';
 const POLL = 'https://www.facebook.com/groups/90649210871/permalink/10163648815545872/';
+const TICKETS = 'https://events.beyond-tickets.com/de/events/premiera-filmu-lalka-w-barcelonie-cs5dnslg';
 
 const poster = (alt: string, caption: string): NewsImage => ({
     src: '/images/blog/lalka-plakat-barcelona.jpg',
@@ -12,8 +13,12 @@ const poster = (alt: string, caption: string): NewsImage => ({
     fit: 'contain',
 });
 
-const postCard = (kind: string, text: string, linkLabel: string) => [
-    { name: 'Lalka · Kinépolis Barcelona Splau', kind, text, url: POST, linkLabel },
+const postCard = (kind: string, text: string, linkLabel: string, ticketsLabel: string) => [
+    { name: 'Lalka · Kinépolis Barcelona Splau', kind, text, url: POST, linkLabel, links: [{ label: ticketsLabel, url: TICKETS }] },
+];
+
+const ticketCard = (kind: string, text: string, linkLabel: string) => [
+    { name: 'Lalka · Beyond Tickets', kind, text, url: TICKETS, linkLabel },
 ];
 
 export const lalkaKino: NewsSource = {
@@ -23,6 +28,7 @@ export const lalkaKino: NewsSource = {
     thumbnailImage: '/images/blog/lalka-dorocinski-wokulski.avif',
     tags: ['Polonia', 'Barcelona', 'Kino', 'Lalka', 'Wydarzenia'],
     sources: [
+        { label: 'Bilety: Beyond Tickets', url: TICKETS },
         { label: 'Facebook: zapowiedź pokazu 5 grudnia', url: POST },
         { label: 'Facebook: pierwsza zapowiedź i ankieta', url: POLL },
         { label: 'Facebook: Sztab WOŚP Barcelona', url: FB },
@@ -30,7 +36,7 @@ export const lalkaKino: NewsSource = {
     ],
     content: {
         pl: {
-            title: 'Barcelona, zapiszcie datę! „Lalka” w Kinépolis Splau – sobota, 5 grudnia 2026, godz. 18:00',
+            title: '[Bilety] „Lalka” w Kinépolis Splau – bilety już w sprzedaży! Sobota, 5 grudnia 2026, godz. 18:00',
             excerpt: 'Już w sobotę 5 grudnia 2026 roku o 18:00 Artystyczne Stowarzyszenie Polska zaprasza Polonię z Barcelony i całej Katalonii do Kinépolis Barcelona Splau na specjalny pokaz nowej ekranizacji „Lalki” Bolesława Prusa – w polskiej wersji językowej z angielskimi napisami.',
             sections: [
                 {
@@ -45,7 +51,7 @@ export const lalkaKino: NewsSource = {
                     title: 'Kiedy i gdzie?',
                     p: [
                         'Seans zaczyna się w **sobotę 5 grudnia o 18:00** w **Kinépolis Barcelona Splau** – to kino w centrum handlowym Splau przy Av. del Baix Llobregat (08940 Cornellà de Llobregat), tuż za granicą Barcelony. Na ekranie „Lalka” w reżyserii **Macieja Kawalskiego**, po polsku i z angielskimi napisami.',
-                        'Całość organizuje **Artystyczne Stowarzyszenie Polska**. Informacji o biletach jeszcze nie ma – organizator poda je wkrótce, a my od razu przekażemy je dalej na Facebooku i tutaj, w Aktualnościach.',
+                        'Całość organizuje **Artystyczne Stowarzyszenie Polska**. **Bilety są już w sprzedaży** na platformie Beyond Tickets – link znajdziecie poniżej i na końcu artykułu.',
                     ],
                     image: poster('Plakat filmu „Lalka” – premiera w Barcelonie 5 grudnia 2026 o 18:00', 'Plakat pokazu „Lalki” w Barcelonie: sobota, 5 grudnia 2026, godz. 18:00, Kinépolis Barcelona Splau.'),
                 },
@@ -55,7 +61,7 @@ export const lalkaKino: NewsSource = {
                         'Sobotni wieczór na początku grudnia to idealny moment, żeby spotkać się w polskim gronie przed świętami. Przyjdźcie z rodziną, przyjaciółmi i znajomymi – to nie tylko seans, ale też okazja, by się poznać i porozmawiać.',
                         '**Przekażcie tę wiadomość znajomym** w Barcelonie i Katalonii – im nas więcej, tym lepiej!',
                     ],
-                    cards: postCard('Wydarzenie · Facebook', 'Sobota, 5 grudnia 2026, godz. 18:00 – Kinépolis Barcelona Splau. Udostępnij post znajomym!', 'Zobacz post na Facebooku'),
+                    cards: postCard('Wydarzenie · Facebook', 'Sobota, 5 grudnia 2026, godz. 18:00 – Kinépolis Barcelona Splau. Udostępnij post znajomym!', 'Zobacz post na Facebooku', 'Kup bilet'),
                 },
                 {
                     title: '„Lalka” – powieść, którą zna każdy Polak',
@@ -86,14 +92,15 @@ export const lalkaKino: NewsSource = {
                 {
                     title: 'Do zobaczenia w kinie!',
                     p: [
-                        'Informacje o biletach organizator poda wkrótce – damy znać, gdy tylko się pojawią. Obserwujcie nasz profil na Facebooku i zaglądajcie do Aktualności. **Sobota, 5 grudnia, 18:00 – Kinépolis Barcelona Splau.** Część naszego sztabu też tam będzie – do zobaczenia!',
+                        'Bilety kupicie online przez Beyond Tickets, link znajdziecie poniżej. **Sobota, 5 grudnia, 18:00 – Kinépolis Barcelona Splau.** Część naszego sztabu też tam będzie – do zobaczenia!',
                     ],
+                    cards: ticketCard('Bilety', 'Sobota, 5 grudnia 2026, 18:00 · Kinépolis Barcelona Splau · wersja polska z napisami angielskimi.', 'Kup bilet na Beyond Tickets'),
                     cta: { label: 'Zobacz nasze wydarzenia', href: '/events' },
                 },
             ],
         },
         en: {
-            title: 'Barcelona, save the date! "Lalka" at Kinépolis Splau – Saturday 5 December 2026, 6 pm',
+            title: '[Tickets] "Lalka" at Kinépolis Splau – tickets now on sale! Saturday 5 December 2026, 6 pm',
             excerpt: 'On Saturday 5 December 2026 at 6 pm the Artystyczne Stowarzyszenie Polska invites the Polish community of Barcelona and all of Catalonia to Kinépolis Barcelona Splau for a special screening of the new adaptation of Bolesław Prus\'s "Lalka" (The Doll) – in Polish with English subtitles.',
             sections: [
                 {
@@ -108,7 +115,7 @@ export const lalkaKino: NewsSource = {
                     title: 'When and where?',
                     p: [
                         'The screening starts on **Saturday 5 December at 6 pm** at **Kinépolis Barcelona Splau** – the cinema in the Splau shopping centre on Av. del Baix Llobregat (08940 Cornellà de Llobregat), just outside Barcelona. We will see "Lalka", directed by **Maciej Kawalski**, in Polish with English subtitles.',
-                        'The event is organised by the **Artystyczne Stowarzyszenie Polska**. There is no ticket information yet – the organiser will share it soon, and we will pass it on straight away on Facebook and here in News.',
+                        'The event is organised by the **Artystyczne Stowarzyszenie Polska**. **Tickets are now on sale** on the Beyond Tickets platform – you will find the link below and at the end of this article.',
                     ],
                     image: poster('Poster of the film "Lalka" – Barcelona premiere on 5 December 2026 at 6 pm', 'Poster for the "Lalka" screening in Barcelona: Saturday 5 December 2026, 6 pm, Kinépolis Barcelona Splau.'),
                 },
@@ -118,7 +125,7 @@ export const lalkaKino: NewsSource = {
                         'A Saturday evening in early December is the perfect moment to get together with fellow Poles before the holidays. Come with family, friends and colleagues – it is not just a screening but a chance to meet and talk.',
                         '**Pass the news on to your friends** in Barcelona and Catalonia – the more, the merrier!',
                     ],
-                    cards: postCard('Event · Facebook', 'Saturday 5 December 2026, 6 pm – Kinépolis Barcelona Splau. Share the post with your friends!', 'See the post on Facebook'),
+                    cards: postCard('Event · Facebook', 'Saturday 5 December 2026, 6 pm – Kinépolis Barcelona Splau. Share the post with your friends!', 'See the post on Facebook', 'Buy tickets'),
                 },
                 {
                     title: '"Lalka" – a novel every Pole knows',
@@ -149,14 +156,15 @@ export const lalkaKino: NewsSource = {
                 {
                     title: 'See you at the cinema!',
                     p: [
-                        'The organiser will announce ticket information soon – we will let you know as soon as it is out. Follow our Facebook page and keep an eye on News. **Saturday 5 December, 6 pm – Kinépolis Barcelona Splau.** Some of our team will be there too – see you!',
+                        'You can buy tickets online via Beyond Tickets – the link is below. **Saturday 5 December, 6 pm – Kinépolis Barcelona Splau.** Some of our team will be there too – see you!',
                     ],
+                    cards: ticketCard('Tickets', 'Saturday 5 December 2026, 6 pm · Kinépolis Barcelona Splau · Polish with English subtitles.', 'Buy tickets on Beyond Tickets'),
                     cta: { label: 'See our events', href: '/events' },
                 },
             ],
         },
         es: {
-            title: '¡Barcelona, apuntad la fecha! «Lalka» en Kinépolis Splau, sábado 5 de diciembre de 2026, a las 18:00',
+            title: '[Entradas] «Lalka» en Kinépolis Splau: ¡entradas ya a la venta! Sábado 5 de diciembre de 2026, a las 18:00',
             excerpt: 'El sábado 5 de diciembre de 2026 a las 18:00 la Artystyczne Stowarzyszenie Polska invita a la comunidad polaca de Barcelona y de toda Cataluña a Kinépolis Barcelona Splau a una proyección especial de la nueva adaptación de «Lalka» (La muñeca) de Bolesław Prus, en polaco con subtítulos en inglés.',
             sections: [
                 {
@@ -171,7 +179,7 @@ export const lalkaKino: NewsSource = {
                     title: '¿Cuándo y dónde?',
                     p: [
                         'La sesión empieza el **sábado 5 de diciembre a las 18:00** en **Kinépolis Barcelona Splau**, el cine del centro comercial Splau en la Av. del Baix Llobregat (08940 Cornellà de Llobregat), justo al lado de Barcelona. Veremos «Lalka», dirigida por **Maciej Kawalski**, en polaco con subtítulos en inglés.',
-                        'Lo organiza la **Artystyczne Stowarzyszenie Polska**. Todavía no hay información sobre las entradas: el organizador la publicará pronto y nosotros la compartiremos enseguida en Facebook y aquí, en Noticias.',
+                        'Lo organiza la **Artystyczne Stowarzyszenie Polska**. **Las entradas ya están a la venta** en la plataforma Beyond Tickets: encontraréis el enlace más abajo y al final del artículo.',
                     ],
                     image: poster('Cartel de la película «Lalka»: estreno en Barcelona el 5 de diciembre de 2026 a las 18:00', 'Cartel de la proyección de «Lalka» en Barcelona: sábado 5 de diciembre de 2026, 18:00, Kinépolis Barcelona Splau.'),
                 },
@@ -181,7 +189,7 @@ export const lalkaKino: NewsSource = {
                         'Un sábado por la tarde a principios de diciembre es el momento ideal para reunirse entre polacos antes de las fiestas. Venid con familia, amigos y conocidos: no es solo una proyección, sino también una ocasión para conocerse y charlar.',
                         '**Pasad la noticia a vuestros amigos** de Barcelona y Cataluña: ¡cuantos más seamos, mejor!',
                     ],
-                    cards: postCard('Evento · Facebook', 'Sábado 5 de diciembre de 2026, 18:00, Kinépolis Barcelona Splau. ¡Comparte la publicación!', 'Ver la publicación en Facebook'),
+                    cards: postCard('Evento · Facebook', 'Sábado 5 de diciembre de 2026, 18:00, Kinépolis Barcelona Splau. ¡Comparte la publicación!', 'Ver la publicación en Facebook', 'Comprar entradas'),
                 },
                 {
                     title: '«Lalka», la novela que conoce todo polaco',
@@ -212,14 +220,15 @@ export const lalkaKino: NewsSource = {
                 {
                     title: '¡Nos vemos en el cine!',
                     p: [
-                        'El organizador publicará pronto la información sobre las entradas; os avisaremos en cuanto esté disponible. Seguid nuestra página de Facebook y visitad Noticias. **Sábado 5 de diciembre, 18:00, Kinépolis Barcelona Splau.** Parte de nuestro equipo también estará allí: ¡nos vemos!',
+                        'Podéis comprar las entradas online en Beyond Tickets: tenéis el enlace aquí abajo. **Sábado 5 de diciembre, 18:00, Kinépolis Barcelona Splau.** Parte de nuestro equipo también estará allí: ¡nos vemos!',
                     ],
+                    cards: ticketCard('Entradas', 'Sábado 5 de diciembre de 2026, 18:00 · Kinépolis Barcelona Splau · en polaco con subtítulos en inglés.', 'Comprar entradas en Beyond Tickets'),
                     cta: { label: 'Ver nuestros eventos', href: '/events' },
                 },
             ],
         },
         ca: {
-            title: 'Barcelona, apunteu la data! «Lalka» a Kinépolis Splau, dissabte 5 de desembre de 2026, a les 18:00',
+            title: '[Entrades] «Lalka» a Kinépolis Splau: entrades ja a la venda! Dissabte 5 de desembre de 2026, a les 18:00',
             excerpt: 'Dissabte 5 de desembre de 2026 a les 18:00 l\'Artystyczne Stowarzyszenie Polska convida la comunitat polonesa de Barcelona i de tot Catalunya a Kinépolis Barcelona Splau a una projecció especial de la nova adaptació de «Lalka» (La nina) de Bolesław Prus, en polonès amb subtítols en anglès.',
             sections: [
                 {
@@ -234,7 +243,7 @@ export const lalkaKino: NewsSource = {
                     title: 'Quan i on?',
                     p: [
                         'La sessió comença **dissabte 5 de desembre a les 18:00** a **Kinépolis Barcelona Splau**, el cinema del centre comercial Splau a l\'Av. del Baix Llobregat (08940 Cornellà de Llobregat), just al costat de Barcelona. Hi veurem «Lalka», dirigida per **Maciej Kawalski**, en polonès amb subtítols en anglès.',
-                        'Ho organitza l\'**Artystyczne Stowarzyszenie Polska**. Encara no hi ha informació sobre les entrades: l\'organitzador la publicarà aviat i nosaltres la compartirem de seguida a Facebook i aquí, a Notícies.',
+                        'Ho organitza l\'**Artystyczne Stowarzyszenie Polska**. **Les entrades ja estan a la venda** a la plataforma Beyond Tickets: trobareu l\'enllaç més avall i al final de l\'article.',
                     ],
                     image: poster('Cartell de la pel·lícula «Lalka»: estrena a Barcelona el 5 de desembre de 2026 a les 18:00', 'Cartell de la projecció de «Lalka» a Barcelona: dissabte 5 de desembre de 2026, 18:00, Kinépolis Barcelona Splau.'),
                 },
@@ -244,7 +253,7 @@ export const lalkaKino: NewsSource = {
                         'Un dissabte al vespre a principis de desembre és el moment ideal per trobar-se entre polonesos abans de les festes. Veniu amb família, amics i coneguts: no és només una projecció, sinó també una ocasió per conèixer-se i xerrar.',
                         '**Passeu la notícia als vostres amics** de Barcelona i Catalunya: com més serem, millor!',
                     ],
-                    cards: postCard('Esdeveniment · Facebook', 'Dissabte 5 de desembre de 2026, 18:00, Kinépolis Barcelona Splau. Comparteix la publicació!', 'Veure la publicació a Facebook'),
+                    cards: postCard('Esdeveniment · Facebook', 'Dissabte 5 de desembre de 2026, 18:00, Kinépolis Barcelona Splau. Comparteix la publicació!', 'Veure la publicació a Facebook', 'Comprar entrades'),
                 },
                 {
                     title: '«Lalka», la novel·la que coneix tot polonès',
@@ -275,8 +284,9 @@ export const lalkaKino: NewsSource = {
                 {
                     title: 'Ens veiem al cinema!',
                     p: [
-                        'L\'organitzador publicarà aviat la informació sobre les entrades; us avisarem quan estigui disponible. Seguiu la nostra pàgina de Facebook i visiteu Notícies. **Dissabte 5 de desembre, 18:00, Kinépolis Barcelona Splau.** Una part del nostre equip també hi serà: ens hi veiem!',
+                        'Podeu comprar les entrades en línia a Beyond Tickets: teniu l\'enllaç aquí sota. **Dissabte 5 de desembre, 18:00, Kinépolis Barcelona Splau.** Una part del nostre equip també hi serà: ens hi veiem!',
                     ],
+                    cards: ticketCard('Entrades', 'Dissabte 5 de desembre de 2026, 18:00 · Kinépolis Barcelona Splau · en polonès amb subtítols en anglès.', 'Comprar entrades a Beyond Tickets'),
                     cta: { label: 'Veure els nostres esdeveniments', href: '/events' },
                 },
             ],

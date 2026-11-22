@@ -46,6 +46,22 @@ const FormattedText = ({ text }: { text: string }) => {
 // Mock events data (same as in events page)
 const allEvents = [
   {
+    id: 12,
+    title: '21. Bieg WOŚP "Policz się z cukrzycą"',
+    description: 'Bieg WOŚP "Policz się z cukrzycą" w Barcelonie odbędzie się 24 stycznia 2027. Więcej informacji wkrótce.',
+    fullDescription: 'Bieg WOŚP "Policz się z cukrzycą" w Barcelonie odbędzie się w niedzielę 24 stycznia 2027. Więcej informacji wkrótce.',
+    date: '2027-01-24',
+    location: 'Barcelona',
+    locationTbd: true,
+    category: 'Bieg',
+    image: '/images/kalendarz/bieg-2027-zapowiedz.jpg',
+    gallery: [],
+    registrationRequired: false,
+    facebookLink: null,
+    organizer: 'WOŚP Barcelona',
+    contact: 'biegwospbarcelona@gmail.com'
+  },
+  {
     id: 11,
     title: '35. Finał WOŚP w Barcelonie',
     description: '🎉 35. Finał WOŚP – 31 stycznia 2027 gramy dla zdrowia noworodków! Miejsce w Barcelonie ogłosimy wkrótce.',

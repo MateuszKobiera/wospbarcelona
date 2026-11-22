@@ -44,6 +44,8 @@ export type NewsCard = {
     text: string;
     url?: string;
     linkLabel?: string;
+    /** Extra links shown under the main one, e.g. social media profiles */
+    links?: { label: string; url: string }[];
 };
 
 export type NewsLocalized = {
@@ -140,6 +142,15 @@ function renderSection(section: NewsSection, locale: Locale): React.ReactNode {
                                     <a href={card.url} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block text-sm font-semibold">
                                         {card.linkLabel ?? card.url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '')} →
                                     </a>
+                                )}
+                                {card.links && card.links.length > 0 && (
+                                    <div className="mt-1 flex flex-wrap gap-x-4 gap-y-1">
+                                        {card.links.map((l) => (
+                                            <a key={l.url} href={l.url} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold">
+                                                {l.label} →
+                                            </a>
+                                        ))}
+                                    </div>
                                 )}
                             </div>
                         </div>

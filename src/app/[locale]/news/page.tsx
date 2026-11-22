@@ -4,13 +4,14 @@ import { HeartBackground } from '@/components/HeartBackground';
 import { getAllPostsForLocale } from '@/content/blog-i18n';
 import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
+import { altTitle } from '@/content/news/alt-titles';
 
 /** Articles pinned to the top of the news page, in display order (the first one gets the big tile). */
 const FEATURED_SLUGS = [
   '35-final-wosp-zagramy-dla-noworodkow',
   'dziekujemy-za-34-final-wosp-w-barcelonie',
   'wolontariusze-35-finalu-wosp-zapisy-barcelona',
-  'co-czwarty-mieszkaniec-katalonii-urodzil-sie-za-granica',
+  'praktyki-studenckie-w-barcelonie-wosp',
 ];
 
 type Post = ReturnType<typeof getAllPostsForLocale>[number];
@@ -72,7 +73,9 @@ export default async function BlogPage({
   const bySlug = new Map(allPosts.map((p) => [p.slug, p]));
   const featured = FEATURED_SLUGS.map((s) => bySlug.get(s)).filter((p): p is Post => !!p);
   const featuredSet = new Set(featured.map((p) => p.slug));
-  const rest = allPosts.filter((p) => !featuredSet.has(p.slug));
+  const rest = allPosts
+    .filter((p) => !featuredSet.has(p.slug) || altTitle(p.slug, locale))
+    .map((p) => (featuredSet.has(p.slug) ? { ...p, title: altTitle(p.slug, locale)! } : p));
   const [lead, ...sidePicks] = featured;
 
   return (

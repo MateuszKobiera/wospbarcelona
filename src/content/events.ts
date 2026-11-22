@@ -16,6 +16,12 @@ export type EventSummary = {
 // Upcoming events - only non-translatable fields
 export const upcomingEventsData: EventSummary[] = [
   {
+    id: 12,
+    date: '2027-01-24',
+    categoryKey: 'run',
+    image: '/images/kalendarz/bieg-2027-zapowiedz.jpg'
+  },
+  {
     id: 11,
     date: '2027-01-31',
     categoryKey: 'final',

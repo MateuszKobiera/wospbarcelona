@@ -16,6 +16,19 @@ export default function EventsPageClient() {
   const params = useParams();
   const locale = params.locale as string;
 
+  // The finale is the main event; everything else is listed chronologically in smaller tiles.
+  const sortedUpcoming = [...upcomingEventsData].sort((a, b) => a.date.localeCompare(b.date));
+  const featuredEvent = sortedUpcoming.find((e) => e.categoryKey === 'final');
+  const otherUpcoming = sortedUpcoming.filter((e) => e !== featuredEvent);
+  const parseDate = (iso: string) => {
+    const [y, m, d] = iso.split('-').map(Number);
+    return new Date(y, m - 1, d);
+  };
+  const formatShortDate = (iso: string) =>
+    new Intl.DateTimeFormat(locale, { day: 'numeric', month: 'short' }).format(parseDate(iso));
+  const formatLongDate = (iso: string) =>
+    new Intl.DateTimeFormat(locale, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }).format(parseDate(iso));
+
   return (
     <>
       <main className="py-16 bg-linear-to-br from-white via-red-50 to-pink-100">
@@ -43,8 +56,9 @@ export default function EventsPageClient() {
                 <p className="text-lg font-medium text-gray-600">{t('noEvents')}</p>
               </div>
             ) : (
-              <div className="flex flex-col gap-6 max-w-6xl mx-auto">
-                {upcomingEventsData.map((event, index) => {
+              <div className="flex flex-col gap-10 max-w-6xl mx-auto">
+                {featuredEvent && (() => {
+                  const event = featuredEvent;
                   const eventTitle = t(`items.${event.id}.title`);
                   return (
                     <Card key={event.id} className="w-full bg-white border-2 border-red-200 shadow-md hover:shadow-lg transition-shadow overflow-hidden flex flex-col md:flex-row">
@@ -53,8 +67,8 @@ export default function EventsPageClient() {
                           src={event.image}
                           alt={eventTitle}
                           fill
-                          loading={index === 0 ? 'eager' : 'lazy'}
-                          fetchPriority={index === 0 ? 'high' : 'auto'}
+                          loading="eager"
+                          fetchPriority="high"
                           className="object-cover object-left transition-transform duration-500 hover:scale-105"
                           sizes="(max-width: 768px) 100vw, 50vw"
                         />
@@ -69,16 +83,14 @@ export default function EventsPageClient() {
                           </span>
                         </div>
                         <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">{eventTitle}</h3>
+                        <p className="inline-flex items-center gap-2 text-lg font-bold text-red-600 mb-3">
+                          <Calendar className="w-5 h-5" />
+                          {formatLongDate(event.date)}
+                        </p>
                         <p className="text-gray-600 mb-4">{t(`items.${event.id}.description`)}</p>
-                        <div className="space-y-1 mb-5">
-                          <div className="flex items-center text-sm text-gray-500">
-                            <Calendar className="w-3 h-3 mr-2" />
-                            {event.date}
-                          </div>
-                          <div className="flex items-center text-sm text-gray-500">
-                            <MapPin className="w-3 h-3 mr-2" />
-                            {t(`items.${event.id}.location`)}
-                          </div>
+                        <div className="flex items-center text-sm text-gray-500 mb-5">
+                          <MapPin className="w-3 h-3 mr-2" />
+                          {t(`items.${event.id}.location`)}
                         </div>
                         <div className="flex flex-wrap gap-3">
                           <Button asChild className="bg-red-600 hover:bg-red-700 text-white">
@@ -93,7 +105,61 @@ export default function EventsPageClient() {
                       </CardContent>
                     </Card>
                   );
-                })}
+                })()}
+
+              </div>
+            )}
+
+            {/* Other upcoming events: same tiles as past events, chronological, date highlighted */}
+            {otherUpcoming.length > 0 && (
+              <div className="mt-12">
+                {featuredEvent && <h3 className="text-2xl font-bold text-gray-900 mb-6">{t('page.moreUpcoming')}</h3>}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+                  {otherUpcoming.map((event) => {
+                    const eventTitle = t(`items.${event.id}.title`);
+                    return (
+                      <Card key={event.id} className="h-full bg-white border border-red-100 shadow-sm hover:shadow-md transition-shadow">
+                        <Link href={`/${locale}/events/${event.id}`} className="block relative h-44 overflow-hidden rounded-t-lg bg-gray-100">
+                          <Image
+                            src={event.image}
+                            alt={eventTitle}
+                            fill
+                            className="object-cover transition-transform duration-500 hover:scale-105"
+                            sizes="(max-width: 768px) 100vw, 33vw"
+                          />
+                          <span className="absolute left-3 top-3 rounded-lg bg-red-600 px-3 py-1.5 text-sm font-bold text-white shadow-md">
+                            {formatShortDate(event.date)}
+                          </span>
+                        </Link>
+                        <CardContent className="p-6">
+                          <div className="mb-3">
+                            <span className="inline-block bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">
+                              {t(`categories.${event.categoryKey}`)}
+                            </span>
+                          </div>
+                          <h3 className="text-lg font-semibold text-gray-900 mb-2">{eventTitle}</h3>
+                          <p className="flex items-center text-base font-bold text-red-600 mb-2">
+                            <Calendar className="w-4 h-4 mr-2" />
+                            {formatLongDate(event.date)}
+                          </p>
+                          <p className="text-gray-600 text-sm mb-4">{t(`items.${event.id}.description`)}</p>
+                          <div className="flex items-center text-sm text-gray-500 mb-4">
+                            <MapPin className="w-3 h-3 mr-2" />
+                            {t(`items.${event.id}.location`)}
+                          </div>
+                          <Link href={`/${locale}/events/${event.id}`}>
+                            <Button asChild variant="ghost" className="bg-white text-red-600 hover:text-red-700 hover:bg-red-50 p-2 px-4 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-md group cursor-pointer" suppressHydrationWarning>
+                              <span className="flex items-center">
+                                <span className="group-hover:translate-x-1 transition-transform duration-300">{t('page.seeMore')}</span>
+                                <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
+                              </span>
+                            </Button>
+                          </Link>
+                        </CardContent>
+                      </Card>
+                    );
+                  })}
+                </div>
               </div>
             )}
           </section>

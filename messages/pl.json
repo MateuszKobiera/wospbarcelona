@@ -343,6 +343,7 @@
     "upcoming": "Nadchodzące wydarzenia",
     "past": "Minione wydarzenia",
     "page": {
+      "moreUpcoming": "Kolejne nadchodzące wydarzenia",
       "subtitle": "Dołącz do naszych wydarzeń charytatywnych i pomagaj razem z nami. Każde wydarzenie to szansa na realną pomoc i świetna zabawa!",
       "seeMore": "Zobacz więcej",
       "seeReport": "Zobacz relację",
@@ -411,6 +412,12 @@
         "title": "Lepienie Pierogów na Finał WOŚP",
         "description": "🥟 Zapraszamy na wspólne lepienie pierogów w Wawel Restobar! Przygotujemy razem pyszne pierogi na 34. Finał WOŚP. Im nas więcej, tym lepiej!",
         "fullDescription": "🥟 Lepienie Pierogów na Finał WOŚP w Wawel Restobar\n\nZapraszamy wszystkich chętnych na wspólne lepienie pierogów, które będą serwowane podczas 34. Finału WOŚP w Barcelonie!\n\n📍 Gdzie: Wawel Restobar — nasz główny sponsor\n📅 Kiedy: Sobota, 24 stycznia 2026\n🕐 Godziny: 13:00 - 19:00\n\n✨ Dlaczego warto przyjść?\n\n• Wspólna zabawa i integracja przed finałem\n• Nauczysz się lepić tradycyjne polskie pierogi\n• Pomożesz przygotować jedzenie na finał WOŚP\n• Poczujesz atmosferę polskiej gościnności\n• Poznasz innych wolontariuszy i sympatyków WOŚP\n• Wesprzesz naszego sponsora — Wawel Restobar\n\n👥 Dla kogo?\nDla każdego! Nie musisz mieć doświadczenia w lepieniu pierogów — nauczymy Cię wszystkiego. Możesz przyjść o dowolnej godzinie między 13:00 a 19:00.\n\n📝 Rejestracja:\nNie jest wymagana rejestracja — po prostu przyjdź! Im nas więcej, tym więcej pierogów ulepimy dla finału.\n\n🥟 Co będziemy robić?\n• Przygotowywanie ciasta na pierogi\n• Lepienie różnych rodzajów pierogów\n• Wspólna praca w przyjaznej atmosferze\n• Rozmowy o planach na finał WOŚP\n\n💪 Każda para rąk się przyda!\nNiezależnie od tego, czy jesteś ekspertem w kuchni, czy dopiero zaczynasz swoją przygodę z gotowaniem — każda pomoc jest cenna. Razem przygotujemy pyszne pierogi, które będą smakowały wszystkim uczestnikom finału!\n\nDo zobaczenia w Wawel Restobar!"
+      },
+      "12": {
+        "title": "21. Bieg WOŚP \"Policz się z cukrzycą\"",
+        "description": "W niedzielę 24 stycznia 2027 biegniemy w Barcelonie! Trasę, godzinę startu i zapisy ogłosimy wkrótce.",
+        "location": "Barcelona – miejsce wkrótce",
+        "fullDescription": "Bieg WOŚP \"Policz się z cukrzycą\" wraca do Barcelony! Pobiegniemy w niedzielę 24 stycznia 2027 roku, tydzień przed 35. Finałem WOŚP.\n\nWięcej informacji – miejsce startu, trasę, godzinę i zasady zapisów – podamy wkrótce. Obserwujcie nas na Facebooku i zaglądajcie na tę stronę.\n\nPytania? Napisz do nas: biegwospbarcelona@gmail.com"
       },
       "11": {
         "title": "35. Finał WOŚP w Barcelonie",
@@ -560,7 +567,7 @@
       "badge": "Szukamy sponsorów i partnerów",
       "title": "Sponsorzy 35. Finału",
       "subtitle": "31 stycznia 2027 · Gramy dla zdrowia noworodków",
-      "description": "Lista sponsorów 35. Finału WOŚP w Barcelonie jest jeszcze pusta – i to miejsce czeka na Ciebie! Zapraszamy firmy, lokale, organizacje i osoby prywatne do wspólnego grania. Każda forma wsparcia ma znaczenie: finansowa, rzeczowa, usługowa czy przedmioty na licytację.",
+      "description": "Lista sponsorów 35. Finału WOŚP w Barcelonie dopiero się tworzy – i wciąż jest w niej miejsce dla Ciebie! Zapraszamy firmy, lokale, organizacje i osoby prywatne do wspólnego grania. Każda forma wsparcia ma znaczenie: finansowa, rzeczowa, usługowa czy przedmioty na licytację.",
       "whyTitle": "Wyjątkowa okazja do promocji",
       "whyIntro": "Wspierając Finał WOŚP, pokazujesz swoją markę tysiącom osób w pozytywnym, wyjątkowym kontekście – i jednocześnie realnie pomagasz najmłodszym pacjentom.",
       "benefits": [

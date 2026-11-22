@@ -344,6 +344,7 @@
     "upcoming": "Próximos eventos",
     "past": "Eventos pasados",
     "page": {
+      "moreUpcoming": "Próximos eventos",
       "subtitle": "Únete a nuestros eventos benéficos y ayuda con nosotros. ¡Cada evento es una oportunidad de ayudar y pasarlo genial!",
       "seeMore": "Ver más",
       "seeReport": "Ver reportaje",
@@ -420,6 +421,12 @@
         "title": "Elaboración de pierogis para el Final WOŚP",
         "description": "🥟 ¡Te invitamos a elaborar pierogis juntos en Wawel Restobar! Prepararemos juntos deliciosos pierogis para el 34º Final WOŚP. ¡Cuantos más seamos, mejor!",
         "fullDescription": "🥟 Elaboración de pierogis para el Final WOŚP en Wawel Restobar\n\n¡Invitamos a todos a elaborar pierogis juntos, que se servirán durante el 34º Final WOŚP en Barcelona!\n\n📍 Dónde: Wawel Restobar — nuestro patrocinador principal\n📅 Cuándo: Sábado, 24 de enero de 2026\n🕐 Horario: 13:00 - 19:00\n\n✨ ¿Por qué vale la pena venir?\n\n• Diversión e integración antes del final\n• Aprenderás a elaborar pierogis polacos tradicionales\n• Ayudarás a preparar comida para el final WOŚP\n• Sentirás la atmósfera de la hospitalidad polaca\n• Conocerás a otros voluntarios y simpatizantes de WOŚP\n• Apoyarás a nuestro patrocinador — Wawel Restobar\n\n👥 ¿Para quién?\n¡Para todos! No necesitas experiencia en la elaboración de pierogis — te enseñaremos todo. Puedes venir a cualquier hora entre las 13:00 y las 19:00.\n\n📝 Inscripción:\nNo se requiere inscripción — ¡simplemente ven! Cuantos más seamos, más pierogis elaboraremos para el final.\n\n💪 ¡Cada par de manos es útil!\nIndependientemente de si eres un experto en cocina o estás comenzando tu aventura culinaria — toda ayuda es valiosa. ¡Juntos prepararemos deliciosos pierogis que disfrutarán todos los participantes del final!\n\n¡Nos vemos en Wawel Restobar!"
+      },
+      "12": {
+        "title": "21.ª Carrera WOŚP \"Policz się z cukrzycą\"",
+        "description": "¡El domingo 24 de enero de 2027 corremos en Barcelona! Pronto anunciaremos el recorrido, la hora de salida y las inscripciones.",
+        "location": "Barcelona – lugar por confirmar",
+        "fullDescription": "¡La carrera WOŚP \"Policz się z cukrzycą\" («Cuéntate frente a la diabetes») vuelve a Barcelona! Correremos el domingo 24 de enero de 2027, una semana antes del 35.º Final de WOŚP.\n\nPronto daremos más información: lugar de salida, recorrido, horario e inscripciones. Síguenos en Facebook y vuelve a visitar esta página.\n\n¿Preguntas? Escríbenos: biegwospbarcelona@gmail.com"
       },
       "11": {
         "title": "35ª Final de WOŚP en Barcelona",
@@ -564,7 +571,7 @@
       "badge": "Buscamos patrocinadores y colaboradores",
       "title": "Patrocinadores del 35.º Final",
       "subtitle": "31 de enero de 2027 · Tocamos por la salud de los recién nacidos",
-      "description": "La lista de patrocinadores del 35.º Final de WOŚP en Barcelona todavía está vacía, ¡y este lugar te está esperando! Invitamos a empresas, locales, organizaciones y particulares a sumarse. Cualquier forma de apoyo cuenta: económica, material, de servicios u objetos para la subasta.",
+      "description": "La lista de patrocinadores del 35.º Final de WOŚP en Barcelona apenas empieza a formarse, ¡y todavía hay un lugar para ti! Invitamos a empresas, locales, organizaciones y particulares a sumarse. Cualquier forma de apoyo cuenta: económica, material, de servicios u objetos para la subasta.",
       "whyTitle": "Una oportunidad única de promoción",
       "whyIntro": "Al apoyar el Final de WOŚP, das a conocer tu marca a miles de personas en un contexto positivo y único, y al mismo tiempo ayudas de verdad a los pacientes más pequeños.",
       "benefits": [

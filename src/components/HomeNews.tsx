@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { ArrowRight, Heart } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import { getAllPostsForLocale } from '@/content/blog-i18n';
+import { altTitle } from '@/content/news/alt-titles';
 
 type Post = ReturnType<typeof getAllPostsForLocale>[number];
 
@@ -23,8 +24,14 @@ const FEATURED_SLUGS = [
   'ostateczny-wynik-33-finalu-wosp-289-mln-zl',
 ];
 
+/**
+ * Always shown in the sidebar, even if already in the main grid (then under its alternative title).
+ * Student articles click well – keep one here at all times.
+ */
+const ALWAYS_FEATURED_SLUGS = ['praktyki-studenckie-w-barcelonie-wosp'];
+
 const MAIN_COUNT = 5; // lead tile + side card + row of 3
-const FEATURED_COUNT = 4; // big card + 3 rows in the sidebar
+const FEATURED_COUNT = 5; // big card + 4 rows in the sidebar
 const BOTTOM_COUNT = 4; // compact row under everything
 
 const DATE_LOCALES: Record<string, string> = { pl: 'pl-PL', en: 'en-GB', es: 'es-ES', ca: 'ca-ES' };
@@ -54,10 +61,11 @@ function PostImage({ post, sizes }: { post: Post; sizes: string }) {
 }
 
 /** Photo on top, headline below. */
-function Card({ post, locale, imageClass = 'aspect-[16/10]' }: { post: Post; locale: string; imageClass?: string }) {
+function Card({ post, locale, stretch = false }: { post: Post; locale: string; stretch?: boolean }) {
+  // `stretch`: fill the grid row height (next to the taller lead tile) by letting the photo grow.
   return (
-    <Link href={postHref(post, locale)} className="group block">
-      <div className={`relative overflow-hidden rounded-xl bg-gray-100 ${imageClass}`}>
+    <Link href={postHref(post, locale)} className={stretch ? 'group flex flex-col' : 'group block'}>
+      <div className={`relative overflow-hidden rounded-xl bg-gray-100 aspect-[16/10] ${stretch ? 'md:aspect-auto md:flex-1 md:min-h-[180px]' : ''}`}>
         <PostImage post={post} sizes="(max-width: 768px) 100vw, 25vw" />
       </div>
       <h3 className="mt-3 text-lg font-bold text-gray-900 leading-snug line-clamp-3 group-hover:text-red-600 transition-colors">
@@ -76,9 +84,15 @@ export async function HomeNews({ locale }: { locale: string }) {
   const main = posts.slice(0, MAIN_COUNT);
   const shown = new Set(main.map((p) => p.slug));
   const bySlug = new Map(posts.map((p) => [p.slug, p]));
-  const featured = FEATURED_SLUGS.map((s) => bySlug.get(s))
-    .filter((p): p is Post => !!p && !shown.has(p.slug))
-    .slice(0, FEATURED_COUNT);
+  const always = ALWAYS_FEATURED_SLUGS.map((s) => bySlug.get(s))
+    .filter((p): p is Post => !!p)
+    .map((p) => (shown.has(p.slug) ? { ...p, title: altTitle(p.slug, locale) ?? p.title } : p));
+  const alwaysSet = new Set(always.map((p) => p.slug));
+  const others = FEATURED_SLUGS.map((s) => bySlug.get(s))
+    .filter((p): p is Post => !!p && !shown.has(p.slug) && !alwaysSet.has(p.slug))
+    .slice(0, FEATURED_COUNT - always.length);
+  // Student article goes right under the big card.
+  const featured = [...others.slice(0, 1), ...always, ...others.slice(1)];
   featured.forEach((p) => shown.add(p.slug));
   const bottom = posts.filter((p) => !shown.has(p.slug)).slice(0, BOTTOM_COUNT);
 
@@ -101,7 +115,7 @@ export async function HomeNews({ locale }: { locale: string }) {
               href={postHref(lead, locale)}
               className="group flex flex-col md:col-span-2 overflow-hidden rounded-xl bg-gray-900 focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-red-600"
             >
-              <div className="relative aspect-[16/9] md:aspect-auto md:flex-1 md:min-h-[200px] overflow-hidden">
+              <div className="relative aspect-[16/9] overflow-hidden">
                 <PostImage post={lead} sizes="(max-width: 768px) 100vw, 50vw" />
               </div>
               <div className="border-l-4 border-red-500 px-5 py-4">
@@ -112,7 +126,7 @@ export async function HomeNews({ locale }: { locale: string }) {
               </div>
             </Link>
 
-            {second && <Card post={second} locale={locale} />}
+            {second && <Card post={second} locale={locale} stretch />}
             {row.map((post) => (
               <Card key={post.slug} post={post} locale={locale} />
             ))}

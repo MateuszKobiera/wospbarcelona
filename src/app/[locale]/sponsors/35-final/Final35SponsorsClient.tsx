@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
 import { ContactForm } from '@/components/ContactForm';
@@ -8,6 +9,26 @@ import { ArrowRight, Baby, Globe, Heart, Megaphone, Plus, Sparkles, Users } from
 const categoryKeys = ['sponsors', 'partners', 'coorganizers'] as const;
 
 const benefitIcons = [Globe, Megaphone, Users, Heart];
+
+type Partner = { key: string; logoUrl?: string; links: { label: 'website' | string; url: string }[] };
+
+// Confirmed partners of the 35th Finale. Names/descriptions come from `sponsors.items.<key>` in messages/*.json.
+const partners: Record<(typeof categoryKeys)[number], Partner[]> = {
+    sponsors: [],
+    partners: [],
+    coorganizers: [
+        {
+            key: 'kosmoHisplano',
+            logoUrl: '/images/sponsors/kosmo-his-plano.png',
+            links: [
+                { label: 'website', url: 'https://kosmohisplano.com' },
+                { label: 'Facebook', url: 'https://www.facebook.com/profile.php?id=100063355321151' },
+                { label: 'Instagram', url: 'https://www.instagram.com/miniplwbarcelonie' },
+                { label: 'YouTube', url: 'https://www.youtube.com/@KOSMOHISPLANO/videos' },
+            ],
+        },
+    ],
+};
 
 export default function Final35SponsorsClient() {
     const t = useTranslations('sponsors');
@@ -60,7 +81,7 @@ export default function Final35SponsorsClient() {
                     </div>
                 </section>
 
-                {/* Empty categories */}
+                {/* Categories: open slots for sponsors/partners, featured co-organiser */}
                 <div className="space-y-16">
                     {categoryKeys.map((key) => (
                         <section key={key}>
@@ -68,21 +89,65 @@ export default function Final35SponsorsClient() {
                                 <h2 className="text-3xl font-bold text-gray-900 mb-4">{t(`categories.${key}.title`)}</h2>
                                 <p className="text-lg text-gray-600 max-w-2xl mx-auto">{t(`categories.${key}.description`)}</p>
                             </div>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                                {[0, 1, 2].map((i) => (
-                                    <a
-                                        key={i}
-                                        href="#kontakt"
-                                        className="group rounded-xl border-2 border-dashed border-red-200 bg-white/60 hover:bg-white hover:border-red-400 transition-all p-8 flex flex-col items-center justify-center text-center min-h-[200px]"
-                                    >
-                                        <div className="w-16 h-16 rounded-full bg-red-50 group-hover:bg-red-100 flex items-center justify-center mb-4 transition-colors">
-                                            <Plus className="w-7 h-7 text-red-400 group-hover:text-red-600" />
-                                        </div>
-                                        <p className="font-semibold text-gray-700">{t('final35.placeholderTitle')}</p>
-                                        <p className="text-sm text-gray-500 mt-1">{t('final35.placeholderDesc')}</p>
-                                    </a>
-                                ))}
-                            </div>
+                            {key === 'coorganizers' ? (
+                                // Single main co-organiser: one large featured card, no empty slots
+                                <div className="space-y-6">
+                                    {partners[key].map((p) => {
+                                        const name = t(`items.${p.key}.name`);
+                                        return (
+                                            <div
+                                                key={p.key}
+                                                id={p.key}
+                                                className="scroll-mt-24 max-w-5xl mx-auto rounded-2xl border border-red-100 bg-white shadow-xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 md:gap-12 text-center md:text-left"
+                                            >
+                                                {p.logoUrl && (
+                                                    <Image
+                                                        src={p.logoUrl}
+                                                        alt={`${name} logo`}
+                                                        width={288}
+                                                        height={288}
+                                                        sizes="(min-width: 768px) 288px, 224px"
+                                                        className="w-56 h-56 md:w-72 md:h-72 flex-none object-contain"
+                                                    />
+                                                )}
+                                                <div>
+                                                    <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{name}</h3>
+                                                    <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-6">{t(`items.${p.key}.description`)}</p>
+                                                    <div className="flex flex-wrap gap-2 justify-center md:justify-start">
+                                                        {p.links.map((l) => (
+                                                            <a
+                                                                key={l.url}
+                                                                href={l.url}
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                                className="px-4 py-2 rounded-full border border-red-200 bg-white text-red-700 hover:bg-red-50 hover:border-red-300 text-sm font-medium transition-colors"
+                                                            >
+                                                                {l.label === 'website' ? t('linkLabels.website') : l.label}
+                                                            </a>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+                            ) : (
+                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                    {[0, 1, 2].map((i) => (
+                                        <a
+                                            key={i}
+                                            href="#kontakt"
+                                            className="group rounded-xl border-2 border-dashed border-red-200 bg-white/60 hover:bg-white hover:border-red-400 transition-all p-8 flex flex-col items-center justify-center text-center min-h-[200px]"
+                                        >
+                                            <div className="w-16 h-16 rounded-full bg-red-50 group-hover:bg-red-100 flex items-center justify-center mb-4 transition-colors">
+                                                <Plus className="w-7 h-7 text-red-400 group-hover:text-red-600" />
+                                            </div>
+                                            <p className="font-semibold text-gray-700">{t('final35.placeholderTitle')}</p>
+                                            <p className="text-sm text-gray-500 mt-1">{t('final35.placeholderDesc')}</p>
+                                        </a>
+                                    ))}
+                                </div>
+                            )}
                         </section>
                     ))}
                 </div>
